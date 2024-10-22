@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Faire les backs : partie 2</title>
+
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [
+                [
+                '$', '$'
+                ],
+                [
+                '\\(', '\\)'
+                ]
+            ]
+            },
+            svg: {
+            fontCache: 'global'
+            }
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
+
+        <header class="border-b-2 border-gray-200 mb-4">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="min-h-[50px] flex justify-between items-center">
+                <a class="mx-2" href="/do-it/">Home</a>
+                <div class="flex items-center gap-4 sm:gap-6 ">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                        </svg>
+                    </a>
+                    <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
+                        <svg class="h-5 aspect-square" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
+            
+<article class="relative">
+<h1 class="mb-1">Faire les backs : partie 2</h1>
+<div class="mb-4">
+    
+        <div class="px-4 flex flex-wrap items-center">
+            
+                <div class="font-bold">Tags : </div>
+            
+            <ul class="flex flex-wrap overflow-auto not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">MON</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">2023-2024</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 2</li>
+                
+
+            </ul>
+            
+            
+            <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="px-4 flex flex-wrap items-center">
+            <div class="font-bold">Auteurs : </div>
+            <ul class="flex flex-wrap not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Nicolas Ouzoulias</li>
+                
+            </ul>
+        </div>
+    
+
+    
+</div>
+
+        <p class="mb-4 text-lg">
+
+                Un MON pour découvrir le back d'un site web : partie 2
+
+        </p>
+
+
+
+    
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-purple-500 bg-purple-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>
+</svg>
+<div class="pl-8 mr-8">
+
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Ouzoulias-Nicolas/">Nicolas OUZOULIAS</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Ouzoulias-Nicolas/mon/">MON de Nicolas Ouzoulias</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Ouzoulias-Nicolas/mon/temps-2.2/">Faire les backs : partie 2</a>
+
+</div></div>
+
+
+
+
+<h2>Objectifs</h2>
+<p>Au cours du temps 2 j'ai souhaité me familiariser avec la structure <strong>Back-end</strong> d'un site internet. Mon premier MON aura tout d'abord été de me mettre à niveau en JavaScript et de découvrir quelques notions théoriques.</p>
+<p>Mon second MON sera donc une manière de rentrer encore plus en détail dans ces notions et de les expérimenter.</p>
+<p>Pour cela j'ai suivi différents cours en ligne (les liens sont dans les sources en bas de la page).</p>
+<h2>Définition</h2>
+<p>Le <strong>back-end</strong> représente tout le code s'occupant de la <em>partie invisible</em> d'un site internet, c'est-à-dire les aspects <strong>serveur</strong>, <strong>gestion de données</strong> ou encore la <strong>sécurité</strong>.</p>
+<p>Il existe différents manière de coder le back, de mon côté je vais utiliser <strong>Node.js</strong>, <strong>Express</strong> et <strong>MongoDB</strong> qui sont assez simples à prendre en main.</p>
+<p>Le langage utilisé est <strong>JavaScript</strong> que j'ai découvert et appris avec mon <a href="../temps-2.1/index.md">MON 2.1</a> .</p>
+<h2>Fonctionnement</h2>
+<p>Le lien entre l'utilisateur et le serveur se fait grâce à une <strong>API</strong> <em>(Application Programming Interface)</em> qui va nous permettre de jouer avec les données sur plusieurs critères :</p>
+<ul>
+<li><strong>C</strong>reate : <em>création de la donnée</em></li>
+<li><strong>R</strong>ead : <em>lecture de la donnée</em></li>
+<li><strong>U</strong>pdate : <em>mise à jour de la donnée</em></li>
+<li><strong>D</strong>elete : <em>suppression de la donnée</em></li>
+</ul>
+<p>Ce qui donne l'acronyme <strong>CRUD</strong> en anglais.</p>
+<p>Pour faire les modifications précédentes on utilise les méthodes suivantes :</p>
+<ul>
+<li><code>POST</code> : pour créer</li>
+<li><code>GET</code> : pour lire</li>
+<li><code>PUT</code> : pour mettre à jour</li>
+<li><code>DELETE</code> : pour supprimer</li>
+</ul>
+<h2>Création d'un serveur</h2>
+<p>Tout d'abord il faut bien ranger nos lignes de code dans deux dossiers différents : un pour le <strong>front</strong> et un pour le <strong>back</strong>. Les deux dossiers seront exécutés en parallèle pour visualiser le résultat.</p>
+<p>Afin de mettre en place notre premier serveur nous avons besoin de la ligne de code suivante qui va nous permettre d'importer le package <em><strong>http</strong></em> :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> http <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'http'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+</code></pre>
+<p>La création de notre serveur se fait ensuite comme ceci :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> app <span class="token operator">=</span> http<span class="token punctuation">.</span><span class="token function">createServer</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">request<span class="token punctuation">,</span> response</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  response<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token string">'Hello World'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Les mots <em>request</em> et <em>response</em> sont souvent raccourcis en <em>req</em> et <em>res</em></p>
+</div></div>
+<p>La visualisation des résultats de nos lignes de code peut se faire en démarrant notre serveur ainsi que notre front-end en parallèle. Cependant avec Node.js on est contraints de redémarrer le serveur à chaque modification pour observer les changements.</p>
+<p>Pour contrer cela on peut utiliser <em><strong>nodemon</strong></em> et la commande <code>nodemon server</code> qui redémarre le serveur automatiquement à chaque mise à jour.</p>
+<h2>Express</h2>
+<p><strong>Express</strong> est un <em>framework</em> de Node.js conçu pour construire des applications en facilitant la gestion des routes et des échanges avec le serveur. Comme pour la création du serveur il nous faut un fichier <strong>app.js</strong> possédant les lignes :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span>
+
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> app<span class="token punctuation">;</span>
+</code></pre>
+<p>Notre serveur doit être lié à notre application grâce à ces quelques lignes que nous rajoutons dans le fichier <strong>server.js</strong> :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./app'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+app<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">'port'</span><span class="token punctuation">,</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">PORT</span> <span class="token operator">||</span> <span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> server <span class="token operator">=</span> http<span class="token punctuation">.</span><span class="token function">createServer</span><span class="token punctuation">(</span>app<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+server<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">PORT</span> <span class="token operator">||</span> <span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>La première ligne permet d'importer l'app Express tandis que la seconde précise le port sur lequel elle va être utilisée.</p>
+<h3>Middleware</h3>
+<p><strong>Express</strong> repose principalement sur des <em><strong>middleware</strong></em>. Ces derniers sont des <em>fonctions</em> qui traitent les objets <em>req</em> et <em>res</em> évoqués précédemment.</p>
+<p>Voici un exemple de syntaxe de middleware :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">message</span><span class="token operator">:</span> <span class="token string">'Votre requête a bien été reçue !'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>La présence de la méthode <em><strong>next()</strong></em> permet de passer au middleware suivant car ces derniers sont exécutés dans l'ordre où elles sont prises en charge par la méthode <em>use</em> de l'objet serveur express.</p>
+<h2>La base de donnée</h2>
+<p>Pour créer une base de donnée on utilise ici <strong>MongoDB</strong> qui est NoSQL, contrairement aux bases de données relationnelles traditionnelles, MongoDB ne conserve pas les données dans des tables, mais  dans des documents au format JSON.</p>
+<p>Grâce à cela on peut configurer notre premier schéma de données :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token comment">//models/thing.js</span>
+<span class="token keyword">const</span> mongoose <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mongoose'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> objetSchema <span class="token operator">=</span> mongoose<span class="token punctuation">.</span><span class="token function">Schema</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">type</span><span class="token operator">:</span> String<span class="token punctuation">,</span> <span class="token literal-property property">required</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">description</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">type</span><span class="token operator">:</span> String<span class="token punctuation">,</span> <span class="token literal-property property">required</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">imageUrl</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">type</span><span class="token operator">:</span> String<span class="token punctuation">,</span> <span class="token literal-property property">required</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">userId</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">type</span><span class="token operator">:</span> String<span class="token punctuation">,</span> <span class="token literal-property property">required</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">price</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">type</span><span class="token operator">:</span> Number<span class="token punctuation">,</span> <span class="token literal-property property">required</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> mongoose<span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span><span class="token string">'Objet'</span><span class="token punctuation">,</span> thingSchema<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>On a ici créé un <em>model</em> correspondant à un objet à vendre sur un site. Il est ensuite possible d'intéragir avec chaque objet créé avec ce <em>model</em> :</p>
+<ul>
+<li><code>save()</code>  – enregistre un objet ;</li>
+<li><code>find()</code>  – retourne tous les objets ;</li>
+<li><code>findOne()</code>  – retourne un seul objet basé sur la fonction de comparaison qu'on lui passe (souvent pour récupérer un Thing par son identifiant unique).</li>
+<li><code>updateOne()</code> - met à jour un objet</li>
+<li><code>delete()</code> - supprime un objet</li>
+</ul>
+<p>Exemple pour modifier un paramètre d'un objet :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">exports<span class="token punctuation">.</span><span class="token function-variable function">modifObjet</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> objet <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Objet</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token literal-property property">_id</span><span class="token operator">:</span> req<span class="token punctuation">.</span>params<span class="token punctuation">.</span>id<span class="token punctuation">,</span>
+    <span class="token literal-property property">title</span><span class="token operator">:</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>title<span class="token punctuation">,</span>
+    <span class="token literal-property property">description</span><span class="token operator">:</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>description<span class="token punctuation">,</span>
+    <span class="token literal-property property">imageUrl</span><span class="token operator">:</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>imageUrl<span class="token punctuation">,</span>
+    <span class="token literal-property property">price</span><span class="token operator">:</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>price<span class="token punctuation">,</span>
+    <span class="token literal-property property">userId</span><span class="token operator">:</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>userId
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  Objet<span class="token punctuation">.</span><span class="token function">updateOne</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token literal-property property">_id</span><span class="token operator">:</span> req<span class="token punctuation">.</span>params<span class="token punctuation">.</span>id<span class="token punctuation">}</span><span class="token punctuation">,</span> objet<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>
+    <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">201</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token literal-property property">message</span><span class="token operator">:</span> <span class="token string">'Objet modifié!'</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span>
+    <span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">400</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token literal-property property">error</span><span class="token operator">:</span> error
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h2>Structure du back</h2>
+<p>La partie back nécessite de nombreuses lignes de code qui doivent être bien organisées pour ne pas se perdre. Il est donc recommandé d'optimiser cette structure et de créer plusieurs dossiers et fichiers afin de ne pas avoir un seul documents beaucoup trop long et illisible.</p>
+<p><img src="image/structure.png" alt="structure"></p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://openclassrooms.com/fr/courses/6390246-passez-au-full-stack-avec-node-js-express-et-mongodb">https://openclassrooms.com/fr/courses/6390246-passez-au-full-stack-avec-node-js-express-et-mongodb</a></li>
+<li><a href="https://francoisbrucker.github.io/cours_informatique/cours/web/">https://francoisbrucker.github.io/cours_informatique/cours/web/</a></li>
+<li><a href="https://fullstackopen.com/en/">https://fullstackopen.com/en/</a></li>
+</ul>
+
+
+</article>
+
+        </main>
+
+
+        <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div class="min-h-[50px] flex justify-center items-center">
+                    <p class="text-center">
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développent et Organisation en IT
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        MathJax
+            .startup
+            .document
+            .getMathItemsWithin(document.body);
+        </script>
+
+    </body>
+</html>

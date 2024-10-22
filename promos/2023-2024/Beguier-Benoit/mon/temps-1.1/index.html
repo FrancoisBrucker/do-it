@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Analyse des données sans galèR</title>
+
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [
+                [
+                '$', '$'
+                ],
+                [
+                '\\(', '\\)'
+                ]
+            ]
+            },
+            svg: {
+            fontCache: 'global'
+            }
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
+
+        <header class="border-b-2 border-gray-200 mb-4">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="min-h-[50px] flex justify-between items-center">
+                <a class="mx-2" href="/do-it/">Home</a>
+                <div class="flex items-center gap-4 sm:gap-6 ">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                        </svg>
+                    </a>
+                    <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
+                        <svg class="h-5 aspect-square" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
+            
+<article class="relative">
+<h1 class="mb-1">Analyse des données sans galèR</h1>
+<div class="mb-4">
+    
+        <div class="px-4 flex flex-wrap items-center">
+            
+                <div class="font-bold">Tags : </div>
+            
+            <ul class="flex flex-wrap overflow-auto not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">MON</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">2023-2024</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 1</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">R</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Analyse des données</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">RStudio</li>
+                
+
+            </ul>
+            
+            
+            <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="px-4 flex flex-wrap items-center">
+            <div class="font-bold">Auteurs : </div>
+            <ul class="flex flex-wrap not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Benoit BEGUIER</li>
+                
+            </ul>
+        </div>
+    
+
+    
+</div>
+
+        <p class="mb-4 text-lg">
+
+                Initiation au langage R et application dans l'analyse et la visualisation des données.
+
+        </p>
+
+
+
+    
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-purple-500 bg-purple-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>
+</svg>
+<div class="pl-8 mr-8">
+
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Beguier-Benoit/">Benoit BEGUIER</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Beguier-Benoit/mon/">MON de Benoit Beguier</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Beguier-Benoit/mon/temps-1.1/">Analyse des données sans galèR</a>
+
+</div></div>
+
+
+
+
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p><strong>Niveau :</strong> débutant
+<strong>Prérequis :</strong></p>
+<ul>
+<li>Bases de programmation</li>
+</ul>
+</div></div>
+<h2>Sommaire</h2>
+<ol>
+<li>Introduction</li>
+<li>Bases</li>
+<li>Importation de données à partir de fichiers externes</li>
+<li>Application sur des données de Formule 1</li>
+</ol>
+<h2>1. Introduction</h2>
+<p>Pour la réalisation de ce cours, j'aurais cinq sources principales :</p>
+<ul>
+<li>Initiez-vous au langage R pour analyser vos données, cours dispensé sur le site openclassrooms que vous pouvez trouvez <a href="https://openclassrooms.com/fr/courses/4525256-initiez-vous-au-langage-r-pour-analyser-vos-donnees">ici</a>.</li>
+<li>La documentation officielle R pour aller plus loin accessible <a href="https://cran.r-project.org/other-docs.html">ici</a>.</li>
+<li>Le site internet Racing Statistics accessible <a href="https://www.racing-statistics.com">ici</a></li>
+<li>Le site internet Pitwall.app accessible <a href="https://www.pitwall.app">ici</a></li>
+<li>L'e-book d'AWS sur la gestion des données en Formule 1</li>
+</ul>
+<p>R est un logiciel de la famille GNU (GNU signifie &quot;GNU's Not Unix&quot;). Le projet GNU a été lancé en 1984 afin de développer un système d’exploitation complet, semblable à Unix, et qui soit un logiciel libre.
+Je vais utiliser l'environnement de travail RStudio tout au long de cette formation puis des approfondissements. Mon but à la fin de ce MON est de pouvoir analyser et visualiser des jeux de données divers. J'espère approfondir suffisamment le langage pour analyser des données d'un sujet que je connais assez bien, le sport automobile.</p>
+<h2>2. Bases</h2>
+<h4>Répertoire</h4>
+<p>Comme dans beaucoup d'environnements, il faut spécifier à RStudio le répertoire de travail avec la commande</p>
+<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell">setwd<span class="token punctuation">(</span><span class="token string">"C:Users..."</span><span class="token punctuation">)</span>
+</code></pre>
+<h4>Types d'objets</h4>
+<p>S'en suivent ensuite d'autres explications basiques sur les trois manières d'attribuer des variables, ou <em>objets</em> comme ils sont appelés dans la formation ; ainsi que la suppression des objets et l'explication sur les différents types d'objets en R.</p>
+<p>J'ai trouvé très intéressante la partie sur la conversion entre les types. R permet de convertir un objet en n'importe quel type, et ce même quand cela n'a pas de sens (par exemple : un nombre en type <em>numeric</em> que l'on peut convertir en booléen de type <em>logical</em>). Cette liberté peut permettre, à mon sens, des facilités de programmation utiles dans certains cas.</p>
+<h4>Les dataframes</h4>
+<p>Les dataframes sont des listes d'objets (appelés <em>composantes</em>), dont chaques composantes ont la même longueur. Ils sont particulièrement utiles dans l'analyse des données. J'ai appris à en créer à partir de deux listes, à partir d'une matrice et à en importer depuis un fixhier (.csv ou .txt par exemple) et aussi à les visualiser grâce à la fonction View.</p>
+<h4>La sélection d'éléments dans les différents types d'objets</h4>
+<p>Un réel atout de R par rapport à Python repose, à mon sens, dans la syntaxe de sélection d'éléments. Je trouve celle-ci très intuitive et logique et ce pour tous types d'objets, là où cela peut s'avérer plus technique selon les objets manipulés sur Python.
+La sélection peut se faire par condition, par exemple :</p>
+<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell"><span class="token comment">#Créons la matrice X</span>
+
+X <span class="token operator">&lt;</span>- matrix<span class="token punctuation">(</span><span class="token number">1</span>:12,nrow<span class="token operator">=</span><span class="token number">3</span>,ncol<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">)</span>
+X
+<span class="token comment">#      [,1] [,2] [,3] [,4]</span>
+<span class="token comment"># [1,]    1    4    7   10</span>
+<span class="token comment"># [2,]    2    5    8   11</span>
+<span class="token comment"># [3,]    3    6    9   12</span>
+
+<span class="token comment">#Sélection par condition</span>
+X<span class="token punctuation">[</span>,X<span class="token punctuation">[</span><span class="token number">1</span>,<span class="token punctuation">]</span><span class="token operator">></span><span class="token number">2</span><span class="token punctuation">]</span>
+<span class="token comment">#      [,1] [,2] [,3]</span>
+<span class="token comment"># [1,]    4    7   10</span>
+<span class="token comment"># [2,]    5    8   11</span>
+<span class="token comment"># [3,]    6    9   12</span>
+</code></pre>
+<p>ou alors par indice :</p>
+<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell">X<span class="token punctuation">[</span><span class="token number">1</span>,-1:2<span class="token punctuation">]</span> <span class="token comment"># Première ligne de X privée de ses deux premières colonnes</span>
+<span class="token comment">#      [,1] [,2]</span>
+<span class="token comment"># [1,]    7   10</span>
+</code></pre>
+<h2>3. Importation de données à partir de fichiers externes</h2>
+<h4>A partir d'un fichier texte (.txt ou .csv)</h4>
+<p>Pour lire les données d'un fichier texte externe avec R, il faut utiliser la commande</p>
+<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell">maVariable <span class="token operator">&lt;</span>- read.table<span class="token punctuation">(</span><span class="token string">"monFichier.txt"</span>, <span class="token assign-left variable">sep</span><span class="token operator">=</span><span class="token string">";"</span>, <span class="token assign-left variable">row.names</span><span class="token operator">=</span><span class="token number">1</span>, <span class="token assign-left variable">header</span><span class="token operator">=</span>TRUE<span class="token punctuation">)</span>
+<span class="token comment">#header indique si la première ligne contient ou non les intitulés des variables. Il est FALSE par défaut.</span>
+</code></pre>
+<h4>A partir d'un fichier quelconque</h4>
+<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Il est aussi possible avec RStudio d'importer tous les types de fichiers en utilisant le bouton Import Dataset.</p>
+</div></div>
+<h4>Gérer les erreurs d'importations</h4>
+<p>J'ai appris dans ce MOOC à détecter les erreurs d'importation (provenant du fichier source généralement), notamment avec la bonne pratique d'utiliser la fonction <code>summary()</code>.
+Celle-ci permet de visualiser un résumé de chaque donnée, ainsi que le nombre de type <em>NA</em>, en l'occurrence des erreurs de données. Un trop grand nombre de <em>NA</em> montre que le fichier source manque d'un grand nombre de données.</p>
+<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell"><span class="token operator">></span> summary<span class="token punctuation">(</span>data1<span class="token punctuation">)</span>
+     noms               sexe                age    
+ Length:6           Length:6           Min.   :16  
+ Class :character   Class :character   1st Qu.:17  
+ Mode  :character   Mode  :character   Median :17  
+                                       Mean   :17  
+                                       3rd Qu.:17  
+                                       Max.   :18  
+</code></pre>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Ici il n'y a aucun problème d'import.</p>
+</div></div>
+<p>Ce MOOC s'est ensuite terminé sur un petit test que j'ai validé.
+<img src="Mooc.png" alt="MOOC">
+Source : Open Classrooms</p>
+<h2>4. Application sur des données de Formule 1</h2>
+<h4>Objectif</h4>
+<p>Je vais dans cette partie appliquer ce que j'ai appris dans le MOOC pour visualiser et analyser rapidement des données issues de la Formule 1. Je fais d'abord des recherches pour déterminer le type de données auxquelles je pourrais avoir accès.</p>
+<h4>Générer un graphique des positions des pilotes à chaque tour</h4>
+<p>J'ai trouvé sur Internet plusieurs bases de données mettant à disposition des données de chaque Grand Prix, telles que les positions d'arrivées, les écarts avec les autres pilotes, les positions à chaque tour... C'est cette dernière donnée qui va m'intéresser, et je vais d'abord essayer de générer un graphique des positions de chaque pilote à chaque tour, comme montré ci-dessous :</p>
+<p><img src="graphique.png" alt="Graphique">
+Source : Pitwall</p>
+<p>Cela me paraît assez accessible mais relève d'un bon entraînement d'utilisation de la fonction <code>plot()</code> .</p>
+<h4>Récupérer les données</h4>
+<p>A partir du site <a href="https://pitwall.app">Pitwall</a>, j'ai extrait les positions à chaque tour de deux pilotes (seulement deux pour l'exemple car je dois faire la procédure manuellement), Max Verstappen et lando Norris, pour le Grand Prix du Japon qui s'est déroulé le 24/09/2023. J'ai ensuite placé ces données dans un fichier Excel puis je les ai exporté en .csv.
+J'importe ensuite les fichiers dans RStudio, en déclarant des variables <code>Lando</code> et <code>Max</code> qui sont de type <code>dataframe</code> :</p>
+<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell">setwd<span class="token punctuation">(</span><span class="token string">"C:/Users/Beguier/Desktop"</span><span class="token punctuation">)</span>
+Lando  <span class="token operator">&lt;</span>- read.csv<span class="token punctuation">(</span><span class="token string">"Norris.csv"</span>, header <span class="token operator">=</span> TRUE, sep <span class="token operator">=</span> <span class="token string">";"</span><span class="token punctuation">)</span>
+
+Max  <span class="token operator">&lt;</span>- read.csv<span class="token punctuation">(</span><span class="token string">"Verstappen.csv"</span>, header <span class="token operator">=</span> TRUE, sep <span class="token operator">=</span> <span class="token string">";"</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Je peux ensuite facilement demander à R une représentation graphique de la position des pilotes en fonction du tour dans lequel ils se situent.</p>
+<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell"><span class="token comment"># Créez un graphique avec la première colonne en abscisse et la deuxième colonne des deux fichiers en ordonnée</span>
+plot<span class="token punctuation">(</span>Lando<span class="token variable">$Lap</span>, Lando<span class="token variable">$Position</span>, <span class="token assign-left variable">type</span><span class="token operator">=</span><span class="token string">"l"</span>, <span class="token assign-left variable">col</span><span class="token operator">=</span><span class="token string">"blue"</span>, <span class="token assign-left variable">xlab</span><span class="token operator">=</span><span class="token string">"Tours"</span>, <span class="token assign-left variable">ylab</span><span class="token operator">=</span><span class="token string">"Positions"</span>, <span class="token assign-left variable">ylim</span><span class="token operator">=</span>rev<span class="token punctuation">(</span>range<span class="token punctuation">(</span>Lando<span class="token variable">$Position</span><span class="token punctuation">))</span><span class="token punctuation">)</span>
+lines<span class="token punctuation">(</span>Lando<span class="token variable">$Lap</span>, Max<span class="token variable">$Position</span>, <span class="token assign-left variable">type</span><span class="token operator">=</span><span class="token string">"l"</span>, <span class="token assign-left variable">col</span><span class="token operator">=</span><span class="token string">"red"</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Inversez l'axe des ordonnées</span>
+axis<span class="token punctuation">(</span><span class="token number">2</span>, <span class="token assign-left variable">at</span><span class="token operator">=</span>pretty<span class="token punctuation">(</span>rev<span class="token punctuation">(</span>Lando<span class="token variable">$Position</span><span class="token punctuation">))</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Légendes</span>
+legend<span class="token punctuation">(</span><span class="token string">"topright"</span>, <span class="token assign-left variable">legend</span><span class="token operator">=</span>c<span class="token punctuation">(</span><span class="token string">"Lando Norris"</span>, <span class="token string">"Max Verstappen"</span><span class="token punctuation">)</span>, <span class="token assign-left variable">col</span><span class="token operator">=</span>c<span class="token punctuation">(</span><span class="token string">"blue"</span>, <span class="token string">"red"</span><span class="token punctuation">)</span>, <span class="token assign-left variable">lty</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+</code></pre>
+<p>On obtient alors ce graphique :</p>
+<p><img src="graphique1.png" alt="Graphique1"></p>
+<p>Afin d'améliorer l'esthétisme de ce graphique, j'y apporte quelques modifications pour obtenir le résultat suivant :</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">setwd<span class="token punctuation">(</span><span class="token string">"C:/Users/Beguier/Desktop"</span><span class="token punctuation">)</span>
+Lando  <span class="token operator">&lt;</span><span class="token operator">-</span> read<span class="token punctuation">.</span>csv<span class="token punctuation">(</span><span class="token string">"Norris.csv"</span><span class="token punctuation">,</span> header <span class="token operator">=</span> TRUE<span class="token punctuation">,</span> sep <span class="token operator">=</span> <span class="token string">";"</span><span class="token punctuation">)</span>
+
+Max  <span class="token operator">&lt;</span><span class="token operator">-</span> read<span class="token punctuation">.</span>csv<span class="token punctuation">(</span><span class="token string">"Verstappen.csv"</span><span class="token punctuation">,</span> header <span class="token operator">=</span> TRUE<span class="token punctuation">,</span> sep <span class="token operator">=</span> <span class="token string">";"</span><span class="token punctuation">)</span>
+
+
+<span class="token comment"># Créez un graphique avec la première colonne en abscisse et la deuxième colonne des deux fichiers en ordonnée</span>
+par<span class="token punctuation">(</span>bg<span class="token operator">=</span><span class="token string">"white"</span><span class="token punctuation">)</span> <span class="token comment"># Définir le fond en blanc</span>
+plot<span class="token punctuation">(</span>Lando$Lap<span class="token punctuation">,</span> Lando$Position<span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token operator">=</span><span class="token string">"l"</span><span class="token punctuation">,</span> col<span class="token operator">=</span><span class="token string">"blue"</span><span class="token punctuation">,</span> xlab<span class="token operator">=</span><span class="token string">""</span><span class="token punctuation">,</span> ylab<span class="token operator">=</span><span class="token string">""</span><span class="token punctuation">,</span> xlim<span class="token operator">=</span>c<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">max</span><span class="token punctuation">(</span>Lando$Lap<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> ylim<span class="token operator">=</span>rev<span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span>Lando$Position<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> lwd<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span> axes<span class="token operator">=</span>FALSE<span class="token punctuation">)</span>
+lines<span class="token punctuation">(</span>Lando$Lap<span class="token punctuation">,</span> Max$Position<span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token operator">=</span><span class="token string">"l"</span><span class="token punctuation">,</span> col<span class="token operator">=</span><span class="token string">"red"</span><span class="token punctuation">,</span> lwd<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Emplacements des graduations sur l'axe des abscisses (tous les 5 tours)</span>
+x_ticks <span class="token operator">&lt;</span><span class="token operator">-</span> seq<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">max</span><span class="token punctuation">(</span>Lando$Lap<span class="token punctuation">)</span><span class="token punctuation">,</span> by<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Emplacements des graduations sur l'axe des ordonnées</span>
+y_ticks <span class="token operator">&lt;</span><span class="token operator">-</span> seq<span class="token punctuation">(</span><span class="token builtin">max</span><span class="token punctuation">(</span>Lando$Position<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">min</span><span class="token punctuation">(</span>Lando$Position<span class="token punctuation">)</span><span class="token punctuation">,</span> by<span class="token operator">=</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Ajoutez des axes personnalisés en noir (sans quadrillage)</span>
+axis<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> at<span class="token operator">=</span>x_ticks<span class="token punctuation">,</span> col<span class="token punctuation">.</span>axis<span class="token operator">=</span><span class="token string">"black"</span><span class="token punctuation">,</span> tck<span class="token operator">=</span><span class="token number">0.02</span><span class="token punctuation">,</span> labels<span class="token operator">=</span>TRUE<span class="token punctuation">)</span> <span class="token comment"># Axe des abscisses en noir sans quadrillage</span>
+axis<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> at<span class="token operator">=</span>y_ticks<span class="token punctuation">,</span> col<span class="token punctuation">.</span>axis<span class="token operator">=</span><span class="token string">"black"</span><span class="token punctuation">,</span> tck<span class="token operator">=</span><span class="token number">0.02</span><span class="token punctuation">,</span> labels<span class="token operator">=</span>TRUE<span class="token punctuation">)</span> <span class="token comment"># Axe des abscisses en noir sans quadrillage</span>
+
+<span class="token comment"># Déplacez l'étiquette de l'axe des abscisses en bas</span>
+mtext<span class="token punctuation">(</span><span class="token string">"Tours"</span><span class="token punctuation">,</span> side<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> line<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span> col<span class="token operator">=</span><span class="token string">"black"</span><span class="token punctuation">)</span> <span class="token comment"># Texte en noir, ligne 2 pour le bas</span>
+mtext<span class="token punctuation">(</span><span class="token string">"Positions"</span><span class="token punctuation">,</span> side<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span> line<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span> col<span class="token operator">=</span><span class="token string">"black"</span><span class="token punctuation">)</span> <span class="token comment"># Texte en noir, ligne 2 pour le bas</span>
+
+<span class="token comment"># Légendes (positionnée en bas à droite)</span>
+legend<span class="token punctuation">(</span><span class="token string">"bottomright"</span><span class="token punctuation">,</span> legend<span class="token operator">=</span>c<span class="token punctuation">(</span><span class="token string">"Lando Norris"</span><span class="token punctuation">,</span> <span class="token string">"Max Verstappen"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> col<span class="token operator">=</span>c<span class="token punctuation">(</span><span class="token string">"blue"</span><span class="token punctuation">,</span> <span class="token string">"red"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> lty<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> text<span class="token punctuation">.</span>col<span class="token operator">=</span><span class="token string">"black"</span><span class="token punctuation">,</span> bty<span class="token operator">=</span><span class="token string">"n"</span><span class="token punctuation">)</span> <span class="token comment"># Texte en noir, position en bas à droite</span>
+<span class="token comment"># Titre du graphique avec retour à la ligne au milieu</span>
+title<span class="token punctuation">(</span>main<span class="token operator">=</span><span class="token string">"Position des pilotes par rapport \n au tour dans lequel ils se situent"</span><span class="token punctuation">,</span> col<span class="token punctuation">.</span>main<span class="token operator">=</span><span class="token string">"black"</span><span class="token punctuation">)</span> <span class="token comment"># Titre en noir avec retour à la ligne au milieu</span>
+</code></pre>
+<p><img src="graphique2.png" alt="Graphique2"></p>
+<p>J'ai donc réussi mon cas pratique. J'aimerais poursuivre plus loin l'utilisation de R, peut-être dans un prochain MON ou de mon côté.</p>
+
+
+</article>
+
+        </main>
+
+
+        <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div class="min-h-[50px] flex justify-center items-center">
+                    <p class="text-center">
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développent et Organisation en IT
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        MathJax
+            .startup
+            .document
+            .getMathItemsWithin(document.body);
+        </script>
+
+    </body>
+</html>

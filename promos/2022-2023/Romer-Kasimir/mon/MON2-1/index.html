@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>MON 2.1 - Splunk</title>
+
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [
+                [
+                '$', '$'
+                ],
+                [
+                '\\(', '\\)'
+                ]
+            ]
+            },
+            svg: {
+            fontCache: 'global'
+            }
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
+
+        <header class="border-b-2 border-gray-200 mb-4">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="min-h-[50px] flex justify-between items-center">
+                <a class="mx-2" href="/do-it/">Home</a>
+                <div class="flex items-center gap-4 sm:gap-6 ">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                        </svg>
+                    </a>
+                    <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
+                        <svg class="h-5 aspect-square" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
+            
+<article class="relative">
+<h1 class="mb-1">MON 2.1 - Splunk</h1>
+<div class="mb-4">
+    
+        <div class="px-4 flex flex-wrap items-center">
+            
+                <div class="font-bold">Tags : </div>
+            
+            <ul class="flex flex-wrap overflow-auto not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">MON</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">2022-2023</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 2</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">cybersecurité</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">logs</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">big data</li>
+                
+
+            </ul>
+            
+            
+            <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="px-4 flex flex-wrap items-center">
+            <div class="font-bold">Auteurs : </div>
+            <ul class="flex flex-wrap not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Kasimir Romer</li>
+                
+            </ul>
+        </div>
+    
+
+    
+</div>
+
+
+
+    
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-purple-500 bg-purple-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>
+</svg>
+<div class="pl-8 mr-8">
+
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2022-2023/">2022-2023</a><span class="px-1">/</span><a href="/do-it/promos/2022-2023/Romer-Kasimir/">Kasimir Romer</a><span class="px-1">/</span><a href="/do-it/promos/2022-2023/Romer-Kasimir/mon/">MON de Kasimir</a><span class="px-1">/</span><a href="/do-it/promos/2022-2023/Romer-Kasimir/mon/MON2-1/">MON 2.1 - Splunk</a>
+
+</div></div>
+
+
+
+
+<!-- Début Résumé -->
+<!-- fin résumé -->
+<h2>Introduction</h2>
+<p>Splunk est un logiciel de gestion des logs. Il permet de collecter, indexer et rechercher des logs. Il permet aussi de visualiser les logs sous forme de graphiques. Dans la domaine de la sécurité informatique, Splunk est souvent utilisé comme SIEM (Security Incident Event Management) car il permet de rechercher des patterns dans les logs et d'alerter sur des événements. Un SIEM est la base et le logiciel central de chaque SOC (Security Operations Center).
+Splunk est aussi utilisé dans d'autres domaines, par exemple pour la business intelligence, car il permet de collecter et d'analyser des données de différents systèmes.</p>
+<p>A partir d'ici, la langue de la formation est l'anglais parce que tous les tutoriels et la documentation sont en anglais et la langue universelle de la domaine cybersec est l'anglais également.</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p>Prerequisites</p>
+</div><div class="pl-8 mr-8">
+<p>To follow the tutorials and documentation, it is recommended to follow along in a local installation of Splunk Enterprise. To do this, you need to:</p>
+<ul>
+<li>Creation of a Splunk Account</li>
+<li>Installation of Splunk Enterprise (<a href="https://www.splunk.com/en_us/download/splunk-enterprise.html">https://www.splunk.com/en_us/download/splunk-enterprise.html</a>)</li>
+</ul>
+</div></div>
+<h2>Formation</h2>
+<p>The basic training &quot;Splunk Fundamentals&quot; should take about 10-12 hours, so the volume would be very well adapted to this MON.</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><strong>Nomenclature</strong></p>
+</div><div class="pl-8 mr-8">
+<p>When we talk about Splunk, we usually mean <strong>Splunk Enterprise</strong>, which is the commercial version of the main Splunk product, or the newer <strong>Splunk Cloud</strong>, which does basically the same job, but is not installed in a datacenter. Instead, it uses a cloud environment that allows to be more flexible. <strong>Splunk</strong> is the name of the software company that creates those programs, but because those programs are so central to the Splunk univers, they are often referred to as Splunk. <strong>Splunk Enterprise Security</strong> is a module of Splunk Enterprise that adds SIEM (Security Incident Event Management) capabilities to Splunk Enterprise.</p>
+</div></div>
+<h3>What does Splunk do?</h3>
+<p>Splunk basically takes data from <strong>any source</strong>, parses it and adds it to an index, which later can be searched to retrieve the data.
+Splunk has powerful capabilities to use the retrieved data to <strong>visualize</strong> it and <strong>monitor</strong> it. It can also be used to <strong>alert</strong> on certain events. The software is especially powerful when it comes to handling big amounts of data, because it can handle <strong>millions of events per second</strong> and easily ingest giga- to terabytes of data.</p>
+<p>Atomic data is called <strong>event</strong> in Splunk, so a search returns a list of events. An event is a set of values associated with a
+timestamp. It is a single entry of data and can have one or multiple lines. An event can be a text document, a configuration file, an entire
+stack trace, and so on. Due to Splunks distributed architecture, it can be used to collect data from <strong>multiple sources</strong> and <strong>multiple locations</strong> efficently.</p>
+<h3>Splunk Architecture</h3>
+<p>Splunk consists of three main components: <strong>Search Head</strong>, <strong>Indexer</strong> and <strong>Forwarder</strong>.</p>
+<h4>Search Head</h4>
+<p>The search head is the user interface, it is the place where you search the index(es) and visualize the data. The search query is inserted into the search bar and consists of the index to be searched, the time range and the specific search string. The search string can be a simple search string or a SPL (Splunk Query Language) query. The search string is then sent to the indexer(s) and the results are displayed in the search head. There, they can be filtered, sorted and visualized.</p>
+<h4>Indexer</h4>
+<p>The indexer takes the raw data that it gets from the forwarder(s) and indexes it. The indexer is the place where the data is converted into events and stored. During this process, it can perform operations on the data like masking sensitive information.</p>
+<h4>Forwarder</h4>
+<p>The forwarder is the component that collects the data from the sources and sends it to the indexer. At every data source, a forwarder must be installed to grab the data, e.g. on every Windows Host, a forwarder must run to forward Windows Event Logs to the indexer. An alternative to the traditional forwarder is the <strong>HTTP Event Collector (HEC)</strong>, which can be used to send data to the indexer via HTTP(S).
+The data the forwarder can retrieve can be configured in the forwarder's configuration file. The sources are, among others, Windows Event Logs, Linux Syslogs, Apache Logs, data from SQL databases, AWS or other cloud logs, APIs etc.</p>
+<h4>Data Pipeline</h4>
+<p>The data flow in Splunk can be described like this:
+<img src="pipeline-border.png" alt="Data Pipeline"></p>
+<h3>Other Components</h3>
+<h4>Deployment server</h4>
+<p>The deployment server is a central instance that can be used to push configuration to the forwarders. It is not necessary to use a deployment server, but it can be very useful to manage the configuration of the forwarders, especially in large environments. Normally, there is only one deployment server in the whole environment.</p>
+<h4>License Master</h4>
+<p>The license master is a Splunk instance that is responsible for managing and enforcing the use of licenses in a Splunk deployment. It is used to track and manage the usage of Splunk across the organization, including the amount of data ingested, the number of users, and the number of Splunk instances. This is especially useful in large environments, where it is important, and at the same time very difficult, to keep track of the usage of Splunk.</p>
+<h4>Integrations (Apps)</h4>
+<p>Splunk can be connected with many different systems through proprietary connectors or an API to combine the power of Splunk indexing and searching with many different softwares. In Splunk, those connectors are called apps and can be obtained from <a href="https://splunkbase.splunk.com/">Splunkbase</a>. There are many apps available for free, but some are only available for purchase. The apps can be installed on the search head, the indexer or the forwarder. Some of the popular apps are connectors for Micrsoft Windows, Microsoft Azure, Amazon Web Services, Cisco, Palo Alto Networks, VMware, Salesforce etc.</p>
+<h3>Searching</h3>
+<p>For most users, searching the Splunk indexes are the only thing they do with Splunk, so it is very important to understand how searching works in Splunk.</p>
+<h4>Search Processing Language (SPL)</h4>
+<p>Search Processing Language is the primary language used to search, analyze, and visualize data in Splunk. SPL is a proprietary language that is specific to Splunk. Some of the key features of SPL include the ability to search and filter data, perform calculations and transformations on data, and create custom visualizations.</p>
+<p>SPL uses <strong>commands</strong> and <strong>functions</strong> to interact with the search results. Commands like <em>chart</em>, <em>eval</em>, <em>stats</em>, <em>timechart</em>, <em>top</em>, <em>where</em> and <em>fields</em> are used to filter the data that is piped into the command. Functions like <em>lower</em>, <em>upper</em>, <em>replace</em>, <em>strcat</em> or <em>strcat</em> are used to
+manipulate the data returned by the search.
+A short, but very comprehensive, list of SPL commands and functions can be found in the <a href="https://www.splunk.com/pdfs/solution-guides/splunk-quick-reference-guide.pdf">cheat sheet</a>.</p>
+<p>Every SPL query must include at least one index to be searched. The index can be specified by name or by wildcard. If no index is specified, the default index is used which is defined in the configuration of the search head.
+Commands are chained together with a pipe “|” character to indicate that the output of one command feeds into the next command on the right, just like in Bash in Linux.</p>
+<p><strong>Examples of SPL queries:</strong></p>
+<pre><code>index=* | head 10
+# This query will search for all events in all indexes and return the first 10 results.
+</code></pre>
+<pre><code>index=web* status=404 | top referrer
+# This query will search for events in indexes that start with &quot;web&quot; and have a status field with a value of 404. It will then return the top referrers for these events.
+</code></pre>
+<pre><code>index=web* | timechart count by status
+# This query will search for events in indexes that start with &quot;web&quot; and create a timechart showing the count of events by status.
+</code></pre>
+<pre><code>index=web* status=404 | geostats count by clientip
+# This query will search for events in indexes that start with &quot;web&quot; and have a status field with a value of 404. It will then use the geostats command to calculate statistics for the count of events by client IP address and display the results on a map.
+</code></pre>
+<p><strong>Time ranges</strong>
+The search results can also be filtered by time ranges. There are two types of time ranges: absolute and relative. Absolute time ranges are specified by a start and end time, e.g. <code>2019-01-01 00:00:00</code> to <code>2019-01-01 23:59:59</code>. Relative time ranges are specified by a start and end time relative to the current time, e.g. <code>-1d@d</code> to <code>@d</code> (yesterday to today). Besides this notation, the time ranges can also be specified by a time range picker in the search bar.</p>
+<h2>Sources</h2>
+<h3>Tutorials</h3>
+<ul>
+<li><a href="https://education.splunk.com/free">https://education.splunk.com/free</a></li>
+<li><a href="https://www.splunk.com/pdfs/training/splunk-education-student-handbook.pdf">https://www.splunk.com/pdfs/training/splunk-education-student-handbook.pdf</a></li>
+<li><a href="https://www.youtube.com/watch?v=6lX4DOd1T-s">https://www.youtube.com/watch?v=6lX4DOd1T-s</a></li>
+<li><a href="https://youtube.com/playlist?list=PLSr58-DJdRybowRyR8gp4cbLtoQektcze">https://youtube.com/playlist?list=PLSr58-DJdRybowRyR8gp4cbLtoQektcze</a></li>
+<li><a href="https://www.splunk.com/en_us/training/free-courses.html">https://www.splunk.com/en_us/training/free-courses.html</a></li>
+<li>Splunk Search Tutorial: <a href="https://docs.splunk.com/Documentation/Splunk/9.0.3/SearchTutorial/WelcometotheSearchTutorial">https://docs.splunk.com/Documentation/Splunk/9.0.3/SearchTutorial/WelcometotheSearchTutorial</a></li>
+</ul>
+<h3>Documentation</h3>
+<ul>
+<li>Official documentation: <a href="https://docs.splunk.com/Documentation/Splunk/9.0.3/">https://docs.splunk.com/Documentation/Splunk/9.0.3/</a></li>
+<li>Great cheat sheet: <a href="https://www.splunk.com/pdfs/solution-guides/splunk-quick-reference-guide.pdf">https://www.splunk.com/pdfs/solution-guides/splunk-quick-reference-guide.pdf</a></li>
+</ul>
+
+
+</article>
+
+        </main>
+
+
+        <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div class="min-h-[50px] flex justify-center items-center">
+                    <p class="text-center">
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développent et Organisation en IT
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        MathJax
+            .startup
+            .document
+            .getMathItemsWithin(document.body);
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,648 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Bibliothèques Python pour la Data Science : NumPy, Matplotlib et Pandas</title>
+
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [
+                [
+                '$', '$'
+                ],
+                [
+                '\\(', '\\)'
+                ]
+            ]
+            },
+            svg: {
+            fontCache: 'global'
+            }
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
+
+        <header class="border-b-2 border-gray-200 mb-4">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="min-h-[50px] flex justify-between items-center">
+                <a class="mx-2" href="/do-it/">Home</a>
+                <div class="flex items-center gap-4 sm:gap-6 ">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                        </svg>
+                    </a>
+                    <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
+                        <svg class="h-5 aspect-square" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
+            
+<article class="relative">
+<h1 class="mb-1">Bibliothèques Python pour la Data Science : NumPy, Matplotlib et Pandas</h1>
+<div class="mb-4">
+    
+        <div class="px-4 flex flex-wrap items-center">
+            
+                <div class="font-bold">Tags : </div>
+            
+            <ul class="flex flex-wrap overflow-auto not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">MON</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">2023-2024</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 2</li>
+                
+
+            </ul>
+            
+            
+            <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="px-4 flex flex-wrap items-center">
+            <div class="font-bold">Auteurs : </div>
+            <ul class="flex flex-wrap not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Alexandre Beyaert</li>
+                
+            </ul>
+        </div>
+    
+
+    
+</div>
+
+        <p class="mb-4 text-lg">
+
+                Un MON traitant de l'utilisation des bibliothèques Python pour la Data Science.
+
+        </p>
+
+
+
+    
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-purple-500 bg-purple-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>
+</svg>
+<div class="pl-8 mr-8">
+
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Beyaert-Alexandre/">Alexandre BEYAERT</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Beyaert-Alexandre/mon/">MON de Alexandre Beyaert</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Beyaert-Alexandre/mon/temps-2.1/">Bibliothèques Python pour la Data Science : NumPy, Matplotlib et Pandas</a>
+
+</div></div>
+
+
+
+
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p><strong>Niveau :</strong> Facile
+<strong>Prérequis :</strong> Bases en Python</p>
+</div></div>
+<h2>Sommaire</h2>
+<ol>
+<li>Introduction</li>
+<li>Bibliothèque NumPy</li>
+<li>Bibliothèque Matplotlib</li>
+<li>Bibliothèque Pandas</li>
+<li>Conclusion</li>
+<li>Bibliographie</li>
+</ol>
+<h2>1. Introduction</h2>
+<p>La vocation de ce MON est d'introduire de façon non exhaustive aux bibliothèques python utiles pour la DataScience.
+Ce premier MON introduit aux bibliothèques Numpy, Matplotlib et Pandas qui servent respectivement au calcul numérique, à la visualisation basique des données et à leur analyse.</p>
+<p>Le MON 2.1 va de pair avec le MON 2.2 qui lui introduit les bibliothèques Seaborn et Scikit Learn. Celles-ci permettent d'effectuer d'une part de la visualisation plus poussée, très adaptée aux dataframe issus de Pandas, d'autre part appelle aux algorithmes d'apprentissage pour effectuer de la classification, de la régression et du clustering.</p>
+<h2>2. Bibliothèque NumPy</h2>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+</code></pre>
+<p>La bibliothèque NumPy permet de faciliter l'application de calculs numériques en Python en introduisant aux tableaux.</p>
+<p>Ces tableaux à N dimensions s'avèrent être bien plus utiles que les listes en Data Science dans la mesure où :</p>
+<ul>
+<li>leur coût mémoire est moins important que celui des séquences</li>
+<li>ils présentent beaucoup plus de méthodes que ces dernières et permettent une plus grande flexibilité et facilité dans les calculs.</li>
+</ul>
+<h3>Construire un tableau NumPy</h3>
+<p><strong>Construction à la main np.array(object, dtype)</strong></p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span>np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span>np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span> <span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<p><strong>En 2D avec NumPy, l'axe 0 est celui selon les lignes, l'axe 1 celui selon les colonnes.</strong>
+Ainsi, notre tableau B est bien une matrice à 2 lignes et 3 colonnes.</p>
+<p><strong>Remplissage automatique : 0, 1 ou identité</strong></p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment">#np.zeros((shape), dtype)</span>
+<span class="token operator">>></span><span class="token operator">></span>np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>             
+array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0.</span><span class="token punctuation">,</span> <span class="token number">0.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">0.</span><span class="token punctuation">,</span> <span class="token number">0.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">0.</span><span class="token punctuation">,</span> <span class="token number">0.</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment">#np.ones((shape), dtype)</span>
+<span class="token operator">>></span><span class="token operator">></span>np<span class="token punctuation">.</span>ones<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span>              
+array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1.</span><span class="token punctuation">,</span> <span class="token number">1.</span><span class="token punctuation">,</span> <span class="token number">1.</span><span class="token punctuation">,</span> <span class="token number">1.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">1.</span><span class="token punctuation">,</span> <span class="token number">1.</span><span class="token punctuation">,</span> <span class="token number">1.</span><span class="token punctuation">,</span> <span class="token number">1.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">1.</span><span class="token punctuation">,</span> <span class="token number">1.</span><span class="token punctuation">,</span> <span class="token number">1.</span><span class="token punctuation">,</span> <span class="token number">1.</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment">#np.ones(shape, dtype)</span>
+<span class="token operator">>></span><span class="token operator">></span>np<span class="token punctuation">.</span>ones<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>           
+array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1.</span><span class="token punctuation">,</span> <span class="token number">0.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">0.</span><span class="token punctuation">,</span> <span class="token number">1.</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Remplissage aléatoire</strong></p>
+<ul>
+<li>rand génère des valeurs aléatoires issues de la distribution uniforme sur l'intervalle [0,1]</li>
+<li>randn génère des valeurs aléatoires issues de la distribution normale centrée en 0</li>
+<li>randint génère des valeurs entières aléatoires issues d'une distribution uniforme sur un intervalle donné</li>
+</ul>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment">#np.random.randn(lignes, colonnes)</span>
+<span class="token operator">>></span><span class="token operator">></span>np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>randn<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">)</span>
+array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token number">0.32146014</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1.38563513</span><span class="token punctuation">,</span>  <span class="token number">0.346344</span>  <span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1.60361699</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">0.26914238</span><span class="token punctuation">,</span>  <span class="token number">0.156633</span>  <span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.16439682</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.96573034</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span> <span class="token number">0.27903539</span><span class="token punctuation">,</span>  <span class="token number">0.69972398</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.73055932</span><span class="token punctuation">,</span>  <span class="token number">0.47816189</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Arange &amp; linspace</strong>
+Chacun de ces constructeurs renvoie une matrice de dimension 1 dont les nombres sont régulièrement espacés sur un intervalle spécifié.
+Linspace permet de choisir le nombre de points alors qu'arange permet de définir l'intervalle entre ces points.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment">#np.linspace(start, stop, num)</span>
+<span class="token operator">>></span><span class="token operator">></span>np<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span>
+array<span class="token punctuation">(</span><span class="token punctuation">[</span> <span class="token number">0.</span> <span class="token punctuation">,</span>  <span class="token number">2.5</span><span class="token punctuation">,</span>  <span class="token number">5.</span> <span class="token punctuation">,</span>  <span class="token number">7.5</span><span class="token punctuation">,</span> <span class="token number">10.</span> <span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment">#np.arange(start, stop, step)</span>
+<span class="token operator">>></span><span class="token operator">></span>np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span>
+array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<h3>Quelques attributs utiles</h3>
+<p><strong>- ndim :</strong> dimension du tableau
+<strong>- shape :</strong> forme du tableau (tuple)
+<strong>- size :</strong> nombre d'éléments dans le tableau</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span>A <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span>A<span class="token punctuation">.</span>ndim
+<span class="token number">2</span>
+<span class="token operator">>></span><span class="token operator">></span>A<span class="token punctuation">.</span>shape
+<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span>A<span class="token punctuation">.</span>size
+<span class="token number">6</span>
+</code></pre>
+<h3>Manipulation de tableaux</h3>
+<p><strong>concatenate</strong></p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span>A <span class="token operator">=</span> np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span>A
+array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0.</span><span class="token punctuation">,</span> <span class="token number">0.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">0.</span><span class="token punctuation">,</span> <span class="token number">0.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">0.</span><span class="token punctuation">,</span> <span class="token number">0.</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span>B <span class="token operator">=</span> np<span class="token punctuation">.</span>ones<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span>B
+array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1.</span><span class="token punctuation">,</span> <span class="token number">1.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">1.</span><span class="token punctuation">,</span> <span class="token number">1.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">1.</span><span class="token punctuation">,</span> <span class="token number">1.</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment">#np.concatenate((shape), axis=?)</span>
+<span class="token operator">>></span><span class="token operator">></span>np<span class="token punctuation">.</span>concatenate<span class="token punctuation">(</span><span class="token punctuation">(</span>A<span class="token punctuation">,</span>B<span class="token punctuation">)</span><span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0.</span><span class="token punctuation">,</span> <span class="token number">0.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">0.</span><span class="token punctuation">,</span> <span class="token number">0.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">0.</span><span class="token punctuation">,</span> <span class="token number">0.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">1.</span><span class="token punctuation">,</span> <span class="token number">1.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">1.</span><span class="token punctuation">,</span> <span class="token number">1.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">1.</span><span class="token punctuation">,</span> <span class="token number">1.</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token operator">>></span><span class="token operator">></span>np<span class="token punctuation">.</span>concatenate<span class="token punctuation">(</span><span class="token punctuation">(</span>A<span class="token punctuation">,</span>B<span class="token punctuation">)</span><span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0.</span><span class="token punctuation">,</span> <span class="token number">0.</span><span class="token punctuation">,</span> <span class="token number">1.</span><span class="token punctuation">,</span> <span class="token number">1.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">0.</span><span class="token punctuation">,</span> <span class="token number">0.</span><span class="token punctuation">,</span> <span class="token number">1.</span><span class="token punctuation">,</span> <span class="token number">1.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">0.</span><span class="token punctuation">,</span> <span class="token number">0.</span><span class="token punctuation">,</span> <span class="token number">1.</span><span class="token punctuation">,</span> <span class="token number">1.</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<p>En 2D, il est également possible d'utiliser <strong>np.hstack</strong> et <strong>np.vstack</strong> afin d'assembler selon l'axe 0 (vertical), l'axe 1 (horizontal)...</p>
+<p><strong>reshape</strong>
+La fonction reshape est utilisée pour redimensionner la forme d'un tableau sans modifier les données qu'il contient.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span>A <span class="token operator">=</span> np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> B <span class="token operator">=</span> np<span class="token punctuation">.</span>ones<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span>C <span class="token operator">=</span> F <span class="token operator">=</span> np<span class="token punctuation">.</span>concatenate<span class="token punctuation">(</span><span class="token punctuation">(</span>D<span class="token punctuation">,</span>E<span class="token punctuation">)</span><span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'La forme de C est'</span><span class="token punctuation">,</span> C<span class="token punctuation">.</span>shape<span class="token punctuation">,</span> <span class="token string">'et son nombre d\'items'</span><span class="token punctuation">,</span> C<span class="token punctuation">.</span>size<span class="token punctuation">)</span>
+La forme de la matrice est <span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span> et son nombre d'items <span class="token number">12</span>
+
+<span class="token comment">#C.reshape((shape))</span>
+<span class="token operator">>></span><span class="token operator">></span>C<span class="token punctuation">.</span>reshape<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0.</span><span class="token punctuation">,</span> <span class="token number">0.</span><span class="token punctuation">,</span> <span class="token number">0.</span><span class="token punctuation">,</span> <span class="token number">0.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">0.</span><span class="token punctuation">,</span> <span class="token number">0.</span><span class="token punctuation">,</span> <span class="token number">1.</span><span class="token punctuation">,</span> <span class="token number">1.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">1.</span><span class="token punctuation">,</span> <span class="token number">1.</span><span class="token punctuation">,</span> <span class="token number">1.</span><span class="token punctuation">,</span> <span class="token number">1.</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'La forme de C est'</span><span class="token punctuation">,</span> C<span class="token punctuation">.</span>shape<span class="token punctuation">,</span> <span class="token string">'et son nombre d\'items'</span><span class="token punctuation">,</span> C<span class="token punctuation">.</span>size<span class="token punctuation">)</span>
+La forme de C est <span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span> et son nombre d'items <span class="token number">12</span>
+</code></pre>
+<p>Cette méthode est particulièrement utile lorsque l'on crée un tableau à une dimension afin d'éviter des erreurs de calcul matriciel.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span>E <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span>E<span class="token punctuation">.</span>shape
+<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span>E<span class="token punctuation">.</span>reshape<span class="token punctuation">(</span><span class="token punctuation">(</span>E<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span>E<span class="token punctuation">.</span>shape
+<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span>
+</code></pre>
+<p><strong>ravel</strong></p>
+<p>Enfin ravel permet &quot;d'aplatir&quot; un tableau pour qu'il n'ait plus qu'une seule dimension.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span>D <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span>D
+array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment">#D.ravel()</span>
+<span class="token operator">>></span><span class="token operator">></span>D<span class="token punctuation">.</span>ravel<span class="token punctuation">(</span><span class="token punctuation">)</span>
+array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<h3>Indexing, Slicing et Masking</h3>
+<p>Il faut désormais pouvoir parcourir un tableau et atteindre certains de leurs items.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">A <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Indexing</span>
+<span class="token operator">>></span><span class="token operator">></span>A<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span>
+<span class="token number">6</span>
+
+<span class="token comment"># Slicing</span>
+<span class="token operator">>></span><span class="token operator">></span>A<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span>
+array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token operator">>></span><span class="token operator">></span>A<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span>
+array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token operator">>></span><span class="token operator">></span>A<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">10</span>
+array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span>  <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span> <span class="token number">4</span><span class="token punctuation">,</span>  <span class="token number">5</span><span class="token punctuation">,</span>  <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span>  <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Masking (utile pour du filtrage/traitement d'image)</span>
+<span class="token operator">>></span><span class="token operator">></span>B <span class="token operator">=</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">1024</span><span class="token punctuation">,</span> <span class="token number">720</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">169</span><span class="token punctuation">,</span> <span class="token number">231</span><span class="token punctuation">,</span>   <span class="token number">7</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span>  <span class="token number">16</span><span class="token punctuation">,</span> <span class="token number">243</span><span class="token punctuation">,</span>  <span class="token number">95</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">248</span><span class="token punctuation">,</span>  <span class="token number">80</span><span class="token punctuation">,</span> <span class="token number">175</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">196</span><span class="token punctuation">,</span>  <span class="token number">95</span><span class="token punctuation">,</span> <span class="token number">205</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">214</span><span class="token punctuation">,</span> <span class="token number">218</span><span class="token punctuation">,</span>   <span class="token number">9</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span>  <span class="token number">12</span><span class="token punctuation">,</span>   <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">119</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span> <span class="token number">86</span><span class="token punctuation">,</span> <span class="token number">133</span><span class="token punctuation">,</span>  <span class="token number">92</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span>  <span class="token number">97</span><span class="token punctuation">,</span>  <span class="token number">47</span><span class="token punctuation">,</span>   <span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">125</span><span class="token punctuation">,</span> <span class="token number">133</span><span class="token punctuation">,</span> <span class="token number">108</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">239</span><span class="token punctuation">,</span> <span class="token number">114</span><span class="token punctuation">,</span> <span class="token number">107</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">240</span><span class="token punctuation">,</span>  <span class="token number">45</span><span class="token punctuation">,</span> <span class="token number">106</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span>  <span class="token number">46</span><span class="token punctuation">,</span> <span class="token number">214</span><span class="token punctuation">,</span>  <span class="token number">74</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token operator">>></span><span class="token operator">></span>B<span class="token punctuation">[</span>B<span class="token operator">></span><span class="token number">200</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">255</span>
+
+<span class="token operator">>></span><span class="token operator">></span>B
+array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">169</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">,</span>   <span class="token number">7</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span>  <span class="token number">16</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">,</span>  <span class="token number">95</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">255</span><span class="token punctuation">,</span>  <span class="token number">80</span><span class="token punctuation">,</span> <span class="token number">175</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">196</span><span class="token punctuation">,</span>  <span class="token number">95</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">255</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">,</span>   <span class="token number">9</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span>  <span class="token number">12</span><span class="token punctuation">,</span>   <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">119</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span> <span class="token number">86</span><span class="token punctuation">,</span> <span class="token number">133</span><span class="token punctuation">,</span>  <span class="token number">92</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span>  <span class="token number">97</span><span class="token punctuation">,</span>  <span class="token number">47</span><span class="token punctuation">,</span>   <span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">125</span><span class="token punctuation">,</span> <span class="token number">133</span><span class="token punctuation">,</span> <span class="token number">108</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">,</span> <span class="token number">114</span><span class="token punctuation">,</span> <span class="token number">107</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">255</span><span class="token punctuation">,</span>  <span class="token number">45</span><span class="token punctuation">,</span> <span class="token number">106</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span>  <span class="token number">46</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">,</span>  <span class="token number">74</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Exemple d'un traitement d'image</strong></p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment">#import de l'image d'origine et affichage</span>
+
+<span class="token keyword">from</span> scipy <span class="token keyword">import</span> misc
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+face <span class="token operator">=</span> misc<span class="token punctuation">.</span>face<span class="token punctuation">(</span>gray<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span>face<span class="token punctuation">,</span> cmap<span class="token operator">=</span>plt<span class="token punctuation">.</span>cm<span class="token punctuation">.</span>gray<span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+face<span class="token punctuation">.</span>shape
+
+<span class="token comment"># traitement (zoom + éclaircissement des pixels proches du blanc)</span>
+h <span class="token operator">=</span> face<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+w <span class="token operator">=</span> face<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+A <span class="token operator">=</span> face<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">(</span>h<span class="token operator">/</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token builtin">int</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token operator">*</span>h<span class="token operator">/</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token builtin">int</span><span class="token punctuation">(</span>w<span class="token operator">/</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token builtin">int</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token operator">*</span>w<span class="token operator">/</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+A<span class="token punctuation">[</span>A <span class="token operator">></span> <span class="token number">200</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">255</span>
+plt<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span>A<span class="token punctuation">,</span> cmap<span class="token operator">=</span>plt<span class="token punctuation">.</span>cm<span class="token punctuation">.</span>gray<span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Voici l'image d'origine :
+<img src="image_origine.jpg" alt="Image d'origine">
+Et ici l'image traitée :
+<img src="zoom_et_blanc.jpg" alt="Image zoomée et éclaircié"></p>
+<h3>Algèbre linéaire avec les tableaux</h3>
+<p>A+B : addition classique
+A*B : produit terme à terme
+np.dot(A,B) : produit matriciel classique
+np.transpose(A) : transposée de A</p>
+<p>Différentes routines pour trouver le déterminant d'une matrice, ses valeurs propres et vecteurs propres, sa matrice inverse... sont disponibles dans la documentation <a href="https://docs.scipy.org/doc/numpy-1.13.0/reference/routines.linalg.html">scipy routines.linalg</a></p>
+<h3>Méthodes utiles</h3>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span>A <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span>A
+array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token operator">>></span><span class="token operator">></span>A<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token operator">>></span><span class="token operator">></span>A<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+array<span class="token punctuation">(</span><span class="token punctuation">[</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<ul>
+<li>A.prod() : effectue le produit des nombres de la matrice</li>
+<li>A.min(axis=?) : renvoie le minimum selon l'axe</li>
+<li>A.max(axis=?) : renvoie le maximum selon l'axe</li>
+<li>A.argmin(axis=?) : renvoie la position du min</li>
+<li>A.argmax(axis=?) : renvoie la position du max</li>
+<li>A.sort(axis=?) : trie le tableau selon l'axe</li>
+<li>A.argsort(axis=?) : retourne les index dans l'ordre de tri du tableau ( ne modifie pas le tableau)</li>
+</ul>
+<p>D'autres routines mathématiques sont égalements décrites dans la documentation : <a href="https://docs.scipy.org/doc/numpy-1.13.0/reference/routines.math.html">Scipy routines.math</a></p>
+<p>Et statistiques : <a href="https://docs.scipy.org/doc/numpy-1.13.0/reference/routines.statistics.html">Scipy routines.statistics</a></p>
+<p>Il est également intéressant de remarquer :</p>
+<ul>
+<li>np.corrcoef(A) qui permet d'obtenir la matrice de corrélation de A : l'élément à l'emplacement (i, j) représente la corrélation entre la i-ème et la j-ème colonnes de la matrice A.</li>
+<li>np.unique(A, return_counts=True) qui va sortir un tableau indiquant le nombre de fois d'apparition d'un item de la matrice A.</li>
+<li>np.isnan(A) : renvoie un masque de A avec des False et True si isnan permettant ainsi de corriger ces NaN</li>
+</ul>
+<h2>3. Bibliothèque Matplotlib</h2>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+</code></pre>
+<p>La bibliothèque Matplolib permet de créer des visualisations statiques, animées et interactives en Python.</p>
+<h3>Fonction Pyplot</h3>
+<p><strong>Arguments de la fonction</strong>
+plot(x, y, label=..., lw=..., ls=..., c=...)</p>
+<ul>
+<li>label : nom de la courbe</li>
+<li>lw : épaisseur du trait</li>
+<li>ls : style du trait</li>
+<li>c : couleur du trait</li>
+</ul>
+<p>Attention, x et y doivent être de même dimension !</p>
+<p><strong>Corps type de l'affichage d'une figure</strong></p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># définition de la fonction</span>
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+x <span class="token operator">=</span> np<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>
+y <span class="token operator">=</span> x<span class="token operator">**</span><span class="token number">2</span>
+
+<span class="token comment"># début de la figure</span>
+plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">#dimensions en pouces et non en centimètres</span>
+
+<span class="token comment"># contenu</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'quadratique'</span><span class="token punctuation">,</span> lw<span class="token operator">=</span><span class="token number">6</span><span class="token punctuation">,</span> ls<span class="token operator">=</span><span class="token string">'--'</span><span class="token punctuation">,</span> c<span class="token operator">=</span><span class="token string">'red'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token punctuation">,</span> x<span class="token operator">**</span><span class="token number">3</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'cubique'</span><span class="token punctuation">,</span> lw<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">,</span> c<span class="token operator">=</span><span class="token string">'blue'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'figure 1'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">'abscisses'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">'ordonnées'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># affichage</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># sauvegarde dans le répertoire</span>
+plt<span class="token punctuation">.</span>savefig<span class="token punctuation">(</span><span class="token string">'figure_type.png'</span><span class="token punctuation">)</span>
+</code></pre>
+<p><img src="figure_type.jpg" alt="Figure type"></p>
+<p>Il est également possible d'afficher plusieurs graphique avec subplot.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">#plt.subplot(lignes, colonnes, position)</span>
+
+plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token punctuation">,</span> x<span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'courbe1'</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token punctuation">,</span> np<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'courbe2'</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token punctuation">,</span> np<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token punctuation">,</span> np<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p><img src="subplot.jpg" alt="Utilisation de subplot"></p>
+<h3>Différents graphiques</h3>
+<p>Afin de visualiser les différents graphiques que l'on peut tracer avec matlpolib, nous allons nous servir du dataset iris flower qui contient 150 exemples de fleurs d'iris répartis en 3 classes.
+4 variables permettent alors de classer la fleur :</p>
+<ul>
+<li>longueur et largeur du pétale</li>
+<li>longeur et largeur du sépal</li>
+</ul>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>datasets <span class="token keyword">import</span> load_iris
+
+iris <span class="token operator">=</span> load_iris<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+x <span class="token operator">=</span> iris<span class="token punctuation">.</span>data  <span class="token comment"># Correction ici</span>
+y <span class="token operator">=</span> iris<span class="token punctuation">.</span>target
+names <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span>iris<span class="token punctuation">.</span>target_names<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'x contient </span><span class="token interpolation"><span class="token punctuation">{</span>x<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string"> exemples et </span><span class="token interpolation"><span class="token punctuation">{</span>x<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string"> variables'</span></span><span class="token punctuation">)</span>  <span class="token comment"># Correction ici</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'il y a </span><span class="token interpolation"><span class="token punctuation">{</span>np<span class="token punctuation">.</span>unique<span class="token punctuation">(</span>y<span class="token punctuation">)</span><span class="token punctuation">.</span>size<span class="token punctuation">}</span></span><span class="token string"> classes'</span></span><span class="token punctuation">)</span>
+
+<span class="token comment">#exécution du code*</span>
+x contient <span class="token number">150</span> exemples et <span class="token number">4</span> variables
+il y a <span class="token number">3</span> classes
+</code></pre>
+<p><strong>Classification avec un nuage de points : plt.scatter</strong></p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>x<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> x<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> c<span class="token operator">=</span>y<span class="token punctuation">,</span> alpha<span class="token operator">=</span><span class="token number">0.5</span><span class="token punctuation">,</span> s<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">'longueur sépale'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">'largeur sépale'</span><span class="token punctuation">)</span>
+</code></pre>
+<p><img src="scatter.jpg" alt="Classification avec scatter"></p>
+<p><strong>Visualisation 3D avec mpl_toolkits</strong></p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> mpl_toolkits<span class="token punctuation">.</span>mplot3d <span class="token keyword">import</span> Axes3D
+ax <span class="token operator">=</span> plt<span class="token punctuation">.</span>axes<span class="token punctuation">(</span>projection<span class="token operator">=</span><span class="token string">'3d'</span><span class="token punctuation">)</span>
+ax<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>x<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> x<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> x<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> c<span class="token operator">=</span>y<span class="token punctuation">)</span>
+</code></pre>
+<p><img src="visu3D.jpg" alt="Visualisation 3D"></p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">f <span class="token operator">=</span> <span class="token keyword">lambda</span> x<span class="token punctuation">,</span> y<span class="token punctuation">:</span> np<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token operator">+</span> np<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>x<span class="token operator">+</span>y<span class="token punctuation">)</span>
+X <span class="token operator">=</span> np<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span>
+Y <span class="token operator">=</span> np<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span>
+X<span class="token punctuation">,</span> Y <span class="token operator">=</span> np<span class="token punctuation">.</span>meshgrid<span class="token punctuation">(</span>X<span class="token punctuation">,</span> Y<span class="token punctuation">)</span>
+Z <span class="token operator">=</span> f<span class="token punctuation">(</span>X<span class="token punctuation">,</span> Y<span class="token punctuation">)</span>
+
+ax <span class="token operator">=</span> plt<span class="token punctuation">.</span>axes<span class="token punctuation">(</span>projection<span class="token operator">=</span><span class="token string">'3d'</span><span class="token punctuation">)</span>
+ax<span class="token punctuation">.</span>plot_surface<span class="token punctuation">(</span>X<span class="token punctuation">,</span> Y<span class="token punctuation">,</span> Z<span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'plasma'</span><span class="token punctuation">)</span>
+</code></pre>
+<p><img src="surface.jpg" alt="Visualisation 3D d'une surface"></p>
+<p><strong>Contour plots</strong></p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">f <span class="token operator">=</span> <span class="token keyword">lambda</span> x<span class="token punctuation">,</span> y<span class="token punctuation">:</span> np<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token operator">+</span> np<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>x<span class="token operator">+</span>y<span class="token punctuation">)</span><span class="token operator">*</span>np<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+X <span class="token operator">=</span> np<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span>
+Y <span class="token operator">=</span> np<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span>
+X<span class="token punctuation">,</span> Y <span class="token operator">=</span> np<span class="token punctuation">.</span>meshgrid<span class="token punctuation">(</span>X<span class="token punctuation">,</span> Y<span class="token punctuation">)</span>
+Z <span class="token operator">=</span> f<span class="token punctuation">(</span>X<span class="token punctuation">,</span> Y<span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>contour<span class="token punctuation">(</span>X<span class="token punctuation">,</span> Y<span class="token punctuation">,</span> Z<span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> colors<span class="token operator">=</span><span class="token string">'black'</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>contourf<span class="token punctuation">(</span>X<span class="token punctuation">,</span> Y<span class="token punctuation">,</span> Z<span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'RdGy'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>colorbar<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p><img src="contour_plot.jpg" alt="Contour plot">
+<img src="contour_plotv2.jpg" alt="Contour plot V2"></p>
+<p><strong>Histogramme</strong></p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">plt<span class="token punctuation">.</span>hist<span class="token punctuation">(</span>x<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> bins<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">'longueur sépale'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">'nombre de sépales'</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>hist2d<span class="token punctuation">(</span>x<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> x<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'Blues'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">'longueur sépale'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">'largeur sépale'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>colorbar<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p><img src="histogramme.jpg" alt="Histogramme des longueurs de sépale">
+<img src="histogramme2d.jpg" alt="Histogramme 2D des longueurs et largeurs de sépale"></p>
+<h2>4. Bibliothèque Pandas</h2>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+</code></pre>
+<p>La bibliothèque Pandas permet de d'effectuer de l'analyse de données de manière simple et intuitive.
+Basée sur NumPy, elle fournit une structure de donnée appelée Dataframe adaptée pour lire et écrire dans différents formats : .csv, .txt, .xls, .sql...)</p>
+<h3>Application au DataFrame</h3>
+<p><strong>Dataset Titanic</strong>
+Pour mettre en lumière les possibilités de la bibliothèque Pandas, je vous propose de nous pencher sur le dataset Titanic disponible en suivant ce lien : <a href="https://github.com/MachineLearnia/Python-Machine-Learning/tree/master/Dataset">Dataset Titanic</a></p>
+<p><strong>Charger le fichier</strong></p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">pd<span class="token punctuation">.</span>read_excel<span class="token punctuation">(</span><span class="token string">'titanic.xls'</span><span class="token punctuation">)</span>
+<span class="token comment"># .csv : pd.read_csv()</span>
+<span class="token comment"># .json : pd.read_json()</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre>
+<p><img src="titanic.jpg" alt="Aperçu du dataset Titanic"></p>
+<p><strong>Fonctions utiles</strong></p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">df<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># Afficher le début du DataFrame</span>
+df<span class="token punctuation">.</span>describe<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># Statistiques sur le DataFrame</span>
+df<span class="token punctuation">.</span>drop<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'column'</span><span class="token punctuation">,</span> <span class="token string">'column'</span><span class="token punctuation">,</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment"># Éliminer des colonnes</span>
+df<span class="token punctuation">.</span>dropna<span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment"># Éliminer les lignes aux données manquantes</span>
+df<span class="token punctuation">.</span><span class="token punctuation">[</span><span class="token string">'column'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value_counts<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># Compter les répétitions</span>
+df<span class="token punctuation">.</span>groupby<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'column'</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment"># Analyser par groupe</span>
+
+df<span class="token punctuation">.</span>shape <span class="token comment"># Afficher les dimensions du DataFrame</span>
+df<span class="token punctuation">.</span>columns <span class="token comment"># Renvoie les différentes colonnes du DataFrame</span>
+</code></pre>
+<p><strong>Application</strong></p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span>file_path <span class="token operator">=</span> <span class="token string">r"C:\MOOC_Data_Sciences\Machine_Learnia\titanic3.xls"</span>
+<span class="token operator">>></span><span class="token operator">></span>df <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_excel<span class="token punctuation">(</span>file_path<span class="token punctuation">)</span>
+
+<span class="token operator">>></span><span class="token operator">></span>df<span class="token punctuation">.</span>shape
+<span class="token punctuation">(</span><span class="token number">1309</span><span class="token punctuation">,</span> <span class="token number">14</span><span class="token punctuation">)</span> <span class="token comment"># 1309 lignes et 14 colonnes</span>
+
+<span class="token operator">>></span><span class="token operator">></span>df<span class="token punctuation">.</span>columns
+Index<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'pclass'</span><span class="token punctuation">,</span> <span class="token string">'survived'</span><span class="token punctuation">,</span> <span class="token string">'name'</span><span class="token punctuation">,</span> <span class="token string">'sex'</span><span class="token punctuation">,</span> <span class="token string">'age'</span><span class="token punctuation">,</span> <span class="token string">'sibsp'</span><span class="token punctuation">,</span> <span class="token string">'parch'</span><span class="token punctuation">,</span> <span class="token string">'ticket'</span><span class="token punctuation">,</span>
+       <span class="token string">'fare'</span><span class="token punctuation">,</span> <span class="token string">'cabin'</span><span class="token punctuation">,</span> <span class="token string">'embarked'</span><span class="token punctuation">,</span> <span class="token string">'boat'</span><span class="token punctuation">,</span> <span class="token string">'body'</span><span class="token punctuation">,</span> <span class="token string">'home.dest'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      dtype<span class="token operator">=</span><span class="token string">'object'</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Afin d'analyser les données, supprimons quelques colonnes.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span>df_bis <span class="token operator">=</span> data<span class="token punctuation">.</span>drop<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">,</span> <span class="token string">'parch'</span><span class="token punctuation">,</span> <span class="token string">'sibsp'</span><span class="token punctuation">,</span> <span class="token string">'ticket'</span><span class="token punctuation">,</span> <span class="token string">'fare'</span><span class="token punctuation">,</span> <span class="token string">'cabin'</span><span class="token punctuation">,</span> <span class="token string">'embarked'</span><span class="token punctuation">,</span> <span class="token string">'boat'</span><span class="token punctuation">,</span> <span class="token string">'body'</span><span class="token punctuation">,</span> <span class="token string">'home.dest'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+
+<span class="token operator">>></span><span class="token operator">></span>df_bis<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># cf image retournée ci-dessous</span>
+<span class="token operator">>></span><span class="token operator">></span>df_bis<span class="token punctuation">.</span>describe<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># cf image retournée ci dessous</span>
+</code></pre>
+<p><img src="dataset_bis.jpg" alt="Nouveau dataset">
+<img src="describe.jpg" alt="Describe"></p>
+<p>On peut remarquer via le &quot;describe&quot; que 1309 lignes sont présentes dans les 2 premières colonnes contre 1046 dans la troisième.
+Il manque des données concernant l'âge de certains passagers, 2 options sont alors envisageable pour palier ce problème :</p>
+<ul>
+<li>compléter par une valeur par défaut, par exemple par l'âge moyen de la colonne avec la commande &quot;data.fillna(df['age].mean())&quot;</li>
+<li>supprimer les lignes pour lesquelles ces données sont manquantes &quot;data.dropna(axis=0)&quot;</li>
+</ul>
+<p>Poussons l'analyse pour désormais déterminer la répartition de ces 1046 passagers par classe.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span>df_bis<span class="token punctuation">[</span><span class="token string">'pclass'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value_counts<span class="token punctuation">(</span><span class="token punctuation">)</span>
+pclass
+<span class="token number">3</span>    <span class="token number">501</span>
+<span class="token number">1</span>    <span class="token number">284</span>
+<span class="token number">2</span>    <span class="token number">261</span>
+
+<span class="token operator">>></span><span class="token operator">></span>df_bis<span class="token punctuation">.</span>groupby<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'sex'</span><span class="token punctuation">,</span> <span class="token string">'pclass'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span>mean<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">#cf image retournée ci-dessous</span>
+</code></pre>
+<p><img src="groupby.jpg" alt="Utilité de la fonction groupby"></p>
+<p><strong>Combinaison Matplotlib et Pandas</strong>
+Pandas fonctionne en collaboration avec Matplotlib, il va donc être possible de réaliser des graphiques simples sur le dataframe.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">df<span class="token punctuation">.</span>plot<span class="token punctuation">(</span><span class="token punctuation">)</span>
+df<span class="token punctuation">.</span>plot<span class="token punctuation">.</span>bar<span class="token punctuation">(</span><span class="token punctuation">)</span>
+df<span class="token punctuation">.</span>hist<span class="token punctuation">(</span>bins<span class="token operator">=</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span>
+df<span class="token punctuation">.</span>plot<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>x<span class="token operator">=</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span>y<span class="token operator">=</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span>
+
+pd<span class="token punctuation">.</span>plotting<span class="token punctuation">.</span>scatter_matrix<span class="token punctuation">(</span>df<span class="token punctuation">)</span>
+
+<span class="token comment"># répartition des âges du DataFrame</span>
+<span class="token operator">>></span><span class="token operator">></span>df_bis<span class="token punctuation">[</span><span class="token string">'age'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>hist<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p><img src="histo_ages.jpg" alt="Répartition des âges"></p>
+<h2>5. Conclusion</h2>
+<p>En somme, l'utilisation des bibliothèques NumPy, Matplotlib et Pandas s'avère essentielle pour l'analyse de données.
+NumPy facilite la manipulation des données, Matplotlib offre des outils graphiques puissants, et Pandas simplifie le traitement des données tabulaires.</p>
+<p><strong>Ensemble</strong>, ces bibliothèques forment un arsenal efficace, accélérant le processus d'exploration, de visualisation et d'interprétation des données. Qui plus est, il est <strong>très facile de prendre en main ces bibliothèques et ainsi aboutir à des traitements intéressants en peu de temps.</strong></p>
+<h4>Répartition du temps</h4>
+<table>
+<thead>
+<tr>
+<th>Timing</th>
+<th>NumPy</th>
+<th>Matplotlib</th>
+<th>Pandas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Temps prévu (en heures)</td>
+<td>4</td>
+<td>4</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Temps dédié (en heures)</td>
+<td>5</td>
+<td>3</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h2>6. Bibliographie</h2>
+<p><a href="https://numpy.org/doc/stable/user/absolute_beginners.html">Documentation NumPy</a>
+<a href="https://courspython.com/apprendre-numpy.html">Documentation Scipy</a>
+<a href="https://www.youtube.com/playlist?list=PLO_fdPEVlfKqMDNmCFzQISI2H_nJcEDJq">Chaine YouTube Machine Learnia</a></p>
+
+
+</article>
+
+        </main>
+
+
+        <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div class="min-h-[50px] flex justify-center items-center">
+                    <p class="text-center">
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développent et Organisation en IT
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        MathJax
+            .startup
+            .document
+            .getMathItemsWithin(document.body);
+        </script>
+
+    </body>
+</html>

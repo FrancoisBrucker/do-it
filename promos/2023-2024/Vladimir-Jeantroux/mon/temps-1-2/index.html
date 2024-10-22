@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Introduction au C#</title>
+
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [
+                [
+                '$', '$'
+                ],
+                [
+                '\\(', '\\)'
+                ]
+            ]
+            },
+            svg: {
+            fontCache: 'global'
+            }
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
+
+        <header class="border-b-2 border-gray-200 mb-4">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="min-h-[50px] flex justify-between items-center">
+                <a class="mx-2" href="/do-it/">Home</a>
+                <div class="flex items-center gap-4 sm:gap-6 ">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                        </svg>
+                    </a>
+                    <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
+                        <svg class="h-5 aspect-square" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
+            
+<article class="relative">
+<h1 class="mb-1">Introduction au C#</h1>
+<div class="mb-4">
+    
+        <div class="px-4 flex flex-wrap items-center">
+            
+                <div class="font-bold">Tags : </div>
+            
+            <ul class="flex flex-wrap overflow-auto not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">MON</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">2023-2024</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 1</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">C</li>
+                
+
+            </ul>
+            
+            
+            <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="px-4 flex flex-wrap items-center">
+            <div class="font-bold">Auteurs : </div>
+            <ul class="flex flex-wrap not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Vladimir Jeantroux</li>
+                
+            </ul>
+        </div>
+    
+
+    
+</div>
+
+
+
+    
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-purple-500 bg-purple-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>
+</svg>
+<div class="pl-8 mr-8">
+
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Vladimir-Jeantroux/">Vladimir Jeantroux</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Vladimir-Jeantroux/mon/">MON de Vladimir Jeantroux</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Vladimir-Jeantroux/mon/temps-1-2/">Introduction au C#</a>
+
+</div></div>
+
+
+
+
+<h2>Résumé :</h2>
+<p>C# (prononcer C Sharp) est un langage orienté objet prédominant dans le domaine du développement de jeux vidéos, très utilisé dans les moteurs tels que Unity ou Godot.</p>
+<h2>Pré-requis :</h2>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Pré-requis :</p>
+<p>Aucun bagage théorique n'est requis</p>
+</div></div>
+<p>Contrairement à ce que son nom indique, C# na aucun rapport avec C ou C++, il n'y a pas besoin d'avoir de connaissances quelconques dans ces langages pour démarrer en C#. C'est même un bon langage pour les débutants car il est plutôt simple à prendre en main, et très polyvalent. Pour ce qui est des prérequis techniques, on va avoir besoin d'un IDE comme <a href="https://code.visualstudio.com">Visual Studio Code</a>, avec <a href="https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp">l'extension C#</a> et le <a href="https://dotnet.microsoft.com/en-us/download">framework .NET</a>.</p>
+<h2>C'est quoi .NET et pourquoi j'en ai besoin ?</h2>
+<p>.NET (prononcer dot net) est un framework qui fournit un environnement de développement et d'exécution pour le développement d'applications web. Il contient des librairies et des outils de base qui permettent de faciliter la tâche du développeur. L'intérêt pour C# est d'avoir des outils pour coder son application sans avoir à tout réinventer, et simplement pouvoir construire par-dessus les templates qu'offre .NET.</p>
+<p>L'intérêt principal de .NET est qu'il est polyvalent, avec plusieurs composants avec des fonctions différentes, comme une bibliothèque de classes ou de frameworks pour différents types d'application. Un tableau complet recensant les composants et leurs fonctionnalités peuvent être trouvés dans le <a href="https://francoisbrucker.github.io/do-it/promos/2022-2023/Laeuffer-Savinien/mon/csharp/">MON de Savinien Laeuffer</a>, MON qui m'a permis de bien comprendre les différents aspects de ce langage.</p>
+<h2>Notions basiques</h2>
+<h3>La programmation orientée objet (POO)</h3>
+<p>C# est un langage orienté objet, ce qui signifie qu'il repose sur la notion d'objets et de classes. Elle se fonde sur l'idée de modéliser des entités du monde réel ou des abstractions informatiques sous forme d'objets, qui possèdent des caractéristiques (appelées attributs) et des comportements (appelés méthodes). La POO permet de structurer et d'organiser le code de manière plus modulaire, ce qui facilite la compréhension, la maintenance et la réutilisation du code. C'est une notion centrale à C# qu'il faut bien comprendre avant de vouloir commencer à coder.</p>
+<h4>1. Classes</h4>
+<p>Une classe est un modèle pour créer des objets. Elle définit les attributs (variables) et les méthodes (fonctions) que les objets auront. Voici un exemple simple de définition de classe :</p>
+<pre class="language-csharp " style="counter-reset: linenumber 0"><code class="language-csharp"><span class="token keyword">class</span> <span class="token class-name">Personne</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token class-name"><span class="token keyword">string</span></span> Nom<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token class-name"><span class="token keyword">int</span></span> Age<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Parler</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Bonjour"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>On a déclaré une classe s'appelant &quot;Personne&quot;. Un objet de la catégorie Personne aura deux attributs : son nom et son âge. Cet objet a aussi une fonction Parler qui renvoie simplement dans le terminal le texte &quot;Bonjour&quot;. L'intérêt de cette méthode est que c'est ensuite facile de définir des Personnes, et on peut en avoir plusieurs représentants dans le programme.</p>
+<h4>2. Objets</h4>
+<p>Les objets sont les instances de classe. Par exemple, si je veux créer une nouvelle personne :</p>
+<pre class="language-csharp " style="counter-reset: linenumber 0"><code class="language-csharp"><span class="token class-name">Personne</span> personne1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Personne</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+personne1<span class="token punctuation">.</span>Nom <span class="token operator">=</span> <span class="token string">"Alice"</span><span class="token punctuation">;</span>
+personne1<span class="token punctuation">.</span>Age <span class="token operator">=</span> <span class="token number">25</span><span class="token punctuation">;</span>
+personne1<span class="token punctuation">.</span><span class="token function">Parler</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Cela me permet de définir un représentant de la classe Personne avec tous les attributs et méthodes qui vont avec. Ceux qui ont bien suivi les cours d'informatique en 1A se rendront compte qu'on se rapproche beaucoup de la structure en Java, à quelques différences de syntaxe près. On a aussi les notions de constructeurs, qui permettent de faciliter la création d'objets.</p>
+<pre class="language-csharp " style="counter-reset: linenumber 0"><code class="language-csharp"><span class="token keyword">class</span> <span class="token class-name">Personne</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token class-name"><span class="token keyword">string</span></span> Nom<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token class-name"><span class="token keyword">int</span></span> Age<span class="token punctuation">;</span>
+
+    <span class="token comment">// Constructeur</span>
+    <span class="token keyword">public</span> <span class="token function">Personne</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> nom<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> age<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        Nom <span class="token operator">=</span> nom<span class="token punctuation">;</span>
+        Age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Parler</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Bonjour"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Cela peut paraître fastidieux à implémenter au début, mais la création d'objets par la suite devient beaucoup plus simple.</p>
+<pre class="language-csharp " style="counter-reset: linenumber 0"><code class="language-csharp"><span class="token class-name">Personne</span> personne1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Personne</span><span class="token punctuation">(</span><span class="token string">"Alice"</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>En une seule ligne, on a créé un nouvel objet; les constructeurs permettent de créer plusieurs objets très rapidement et accélèrent le développement.</p>
+<h2>Exemples d'application</h2>
+<p>Pour apprendre à me servir de C#, j'ai codé quelques exemples simples pour me familiariser avec les méthodes. On a d'abord le plus simple, l'incontournable :</p>
+<pre class="language-csharp " style="counter-reset: linenumber 0"><code class="language-csharp"><span class="token keyword">using</span> <span class="token namespace">System</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Program</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Hello, World!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>J'ai aussi expérimenté avec des boucles et des conditions, en créant un programme qui liste les nombres premiers jusqu'à une certaine limite :</p>
+<pre class="language-csharp " style="counter-reset: linenumber 0"><code class="language-csharp"><span class="token keyword">using</span> <span class="token namespace">System</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Program</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">bool</span></span> <span class="token function">EstNombrePremier</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> nombre<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>nombre <span class="token operator">&lt;=</span> <span class="token number">1</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> i <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> i <span class="token operator">*</span> i <span class="token operator">&lt;=</span> nombre<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>nombre <span class="token operator">%</span> i <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+                <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token class-name"><span class="token keyword">int</span></span> limite <span class="token operator">=</span> <span class="token number">50</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> nombre <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> nombre <span class="token operator">&lt;=</span> limite<span class="token punctuation">;</span> nombre<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">EstNombrePremier</span><span class="token punctuation">(</span>nombre<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                Console<span class="token punctuation">.</span><span class="token function">Write</span><span class="token punctuation">(</span>nombre <span class="token operator">+</span> <span class="token string">" "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Pour exécuter ce fichier, on se place dans le dossier où se trouve le fichier avec le code (au format .cs) et on exécute dans le terminal :</p>
+<pre class="language-powershell " style="counter-reset: linenumber 0"><code class="language-powershell">dotnet new console
+</code></pre>
+<p>Cela nous crée un environnement de projet. On peut maintenant compiler le code et le faire tourner et avoir la sortie :</p>
+<pre class="language-powershell " style="counter-reset: linenumber 0"><code class="language-powershell">dotnet build
+dotnet run
+</code></pre>
+<p>Output :</p>
+<pre><code>2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 
+</code></pre>
+<p>IMPORTANT ! Une bonne pratique est de nommer son fichier à partir du nom de la classe, cela peut éviter certaines erreurs.</p>
+<h2>Bilan et ouverture</h2>
+<p>J'ai trouvé le C# très clair et bien structuré; le code produit en C# est selon généralement compréhensible et facile à cerner. Cependant, cette rigueur dans la structure m'a aussi posé quelques difficultés quand il s'agissait de coder. Le seul autre langage dans lequel je suis vraiment à l'aise est Python, qui est bien moins rigoureux sur les définitions et les structures, donc lors de mon apprentissage il y a eu un considérable temps d'adaptation.
+Après avoir cerné C# et ses bases, je me suis lancé dans plusieurs travaux qui n'ont pas pu aboutir par manque de temps, mais qui pourraient être abordés dans le futur :</p>
+<ul>
+<li>Créer un  jeu vidéo de type Snake ou Morpion, pour tester ses connaissances et faire ses premiers pas dans le gamedev.</li>
+<li>S'intéresser à l'utilisation des différents frameworks .NET : après avoir lu la 2e partie du MON de Savinien Laueffer, il serait intéressant de voir comment développer une application web (ou mobile).</li>
+<li>Voir comment fonctionne Rust : un autre langage qui gagne de la popularité chez les développeurs. (Après quelques révisions en C) Il y a beaucoup de ressources accessibles, ainsi que des MONs pour apprendre, notamment ceux d'Assane Diouf et de Paul Vietor.</li>
+</ul>
+<h2>Annexes</h2>
+<h3>Bibliographie</h3>
+<ul>
+<li>
+<p>MON de Savinien Laeuffer : <a href="https://francoisbrucker.github.io/do-it/promos/2022-2023/Laeuffer-Savinien/mon/csharp/">https://francoisbrucker.github.io/do-it/promos/2022-2023/Laeuffer-Savinien/mon/csharp/</a></p>
+</li>
+<li>
+<p>Tutoriel C# de W3Schools : <a href="https://www.w3schools.com/cs/cs_getstarted.php">https://www.w3schools.com/cs/cs_getstarted.php</a></p>
+</li>
+<li>
+<p>Documentation de Microsoft : <a href="https://learn.microsoft.com/fr-fr/dotnet/csharp/">https://learn.microsoft.com/fr-fr/dotnet/csharp/</a></p>
+</li>
+<li>
+<p>MON Rust de Assane Diouf : <a href="https://francoisbrucker.github.io/do-it/promos/2023-2024/Diouf-Asssane/mon/Rust/">https://francoisbrucker.github.io/do-it/promos/2023-2024/Diouf-Asssane/mon/Rust/</a></p>
+</li>
+<li>
+<p>MON d'introduction à Rust de Paul Vietor : <a href="https://francoisbrucker.github.io/do-it/promos/2023-2024/Vietor-Paul/mon/temps-1.2/">https://francoisbrucker.github.io/do-it/promos/2023-2024/Vietor-Paul/mon/temps-1.2/</a></p>
+</li>
+</ul>
+
+
+</article>
+
+        </main>
+
+
+        <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div class="min-h-[50px] flex justify-center items-center">
+                    <p class="text-center">
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développent et Organisation en IT
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        MathJax
+            .startup
+            .document
+            .getMathItemsWithin(document.body);
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,527 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Site web : backend</title>
+
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [
+                [
+                '$', '$'
+                ],
+                [
+                '\\(', '\\)'
+                ]
+            ]
+            },
+            svg: {
+            fontCache: 'global'
+            }
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
+
+        <header class="border-b-2 border-gray-200 mb-4">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="min-h-[50px] flex justify-between items-center">
+                <a class="mx-2" href="/do-it/">Home</a>
+                <div class="flex items-center gap-4 sm:gap-6 ">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                        </svg>
+                    </a>
+                    <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
+                        <svg class="h-5 aspect-square" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
+            
+<article class="relative">
+<h1 class="mb-1">Site web : backend</h1>
+<div class="mb-4">
+    
+        <div class="px-4 flex flex-wrap items-center">
+            
+                <div class="font-bold">Tags : </div>
+            
+            <ul class="flex flex-wrap overflow-auto not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">POK</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">2023-2024</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 2</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">backend</li>
+                
+
+            </ul>
+            
+            
+            <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="px-4 flex flex-wrap items-center">
+            <div class="font-bold">Auteurs : </div>
+            <ul class="flex flex-wrap not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Lucas Rioual</li>
+                
+            </ul>
+        </div>
+    
+
+    
+</div>
+
+        <p class="mb-4 text-lg">
+
+                Création du backend et déploiement de mon site web.
+
+        </p>
+
+
+
+    
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-purple-500 bg-purple-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>
+</svg>
+<div class="pl-8 mr-8">
+
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Rioual-Lucas/">Lucas RIOUAL</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Rioual-Lucas/pok/">POK de Lucas Rioual</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Rioual-Lucas/pok/temps-2/">Site web : backend</a>
+
+</div></div>
+
+
+
+
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Lien de mon repo Github : <a href="https://github.com/LucasRioual/Curiolab/tree/main">https://github.com/LucasRioual/Curiolab/tree/main</a></p>
+</div></div>
+<h2><strong>Sommaire</strong></h2>
+<ol>
+<li>Présentation</li>
+<li>Objectif du sprint 1</li>
+<li>Sprint 1</li>
+<li>Bilan du sprint 1 et objectif pour le sprint 2</li>
+<li>Sprint 2</li>
+<li>Bilan du POK</li>
+</ol>
+<h2><strong>Objectif du sprint 1</strong></h2>
+<p>L’objectif du sprint 1 est d’appliquer mes connaissances en backend que j’ai acquises grâce au précèdent MON à mon site web Curiolab. Je souhaite donc créer une page admin qui permet d’ajouter, modifier ou retirer des produits de mon site internet. Je vais utiliser Node.js avec Express pour le backend et MongoDB pour la base de donnée  :</p>
+<table>
+<thead>
+<tr>
+<th>Objectif</th>
+<th>Complexité</th>
+<th>Temps estimé</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Développer la page admin</strong></td>
+<td>4</td>
+<td>4h</td>
+</tr>
+<tr>
+<td>Section pour ajouter ou modifier un produit</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Section pour visualiser les produits</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Possibilité de supprimer des produits</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Développer le backend</strong></td>
+<td>3</td>
+<td>4h</td>
+</tr>
+<tr>
+<td>Connexion avec MongoDB</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Route pour créer un produit</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Route pour récupérer tous les produits</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Route pour récupérer un seul produit</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Route pour modifier un produit</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Route pour supprimer un produit</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Modifier le front pour accéder à cette API</strong></td>
+<td>1</td>
+<td>1h</td>
+</tr>
+<tr>
+<td><strong>Déployer le projet sur le serveur distant OVH</strong></td>
+<td>2</td>
+<td>2h</td>
+</tr>
+</tbody>
+</table>
+<h2>Sprint 1</h2>
+<h3>Page Administrateur</h3>
+<p>L’objectif de cette page est de pouvoir ajouter/modifier ou supprimer des produits de la base de données.</p>
+<p>Pour développer cette page Administrateur, j’ai choisi d’utiliser <strong>React</strong> et <strong>Tailwindcss</strong>. Ce sont des outils que j’ai appris à utiliser lors du <a href="../../mon/temps-2.1">MON 2.1</a>.</p>
+<p>Je me suis pas du tout concentré sur le design de la page, car le coeur de POK est le développement du backend.</p>
+<p>J’ai donc fait un formulaire sur la gauche de l’écran qui permet d’ajouter ou modifier un produit. Sur la droite, il y a une section pour visualiser les différents produits existants.</p>
+<p>Pour chaque produit, nous pouvons afficher le détail de ses caractéristiques sur la partie gauche de l’écran. Nous pouvons ensuite modifier ses caractéristiques. Un bouton supprimer est également présent sur chaque item.</p>
+<img src="admin.PNG">
+<p>Vous trouverez le repo Github ici : <a href="https://github.com/LucasRioual/curiolab-admin">https://github.com/LucasRioual/curiolab-admin</a></p>
+<h3>Backend avec Node.js, Express et MongoDB</h3>
+<p>J'ai décidé de développer le backend avec <strong>Node.js</strong> et <strong>Express</strong> car j'ai fait mon <a href="../../mon/temps-1.2">MON 1.2</a> sur ces technos.</p>
+<p>Voici les différents EndPoints que je dois développer :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">router<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">,</span> stuffCtrl<span class="token punctuation">.</span>createStuff<span class="token punctuation">)</span><span class="token punctuation">;</span>
+router<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">,</span> stuffCtrl<span class="token punctuation">.</span>getAllStuff<span class="token punctuation">)</span><span class="token punctuation">;</span>
+router<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/:id'</span><span class="token punctuation">,</span> stuffCtrl<span class="token punctuation">.</span>getOneStuff<span class="token punctuation">)</span><span class="token punctuation">;</span>
+router<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">'/:id'</span><span class="token punctuation">,</span> stuffCtrl<span class="token punctuation">.</span>modifyStuff<span class="token punctuation">)</span><span class="token punctuation">;</span>
+router<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span><span class="token string">'/:id'</span><span class="token punctuation">,</span> stuffCtrl<span class="token punctuation">.</span>deleteStuff<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Mon schéma de donnée :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> stuffSchema <span class="token operator">=</span> mongoose<span class="token punctuation">.</span><span class="token function">Schema</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">titre</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">type</span><span class="token operator">:</span> String<span class="token punctuation">,</span> <span class="token literal-property property">required</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">sousTitre</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">type</span><span class="token operator">:</span> String<span class="token punctuation">,</span> <span class="token literal-property property">required</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">description</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">type</span><span class="token operator">:</span> String<span class="token punctuation">,</span> <span class="token literal-property property">required</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">prix</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">type</span><span class="token operator">:</span> Number<span class="token punctuation">,</span> <span class="token literal-property property">required</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">difficulte</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">type</span><span class="token operator">:</span> Number<span class="token punctuation">,</span> <span class="token literal-property property">required</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Par exemple, voici la fonction qui permet d'ajouter un produit dans la base de donnée :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">exports<span class="token punctuation">.</span><span class="token function-variable function">createStuff</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> stuff <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Stuff</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token literal-property property">titre</span> <span class="token operator">:</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>titre<span class="token punctuation">,</span>
+    <span class="token literal-property property">sousTitre</span> <span class="token operator">:</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>sousTitre<span class="token punctuation">,</span>
+    <span class="token literal-property property">description</span> <span class="token operator">:</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>description<span class="token punctuation">,</span>
+    <span class="token literal-property property">prix</span> <span class="token operator">:</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>prix<span class="token punctuation">,</span>
+    <span class="token literal-property property">difficulte</span> <span class="token operator">:</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>difficulte<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  stuff<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>
+    <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">201</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token literal-property property">message</span><span class="token operator">:</span> <span class="token string">'Post saved successfully!'</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span>
+    <span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">400</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token literal-property property">error</span> <span class="token operator">:</span> error
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Vous trouverez le repo Github ici : <a href="https://github.com/LucasRioual/curiolab-backend">https://github.com/LucasRioual/curiolab-backend</a></p>
+<h3>Récupérer les données de l’API depuis le site Curiolab</h3>
+<p>Ici, il n’y a pas eu beaucoup de travail à faire, car il fallait simplement modifier la méthode qui récupèrait les données.</p>
+<p>Voici la requête que j’effectue à l’API :</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> <span class="token function-variable function">getOneStuff</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">id</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">try</span><span class="token punctuation">{</span>
+    <span class="token keyword">const</span> response <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">http://localhost:10411/api/stuff/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> piece <span class="token operator">=</span> <span class="token keyword">await</span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>piece<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"txt-Ring"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerText <span class="token operator">=</span> piece<span class="token punctuation">.</span>titre<span class="token punctuation">;</span>
+    document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"txt-titre"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerText <span class="token operator">=</span> piece<span class="token punctuation">.</span>sousTitre<span class="token punctuation">;</span>
+    document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"txt-description"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerText <span class="token operator">=</span> piece<span class="token punctuation">.</span>description<span class="token punctuation">;</span>
+    document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"txt-prix"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerText <span class="token operator">=</span> piece<span class="token punctuation">.</span>prix <span class="token operator">+</span> <span class="token string">" € TTC"</span><span class="token punctuation">;</span>
+    document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"txt-prix-HT"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerText <span class="token operator">=</span> piece<span class="token punctuation">.</span>prix <span class="token operator">-</span> <span class="token punctuation">(</span>piece<span class="token punctuation">.</span>prix <span class="token operator">*</span> <span class="token number">0.2</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">" € HT"</span><span class="token punctuation">;</span>
+    
+  <span class="token punctuation">}</span>
+  <span class="token keyword">catch</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Vous trouverez le repo Github ici : <a href="https://github.com/LucasRioual/Curiolab">https://github.com/LucasRioual/Curiolab</a></p>
+<h3>Bilan par rapport aux objectifs fixés</h3>
+<p>J'ai globalement respecté mes objectifs. Pour la page administrateur il y a beaucoup d'améliorations possible. Par exemple, lorsqu'on ajoute un produit, nous sommes obligés d'actualiser la page pour voir le produit. IL y a pleins de détails comme celui ci à améliorer.
+Ensuite, nous ne pouvons pas envoyer les images du produit au serveur.</p>
+<p>Ensuite, le site qui tourne sur le serveur OVH ne fonctionne pas comme en local. En effet, selon le chemin que nous prenons dans le site, toutes le ressources ne s'affichent pas.</p>
+<h2>Sprint 2</h2>
+<h3>Objectif pour le sprint 2</h3>
+<p>Je souhaite me concentrer sur une démarche CI/CD pour déployer mon site sur le serveur OVH.</p>
+<p>Comme je ne connais rien, il est difficile d’écrire un backlog. C’est pourquoi, je vais d’abord consulter le travail qui a déjà été fait les années précédentes et me documenter. Suite à cela, je pourrai faire un Backlog.</p>
+<p>Je me suis beaucoup basé sur le POK de Tuncay <a href="../../../../2022-2023/Bilgi-Tuncay/pok/ServeurDistant/">POK de Tuncay</a> pour ce sprint. Après avoir lu de la documentation sur la démarche CI/CD, je vais plutôt me concentrer sur la création un script shell qui permettra de récupérer les derniers changements sur la branch main de mon projet et de lancer le projet en production. Cela me permettra d’éviter de copier mon projet à chaque fois.</p>
+<p>J’ai une partie front et une partie backend et je veux pouvoir déployer l’un sans déployer l’autre</p>
+<table>
+<thead>
+<tr>
+<th>Objectif</th>
+<th>Temps estimé</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Documentation</strong></td>
+<td>3h</td>
+</tr>
+<tr>
+<td><strong>Faire fonctionner l’application sur le serveur distant</strong></td>
+<td>2h</td>
+</tr>
+<tr>
+<td><strong>Créer une session de terminal persistante</strong></td>
+<td>1h</td>
+</tr>
+<tr>
+<td><strong>Création du premier script qui permet de récupérer la branch main du back et du front</strong></td>
+<td>1h</td>
+</tr>
+<tr>
+<td><strong>Amélioration du script</strong></td>
+<td>3h</td>
+</tr>
+</tbody>
+</table>
+<h3>Déploiement sur le serveur distant avec Github</h3>
+<p>La première étape est de faire fonctionner mon application web sur le serveur distant.
+Je peux séparer mon projet en 2 parties. Il y a les fichiers statiques (html, css, image …) et mon application Node.js.</p>
+<p>Sur le serveur OVH, le répertoire principal de mon application est <strong><code>/node</code></strong>. À l'intérieur de ce répertoire, il y a un sous-répertoire appelé <strong><code>/static</code></strong> qui contient les fichiers statiques de l'application. Un serveur Nginx est en cours d'exécution sur le serveur OVH et il est configuré pour traiter les requêtes entrantes. Lorsqu'une requête commence par <strong><code>/static/</code></strong>, Nginx sert directement les fichiers correspondants du répertoire <strong><code>/node/static</code></strong>. Autrement, la requête est transmise à mon application Node.js.</p>
+<p>Cependant, la toute première requête envoyée est <strong><code>'/'</code></strong>. Dans ce cas, c'est l'application Node.js qui la reçoit. Pour renvoyer le fichier <strong><code>index.html</code></strong>, Node.js doit rediriger la requête vers le chemin <strong><code>/static</code></strong>. Voici comment j'implémente cela dans le code, en utilisant Express :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">app.get<span class="token punctuation">(</span><span class="token string">'/'</span>, <span class="token punctuation">(</span>req, res<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    res.redirect<span class="token punctuation">(</span><span class="token string">'/static/'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Je m’assure également que le port d’écoute de mon application est le bon.</p>
+<p>Je me rends donc dans le dossier <strong><code>/node/static</code></strong> pour cloner la branche main de mon repo git qui représente le front de mon application. J’exécute ces commandes :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">git</span> init
+<span class="token function">git</span> remote <span class="token function">add</span> origin https://github.com/LucasRioual/Curiolab.git
+<span class="token function">git</span> pull origin main
+</code></pre>
+<p>Je fais la même chose pour le backend dans le dossier <strong><code>/node</code></strong> et je lance le serveur</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">git</span> init
+<span class="token function">git</span> remote <span class="token function">add</span> origin https://github.com/LucasRioual/curiolab-backend.git
+<span class="token function">git</span> pull origin master
+<span class="token function">npm</span> <span class="token function">install</span>
+<span class="token function">node</span> server
+</code></pre>
+<p>Je sais pas pourquoi ma branche s’appelle master et pas main</p>
+<p>Mon site est maintenant accessible à <a href="http://node.persil.ovh1.ec-m.fr/static/">http://node.persil.ovh1.ec-m.fr/</a></p>
+<h3>Créer une session de terminal persistante</h3>
+<p>Le problème est que lorsque je ferme le terminal, mon application ne fonctionne plus. Il faut maintenant que je créer une session de terminal persistante.
+Pour cela j’utilise Screen. Screen permet de démarrer des processus dans une session et de les laisser s'exécuter même après la déconnexion du terminal.</p>
+<p>Voici la commande que j’ai exécuté :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">screen</span> <span class="token parameter variable">-d</span> <span class="token parameter variable">-m</span> <span class="token parameter variable">-S</span> Curiolab <span class="token function">node</span> server.js
+</code></pre>
+<p>On peut voir la liste des process :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">persil@ovh1 ~/node <span class="token punctuation">(</span>git<span class="token punctuation">)</span>-<span class="token punctuation">[</span>master<span class="token punctuation">]</span> % <span class="token function">screen</span> <span class="token parameter variable">-ls</span>
+There is a <span class="token function">screen</span> on:
+        <span class="token number">806506</span>.Curiolab <span class="token punctuation">(</span><span class="token number">16</span>/01/2024 <span class="token number">19</span>:14:47<span class="token punctuation">)</span>   <span class="token punctuation">(</span>Detached<span class="token punctuation">)</span>
+<span class="token number">1</span> Socket <span class="token keyword">in</span> /run/screen/S-persil.
+</code></pre>
+<p>Je peux maintenant fermer le terminal sans tuer mon application.</p>
+<h3>Premier script pour automatiser ces taches</h3>
+<p>Maintenant, je veux pouvoir actualiser mon application à l’aide d’un script lorsqu’un changement est fait sur la branch main de mon repo.</p>
+<p>La première étape est de créer un script qui récupère simplement les fichier statiques pour les mettre dans <strong><code>/node/static</code></strong></p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token shebang important">#!/bin/sh</span>
+
+<span class="token builtin class-name">cd</span> /home/persil/node/static
+
+<span class="token function">git</span> pull origin main
+<span class="token builtin class-name">echo</span> <span class="token string">"Fichier static mis à jour"</span>
+</code></pre>
+<p>Je veux rajouter des paramètres pour choisir de modifier le front ou le backend.</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token shebang important">#!/bin/sh</span>
+
+<span class="token keyword">while</span> <span class="token builtin class-name">getopts</span> <span class="token string">":hfb"</span> opt<span class="token punctuation">;</span> <span class="token keyword">do</span>
+	<span class="token keyword">case</span> <span class="token variable">$opt</span> <span class="token keyword">in</span>
+		h<span class="token punctuation">)</span>
+			<span class="token builtin class-name">echo</span> <span class="token string">"-f : déployer le frontend dans static"</span>
+			<span class="token builtin class-name">echo</span> <span class="token string">"-b : déployer le backend dans node"</span>
+			<span class="token builtin class-name">echo</span> <span class="token string">"-h : afficher l'aide"</span>
+			<span class="token builtin class-name">exit</span> <span class="token number">0</span> 
+			<span class="token punctuation">;</span><span class="token punctuation">;</span>
+		f<span class="token punctuation">)</span>
+			<span class="token builtin class-name">cd</span> /home/persil/node/static
+			<span class="token function">git</span> pull origin main
+			<span class="token builtin class-name">echo</span> <span class="token string">"Fichier static mis à jour"</span>
+			<span class="token builtin class-name">exit</span> <span class="token number">0</span>
+			<span class="token punctuation">;</span><span class="token punctuation">;</span>
+		b<span class="token punctuation">)</span>
+			<span class="token builtin class-name">cd</span> /home/persil/node
+			<span class="token function">git</span> pull origin master
+			<span class="token function">npm</span> <span class="token function">install</span>
+			<span class="token builtin class-name">echo</span> <span class="token string">"Backend déployer"</span>
+			<span class="token builtin class-name">exit</span> <span class="token number">0</span>
+			<span class="token punctuation">;</span><span class="token punctuation">;</span>
+		<span class="token punctuation">\</span>?<span class="token punctuation">)</span>
+			<span class="token builtin class-name">echo</span> <span class="token string">"Option invalid: <span class="token variable">$OPTARG</span>"</span> <span class="token operator">></span><span class="token file-descriptor important">&amp;2</span>
+			<span class="token builtin class-name">exit</span> <span class="token number">1</span>
+			<span class="token punctuation">;</span><span class="token punctuation">;</span>
+		<span class="token keyword">esac</span>
+	<span class="token keyword">done</span>
+</code></pre>
+<h3>Amélioration du script</h3>
+<p>Le problème pour le backend, c’est que l’instance screen ne prend pas en compte les changement, il faut donc kill l’ancien process et recréer un autre process.
+Merci Tuncay qui explique comment kill un process dans son <a href="../../../../2022-2023/Bilgi-Tuncay/pok/ServeurDistant/">POK</a> :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"> <span class="token function">ps</span> <span class="token parameter variable">-ef</span> <span class="token operator">|</span> <span class="token function">grep</span> Curiolab <span class="token operator">|</span><span class="token function">head</span> <span class="token parameter variable">-n</span> <span class="token parameter variable">-1</span> <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'{print $2}'</span> <span class="token operator">|</span> <span class="token function">xargs</span> <span class="token function">kill</span> <span class="token parameter variable">-15</span>
+</code></pre>
+<p>J’avoue que je ne comprends pas cette ligne mais ça marche.</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">persil@ovh1 ~/node <span class="token punctuation">(</span>git<span class="token punctuation">)</span>-<span class="token punctuation">[</span>master<span class="token punctuation">]</span> % <span class="token function">screen</span> <span class="token parameter variable">-ls</span>
+No Sockets found <span class="token keyword">in</span> /run/screen/S-persil.
+</code></pre>
+<p>Le problème c’est que si il n’y a pas de process en cours, cela fait planter le script. J’ai donc demandé à chat GPT de me créer une condition pour vérifier si un process est en cours</p>
+<p>Voici donc mon script final</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token shebang important">#!/bin/sh</span>
+
+<span class="token keyword">while</span> <span class="token builtin class-name">getopts</span> <span class="token string">":hfb"</span> opt<span class="token punctuation">;</span> <span class="token keyword">do</span>
+        <span class="token keyword">case</span> <span class="token variable">$opt</span> <span class="token keyword">in</span>
+                h<span class="token punctuation">)</span>
+                        <span class="token builtin class-name">echo</span> <span class="token string">"-f : déployer le frontend dans static"</span>
+                        <span class="token builtin class-name">echo</span> <span class="token string">"-b : déployer le backend dans node"</span>
+                        <span class="token builtin class-name">echo</span> <span class="token string">"-h : afficher l'aide"</span>
+                        <span class="token builtin class-name">exit</span> <span class="token number">0</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                f<span class="token punctuation">)</span>
+                        <span class="token builtin class-name">cd</span> /home/persil/node/static
+                        <span class="token function">git</span> pull origin main
+                        <span class="token builtin class-name">echo</span> <span class="token string">"Fichier static mis à jour"</span>
+                        <span class="token builtin class-name">exit</span> <span class="token number">0</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                b<span class="token punctuation">)</span>
+                        <span class="token builtin class-name">cd</span> /home/persil/node
+                        <span class="token function">git</span> pull origin master
+                        <span class="token function">npm</span> <span class="token function">install</span>
+                        <span class="token builtin class-name">echo</span> <span class="token string">"Backend déployer"</span>
+                        <span class="token keyword">if</span> <span class="token function">ps</span> aux <span class="token operator">|</span> <span class="token function">grep</span> <span class="token parameter variable">-v</span> <span class="token function">grep</span> <span class="token operator">|</span> <span class="token function">grep</span> <span class="token parameter variable">-q</span> Curiolab<span class="token punctuation">;</span> <span class="token keyword">then</span>
+                                <span class="token function">ps</span> <span class="token parameter variable">-ef</span> <span class="token operator">|</span> <span class="token function">grep</span> Curiolab <span class="token operator">|</span><span class="token function">head</span> <span class="token parameter variable">-n</span> <span class="token parameter variable">-1</span> <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'{print $2}'</span> <span class="token operator">|</span> <span class="token function">xargs</span> <span class="token function">kill</span> <span class="token parameter variable">-15</span>
+                                <span class="token builtin class-name">echo</span> <span class="token string">"Process tué"</span>
+                        <span class="token keyword">else</span>
+                                <span class="token builtin class-name">echo</span> <span class="token string">"il n'y a pas de process"</span>
+                        <span class="token keyword">fi</span>
+                        <span class="token function">screen</span> <span class="token parameter variable">-d</span> <span class="token parameter variable">-m</span> <span class="token parameter variable">-S</span> Curiolab <span class="token function">node</span> server
+                        <span class="token builtin class-name">echo</span> <span class="token string">"Screen relancé"</span>
+                        <span class="token builtin class-name">exit</span> <span class="token number">0</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                <span class="token punctuation">\</span>?<span class="token punctuation">)</span>
+                        <span class="token builtin class-name">echo</span> <span class="token string">"Option invalid: <span class="token variable">$OPTARG</span>"</span> <span class="token operator">></span><span class="token file-descriptor important">&amp;2</span>
+                        <span class="token builtin class-name">exit</span> <span class="token number">1</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                <span class="token keyword">esac</span>
+        <span class="token keyword">done</span>
+</code></pre>
+<h3>Conclusion</h3>
+<p>Voici le temps que j’ai passé sur le Sprint 2 :</p>
+<table>
+<thead>
+<tr>
+<th>Objectif</th>
+<th>Temps passé</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Documentation</strong></td>
+<td>3h</td>
+</tr>
+<tr>
+<td><strong>Faire fonctionner l’application sur le serveur distant</strong></td>
+<td>2h</td>
+</tr>
+<tr>
+<td><strong>Créer une session de terminal persistante</strong></td>
+<td>1h</td>
+</tr>
+<tr>
+<td><strong>Création du premier script qui permet de récupérer la branch main du back et du front</strong></td>
+<td>2h</td>
+</tr>
+<tr>
+<td><strong>Amélioration du script</strong></td>
+<td>2h</td>
+</tr>
+</tbody>
+</table>
+<p>Pour conclure j’ai simplement mis un premier pied dans le devops. Il existe des outils puissants qui permettent de créer des pipeline CI/CD comme Jenkins. Pourquoi pas approfondir ce sujet dans le futur</p>
+<h3>Ressources</h3>
+<p><a href="https://resources.github.com/ci-cd/">https://resources.github.com/ci-cd/</a>
+<a href="https://www.data-transitionnumerique.com/devops-jenkins/">https://www.data-transitionnumerique.com/devops-jenkins/</a></p>
+
+
+</article>
+
+        </main>
+
+
+        <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div class="min-h-[50px] flex justify-center items-center">
+                    <p class="text-center">
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développent et Organisation en IT
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        MathJax
+            .startup
+            .document
+            .getMathItemsWithin(document.body);
+        </script>
+
+    </body>
+</html>

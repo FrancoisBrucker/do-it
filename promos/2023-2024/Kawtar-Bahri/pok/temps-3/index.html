@@ -1,0 +1,540 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Analyse des dépenses technologiques en VBA Excel </title>
+
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [
+                [
+                '$', '$'
+                ],
+                [
+                '\\(', '\\)'
+                ]
+            ]
+            },
+            svg: {
+            fontCache: 'global'
+            }
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
+
+        <header class="border-b-2 border-gray-200 mb-4">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="min-h-[50px] flex justify-between items-center">
+                <a class="mx-2" href="/do-it/">Home</a>
+                <div class="flex items-center gap-4 sm:gap-6 ">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                        </svg>
+                    </a>
+                    <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
+                        <svg class="h-5 aspect-square" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
+            
+<article class="relative">
+<h1 class="mb-1">Analyse des dépenses technologiques en VBA Excel </h1>
+<div class="mb-4">
+    
+        <div class="px-4 flex flex-wrap items-center">
+            
+                <div class="font-bold">Tags : </div>
+            
+            <ul class="flex flex-wrap overflow-auto not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">POK</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">2023-2024</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 3</li>
+                
+
+            </ul>
+            
+            
+            <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="px-4 flex flex-wrap items-center">
+            <div class="font-bold">Auteurs : </div>
+            <ul class="flex flex-wrap not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Kawtar Bahri</li>
+                
+            </ul>
+        </div>
+    
+
+    
+</div>
+
+        <p class="mb-4 text-lg">
+
+                L'objectif de ce projet est de me préparer au stage de fin d'études en apprenant plus sur les dépenses technologiques des entreprises et m’introduisant au VBA.  Le rendu de ce POK est une solution VBA Excel pour automatiser l'analyse des dépenses technologiques d’une entreprise.
+
+        </p>
+
+
+
+    
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-purple-500 bg-purple-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>
+</svg>
+<div class="pl-8 mr-8">
+
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Kawtar-Bahri/">Kawtar BAHRI</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Kawtar-Bahri/pok/">POK de Kawtar Bahri</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Kawtar-Bahri/pok/temps-3/">Analyse des dépenses technologiques en VBA Excel </a>
+
+</div></div>
+
+
+
+
+<h2>Horodatage</h2>
+<h3>Sprint 1</h3>
+<table>
+<thead>
+<tr>
+<th>Tâche</th>
+<th>Description</th>
+<th>Date</th>
+<th>Durée</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tuto bases de VBA 1</td>
+<td><a href="https://www.excel-pratique.com/fr/vba">Leçons 1 - 6</a></td>
+<td>19/02/2024</td>
+<td>4hrs</td>
+</tr>
+<tr>
+<td>Tuto bases de VBA 2</td>
+<td><a href="https://www.excel-pratique.com/fr/vba">Leçons 7 - 11</a></td>
+<td>21/02/2024</td>
+<td>5hrs</td>
+</tr>
+</tbody>
+</table>
+<h3>Sprint 2</h3>
+<table>
+<thead>
+<tr>
+<th>Tâche</th>
+<th>Description</th>
+<th>Date</th>
+<th>Durée</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Modèle d’analyse et de benchmarking des couts informatiques</td>
+<td>Lecture œuvre en référence</td>
+<td>04/03</td>
+<td>2hrs</td>
+</tr>
+<tr>
+<td>Spécifier l'exemple d’entreprise</td>
+<td>Choisir le domaine d’activité et la taille de l’entreprise</td>
+<td>04/03</td>
+<td>1h</td>
+</tr>
+<tr>
+<td>Faire une feuille Excel données entreprise fictive</td>
+<td>Lister les catégories de dépenses</td>
+<td>04/03</td>
+<td>1h</td>
+</tr>
+<tr>
+<td>Estimer les dépenses (en fct du CA et nb d'utilisateurs)</td>
+<td>Simulation devis en ligne</td>
+<td>08/03</td>
+<td>3hrs</td>
+</tr>
+<tr>
+<td>Conception du Dashboard</td>
+<td>VBA Excel</td>
+<td>24/03</td>
+<td>3hrs</td>
+</tr>
+<tr>
+<td>Perspectives d’optimisation des dépenses technologiques</td>
+<td>Rercherches sur les bonnes pratiques en entreprise</td>
+<td>25/03</td>
+<td>1h</td>
+</tr>
+</tbody>
+</table>
+<h2>Introduction</h2>
+<p>Les dépenses technologiques font référence à toutes les dépenses liées à l'acquisition, à l'utilisation et à la maintenance de technologies de l'information et de la communication (TIC) dans le cadre des opérations commerciales d'une entreprise. On distingue donc deux types de dépenses technologiques ; Au-delà des services récurrents (logiciels, SaaS, Plateforme On Premise/Cloud …), la DSI fournit aussi des projets demandés par les métiers (exemple : l’évolution des pratiques « projets » et « opérations » vers des approches agiles et plus largement DevOps).</p>
+<p>Les dépenses technologiques des entreprises dépendent de plusieurs éléments (le domaine d’activité, la taille de l’entreprise, son chiffre d’affaires, …).
+Le coût moyen d’un budget informatique type, selon WalkMe, est le suivant :</p>
+<ul>
+<li>Les petites entreprises : moins de 50 millions de dollars (6,9 % du chiffre d’affaires)</li>
+<li>Les entreprises de taille moyenne : entre 50 millions et 2 milliards de dollars (4,1 % du chiffre d’affaires)</li>
+<li>Les grandes entreprises : plus de 2 milliards de dollars (4,1 % du chiffre d’affaires).</li>
+</ul>
+<h2>Modèle des coûts informatiques</h2>
+<p>Le modèle d'analyse et de benchmarking des coûts informatiques est un outil élaboré par le Cigref, une association regroupant de grandes entreprises françaises, pour aider les organisations à évaluer et comparer leurs coûts liés à l'informatique. Son approche structurée et ses multiples niveaux d'analyse en font un allié précieux pour les organisations cherchant à améliorer leur efficacité et leur rentabilité dans le domaine de l'informatique.</p>
+<figure style="text-align: center;">
+    <img src="1.png" width="550px" alt="Architecture du modèle">
+    <figcaption style="margin-top: 10px;">Architecture du modèle</figcaption>
+</figure>
+<p>Ce modèle m'a aidé à recenser les dépenses technologiques de l'entreprise, et l'adapter à l'exemple sur lequel je travaille.</p>
+<h2>L'entreprise fictive</h2>
+<p>Dans ce POK je choisi de travailler sur une PME à l’exemple de l’entreprise BOFINGER SARL dans le domaine de l'hébergement et la restauration. Le chiffre d'affaires est de l'ordre de 3 millions d’euros et le nombre d’employés est 100. Le fonctionnement de cette entreprise repose sur les éléments suivants :</p>
+<ul>
+<li>Publicité des hôtels</li>
+<li>Collecte des réservations auprès des différents canaux</li>
+<li>Enregistrements des clients</li>
+<li>Génération des factures et gestion des paiements</li>
+<li>Fidélisation et satisfaction des clients</li>
+</ul>
+<p>Son SI est donc composé de :</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Site web</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p>Permet aux clients de voir les promotions et offres, d'effectuer leurs réservations et transmet les informations aux système de gestion hôtelière et au CRM.</p>
+<p>Nombre de clients = Chiffre d'affaires total / Prix moyen par client
+Nombre de clients = 3,000,000 € / 100 € = 30,000 clients</p>
+<p>Le taux de conversion moyen sur un site e-commerce serait de 3%. Donc ce site web a 1 million visiteurs par an, soit ~8500 utilisateurs par mois. On peux donc estimer les frais mensuels d'hébergement d'un tel site web sur les serveurs cloud AWS.</p>
+<p>Pour héberger un site web en cloud, on aura besoin des services suivants :</p>
+<ul>
+<li>EC2 (Elastic Cloud Computing) : fournit des instances de serveur virtuel sur lesquelles on peut exécuter le site web.</li>
+<li>ELB (Elastic Load Balancing) pour ajuster automatiquement la capacité en fonction du trafic.</li>
+<li>RDS (Relational Databases Services) : pour stocker les bases de données sur les hôtels, les disponibilités, les réservations, les utilisateurs, etc.</li>
+</ul>
+<p>A l'aide d'AWS Pricing Calculator, on trouve que les frais mensuels s'élèvent à : 1 495,27 USD</p>
+</div>
+</details>     
+</div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Système de gestion hôtelière</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p>Il gère les opérations quotidiennes de l'hôtel, y compris la maintenance des chambres, la gestion des services aux clients et les réservations. Il reçoit des données du système de réservation en ligne et partage les informations sur l'occupation et les besoins des clients avec le CRM et les systèmes de gestion RH et comptable.</p>
+<p>Pour le PMS, une simulation de devis en ligne a montré que les frais mensuels pour un hôtel de 500 chambres sont de 180 euros. Cette entreprise payera mensuelement 720 euros (si on considère que l'entreprise a 4 hôtels de 500 chambres chacun).</p>
+</div>
+</details>     
+</div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Système de gestion RH</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p>Il gère les informations concernant le personnel de l'hôtel. Les informations sur les heures de travail et le personnel requis, influencées par les données d'occupation provenant du système de gestion hôtelière, sont essentielles pour la planification des ressources humaines.</p>
+<p>Pour 100 employés, les frais mensuels d'un logiciel RH sont de 300 euros.</p>
+</div>
+</details>     
+</div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Système de gestion comptable et financière</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p>Il traite toutes les transactions financières, y compris les revenus provenant des réservations et les paiements au personnel. Les données de revenus sont fournies par le système de gestion des réservations en ligne et le système de gestion hôtelière, tandis que les informations sur les salaires viennent du système de gestion RH.
+Frais mensuels : 89 euros.</p>
+</div>
+</details>     
+</div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>CRM (Customer Relationship Management)</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p>Il centralise les données des clients pour le marketing, les ventes et le service après-vente. Il reçoit des informations du système de réservation et du système de gestion hôtelière pour offrir une expérience client personnalisée et gérer les relations clients.
+Frais mensuels pour 5 utilisateurs : 345 euros.</p>
+</div>
+</details>     
+</div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Infrastructure Informatique</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<p>Cela comprend les serveurs hébergent les données (dans ce cas, tous les logiciel cités ci-dessus sont en mode SaaS et le site web est hébergé dans le cloud) et le réseau qui permet la connectivité et les échanges de données entre les systèmes. Tous les systèmes susmentionnés dépendent de l'infrastructure informatique pour un fonctionnement ininterrompu et sécurisé.
+Les frais mensuels d'internet : 2539 euros.</p>
+</div>
+</details>     
+</div>
+<p>Pour estimer les coûts des systèmes ci-dessous pour cette entreprise, j'ai obtenu des <a href="https://drive.google.com/drive/folders/1-OVvAbypUaF9puBc4iRZjyubTQo1qBHj?usp=sharing">devis</a> en ligne auprès des fournisseurs des differentes solutions.</p>
+<h2>Analyse des dépenses - Dashboard en Excel VBA</h2>
+<p>Télécharger le <a href="pok_3.zip">fichier Excel</a></p>
+<p>Création du dashboard :
+•	Créer la liste déroulante pour le filtre des dépenses
+•	Créer les boutons &quot;Analyser&quot; et &quot;Réinitialiser&quot;
+•	Écrire le code VBA pour les macros pour ces deux actions</p>
+<p>L'utilisateur choisit la dépense qu'il souhaite visualiser dans liste déroulante du filtre :
+<img src="2.png" width="550px"></p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Code du bouton Analyser</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre><code>Sub AnalyserButton_Click()
+    Dim ws1 As Worksheet
+    Dim ws2 As Worksheet
+    Dim expensesList As Range
+    Dim selectedExpense As String
+    
+    Set ws1 = ThisWorkbook.Sheets(&quot;Janvier 2023&quot;)
+    Set ws2 = ThisWorkbook.Sheets(&quot;Aout 2023&quot;)
+    Set expensesList = ThisWorkbook.Sheets(&quot;Dashboard&quot;).Range(&quot;C7&quot;)
+    
+    selectedExpense = expensesList.Value
+    
+    If selectedExpense &lt;&gt; &quot;&quot; Then
+        Dim januaryExpense As Double
+        Dim augustExpense As Double
+        
+        januaryExpense = ws1.Range(&quot;A:A&quot;).Find(selectedExpense).Offset(0, 1).Value
+        augustExpense = ws2.Range(&quot;A:A&quot;).Find(selectedExpense).Offset(0, 1).Value
+
+        
+        ' Créer le graphique
+        Dim chartSheet As Chart
+        Set chartSheet = ThisWorkbook.Sheets(&quot;Dashboard&quot;).Shapes.AddChart2(227, xlLineMarkers).Chart
+        
+        ' Définir les données du graphique
+        chartSheet.SetSourceData Source:=ws1.Range(&quot;A1:B2&quot;)
+        chartSheet.SeriesCollection.NewSeries
+        chartSheet.SeriesCollection(1).Name = &quot;Janvier 2023&quot;
+        chartSheet.SeriesCollection(1).XValues = Array(&quot;Janvier&quot;, &quot;Aout&quot;)
+        chartSheet.SeriesCollection(1).Values = Array(januaryExpense, augustExpense)
+
+            
+        ' Ajouter les étiquettes d'axe
+        chartSheet.Axes(xlCategory, xlPrimary).CategoryNames = Array(&quot;Janvier&quot;, &quot;Aout&quot;)
+        chartSheet.Axes(xlValue, xlPrimary).HasTitle = True
+        chartSheet.Axes(xlValue, xlPrimary).AxisTitle.Text = selectedExpense
+        
+        ' Afficher le graphique
+        chartSheet.Parent.Activate
+        chartSheet.Parent.Name = &quot;Graphique_&quot; &amp; selectedExpense
+        
+    Else
+        MsgBox &quot;Veuillez sélectionner une dépense à analyser.&quot;
+    End If
+End Sub
+
+</code></pre>
+</div>
+</details>     
+</div>
+<p>en cliquant sur le bouton 'Analyser', on peut visualiser l'evolution de la dépense choisie en parallèle de l'évolution de l'activité (mesurée par le taux d'occupation des hôtels par exemple).
+<img src="3.png" width="550px"></p>
+<p>Le bouton 'Rénitialiser' efface le contenue du dashboard, pour pouvoir relancer le code par la suite.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block">
+<p>Code du bouton Rénitialiser</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2">
+<pre><code>Sub RénitialiserButton_Click()
+    Dim chartSheet As chartObject
+    
+    ' Vérifier si un graphique existe sur la feuille &quot;Dashboard&quot;
+    For Each chartSheet In ThisWorkbook.Sheets(&quot;Dashboard&quot;).ChartObjects
+        chartSheet.Delete
+    Next chartSheet
+End Sub
+</code></pre>
+</div>
+</details>     
+</div>
+<p>Faute de temps, j'ai pas pu ajouter plus de fonctionnalités dans le dashboard (comme les alertes quand les dépenses dépassent un seuil).</p>
+<h2>Perspectives d’optimisation des dépenses technologiques</h2>
+<p>Optimiser les dépenses ne veut pas dire réduire les dépenses uniquement. Il s’agit plutôt d’une gestion financière stratégique à long terme qui vise à économiser de l’argent tout en augmentant la valeur des applications, des services, etc. Et ceci à travers une évaluation continue des processus technologiques. Pour ce faire, l’entreprise doit commencer par <strong>cartographier l’environnement informatique</strong> ainsi que les capacité métier. Ensuite, l’entreprise peut <strong>rationnaliser ses applications</strong> éliminant les redondances dans son système informatique.
+Il faut tirer le meilleur parti des différents fournisseurs, notamment du cloud en ayant la configuration la plus adaptée au besoin. Et aussi en consolidant les fournisseurs pour bénéficier des contrats groupés, ce qui réduit les coûts administratifs et permet d'avoir des tarifs réduits.
+Enfin, un système de gestion centralisé ou un bus de service d'entreprise (ESB)* peut faciliter les interactions entre les éléments du SI en permettant une communication fluide et une synchronisation en temps réel entre les systèmes. Cela aide à améliorer l'efficacité opérationnelle, à offrir une expérience utilisateur améliorée, et surtout à réduire les redondances ce qui affecte le coût.</p>
+<p>*ESB : une architecture logicielle, comme une sorte de canal centralisé à travers lequel les différents composants logiciels d'une entreprise peuvent communiquer entre eux de manière standardisée. Il fournit un ensemble de fonctionnalités telles que la médiation, la transformation des données, la gestion des messages et la sécurité pour faciliter l'intégration des systèmes hétérogènes.</p>
+<h2>Conclusion</h2>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><strong>Ce que j'ai appris</strong></p>
+</div><div class="pl-8 mr-8">
+<ul>
+<li>Bases de VBA (Automatiser de simples tâches en enregistrant une macro + modifier le code + créer bouton d’exécution)</li>
+<li>Modèle des coûts informatiques</li>
+<li>Ordre de grandeurs des dépenses technologiques pour une entreprise</li>
+<li>Perspectives d’optimisation des dépenses technologiques</li>
+</ul>
+</div></div>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><strong>Références</strong></p>
+</div><div class="pl-8 mr-8">
+<ul>
+<li><a href="https://www.excel-pratique.com/fr/vba">Documentation VBA</a></li>
+<li><a href="https://www.cigref.fr/wp/wp-content/uploads/2018/07/2018-Modele_d_analyse_et_de_benchmarking_des_couts_informatiques-Cigref-mise-a-jour-2018_web.pdf">Modèle d’analyse et de benchmarking des couts informatiques selon Cigref (Club informatique des grandes entreprises françaises)</a></li>
+<li><a href="www.walkme.com/fr/glossaire/it-budget/#:~:text=Le%20co%C3%BBt%20moyen%20d'un,%25%20du%20chiffre%20d'affaires">Dépenses technologiques selon WalkMe</a></li>
+<li><a href="https://www.leanix.net/fr/wiki/apm/it-cost-optimization#:~:text=Transformation%20continue-,Qu'est%2Dce%20que%20l'optimisation%20des%20co%C3%BBts%20informatiques,l'infrastructure%20et%20les%20applications">Optimisation des coûts informatiques</a></li>
+<li><a href="https://www.economie.gouv.fr/files/finances/presse/dossiers_de_presse/entrepreneuriat_feminin/fiche3.pdf">Définitions et dénombrement des PME et TPE</a></li>
+<li><a href="https://data.oecd.org/fr/entrepreneur/entreprises-selon-leur-taille.htm">Entreprises selon leur taille</a></li>
+</ul>
+</div></div>
+
+
+</article>
+
+        </main>
+
+
+        <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div class="min-h-[50px] flex justify-center items-center">
+                    <p class="text-center">
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développent et Organisation en IT
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        MathJax
+            .startup
+            .document
+            .getMathItemsWithin(document.body);
+        </script>
+
+    </body>
+</html>

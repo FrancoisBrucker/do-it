@@ -1,0 +1,406 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Merry Christmas, un petit jeu suivant une romance ordinaire</title>
+
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [
+                [
+                '$', '$'
+                ],
+                [
+                '\\(', '\\)'
+                ]
+            ]
+            },
+            svg: {
+            fontCache: 'global'
+            }
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
+
+        <header class="border-b-2 border-gray-200 mb-4">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="min-h-[50px] flex justify-between items-center">
+                <a class="mx-2" href="/do-it/">Home</a>
+                <div class="flex items-center gap-4 sm:gap-6 ">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                        </svg>
+                    </a>
+                    <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
+                        <svg class="h-5 aspect-square" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
+            
+<article class="relative">
+<h1 class="mb-1">Merry Christmas, un petit jeu suivant une romance ordinaire</h1>
+<div class="mb-4">
+    
+        <div class="px-4 flex flex-wrap items-center">
+            
+                <div class="font-bold">Tags : </div>
+            
+            <ul class="flex flex-wrap overflow-auto not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">POK</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">2023-2024</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 2</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Renpy</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Python</li>
+                
+
+            </ul>
+            
+            
+            <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="px-4 flex flex-wrap items-center">
+            <div class="font-bold">Auteurs : </div>
+            <ul class="flex flex-wrap not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">TAING Henri</li>
+                
+            </ul>
+        </div>
+    
+
+    
+</div>
+
+        <p class="mb-4 text-lg">
+
+                Ce POK a pour but de créer un visual novel - un roman avec des images dans lequel on peut faire des choix pour orienter l'histoire - à l'aide de Renpy. Il reprendra un roman que j'ai écrit, mais que je n'ai pas fini. Ce sera l'occasion pour moi de finir de l'écrire et de coder un petit jeu.
+
+        </p>
+
+
+
+    
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-purple-500 bg-purple-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>
+</svg>
+<div class="pl-8 mr-8">
+
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/TAING-Henri/">TAING Henri</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/TAING-Henri/pok/">POK de TAING Henri</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/TAING-Henri/pok/temps-2/">Merry Christmas, un petit jeu suivant une romance ordinaire</a>
+
+</div></div>
+
+
+
+
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p>POK débutant+</p>
+</div><div class="pl-8 mr-8">
+<p>Avoir fait un poil de Python, juste un petit peu, pour ne pas être perdu au début et donc ne pas perdre la motivation</p>
+</div></div>
+<h2>Table des matières</h2>
+<ul>
+<li><a href="#quelques-images">Quelques images</a>
+<ul>
+<li><a href="#ce-que-jai-pr%C3%A9vu-au-2%C3%A8me-sprint-et-ce-qui-a-%C3%A9t%C3%A9-fait-finalement-">Ce que j'ai prévu au 2ème sprint et ce qui a été fait finalement </a></li>
+<li><a href="#sprint-2-review-">Sprint 2 Review </a></li>
+<li><a href="#conclusion-">Conclusion </a></li>
+<li><a href="#sources-">Sources </a></li>
+</ul>
+</li>
+</ul>
+<h2>Objectifs et backlog produit <a id="section-1"></a></h2>
+<p><strong>Les objectifs</strong></p>
+<ul>
+<li>Prendre en main l'outil Renpy (Pour la création du jeu)</li>
+<li>Se familiariser avec Figma (Pour faire l'arbre de décisions)</li>
+<li>Avoir une raison de finir d'écrire mon livre (Il sera simplifié pour le jeu, les 3/4 sont déjà écrits), il est en <strong>anglais</strong> donc ne soyez pas surpris que tout soit codé en anglais, etc.</li>
+<li>Créer un jeu qui couvrira la partie I et la partie II de mon roman.</li>
+</ul>
+<p><strong>Backlog produit qui évoluera</strong></p>
+<p>A : Lié à la fin A | B : Lié à la fin B | C : Lié à la fin C
+Le roman est divisé en plusieurs parties I.ABC., II.BC et III.B et III.C, mais on ne s'intéressera qu'à I.ABC, II.1.BC.</p>
+<ul>
+<li>
+<p><u>Faire un backlog précis et le mettre à jour</u> [X] = 3 (2h)</p>
+</li>
+<li>
+<p><u>Rafraîchir ses connaissances en Python et prendre en main Renpy</u> [X] = 5 (1h30)</p>
+</li>
+<li>
+<p><u>Gestion des ressources infographiques pour le jeu, personnages et fonds</u> [X] = 2 (1h)</p>
+</li>
+<li>
+<p><u>Arbre de décision Figma</u> [] = 6 (3h)</p>
+<ul>
+<li>Parcourir le scénario et décider des points de ruptures [X] = 2 (20 minutes)</li>
+<li>Créer les arbres de décision pour I.AB [X] = 2 (1h40)</li>
+<li>Créer les arbres pour II.1.B [] = 2 (1h)</li>
+</ul>
+</li>
+<li>
+<p><u>Programmation du jeu</u> [] = 13</p>
+<ul>
+<li>
+<p>Coder les parties communes I. [X] = 7 (6h)</p>
+<ul>
+<li>Implémenter I. [X] = 5 (5h)
+<ul>
+<li>Chapitre 1 [X]</li>
+<li>Chapitre 2 [X]</li>
+<li>Chapitre 3 [X]</li>
+<li>Chapitre 4 [X]</li>
+<li>Chapitre 5 [X]</li>
+</ul>
+</li>
+<li>Mettre les fonds/personnages/transitions dans I. [X] = 2 (1h)</li>
+</ul>
+</li>
+<li>
+<p>Route A [X] = 2 (1h)</p>
+<ul>
+<li>Fin A [X] = 1 (45 min)</li>
+<li>Mettre les fonds/transitions fin A [X] = 1 (15 min)</li>
+</ul>
+</li>
+</ul>
+<p><s>- Coder les parties communes II.1 [] = 4 (3h30)</s></p>
+</li>
+<li>
+<p><u>Customisation de GUI</u> [] = 2 (1h)</p>
+<ul>
+<li>Menu principal [] = 1</li>
+<li>Barre de dialogue [] = 1</li>
+</ul>
+</li>
+<li>
+<p><u>Documenter le POK</u> [] = 1 (1h)</p>
+</li>
+</ul>
+<h2>Ce que j'ai prévu au 1er sprint et ce qui a été fait finalement <a id="section-2"></a></h2>
+<p><strong>Backlog Sprint 1</strong>
+On prendra comme user-stories à faire :</p>
+<ul>
+<li>
+<p><u>Faire un backlog précis et le mettre à jour</u> [X] = 3 (2h)</p>
+</li>
+<li>
+<p><u>Rafraîchir ses connaissances en Python et prendre en main Renpy</u> [X] = 5 (1h30)</p>
+</li>
+<li>
+<p><u>Gestion des ressources infographiques pour le jeu, personnages et fonds</u> [X] = 2 -&gt; 3 (1h -&gt; 2h)</p>
+</li>
+<li>
+<p><u>Arbre de décision Figma</u> [] = 4 (2h)</p>
+<ul>
+<li>Parcourir le scénario et décider des points de ruptures [X] = 2 (20 minutes)</li>
+<li>Créer les arbres de décision pour I.AB [X] = 2 (1h40)</li>
+</ul>
+</li>
+<li>
+<p><u>Coder les parties communes I.</u> [] = 5</p>
+<ul>
+<li>Implémenter I. [] = 5 (5h)
+<ul>
+<li>Chapitre 1 [X]</li>
+<li>Chapitre 2 [X]</li>
+<li>Chapitre 3 []</li>
+<li>Chapitre 4 []</li>
+<li>Chapitre 5 []</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Ajouté durant le sprint car c'était trop moche</strong></p>
+<ul>
+<li>
+<p><u>Customisation de GUI</u> [X] = 2 (1h)</p>
+<ul>
+<li>Menu principal [X] = 1</li>
+<li>Barre de dialogue [X] = 1</li>
+</ul>
+</li>
+</ul>
+<h2>Sprint 1 Review <a id="section-3"></a></h2>
+<p>J'ai sous-estimé le temps à prendre pour adapter mon texte à la fenêtre de dialogue et au code en général, sans compter les nombreux bugs que j'ai eus au début pendant la prise en main, et les problèmes d'images.</p>
+<p>Mais, maintenant que la partie d'adaptation est passée, j'irai beaucoup plus vite. Pour autant, le backlog ne pourra pas être effectué en entier réalistiquement dans la limite des 20h. Il faudra aussi compter le temps de déploiement/mise en ligne du jeu que j'avais oublié initialement.</p>
+<p>Une chose qui est sûre, maintenant, je comprends pourquoi les jeux sont généralement fait par des studios et non des personnes toutes seules. Scénariste, graphiste et développeur, ça commence à faire beaucoup.</p>
+<h1>Quelques images</h1>
+<p><strong>Changement de l'interface (GUI) avec à gauche la version basique et à droite la version actuelle</strong></p>
+<table>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="welcome_basic.png" width="350" height="350"></td>
+<td style="text-align:center"><img src="welcome_aimer.png" width="350" height="350"></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="menu_basic_save.png" width="350" height="350"></td>
+<td style="text-align:center"><img src="menu_aimer_save.png" width="350" height="350"></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="menu_basic_preferences.png" width="350" height="350"></td>
+<td style="text-align:center"><img src="menu_aimer_preferences.png" width="350" height="350"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Une image du jeu et le code associé</strong>
+<img src="image1.png"></p>
+<pre><code>define j = Character('Jeanne', color=&quot;#006416&quot;) #Définition du personnage
+
+label start:  #début du jeu
+
+  scene bg bus_stop_night     #appelle l'arrière-plan
+
+  show jeanne cold smile at left       #appelle l'image associée
+  show lise turtleblacksmile at right
+
+  j &quot;Jeanne. Same as you.&quot;        #dialogue
+
+return      #fin du jeu
+</code></pre>
+<p><strong>Situation de choix et code associé</strong>
+<img src="choix1.png"></p>
+<pre><code>menu:     #crée le menu de choix
+
+        &quot;Prout.&quot;:
+            jump suite1_1_1    #envoie vers suite1_1_1
+
+        &quot;Wanna be friends?&quot;:
+            jump suite1_1_2
+
+    label suite1_1_1:
+
+        j &quot;Wanna be friends?&quot;
+
+        jump suite1_1_2
+
+    label suite1_1_2:
+
+        j &quot;Like friends?&quot;
+</code></pre>
+<h2>Ce que j'ai prévu au 2ème sprint et ce qui a été fait finalement <a id="section-4"></a></h2>
+<p><strong>Backlog Sprint 2</strong>
+On prendra comme user-stories à faire :</p>
+<p><s>- <u>Le reste de l'arbre de décision Figma</u> [] = 2 (1h)</s></p>
+<p><s>- Créer les arbres pour II.1.B [] = 2 (1h)</s></p>
+<ul>
+<li>
+<p><u>Coder la deuxième moitié des parties communes I.</u> [X] = 3 (3h -&gt; 4h)</p>
+<ul>
+<li>Implémenter I. [X] = 5 (2h -&gt; 3h)
+<ul>
+<li>Chapitre 3 [X]</li>
+<li>Chapitre 4 [X]</li>
+<li>Chapitre 5 [X]</li>
+</ul>
+</li>
+<li>Mettre les fonds/personnages/transitions dans I. [] = 2 (1h)</li>
+</ul>
+</li>
+<li>
+<p><u>Route A</u> [X] = 2 (1h)</p>
+<ul>
+<li>Fin A [X] = 1 (45 min)</li>
+<li>Mettre les fonds/transitions fin A [X] = 1 (15 min)</li>
+</ul>
+</li>
+</ul>
+<p><s>- <u>Début II.</u> [] = 1 (1h)</s></p>
+<p>~~  - Chapitre 1 [] = 1~~</p>
+<ul>
+<li>
+<p><u>Déploiement du jeu</u> = 3 [X] (1h)</p>
+</li>
+<li>
+<p><u>Test et débug</u> = 2 [X] (1h)</p>
+</li>
+</ul>
+<h2>Sprint 2 Review <a id="section-5"></a></h2>
+<p>J'ai oublié l'importance de tester et retester au fur et à mesure. Pour preuve, ça m'a beaucoup ralenti sur la deuxième moitié de la partie 1, car j'ai dû tout reprendre petit à petit.
+Le déploiement s'est effectué beaucoup plus facilement que prévu grâce au build fourni par Renpy.</p>
+<h2>Conclusion <a id="section-6"></a></h2>
+<p>Je conseille Renpy pour faire un visual novel. C'est simple. Barbant. Efficace. Un vrai outil de débutant.
+J'aurais néanmoins voulu avoir plus (beaucoup plus) de temps pour vraiment finir de coder <strong>tout mon roman</strong> et ne pas simplement livrer la première partie, et également pour nettoyer et organiser mieux le code.</p>
+<p>Enfin, tant mieux que ce soit fini, j'allais devenir fou.</p>
+<p>Voici le lien pour essayer mon jeu !
+<a href="https://henritaing.itch.io/merrychristmas">Le jeu !</a></p>
+<h2>Sources <a id="section-7"></a></h2>
+<p><a href="https://www.youtube.com/watch?v=C3Ldd-5PKCw&amp;ab_channel=ZeilLearnings">Tutoriel pour créer un jeu avec Renpy (en anglais)</a> de ZeilLearnings
+<a href="https://www.renpy.org/doc/html/quickstart.html">Documentation pour débuter sur Renpy</a>
+<a href="https://www.renpy.org/doc/html/gui.html#gui">Customiser l'interface graphique (GUI)</a>
+<a href="https://lemmasoft.renai.us/forums/viewtopic.php?t=17302">Ressources pour les arrières-plans</a>
+<a href="https://noranekogames.itch.io/yumebackground">Autre ressources pour les arrières-plans</a>
+<a href="https://sutemo.itch.io/">Ressources pour les personnages</a>
+<a href="https://www.youtube.com/watch?v=WTatB4W-vKg">Déploiement du jeu sur itch.io</a>
+<a href="https://henritaing.itch.io/merrychristmas">Le jeu !</a></p>
+
+
+</article>
+
+        </main>
+
+
+        <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div class="min-h-[50px] flex justify-center items-center">
+                    <p class="text-center">
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développent et Organisation en IT
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        MathJax
+            .startup
+            .document
+            .getMathItemsWithin(document.body);
+        </script>
+
+    </body>
+</html>

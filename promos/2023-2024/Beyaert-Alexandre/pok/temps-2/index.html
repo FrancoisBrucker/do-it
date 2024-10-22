@@ -1,0 +1,536 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>La Data Science au service de l&#39;Anatomie Pathologique</title>
+
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [
+                [
+                '$', '$'
+                ],
+                [
+                '\\(', '\\)'
+                ]
+            ]
+            },
+            svg: {
+            fontCache: 'global'
+            }
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
+
+        <header class="border-b-2 border-gray-200 mb-4">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="min-h-[50px] flex justify-between items-center">
+                <a class="mx-2" href="/do-it/">Home</a>
+                <div class="flex items-center gap-4 sm:gap-6 ">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                        </svg>
+                    </a>
+                    <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
+                        <svg class="h-5 aspect-square" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
+            
+<article class="relative">
+<h1 class="mb-1">La Data Science au service de l&#39;Anatomie Pathologique</h1>
+<div class="mb-4">
+    
+        <div class="px-4 flex flex-wrap items-center">
+            
+                <div class="font-bold">Tags : </div>
+            
+            <ul class="flex flex-wrap overflow-auto not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">POK</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">2023-2024</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 2</li>
+                
+
+            </ul>
+            
+            
+            <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="px-4 flex flex-wrap items-center">
+            <div class="font-bold">Auteurs : </div>
+            <ul class="flex flex-wrap not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Alexandre Beyaert</li>
+                
+            </ul>
+        </div>
+    
+
+    
+</div>
+
+        <p class="mb-4 text-lg">
+
+                Un POK traitant de l'usage de la Data Science au service de l'anatomie Pathologique. En particulier, la création d'un algorithme de classification afin d'aider au diagnostique les médecins dans le risque de récidive du carcinome basocellulaire.
+
+        </p>
+
+
+
+    
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-purple-500 bg-purple-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>
+</svg>
+<div class="pl-8 mr-8">
+
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Beyaert-Alexandre/">Alexandre BEYAERT</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Beyaert-Alexandre/pok/">POK de Alexandre Beyaert</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Beyaert-Alexandre/pok/temps-2/">La Data Science au service de l&#39;Anatomie Pathologique</a>
+
+</div></div>
+
+
+
+
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p><strong>Niveau :</strong> Avancé
+<strong>Prérequis :</strong> Bases en Python et en Datasciences (traitement d'image, segmentation, machine learning)</p>
+</div></div>
+<h2>Sommaire</h2>
+<ol>
+<li>Introduction</li>
+<li>Description du projet</li>
+<li>Analyse préliminaire des données</li>
+<li>Pré-traitement des données</li>
+<li>Conclusion</li>
+<li>Bibliographie</li>
+</ol>
+<h2>1. Introduction</h2>
+<p>Le but de ce projet est d'apporter des solutions informatiques d'analyse de données au service de l'anatomie pathologique. L'objectif est de créer un algorithme de classification afin d'aider au diagnostique les médecins dans le risque de récidive du carcinome basocellulaire.</p>
+<p>Cette solution permettrait l'économie d'un temps précieux dans la lecture de lames au microscope afin de détecter les souches plus ou moins atteintes. La science des données doit pouvoir aider à trier ces différentes lames pour ne demander aux médecins qu'une analyse approfondie de certains échantillons.</p>
+<h2>2. Description du projet</h2>
+<h3>2.1 Informations générales</h3>
+<p><strong>Titre :</strong> Évaluation du risque d’agressivité des carcinomes basocellulaires à partir de multiples jeux de données
+<strong>Champ médical	:</strong> Cancérologie Diagnostic Anatomie Pathologique
+<strong>Entité de rattachement :</strong>	Service d’Anatomie Pathologiques, Timone, APHM, UMR911, MMG, AMU</p>
+<h3>2.2 Description du projet</h3>
+<p>L'Anatomie Pathologique (anapath) est une spécialité médicale centrée sur <strong>le diagnostic des maladies à un niveau microscopique, en interprétant des images de tissus et de cellules, notamment dans le contexte de la pathologie tumorale et du cancer.</strong> Les avancées dans la numérisation ouvrent de nouvelles perspectives, permettant potentiellement de se passer des microscopes optiques au profit d'écrans haute résolution. Cette transition vers la numérisation totale offre des opportunités de <strong>développement d'outils basés sur l'analyse d'images et des pipelines de machine learning pour faciliter le diagnostic.</strong></p>
+<p>En plus d'accélérer le processus diagnostique, ces outils peuvent contribuer à générer des données de santé normalisées et reproductibles, représentant un enjeu majeur pour la recherche en cancérologie. Les images microscopiques, souvent multimodales, peuvent être analysées en utilisant des techniques telles que l'immunohistochimie, permettant au pathologiste de visualiser différentes modalités d'information biologique superposées sur une même coupe tissulaire.</p>
+<p>La thématique de l'aide au diagnostic et de l'automatisation en pathologie est actuellement compétitive, principalement axée sur l'analyse d'image. Plusieurs projets industriels et commerciaux se concentrent sur cette problématique, bien que peu d'entre eux se consacrent spécifiquement à la dermatopathologie. Ces nouvelles approches rencontrent des défis réglementaires et financiers, notamment liés à l'obtention du marquage CE et au remboursement par les organismes de santé.</p>
+<p>En particulier, le carcinome basocellulaire, le cancer de la peau le plus fréquent, offre des images prototypiques et reproductibles au microscope, ce qui pourrait <strong>permettre une automatisation accrue du diagnostic.</strong> Cependant, les projets existants ne se concentrent pas suffisamment sur l'intégration des données existantes (compte-rendus) ni sur la combinaison de multiples jeux de données (clinique, histologique) avec l'analyse d'image pour répondre à des questions cliniques spécifiques, telles que <strong>la prédiction de la récidive tumorale.</strong></p>
+<p>Données : fichiers images, lames de microscopes numérisées, format .ndpi – anonymisées.</p>
+<h3>2.3 Missions et attendus souhaités</h3>
+<p>Le but de ce POK est de proposer un algorithme fonctionnel permettant de classer les lames cancéreuses et celles non cancéreuses.
+Pour se faire :
+<strong>- le sprint 1</strong> consistera en la <strong>compréhension</strong> du projet, sa <strong>description</strong> ainsi qu'en <strong>l'analyse préliminaire</strong> des données.
+<strong>- le sprint 2</strong> consistera à effectuer un pré-traitement qualitatif des données pour qu'elles soient prêtes à faire passer dans un algorithme de classification.</p>
+<h2>3. Analyse préliminaire des données</h2>
+<h3>3.1 Conversion automatisée des images du format ..ndpi au format .jpg</h3>
+<p>Les images sur lesquelles je travaille proviennent de microscopes numériques. Elles sont extraites au format .ndpi &quot;NanoZoomer Digital Pathology Image&quot; et sont de très hautes résolutions.</p>
+<p>L'échantillon dont je dispose <strong>propose des images allant de 100Mo à 1Go.</strong></p>
+<p>Il est possible de les lire en utilisant le NDPI Viewer &quot;NDP.wiew2&quot; développé par le fabricant japonais d'instruments scientifiques Hamamatsu Photonics K.K..</p>
+<p>Ce logiciel est téléchargeable gratuitement sur <a href="https://www.hamamatsu.com/eu/en/product/life-science-and-medical-systems/digital-slide-scanner/U12388-01.html">le site d'Hamamatsu</a></p>
+<p>Voici son interface :</p>
+<p><img src="NDP_view2.jpg" alt="NDP Viewer2"></p>
+<p>Afin de pouvoir utiliser ces images dans un algorithme de machine learning, <strong>il faudrait les convertir dans un format plus propice à la programmation et permettant de réduire leur taille.</strong></p>
+<p>Toutefois, depuis NDP Viewer2, cette conversion ne peut se faire qu'image par image et serait trop chronophage pour convertir des 100aines d'images.</p>
+<p>La première problématique de ce POK consiste alors à <strong>automatiser une conversion des images au format .ndpi vers .jpg.</strong></p>
+<h4>Tentative d'automatisation avec NDPview2</h4>
+<p>Ayant téléchargé NDPview2, ma première idée consiste alors à créer un algorithme Python convertissant les différents fichiers en faisant appel à ce NDP viewer.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">import</span> os
+<span class="token keyword">import</span> subprocess
+
+<span class="token comment"># Chemins des dossiers</span>
+input_folder <span class="token operator">=</span> <span class="token string">'C:\\Test-TER\\DATA-NDPI'</span>
+viewer_path <span class="token operator">=</span> <span class="token string">'C:\\Program Files\\Hamamatsu\\NDP.view 2\\NDPView2.exe'</span>
+output_folder <span class="token operator">=</span> <span class="token string">'C:\\Test-TER\\DATA-JPG'</span>
+
+<span class="token comment"># Chemin du fichier test</span>
+test_file <span class="token operator">=</span> <span class="token string">'test.ndpi'</span>
+test_file_path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>input_folder<span class="token punctuation">,</span> test_file<span class="token punctuation">)</span>
+
+<span class="token comment"># Génération du chemin de sortie avec le même nom de fichier mais en extension .jpg</span>
+output_file_path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>output_folder<span class="token punctuation">,</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>splitext<span class="token punctuation">(</span>test_file<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">'.jpg'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Commande pour appeler le viewer NDPI et effectuer la conversion</span>
+command <span class="token operator">=</span> <span class="token punctuation">[</span>viewer_path<span class="token punctuation">,</span> <span class="token string">'-i'</span><span class="token punctuation">,</span> test_file_path<span class="token punctuation">,</span> <span class="token string">'-o'</span><span class="token punctuation">,</span> output_file_path<span class="token punctuation">]</span>
+
+<span class="token comment"># Exécuter la commande en utilisant subprocess.Popen</span>
+process <span class="token operator">=</span> subprocess<span class="token punctuation">.</span>Popen<span class="token punctuation">(</span>command<span class="token punctuation">,</span> stdout<span class="token operator">=</span>subprocess<span class="token punctuation">.</span>PIPE<span class="token punctuation">,</span> stderr<span class="token operator">=</span>subprocess<span class="token punctuation">.</span>PIPE<span class="token punctuation">)</span>
+output<span class="token punctuation">,</span> error <span class="token operator">=</span> process<span class="token punctuation">.</span>communicate<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Afficher la sortie et les erreurs</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Sortie:"</span><span class="token punctuation">,</span> output<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Erreurs:"</span><span class="token punctuation">,</span> error<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Conversion pour le fichier de test terminée."</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Hélas le programme se contente de lancer le viewer sans effectuer la conversion. Il semblerait donc que le viewer ne puisse servir de façon automatisée mais nécessite des actions manuelles pour effectuer la conversion.</p>
+<h4>Tentative d'automatisation avec OpenSlide</h4>
+<p>Le programme ci-dessous n'est pas abouti...
+Il semble théoriquement possible de convertir les fichiers .ndpi vers .jpg grâce à la bibliothèque Python or en sortie ce programme renvoie une erreur indiquant que la bibliothèque ne peut lire les fichiers .ndpi.</p>
+<p>cf <a href="https://openslide.org/api/python/">Documentation OpenSlyde Python</a></p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">!pip install openslide<span class="token operator">-</span>python
+
+!apt<span class="token operator">-</span>get install openslide<span class="token operator">-</span>tools
+!pip install openslide<span class="token operator">-</span>python
+
+<span class="token keyword">from</span> openslide <span class="token keyword">import</span> OpenSlide
+<span class="token keyword">from</span> PIL <span class="token keyword">import</span> Image
+
+<span class="token keyword">def</span> <span class="token function">convert_ndpi_to_jpg</span><span class="token punctuation">(</span>input_path<span class="token punctuation">,</span> output_path<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># Ouvrir le fichier NDPI avec OpenSlide</span>
+    ndpi_slide <span class="token operator">=</span> OpenSlide<span class="token punctuation">(</span>input_path<span class="token punctuation">)</span>
+
+    <span class="token comment"># Extraire les dimensions de l'image</span>
+    width<span class="token punctuation">,</span> height <span class="token operator">=</span> ndpi_slide<span class="token punctuation">.</span>dimensions
+
+    <span class="token comment"># Lire l'image entière</span>
+    image <span class="token operator">=</span> ndpi_slide<span class="token punctuation">.</span>read_region<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>width<span class="token punctuation">,</span> height<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># Convertir l'image PIL en mode RVB (si elle n'est pas déjà en mode RVB)</span>
+    <span class="token keyword">if</span> image<span class="token punctuation">.</span>mode <span class="token operator">!=</span> <span class="token string">'RGB'</span><span class="token punctuation">:</span>
+        image <span class="token operator">=</span> image<span class="token punctuation">.</span>convert<span class="token punctuation">(</span><span class="token string">'RGB'</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># Enregistrer l'image au format JPG</span>
+    image<span class="token punctuation">.</span>save<span class="token punctuation">(</span>output_path<span class="token punctuation">,</span> <span class="token string">'JPEG'</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># Fermer la lecture du fichier NDPI</span>
+    ndpi_slide<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Chemin du fichier NDPI d'entrée</span>
+input_ndpi_path <span class="token operator">=</span> <span class="token string">'C:\\Test-TER\\DATA-NDPI\\test.ndpi'</span>
+
+<span class="token comment"># Dossier de sortie pour les fichiers JPG</span>
+output_jpg_folder <span class="token operator">=</span> <span class="token string">'C:\\Test-TER\\DATA-JPG'</span>
+
+<span class="token comment"># Construire le chemin de sortie pour le fichier JPG</span>
+output_jpg_path <span class="token operator">=</span> output_jpg_folder <span class="token operator">+</span> <span class="token string">'\\test.jpg'</span>
+
+<span class="token comment"># Appeler la fonction pour convertir le fichier NDPI en JPG</span>
+convert_ndpi_to_jpg<span class="token punctuation">(</span>input_ndpi_path<span class="token punctuation">,</span> output_jpg_path<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Conversion terminée. Fichier JPG enregistré à : </span><span class="token interpolation"><span class="token punctuation">{</span>output_jpg_path<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+</code></pre>
+<h3>3.2 Visualisation d'images</h3>
+<p>Pour commencer, regardons quelques images dont nous disposons.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>image <span class="token keyword">as</span> mpimg
+
+<span class="token comment"># Liste des chemins d'accès aux images</span>
+image_paths <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'C:\\TER\\visu1.png'</span><span class="token punctuation">,</span> <span class="token string">'C:\\TER\\visu3.png'</span><span class="token punctuation">,</span> <span class="token string">'C:\\TER\\visu2.png'</span><span class="token punctuation">,</span> <span class="token string">'C:\\TER\\visu4.png'</span><span class="token punctuation">]</span>
+
+<span class="token comment"># Créer une figure avec 2x2 sous-graphiques</span>
+plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Boucle pour afficher chaque image dans un sous-graphique</span>
+<span class="token keyword">for</span> i<span class="token punctuation">,</span> image_path <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>image_paths<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    
+    img <span class="token operator">=</span> mpimg<span class="token punctuation">.</span>imread<span class="token punctuation">(</span>image_path<span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span>img<span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>axis<span class="token punctuation">(</span><span class="token string">'off'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Ajuster l'espacement entre les sous-graphiques</span>
+plt<span class="token punctuation">.</span>tight_layout<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p><img src="Visualisation.jpg" alt="Exemples d'images"></p>
+<p>Ces différentes images sont à l'heure actuelle peu exploitables.
+On y remarque beaucoup de bruit, des tâches qui pourraient tromper l'algorithme quant à la détection du carcinome...</p>
+<p><img src="Visualisation_annotee.jpg" alt="Annotations">
+En noir, la zone où se trouve le carcinome.
+En rouge, du bruit pour l'algorithme</p>
+<p>Il va donc être nécessaire d'effectuer un pré-traitement de ces données pour réaliser la segmentation &quot;zone cancéreuse vs zone non cancéreuse&quot;.</p>
+<h3>3.3 Premier pré-traitement - Segmentation</h3>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">import</span> cv2
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+
+<span class="token comment"># Chemin de l'image</span>
+image_path <span class="token operator">=</span> <span class="token string">"D:/Master_SID/projet_TER/data/tumeur/9.jpg"</span>
+
+<span class="token comment"># Lecture de l'image et conversion BGR2RGB</span>
+image <span class="token operator">=</span> cv2<span class="token punctuation">.</span>imread<span class="token punctuation">(</span>image_path<span class="token punctuation">)</span>
+image <span class="token operator">=</span> cv2<span class="token punctuation">.</span>cvtColor<span class="token punctuation">(</span>image<span class="token punctuation">,</span> cv2<span class="token punctuation">.</span>COLOR_BGR2RGB<span class="token punctuation">)</span>
+
+<span class="token comment"># Aplatissement des pixels, préparation à la segmentation</span>
+pixels <span class="token operator">=</span> image<span class="token punctuation">.</span>reshape<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+pixels <span class="token operator">=</span> np<span class="token punctuation">.</span>float32<span class="token punctuation">(</span>pixels<span class="token punctuation">)</span>
+
+<span class="token comment"># Définition des critères pour l'algorithme k-means</span>
+criteria <span class="token operator">=</span> <span class="token punctuation">(</span>cv2<span class="token punctuation">.</span>TERM_CRITERIA_EPS <span class="token operator">+</span> cv2<span class="token punctuation">.</span>TERM_CRITERIA_MAX_ITER<span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">0.2</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Choix du nombre de clusters</span>
+k <span class="token operator">=</span> <span class="token number">3</span>
+
+<span class="token comment"># Modèle</span>
+_<span class="token punctuation">,</span> labels<span class="token punctuation">,</span> centers <span class="token operator">=</span> cv2<span class="token punctuation">.</span>kmeans<span class="token punctuation">(</span>pixels<span class="token punctuation">,</span> k<span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">,</span> criteria<span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> cv2<span class="token punctuation">.</span>KMEANS_RANDOM_CENTERS<span class="token punctuation">)</span>
+
+centers <span class="token operator">=</span> np<span class="token punctuation">.</span>uint8<span class="token punctuation">(</span>centers<span class="token punctuation">)</span>
+
+<span class="token comment"># Reconstruction de l'image segmentée</span>
+segmented_image <span class="token operator">=</span> centers<span class="token punctuation">[</span>labels<span class="token punctuation">.</span>flatten<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+segmented_image <span class="token operator">=</span> segmented_image<span class="token punctuation">.</span>reshape<span class="token punctuation">(</span>image<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>
+
+
+<span class="token comment"># Chemin de sortie</span>
+cv2<span class="token punctuation">.</span>imwrite<span class="token punctuation">(</span><span class="token string">"D:/Master_SID/projet_TER/data/pretraitement_tumeur/9.jpg"</span><span class="token punctuation">,</span> cv2<span class="token punctuation">.</span>cvtColor<span class="token punctuation">(</span>segmented_image<span class="token punctuation">,</span> cv2<span class="token punctuation">.</span>COLOR_RGB2BGR<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Affichage</span>
+
+plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">121</span><span class="token punctuation">)</span><span class="token punctuation">,</span> plt<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span>image<span class="token punctuation">)</span><span class="token punctuation">,</span> plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'Original Image'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">122</span><span class="token punctuation">)</span><span class="token punctuation">,</span> plt<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span>segmented_image<span class="token punctuation">)</span><span class="token punctuation">,</span> plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'Segmented Image'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p><img src="pretraitement.jpg" alt="Image d'origine vs Image segmentée"></p>
+<h2>4. Pré-traitement des données</h2>
+<p>Le pré-traitement précédent est une première avancée pour par la suite optimiser la classification. Cependant, il <strong>reste encore un peu de bruit</strong> risquant d'abaisser les performances de l'algorithme.
+Il est alors nécessaire d'accoître la performance du pré-traitement.</p>
+<h3>4.1 Délimitation du contour</h3>
+<p>Une première chose à faire consiste à <strong>délimiter le contour</strong> des membranes, cela permettra à l'algorithme de se focaliser uniquement sur la membrane et non pas sur les corps étrangers présents sur la lame.</p>
+<p>Voici une membrane :</p>
+<p><img src="celulle.png" alt="Celulle avant extraction du contour" width="50%"></p>
+<p>Et le 1er code testé pour extraire le contour :</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">extraire_contour</span><span class="token punctuation">(</span>image_entree<span class="token punctuation">,</span> image_sortie<span class="token punctuation">,</span> seuil_canny<span class="token punctuation">,</span> taille_dilatation<span class="token punctuation">,</span> superficie_min<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># Charger l'image en niveaux de gris</span>
+    image <span class="token operator">=</span> cv2<span class="token punctuation">.</span>imread<span class="token punctuation">(</span>image_entree<span class="token punctuation">,</span> cv2<span class="token punctuation">.</span>IMREAD_GRAYSCALE<span class="token punctuation">)</span>
+
+    <span class="token comment"># Appliquer un flou pour réduire le bruit</span>
+    image_floue <span class="token operator">=</span> cv2<span class="token punctuation">.</span>GaussianBlur<span class="token punctuation">(</span>image<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># Utiliser le détecteur de contours Canny avec le seuil spécifié</span>
+    contours <span class="token operator">=</span> cv2<span class="token punctuation">.</span>Canny<span class="token punctuation">(</span>image_floue<span class="token punctuation">,</span> seuil_canny<span class="token punctuation">,</span> <span class="token number">2</span> <span class="token operator">*</span> seuil_canny<span class="token punctuation">)</span>
+
+    <span class="token comment"># Appliquer la dilatation pour lier les contours discontinus</span>
+    element_structurel <span class="token operator">=</span> cv2<span class="token punctuation">.</span>getStructuringElement<span class="token punctuation">(</span>cv2<span class="token punctuation">.</span>MORPH_RECT<span class="token punctuation">,</span> <span class="token punctuation">(</span>taille_dilatation<span class="token punctuation">,</span> taille_dilatation<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    contours <span class="token operator">=</span> cv2<span class="token punctuation">.</span>dilate<span class="token punctuation">(</span>contours<span class="token punctuation">,</span> element_structurel<span class="token punctuation">)</span>
+
+    contours<span class="token punctuation">,</span> _ <span class="token operator">=</span> cv2<span class="token punctuation">.</span>findContours<span class="token punctuation">(</span>contours<span class="token punctuation">,</span> cv2<span class="token punctuation">.</span>RETR_EXTERNAL<span class="token punctuation">,</span> cv2<span class="token punctuation">.</span>CHAIN_APPROX_SIMPLE<span class="token punctuation">)</span>
+
+    contours <span class="token operator">=</span> <span class="token punctuation">[</span>contour <span class="token keyword">for</span> contour <span class="token keyword">in</span> contours <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>contour<span class="token punctuation">)</span> <span class="token operator">></span> superficie_min<span class="token punctuation">]</span>
+
+    contours_image <span class="token operator">=</span> np<span class="token punctuation">.</span>zeros_like<span class="token punctuation">(</span>image<span class="token punctuation">)</span>
+
+    cv2<span class="token punctuation">.</span>drawContours<span class="token punctuation">(</span>contours_image<span class="token punctuation">,</span> contours<span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+
+    cv2<span class="token punctuation">.</span>imwrite<span class="token punctuation">(</span>image_sortie<span class="token punctuation">,</span> contours_image<span class="token punctuation">)</span>
+    
+    <span class="token keyword">return</span> contours
+</code></pre>
+<p>Ce 1er code hélas n'est pas suffisament robuste. Le bruit perturbe le découpage et toutes les formes et contour à l'intérieur de la membrane sont découpés.</p>
+<p><img src="celulle_contour_v1.png" alt="Celulle après extraction du contour" width="50%"></p>
+<p>Pour y remédier, j'ai donc décidé d'apporter de la <strong>dilatation :</strong> concrètement, la dilatation consiste à élargir les régions d'une image qui contiennent des pixels blancs. Elle va permettre ainsi de connecter les régions blanches qui sont proches les unes des autres et ainsi combler les lacunes.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">decouper_image</span><span class="token punctuation">(</span>image_entree<span class="token punctuation">,</span> contours<span class="token punctuation">,</span> dossier_sortie<span class="token punctuation">,</span>fichier<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># Charger l'image originale</span>
+    image_originale <span class="token operator">=</span> cv2<span class="token punctuation">.</span>imread<span class="token punctuation">(</span>image_entree<span class="token punctuation">)</span>
+   
+    <span class="token comment"># Boucler sur les contours</span>
+    <span class="token keyword">for</span> i<span class="token punctuation">,</span> contour <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>contours<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        masque <span class="token operator">=</span> np<span class="token punctuation">.</span>zeros_like<span class="token punctuation">(</span>image_originale<span class="token punctuation">)</span>
+
+        <span class="token comment"># Dessiner le contour sur le masque</span>
+        cv2<span class="token punctuation">.</span>drawContours<span class="token punctuation">(</span>masque<span class="token punctuation">,</span> <span class="token punctuation">[</span>contour<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+
+        petite_image <span class="token operator">=</span> cv2<span class="token punctuation">.</span>bitwise_and<span class="token punctuation">(</span>image_originale<span class="token punctuation">,</span> masque<span class="token punctuation">)</span>
+
+        <span class="token comment"># Trouver la boîte englobante du contour</span>
+        x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> w<span class="token punctuation">,</span> h <span class="token operator">=</span> cv2<span class="token punctuation">.</span>boundingRect<span class="token punctuation">(</span>contour<span class="token punctuation">)</span>
+
+        petite_image <span class="token operator">=</span> image_originale<span class="token punctuation">[</span>y<span class="token punctuation">:</span>y<span class="token operator">+</span>h<span class="token punctuation">,</span> x<span class="token punctuation">:</span>x<span class="token operator">+</span>w<span class="token punctuation">]</span>
+
+        cv2<span class="token punctuation">.</span>imwrite<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>dossier_sortie<span class="token punctuation">,</span> <span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>fichier<span class="token punctuation">}</span></span><span class="token string">image_</span><span class="token interpolation"><span class="token punctuation">{</span>i<span class="token punctuation">}</span></span><span class="token string">.jpg"</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span> petite_image<span class="token punctuation">)</span>
+</code></pre>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">pre_traitement_1_contour_dilatation</span><span class="token punctuation">(</span>dossier_E<span class="token punctuation">,</span>dossier_S<span class="token punctuation">,</span>dossier_C<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    
+    seuil_canny <span class="token operator">=</span> <span class="token number">100</span>
+    taille_delatation<span class="token operator">=</span><span class="token number">80</span>
+    superficier_mini<span class="token operator">=</span><span class="token number">300</span>
+    seuil_contour<span class="token operator">=</span><span class="token number">20</span>
+    
+    fichiers <span class="token operator">=</span> os<span class="token punctuation">.</span>listdir<span class="token punctuation">(</span>dossier_E<span class="token punctuation">)</span>
+    
+    <span class="token keyword">for</span> fichier <span class="token keyword">in</span> fichiers<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> fichier<span class="token punctuation">.</span>lower<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>endswith<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token string">'.png'</span><span class="token punctuation">,</span> <span class="token string">'.jpg'</span><span class="token punctuation">,</span> <span class="token string">'.jpeg'</span><span class="token punctuation">,</span> <span class="token string">'.bmp'</span><span class="token punctuation">,</span> <span class="token string">'.gif'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            
+            chemin_entree <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>dossier_E<span class="token punctuation">,</span> fichier<span class="token punctuation">)</span>
+            chemin_contour <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>dossier_C<span class="token punctuation">,</span> fichier<span class="token punctuation">)</span>
+            
+            <span class="token comment">#### premier fonction</span>
+            contours <span class="token operator">=</span> extraire_contour<span class="token punctuation">(</span>chemin_entree<span class="token punctuation">,</span> chemin_contour<span class="token punctuation">,</span> seuil_canny<span class="token punctuation">,</span>taille_delatation<span class="token punctuation">,</span>superficier_mini<span class="token punctuation">)</span>
+            <span class="token comment">#### deuxieme fonction</span>
+            decouper_image<span class="token punctuation">(</span>chemin_entree<span class="token punctuation">,</span> contours<span class="token punctuation">,</span> dossier_S<span class="token punctuation">,</span>fichier<span class="token punctuation">)</span>
+
+pre_traitement_1_contour_dilatation<span class="token punctuation">(</span><span class="token string">'D:/Master_SID/projet_TER/data/tumeur'</span><span class="token punctuation">,</span><span class="token string">'D:/Master_SID/projet_TER/data/pretraitement_1'</span><span class="token punctuation">,</span><span class="token string">'D:/Master_SID/projet_TER/data/contour'</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Le résultat est tout de suite plus satisfaisant, la forme globale de la membrane est respectée et plus aucun contour n'apparaît à l'intérieur.</p>
+<p><img src="celulle_contour_v2.png" alt="Extraction du contour après dilatation" width="50%"></p>
+<p>Seul un problème persiste, lorsque plusieurs membranes sont présents sur une même lame, le programme risque de fusionner certaines membranes. Dans un premier temps, je décide de ne pas m'attarder sur ce problème et débuterai la classification avec des lames ne présentant qu'une seule membrane.</p>
+<p><img src="plusieurs_celulles.png" alt="Plusieurs membranes sur une même lame" width="50%"></p>
+<p><img src="plusieurs_celulles_contour.png" alt="Plusieurs membranes sur une même lame" width="50%"></p>
+<h3>4.2 Amélioration de la segmentation</h3>
+<p>Les contours délimités, je décide de revoir l'opération de segmentation des images avec l'algorithme de k-means.</p>
+<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">pre_traitement_2_segmentation</span><span class="token punctuation">(</span>dossier_E<span class="token punctuation">,</span>dossier_S<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    
+    
+    fichiers <span class="token operator">=</span> os<span class="token punctuation">.</span>listdir<span class="token punctuation">(</span>dossier_E<span class="token punctuation">)</span>
+    
+    <span class="token keyword">for</span> fichier <span class="token keyword">in</span> fichiers<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> fichier<span class="token punctuation">.</span>lower<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>endswith<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token string">'.png'</span><span class="token punctuation">,</span> <span class="token string">'.jpg'</span><span class="token punctuation">,</span> <span class="token string">'.jpeg'</span><span class="token punctuation">,</span> <span class="token string">'.bmp'</span><span class="token punctuation">,</span> <span class="token string">'.gif'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            
+            chemin_entree <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>dossier_E<span class="token punctuation">,</span> fichier<span class="token punctuation">)</span>
+            chemin_sortie <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>dossier_S<span class="token punctuation">,</span> fichier<span class="token punctuation">)</span>
+    
+            image_path <span class="token operator">=</span> chemin_entree
+
+            <span class="token comment">######################################################</span>
+            image <span class="token operator">=</span> cv2<span class="token punctuation">.</span>imread<span class="token punctuation">(</span>image_path<span class="token punctuation">)</span>
+            image <span class="token operator">=</span> cv2<span class="token punctuation">.</span>cvtColor<span class="token punctuation">(</span>image<span class="token punctuation">,</span> cv2<span class="token punctuation">.</span>COLOR_BGR2RGB<span class="token punctuation">)</span>
+            pixels <span class="token operator">=</span> image<span class="token punctuation">.</span>reshape<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            pixels <span class="token operator">=</span> np<span class="token punctuation">.</span>float32<span class="token punctuation">(</span>pixels<span class="token punctuation">)</span>
+            criteria <span class="token operator">=</span> <span class="token punctuation">(</span>cv2<span class="token punctuation">.</span>TERM_CRITERIA_EPS <span class="token operator">+</span> cv2<span class="token punctuation">.</span>TERM_CRITERIA_MAX_ITER<span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">0.2</span><span class="token punctuation">)</span>
+
+            <span class="token comment">############ le NB de clusters</span>
+            <span class="token comment">######## changer le pour tester</span>
+
+            k <span class="token operator">=</span> <span class="token number">3</span>
+
+            <span class="token comment">############################</span>
+            <span class="token comment">######## modele ############</span>
+            _<span class="token punctuation">,</span> labels<span class="token punctuation">,</span> centers <span class="token operator">=</span> cv2<span class="token punctuation">.</span>kmeans<span class="token punctuation">(</span>pixels<span class="token punctuation">,</span> k<span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">,</span> criteria<span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> cv2<span class="token punctuation">.</span>KMEANS_RANDOM_CENTERS<span class="token punctuation">)</span>
+            centers <span class="token operator">=</span> np<span class="token punctuation">.</span>uint8<span class="token punctuation">(</span>centers<span class="token punctuation">)</span>
+            segmented_image <span class="token operator">=</span> centers<span class="token punctuation">[</span>labels<span class="token punctuation">.</span>flatten<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+            segmented_image <span class="token operator">=</span> segmented_image<span class="token punctuation">.</span>reshape<span class="token punctuation">(</span>image<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>
+            cv2<span class="token punctuation">.</span>imwrite<span class="token punctuation">(</span>chemin_sortie<span class="token punctuation">,</span> cv2<span class="token punctuation">.</span>cvtColor<span class="token punctuation">(</span>segmented_image<span class="token punctuation">,</span> cv2<span class="token punctuation">.</span>COLOR_RGB2BGR<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+pre_traitement_2_segmentation<span class="token punctuation">(</span><span class="token string">'D:/Master_SID/projet_TER/data/pretraitement_1'</span><span class="token punctuation">,</span><span class="token string">'D:/Master_SID/projet_TER/data/pretraitement_2'</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Avant segmentation
+<img src="avant_pre-trait.png" alt="Avant pré-traitement" width="50%"></p>
+<p>Après segmentation
+<img src="apres_pre-trait.png" alt="Après pré-traitement" width="50%"></p>
+<p>Le résultat semble tout à fait satisfaisant, je décide donc dans un dernier temps d'effectuer de l'annotation avec le logiciel QuPath pour aider le futur algorithme de classification à détecter la zone de la tumeur.</p>
+<h3>4.3 Annotation</h3>
+<p><img src="annotation.png" alt="Annotation" width="50%"></p>
+<p><img src="logiciel.png" alt="Logiciel QuPath" width="50%"></p>
+<h2>5. Conclusion</h2>
+<p><strong>Timing Sprint 1</strong></p>
+<table>
+<thead>
+<tr>
+<th>Timing</th>
+<th>Introduction du sujet (déplacement à la Timone)</th>
+<th>Prise en main des données</th>
+<th>Conversion auto avec NDPview2</th>
+<th>Pré-traitement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sprint 1 - Temps prévu (en heures)</td>
+<td>2</td>
+<td>2</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Sprint 1 - Temps dédié (en heures)</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Timing Sprint 2</strong></p>
+<table>
+<thead>
+<tr>
+<th>Timing</th>
+<th>Extraction contour</th>
+<th>Segmentation</th>
+<th>Annotation</th>
+<th>Choix algorithme</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sprint 2 - Temps prévu (en heures)</td>
+<td>4</td>
+<td>3</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Sprint 2 - Temps dédié (en heures)</td>
+<td>5</td>
+<td>2</td>
+<td>1</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+
+
+</article>
+
+        </main>
+
+
+        <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div class="min-h-[50px] flex justify-center items-center">
+                    <p class="text-center">
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développent et Organisation en IT
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        MathJax
+            .startup
+            .document
+            .getMathItemsWithin(document.body);
+        </script>
+
+    </body>
+</html>

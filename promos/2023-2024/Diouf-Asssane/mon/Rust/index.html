@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Introduction à Rust</title>
+
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [
+                [
+                '$', '$'
+                ],
+                [
+                '\\(', '\\)'
+                ]
+            ]
+            },
+            svg: {
+            fontCache: 'global'
+            }
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
+
+        <header class="border-b-2 border-gray-200 mb-4">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="min-h-[50px] flex justify-between items-center">
+                <a class="mx-2" href="/do-it/">Home</a>
+                <div class="flex items-center gap-4 sm:gap-6 ">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                        </svg>
+                    </a>
+                    <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
+                        <svg class="h-5 aspect-square" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
+            
+<article class="relative">
+<h1 class="mb-1">Introduction à Rust</h1>
+<div class="mb-4">
+    
+        <div class="px-4 flex flex-wrap items-center">
+            
+                <div class="font-bold">Tags : </div>
+            
+            <ul class="flex flex-wrap overflow-auto not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">MON</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">2023-2024</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 1</li>
+                
+
+            </ul>
+            
+            
+            <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="px-4 flex flex-wrap items-center">
+            <div class="font-bold">Auteurs : </div>
+            <ul class="flex flex-wrap not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Assane Diouf</li>
+                
+            </ul>
+        </div>
+    
+
+    
+</div>
+
+        <p class="mb-4 text-lg">
+
+                Découvrons ensemble le langage Rust. Il est de plus en plus adopté dans l'industrie pour ses performances et ses idées nouvelles, comme l'ownership.
+
+        </p>
+
+
+
+    
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-purple-500 bg-purple-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>
+</svg>
+<div class="pl-8 mr-8">
+
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Diouf-Asssane/">Assane DIOUF</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Diouf-Asssane/mon/">MON d&#39;Assane Diouf</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Diouf-Asssane/mon/Rust/">Introduction à Rust</a>
+
+</div></div>
+
+
+
+
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p>MON débutant</p>
+</div><div class="pl-8 mr-8">
+<p>Il faut connaître :</p>
+<ul>
+<li>des bases en C/C++</li>
+<li>l'utilisation d'un CLI (un terminal de commande)</li>
+</ul>
+</div></div>
+<p>Pour faire mes débuts en Rust j'ai d'abord consulté le <a href="https://www.rust-lang.org/fr">site officiel</a> du langage. On peut y trouver un livre (gratuit) pour apprendre le langage : <a href="https://doc.rust-lang.org/book/">https://doc.rust-lang.org/book/</a>.</p>
+<p>J'ai aussi pu me baser sur un livre que m'a prêté M. Brucker : <strong>Hands-on Rust : Effective learning through 2D Game Development and Play</strong> de Herbert Wolverson. Etant donné que le livre proposé par Rust est composé de plusieurs chapitres d'explication avec peu de pratique, il m'a permis de commencer à pratiquer en même temps que j'apprenais les concepts du langage.</p>
+<p>Cette vidéo Youtube est aussi une présentation (très) rapide à Rust : <a href="https://www.youtube.com/watch?v=5C_HPTJg5ek">Rust</a></p>
+<h2>Présentation de Rust</h2>
+<ul>
+<li>Parmis les langages préféré des développeurs</li>
+<li>Performant, sécurisé (typage, ownership), productif</li>
+<li>Permet de :
+<ul>
+<li>construire des CLI</li>
+<li>se compile en web assembly</li>
+<li>faire du réseau</li>
+<li>faire du développement embarqué</li>
+</ul>
+</li>
+</ul>
+<h2>Comment faire du Rust ?</h2>
+<p>Rust étant un langage compilé, il faut commencer par installer le compilateur rustc. Ensuite, pour éditer du code en Rust, il faut un IDE comme Visual Studio Code ou CLIon (et bientôt RustRover). Enfin, pour exécuter son premier programme Rust, il faut créer l'exécutable avec la commande :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">rustc main.rs 
+</code></pre>
+<p>et exécuter ce dernier avec :</p>
+<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">./main
+</code></pre>
+<p>L'usage est cependant d'utiliser <strong>cargo</strong> pour développer avec Rust. Cargo va permettre de gérer l'ensemble des dépendances du projet avec d'autres librairies Rust (des crates) et de facilement créer un exécutable et le tester.</p>
+<p>Voilà à quoi ressemble un programme Hello World en Rust :</p>
+<pre class="language-rust " style="counter-reset: linenumber 0"><code class="language-rust"><span class="token keyword">fn</span> <span class="token function-definition function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token macro property">println!</span><span class="token punctuation">(</span><span class="token string">"Hello, world!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Dans Rust, tout le programme qui s'execute est dans la fonction main. On peut aussi noter le point d'exclamation de println!, il ne s'agit pas d'une fonction mais d'une macro.</p>
+<h2>Les particularités de Rust</h2>
+<p>Tout d'abord, Rust est un <strong>langage</strong> typé, mais contrairement à d'autres langages, il prend aussi en compte l'espace occupé par chaque type. Par exemple, un entier signé sur 32bits a pour type i32 alors qu'un entier signé sur 8bits a pour type i8. Je trouve Rust particulièrement plus lisible que le C/C++ avec ces notations. En plus de ce système de type, Rust vient avec un système <em>simple</em> de conversion des variables d'un type à un autre. Rust introduit aussi une forme de string plus piégeuse que dans d'autres langages mais, en contrepartie, permet vraiment de travailler avec tout type de charactères de façon sécurisée.</p>
+<p>On peut aussi parler du fait que la valeur nulle n'existe pas dans Rust. A la place, Rust introduit des énumérations comme les Options qui peuvent valoir Some(quelque chose) ou None. Couplé avec les matchs par exemple, cela permet de mieux gérer les erreurs à mon sens.</p>
+<p>Ensuite, il y a l'<strong>ownership</strong> (la <em>propriété</em> en français), qui est un ensemble de 3 règles dont le but est de réduire le nombre d'erreurs dûe à la manipulation de la mémoire.</p>
+<h2>C'est quoi l'ownership ?</h2>
+<p>L'ownership est un système de <strong>management de la mémoire</strong> en Rust, basé sur les règles suivantes :</p>
+<ul>
+<li>Chaque valeur a un propriétaire.</li>
+<li>Il ne peut y avoir qu'un proprétaire à la fois par valeur.</li>
+<li>Les valeurs sont automatiquement détruites avec le propriétaire.</li>
+</ul>
+<p>Ces règles sont importantes à garder en tête lors du maniement de certaines valeurs. Il est alors intéressant, à mon sens, de tout voir alors comme dans le cas où l'on possède un objet :</p>
+<ul>
+<li>il n'a qu'un seul propriétaire</li>
+<li>si on le donne, il n'est plus à nous</li>
+<li>on peut cependant le prêter</li>
+<li>il y a plusieurs type de prêts (on récupère toujours l'objet identique ou on le récupère modifié)</li>
+</ul>
+<p>Le cas des prêts représente les <strong>références</strong> en Rust. Les références permettent, par exemple, de passer une de ces valeurs à une fonction sans en perdre la propriété.</p>
+<h2>Comment apprendre Rust ?</h2>
+<p>Comme je le disais plus haut, pour mon MON, j'ai étudié le livre officiel sur le site de Rust ainsi que le livre que M. Brucker m'a prêté qui explique Rust au travers du développement de jeu vidéo.</p>
+<p>Le livre officiel sur le site de Rust est très complet et explique les concepts de base en détaillant le plus possible pour les lecteurs qui découvrent Rust. C'est une très bonne ressource pour découvrir les concepts centraux de Rust ainsi que les bonnes pratiques. Son point faible est que c'est beaucoup d'explications pour assez peu de projets pratiques (il y en a trois).</p>
+<p>C'est sur ce dernier point que le livre qu'on m'a prêté était intéressant. Il est moins général sur les différents principes du langage, mais explique très bien tous les principes qu'il introduit. De plus, il permet de suivre un pro dans le domaine du jeu vidéo lorsqu'il crée un jeu (avec pleins de conseils, de pratiques, etc...).</p>
+<p>J'ai donc réalisé les projets suivants pendant ces 20h :</p>
+<ul>
+<li><strong>GuessingGame</strong> : deviner un nombre aléatoire entre 0 et 100 (Rust Handbook)
+Voici le code de ce jeu d'introduction à Rust</li>
+</ul>
+<pre class="language-rust " style="counter-reset: linenumber 0"><code class="language-rust"><span class="token keyword">use</span> <span class="token namespace">std<span class="token punctuation">::</span></span>io<span class="token punctuation">;</span>
+<span class="token keyword">use</span> <span class="token namespace">std<span class="token punctuation">::</span>cmp<span class="token punctuation">::</span></span><span class="token class-name">Ordering</span><span class="token punctuation">;</span>
+<span class="token keyword">use</span> <span class="token namespace">rand<span class="token punctuation">::</span></span><span class="token class-name">Rng</span><span class="token punctuation">;</span>
+
+<span class="token keyword">fn</span> <span class="token function-definition function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token macro property">println!</span><span class="token punctuation">(</span><span class="token string">"Guessing game"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">let</span> secret_value <span class="token operator">=</span> <span class="token namespace">rand<span class="token punctuation">::</span></span><span class="token function">thread_rng</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">gen_range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">..=</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">loop</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> <span class="token keyword">mut</span> guess <span class="token operator">=</span> <span class="token class-name">String</span><span class="token punctuation">::</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token macro property">println!</span><span class="token punctuation">(</span><span class="token string">"Please enter your guess :"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token namespace">io<span class="token punctuation">::</span></span><span class="token function">stdin</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">read_line</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token keyword">mut</span> guess<span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">expect</span><span class="token punctuation">(</span><span class="token string">"An error occured"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">let</span> guess <span class="token punctuation">:</span> <span class="token keyword">u32</span> <span class="token operator">=</span> <span class="token keyword">match</span> guess<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">Ok</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span> <span class="token operator">=></span> num<span class="token punctuation">,</span>
+            <span class="token class-name">Err</span><span class="token punctuation">(</span>_<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">continue</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+        <span class="token macro property">println!</span><span class="token punctuation">(</span><span class="token string">"You guessed : {guess}"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">match</span> guess<span class="token punctuation">.</span><span class="token function">cmp</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>secret_value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">Ordering</span><span class="token punctuation">::</span><span class="token class-name">Less</span> <span class="token operator">=></span> <span class="token macro property">println!</span><span class="token punctuation">(</span><span class="token string">"Too small"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token class-name">Ordering</span><span class="token punctuation">::</span><span class="token class-name">Greater</span> <span class="token operator">=></span> <span class="token macro property">println!</span><span class="token punctuation">(</span><span class="token string">"Too big !"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token class-name">Ordering</span><span class="token punctuation">::</span><span class="token class-name">Equal</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+                <span class="token macro property">println!</span><span class="token punctuation">(</span><span class="token string">"You win !"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<ul>
+<li><strong>Flappy Dragon</strong> : comme flappy bird mais avec un dragon; et sans les beaux graphismes (Hands-on Rust)
+Voici quelques images du résultat obtenu :
+<img src="flappy1.jpg" alt="le jeu">
+<img src="flappy2.jpg" alt="Menu du jeu">
+<em>Retrouve le code sur mon <a href="https://github.com/assanediouf18/FlappyRust">Github</a></em></li>
+<li><strong>Minigrep</strong> : coder en Rust un programme qui trouve les occurrences d'une chaine de caractère dans un fichier (Rust Handbook)
+L'objectif ici était de faire un grep vraiment très simple en utilisant de nouvelles connaissances en Rust (gestion des erreurs, tests, architecture du projet, etc...). C'est un programme a utiliser dans l'invité de commandes, retrouve le code sur mon <a href="https://github.com/assanediouf18/Minigrep">github</a>.</li>
+<li><strong>DungeonCrawl</strong> : un aventurier cherche une amulette dans un donjon rempli de monstre. Je n'ai pas terminé le jeu au complet (Hands-on Rust)
+Ce projet m'a vraiment permis d'en apprendre beaucoup sur Rust et sur le développement de jeu vidéo. J'ai pu gérer la création du donjon, son affichage, l'affichage du joueur et des monstres, implémenter un sytème de mouvement, etc...
+<img src="dungeoncrawl.png" alt="Image de la fenêtre actuelle">
+<em>Retrouve le code sur mon <a href="https://github.com/assanediouf18/DungeonCrawl">github</a>.</em></li>
+</ul>
+<h2>Conclusion</h2>
+<p>A mon avis, Rust est un langage intéressant qui vaut le détour. Je souhaite maintenant étendre mes connaissances du langage et pratiquer davantage. Durant ces 20h, j'ai pu explorer plus profondément le langage mais je sens que j'ai encore besoin de beaucoup de pratique pour vraiment saisir certains concepts. Je vais donc terminer le livre officiel de Rust (il ne me reste que 3 chapitres) et essayer de faire quelques projets avec Rust.</p>
+<h2>Pour la suite...</h2>
+<p>Rust est un langage aux multiples applications. Il est organisé autour d'une communauté active qui propose beaucoup de crates (packages).</p>
+<p>Par exemple, Rust est un langage qui se compile très facilement en WebAssembly. J'aborde le WebAssembly plus en détail dans mon premier <a href="../../pok/temps-1">POK</a>. Je vais donc juste dire ici que le webassembly peut directement s'éxécuter dans le navigateur. A partir de ce point, des membres de la communauté ont introduit des crates pour faire le front entier d'un site avec Rust (<a href="https://trunkrs.dev">Trunk</a> avec <a href="https://yew.rs">Yew</a> ou d'autres).</p>
+<p>Il est aussi possible d'utiliser Rust pour développer des jeux-vidéos(avec <a href="https://bevyengine.org">Bevy</a> ou encore bracket-lib), des applications de bureaux (<a href="https://tauri.app/fr/">Tauri</a>) ou de faire du Rust côté serveur (on peut gérer tous les aspects d'une application avec Rust comme le montre cette video : <a href="https://youtu.be/luOgEhLE2sg?si=-GECHavzkNbjqvlI">RSTY stack</a>).</p>
+
+
+</article>
+
+        </main>
+
+
+        <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div class="min-h-[50px] flex justify-center items-center">
+                    <p class="text-center">
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développent et Organisation en IT
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        MathJax
+            .startup
+            .document
+            .getMathItemsWithin(document.body);
+        </script>
+
+    </body>
+</html>

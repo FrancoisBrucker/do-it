@@ -1,0 +1,566 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>MON 2.2 - Langage assembleur</title>
+
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [
+                [
+                '$', '$'
+                ],
+                [
+                '\\(', '\\)'
+                ]
+            ]
+            },
+            svg: {
+            fontCache: 'global'
+            }
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
+
+        <header class="border-b-2 border-gray-200 mb-4">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="min-h-[50px] flex justify-between items-center">
+                <a class="mx-2" href="/do-it/">Home</a>
+                <div class="flex items-center gap-4 sm:gap-6 ">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                        </svg>
+                    </a>
+                    <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
+                        <svg class="h-5 aspect-square" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
+            
+<article class="relative">
+<h1 class="mb-1">MON 2.2 - Langage assembleur</h1>
+<div class="mb-4">
+    
+        <div class="px-4 flex flex-wrap items-center">
+            
+                <div class="font-bold">Tags : </div>
+            
+            <ul class="flex flex-wrap overflow-auto not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">MON</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">2022-2023</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 2</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">assembler</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">reverse engineering</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">arm</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">x86</li>
+                
+
+            </ul>
+            
+            
+            <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="px-4 flex flex-wrap items-center">
+            <div class="font-bold">Auteurs : </div>
+            <ul class="flex flex-wrap not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Kasimir Romer</li>
+                
+            </ul>
+        </div>
+    
+
+    
+</div>
+
+
+
+    
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-purple-500 bg-purple-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>
+</svg>
+<div class="pl-8 mr-8">
+
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2022-2023/">2022-2023</a><span class="px-1">/</span><a href="/do-it/promos/2022-2023/Romer-Kasimir/">Kasimir Romer</a><span class="px-1">/</span><a href="/do-it/promos/2022-2023/Romer-Kasimir/mon/">MON de Kasimir</a><span class="px-1">/</span><a href="/do-it/promos/2022-2023/Romer-Kasimir/mon/MON2-2/">MON 2.2 - Langage assembleur</a>
+
+</div></div>
+
+
+
+
+<!-- Début Résumé -->
+<p>Dans ce MON, je vais apprendre les bases du langage d'assemblage ARM. Si le temps le permet, j'étudierai le débogage avec gdb car c'est un bon cas d'utilisation pour appliquer les connaissances de l'assembleur.</p>
+<!-- fin résumé -->
+<!-- ## Structure de ce MON
+1. Introduction
+  - What is assembly language?
+    - Assembly vs high-level language
+  - Use cases of assembly language
+    - Super fast execution
+    - Embedded systems (memory constraints, ...)
+    - Reverse engineering -> most important for me personally
+  - Differences of different assembly languages (x86, ARM, ...)
+2. Assembly language for ARM
+  - why? -> ARM is used in many embedded systems and will be used more and more in the future
+  - follow tutorial on https://azeria-labs.com/writing-arm-assembly-part-1/
+3. Assembly language for x86
+  - not in depth, only show the key differences to ARM assembly
+4. Reverse engineering with gdb, radare2 and Ghidra (only if time permits)
+  - gdb
+  - radare2
+  - Ghidra
+5. Useful resources
+  - Online resources
+  - Tools (like online assemblers, ...) -->
+<h2>Introduction</h2>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><strong>Prerequisites</strong></p>
+</div><div class="pl-8 mr-8">
+<p>To follow this MON (or any tutorial other on assembly programming), you should have basic knowledge of computer architecture and programming. You should at least:</p>
+<ul>
+<li>Understand the basic concepts of a computer (CPU, memory, input/output, ...)</li>
+<li>Being familiar with binary and hexadecimal numbers</li>
+<li>Know the basics of at least one high-level programming language like C++ or Java</li>
+</ul>
+<p>For a deeper understanding of machine language and compilers, see the <a href="../../JBD/Mes_MON/compilateur">MON of Jean-Baptiste</a> (but that's not necessary for understanding this MON)</p>
+</div></div>
+<h3>What is assembly language?</h3>
+<p>Assembly language is a very low-level programming language. It is being translated to machine code (binary code executed by the CPU) by an assembler. Because it is so hardware-near, it is very fast and efficient. However, it is harder to read and write than high-level languages like C++ or Java, that's why it only used in few use cases nowadays.</p>
+<h3>Use cases of assembly language</h3>
+<p>Assembly language is nowadays mostly used in <strong>embedded systems</strong> like microcontrollers, where the hardware is very limited (in terms of memory and processing power), so the performance of the code is very important. Because assembly language is hardware-near, it is used in cases where hardware-specific functions need to be used. Additionally, assembly language is used in <strong>reverse engineering</strong> to understand how a program works. The code recovered from a program can be disassembled to assembly language and then analyzed.
+Besides those use cases, it is great to learn assembly language in order to <strong>understand the architecture of a computer</strong> with its CPU, registers, memory and I/O. It is also useful to understand how a program works in general and how it is executed by the CPU. This allows better software development and debugging, e.g. by knowing potential for optimizing or better securing the software.
+Other special use cases are <strong>OS and driver development</strong> because some of the functions in those area can't be implemented in high-level languages. Assembly language is used unknowingly by many programs, because the compiler that compiles high-level languages (C and C++ code) <strong>generates assembly code</strong>.</p>
+<h3>Differences of different assembly languages (x86, ARM, ...)</h3>
+<p>There is no single &quot;assembly language&quot; because the instruction set of every CPU varies and therefore the language to control those instructions also varies. This means that every CPU has its own assembly language, but as they are very similar, it is possible to learn one assembly language and then learn the others relatively quickly. They share big parts of the syntax, so one can adapt quickly to a new assembly language if he needs to program for a different CPU. Nowadays, mainly two families of CPUs, and thus two families of assembly language, are used: x86 and ARM.</p>
+<h4>x86</h4>
+<p>The x86 family is used in most <strong>desktop computers</strong>. The CPUs of the x86 family use a <strong>CISC (complex instruction set computer)</strong> architecture. CISC CPUs have a larger, more complex instruction set with many specialized instructions for a variety of tasks. This allows them to perform a wider range of functions, but at the cost of slower execution times and increased complexity in the CPU. Because the instruction set is so complex, it is not easy to learn x86 assembly.</p>
+<p>The most well-known CPUs of this family are the Intel Core i3, i5 and i7 CPUs and the AMD Ryzen CPUs, so the chances are high that the device you are using to read this MON at the moment operates with on a x86 architecture.</p>
+<h4>ARM</h4>
+<p>The instruction set of the ARM CPU family is much simpler because it uses a <strong>RISC (reduced instruction set computer)</strong> architecture. RISC CPUs have a small, fixed instruction set with a limited number of instructions that can be executed quickly. This reduces the complexity of the CPU and allows it to execute instructions more quickly, at the cost of some flexibility. However, some instructions that can be executed in one step on a CISC CPU need multiple steps on a RISC CPU.</p>
+<p>ARM CPUs are used in most <strong>mobile devices and embedded systems</strong>. The most common CPUs of this family are the Apple A-series CPUs like the A15 Bionic which is used in the iPhone 14 and the Qualcomm Snapdragon CPUs like the Snapdragon 888 which is used in the Samsung Galaxy S21. In many embedded systems, ARM Cortex CPUs are used like the Cortex-M4 which is used in the popular STM32F4 microcontroller. ARM also spreads into the field where x86 is dominating, e.g. with the Apple M2 chip which is used in the newest MacBook Air and the MacBook Pro and is considered extremely energy-efficient while still being very powerful. This shows that ARM will get even more relevant soon and could replace the x86 architecture in many domains.</p>
+<h2>Assembly language for ARM</h2>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p>To learn ARM assembly, I used the following sources:</p>
+</div><div class="pl-8 mr-8">
+<ul>
+<li><a href="https://www.youtube.com/watch?v=gfmRrPjnEw4">Assembly Language Programming with ARM – Full Tutorial for Beginners (YouTube)</a></li>
+<li><a href="https://azeria-labs.com/writing-arm-assembly-part-1/">azeria-labs.com - Writing ARM assembly</a></li>
+<li><a href="https://www.amazon.fr/Modern-Assembly-Language-Programming-Processor/dp/0128036982/">Larry D. Pyeatt: &quot;Modern Assembly Language Programming with the ARM Processor&quot; (book)</a></li>
+</ul>
+<p>The YouTube tutorial focuses more on showing the different instructions, while the azeria-labs blog series digs deeper into some of the topics and allows a very good understanding of the most important concepts. In my opinion, the combination of those two sources is great to learn ARM assembly, they complement each other well.</p>
+</div></div>
+<h3>Running ARM assembly code</h3>
+<p>To use the ARM assembly language, you need a device containing an ARM (micro)chip where the assembled code is stored and executed. For example, the <em>Raspberry Pi 4 Model B</em>, the current version of the Raspberry Pi computer, uses a Broadcom BCM2711 SoC (system-on-a-chip) that includes the Cortex A-72 ARM chip as CPU. This means that you can use the ARM assembly language directly on the Raspberry Pi to get a real-world experience and direct hardware integration, e.g. you can blink the onboard LED etc.</p>
+<p>If you don't have access to an ARM chip, an emulator can be used. The advantage is that you can inspect the whole memory at every given time, easily understand changes that the program makes to the memory, and that you don't need to flash the device with the new code after every change that is made in the code. You can find an online ARM emulator <a href="https://cpulator.01xz.net/?sys=arm-de1soc">here</a>.</p>
+<p>In this MON, I will mainly use the emulator to write and execute the assembly code. Maybe later, I will test it also with the Raspberry Pi 4 that is laying around in my room.</p>
+<h3>ARM assembly basics</h3>
+<h4>Registers</h4>
+<p>Registers are the closest memory to the CPU. It is a small amount of memory that is directly accessible by the CPU, thus the CPU can read and write to the registers very quickly. One register can store data of the length of one word. A word is a fixed number of bits that can be stored in a register. The number of bits depends on the CPU, for example, the ARM Cortex-M4 CPU uses 32-bit words, so one word is 32 bits long and therefore a register can store 32 bits.</p>
+<p>Some of those registers are general purpose registers (e.g. R0-R10) and some of them are special purpose registers:</p>
+<ul>
+<li>R7: holds the syscall number</li>
+<li>the program counter (PC): stores the address of the next instruction to be executed</li>
+<li>the stack pointer (SP): stores the address of the top of the stack</li>
+<li>the link register (LR): stores the address of the next instruction to be executed after a function call</li>
+<li>the current program status register (CPSR): stores the status of the current program (e.g. CPU mode, interrupt mask, overflow flag, carry flag, zero flag, negative flag)</li>
+<li>and more that will be described later when they are necessary</li>
+</ul>
+<h4>Instructions</h4>
+<p>In general, an instruction in ARM is constructed as following (based on <a href="https://azeria-labs.com/arm-instruction-set-part-3/#:~:text=INTRODUCTION%20TO%20ARM%20INSTRUCTIONS">this article</a>):</p>
+<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm"><span class="token instruction keyword">MNEMONIC</span>{S}{condition} {Rd}<span class="token punctuation">,</span> Operand1<span class="token punctuation">,</span> Operand2
+</code></pre>
+<ul>
+<li>MNEMONIC     - Short name (mnemonic) of the instruction (e.g. ADD, MOV, LDR, ...). It doesn't matter if the mnemonic is in upper or lower case.</li>
+<li>{S}          - An optional suffix. If S is specified, the condition flags are updated on the result of the operation</li>
+<li>{condition}  - Condition that is needed to be met in order for the instruction to be executed. This will be explained in the paragraph <strong>Conditional instruction execution</strong></li>
+<li>{Rd}         - Register (destination) for storing the result of the instruction</li>
+<li>Operand1     - First operand. Either a register or an immediate value</li>
+<li>Operand2     - Second (flexible) operand. Can be an immediate value (number) or a register with an optional shift</li>
+</ul>
+<h5>Entry point</h5>
+<p>The emulator automatically inserts the first two lines of the program automatically:</p>
+<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm">.global _start
+_start:
+</code></pre>
+<p><em>_start:</em> is a label that is used to divide the code into segments. If we go to a label, we execute the code below this label. <em>.global</em> makes the start label globally accessible.</p>
+<h5>Move and load</h5>
+<p>The <em>MOV</em> instruction moves a value from the source register to the destination register. The syntax is:</p>
+<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm"><span class="token instruction keyword">MOV</span> <span class="token operator">&lt;</span>destination register<span class="token operator">></span><span class="token punctuation">,</span> <span class="token operator">&lt;</span>source register<span class="token operator">></span> or <span class="token operator">&lt;</span>value<span class="token operator">></span>
+</code></pre>
+<p>The <em>LDR</em> instruction loads a value from a memory address to the destination register:</p>
+<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm"><span class="token instruction keyword">LDR</span> <span class="token operator">&lt;</span>destination register<span class="token operator">></span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">&lt;</span>register where an address is stored<span class="token operator">></span><span class="token punctuation">]</span>
+</code></pre>
+<p>A value can be a number or a label. The value is stored in the destination register. If it is a number, it must be preceded by a #. So the first instructions can be:</p>
+<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm">.global _start
+_start:
+    <span class="token instruction keyword">MOV</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token operator">#</span><span class="token number">30</span>         <span class="token comment">; move the decimal value 30 to register r0 </span>
+    <span class="token instruction keyword">MOV</span> <span class="token register symbol">r1</span><span class="token punctuation">,</span> <span class="token operator">#</span><span class="token number">0x1F</span>       <span class="token comment">; move the hex value 0x1F (31 decimal) to register r1</span>
+    <span class="token instruction keyword">MOV</span> <span class="token register symbol">r2</span><span class="token punctuation">,</span> <span class="token register symbol">r0</span>          <span class="token comment">; move the value from register r0 in register r2</span>
+    <span class="token instruction keyword">MOV</span> <span class="token register symbol">r3</span><span class="token punctuation">,</span> <span class="token number">0x20ffab12</span>  <span class="token comment">; store a specific memory address in register r3</span>
+    <span class="token instruction keyword">LDR</span> <span class="token register symbol">r4</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token register symbol">r3</span><span class="token punctuation">]</span>        <span class="token comment">; go to the address that is stored in r3 and load the value that is found there   into r4</span>
+</code></pre>
+<h5>Comments</h5>
+<p>Comments are used to explain the code. They are ignored by the assembler and therefore not executed by the CPU. The syntax for comments in assembly is:</p>
+<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm"><span class="token comment">; &lt;comment></span>
+</code></pre>
+<p>Unfortunately, the CPUlator emulator can't handle comments in this style, so for CPUlator, the comments are written in C style (<em>//</em>):</p>
+<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm"><span class="token operator">/</span><span class="token operator">/</span> <span class="token operator">&lt;</span>comment<span class="token operator">></span>
+</code></pre>
+<p>Note that this won't be recognized by any ARM assembler in the real world.</p>
+<h5>End the program</h5>
+<p>To end the program, we need to make a system call to let the operating system know that the program has finished. The syntax for a system call is:</p>
+<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm"><span class="token instruction keyword">MOV</span> <span class="token register symbol">r7</span><span class="token punctuation">,</span> <span class="token operator">&lt;</span>system call number<span class="token operator">></span>  <span class="token comment">; move the system call number to the r7 register. The system call number for exit is 1.</span>
+<span class="token instruction keyword">SWI</span> <span class="token operator">&lt;</span>interrupt number<span class="token operator">></span>        <span class="token comment">; make the system call by interrupting the CPU (SWI = software interrupt).</span>
+</code></pre>
+<p>When the OS receives the interrupt, it looks at the r7 register to see which system call was made. In this case, it is the exit system call (1), so the OS knows that the program has finished and can free the memory that was allocated for the program. In the emulator, software interrupts are not supported, but in later real-world use, this is how a program is finished.</p>
+<h5>Addressing modes</h5>
+<p>There are different ways to address the memory. The most common ones are:</p>
+<p><strong>immediate addressing</strong>: the value is stored in the instruction itself</p>
+<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm"><span class="token instruction keyword">MOV</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token operator">#</span><span class="token number">30</span> <span class="token comment">; move the decimal value 30 to the r0 register</span>
+</code></pre>
+<p><strong>register direct addressing</strong>: the value is stored in a register</p>
+<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm"><span class="token instruction keyword">MOV</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token register symbol">r1</span> <span class="token comment">; move the value in the r1 register to the r0 register</span>
+</code></pre>
+<p><strong>register indirect addressing</strong>: the value is stored in the memory address that is stored in a register</p>
+<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm"><span class="token instruction keyword">LDR</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token register symbol">r1</span><span class="token punctuation">]</span> <span class="token comment">; load the value in the memory address that is stored in the r1 register to the r0 register</span>
+</code></pre>
+<h5>Arithmetic operations</h5>
+<p>The most basic arithmetic operations (addition, subtraction, multiplication) are very easy to use in ARM:</p>
+<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm"><span class="token instruction keyword">ADD</span> <span class="token register symbol">r2</span><span class="token punctuation">,</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token register symbol">r1</span> <span class="token comment">; add r0 and r1 and store the value in r2</span>
+<span class="token instruction keyword">SUB</span> <span class="token register symbol">r2</span><span class="token punctuation">,</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token register symbol">r1</span> <span class="token comment">; r2 = r0 - r1</span>
+<span class="token instruction keyword">MUL</span> <span class="token register symbol">r2</span><span class="token punctuation">,</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token register symbol">r1</span> <span class="token comment">; r2 = r0 * r1</span>
+</code></pre>
+<p>There's no division here because divisions can lead to floating point numbers that are difficult to handle. We won't cover operations on floating point numbers in this MON.</p>
+<h5>CPSR register</h5>
+<p>Negative numbers are stored as 2's complement, so -1 is stored as ffffff. But the computer doesn't know if <em>ffffff</em> is a representing a negative number (-1) or a huge positive number (16777215). To solve this, the CPSR register is used. Each bit in this register has a special purpose. The MSB (most significant bit) is the <em>N</em> bit. If it is set to 1, it indicates that the last operation returned a negative value. Similarly, the carry bit and the overflow bit of the CPSR are used.</p>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>To use the CPSR register, the suffix &quot;S&quot; must be appended to the mnemonic (use <em>SUBS</em> instead of <em>SUB</em>, <em>MULS</em> instead of <em>MUL</em>, ...). Else, the CPSR won't be used.</p>
+</div></div>
+<p>Example:</p>
+<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm"><span class="token instruction keyword">SUBS</span> <span class="token register symbol">r2</span><span class="token punctuation">,</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token register symbol">r1</span>   <span class="token comment">; r2 = r0-r1 and the "negative" bit in CPSR is set if r1&lt;r0.</span>
+</code></pre>
+<p>Another bit in CPSR is the <em>carry</em> bit that indicates if a carry took place, e.g. when the operation returns a value bigger than the register can hold. For that, a slightly different add-operation is needed:</p>
+<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm"><span class="token instruction keyword">ADCS</span> <span class="token register symbol">r2</span><span class="token punctuation">,</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token register symbol">r1</span> <span class="token comment">; ADCS = "add with carry and use the cpsr register" - r2 = r0+r1+carry</span>
+</code></pre>
+<h5>Logical operations</h5>
+<p><strong>AND</strong>
+The AND operation iterates through every pair of bits A and B and returns a binary value X based on this table:</p>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>X</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>In ARM assembly, it works as following:</p>
+<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm"><span class="token instruction keyword">AND</span> <span class="token register symbol">r2</span><span class="token punctuation">,</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token register symbol">r1</span> <span class="token comment">; bitwise AND between r0 and r1, stored in r2</span>
+</code></pre>
+<p><strong>OR</strong>
+The OR operation iterates through every pair of bits A and B and returns a binary value X based on this table:</p>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>X</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>In ARM assembly, it works as following:</p>
+<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm"><span class="token instruction keyword">ORR</span> <span class="token register symbol">r2</span><span class="token punctuation">,</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token register symbol">r1</span> <span class="token comment">; bitwise OR between r0 and r1, stored in r2</span>
+</code></pre>
+<p>(Yes, <em>ORR</em> is the right instruction)</p>
+<p><strong>XOR</strong>
+The exclusive OR (XOR) operation iterates through every pair of bits A and B and returns a binary value X based on this table:</p>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>X</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>In ARM assembly, it works as following:</p>
+<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm"><span class="token instruction keyword">EOR</span> <span class="token register symbol">r2</span><span class="token punctuation">,</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token register symbol">r1</span> <span class="token comment">; bitwise XOR between r0 and r1, stored in r2 - the instruction is eor, not xor</span>
+</code></pre>
+<p><strong>Logical shift</strong>
+Logical shifts are operations to shift bits of a register. The <a href="https://developer.arm.com/documentation/dui0068/b/Thumb-Instruction-Reference/Thumb-general-data-processing-instructions/ASR--LSL--LSR--and-ROR">official documentation</a> explains each one in greater detail than I do here.</p>
+<ul>
+<li><strong>lsl</strong>: &quot;Logical shift to left&quot; - move bits in the given register to the left. This equals a multiplication by two, but is much more efficient. The MSB gets dropped.</li>
+<li><strong>lsr</strong>: &quot;Logical shift to the right&quot; - move bits in the given register to the right. This equals a division by two, but is much more efficient. The LSB gets dropped.</li>
+<li><strong>ror</strong>: &quot;Rotation to right&quot; - Like the <em>lsr</em> instruction, but the LSB doesn't get dropped, it is re-appended as MSB. There is no <em>rol</em> instruction to rotate to left, but if you execute the <em>ror</em> instruction 32-n times (n being the number of rotations to left), it has the same effect.</li>
+</ul>
+<p>In ARM assembly, it works as following:</p>
+<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm"><span class="token instruction keyword">LSL</span> <span class="token register symbol">r1</span><span class="token punctuation">,</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token operator">#</span><span class="token number">1</span> <span class="token comment">; do one lsl on r0 and store the result in r1</span>
+<span class="token instruction keyword">LSR</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token operator">#</span><span class="token number">5</span> <span class="token comment">; do lsr 5 times on r0 and store it back in r0</span>
+<span class="token instruction keyword">ROR</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token operator">#</span><span class="token number">1</span> <span class="token comment">; do one ror on r0</span>
+</code></pre>
+<h5>Conditions</h5>
+<p><strong>Branching</strong>
+Conditions and branches are the equivalent to <em>if-else</em>-statements in higher level languages. In ARM assembly, we do a &quot;compare&quot; (CMP) instruction between two values/registers and after that, we can jump to different locations using branches.</p>
+<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm">.global _start
+_start:
+  <span class="token comment">; fill some values in r0 and r1</span>
+  <span class="token instruction keyword">MOV</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span><span class="token operator">#</span><span class="token number">1</span>
+  <span class="token instruction keyword">MOV</span> <span class="token register symbol">r1</span><span class="token punctuation">,</span><span class="token operator">#</span><span class="token number">2</span>
+
+  <span class="token instruction keyword">CMP</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span><span class="token register symbol">r1</span>   <span class="token comment">; compare r0 and r1</span>
+  <span class="token instruction keyword">BGT</span> greater <span class="token comment">; if CMP revealed that R0 is greater than R1 -> go to "greater" label</span>
+  <span class="token instruction keyword">BAL</span> default <span class="token comment">; branch always (avoids stepping into "greater" after the execution of the last instruction) to the "default" label</span>
+
+greater:
+	<span class="token instruction keyword">MOV</span> <span class="token register symbol">r2</span><span class="token punctuation">,</span> <span class="token operator">#</span><span class="token number">0xff</span>
+	
+default:
+	<span class="token instruction keyword">MOV</span> <span class="token register symbol">r2</span><span class="token punctuation">,</span> <span class="token operator">#</span><span class="token number">0xaa</span>
+</code></pre>
+<p>The following branch instructions are available:</p>
+<ul>
+<li><strong>BGT</strong> - greater than</li>
+<li><strong>BGE</strong> - greater than or equal</li>
+<li><strong>BLT</strong> - less than</li>
+<li><strong>BLE</strong> - less than or equal</li>
+<li><strong>BEQ</strong> - equal</li>
+<li><strong>BNE</strong> - not equal</li>
+<li><strong>BAL</strong> - always</li>
+</ul>
+<p><strong>Looping</strong>
+By using the branches, we can implement loops like <em>for</em> or <em>while</em>-loops in higher-level languages. In this example, we load a list with the values from 1-10 in the variable <em>list</em> and then we iterate through all values until we reach the end of the list:</p>
+<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm">.global _start
+.equ endlist<span class="token punctuation">,</span> <span class="token number">0xaaaaaaaa</span> <span class="token comment">; memory after the list</span>
+
+_start:
+	<span class="token instruction keyword">LDR</span> R3<span class="token punctuation">,</span><span class="token operator">=</span>endlist	<span class="token comment">; load the value of "endlist" in R3</span>
+	<span class="token instruction keyword">LDR</span> R0<span class="token punctuation">,</span><span class="token operator">=</span>list	  <span class="token comment">; load address of list in R0</span>
+	<span class="token instruction keyword">LDR</span> R1<span class="token punctuation">,</span> <span class="token punctuation">[</span>R0<span class="token punctuation">]</span> 	  <span class="token comment">; load the first value of the list in R1</span>
+	<span class="token instruction keyword">ADD</span> R2<span class="token punctuation">,</span> R2<span class="token punctuation">,</span> R1	<span class="token comment">; add R1 to R2 (R2 = R2 + R1)</span>
+
+loop:
+	<span class="token instruction keyword">LDR</span> R1<span class="token punctuation">,</span><span class="token punctuation">[</span>R0<span class="token punctuation">,</span><span class="token operator">#</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token operator">!</span>	<span class="token comment">; store the next value in list in R1</span>
+	<span class="token instruction keyword">CMP</span> R1<span class="token punctuation">,</span> R3		  <span class="token comment">; check if this value equals the "endlist" value </span>
+	<span class="token instruction keyword">BEQ</span> exit 		    <span class="token comment">; if this is the case: go to "exit" label</span>
+	<span class="token instruction keyword">ADD</span> R2<span class="token punctuation">,</span>R2<span class="token punctuation">,</span> R1	  <span class="token comment">; else: add r1 to r2</span>
+	<span class="token instruction keyword">BAL</span> loop 		    <span class="token comment">; goto "loop" </span>
+	
+exit:
+	<span class="token instruction keyword">MOV</span> R4<span class="token punctuation">,</span><span class="token operator">#</span><span class="token number">0xffffffff</span>	<span class="token comment">; just a visual indication that we're in exit now	</span>
+	
+.data
+list:
+	.word <span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">10</span>
+	
+</code></pre>
+<p><strong>Conditional instruction execution</strong>
+To make matters simpler, instead of branching, we can use conditional instructions to execute the instruction only if a condition is met. Almost every instruction in ARM assembly can be modified so that it only gets executed if a condition is met.
+This happens by exchanging the &quot;B&quot; in the conditional branches with the instruction, e.g. <em>BLT</em> (branch if less then) becomes <em>MOVLT</em> (move if less then) or <em>BEQ</em> (branch if equal) becomes <em>ADDEQ</em> (add if equal).
+Example:</p>
+<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm"><span class="token instruction keyword">MOV</span> R0<span class="token punctuation">,</span><span class="token operator">#</span><span class="token number">2</span>
+<span class="token instruction keyword">MOV</span> R1<span class="token punctuation">,</span><span class="token operator">#</span><span class="token number">5</span>
+
+<span class="token instruction keyword">CMP</span> R0<span class="token punctuation">,</span>R1
+<span class="token instruction keyword">ADDLT</span> R2<span class="token punctuation">,</span><span class="token operator">#</span><span class="token number">1</span>   <span class="token comment">; add 1 to R2 if the comparison returns that R0 is less than R1.</span>
+<span class="token instruction keyword">MOVEQ</span> R2<span class="token punctuation">,</span>R0   <span class="token comment">; move the value of R0 to R2 if R0=R1</span>
+</code></pre>
+<h5>Functions</h5>
+<p>Simple functions in ARM assembly can be easily implemented with the known concepts of branching. If we use <em>BL</em> to branch (instead of <em>BAL</em>), the location of the instruction that follows the branch is being stored in the link register, so after the function is executed, if we branch back with <em>BX</em>, the program jumps to this address and continues execution after the branch:</p>
+<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm">  <span class="token instruction keyword">MOV</span> R0<span class="token punctuation">,</span><span class="token operator">#</span><span class="token number">2</span>
+  <span class="token instruction keyword">MOV</span> R1<span class="token punctuation">,</span><span class="token operator">#</span><span class="token number">5</span>
+  <span class="token instruction keyword">BL</span> myfunc     <span class="token comment">; branch to "myfunc"</span>
+  <span class="token instruction keyword">MOV</span> R3<span class="token punctuation">,</span> <span class="token operator">#</span><span class="token number">0xff</span>
+
+myfunc:
+  <span class="token instruction keyword">ADD</span> R2<span class="token punctuation">,</span> R0<span class="token punctuation">,</span> R1
+  <span class="token instruction keyword">BR</span> <span class="token register symbol">lr</span>         <span class="token comment">; branch back to the address stored in the link register</span>
+</code></pre>
+<p><strong>Push and Pop</strong>
+If we want to preserve the register values, but we need the registers else (e.g. for executing a function), we can store the current registers to the stack and read them back from the stack to the registers afterwards. This is done by using <em>PUSH</em> and <em>POP</em>.</p>
+<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm">_start:
+  <span class="token instruction keyword">MOV</span> R0<span class="token punctuation">,</span><span class="token operator">#</span><span class="token number">2</span>
+  <span class="token instruction keyword">MOV</span> R1<span class="token punctuation">,</span><span class="token operator">#</span><span class="token number">5</span>
+  <span class="token instruction keyword">PUSH</span> {R0<span class="token punctuation">,</span> R1}   <span class="token comment">; store R0 and R1 on the stack</span>
+  <span class="token instruction keyword">BL</span> myfunc       <span class="token comment">; branch to "myfunc"</span>
+  <span class="token instruction keyword">POP</span> {R0<span class="token punctuation">,</span> R1}    <span class="token comment">; R0 and R1 get restored from the stack</span>
+  <span class="token instruction keyword">MOV</span> R3<span class="token punctuation">,</span> <span class="token operator">#</span><span class="token number">0xff</span>
+  <span class="token instruction keyword">B</span> end           <span class="token comment">; branch to "end" to avoid jumping into myfunc</span>
+
+myfunc:
+  <span class="token instruction keyword">ADD</span> R0<span class="token punctuation">,</span> R0<span class="token punctuation">,</span> R1  <span class="token comment">; R0 gets overwritten in the function</span>
+  <span class="token instruction keyword">MOV</span> R3<span class="token punctuation">,</span> R0      <span class="token comment">; store the value of R0 in R3</span>
+  <span class="token instruction keyword">BR</span> <span class="token register symbol">lr</span>           <span class="token comment">; branch back to the address stored in the link register</span>
+
+end:
+<span class="token comment">; do nothing</span>
+</code></pre>
+<p>Note that the stack is a LIFO (last in first out) architecture, so the data that is pushed last needs to be popped from the stack first.</p>
+<h2>Useful resources</h2>
+<h3>Tutorials</h3>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=gfmRrPjnEw4">https://www.youtube.com/watch?v=gfmRrPjnEw4</a> (2:30:00 freeCodeCamp tutorial on ARM assembly)</li>
+<li><a href="https://azeria-labs.com/writing-arm-assembly-part-1/">https://azeria-labs.com/writing-arm-assembly-part-1/</a> (tutorial on ARM assembly)</li>
+<li><a href="https://www.amazon.com/Modern-Assembly-Language-Programming-Processor/dp/0128036982">Larry Pyeatt: Modern Assembly Language Programming with the ARM Processor</a> (great book on ARM assembly)</li>
+</ul>
+<h3>Tools</h3>
+<ul>
+<li><a href="https://cpulator.01xz.net/?sys=arm-de1soc">https://cpulator.01xz.net/?sys=arm-de1soc</a> (online ARM emulator)</li>
+<li><a href="https://defuse.ca/online-x86-assembler.htm">https://defuse.ca/online-x86-assembler.htm</a> (online x86 assembler/disassembler)</li>
+</ul>
+<h3>Other resources</h3>
+<ul>
+<li>ARM Developer Suite Assembler Guide: <a href="https://developer.arm.com/documentation/dui0068/b">https://developer.arm.com/documentation/dui0068/b</a> (main documentation for ARM assembly)</li>
+<li>Ben Eater - &quot;Build a 6502 computer from scratch&quot;: <a href="https://youtube.com/playlist?list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH">https://youtube.com/playlist?list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH</a>
+This is a YouTube series in which a computer is built from a microcontroller, every step is explained. It is very entertaining and educating at the same time</li>
+</ul>
+
+
+</article>
+
+        </main>
+
+
+        <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div class="min-h-[50px] flex justify-center items-center">
+                    <p class="text-center">
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développent et Organisation en IT
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        MathJax
+            .startup
+            .document
+            .getMathItemsWithin(document.body);
+        </script>
+
+    </body>
+</html>

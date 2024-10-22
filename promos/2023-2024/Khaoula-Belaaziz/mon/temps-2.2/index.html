@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Animations avec React Native &amp; Utilisation d&#39;Android Emulator</title>
+
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [
+                [
+                '$', '$'
+                ],
+                [
+                '\\(', '\\)'
+                ]
+            ]
+            },
+            svg: {
+            fontCache: 'global'
+            }
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
+
+        <header class="border-b-2 border-gray-200 mb-4">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="min-h-[50px] flex justify-between items-center">
+                <a class="mx-2" href="/do-it/">Home</a>
+                <div class="flex items-center gap-4 sm:gap-6 ">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                        </svg>
+                    </a>
+                    <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
+                        <svg class="h-5 aspect-square" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
+            
+<article class="relative">
+<h1 class="mb-1">Animations avec React Native &amp; Utilisation d&#39;Android Emulator</h1>
+<div class="mb-4">
+    
+        <div class="px-4 flex flex-wrap items-center">
+            
+                <div class="font-bold">Tags : </div>
+            
+            <ul class="flex flex-wrap overflow-auto not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">MON</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">2023-2024</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 2</li>
+                
+
+            </ul>
+            
+            
+            <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="px-4 flex flex-wrap items-center">
+            <div class="font-bold">Auteurs : </div>
+            <ul class="flex flex-wrap not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Khaoula BELAAZIZ</li>
+                
+            </ul>
+        </div>
+    
+
+    
+</div>
+
+        <p class="mb-4 text-lg">
+
+                .
+
+        </p>
+
+
+
+    
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-purple-500 bg-purple-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>
+</svg>
+<div class="pl-8 mr-8">
+
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Khaoula-Belaaziz/">BELAAZIZ Khaoula</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Khaoula-Belaaziz/mon/">MON de BELAAZIZ Khaoula</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Khaoula-Belaaziz/mon/temps-2.2/">Animations avec React Native &amp; Utilisation d&#39;Android Emulator</a>
+
+</div></div>
+
+
+
+
+<p>Ce MON vient pour compléter mon MON 2-1 à propos des bases de REACT NATIVE : <a href="http://localhost:8080/promos/2023-2024/Khaoula-Belaaziz/mon/temps-2.1/">Apprendre et Maîtriser React Native : Guide pour Débutants</a>.
+Mon objectif pour ce MON est d'apprendre à faire des animations et des tranformation avec react native pour notre projet 3A <a href="https://francoisbrucker.github.io/do-it/projets/2023-2024/Killer/">KILLER</a></p>
+<h1>Fondamentaux des Animations dans React Native</h1>
+<h3>Types d'animations :</h3>
+<p><strong>Transitions</strong> : Changements doux d'un état à un autre.
+<strong>Transformations</strong> : Changement de propriétés comme la taille, la position, la rotation.
+<strong>Animations basées sur les gestes</strong> : Répondre aux interactions de l'utilisateur.</p>
+<h3>Outils et bibliothèques d'animation</h3>
+<h4>Animated API de React Native :</h4>
+<p>Une bibliothèque intégrée pour réaliser des animations de base, fournissant une grande variété de composants et de méthodes animables.</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> Animated <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-native'</span><span class="token punctuation">;</span>
+</code></pre>
+<h4>Lottie : <a href="https://lottiefiles.com/search?q=eliminated&amp;category=animations">LottieFiles</a></h4>
+<p>Pour intégrer des animations vectorielles de haute qualité conçues avec Adobe After Effects.</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> LottieView <span class="token keyword">from</span> <span class="token string">'lottie-react-native'</span><span class="token punctuation">;</span>
+</code></pre>
+<h4>React Native Reanimated :</h4>
+<p>Une bibliothèque plus avancée pour des animations complexes qui nécessitent des interactions plus fluides et performantes.</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> Animated <span class="token keyword">from</span> <span class="token string">'react-native-reanimated'</span><span class="token punctuation">;</span>
+</code></pre>
+<h2>Création d'Animations Simples</h2>
+<h3>Interpolation :</h3>
+<p>L'interpolation permet de transformer une valeur d'entrée en une nouvelle valeur
+de sortie, généralement dans un but d'animation.</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> value <span class="token operator">=</span> <span class="token function">useRef</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Animated<span class="token punctuation">.</span>Value</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>current<span class="token punctuation">;</span> <span class="token comment">// Initialisation d'une valeur animée</span>
+
+<span class="token comment">// Interpolation de cette valeur</span>
+<span class="token keyword">const</span> opacity <span class="token operator">=</span> value<span class="token punctuation">.</span><span class="token function">interpolate</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">inputRange</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">outputRange</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Début de l'animation</span>
+Animated<span class="token punctuation">.</span><span class="token function">timing</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">toValue</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">duration</span><span class="token operator">:</span> <span class="token number">1000</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">useNativeDriver</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// Utilisation du driver natif pour de meilleures performances</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre>
+<p>Dans cet exemple, <em>value</em> passe de 0 à 1 en 1000 millisecondes, ce qui entraîne un changement d'opacité de complètement transparent à complètement opaque.</p>
+<h3>Animated.View :</h3>
+<p><strong>Animated.View</strong> est un composant qui peut être animé, généralement utilisé pour envelopper tout élément qu'on souhaite animer.</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token operator">&lt;</span>Animated<span class="token punctuation">.</span>View style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> opacity <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">></span>
+  <span class="token punctuation">{</span><span class="token comment">/* Le contenu de la vue s'effacera progressivement */</span><span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>Animated<span class="token punctuation">.</span>View<span class="token operator">></span>
+
+</code></pre>
+<h3>Animated.Text:</h3>
+<p>De même, <strong>Animated.Text</strong> permet d'animer les propriétés d'un élément texte.</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token operator">&lt;</span>Animated<span class="token punctuation">.</span>Text style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> opacity <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">></span>
+  Je m'estompe <span class="token operator">!</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>Animated<span class="token punctuation">.</span>Text<span class="token operator">></span>
+
+</code></pre>
+<h3>Exemples</h3>
+<h4>Animation de <strong>fade-in/fade-out</strong> :</h4>
+<p>On utilise l'opacité pour faire apparaître ou disparaître un élément progressivement.</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token comment">// Animation de fade-in</span>
+Animated<span class="token punctuation">.</span><span class="token function">timing</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">toValue</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">duration</span><span class="token operator">:</span> <span class="token number">2000</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">useNativeDriver</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Animation de fade-out</span>
+Animated<span class="token punctuation">.</span><span class="token function">timing</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">toValue</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">duration</span><span class="token operator">:</span> <span class="token number">2000</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">useNativeDriver</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h4>Translation, rotation, et échelle :</h4>
+<p>Animer la position, la rotation et la taille des éléments.</p>
+<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token comment">// Exemple de translation</span>
+<span class="token keyword">const</span> translateY <span class="token operator">=</span> value<span class="token punctuation">.</span><span class="token function">interpolate</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">inputRange</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">outputRange</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// Déplacer de 100 pixels vers le bas</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Exemple de rotation</span>
+<span class="token keyword">const</span> rotate <span class="token operator">=</span> value<span class="token punctuation">.</span><span class="token function">interpolate</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">inputRange</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">outputRange</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'0deg'</span><span class="token punctuation">,</span> <span class="token string">'360deg'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// Rotation d'un tour complet</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Exemple d'échelle</span>
+<span class="token keyword">const</span> scale <span class="token operator">=</span> value<span class="token punctuation">.</span><span class="token function">interpolate</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">inputRange</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">outputRange</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// Doubler la taille</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Application dans le style d'un Animated.View</span>
+<span class="token operator">&lt;</span>Animated<span class="token punctuation">.</span>View
+  style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+    <span class="token literal-property property">transform</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span> translateY <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span> rotate <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span> scale <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token operator">></span>
+  <span class="token punctuation">{</span><span class="token comment">/* Contenu à animer */</span><span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>Animated<span class="token punctuation">.</span>View<span class="token operator">></span>
+</code></pre>
+<h1>Android Emulator</h1>
+<p>J'avais besoin d'installer Android Emulator car je n'ai pas pu lancer la simulation du projet 3A avec n'importe quel réseau wifi, et vue que je ne peux pas coder sans voir la simulation vertuelle de mon travail, j'ai dû chercher un moyen pour visualiser mon travail sans passer par l'application Expo Go sur mon smartphone.</p>
+<h2>Définition</h2>
+<p>L'émulateur Android est une composante du SDK Android qui permet de simuler un appareil Android sur un ordinateur, ce qui  permet de tester les applications dans un environnement virtuel Android sans avoir besoin d'un appareil physique.</p>
+<h2>Installation et configuration de l'émulateur Android</h2>
+<h3>Installez Android Studio :</h3>
+<p>Téléchargez et installez Android Studio depuis le site officiel d'<a href="https://developer.android.com/studio">ANDROID STUDIO</a> .
+Durant l'installation, assurez-vous d'inclure le Android Virtual Device (AVD) qui est l'outil pour gérer les émulateurs.</p>
+<h3>Configurez un appareil virtuel :</h3>
+<ol>
+<li>Lancez Android Studio.</li>
+<li>Ouvrez l'AVD Manager via Tools &gt; AVD Manager.</li>
+<li>Cliquez sur Create Virtual Device et choisissez un appareil dans la liste qui correspond aux spécifications que vous souhaitez émuler.</li>
+<li>Sélectionnez une image système pour votre émulateur, comme une version récente de l'API Android. Téléchargez l'image si nécessaire.</li>
+<li>Terminez la configuration de l'appareil virtuel et lance</li>
+</ol>
+<div style="display: flex; justify-content: space-around;">
+  <img src="android studio.png" alt="android emulaor" style="width: 100%; margin-right: 2%;">
+</div>
+<h2>Bibliographie</h2>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><strong>Références</strong></p>
+</div><div class="pl-8 mr-8">
+<ul>
+<li>React native :Animated <strong>Tout au long de la phase d'apprentissage</strong> : (<a href="https://reactnative.dev/docs/animated">https://reactnative.dev/docs/animated</a>)</li>
+<li>React native modal animation popup example with overlay | Blurry background color and style <strong>Temps estimé de la vidéo avec application du contenu = 1h30</strong>, <strong>Niveau débutant</strong>  : (<a href="https://youtu.be/ccAilrI0IxA?si=ndYD4z5r8SEe5I9g">https://youtu.be/ccAilrI0IxA?si=ndYD4z5r8SEe5I9g</a>)</li>
+<li>Learn React Native Gestures and Animations - Tutorial <strong>Temps estimé en essayant d'adapter le principe au projet 3A = 3h</strong>, , <strong>Niveau intermédiaire</strong>: (<a href="https://youtu.be/wEVjaXK4sYQ?si=tmumKh0qL8MvG8ad">https://youtu.be/wEVjaXK4sYQ?si=tmumKh0qL8MvG8ad</a>)</li>
+<li>React Native Animated Splash Screen | Transform Your App's First Impression Tutorial 2023 <strong>Temps estimé en essayant d'adapter le principe au projet 3A = 2h</strong>, , <strong>Niveau intermédiaire</strong>: (<a href="https://youtu.be/OnsF0vP6iyE?si=o6HHphBnK45Vs9re">https://youtu.be/OnsF0vP6iyE?si=o6HHphBnK45Vs9re</a>)</li>
+</ul>
+</div></div>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p><strong>Pour l'installation de Android Emulator</strong></p>
+</div><div class="pl-8 mr-8">
+<p><strong>Temps estimé de cette partie, avec les bugs = 3h</strong>, réalisé le 14/01/2024 de 14h à 17h.</p>
+<ul>
+<li>Install Android Emulator for React Native Expo - Windows PC <strong>Temps estimé de la vidéo = 15min</strong>: (<a href="https://youtu.be/ZGIU5aIRi9M?si=lZBQPYtbrDL7HwRy">https://youtu.be/ZGIU5aIRi9M?si=lZBQPYtbrDL7HwRy</a>)</li>
+<li>Setting up a React Native Expo App and Android Studio | 1  <strong>Temps estimé de la vidéo = 5min</strong>: (<a href="https://youtu.be/WkXrDvImVXc?si=K1uNJCQb-bjeFm_Q">https://youtu.be/WkXrDvImVXc?si=K1uNJCQb-bjeFm_Q</a>)</li>
+<li>React Native CLI and Android Emulator in Windows  <strong>Temps estimé de la vidéo = 17min</strong>: (<a href="https://youtu.be/RF7zwYIrlds?si=WiUZ2-3KNyw7ruOd">https://youtu.be/RF7zwYIrlds?si=WiUZ2-3KNyw7ruOd</a>)</li>
+<li>How To Run React Native Android Emulator On Android Studio  <strong>Temps estimé de la vidéo = 3min</strong>: (<a href="https://youtu.be/43E9FDjTJBM?si=12QzwKXsEA5gylXm">https://youtu.be/43E9FDjTJBM?si=12QzwKXsEA5gylXm</a>)</li>
+<li>How To Setup &amp; Run React Native App on Android Emulator from Terminal and edit In Visual Studio Code  <strong>Temps estimé de la vidéo = 15min</strong>: (<a href="https://youtu.be/8ejuHsaXiwU?si=aFJ6zRkJ2mSj_5Ma">https://youtu.be/8ejuHsaXiwU?si=aFJ6zRkJ2mSj_5Ma</a>)</li>
+</ul>
+</div></div>
+
+
+</article>
+
+        </main>
+
+
+        <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div class="min-h-[50px] flex justify-center items-center">
+                    <p class="text-center">
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développent et Organisation en IT
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        MathJax
+            .startup
+            .document
+            .getMathItemsWithin(document.body);
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Power BI et Excel pour l&#39;anamyse de données</title>
+
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [
+                [
+                '$', '$'
+                ],
+                [
+                '\\(', '\\)'
+                ]
+            ]
+            },
+            svg: {
+            fontCache: 'global'
+            }
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
+
+        <header class="border-b-2 border-gray-200 mb-4">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="min-h-[50px] flex justify-between items-center">
+                <a class="mx-2" href="/do-it/">Home</a>
+                <div class="flex items-center gap-4 sm:gap-6 ">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                        </svg>
+                    </a>
+                    <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
+                        <svg class="h-5 aspect-square" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
+            
+<article class="relative">
+<h1 class="mb-1">Power BI et Excel pour l&#39;anamyse de données</h1>
+<div class="mb-4">
+    
+        <div class="px-4 flex flex-wrap items-center">
+            
+                <div class="font-bold">Tags : </div>
+            
+            <ul class="flex flex-wrap overflow-auto not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">MON</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">2023-2024</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 2</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">power BI</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">excel</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">google form</li>
+                
+
+            </ul>
+            
+            
+            <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="px-4 flex flex-wrap items-center">
+            <div class="font-bold">Auteurs : </div>
+            <ul class="flex flex-wrap not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Lola Bourdon</li>
+                
+            </ul>
+        </div>
+    
+
+    
+</div>
+
+        <p class="mb-4 text-lg">
+
+                Analyse des résultats d'un google form en utilisant Excel Power BI
+
+        </p>
+
+
+
+    
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-purple-500 bg-purple-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>
+</svg>
+<div class="pl-8 mr-8">
+
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Lola-Bourdon/">Lola Bourdon</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Lola-Bourdon/mon/">MON 1 de Lola Bourdon</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Lola-Bourdon/mon/temps-2.2/">Power BI et Excel pour l&#39;anamyse de données</a>
+
+</div></div>
+
+
+
+
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p>Bases de POwer BI</p>
+</div><div class="pl-8 mr-8">
+</div></div>
+<p>Ce second MON du temps 2 sera consacré à l'analyse de données d'un google form avec et excel et l'apprentissage de power BI.
+Pour ce MON, j'ai décidé de suivre la formation proposée par <a href="http://learn.microsoft.com">learn.microsoft.com</a> complémentée par le visionnage de plusieurs vidéos sur <a href="http://youtube.com">youtube.com</a>.</p>
+<h2>Sommaire</h2>
+<ol>
+<li>Introduction</li>
+<li>Généralités sur PowerBI</li>
+<li>Analyse de données</li>
+<li>Conclusion</li>
+</ol>
+<h3>Introduction</h3>
+<p>Avec la filière Entrepreneuriat, je participe aux entrep', un programme d’entraînement à l'entrepreneuriat. Dans ce cadre, je travaille sur un projet de restauration rapide. Afin de trouver notre public et définir nos personas, nous avons réalisé un google form de 32 questions qui a obtenu plus de 140 réponses. Le problème? traiter toutes les données obtenues : l'occasion idéale d'utiliser Power BI.</p>
+<h2>Généralités sur Power BI</h2>
+<p>Power BI est une suite d'outils logiciels de Microsoft dédiée à l'analyse et à la visualisation de données. Elle permet de transformer des sources de données variées en analyses visuelles interactives. Que les données proviennent d'Excel ou d'entrepôts hybrides, Power BI offre une interface pour explorer, analyser et partager des insights de manière sélective ou publique.</p>
+<p>Méthodologie de l'exercice :</p>
+<ol>
+<li>Collecter</li>
+<li>Transformer</li>
+<li>modéliser</li>
+<li>Analyser</li>
+<li>Visualiser</li>
+</ol>
+<h2>Analyse de données</h2>
+<p>Afin de traiter le google form, la première étape est de récupérer les données au format csv ou xlsv en allant dans les réponses&gt;télécharger au format.</p>
+<p>Maintenant démarrons Power BI.</p>
+<h3>Collecter</h3>
+<p>Afin de collecter les données sur Power BI nous utilisons POwer Query.
+Power Query est un outil d'EAI (Enterprise Application Integration) de Microsoft utilisé pour collecter, transformer et charger (ETL) des données à partir de différentes sources. Il est souvent intégré à Microsoft Excel et Power BI, mais peut également être utilisé de manière indépendante.</p>
+<p>J'utilise Power Query pour la :</p>
+<ul>
+<li>Collecte de Données : Power Query permet de se connecter à diverses sources de données, qu'elles soient locales ou dans le cloud, telles que des bases de données, des fichiers Excel, des services en ligne, etc.</li>
+<li>Transformation de Données : Il offre des outils conviviaux pour nettoyer, filtrer, remodeler et transformer les données selon les besoins. Cela permet d'obtenir des données prêtes à l'emploi pour l'analyse.</li>
+</ul>
+<p>collecte de donnée&gt; sélection du fichier csv.</p>
+<h3>Transformer</h3>
+<p>J'ai tenté de faire une première transformation de données en utilisant seulement Power Query mais cela m'a prit énormément de temps alors j'ai décidé de repasser sur excel, que je maîtrise mieux pour les mêmes fonctionnalités grâce à mon précédent <a href="https://francoisbrucker.github.io/do-it/promos/2023-2024/Lola-Bourdon/mon/temps-1.2/">MON</a>.</p>
+<p>J'ai commencé par filtrer les données, supprimer les lignes trop incomplètes et inexploitables, homogénéiser l'orthographe, etc.</p>
+<p>Cela étant fait il restait des transformations a faire sur Power Query, notamment :</p>
+<ul>
+<li>remplacement de valeur pour alléger
+<img src="ecranremplacer.png" alt="powerbi"></li>
+<li>supprimer les colonnes inexploitables (trop peu de valeurs, etc.)
+<img src="ecranchoisircolonne.png" alt="powerbi"></li>
+<li>fractionner les colonnes (permet d'ajouter une une colonne pour les réponses à choix multiples, inexploitable par Power BI)
+<img src="ecranfrac.png" alt="powerbi"></li>
+</ul>
+<p>Une fois que la transformation de données est terminée, on peut revenir a Power BI en cliquant sur <em>Fermer&amp;appliquer</em>.</p>
+<h3>Modéliser et Analyser</h3>
+<p>Lorsqu'on revient sur power BI on a un tableau vierge avec toutes nos données à droite qu'il est possible de faire glisser sur le tableau de travail. On y trouve également les onglets visualiser et filtrer. Plusieurs éléments visuels sont disponibles pour traiter nos données dans l'onglet visualiser.</p>
+<p><img src="ecranpBI.png" alt="powerbi"></p>
+<p>L'onglet filtrer permet d'afficher les données pertinentes à chaque élément visuel.</p>
+<p><img src="ecrandecouverte.png" alt="powerbi"></p>
+<h3>Visualiser</h3>
+<p>Dans Power BI il est possible d'avoir plusieurs pages (comme les feuilles excel) ce qui me permet d'organiser les différents graphiques par thèmes.
+Après avoir modéliser et analyser une partie des données, voici ce que j'obtient :
+<img src="ecranfinmain.png" alt="powerbi"></p>
+<div style="display:flex">
+<div><img src="ecranfinsport.png"></div>
+<div><img src="ecranfinresto.png"></div>
+</div>
+La visualisation n'est pas encore optimale, les tableaux ne sont pas homogènes mais j'arrive a avoir un premier visuel des données de mon formulaire et les résultats sont intéressants pour l'équipe. Toutefois, le travail n'est pas encore terminé pour l'analyse de ce form, beaucoup de données sont encore à exploiter, et certains visuels pourraient être réétudier.
+<h3>Conclusion</h3>
+<p>Ce MON m'a permis de mettre en pratique certaines notions d'excel vu précédemment et de découvrir Power BI. C'est un outil très intéressant dans le cadre de mon analyse de formulaire que je vais poursuivre. Je ne pensais pas passer autant de temps sur la transformation des données mais c'est une étape cruciale pour simplifier la suite de l'exercice. Je peux maintenant analyser le google form de Défensio.</p>
+<table>
+<thead>
+<tr>
+<th>Travail effectué</th>
+<th>Temps</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Visionnage vidéo total YouTube et lecture site microsoft</td>
+<td>2h</td>
+</tr>
+<tr>
+<td>Collecter et transformer</td>
+<td>4h</td>
+</tr>
+<tr>
+<td>Modéliser et Analyser</td>
+<td>3h</td>
+</tr>
+<tr>
+<td>Visualiser</td>
+<td>1h</td>
+</tr>
+</tbody>
+</table>
+<h3>Source</h3>
+<ul>
+<li><a href="http://app.powerbi.co">app.powerbi.co</a></li>
+<li><a href="https://www.youtube.com/watch?v=hnztFw7ID4w&amp;list=PL-7Ue_1Wto-ZdrFKOxcUalrqc3-CxezU_">https://www.youtube.com/watch?v=hnztFw7ID4w&amp;list=PL-7Ue_1Wto-ZdrFKOxcUalrqc3-CxezU_</a></li>
+<li><a href="https://www.youtube.com/watch?v=2jfS8hYrpzU&amp;list=PL1aYsXmhJ1WcRPx3gotG36pu-lb7YdmOa">https://www.youtube.com/watch?v=2jfS8hYrpzU&amp;list=PL1aYsXmhJ1WcRPx3gotG36pu-lb7YdmOa</a></li>
+<li><a href="https://www.youtube.com/watch?v=jSuL7hJ76kE&amp;t=1542s">https://www.youtube.com/watch?v=jSuL7hJ76kE&amp;t=1542s</a></li>
+</ul>
+
+
+</article>
+
+        </main>
+
+
+        <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div class="min-h-[50px] flex justify-center items-center">
+                    <p class="text-center">
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développent et Organisation en IT
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        MathJax
+            .startup
+            .document
+            .getMathItemsWithin(document.body);
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,345 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>MON 5: Bases de VBA</title>
+
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [
+                [
+                '$', '$'
+                ],
+                [
+                '\\(', '\\)'
+                ]
+            ]
+            },
+            svg: {
+            fontCache: 'global'
+            }
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
+
+        <header class="border-b-2 border-gray-200 mb-4">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="min-h-[50px] flex justify-between items-center">
+                <a class="mx-2" href="/do-it/">Home</a>
+                <div class="flex items-center gap-4 sm:gap-6 ">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                        </svg>
+                    </a>
+                    <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
+                        <svg class="h-5 aspect-square" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
+            
+<article class="relative">
+<h1 class="mb-1">MON 5: Bases de VBA</h1>
+<div class="mb-4">
+    
+        <div class="px-4 flex flex-wrap items-center">
+            
+                <div class="font-bold">Tags : </div>
+            
+            <ul class="flex flex-wrap overflow-auto not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">MON</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">2022-2023</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 3</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">vba</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">excel</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">debutant</li>
+                
+
+            </ul>
+            
+            
+            <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="px-4 flex flex-wrap items-center">
+            <div class="font-bold">Auteurs : </div>
+            <ul class="flex flex-wrap not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Louise Gacoin</li>
+                
+            </ul>
+        </div>
+    
+
+    
+</div>
+
+
+
+    
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-purple-500 bg-purple-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>
+</svg>
+<div class="pl-8 mr-8">
+
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2022-2023/">2022-2023</a><span class="px-1">/</span><a href="/do-it/promos/2022-2023/Gacoin-Louise/">Louise Gacoin</a><span class="px-1">/</span><a href="/do-it/promos/2022-2023/Gacoin-Louise/mon/">MON de Louise </a><span class="px-1">/</span><a href="/do-it/promos/2022-2023/Gacoin-Louise/mon/MON5/">MON 5: Bases de VBA</a>
+
+</div></div>
+
+
+
+
+<p>Dans ce  MON je vais me former au VBA.</p>
+<h1>Sommaire :</h1>
+<ol>
+<li>Premiers pas</li>
+<li>Ecriture d’une macro</li>
+<li>Les variables</li>
+<li>Conditions et boucles</li>
+<li>Utilisation des boites de dialogue</li>
+<li>Les tableaux</li>
+<li>Retour sur le tutoriel</li>
+<li>Petit projet</li>
+</ol>
+<p>Le VBA ou Visual Basic for Applications est un langage de programmation évènementielle créé par Microsoft. Il est très utilisé dans les entreprises il me sera donc utile d’avoir des bases sur le sujet.C’est un langage facile et flexible :   pratiquement chaque opération que vous pouvez effectuer avec une souris, clavier ou une boîte de dialogue peut également être automatisée à l’aide de VBA. Le VBA ne peut s’utiliser qu’avec des applications Microsoft, d’où la nécessité d’avoir une licence.</p>
+<p>Attention il existe une version en ligne d’excel mais celle-ci ne gère pas les macros :
+<a href="https://www.microsoft.com/fr-fr/microsoft-365/free-office-online-for-the-web">https://www.microsoft.com/fr-fr/microsoft-365/free-office-online-for-the-web</a></p>
+<p>Pour ce MON j’ai suivi le tutoriel suivant :</p>
+<p><a href="https://www.excel-pratique.com/fr/vba">https://www.excel-pratique.com/fr/vba</a></p>
+<p>C’est un tutoriel assez complet qui ne demande aucune connaissance de base sur VBA.</p>
+<p>Ce compte rendu pourra servir de mémo pour les personnes connaissant déjà le VBA.</p>
+<h2>1. Premiers pas:</h2>
+<p>On découvre l’onglet développeur qui permet d’utiliser le VBA. Le  bouton « Visual Basic » permet d’accéder à l’éditeur de macros.</p>
+<img src="rubanVBA.png">
+<p>Dans cet éditeur on peut écrire du code dans des « Modules » . Une macro s’écrit toujours entre ces deux balises :</p>
+<pre><code>Sub nom_de_ma_macro ()
+EndSub
+
+</code></pre>
+<p>Une fois le code écrit il n’y a plus qu’ à insérer un bouton dans la feuille et le relier à la macro que l’on veut activer. (Insérer → Bouton (Contrôles de formulaires) )</p>
+<p>On peut aussi déclencher des macros avec des événements ( et non des boutons) par exemple au clique sur une cellule ou à l’activation d’une feuille.</p>
+<p>A noter : on peut enregistrer une macro : c’est à dire effectuer des manipulations avec la souris qui seront traduites en code par excel (c’est très pratique)</p>
+<p>Ici on voit un exemple de changement de colonnes et le code associé qu’a créé excel.</p>
+<img src="VBA1.png">
+<h2>2. Ecriture d’une macro :</h2>
+<p>Voici un petit exemple de macro</p>
+<img src="VBA3.png">
+<p>Le schéma d’écriture est toujours le même et fonctionne un peu comme une programmation objet :</p>
+<p>On sélectionne un ensemble de cellules et on applique des propriétés/fonctions avec le « . »</p>
+<p>Mémo des Sélecteurs principaux :</p>
+<p>Workbooks(« Nom_du_fichiers ») ⇒ Sélectionner un autre classeur
+Worksheets(« Nom_de_feuille ») ou Sheets(«  Nom_de_feuille ») ⇒ Sélectionner une autre feuille du classeur</p>
+<p>ActiveCell ⇒ concerne la cellule active (= la cellule qui est actuellement sélectionnée)
+Selection ⇒   concerne la ou les cellule sélectionnées
+Cells (num_ligne,num_colonne) ⇒ La cellule de coordonnées :  num_ligne et num_colonne
+Range(« A8 »),
+Range(« A1:A10 ») =&gt; les cellules A1 à A10
+Range(« A1,A2 »)==&gt; les cellules A1 et A2</p>
+<p>On peut enchainer les sélecteurs :</p>
+<pre><code>Workbooks(« projet»).Worksheets(« Feuil2»).Range(« A8 »)
+</code></pre>
+<p>Ensuite on a les propriétés qui concernent l’apparence :</p>
+<p>Value : renvoie la valeur
+Activate :<br>
+Font : modifie la police  		(Font .Size 	<a href="http://Font.Name">Font.Name</a> 		Font.Bold)
+Borders : modifie les bordure de cellules
+Font.Color = RGB(174, 240, 194):modifie la  couleur de police
+Interior.Color = RGB(174, 240, 194) modifie la couleur de la cellule</p>
+<p>exemple d’utilisation :</p>
+<pre><code>Sheets(&quot;Feuil3&quot;).Range(&quot;A1&quot;).Borders.Weight =4 
+Sheets(&quot;Feuil3&quot;).Range(&quot;A1&quot;).Font.Bold = True
+</code></pre>
+<p>Pour éviter la répetition :</p>
+<pre><code>With Sheets(&quot;Feuil3&quot;).Range(&quot;A1&quot;) 
+	.Borders.Weight = 4 
+	.Font.Bold = True
+End With
+</code></pre>
+<p>Enfin les fonctions excel :
+Toutes les fonctions excel sont disponibles en tapant « WorksheetFunction. » dans l’éditeur de code. Un menu déroulant va alors apparaître avec les différentes fonctionne</p>
+<p>Voici une liste avec explications des différentes fonctions :</p>
+<p><a href="https://www.excel-pratique.com/fr/fonctions-vba">https://www.excel-pratique.com/fr/fonctions-vba</a></p>
+<h2>3. Les variables :</h2>
+<p>A chaque début de macro il faut  déclarer ses variables, on utilise :</p>
+<p>Dim nom_variable As Type_variable</p>
+<p>Les principaux types  de variable:
+Integer : entier
+Single = virgule flottante
+String = texte
+Boolean = booléen
+Date</p>
+<p>Les opérations sur les variables sont semblables à celles qu’on effectue sur pyhton</p>
+<h2>4. Conditions et boucles:</h2>
+<p>Le fonctionnement des conditions en VBA est assez intuitif ( globalement cela marche comme en python)
+La forme du bloc est la suivante :</p>
+<pre><code>If CONDITION Then 
+	INSTRUCTION
+ElseIf
+	INSTRUCTION
+Else 
+	INSTRUCTION
+End If
+</code></pre>
+<p>Attention, le « est différent de » s’écrit : &lt;&gt;
+Les autres opérateurs :  And, Or, Not
+On peut aussi tester le type :  If IsNumeric(Range...)</p>
+<p>Lorsqu’on a beaucoup de ElseIf, on préférera utiliser l’instruction Select
+exemple d’utilisation :</p>
+<p>Dim note As Single, commentaire As String note = Range(&quot;A1&quot;)</p>
+<pre><code>Select Case note
+Case Is = 1,2 
+	 commentaire = &quot;résultat affligeant!&quot; 
+Case 3 to 4 
+	commentaire = &quot;résultat médiocre!&quot; 
+Case Is &gt;5
+	 commentaire = &quot;Bon résultat&quot;
+
+</code></pre>
+<p>comparaison des chaines de caractère :
+Pour savoir si 2 chaines de caractère sont identiques on utilisera l’instruction Like
+Par exemple :</p>
+<pre><code>If nom_variable Like &quot;des_caractères&quot; Then 
+</code></pre>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p>Note</p>
+</div><div class="pl-8 mr-8">
+<p>La comparaison n’a pas besoin d’être exacte !!! on peut ainsi inclure plusieurs possibilités</p>
+</div></div>
+<p>Exemple :</p>
+<pre><code>Variable = « Un joli poème »
+If Variable like « Un ????? poè[mt]e » 
+</code></pre>
+<p>le ? Signifie que n’importe quel caractère peut se trouver ici., les accolades signifient que l’un de ces caractères est présent à cet emplacement.</p>
+<p>On effectue le boucles ainsi :</p>
+<pre><code>Do While CONDITION
+	ISTRUCTION 
+Loop
+</code></pre>
+<p>Until permet de réaliser une boucle jusqu’a ce qu’une condition soit vraie</p>
+<pre><code>Dim i as Integer
+For i = 1 To 5 Step 1
+	INSTRUCTION 
+Next
+
+For Each valeur In tableau 
+	MsgBox valeur 
+Next
+
+
+</code></pre>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8  mb-2 mr-8">
+<p>Note</p>
+</div><div class="pl-8 mr-8">
+<p>La fonction : WorksheetFunction.CountA(Range(&quot;A:A&quot;)
+permet de compter le nombre de cases non vides, c’est très pratique .</p>
+</div></div>
+<h2>5. Utilisation des boites de dialogue:</h2>
+<p>Les boites de dialogue permettent d’afficher des messages mais aussi de créer de formulaires. La plus utilisée est la :</p>
+<p>MsgBox
+On peut lui ajouter des boutons :</p>
+<pre><code>
+MsgBox([TEXTE], [BOUTONS], [TITRE])
+</code></pre>
+<p>Les boutons sont prédéfini par excel, il faudra écrire « vbYesNo » pour avoir un bouton « Yes » et un bouton « No » par exemple
+(tapez simplement « vb » et excel vous proposera la suite)</p>
+<p>On peut mettre plusieurs boutons à la suite :
+ex :</p>
+<pre><code>MsgBox(&quot;Texte&quot;, vbYesNoCancel + vbExclamation + vbDefaultButton2, &quot;Titre&quot;)
+</code></pre>
+<p>Pour demander à l’utilisateur de rentrer des informations dans la boite de dialogue on utilise:</p>
+<pre><code>
+InputBox(&quot;Texte ?&quot;, &quot;Titre&quot;, &quot;Valeur par défaut&quot;)
+</code></pre>
+<p>La réalisation de formulaire est un peu plus compliquée donc je ne la détaillerai pas ici.</p>
+<h2>6. Les tableaux :</h2>
+<p>Pour déclarer un tableau on utilise la structure suivante :</p>
+<p>Dim  nom_tableau(4, 3) As String
+(c’est un tableau à 5 lignes et 4 colonnes , le contenu des cases est du texte)
+Pour déclarer un tableau dynamiques Dim tableau()
+Attention : la numérotation d'un tableau commence à 0.</p>
+<p>Les tableaux dynamiques sont très pratiques pour faciliter des procédures (voir exercie du tutoriel :<a href="https://www.excel-pratique.com/fr/vba/tableaux_vba_exercice">https://www.excel-pratique.com/fr/vba/tableaux_vba_exercice</a>)</p>
+<h2>7. Retour sur le tutoriel</h2>
+<p>Ce tutoriel est assez complet. Il est parfait pour les débutants souhaitant parcourir la plupart des possibilités de VBA. Il est aussi très bien découpé en chapitres pertinents et autoporteurs. Il pourra donc servir d’aide pour des utilisateurs plus avancés. La difficulté des exercices augmente le long des chapitres. J’ai trouvé le chapitre sur les UserForms plus compliqué que le reste. A titre indicatif il faudra un peu plus de 7h à le terminer.</p>
+<h2>8. Petit Projet</h2>
+<p>Pour pratiquer, j'ai réalisé un petit projet pour un ami. Il voulait un fichier excel lui servant de tableau de bord pour gérer des documents à modifier.</p>
+<p>Voici le résultat:</p>
+<img src="projetVBA1.png">
+<img src="projetVBA2.png">
+<img src="projetVBA4.png">
+<p>Un Userform permet de remplir certaines informations. La date d'ajout est rempli automatiquement ainsi que l'état initial de la tâche.</p>
+
+
+</article>
+
+        </main>
+
+
+        <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div class="min-h-[50px] flex justify-center items-center">
+                    <p class="text-center">
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développent et Organisation en IT
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        MathJax
+            .startup
+            .document
+            .getMathItemsWithin(document.body);
+        </script>
+
+    </body>
+</html>

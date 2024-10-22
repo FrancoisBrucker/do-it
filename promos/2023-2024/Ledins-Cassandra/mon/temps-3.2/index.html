@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Mini étude de cas - Conception SI</title>
+
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [
+                [
+                '$', '$'
+                ],
+                [
+                '\\(', '\\)'
+                ]
+            ]
+            },
+            svg: {
+            fontCache: 'global'
+            }
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
+
+        <header class="border-b-2 border-gray-200 mb-4">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="min-h-[50px] flex justify-between items-center">
+                <a class="mx-2" href="/do-it/">Home</a>
+                <div class="flex items-center gap-4 sm:gap-6 ">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                        </svg>
+                    </a>
+                    <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
+                        <svg class="h-5 aspect-square" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
+            
+<article class="relative">
+<h1 class="mb-1">Mini étude de cas - Conception SI</h1>
+<div class="mb-4">
+    
+        <div class="px-4 flex flex-wrap items-center">
+            
+                <div class="font-bold">Tags : </div>
+            
+            <ul class="flex flex-wrap overflow-auto not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">MON</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">2023-2024</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 3</li>
+                
+
+            </ul>
+            
+            
+            <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="px-4 flex flex-wrap items-center">
+            <div class="font-bold">Auteurs : </div>
+            <ul class="flex flex-wrap not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Cassandra Ledins</li>
+                
+            </ul>
+        </div>
+    
+
+    
+</div>
+
+        <p class="mb-4 text-lg">
+
+                Schématisation d'un process entreprise et création d'un cahier des charges pour ERP
+
+        </p>
+
+
+
+    
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-purple-500 bg-purple-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>
+</svg>
+<div class="pl-8 mr-8">
+
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/">2023-2024</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Ledins-Cassandra/">Cassandra Ledins</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Ledins-Cassandra/mon/">MON de Cassandra Ledins</a><span class="px-1">/</span><a href="/do-it/promos/2023-2024/Ledins-Cassandra/mon/temps-3.2/">Mini étude de cas - Conception SI</a>
+
+</div></div>
+
+
+
+
+<h2>Introduction</h2>
+<p>Après une discussion avec un membre de ma famille, qui se plaignait de devoir utiliser Excel pour des tâches répétitives de son travail qui lui font perdre beaucoup de temps, mais aussi ne met pas à l'abris des fautes d'étourderies et d'incohérence des informations entre les services, j'ai pensé au cours de conception SI. Je me suis donc dit que je voudrais l'interviewer, pour faire un schéma du process en question que je ne connais pas du tout, essayer de cerner les problèmes, et définir un petit cahier des charges pour un hypothétique ERP, ou du moins une liste des exigences techniques et technologiques.</p>
+<p>Je réfererai à ce membre ultérieurement par &quot;l'assistante de direction&quot;.</p>
+<h3>Processus d'Interview :</h3>
+<p>L'interview a été préparée en amont pour comprendre en détail le processus de facturation de l'entreprise. Les étapes suivantes ont été suivies pour garantir une collecte complète et précise des informations :</p>
+<ol>
+<li>
+<p><strong>Préparation de l'Entrevue :</strong>
+Avant l'interview, une préparation minutieuse a été effectuée afin de formuler des questions pertinentes et d'identifier les lacunes potentielles dans le processus actuel. J'ai essayé de rester ouverte et factuelles dans mes questions de préparation qui ont surtout été axées sur la structure de l'entreprise, ainsi que son envergure pour mieux comprendre le contexte, en laissant la place à l'improvisation pour la description du processus.</p>
+</li>
+<li>
+<p><strong>Conduite de l'Entrevue :</strong>
+L'entrevue s'est déroulée de manière interactive, me permettant ainsi de poser des questions ouvertes pour encourager l'assistante de direction à détailler chaque étape du processus de facturation. J'ai demandé des exemples concrets pour clarifier les aspects plus complexes du processus.</p>
+</li>
+<li>
+<p><strong>Analyse des Réponses :</strong>
+Les réponses fournies par l'assistante de direction ont été par la suite analysées à l'aide entre autre d'un diagramme pour identifier les étapes clés du processus de facturation, les points de friction potentiels et les opportunités d'amélioration.</p>
+</li>
+</ol>
+<h3>Présentation de l'entreprise et de la personne interviewée</h3>
+<p>J'ai eu une autorisation de consultation des dossiers de l'entreprise mais pas une autorisation de diffusion des informations. Je vais donc tout au long de la description anonymiser l'entreprise et changer les détails qui pourraient associer cette entreprise à mon MON.</p>
+<p>L'entreprise compte moins de 30 salariés, est donc une PME, et fait partie d'un groupe, qui au total compte moins de 100 salariés.
+Elle effectue des études sur un thème environnemental, principalement pour des collectivités, elle répond donc a des appels d'offres. Elle se trouve en concurrence avec beaucoup d'autres entreprises du marché, de toutes tailles, mais les principaux concurrents sont des mastodontes du domaine.</p>
+<p>La personne interviewée est l'assistante de direction, qui a des tâches très variées dans l'organisme, de part la taille relativement petite de l'entreprise.</p>
+<h3>Diagramme BPMN avec couloirs:</h3>
+<p>Après consultation d'un des <a href="https://francoisbrucker.github.io/do-it/promos/2023-2024/Sarah-Sebastien/mon/temps-2.2/">MON de Sarah</a>, j'ai créé un diagramme BPMN pour représenter visuellement le processus de facturation tel qu'il a été décrit lors de l'interview. Les étapes suivantes ont été implémentées lors de la création du diagramme :</p>
+<ol>
+<li>
+<p><strong>Identification des Activités :</strong>
+À partir des informations recueillies lors de l'interview, les différentes activités impliquées dans le processus de facturation ont été identifiées. Cela comprenait la création des factures, la vérification des données, l'envoi aux clients, etc.</p>
+</li>
+<li>
+<p><strong>Définition des Flots de Séquence :</strong>
+Les flots de séquence ont été établis pour indiquer l'ordre dans lequel les activités sont effectuées. Cela a permis de visualiser clairement le cheminement du processus de facturation, y compris les conditions de déclenchement pour passer d'une activité à l'autre.</p>
+</li>
+<li>
+<p><strong>Modélisation des Événements :</strong>
+Les événements initiaux (déclencheurs) et finaux (résultats) du processus ont été identifiés et modélisés dans le diagramme. Cela comprenait des événements tels que la réception d'une commande, la génération d'une facture, et la réception du paiement.</p>
+</li>
+</ol>
+<p><img src="BPMN.png" alt=""></p>
+<p>Mais aussi :</p>
+<ol start="3">
+<li><strong>Revue et correction avec l'assistante de direction :</strong>
+Pour être sûre d'avoir modélisé correctement le process, le diagramme a été partagé avec l'assistante de direction et son directeur, pour revue. Cela a permis d'apporter quelques précisions, mais aussi d'ajouter une étape (l'étape de création de certificat à la fin d'une mission) qui avait été oubliée lors de l'interview.</li>
+</ol>
+<h3>Identification des problèmes</h3>
+<p>Après consultation d'un autre <a href="https://francoisbrucker.github.io/do-it/promos/2023-2024/Sarah-Sebastien/mon/temps-1.1/">MON de Sarah</a>, j'ai pu remarquer des patterns décrit dans les entreprises sans ERP généralisé. On remarque plusieurs problèmes grâce au diagramme et à l'interview.</p>
+<ul>
+<li>Les données éparpillées</li>
+<li>Perte de temps à communiquer pour récupérer des données</li>
+<li>Création manuelle de facture alors qu'elles pourraient être automatiquement générées à partir des données</li>
+<li>Répétition de tâches par différents services (ex: mise à jour des tableaux de bords)</li>
+<li>Grande place à l'erreur tout au long du process. Il n'y a pas de vérification automatisée du respect des étapes ni des informations copiées.</li>
+<li>Dépendance trop importante sur une seule personne : une absence ou un départ non à l'amiable de l'assistante de direction pourrait s'avérer presque fatal pour l'entreprise.</li>
+</ul>
+<p>Les tableaux de bords tenus par l'assistante de direciton et la commptabilité ne sont comparés qu'une fois tous les 2 mois : possible grande perte de temps pour trouver l'erreur quand il y a différence. Il y a aussi une possibilité d'avoir des répercussions pénales si les comptes sont évalués par un inspecteur et qu'il y a une erreur non détectée qui pourrait être prise pour de la fraude.</p>
+<p>Après avoir posé la question de <strong>pourquoi</strong> les données étaient séparées entre une agence et toutes les autres, on m'a répondu qu'un contrat était en cours entre l'agence isolée et un prestataire de serveurs. L'agence isolée a donc ses propres serveurs et, à cause des clauses du contrat, ne peut pas accéder aux données des autres agences directement. Et celà pour encore <strong>2 ans</strong>.</p>
+<p>L'assistante de direction a estimé que le travail de facturation (et seulement la création des factures) lui prenait 1h30 par semaine (lissé sur l'année). On peut imaginer que le reste du processus, qui présente aussi des défauts, prend un temps non négligeable sur son travail, mais aussi aux autres services, qui pourraient gagner en <strong>efficacité</strong> en adoptant un logiciel généralisé.</p>
+<h3>Tableau des spécifications techniques pour le Logiciel de Facturation</h3>
+<p>On peut commencer par définir les éléments attendus dans un cahier des charges. Il pourra comprendre les éléments suivants :</p>
+<ol>
+<li>
+<p><strong>Introduction :</strong>
+Une brève introduction expliquant le contexte de l'entreprise et la nécessité d'un logiciel de facturation pour optimiser le processus existant.</p>
+</li>
+<li>
+<p><strong>Objectifs du Logiciel :</strong>
+Définir clairement les objectifs du logiciel, tels que l'automatisation des tâches de facturation, la réduction des erreurs, et l'amélioration de l'efficacité globale du processus.</p>
+</li>
+<li>
+<p><strong>Fonctionnalités Requises :</strong>
+Une liste détaillée des fonctionnalités que le logiciel doit offrir, basée sur les besoins identifiés lors de l'interview et de l'analyse du processus de facturation. Comme par exemple la création automatisée de factures, la gestion des clients, le suivi des paiements, etc. Donc quelque chose de cross-service.</p>
+</li>
+<li>
+<p><strong>Exigences Techniques :</strong>
+Spécifications techniques telles que la compatibilité avec les systèmes existants (utilisés par les autres agences), les langages de programmation à utiliser, les exigences en matière de sécurité des données (différents niveaux d'accès pour différents types d'utilisateurs), etc.</p>
+</li>
+<li>
+<p><strong>Interface Utilisateur :</strong>
+Description de l'interface utilisateur souhaitée, en mettant l'accent sur la convivialité et l'ergonomie pour garantir une utilisation intuitive par l'assistante de direction et les autres utilisateurs. Ca peut être quelque chose de secondaire, mais je pense que sur un engagement à long terme comme celui de l'adoption d'un ERP, il est important d'être sûre que l'interface soit cohérente avec l'image de l'entreprise.</p>
+</li>
+<li>
+<p><strong>Contraintes de Développement :</strong>
+Contraintes telles que le budget alloué au projet, les délais de livraison, les ressources disponibles, etc.</p>
+</li>
+<li>
+<p><strong>Validation et Test :</strong>
+Méthodes de validation et de test pour s'assurer que le logiciel répond aux exigences spécifiées et fonctionne de manière fiable dans le contexte opérationnel de l'entreprise.</p>
+</li>
+</ol>
+<p>Ce cahier des charges servira de document de référence pour le développement du logiciel de facturation, garantissant ainsi que les besoins de l'entreprise sont correctement pris en compte et que le produit final répondra aux attentes.</p>
+<p>Pour ce MON, j'ai tenté d'ériger un tableau de spécification technique qui pourrait faire partie du cahier des charges. J'ai mal utilisé le mot cahier des charges lors de la présentation et l'introduction du MON. Je pensais en effet plutôt à une liste de spécifications techniques.</p>
+<h3>Tableau de spécification technique</h3>
+<p>On pourrait imaginer une solution dans un Cloud tel que le reste des agences utilise déjà (avec Microsoft 360).</p>
+<table>
+<thead>
+<tr>
+<th>Fonctionnalité</th>
+<th>Description</th>
+<th>Technologies Requises</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Création et édition de factures</td>
+<td>Permet à l'utilisateur de créer de nouvelles factures à partir de données existantes et de les éditer ultérieurement.</td>
+<td>Django, PostgreSQL</td>
+</tr>
+<tr>
+<td>Gestion des clients</td>
+<td>Permet à l'utilisateur d'ajouter, de modifier et de supprimer des clients de la base de données.</td>
+<td>Django, PostgreSQL</td>
+</tr>
+<tr>
+<td>Suivi des paiements et des comptes débiteurs</td>
+<td>Fournit un moyen de suivre les paiements reçus et de gérer les comptes débiteurs des clients pour la comptabilité.</td>
+<td>Django, PostgreSQL</td>
+</tr>
+<tr>
+<td>Génération de rapports</td>
+<td>Permet la génération de rapports personnalisés sur les ventes, les paiements et les comptes débiteurs, pour mieux gérer les envois de factures dans le temps.</td>
+<td>Django, PostgreSQL</td>
+</tr>
+<tr>
+<td>Génération de tableaux de bords</td>
+<td>Permet la génération de tableaux de bords personnalisés, incluant les différents rapports, missions en cours et passées</td>
+<td>Django, PostgreSQL</td>
+</tr>
+<tr>
+<td>Intégration avec les systèmes existants</td>
+<td>Permet l'intégration avec d'autres systèmes utilisés par l'entreprise, tels que la comptabilité et les données Microsoft 360.</td>
+<td>API, PostgreSQL</td>
+</tr>
+<tr>
+<td>Sécurité des Données</td>
+<td>Assure la sécurité des données en mettant en place l'authentification des utilisateurs, le cryptage des données sensibles et des sauvegardes régulières.</td>
+<td>Django, PostgreSQL</td>
+</tr>
+<tr>
+<td>Interface Utilisateur</td>
+<td>Fournit une interface utilisateur conviviale et réactive pour une utilisation facile et intuitive.</td>
+<td>HTML, CSS, JavaScript</td>
+</tr>
+<tr>
+<td>Contraintes de Développement</td>
+<td>Respecte le budget alloué au projet, le délai de livraison et les ressources disponibles, y compris une équipe de développement.</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Validation et Test</td>
+<td>Avant la livraison du logiciel, une phase de validation et de test approfondie sera menée pour garantir le bon fonctionnement du logiciel.</td>
+<td>Tests de performance, tests de sécurité, tests de convivialité</td>
+</tr>
+</tbody>
+</table>
+<h2>Conclusion</h2>
+<p>Et alors concrètement ? Il y a plusieurs limitations qui pourraient empêcher l'implémentation d'un ERP, dont la souscription d'un contrat de serveurs dans une seule agence, qui l'isole des autres agences, pendant encore 2 ans. Le budget est aussi limitant : pour l'instant, la direction ne souhaite pas investir dedans car les bénéfices ne semblent pas assez conséquents. Pour une PME comme celle-ci, et au vu de la situation bloquée sur plusieurs plans, on pourrait imaginer développer une solution temporaire pour l'édition automatique de facture, comme des <strong>macros Excel</strong>. L'adoption d'un ERP semble pourtant déjà être un sujet à considérer si l'entreprise veut s'agrandir et s'imposer face aux mastodontes de la concurrence. Les solutions adoptées pour le moment semblent atteindre leurs limites.</p>
+
+
+</article>
+
+        </main>
+
+
+        <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div class="min-h-[50px] flex justify-center items-center">
+                    <p class="text-center">
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développent et Organisation en IT
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        MathJax
+            .startup
+            .document
+            .getMathItemsWithin(document.body);
+        </script>
+
+    </body>
+</html>
