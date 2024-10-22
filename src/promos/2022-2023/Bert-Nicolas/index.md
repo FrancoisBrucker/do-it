@@ -16,4 +16,4 @@ eleventyNavigation:
 
 ## Projet
 
-[FirePixel](../../../projets/2022-2023/FirePixel/)
+[FirePixel](../_projets/FirePixel/)
