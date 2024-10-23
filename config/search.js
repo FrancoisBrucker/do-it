@@ -1,6 +1,6 @@
-const { execSync } = require('child_process')
+import { execSync } from "child_process";
 
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
     eleventyConfig.on('eleventy.after', () => {
         execSync(`npx pagefind --source dist --glob \"**/*.html\"`, { encoding: 'utf-8' })
     })
