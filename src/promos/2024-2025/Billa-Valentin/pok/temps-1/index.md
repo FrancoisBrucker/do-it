@@ -11,9 +11,9 @@ tags:
   - 'temps 1'
   - 'vert'
   - 'avancé'
-  - 'Go'
-  - 'Authentification'
-  - 'OAuth2'
+  - 'go'
+  - 'authentification'
+  - 'oauth2'
 
 résumé: Création d'un serveur d'authentification OAuth2.0 en Go.
 ---
