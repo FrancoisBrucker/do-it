@@ -81,7 +81,7 @@ eleventyComputed:
         {%- endif -%}
     {%- endfor -%}
     {% endchemin %}
-{% elif not navigation %}
+{% elif not navigation and eleventyNavigation and eleventyNavigation.key %}
     {% chemin %}
         <span class="px-1">
             <i>Navigation disponible uniquement en production</i>
