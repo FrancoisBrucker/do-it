@@ -2,6 +2,10 @@ import {DateTime} from "luxon";
 
 export default async function(eleventyConfig) {
 
+    eleventyConfig.addCollection("promos", function(collectionApi) {
+        return collectionApi.getFilteredByGlob("./src/promos/!(20XX-20YY)/index.njk");
+    });
+
     eleventyConfig.addFilter("siteUrl", function (url, base="/") {
         try {
             if (Array.isArray(url)) {
