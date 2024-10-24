@@ -1,29 +1,34 @@
 ---
 layout: layout/mon.njk
 
-title: "MON 2.2 -Jenkins"
+title: "MON 2.2 -Docker"
 authors:
   - Emma Gonin
 
-date: 1971-01-01
+date: 1970-11-01
 tags: 
   - "temps 2"
   - "vert"
+  - "Docker"
 
-résumé: "Un MON traitant de Jenkins"
+résumé: "MON sur Docker"
 ---
 
 {% prerequis %}
-Docker
+
+Novice
 
 {% endprerequis %}
 {% lien %}
 
-[MON de Tuncay Bilgi](https://francoisbrucker.github.io/do-it/promos/2022-2023/Bilgi-Tuncay/mon/Jenkins/)
+Les lien utiles pour la compréhension de celui-ci.
+[MON de Tuncay Bilgi](https://francoisbrucker.github.io/do-it/promos/2022-2023/Bilgi-Tuncay/mon/Docker/)
+[MON de Victor Ory](https://francoisbrucker.github.io/do-it/promos/2023-2024/Victor-Ory/mon/Docker/)
+[MON d'Arthur Louradou](https://francoisbrucker.github.io/do-it/promos/2023-2024/Louradou-Arthur/mon/temps-2.1/)
 
 {% endlien %}
 
-Un MON pour savoir utiliser Jenkins. C'est un outil de CI/CD qui était utilisé lors de mon premier stage mais je n'ai pas eu l'occasion de mettre les mains dans le cambouis, ce MON est l'occasion de le faire.
+Un MON pour se familiariser avec Docker. J'ai déjà utilisé un peu Docker mais je souhaite approfondir mes connaissances pour monter en compétences DevOps.
 
 ## Contenu
 

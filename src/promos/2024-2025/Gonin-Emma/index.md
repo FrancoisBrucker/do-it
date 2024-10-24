@@ -6,13 +6,13 @@ authors:
     - "Emma Gonin"
 ---
 
-Hola
+Bonjour, voici mes POK & MON orientés pour la majorité vers l'informatique afin de monter en compétences avant un TFE qui sera, je l'espère, dans le développement logiciel.
 
 ## POK & MON
 
-- [POK](./pok)
-- [MON](./mon)
+- [Mes POK](./pok)
+- [Mes MON](./mon)
 
 ## Projet
 
-[Notre Projet](../../20XX-20YY/_projets/notre-projet)
+[Mosaïques Interactives](../../2024-2025/_projets/mosaiques)

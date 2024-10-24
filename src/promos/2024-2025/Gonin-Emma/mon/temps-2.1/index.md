@@ -1,35 +1,41 @@
 ---
 layout: layout/mon.njk
 
-title: "MON 2.1 -Docker"
+title: "MON 2.1 - Environnement jail et unix"
 authors:
   - Emma Gonin
 
-date: 1970-11-01
+date: 2024-10-24
 tags: 
   - "temps 2"
   - "vert"
-  - "Docker"
+  - "unix"
 
-résumé: "MON sur Docker"
+résumé: "MON sur la conteneurisation"
 ---
 
 {% prerequis %}
 
-Novice
+Ce MON serait à priori plutôt pour quelqu'un qui a des bases en Linux
 
 {% endprerequis %}
 {% lien %}
 
-Les lien utiles pour la compréhension de celui-ci.
-[MON de Tuncay Bilgi](https://francoisbrucker.github.io/do-it/promos/2022-2023/Bilgi-Tuncay/mon/Docker/)
-[MON de Victor Ory](https://francoisbrucker.github.io/do-it/promos/2023-2024/Victor-Ory/mon/Docker/)
-[MON d'Arthur Louradou](https://francoisbrucker.github.io/do-it/promos/2023-2024/Louradou-Arthur/mon/temps-2.1/)
-
 {% endlien %}
 
-Un MON pour se familiariser avec Docker. J'ai déjà utilisé un peu Docker mais je souhaite approfondir mes connaissances pour monter en compétences DevOps.
+Un MON pour faire de la conteneurisation avec les environnements jail. 
 
-## Contenu
+## Introduction
 
-Le contenu du MON.
+## C'est quoi le confinement de processus et à quoi ça sert ?
+
+## Jail et chroot, késako?
+
+## Comment faire son propre environnement jail
+
+## Ressources
+- https://connect.ed-diamond.com/GNU-Linux-Magazine/glmf-118/confinement-de-processus-sous-freebsd-jail-et-linux-openvz
+- [Video sur chroot Linux](https://youtu.be/8_5vXRA7sRs?feature=shared)
+- [Documentation FreeBSD sur les prisons 'jails'](https://docs.freebsd.org/fr/books/handbook/jails/)
+- Vincent Autefage. Firejail: Le couteau suisse du confinement sous Linux. JRES 2022: 14èmes
+ Journées Réseaux, RENATER, May 2022, Marseille, France. pp.Article 31. (￿hal-03640803v2￿)(https://hal.science/hal-03640803/document)
