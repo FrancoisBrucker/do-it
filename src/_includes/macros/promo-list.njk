@@ -1,7 +1,7 @@
 
 {% macro promoList(index, type="") %}
     <ul class="flex flex-wrap not-prose list-none my-1 mx-0 px-1 gap-1">
-            {%- for entry in index | sort %}
+            {%- for entry in index | sort | reverse %}
                 <li{% if entry.url == page.url %} class="my-active-class bg-purple-200 rounded-full p-2 m-1"
                     {% else %} class="bg-purple-200 rounded-full p-2 m-1"{% endif %}>
                     <a href="{% if type == "projet" %}{{ entry.url }}_projets
