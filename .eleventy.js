@@ -8,6 +8,9 @@ import postCompilation from "./config/post-build.js";
 
 export default function(eleventyConfig) {
 
+  // Compute eleventyNavigationBreadcrumb only in production (significant performance gain)
+  eleventyConfig.addGlobalData("navigation", process.env.NODE_ENV === "production" || process.env.NAV === "true");
+
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
