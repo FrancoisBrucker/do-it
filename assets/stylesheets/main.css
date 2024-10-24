@@ -1196,6 +1196,14 @@ a:not([class]):active, a:not([class]):visited:active {
   position: relative;
 }
 
+.bottom-full {
+  bottom: 100%;
+}
+
+.left-0 {
+  left: 0px;
+}
+
 .right-0 {
   right: 0px;
 }
@@ -1326,6 +1334,10 @@ a:not([class]):active, a:not([class]):visited:active {
   height: 1.75rem;
 }
 
+.h-\[1\.2em\] {
+  height: 1.2em;
+}
+
 .h-full {
   height: 100%;
 }
@@ -1346,6 +1358,15 @@ a:not([class]):active, a:not([class]):visited:active {
   width: 1.75rem;
 }
 
+.w-\[1em\] {
+  width: 1em;
+}
+
+.w-max {
+  width: -moz-max-content;
+  width: max-content;
+}
+
 .max-w-\[1000px\] {
   max-width: 1000px;
 }
@@ -1356,6 +1377,10 @@ a:not([class]):active, a:not([class]):visited:active {
 
 .grow {
   flex-grow: 1;
+}
+
+.cursor-help {
+  cursor: help;
 }
 
 .list-none {
@@ -1556,6 +1581,11 @@ a:not([class]):active, a:not([class]):visited:active {
   background-color: rgb(233 213 255 / var(--tw-bg-opacity));
 }
 
+.bg-purple-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(168 85 247 / var(--tw-bg-opacity));
+}
+
 .bg-red-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(254 226 226 / var(--tw-bg-opacity));
@@ -1638,6 +1668,10 @@ a:not([class]):active, a:not([class]):visited:active {
   padding-bottom: 1.5rem;
 }
 
+.pb-\[3px\] {
+  padding-bottom: 3px;
+}
+
 .pl-1 {
   padding-left: 0.25rem;
 }
@@ -1687,6 +1721,11 @@ a:not([class]):active, a:not([class]):visited:active {
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .text-xl {
@@ -1742,6 +1781,11 @@ a:not([class]):active, a:not([class]):visited:active {
   color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .text-yellow-500 {
   --tw-text-opacity: 1;
   color: rgb(234 179 8 / var(--tw-text-opacity));
@@ -1762,6 +1806,16 @@ a:not([class]):active, a:not([class]):visited:active {
 .drop-shadow {
   --tw-drop-shadow: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.transition-opacity {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-200 {
+  transition-duration: 200ms;
 }
 
 table.no-border tr {
@@ -1796,6 +1850,10 @@ details p {
 
 .group[open] .group-open\:hidden {
   display: none;
+}
+
+.group:hover .group-hover\:block {
+  display: block;
 }
 
 @media not all and (min-width: 1024px) {
