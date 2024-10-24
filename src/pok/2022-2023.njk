@@ -21,36 +21,8 @@ tags: ['index']
         <div class="text-3xl mb-3">
         Temps {{ temps }}
         </div>
-        <ul class="grid md:grid-cols-2 not-prose list-none my-1 mx-0 px-1 gap-1">
-            {% set types = [promo] %}
-            {% set types = (types.push('temps ' + temps), types) %}
 
-            {% for cours in collections.POK | sort %}
-                {% set c = 0 %}
-                {% for tag in cours.data.tags %}
-                    {% for type in types %}
-                        {% if tag == type %}
-                            {% set c = c + 1 %}
-                        {% endif %}
-                    {% endfor %}
-                {% endfor %}
-                {% if c == types.length %}
-                    <li class="m-3 p-3 border-solid border-2 rounded relative flex flex-col">
-                        <div class="text-xl mb-3">
-                            <a href="{{ cours.url  }}">{{cours.data.title}}</a>
-                        </div>
-                        {% if cours.data.résumé %}
-                            <span class="h-full">{{ cours.data.résumé }}</span>
-                        {% else %}
-                            <span class="h-full"><i>MON de temps {{ temps }}.</i></span>
-                        {% endif %}
-                        <div class="flex flex-wrap flex-row justify-between items-end not-prose list-none mt-3 mb-1 mx-0 px-1 gap-1">
-                            <span class="bg-blue-200 rounded-full px-2">{{cours.data.authors}}</span>
-                            <span class="bg-purple-200 rounded-full px-2">{{ cours.data.date | dateFormat("dd/MM/yyyy") }}</span>
-                        </div>
-                    </li>
-                {% endif %}
-            {% endfor %}
-        </ul>
+        {% from 'macros/pok-mon-list.njk' import listPokMon %}
+        {{ listPokMon(collections.POK, "POK", promo, temps) }}
     </div>
 {% endfor %}
