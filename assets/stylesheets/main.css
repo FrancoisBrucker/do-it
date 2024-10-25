@@ -1216,10 +1216,6 @@ a:not([class]):active, a:not([class]):visited:active {
   margin: 0px;
 }
 
-.m-1 {
-  margin: 0.25rem;
-}
-
 .m-2 {
   margin: 0.5rem;
 }
@@ -1743,6 +1739,11 @@ a:not([class]):active, a:not([class]):visited:active {
   line-height: 1.25rem;
 }
 
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1756,6 +1757,11 @@ a:not([class]):active, a:not([class]):visited:active {
   color: rgb(146 64 14 / var(--tw-text-opacity));
 }
 
+.text-blue-700 {
+  --tw-text-opacity: 1;
+  color: rgb(29 78 216 / var(--tw-text-opacity));
+}
+
 .text-cyan-500 {
   --tw-text-opacity: 1;
   color: rgb(6 182 212 / var(--tw-text-opacity));
@@ -1764,6 +1770,11 @@ a:not([class]):active, a:not([class]):visited:active {
 .text-emerald-500 {
   --tw-text-opacity: 1;
   color: rgb(16 185 129 / var(--tw-text-opacity));
+}
+
+.text-green-700 {
+  --tw-text-opacity: 1;
+  color: rgb(21 128 61 / var(--tw-text-opacity));
 }
 
 .text-indigo-500 {
@@ -1779,6 +1790,11 @@ a:not([class]):active, a:not([class]):visited:active {
 .text-pink-500 {
   --tw-text-opacity: 1;
   color: rgb(236 72 153 / var(--tw-text-opacity));
+}
+
+.text-pink-700 {
+  --tw-text-opacity: 1;
+  color: rgb(190 24 93 / var(--tw-text-opacity));
 }
 
 .text-purple-500 {
@@ -1807,6 +1823,10 @@ a:not([class]):active, a:not([class]):visited:active {
 
 .decoration-blue-500 {
   text-decoration-color: #3b82f6;
+}
+
+.decoration-purple-500 {
+  text-decoration-color: #a855f7;
 }
 
 .decoration-2 {
@@ -1866,8 +1886,17 @@ details p {
   color: rgb(29 78 216 / var(--tw-text-opacity));
 }
 
+.group:hover .group-hover\:text-purple-700 {
+  --tw-text-opacity: 1;
+  color: rgb(126 34 206 / var(--tw-text-opacity));
+}
+
 .group:hover .group-hover\:decoration-blue-700 {
   text-decoration-color: #1d4ed8;
+}
+
+.group:hover .group-hover\:decoration-purple-700 {
+  text-decoration-color: #7e22ce;
 }
 
 @media not all and (min-width: 1024px) {
@@ -1898,6 +1927,10 @@ details p {
 @media (min-width: 640px) {
   .sm\:block {
     display: block;
+  }
+
+  .sm\:hidden {
+    display: none;
   }
 
   .sm\:gap-6 {

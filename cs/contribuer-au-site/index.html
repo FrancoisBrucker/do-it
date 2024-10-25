@@ -67,7 +67,7 @@
             
             <ul class="flex flex-wrap overflow-auto not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
                 
-                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">ct</li>
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">cs</li>
                 
 
             </ul>
@@ -75,6 +75,8 @@
             
             <div class="hidden" data-pagefind-meta="Type">
                 
+                    
+                        <span data-pagefind-filter="Type">CS</span>
                     
                 
             </div>
@@ -98,9 +100,9 @@
 
 
 
-<p>Le site do-it est un site constitué de fichiers écrit au format <a href="https://francoisbrucker.github.io/cours_informatique/tutoriels/format-markdown/">Markdown</a>. Y contribuer est très simple, il suffit de suivre ce document.</p>
+<p>Le site <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> est un site constitué de fichiers écrit au format <a href="https://francoisbrucker.github.io/cours_informatique/tutoriels/format-markdown/">Markdown</a>. Y contribuer est très simple, il suffit de suivre ce document.</p>
 <h2>Architecture d'un post</h2>
-<p>Un post do-it est un dossier à mettre dans le code source du site. Par exemple, cette page est le dossier <a href="https://github.com/FrancoisBrucker/do-it/tree/main/src/cs/contribuer-au-site">https://github.com/FrancoisBrucker/do-it/tree/main/src/cs/contribuer-au-site</a></p>
+<p>Un post <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> est un dossier à mettre dans le code source du site. Par exemple, cette page est le dossier <a href="https://github.com/FrancoisBrucker/do-it/tree/main/src/cs/contribuer-au-site">https://github.com/FrancoisBrucker/do-it/tree/main/src/cs/contribuer-au-site</a></p>
 <p>Ce dossier contient :</p>
 <ul>
 <li>un fichier <code>index.md</code> qui est le texte de votre post</li>
@@ -108,15 +110,15 @@
 </ul>
 <p>Il y a 3 endroits où placer ses contributions :</p>
 <ul>
-<li>dans le dossier <code class="fichier">ct</code></li>
+<li>dans le dossier <code class="fichier">cs</code></li>
 <li>dans le dossier <code class="fichier">pok</code></li>
 <li>dans le dossier <code class="fichier">mon</code></li>
 </ul>
-<h3>Post ct</h3>
+<h3>Post cs</h3>
 <p>Votre dossier de post doit s'appeler comme l'intitulé du cours, en remplaçant les espace par des <code>-</code>.</p>
-<p>Par exemple ce post s'appelle <code class="fichier">contribuer-au-site</code> et est rangé dans le dossier <code class="fichier">ct</code> :</p>
+<p>Par exemple ce post s'appelle <code class="fichier">contribuer-au-site</code> et est rangé dans le dossier <code class="fichier">cs</code> :</p>
 <pre><code>src
-└── ct
+└── cs
     ├── contribuer-au-site
     │   └── index.md
     └── index.njk
@@ -144,14 +146,14 @@
 <li>le corps du texte en markdown</li>
 </ul>
 <h3>Exemple</h3>
-<p>Ce fichier est visible à <a href="https://raw.githubusercontent.com/FrancoisBrucker/do-it/main/src/ct/contribuer-au-site/index.md">cette adresse</a>.</p>
+<p>Ce fichier est visible à <a href="https://raw.githubusercontent.com/FrancoisBrucker/do-it/main/src/cs/contribuer-au-site/index.md">cette adresse</a>.</p>
 <h3>Entête</h3>
 <p>Ce sont les premières lignes du site. Elles contiennent les méta-données du post :</p>
 <ul>
 <li>le layout html à utiliser</li>
 <li>le titre du post</li>
 <li>le ou les auteurs (il suffit d'ajouter une ligne)</li>
-<li>les tags du site. Doit au minimum contenir <code class="fichier">ct</code> si vous faite un ct, <code class="fichier">pok</code> si vous faites un pok et <code class="fichier">mon</code> si vous faites un mon.</li>
+<li>les tags du site. Doit au minimum contenir <code class="fichier">cs</code> si vous faite un cs, <code class="fichier">pok</code> si vous faites un pok et <code class="fichier">mon</code> si vous faites un mon.</li>
 </ul>
 <pre class="language-text " style="counter-reset: linenumber 0"><code class="language-text">---
 layout: layout/post.njk
@@ -159,10 +161,10 @@ layout: layout/post.njk
 title: "Contribuer au site"
 authors:
   - François Brucker
-résumé: "Comment contribuer au site do-it."
+résumé: "Comment contribuer au site Do_It."
 
 tags:
-  - 'ct'
+  - 'cs'
 ---
 </code></pre>
 <h3>Résumé</h3>
@@ -194,7 +196,7 @@ tags:
 <h2>Possibilités étendues en markdown</h2>
 <p>Plusieurs balises spéciales ont été ajoutées pour vous aider à écrire des parties spécifiques de votre post.</p>
 <h3>liens</h3>
-<p>Il existe plusieurs façon d'écrire les liens. On suppose que l'on a l'architecture suivante :</p>
+<p>Il existe plusieurs façons d'écrire les liens. On suppose que l'on a l'architecture suivante :</p>
 <pre><code>src
 └── pok
     ├── un-site-chez-moi
@@ -204,19 +206,19 @@ tags:
     │   ├── RS
     │   └── index.njk
     ├── index.njk
-    └── ct
+    └── cs
        ├── contribuer-au-site
        │   └── index.md
        └── index.njk
 </code></pre>
 <p>Et que l'on veuille, depuis le post <code class="fichier">FB-GD</code>, aller vers le post <code class="fichier">contribuer-au-site</code>.</p>
-<p>Il y a deux façon de faire :</p>
+<p>Il y a deux façons de faire :</p>
 <ul>
-<li>lien absolu. Depuis la racine du site (qui est <code class="fichier">src</code>) <code class="language">[lien](/do-it/ct/contribuer-au-site)</code></li>
-<li>lien relatif. Depuis là on je suis : <code class="language">[lien](../../../ct/contribuer-au-site)</code> (je remonte 3 dossier avant de redescendre dans l'arborescence)</li>
+<li>lien absolu. Depuis la racine du site (qui est <code class="fichier">src</code>) <code class="language">[lien](/do-it/cs/contribuer-au-site)</code></li>
+<li>lien relatif. Depuis là on je suis : <code class="language">[lien](../../../cs/contribuer-au-site)</code> (je remonte 3 dossier avant de redescendre dans l'arborescence)</li>
 </ul>
 <h3>Texte spécial</h3>
-<p>En plus des possibilités markdown, on ajoute deux distinction de texte :</p>
+<p>En plus des possibilités markdown, on ajoute deux distinctions de texte :</p>
 <ul>
 <li>fichier : <code class="fichier">nom-fichier</code> que l'on écrit : `nom-fichier`{.fichier}</li>
 <li>code : <code class="language-">print(&quot;coucou !&quot;)</code> que l'on écrit : `print(&quot;coucou !&quot;)`{.language-}</li>
