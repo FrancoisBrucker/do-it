@@ -5,14 +5,14 @@ title: "Contribuer au site"
 authors:
   - François Brucker
 
-tags: ["ct"]
+tags: ["cs"]
 ---
 
-Le site do-it est un site constitué de fichiers écrit au format [Markdown](https://francoisbrucker.github.io/cours_informatique/tutoriels/format-markdown/). Y contribuer est très simple, il suffit de suivre ce document.
+Le site <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> est un site constitué de fichiers écrit au format [Markdown](https://francoisbrucker.github.io/cours_informatique/tutoriels/format-markdown/). Y contribuer est très simple, il suffit de suivre ce document.
 
 ## Architecture d'un post
 
-Un post do-it est un dossier à mettre dans le code source du site. Par exemple, cette page est le dossier <https://github.com/FrancoisBrucker/do-it/tree/main/src/cs/contribuer-au-site>
+Un post <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> est un dossier à mettre dans le code source du site. Par exemple, cette page est le dossier <https://github.com/FrancoisBrucker/do-it/tree/main/src/cs/contribuer-au-site>
 
 Ce dossier contient :
 
@@ -21,19 +21,19 @@ Ce dossier contient :
 
 Il y a 3 endroits où placer ses contributions :
 
-- dans le dossier `ct`{.fichier}
+- dans le dossier `cs`{.fichier}
 - dans le dossier `pok`{.fichier}
 - dans le dossier `mon`{.fichier}
 
-### Post ct
+### Post cs
 
 Votre dossier de post doit s'appeler comme l'intitulé du cours, en remplaçant les espace par des `-`.
 
-Par exemple ce post s'appelle `contribuer-au-site`{.fichier} et est rangé dans le dossier `ct`{.fichier} :
+Par exemple ce post s'appelle `contribuer-au-site`{.fichier} et est rangé dans le dossier `cs`{.fichier} :
 
 ```
 src
-└── ct
+└── cs
     ├── contribuer-au-site
     │   └── index.md
     └── index.njk
@@ -71,7 +71,7 @@ Il est constitué de trois parties :
 
 ### Exemple
 
-Ce fichier est visible à [cette adresse](https://raw.githubusercontent.com/FrancoisBrucker/do-it/main/src/ct/contribuer-au-site/index.md).
+Ce fichier est visible à [cette adresse](https://raw.githubusercontent.com/FrancoisBrucker/do-it/main/src/cs/contribuer-au-site/index.md).
 
 ### Entête
 
@@ -80,7 +80,7 @@ Ce sont les premières lignes du site. Elles contiennent les méta-données du p
 - le layout html à utiliser
 - le titre du post
 - le ou les auteurs (il suffit d'ajouter une ligne)
-- les tags du site. Doit au minimum contenir `ct`{.fichier} si vous faite un ct, `pok`{.fichier} si vous faites un pok et `mon`{.fichier} si vous faites un mon.
+- les tags du site. Doit au minimum contenir `cs`{.fichier} si vous faite un cs, `pok`{.fichier} si vous faites un pok et `mon`{.fichier} si vous faites un mon.
 
 ```text
 ---
@@ -89,10 +89,10 @@ layout: layout/post.njk
 title: "Contribuer au site"
 authors:
   - François Brucker
-résumé: "Comment contribuer au site do-it."
+résumé: "Comment contribuer au site Do_It."
 
 tags:
-  - 'ct'
+  - 'cs'
 ---
 ```
 
@@ -140,7 +140,7 @@ Plusieurs balises spéciales ont été ajoutées pour vous aider à écrire des 
 
 ### liens
 
-Il existe plusieurs façon d'écrire les liens. On suppose que l'on a l'architecture suivante :
+Il existe plusieurs façons d'écrire les liens. On suppose que l'on a l'architecture suivante :
 
 ```
 src
@@ -152,7 +152,7 @@ src
     │   ├── RS
     │   └── index.njk
     ├── index.njk
-    └── ct
+    └── cs
        ├── contribuer-au-site
        │   └── index.md
        └── index.njk
@@ -160,14 +160,14 @@ src
 
 Et que l'on veuille, depuis le post `FB-GD`{.fichier}, aller vers le post `contribuer-au-site`{.fichier}.
 
-Il y a deux façon de faire :
+Il y a deux façons de faire :
 
-- lien absolu. Depuis la racine du site (qui est `src`{.fichier}) `[lien]({{ "/ct/contribuer-au-site" | url }})`{.language}
-- lien relatif. Depuis là on je suis : `[lien](../../../ct/contribuer-au-site)`{.language} (je remonte 3 dossier avant de redescendre dans l'arborescence)
+- lien absolu. Depuis la racine du site (qui est `src`{.fichier}) `[lien]({{ "/cs/contribuer-au-site" | url }})`{.language}
+- lien relatif. Depuis là on je suis : `[lien](../../../cs/contribuer-au-site)`{.language} (je remonte 3 dossier avant de redescendre dans l'arborescence)
 
 ### Texte spécial
 
-En plus des possibilités markdown, on ajoute deux distinction de texte :
+En plus des possibilités markdown, on ajoute deux distinctions de texte :
 
 - fichier : `nom-fichier`{.fichier} que l'on écrit : \`nom-fichier\`\{.fichier\}
 - code : `print("coucou !")`{.language-} que l'on écrit : \`print("coucou !")\`\{.language-\}
