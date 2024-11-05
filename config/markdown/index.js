@@ -1,7 +1,7 @@
 import markdownIt from "markdown-it"
 import markdownItAttrs from "markdown-it-attrs"
 import markdownItMultimdTable from "markdown-it-multimd-table"
-import eleventyMdSyntaxHighlight from "@pborenstein/eleventy-md-syntax-highlight"
+import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight"
 
 // import shortcodes from "./shortcodes/index.js"
 
@@ -24,9 +24,9 @@ export default async function(eleventyConfig) {
         });
 
 
-    eleventyConfig.addPlugin(eleventyMdSyntaxHighlight,
-        {showLineNumbers: false}
-    )
+    eleventyConfig.addPlugin(pluginSyntaxHighlight, {
+       alwaysWrapLineHighlights: false,
+    })
 
     // eleventyConfig.addPlugin(require("eleventy-plugin-mathjax"));
 

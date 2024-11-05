@@ -366,6 +366,71 @@ Code :
 </div>
 ```
 
+### Écrire du code
+
+Pour écrire du code, le thème [prismjs](https://prismjs.com/) se chargera de la coloration syntaxique.
+
+Par exemple :
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" href="assets/favicon.png" />
+        ...
+    </head>
+    <body class="language-none">
+    <header data-plugin-header="line-numbers"></header>
+    <section class="language-markup">
+      <h1>How to use</h1>
+      ...
+    </body>
+</html>
+```
+
+Peut s'écrire avec le markdown suivant :
+
+<pre>
+    <code>
+```html
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+    &lt;head>
+        &lt;meta charset="utf-8" />
+        &lt;link rel="icon" href="assets/favicon.png" />
+        ...
+    &lt;/head>
+    &lt;body class="language-none">
+    &lt;header data-plugin-header="line-numbers"></header>
+    &lt;section class="language-markup">
+      &lt;h1>How to use</h1>
+      ...
+    &lt;/body>
+&lt;/html>
+```
+    </code>
+</pre>
+
+Également, il est possible d'ajouter les numéros de ligne comme ceci :
+
+```python/
+print(42)
+print(43)
+```
+
+Avec le code :
+
+<pre>
+    <code>
+```python/
+print(42)
+print(43)
+```
+    </code>
+</pre>
+
+
 ### Tables
 
 On utilise les possibilités de [multimarkdown](https://fletcher.github.io/MultiMarkdown-6/syntax/tables.html)
