@@ -168,19 +168,17 @@
 <p>Dans la suite, quelques lignes de code en python seront présentées. Le résultat de l’exécution des lignes de code est indiqué juste après celles-ci, après 3 chevrons <code>&gt;&gt;&gt;</code></p>
 <h2>Apprentissage de la bibliothèque</h2>
 <p>Tout d'abord, il faut installer openpyxl. Pour cela, il faut rentrer la commande suivante dans une invite de commande:</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">pip install openpyxl
-</code></pre>
+<pre class="language-python"><code class="language-python">pip install openpyxl</code></pre>
 <p>Une fois la bibliothèque installée, il faut l'importer au début du code python, et nous sommes prêts! Nous allons dans la suite expliquer les méthodes principales qui permettent de lire et modifier des données dans des fichiers Excel. Dans la suite, les fichiers manipulés doivent se trouver dans le même repertoire que le fichier python exécuté. Le fichier Excel que nous allons manipuler en exemple se nomme <em>test.xlsx</em> et contient le simple tableur suivant:</p>
 <p><img src="Image1.png" alt="Image test"></p>
 <p>La feuille qui est remplie se nomme <em>Feuille 1</em>.</p>
 <h3>Lecture de données</h3>
 <p>Dans un premier temps, nous allons expliquer comment lire des données. La première classe qui est importante à connaître est la classe <strong>Workbook</strong>. Pour créer un objet de cette classe, on utilise la méthode <em>openpyxl.load_workbook</em>. Les objets de cette classe correspondent au fichier Excel renseigné en paramètre de la méthode. Ils contiennent toutes les informations du fichier: lignes, colonnes, cellules etc... Par exemple, on peut récupérer les noms des feuilles du fichier Excel avec la méthode <em>sheetnames</em>.
 Il faut ensuite récupérer la feuille sur laquelle on veut lire les données. Pour cela, on renseigne le nom de la feuille en question comme suit:</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">import</span> openpyxl
+<pre class="language-python"><code class="language-python"><span class="token keyword">import</span> openpyxl
 
 wb <span class="token operator">=</span> openpyxl<span class="token punctuation">.</span>load_workbook<span class="token punctuation">(</span><span class="token string">'test.xlsx'</span><span class="token punctuation">)</span>
-sheet <span class="token operator">=</span> wb<span class="token punctuation">[</span><span class="token string">'Feuille 1'</span><span class="token punctuation">]</span>
-</code></pre>
+sheet <span class="token operator">=</span> wb<span class="token punctuation">[</span><span class="token string">'Feuille 1'</span><span class="token punctuation">]</span></code></pre>
 <div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -189,49 +187,45 @@ sheet <span class="token operator">=</span> wb<span class="token punctuation">[<
 <p>Il est également possible de récupérer la feuille active (c'est-à-dire celle qui s'affiche lorsqu'on ouvre le fichier Excel) par l'attribut <em>active</em> de la classe Workbook: <code>sheet = wb.active</code></p>
 </div></div>
 <p>La variable <em>sheet</em> est un objet de la classe <strong>Worksheet</strong>. Cet objet contient notamment les informations de toutes les cellules de la feuille. On récupère une cellule en indiquant directement son nom, ou bien en indiquant son numéro de ligne et de colonne via la méthode <em>cell</em>. Notons que ces numéros commencent à 1 (et pas 0) et le numéro de colonne 27 correspond à la colonne &quot;AA&quot;. On peut récupérer le contenu de la cellule avec l'attribut <em>value</em>. On peut également récupérer les coordonnées d'une cellule avec l'attribut <em>coordinate</em>.</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">cell <span class="token operator">=</span> sheet<span class="token punctuation">[</span><span class="token string">'A1'</span><span class="token punctuation">]</span>
+<pre class="language-python"><code class="language-python">cell <span class="token operator">=</span> sheet<span class="token punctuation">[</span><span class="token string">'A1'</span><span class="token punctuation">]</span>
 <span class="token comment"># ou cell = sheet.cell(row = 1, column = 1)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>cell<span class="token punctuation">.</span>value<span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>cell<span class="token punctuation">.</span>coordinate<span class="token punctuation">)</span>
 
 <span class="token operator">>></span><span class="token operator">></span> <span class="token string">'Pommes'</span>
-<span class="token operator">>></span><span class="token operator">></span> <span class="token string">'A1'</span>
-</code></pre>
+<span class="token operator">>></span><span class="token operator">></span> <span class="token string">'A1'</span></code></pre>
 <p>Il est possible de convertir un nombre vers la lettre d'une colonne et vice-versa. Par exemple, 1 correspond à &quot;A&quot; et 28 correspond à &quot;AB&quot;. Les fonctions utilisées sont <em>get_column_letter</em> et <em>column_index_from_string</em>. Ces fonctions doivent être importées avant d'être utilisées:</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> openpyxl<span class="token punctuation">.</span>utils <span class="token keyword">import</span> get_column_letter<span class="token punctuation">,</span> column_index_from_string
+<pre class="language-python"><code class="language-python"><span class="token keyword">from</span> openpyxl<span class="token punctuation">.</span>utils <span class="token keyword">import</span> get_column_letter<span class="token punctuation">,</span> column_index_from_string
 
 <span class="token keyword">print</span><span class="token punctuation">(</span>get_column_letter<span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>column_index_from_string<span class="token punctuation">(</span><span class="token string">'E'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 
 <span class="token operator">>></span><span class="token operator">></span> <span class="token string">'AD'</span>
-<span class="token operator">>></span><span class="token operator">></span> <span class="token number">5</span>
-</code></pre>
+<span class="token operator">>></span><span class="token operator">></span> <span class="token number">5</span></code></pre>
 <h3>Écriture de données</h3>
 <p>En plus de lire des données, il est possible de les modifier, et d'en rajouter dans les fichiers Excel. Par exemple, on peut modifier le titre d'une feuille, ou encore modifier le contenu d'une cellule. Après chaque modification, il faut enregistrer le workbook avec la méthode <em>save</em>. Notons qu'on ne peut pas sauvegarder un fichier qui est ouvert dans un autre onglet. Il est recommandé d'enregistrer le fichier modifié sous un autre nom afin de ne pas écraser le fichier original. Ainsi, si jamais il y a des erreurs dans le programme, il est possible de récupérer le fichier original.</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">wb <span class="token operator">=</span> openpyxl<span class="token punctuation">.</span>load_workbook<span class="token punctuation">(</span><span class="token string">'test.xlsx'</span><span class="token punctuation">)</span>
+<pre class="language-python"><code class="language-python">wb <span class="token operator">=</span> openpyxl<span class="token punctuation">.</span>load_workbook<span class="token punctuation">(</span><span class="token string">'test.xlsx'</span><span class="token punctuation">)</span>
 sheet <span class="token operator">=</span> wb<span class="token punctuation">[</span><span class="token string">'Feuille 1'</span><span class="token punctuation">]</span>
 cell <span class="token operator">=</span> sheet<span class="token punctuation">[</span><span class="token string">'A1'</span><span class="token punctuation">]</span>
 
 sheet<span class="token punctuation">.</span>title <span class="token operator">=</span> <span class="token string">'Inventaire fruits'</span>
 cell<span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token string">'Kiwis'</span>
 
-wb<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">'test_copy.xlsx'</span><span class="token punctuation">)</span>
-</code></pre>
+wb<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">'test_copy.xlsx'</span><span class="token punctuation">)</span></code></pre>
 <p>Voici à quoi ressemble le fichier <em>test_copy.xlsx</em>, qui a été enregistré dans le même repertoire que le code python exécuté:</p>
 <p><img src="Image2.png" alt="Image test2"></p>
 <p>La cellule A1 a bien été modifiée, ainsi que le nom de la feuille.</p>
 <p>On peut également modifier la hauteur et la largeur des cellules en modifiant les attributs <em>row_dimensions.height</em> et <em>column_dimensions.width</em> des objets de la classe <strong>Worksheet</strong>. Les valeurs indiquées sont en &quot;pt&quot;.</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">cell <span class="token operator">=</span> sheet<span class="token punctuation">[</span><span class="token string">'A2'</span><span class="token punctuation">]</span>
+<pre class="language-python"><code class="language-python">cell <span class="token operator">=</span> sheet<span class="token punctuation">[</span><span class="token string">'A2'</span><span class="token punctuation">]</span>
 cell<span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token string">'Pommes de rainette'</span>
 sheet<span class="token punctuation">.</span>column_dimensions<span class="token punctuation">[</span><span class="token string">'A'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>width <span class="token operator">=</span> <span class="token number">30</span>
 
-wb<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">'test_copy.xlsx'</span><span class="token punctuation">)</span>
-</code></pre>
+wb<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">'test_copy.xlsx'</span><span class="token punctuation">)</span></code></pre>
 <p>Le fichier <em>test_copy.xlsx</em> produit est le suivant:</p>
 <p><img src="Image3.png" alt="Image test3"></p>
 <p>La largeur de la colonne A s'est bien modifiée.</p>
 <p>On peut aussi centrer horizontalement et verticalement le contenu d'une cellule avec la classe <strong>Alignment</strong>, changer le style de police du contenu d'une cellule avec la classe <strong>Font</strong> ou encore changer la couleur de fond d'une cellule avec la classe <strong>PatternFill</strong>. Ces classes doivent être importées de la bibliothèque <em>openpyxl.styles</em>. Enfin, il est possible de créer des bordures sur les cellules en modifiant leurs attributs <em>border</em> de la classe <strong>Cell</strong>. Encore une fois, il faut importer la classe <strong>Border</strong> depuis la bibliothèque <em>openpyxl.styles.borders</em>.</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> openpyxl<span class="token punctuation">.</span>styles <span class="token keyword">import</span> Font<span class="token punctuation">,</span> PatternFill<span class="token punctuation">,</span> Alignment
+<pre class="language-python"><code class="language-python"><span class="token keyword">from</span> openpyxl<span class="token punctuation">.</span>styles <span class="token keyword">import</span> Font<span class="token punctuation">,</span> PatternFill<span class="token punctuation">,</span> Alignment
 
 wb <span class="token operator">=</span> openpyxl<span class="token punctuation">.</span>load_workbook<span class="token punctuation">(</span><span class="token string">'test.xlsx'</span><span class="token punctuation">)</span>
 sheet <span class="token operator">=</span> wb<span class="token punctuation">[</span><span class="token string">'Feuille 1'</span><span class="token punctuation">]</span>
@@ -245,8 +239,7 @@ cell<span class="token punctuation">.</span>alignment <span class="token operato
 cell<span class="token punctuation">.</span>fill <span class="token operator">=</span> PatternFill<span class="token punctuation">(</span><span class="token string">"solid"</span><span class="token punctuation">,</span> start_color <span class="token operator">=</span> <span class="token string">"0ebf3e"</span><span class="token punctuation">)</span>
 cell<span class="token punctuation">.</span>border <span class="token operator">=</span> Border<span class="token punctuation">(</span>left <span class="token operator">=</span> Side<span class="token punctuation">(</span>style<span class="token operator">=</span><span class="token string">'thick'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> right <span class="token operator">=</span> Side<span class="token punctuation">(</span>style<span class="token operator">=</span><span class="token string">'thick'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> top <span class="token operator">=</span> Side<span class="token punctuation">(</span>style<span class="token operator">=</span><span class="token string">'thick'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> bottom <span class="token operator">=</span> Side<span class="token punctuation">(</span>style<span class="token operator">=</span><span class="token string">'thick'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 
-wb<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">'test_copy.xlsx'</span><span class="token punctuation">)</span>
-</code></pre>
+wb<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">'test_copy.xlsx'</span><span class="token punctuation">)</span></code></pre>
 <p>Le résultat est le suivant:</p>
 <p><img src="Image4.png" alt="Image"></p>
 <p>Le texte &quot;Pomme de rainette&quot; est bien centré horizontalement et verticalement dans sa cellule et il est bien en gras et de taille 15. De plus, la couleur de la cellule a bien changé et la cellule a bien des bordures épaisses.</p>
@@ -286,9 +279,8 @@ wb<span class="token punctuation">.</span>save<span class="token punctuation">(<
 </ul>
 <p>On créé également une méthode <em>create_all_timetable</em>, qui itère la méthode précédente 24 fois (une fois pour chaque élève) pour créer chaque emploi du temps pour chaque élèves. Ces emplois du temps sont disponibles dans le dossier GitHub de ce MON: <a href="https://github.com/FrancoisBrucker/do-it/tree/main/src/promos/2023-2024/Dang-Vu-Duc/mon/temps-1.2">Codes du MON1.2</a></p>
 <p>Pour executer ce code, il faut créer un objet de la classe <strong>Create_timetable</strong> et appeler la méthode <em>create_timetable_automatic</em>, en renseignant les nom et prénom de l'élève (sous forme de chaîne de caractères):</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">test <span class="token operator">=</span> Create_timetable<span class="token punctuation">(</span><span class="token punctuation">)</span>
-test<span class="token punctuation">.</span>create_timetable_automatic<span class="token punctuation">(</span><span class="token string">"Dang Vu"</span><span class="token punctuation">,</span> <span class="token string">"Duc"</span><span class="token punctuation">)</span>
-</code></pre>
+<pre class="language-python"><code class="language-python">test <span class="token operator">=</span> Create_timetable<span class="token punctuation">(</span><span class="token punctuation">)</span>
+test<span class="token punctuation">.</span>create_timetable_automatic<span class="token punctuation">(</span><span class="token string">"Dang Vu"</span><span class="token punctuation">,</span> <span class="token string">"Duc"</span><span class="token punctuation">)</span></code></pre>
 <p>L'exécution de ces lignes produit le fichier Excel suivant:</p>
 <p><img src="Image6.png" alt="edt Duc"></p>
 <div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
@@ -330,7 +322,7 @@ test<span class="token punctuation">.</span>create_timetable_automatic<span clas
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">import</span> openpyxl
+<pre class="language-python"><code class="language-python"><span class="token keyword">import</span> openpyxl
 <span class="token keyword">from</span> openpyxl<span class="token punctuation">.</span>styles <span class="token keyword">import</span> Font<span class="token punctuation">,</span> PatternFill<span class="token punctuation">,</span> Alignment
 <span class="token keyword">from</span> openpyxl<span class="token punctuation">.</span>utils <span class="token keyword">import</span> get_column_letter
 <span class="token keyword">from</span> openpyxl<span class="token punctuation">.</span>styles<span class="token punctuation">.</span>borders <span class="token keyword">import</span> Border<span class="token punctuation">,</span> Side
@@ -510,8 +502,7 @@ test<span class="token punctuation">.</span>create_timetable_automatic<span clas
             nom <span class="token operator">=</span> self<span class="token punctuation">.</span>sheet2<span class="token punctuation">.</span>cell<span class="token punctuation">(</span>row <span class="token operator">=</span> k<span class="token punctuation">,</span> column <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value
             prénom <span class="token operator">=</span> self<span class="token punctuation">.</span>sheet2<span class="token punctuation">.</span>cell<span class="token punctuation">(</span>row <span class="token operator">=</span> k<span class="token punctuation">,</span> column <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value
             self<span class="token punctuation">.</span>create_timetable_automatic<span class="token punctuation">(</span>nom<span class="token punctuation">,</span> prénom<span class="token punctuation">)</span>
-        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Tout les edt ont été enregistrés"</span><span class="token punctuation">)</span>
-</code></pre>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Tout les edt ont été enregistrés"</span><span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>

@@ -174,10 +174,9 @@ J'ai aussi du apprendre ce qu'était les radio button et comment les modifier po
 Sur cette page on peut paramétrer la partie, d'abord on choisit si on veut des numéros ou des images sur les cartes. Ensuite on choisit si on veut jouer seul ou à deux et enfin la taille du jeu, 4x4 ou 6x6.
 Pour l'instant on ne peut pas choisir si l'on veut des numéros ou des images, seuls les numéros sont disponibles. De plus on ne peut pour l'instant jouer qu'à deux. Ainsi l'utilisateur doit seulement choisir le nombre de cartes. S'il ne choisit pas, un message d'erreur apparaît et il ne peut pas démarrer la partie.</p>
 <p><img src="memoryErrorMessage.png" alt="message d'erreur"></p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">newGameButton<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-javascript"><code class="language-javascript">newGameButton<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     location<span class="token punctuation">.</span>href <span class="token operator">=</span> <span class="token string">"http://127.0.0.1:5501/index.html"</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
 <p>Voici tout le code qui a permis de construire la page d'accueil :</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
 <details class="group">
@@ -196,7 +195,7 @@ Pour l'instant on ne peut pas choisir si l'on veut des numéros ou des images, s
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<pre class="language-html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
@@ -261,8 +260,7 @@ Pour l'instant on ne peut pas choisir si l'on veut des numéros ou des images, s
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>startGame.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
-</code></pre>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
 </div>
 </details>     
 </div>
@@ -283,7 +281,7 @@ Pour l'instant on ne peut pas choisir si l'on veut des numéros ou des images, s
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token atrule"><span class="token rule">@charset</span> <span class="token string">"UTF-8"</span><span class="token punctuation">;</span></span>
+<pre class="language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@charset</span> <span class="token string">"UTF-8"</span><span class="token punctuation">;</span></span>
 
 <span class="token selector">body</span> <span class="token punctuation">{</span>
     <span class="token property">background-color</span><span class="token punctuation">:</span> black<span class="token punctuation">;</span>
@@ -483,8 +481,7 @@ Pour l'instant on ne peut pas choisir si l'on veut des numéros ou des images, s
 <span class="token selector">.errorMessage</span> <span class="token punctuation">{</span>
     <span class="token property">font-size</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
     <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 </div>
 </details>     
 </div>
@@ -505,7 +502,7 @@ Pour l'instant on ne peut pas choisir si l'on veut des numéros ou des images, s
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">const</span> startGame <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"start"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> startGame <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"start"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> x4 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"4x4"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> x6 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"6x6"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">var</span> errorMessageAppear <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
@@ -540,8 +537,7 @@ startGame<span class="token punctuation">.</span><span class="token function">ad
         div<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>para<span class="token punctuation">)</span><span class="token punctuation">;</span>
         errorMessageAppear<span class="token operator">=</span><span class="token boolean">true</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>
@@ -554,12 +550,10 @@ Pour faire cela, on se sert de la méthode addEventListener. Elle permet de déc
 Il suffit d'indiquer sur quel bouton ou élément on veut utiliser addEventListener.</li>
 </ul>
 <p>Par exemple, chaque carte du jeu est un bouton avec un identifiant. On ajoute à chacun des boutons un addEventListener qui déclenche la fonction returnCard() à chaque clique.</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">card<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token function">returnCard</span><span class="token punctuation">(</span>card<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-javascript"><code class="language-javascript">card<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token function">returnCard</span><span class="token punctuation">(</span>card<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p><img src="memoryCardReturn.png" alt="carte retournée"></p>
 <p>On ajoute aussi un addEventListener qui permet quand deux cartes sont retournés de comparer leur valeur.</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">card<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token function">checkCardPair</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-javascript"><code class="language-javascript">card<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token function">checkCardPair</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>Puis si les cartes sont les mêmes ont les ajoutes dans une liste et on leur attribut la class &quot;found&quot; pour signifier que la paire est trouvée. Un fond vert apparaît sur les cartes pour montrer au joueur qu'elles sont identiques.</p>
 <p><img src="memoryCardFound.png" alt="cartes identiques"></p>
 <p>Si les cartes sont différentes, on leur attribut la class &quot;notFound&quot; qui affiche un fond rouge sur les cartes pour montrer au joueur qu'elles sont différentes. Après 2 secondes, les cartes se retournent.</p>
@@ -584,7 +578,7 @@ Il suffit d'indiquer sur quel bouton ou élément on veut utiliser addEventListe
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">!DOCTYPE html>
+<pre class="language-html"><code class="language-html">!DOCTYPE html>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
@@ -638,8 +632,7 @@ Il suffit d'indiquer sur quel bouton ou élément on veut utiliser addEventListe
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>memory4x4.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
-</code></pre>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
 </div>
 </details>     
 </div>
@@ -660,7 +653,7 @@ Il suffit d'indiquer sur quel bouton ou élément on veut utiliser addEventListe
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token atrule"><span class="token rule">@charset</span> <span class="token string">"UTF-8"</span><span class="token punctuation">;</span></span>
+<pre class="language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@charset</span> <span class="token string">"UTF-8"</span><span class="token punctuation">;</span></span>
 
 <span class="token selector">body</span> <span class="token punctuation">{</span>
     <span class="token property">background-color</span><span class="token punctuation">:</span> white<span class="token punctuation">;</span>
@@ -732,8 +725,7 @@ Il suffit d'indiquer sur quel bouton ou élément on veut utiliser addEventListe
     <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
     <span class="token property">top</span><span class="token punctuation">:</span> 530px<span class="token punctuation">;</span>
     <span class="token property">left</span><span class="token punctuation">:</span> 790px<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 </div>
 </details>     
 </div>
@@ -754,7 +746,7 @@ Il suffit d'indiquer sur quel bouton ou élément on veut utiliser addEventListe
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">const</span> iconsArray <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> iconsArray <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> newGameButton <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"newGame"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> cardButtons <span class="token operator">=</span> Array<span class="token punctuation">.</span><span class="token function">from</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">'.card'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">let</span> turnedCards <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
@@ -864,8 +856,7 @@ Il suffit d'indiquer sur quel bouton ou élément on veut utiliser addEventListe
 newGameButton<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     location<span class="token punctuation">.</span>href <span class="token operator">=</span> <span class="token string">"http://127.0.0.1:5501/index.html"</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-<span class="token punctuation">)</span>
-</code></pre>
+<span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>

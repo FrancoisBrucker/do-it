@@ -397,7 +397,7 @@ authentifiée par un token : <code>GET /photos/:id</code></p>
 <h4>Modules et Frameworks</h4>
 <p>J'ai décidé d'utiliser gin pour plus simplement créer des endpoints avec les paramètres que je souhaite décris par des structs.</p>
 <p>Voici un exemple d'endpoint déclaré pour gin :</p>
-<pre class="language-go " style="counter-reset: linenumber 0"><code class="language-go"><span class="token keyword">type</span> authorizationGrantRequest <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+<pre class="language-go"><code class="language-go"><span class="token keyword">type</span> authorizationGrantRequest <span class="token keyword">struct</span> <span class="token punctuation">{</span>
 	ResponseType <span class="token builtin">string</span> <span class="token string">`form:"response_type" binding:"required,oneof=code token"`</span>
 	ClientId     <span class="token builtin">string</span> <span class="token string">`form:"client_id" binding:"required"`</span>
 	ClientSecret <span class="token builtin">string</span> <span class="token string">`form:"client_secret"`</span>
@@ -424,8 +424,7 @@ authentifiée par un token : <code>GET /photos/:id</code></p>
 		<span class="token string">"clientId"</span><span class="token punctuation">:</span> request<span class="token punctuation">.</span>ClientId<span class="token punctuation">,</span>
 		<span class="token string">"scopes"</span><span class="token punctuation">:</span>   strings<span class="token punctuation">.</span><span class="token function">Split</span><span class="token punctuation">(</span>request<span class="token punctuation">.</span>Scope<span class="token punctuation">,</span> <span class="token string">"+"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
 	<span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Ensuite, pour la génération de tokens j'ai préféré déléguer à un module existant (<code>github.com/golang-jwt/jwt/v5</code>),
 car c'est une partie sensible qui n'est pas triviale à correctement implémenter, surtout la validation de tokens existants.</p>
 <p>Initialement, j'ai écrit le hashing et la validation des mots de passes mot même en utilisant Argon2ID un algorithme de
@@ -525,7 +524,7 @@ qu'il contrôle.</p>
 <p>Écrire des tests en Go, c'est super, un peu verbose (comme Go en général) mais vraiment facile.
 Imaginons que j'ai un fichier <code>math.go</code>, pour créer des tests pour celui-ci, je crée un fichier <code>math_test.go</code>.
 Ensuite tout est disponible, dans la librairie standard avec <code>testing</code></p>
-<pre class="language-go " style="counter-reset: linenumber 0"><code class="language-go"><span class="token comment">// math.go</span>
+<pre class="language-go"><code class="language-go"><span class="token comment">// math.go</span>
 <span class="token keyword">func</span> <span class="token function">plus</span><span class="token punctuation">(</span>a <span class="token builtin">int</span><span class="token punctuation">,</span> b <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">int</span> <span class="token punctuation">{</span>
    <span class="token keyword">return</span> a <span class="token operator">+</span> b
 <span class="token punctuation">}</span>
@@ -541,8 +540,7 @@ Ensuite tout est disponible, dans la librairie standard avec <code>testing</code
          t<span class="token punctuation">.</span><span class="token function">Errorf</span><span class="token punctuation">(</span><span class="token string">"plus() = %d, want %v"</span><span class="token punctuation">,</span> result<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
       <span class="token punctuation">}</span>
    <span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <h3>Base de données</h3>
 <p>Comme à son habitude, la librairie standard de Go est bien fournie, on peut utiliser
 <a href="https://pkg.go.dev/database/sql"><code>database/sql</code></a> pour faire l'interfaçage avec les bases de données SQL.

@@ -154,12 +154,11 @@
 <p>La syntaxe de Rust est conçue pour être expressive tout en étant précise. Faisons un rapide tour.</p>
 <h4>Déclarations de variables</h4>
 <p>Par défaut, les variables sont immuables, et il faut ajouter le mot clé <strong>mut</strong> pour pouvoir les changer plus tard.</p>
-<pre class="language-rust " style="counter-reset: linenumber 0"><code class="language-rust"><span class="token keyword">let</span> x <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>      <span class="token comment">// variable immuable</span>
-<span class="token keyword">let</span> <span class="token keyword">mut</span> y <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>  <span class="token comment">// variable mutable</span>
-</code></pre>
+<pre class="language-rust"><code class="language-rust"><span class="token keyword">let</span> x <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>      <span class="token comment">// variable immuable</span>
+<span class="token keyword">let</span> <span class="token keyword">mut</span> y <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>  <span class="token comment">// variable mutable</span></code></pre>
 <h4>Fonctions</h4>
 <p>Comme dans de nombreux langages de programmation, on déclare le type de variable retourné par les fonctions au moment de la déclaration. On peut également utiliser des fonctions en cascade sur une variable avec la syntaxe suivante :</p>
-<pre class="language-rust " style="counter-reset: linenumber 0"><code class="language-rust"><span class="token keyword">fn</span> <span class="token function-definition function">add</span><span class="token punctuation">(</span>a<span class="token punctuation">:</span> <span class="token keyword">i32</span><span class="token punctuation">,</span> b<span class="token punctuation">:</span> <span class="token keyword">i32</span><span class="token punctuation">)</span> <span class="token punctuation">-></span> <span class="token keyword">i32</span> <span class="token punctuation">{</span>
+<pre class="language-rust"><code class="language-rust"><span class="token keyword">fn</span> <span class="token function-definition function">add</span><span class="token punctuation">(</span>a<span class="token punctuation">:</span> <span class="token keyword">i32</span><span class="token punctuation">,</span> b<span class="token punctuation">:</span> <span class="token keyword">i32</span><span class="token punctuation">)</span> <span class="token punctuation">-></span> <span class="token keyword">i32</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
@@ -167,19 +166,17 @@ variable
   <span class="token punctuation">.</span><span class="token function">fonction1</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
   <span class="token punctuation">.</span><span class="token function">fonction2</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
   <span class="token punctuation">.</span><span class="token function">fonction3</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-  <span class="token punctuation">...</span><span class="token punctuation">..</span>
-</code></pre>
+  <span class="token punctuation">...</span><span class="token punctuation">..</span></code></pre>
 <h4>Structures de contrôle</h4>
 <p>Les structures logiques sont semblables à la plupart des autres langages de programmation.</p>
-<pre class="language-rust " style="counter-reset: linenumber 0"><code class="language-rust"><span class="token keyword">if</span> condition <span class="token punctuation">{</span>
+<pre class="language-rust"><code class="language-rust"><span class="token keyword">if</span> condition <span class="token punctuation">{</span>
   <span class="token punctuation">...</span>
 <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
  <span class="token punctuation">...</span>
 <span class="token punctuation">}</span>
 <span class="token keyword">for</span> item <span class="token keyword">in</span> iterable <span class="token punctuation">{</span>
     <span class="token punctuation">...</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <h3>Concepts Clés</h3>
 <p>J'ai lu <a href="https://doc.rust-lang.org/stable/book/title-page.html">la documentation Rust officielle</a>, en partie seulement, pour essayer de comprendre les concepts liés au langage. Ces concepts ont déjà été évoqués dans les Pok&amp;Mon d'Assane et de Victor, je ne vais donc pas m'étendre, dessus mais en voici un bref résumé.</p>
 <h4>Possession, Emprunt et Références</h4>

@@ -147,10 +147,9 @@ Pour ce faire, j'ai suivi le cours HTML/CSS <a href="https://openclassrooms.com/
 <h3>1. HTML</h3>
 <p>Un fichier HTML (extension .html) est le fichier qui dicte l'agencement des éléments sur une page web : l'emplacement du texte, des images, boutons, etc. C'est la partie purement fonctionnelle du site. A l'inverse, le fichier .css va dicter le style de la page et tout ce que ça implique : couleurs, police, disposition,... C'est en combinant ces deux fichiers là que l'on obtient la page web, ce que l'on appelle le &quot;front end&quot; : toute la partie visible du site, avec laquelle l'utilisateur peut interagir. A l'inverse, le back end est toute la partie interne du site et qui permet son fonctionnement, inaccessible à l'utilisateur. Généralement, le back end se fait en langage Javascript, Node.js, etc. Ici, on ne s'intéressera qu'au front end, à commencer avec HTML.</p>
 <p>Un document HTML est structuré avec des balises. Pour insérer un élément, on va le déclarer avec lesdites balises. La plupart d'entre elles sont couplées, c'est à dire qu'il y a une balise ouvrante pour déclarer le type d'élément, et une balise fermante pour marquer la fin de l'élément.  Prenons un exemple avec la balise &lt;p&gt; permettant d'indiquer un paragraphe.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span> Voici le début de ma phrase, mais à mesure qu'elle progresse je me rapproche de la fin et je vais devoir la terminer. <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">/></span></span>
-</code></pre>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span> Voici le début de ma phrase, mais à mesure qu'elle progresse je me rapproche de la fin et je vais devoir la terminer. <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">/></span></span></code></pre>
 <p>Voyons maintenant la structure basique d'un fichier HTML. On note que les éléments dans entourés par &lt;!-- et --&gt; sont des commentaires, et ne sont pas pris en compte par la machine.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span> 
+<pre class="language-html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span> 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fr<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>  <span class="token comment">&lt;!--Balise principale : elle nous dit que la langue de la page est en français --></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>        <span class="token comment">&lt;!--Balise d'en tête : contient les informations de la page, comme le nom ou le type de caractère utilisé--></span>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -158,13 +157,12 @@ Pour ce faire, j'ai suivi le cours HTML/CSS <a href="https://openclassrooms.com/
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span> <span class="token comment">&lt;!-- Corps de la page : Contient tous les éléments visibles pour l'utilisateur--></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
-</code></pre>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
 <p>Voici comment fonctionne la structure HTML : les éléments sont des blocs délimités par des balises, qui s'imbriquent les uns dans les autres dans un ordre précis.</p>
 <p><img src="structure_html.jpg" alt="Structure HTML" title="Structure HTML"></p>
 <p>Image : &quot;La structure de base en HTML&quot; OpenClassrooms, <a href="https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3/8061261-creez-votre-premiere-page-web-en-html">https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3/8061261-creez-votre-premiere-page-web-en-html</a>.</p>
 <p>Pour s'entraîner, on va créer la page d'accueil d'un blog de cuisine comme point de départ de mon POK. Pour commencer, on va insérer un en-tête avec le nom de la page, un onglet de navigation, et une barre de recherche (non-fonctionnelle pour le moment).</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span> 
+<pre class="language-html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span> 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fr<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>  
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>        
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -182,22 +180,20 @@ Pour ce faire, j'ai suivi le cours HTML/CSS <a href="https://openclassrooms.com/
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>header</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
-</code></pre>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
 <p>On en profite au passage pour créer la page &quot;à-propos&quot; en question, qui contiendra une image de son créateur. Le body contiendra donc un en-tête et le contenu suivant :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>main-content<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<pre class="language-html"><code class="language-html"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>main-content<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>Vladimir Jeantroux<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>autobio<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>Vladimir est le créateur de ce site, c'est un étudiant de Centrale Méditerannée, et c'est aussi un homme très
       intelligent en plus d'être super drôle. Il n'y a pas grand-chose d'autre à dire.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span> <span class="token attr-value"><span class="token punctuation attr-equals">=</span> <span class="token punctuation">"</span>images/moi.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span> <span class="token attr-value"><span class="token punctuation attr-equals">=</span> <span class="token punctuation">"</span>Vladimir à la plage<span class="token punctuation">"</span></span> <span class="token attr-name">height</span> <span class="token attr-value"><span class="token punctuation attr-equals">=</span> <span class="token punctuation">"</span>300<span class="token punctuation">"</span></span> <span class="token attr-name">width</span> <span class="token attr-value"><span class="token punctuation attr-equals">=</span> <span class="token punctuation">"</span>auto<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">></span></span>
-</code></pre>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">></span></span></code></pre>
 <p>Notons que l'on peut donner des attributs à un éléments directement dans la balise : on règle la taille de l'image lorsqu'on la déclare. La balise déclarant une image est ce qu'on appelle une balise orpheline, c'est à dire qu'elle n'a pas besoin de balise fermante.</p>
 <p>La balise &quot;h1&quot; permet d'indiquer un titre , &quot;header&quot; un en-tête, et &quot;a&quot; transforme une portion de texte en lien cliquable.&quot;div&quot; est une balise dite universelle, elle n'indique rien en soi mais va permettre d'attribuer des classes à des éléments de la page. Nous reparlerons des classes au moment d'aborder CSS.</p>
 <p>Maintenant, on va créer le contenu principal de la page. On va rapidement évoquer le but du site, et les fonctionnalités qu'on veut proposer. Mettons à jour notre code dans la section &quot;body&quot; en rajoutant une nouvelle section.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>main-content<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>main-content<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>A propos du site<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>Voici le début de commencement de mon site. Ce sera comme une base de données des recettes que j'ai pu faire 
     au fil de mes années d'étudiants, que je pourrai trier et rechercher selon des critères particuliers.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
@@ -214,8 +210,7 @@ Pour ce faire, j'ai suivi le cours HTML/CSS <a href="https://openclassrooms.com/
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>Je souhaite m'inspirer du site de <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.marmiton.org<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Marmiton<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>, et créer ma version 
       personnelle. <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>Voici ma première recette : les <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>recette_test.html<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Nouilles Instantanées.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">></span></span>
-</code></pre>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">></span></span></code></pre>
 <p>La balise &lt;ul&gt; permet de créer une liste à puce, avec chaque point indiqué par &lt;li&gt;. On aurait pu faire une liste ordonnée avec &lt;ol&gt;, qui aurait été une liste numérotée. &lt;main&gt; permet d'indiquer le contenu principal de la page. Cette balise sert autant à la machine qu'à l'humain, car elle permet de créer une catégorie clair et rendre le code plus lisible.</p>
 <p>Nous avons maintenant une page d'accueil qui indique ce qu'il y a à savoir sur le site. Voyons voir à quoi elle ressemble !!</p>
 <p><img src="site_moche.jpg" alt="Résultat"></p>
@@ -227,47 +222,42 @@ Pour ce faire, j'ai suivi le cours HTML/CSS <a href="https://openclassrooms.com/
 </code></pre>
 <p>A partir d'ici, on va pouvoir travailler sur le fichier style.css, et tous les changements effectués se répercuteront sur la page web.</p>
 <p>La structure d'un fichier .css est très différente d'un fichier .html. Ici, on va attribuer à des éléments et des catégories d'éléments des propriétés particulières. Par exemple, je veux que mes gros titres soient de la couleur violette, centrés et dans la police MingLiU. J'écrirai dans mon fichier .css :</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">h1</span><span class="token punctuation">{</span>
+<pre class="language-css"><code class="language-css"><span class="token selector">h1</span><span class="token punctuation">{</span>
     <span class="token property">color</span><span class="token punctuation">:</span> darkviolet<span class="token punctuation">;</span> 
     <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
     <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">"MingLiU-ExtB"</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Je peux aussi appliquer ces propriétés à plusieurs éléments en une seule fois, il suffit de les lister en les séparant d'une virgule. Par exemple, appliquant ces propriétés aux titres, mais aussi aux sous-titres plus petits. Il suffit d'écrire :</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">h1, h2, h3</span><span class="token punctuation">{</span>
+<pre class="language-css"><code class="language-css"><span class="token selector">h1, h2, h3</span><span class="token punctuation">{</span>
     <span class="token property">color</span><span class="token punctuation">:</span> darkviolet<span class="token punctuation">;</span> 
     <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
     <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">"MingLiU-ExtB"</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>On peut maintenant exploiter les classes que nous avions défini précédemment. Prenons par exemple l'en-tête, auquel on avait donné la classe &quot;entete&quot;. Dans le fichier .css, nous pouvons donner des attributs à tous les éléments de cette classe, avec la syntaxe &quot;.nomdelaclasse&quot; comme suit (en css les commentaires sont entourés par /* */):</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">.entete</span> <span class="token punctuation">{</span>
+<pre class="language-css"><code class="language-css"><span class="token selector">.entete</span> <span class="token punctuation">{</span>
     <span class="token property">max-width</span><span class="token punctuation">:</span> 1200px<span class="token punctuation">;</span> <span class="token comment">/* Largeur maximale du contenu du header */</span>
     <span class="token property">margin</span><span class="token punctuation">:</span> 0 auto<span class="token punctuation">;</span> <span class="token comment">/* Centre le contenu horizontalement */</span>
     <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span> <span class="token comment">/* Utilise la disposition flexbox */</span>
     <span class="token property">justify-content</span><span class="token punctuation">:</span> space-between<span class="token punctuation">;</span> <span class="token comment">/* Place les éléments à l'extrémité gauche et droite */</span>
     <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span> <span class="token comment">/* Centre les éléments verticalement */</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Grâce à ces attributs, on a donc un en-tête centré verticalement sur la page (grâce à &quot;align-items&quot;), avec des éléments également espacés au sein de l'en-tête (justify-content). Cette dernière propriété est une fonctionnalité de Flexbox. Flexbox permet d'ordonner des éléments au sein d'un conteneur, pour les aligner verticalement, horizontalement, ou encore régler l'espacement entre les éléments du conteneur. Flexbox permet aussi d'adapter le conteneur à la taille de l'écran avec la fonction &quot;flex-wrap&quot;. Si il n'y a plus d'espace horizontal, les éléments retournent à la ligne au lieu de dépasser de l'écran.</p>
 <p>On peut aussi très bien agir sur les éléments de type &quot;header&quot; comme suit :</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">header</span> <span class="token punctuation">{</span>
+<pre class="language-css"><code class="language-css"><span class="token selector">header</span> <span class="token punctuation">{</span>
     <span class="token property">color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span> 
     <span class="token property">position</span><span class="token punctuation">:</span> fixed<span class="token punctuation">;</span> 
     <span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
     <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
     <span class="token property">right</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
     <span class="token property">z-index</span><span class="token punctuation">:</span> 100<span class="token punctuation">;</span> <span class="token comment">/* Assure que le header est au-dessus du contenu de la page */</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Cela nous permet d'obtenir un en-tête noir, fixé en haut de l'écran même si l'utilisateur défile vers le bas.</p>
 <p>Nous voulons maintenant un arrière plan plus lisible et esthétique. Pour cela, je compte mettre le texte de la page dans une fenêtre blanche qui sera centrée au milieu de l'écran, et l'arrière plan sera un dégradé de couleurs pour donner un peu de vie au site. On va commencer par le fond, où il suffit de changer l'attribut de l'arrière plan du corps du site :</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">body</span><span class="token punctuation">{</span>
+<pre class="language-css"><code class="language-css"><span class="token selector">body</span><span class="token punctuation">{</span>
     <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>to bottom<span class="token punctuation">,</span> #800080<span class="token punctuation">,</span> #ffc0cb<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>On crée donc un dégradé qui va du haut vers le bas et du violet vers un blanc rosé. On peut maintenant agir sur le texte principal de la page, cette fois en agissant sur le main de la page, auquel on a donné la classe &quot;main-content&quot;.</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">.main-content</span> <span class="token punctuation">{</span>
+<pre class="language-css"><code class="language-css"><span class="token selector">.main-content</span> <span class="token punctuation">{</span>
     <span class="token property">max-width</span><span class="token punctuation">:</span> 800px<span class="token punctuation">;</span> <span class="token comment">/* Largeur maximale du contenu principal */</span>
     <span class="token property">padding</span><span class="token punctuation">:</span>20px<span class="token punctuation">;</span>
     <span class="token property">border</span><span class="token punctuation">:</span> 1px solid #ddd<span class="token punctuation">;</span>
@@ -276,14 +266,12 @@ Pour ce faire, j'ai suivi le cours HTML/CSS <a href="https://openclassrooms.com/
     <span class="token property">margin-left</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
     <span class="token property">margin-right</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
     <span class="token property">margin-top</span><span class="token punctuation">:</span> 80px<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Ainsi le texte est maintenant inséré dans une boîte centrée verticalement sur la page. La propriété &quot;border-radius&quot; permet d'avoir des coins arrondis et avoir un visuel plus plaisant, et &quot;padding&quot; permet de mettre de l'espace entre les bords et le contenu de la boîte pour avoir un texte plus aéré.</p>
 <p>Enfin, on peut terminer avec un effet mineur mais qui peut donner un peu de vie au site sont les animations jouant lors d'interactions avec la souris. On utilise alors ce qu'on appelle des pseudos-classes. C'est un mot-clé qu'on peut associer à un élément qui précise l'état spécifique dans lequel l'élément doit se trouver pour être ciblé par la déclaration. On va par exemple faire en sorte que les liens hypertexte changent de couleur lorsqu'ils sont survolés ou cliqués par la souris.</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">a:hover, a:active</span><span class="token punctuation">{</span>
+<pre class="language-css"><code class="language-css"><span class="token selector">a:hover, a:active</span><span class="token punctuation">{</span>
     <span class="token property">color</span><span class="token punctuation">:</span>deeppink
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Voici le résultat final :</p>
 <p><img src="site_beau.jpg" alt="Page d'accueil"></p>
 <p><img src="presentation.jpg" alt="Présentation élève"></p>

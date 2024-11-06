@@ -225,7 +225,7 @@ Les tables sont constituées de différentes colonnes que l'on appelle <strong>c
 <li>Créer la référence de notre dataset avec la méthode <code>.dataset()</code></li>
 <li>Récupérer notre dataset avec la méthode <code>.get_dataset</code> et la référence créée juste avant</li>
 </ul>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> google<span class="token punctuation">.</span>cloud <span class="token keyword">import</span> bigquery
+<pre class="language-python"><code class="language-python"><span class="token keyword">from</span> google<span class="token punctuation">.</span>cloud <span class="token keyword">import</span> bigquery
 
 <span class="token comment"># Create a "Client" object</span>
 client <span class="token operator">=</span> bigquery<span class="token punctuation">.</span>Client<span class="token punctuation">(</span><span class="token punctuation">)</span>
@@ -234,14 +234,12 @@ client <span class="token operator">=</span> bigquery<span class="token punctuat
 dataset_ref <span class="token operator">=</span> client<span class="token punctuation">.</span>dataset<span class="token punctuation">(</span><span class="token string">"hacker_news"</span><span class="token punctuation">,</span> project<span class="token operator">=</span><span class="token string">"bigquery-public-data"</span><span class="token punctuation">)</span>
 
 <span class="token comment"># API request - fetch the dataset</span>
-dataset <span class="token operator">=</span> client<span class="token punctuation">.</span>get_dataset<span class="token punctuation">(</span>dataset_ref<span class="token punctuation">)</span>
-</code></pre>
+dataset <span class="token operator">=</span> client<span class="token punctuation">.</span>get_dataset<span class="token punctuation">(</span>dataset_ref<span class="token punctuation">)</span></code></pre>
 <p>On peut ensuite <strong>lister les tables</strong> que contient le dataset :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># List all the tables in the "hacker_news" dataset</span>
+<pre class="language-python"><code class="language-python"><span class="token comment"># List all the tables in the "hacker_news" dataset</span>
 tables <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span>client<span class="token punctuation">.</span>list_tables<span class="token punctuation">(</span>dataset<span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span class="token keyword">for</span> table <span class="token keyword">in</span> tables<span class="token punctuation">:</span>  
-    <span class="token keyword">print</span><span class="token punctuation">(</span>table<span class="token punctuation">.</span>table_id<span class="token punctuation">)</span>
-</code></pre>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>table<span class="token punctuation">.</span>table_id<span class="token punctuation">)</span></code></pre>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
 <details class="group">
 <summary class="list-none py-0.5">
@@ -259,23 +257,21 @@ tables <span class="token operator">=</span> <span class="token builtin">list</s
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">comments
+<pre class="language-python"><code class="language-python">comments
 full
 full_201510
-stories
-</code></pre>
+stories</code></pre>
 </div>
 </details>     
 </div>
 <p>Puis, de la même manière que l'on récupère notre dataset, on peut <strong>récupérer une table</strong> en particulier, et afficher son <strong>schéma de table</strong> pour pouvoir étudier sa structure :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># Construct a reference to the "full" table</span>
+<pre class="language-python"><code class="language-python"><span class="token comment"># Construct a reference to the "full" table</span>
 table_ref <span class="token operator">=</span> dataset_ref<span class="token punctuation">.</span>table<span class="token punctuation">(</span><span class="token string">"full"</span><span class="token punctuation">)</span>
 
 <span class="token comment"># API request - fetch the table</span>
 table <span class="token operator">=</span> client<span class="token punctuation">.</span>get_table<span class="token punctuation">(</span>table_ref<span class="token punctuation">)</span>
 
-table<span class="token punctuation">.</span>schema
-</code></pre>
+table<span class="token punctuation">.</span>schema</code></pre>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
 <details class="group">
 <summary class="list-none py-0.5">
@@ -293,7 +289,7 @@ table<span class="token punctuation">.</span>schema
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token punctuation">[</span>SchemaField<span class="token punctuation">(</span><span class="token string">'title'</span><span class="token punctuation">,</span> <span class="token string">'STRING'</span><span class="token punctuation">,</span> <span class="token string">'NULLABLE'</span><span class="token punctuation">,</span> <span class="token string">'Story title'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<pre class="language-python"><code class="language-python"><span class="token punctuation">[</span>SchemaField<span class="token punctuation">(</span><span class="token string">'title'</span><span class="token punctuation">,</span> <span class="token string">'STRING'</span><span class="token punctuation">,</span> <span class="token string">'NULLABLE'</span><span class="token punctuation">,</span> <span class="token string">'Story title'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
  SchemaField<span class="token punctuation">(</span><span class="token string">'url'</span><span class="token punctuation">,</span> <span class="token string">'STRING'</span><span class="token punctuation">,</span> <span class="token string">'NULLABLE'</span><span class="token punctuation">,</span> <span class="token string">'Story url'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
  SchemaField<span class="token punctuation">(</span><span class="token string">'text'</span><span class="token punctuation">,</span> <span class="token string">'STRING'</span><span class="token punctuation">,</span> <span class="token string">'NULLABLE'</span><span class="token punctuation">,</span> <span class="token string">'Story or comment text'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
  SchemaField<span class="token punctuation">(</span><span class="token string">'dead'</span><span class="token punctuation">,</span> <span class="token string">'BOOLEAN'</span><span class="token punctuation">,</span> <span class="token string">'NULLABLE'</span><span class="token punctuation">,</span> <span class="token string">'Is dead?'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
@@ -306,16 +302,14 @@ table<span class="token punctuation">.</span>schema
  SchemaField<span class="token punctuation">(</span><span class="token string">'parent'</span><span class="token punctuation">,</span> <span class="token string">'INTEGER'</span><span class="token punctuation">,</span> <span class="token string">'NULLABLE'</span><span class="token punctuation">,</span> <span class="token string">'Parent comment ID'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
  SchemaField<span class="token punctuation">(</span><span class="token string">'descendants'</span><span class="token punctuation">,</span> <span class="token string">'INTEGER'</span><span class="token punctuation">,</span> <span class="token string">'NULLABLE'</span><span class="token punctuation">,</span> <span class="token string">'Number of story or poll descendants'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
  SchemaField<span class="token punctuation">(</span><span class="token string">'ranking'</span><span class="token punctuation">,</span> <span class="token string">'INTEGER'</span><span class="token punctuation">,</span> <span class="token string">'NULLABLE'</span><span class="token punctuation">,</span> <span class="token string">'Comment ranking'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
- SchemaField<span class="token punctuation">(</span><span class="token string">'deleted'</span><span class="token punctuation">,</span> <span class="token string">'BOOLEAN'</span><span class="token punctuation">,</span> <span class="token string">'NULLABLE'</span><span class="token punctuation">,</span> <span class="token string">'Is deleted?'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
-</code></pre>
+ SchemaField<span class="token punctuation">(</span><span class="token string">'deleted'</span><span class="token punctuation">,</span> <span class="token string">'BOOLEAN'</span><span class="token punctuation">,</span> <span class="token string">'NULLABLE'</span><span class="token punctuation">,</span> <span class="token string">'Is deleted?'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">]</span></code></pre>
 <p>Chaque ligne représente un champ (une colonne) de la table, et donne davantage d'informations comme le type de données dans ce champ, son titre, sa description, et certains autres paramètres.</p>
 </div>
 </details>     
 </div>
 <p>Enfin, en connaissant quelques commandes / fonctions, on peut faire quelques petites choses intéressantes telles qu'<strong>afficher les premières lignes du dataset</strong>, c'est plutôt utile pour voir à quoi il ressemble :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># Preview the first five lines of the "full" table</span>
-client<span class="token punctuation">.</span>list_rows<span class="token punctuation">(</span>table<span class="token punctuation">,</span> max_results<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">.</span>to_dataframe<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
+<pre class="language-python"><code class="language-python"><span class="token comment"># Preview the first five lines of the "full" table</span>
+client<span class="token punctuation">.</span>list_rows<span class="token punctuation">(</span>table<span class="token punctuation">,</span> max_results<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">.</span>to_dataframe<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
 <details class="group">
 <summary class="list-none py-0.5">
@@ -344,7 +338,7 @@ client<span class="token punctuation">.</span>list_rows<span class="token punctu
 <li>Configurer la requête, ici on rajoute une <code>safe_config</code> pour empêcher de faire des requêtes trop lourdes car sinon ça devient payant...</li>
 <li>On exécute la requête et on la renvoie sous la forme d'un dataframe pour pouvoir le visualiser</li>
 </ul>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token operator">-</span> <span class="token comment"># Query to select prolific commenters and post counts</span>
+<pre class="language-python"><code class="language-python"><span class="token operator">-</span> <span class="token comment"># Query to select prolific commenters and post counts</span>
 titles_query <span class="token operator">=</span> <span class="token triple-quoted-string string">"""
                 SELECT title
                 FROM `bigquery-public-data.hacker_news.full`
@@ -358,8 +352,7 @@ query_job <span class="token operator">=</span> client<span class="token punctua
 titles <span class="token operator">=</span> query_job<span class="token punctuation">.</span>to_dataframe<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
 <span class="token comment"># View top few rows of results</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>titles<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-</code></pre>
+<span class="token keyword">print</span><span class="token punctuation">(</span>titles<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
 <p>Par la suite, je n'afficherai pas toujours ce code servant à exécuter la requête pour alléger le rendu, mais gardons en tête que les requêtes SQL que j'ai écrites par la suite ne se sont pas exécutées toutes seules.</p>
 <h2>Les requêtes SQL de base</h2>
 <p>Pour cette partie je me suis appuyé sur la formation <a href="https://www.kaggle.com/learn/intro-to-sql">Intro to SQL</a> du site Kaggle, en prenant le temps de faire chaque exercice proposé sans pour autant les restituer ici.</p>
@@ -417,12 +410,11 @@ titles <span class="token operator">=</span> query_job<span class="token punctua
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># Query to select cities and countries with units of "ppm"</span>
+<pre class="language-python"><code class="language-python"><span class="token comment"># Query to select cities and countries with units of "ppm"</span>
 first_query <span class="token operator">=</span> <span class="token string">""</span>"
               SELECT city<span class="token punctuation">,</span> country
               FROM `bigquery<span class="token operator">-</span>public<span class="token operator">-</span>data<span class="token punctuation">.</span>openaq<span class="token punctuation">.</span>global_air_quality`
-              WHERE unit <span class="token operator">=</span> <span class="token string">'ppm'</span>
-</code></pre>
+              WHERE unit <span class="token operator">=</span> <span class="token string">'ppm'</span></code></pre>
 <p>Retourne :</p>
 <table>
 <thead>
@@ -483,13 +475,12 @@ first_query <span class="token operator">=</span> <span class="token string">""<
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># Query to select cities and countries with units of "ppm" (unique)</span>
+<pre class="language-python"><code class="language-python"><span class="token comment"># Query to select cities and countries with units of "ppm" (unique)</span>
 first_query <span class="token operator">=</span> <span class="token triple-quoted-string string">"""
               SELECT DISTINCT city, country
               FROM `bigquery-public-data.openaq.global_air_quality`
               WHERE unit = 'ppm'
-              """</span> 
-</code></pre>
+              """</span> </code></pre>
 <p>Retourne :</p>
 <table>
 <thead>
@@ -550,21 +541,21 @@ first_query <span class="token operator">=</span> <span class="token triple-quot
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># Query to select all columns where pollution levels are exactly 0</span>
+<pre class="language-python"><code class="language-python"><span class="token comment"># Query to select all columns where pollution levels are exactly 0</span>
 zero_pollution_query <span class="token operator">=</span> <span class="token triple-quoted-string string">"""
                         SELECT *
                         FROM `bigquery-public-data.openaq.global_air_quality`
                         WHERE value = 0
-                        """</span>
-</code></pre>
+                        """</span></code></pre>
 <p>Retourne :</p>
-<pre class="language-markdown " style="counter-reset: linenumber 0"><code class="language-markdown"><span class="token table"><span class="token table-header-row"><span class="token punctuation">|</span><span class="token table-header important">    </span><span class="token punctuation">|</span><span class="token table-header important"> location                     </span><span class="token punctuation">|</span><span class="token table-header important"> city     </span><span class="token punctuation">|</span><span class="token table-header important"> country   </span><span class="token punctuation">|</span><span class="token table-header important"> pollutant   </span><span class="token punctuation">|</span><span class="token table-header important">   value </span><span class="token punctuation">|</span><span class="token table-header important"> timestamp                 </span><span class="token punctuation">|</span><span class="token table-header important"> unit   </span><span class="token punctuation">|</span><span class="token table-header important"> source_name   </span><span class="token punctuation">|</span><span class="token table-header important">   latitude </span><span class="token punctuation">|</span><span class="token table-header important">   longitude </span><span class="token punctuation">|</span><span class="token table-header important">   averaged_over_in_hours </span><span class="token punctuation">|</span><span class="token table-header important"> location_geom      </span><span class="token punctuation">|</span></span>
-<span class="token table-line"><span class="token punctuation">|</span><span class="token punctuation">---:</span><span class="token punctuation">|</span><span class="token punctuation">:-----------------------------</span><span class="token punctuation">|</span><span class="token punctuation">:---------</span><span class="token punctuation">|</span><span class="token punctuation">:----------</span><span class="token punctuation">|</span><span class="token punctuation">:------------</span><span class="token punctuation">|</span><span class="token punctuation">--------:</span><span class="token punctuation">|</span><span class="token punctuation">:--------------------------</span><span class="token punctuation">|</span><span class="token punctuation">:-------</span><span class="token punctuation">|</span><span class="token punctuation">:--------------</span><span class="token punctuation">|</span><span class="token punctuation">-----------:</span><span class="token punctuation">|</span><span class="token punctuation">------------:</span><span class="token punctuation">|</span><span class="token punctuation">-------------------------:</span><span class="token punctuation">|</span><span class="token punctuation">:-------------------</span><span class="token punctuation">|</span></span>
-<span class="token table-data-rows"><span class="token punctuation">|</span><span class="token table-data">  0 </span><span class="token punctuation">|</span><span class="token table-data"> Zielonka, Bory Tucholskie    </span><span class="token punctuation">|</span><span class="token table-data"> Zielonka </span><span class="token punctuation">|</span><span class="token table-data"> PL        </span><span class="token punctuation">|</span><span class="token table-data"> bc          </span><span class="token punctuation">|</span><span class="token table-data">       0 </span><span class="token punctuation">|</span><span class="token table-data"> 2022-04-29 14:00:00+00:00 </span><span class="token punctuation">|</span><span class="token table-data"> µg/m³  </span><span class="token punctuation">|</span><span class="token table-data"> GIOS          </span><span class="token punctuation">|</span><span class="token table-data">          1 </span><span class="token punctuation">|</span><span class="token table-data">     53.6621 </span><span class="token punctuation">|</span><span class="token table-data">                  17.934  </span><span class="token punctuation">|</span><span class="token table-data"> POINT(53.662136 1) </span><span class="token punctuation">|</span>
+<pre class="language-markdown"><code class="language-markdown"><span class="token table"><span class="token table-header-row"><span class="token punctuation">|</span><span class="token table-header important">    </span><span class="token punctuation">|</span><span class="token table-header important"> location                     </span><span class="token punctuation">|</span><span class="token table-header important"> city     </span><span class="token punctuation">|</span><span class="token table-header important"> country   </span><span class="token punctuation">|</span><span class="token table-header important"> pollutant   </span><span class="token punctuation">|</span><span class="token table-header important">   value </span><span class="token punctuation">|</span><span class="token table-header important"> timestamp                 </span><span class="token punctuation">|</span><span class="token table-header important"> unit   </span><span class="token punctuation">|</span><span class="token table-header important"> source_name   </span><span class="token punctuation">|</span><span class="token table-header important">   latitude </span><span class="token punctuation">|</span><span class="token table-header important">   longitude </span><span class="token punctuation">|</span><span class="token table-header important">   averaged_over_in_hours </span><span class="token punctuation">|</span><span class="token table-header important"> location_geom      </span><span class="token punctuation">|</span>
+</span><span class="token table-line"><span class="token punctuation">|</span><span class="token punctuation">---:</span><span class="token punctuation">|</span><span class="token punctuation">:-----------------------------</span><span class="token punctuation">|</span><span class="token punctuation">:---------</span><span class="token punctuation">|</span><span class="token punctuation">:----------</span><span class="token punctuation">|</span><span class="token punctuation">:------------</span><span class="token punctuation">|</span><span class="token punctuation">--------:</span><span class="token punctuation">|</span><span class="token punctuation">:--------------------------</span><span class="token punctuation">|</span><span class="token punctuation">:-------</span><span class="token punctuation">|</span><span class="token punctuation">:--------------</span><span class="token punctuation">|</span><span class="token punctuation">-----------:</span><span class="token punctuation">|</span><span class="token punctuation">------------:</span><span class="token punctuation">|</span><span class="token punctuation">-------------------------:</span><span class="token punctuation">|</span><span class="token punctuation">:-------------------</span><span class="token punctuation">|</span>
+</span><span class="token table-data-rows"><span class="token punctuation">|</span><span class="token table-data">  0 </span><span class="token punctuation">|</span><span class="token table-data"> Zielonka, Bory Tucholskie    </span><span class="token punctuation">|</span><span class="token table-data"> Zielonka </span><span class="token punctuation">|</span><span class="token table-data"> PL        </span><span class="token punctuation">|</span><span class="token table-data"> bc          </span><span class="token punctuation">|</span><span class="token table-data">       0 </span><span class="token punctuation">|</span><span class="token table-data"> 2022-04-29 14:00:00+00:00 </span><span class="token punctuation">|</span><span class="token table-data"> µg/m³  </span><span class="token punctuation">|</span><span class="token table-data"> GIOS          </span><span class="token punctuation">|</span><span class="token table-data">          1 </span><span class="token punctuation">|</span><span class="token table-data">     53.6621 </span><span class="token punctuation">|</span><span class="token table-data">                  17.934  </span><span class="token punctuation">|</span><span class="token table-data"> POINT(53.662136 1) </span><span class="token punctuation">|</span>
 <span class="token punctuation">|</span><span class="token table-data">  1 </span><span class="token punctuation">|</span><span class="token table-data"> Toruń, ul. Przy Kaszowniku   </span><span class="token punctuation">|</span><span class="token table-data"> Toruń    </span><span class="token punctuation">|</span><span class="token table-data"> PL        </span><span class="token punctuation">|</span><span class="token table-data"> bc          </span><span class="token punctuation">|</span><span class="token table-data">       0 </span><span class="token punctuation">|</span><span class="token table-data"> 2022-04-19 04:00:00+00:00 </span><span class="token punctuation">|</span><span class="token table-data"> µg/m³  </span><span class="token punctuation">|</span><span class="token table-data"> GIOS          </span><span class="token punctuation">|</span><span class="token table-data">          1 </span><span class="token punctuation">|</span><span class="token table-data">     53.0176 </span><span class="token punctuation">|</span><span class="token table-data">                  18.6128 </span><span class="token punctuation">|</span><span class="token table-data"> POINT(53.017628 1) </span><span class="token punctuation">|</span>
 <span class="token punctuation">|</span><span class="token table-data">  2 </span><span class="token punctuation">|</span><span class="token table-data"> Kielce, ul. Targowa          </span><span class="token punctuation">|</span><span class="token table-data"> Kielce   </span><span class="token punctuation">|</span><span class="token table-data"> PL        </span><span class="token punctuation">|</span><span class="token table-data"> bc          </span><span class="token punctuation">|</span><span class="token table-data">       0 </span><span class="token punctuation">|</span><span class="token table-data"> 2022-05-07 17:00:00+00:00 </span><span class="token punctuation">|</span><span class="token table-data"> µg/m³  </span><span class="token punctuation">|</span><span class="token table-data"> GIOS          </span><span class="token punctuation">|</span><span class="token table-data">          1 </span><span class="token punctuation">|</span><span class="token table-data">     50.879  </span><span class="token punctuation">|</span><span class="token table-data">                  20.6337 </span><span class="token punctuation">|</span><span class="token table-data"> POINT(50.878998 1) </span><span class="token punctuation">|</span>
 <span class="token punctuation">|</span><span class="token table-data">  3 </span><span class="token punctuation">|</span><span class="token table-data"> Zielonka, Bory Tucholskie    </span><span class="token punctuation">|</span><span class="token table-data"> Zielonka </span><span class="token punctuation">|</span><span class="token table-data"> PL        </span><span class="token punctuation">|</span><span class="token table-data"> bc          </span><span class="token punctuation">|</span><span class="token table-data">       0 </span><span class="token punctuation">|</span><span class="token table-data"> 2022-05-19 14:00:00+00:00 </span><span class="token punctuation">|</span><span class="token table-data"> µg/m³  </span><span class="token punctuation">|</span><span class="token table-data"> GIOS          </span><span class="token punctuation">|</span><span class="token table-data">          1 </span><span class="token punctuation">|</span><span class="token table-data">     53.6621 </span><span class="token punctuation">|</span><span class="token table-data">                  17.934  </span><span class="token punctuation">|</span><span class="token table-data"> POINT(53.662136 1) </span><span class="token punctuation">|</span>
-<span class="token punctuation">|</span><span class="token table-data">  4 </span><span class="token punctuation">|</span><span class="token table-data"> Koszalin, ul. Armii Krajowej </span><span class="token punctuation">|</span><span class="token table-data"> Koszalin </span><span class="token punctuation">|</span><span class="token table-data"> PL        </span><span class="token punctuation">|</span><span class="token table-data"> bc          </span><span class="token punctuation">|</span><span class="token table-data">       0 </span><span class="token punctuation">|</span><span class="token table-data"> 2022-05-12 20:00:00+00:00 </span><span class="token punctuation">|</span><span class="token table-data"> µg/m³  </span><span class="token punctuation">|</span><span class="token table-data"> GIOS          </span><span class="token punctuation">|</span><span class="token table-data">          1 </span><span class="token punctuation">|</span><span class="token table-data">     54.194  </span><span class="token punctuation">|</span><span class="token table-data">                  16.1725 </span><span class="token punctuation">|</span><span class="token table-data"> POINT(54.193986 1) </span><span class="token punctuation">|</span></span></span></code></pre>
+<span class="token punctuation">|</span><span class="token table-data">  4 </span><span class="token punctuation">|</span><span class="token table-data"> Koszalin, ul. Armii Krajowej </span><span class="token punctuation">|</span><span class="token table-data"> Koszalin </span><span class="token punctuation">|</span><span class="token table-data"> PL        </span><span class="token punctuation">|</span><span class="token table-data"> bc          </span><span class="token punctuation">|</span><span class="token table-data">       0 </span><span class="token punctuation">|</span><span class="token table-data"> 2022-05-12 20:00:00+00:00 </span><span class="token punctuation">|</span><span class="token table-data"> µg/m³  </span><span class="token punctuation">|</span><span class="token table-data"> GIOS          </span><span class="token punctuation">|</span><span class="token table-data">          1 </span><span class="token punctuation">|</span><span class="token table-data">     54.194  </span><span class="token punctuation">|</span><span class="token table-data">                  16.1725 </span><span class="token punctuation">|</span><span class="token table-data"> POINT(54.193986 1) </span><span class="token punctuation">|</span>
+</span></span></code></pre>
 </div>
 </details>     
 </div>
@@ -588,13 +579,12 @@ zero_pollution_query <span class="token operator">=</span> <span class="token tr
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># Query to select all columns where the name contains 'ipl'</span>
+<pre class="language-python"><code class="language-python"><span class="token comment"># Query to select all columns where the name contains 'ipl'</span>
 query <span class="token operator">=</span> <span class="token triple-quoted-string string">"""
         SELECT * 
         FROM `bigquery-public-data.pet_records.pets` 
         WHERE Name LIKE '%ipl%'
-        """</span>
-</code></pre>
+        """</span></code></pre>
 </div>
 </details>     
 </div>
@@ -651,13 +641,12 @@ query <span class="token operator">=</span> <span class="token triple-quoted-str
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># Count the number of deleted comments</span>
+<pre class="language-python"><code class="language-python"><span class="token comment"># Count the number of deleted comments</span>
 deleted_query<span class="token operator">=</span><span class="token triple-quoted-string string">"""
                 SELECT COUNT(1)
                 FROM `bigquery-public-data.hacker_news.full`
                 WHERE deleted = True
-                """</span>
-</code></pre>
+                """</span></code></pre>
 <p>Qui retourne :</p>
 <table>
 <thead>
@@ -697,13 +686,12 @@ deleted_query<span class="token operator">=</span><span class="token triple-quot
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># Count the number of deleted comments</span>
+<pre class="language-python"><code class="language-python"><span class="token comment"># Count the number of deleted comments</span>
 deleted_query<span class="token operator">=</span><span class="token triple-quoted-string string">"""
                 SELECT COUNT(1)as Number_deleted
                 FROM `bigquery-public-data.hacker_news.full`
                 WHERE deleted = True
-                """</span>
-</code></pre>
+                """</span></code></pre>
 <p>Qui retourne un tableau avec un joli titre :</p>
 <table>
 <thead>
@@ -818,15 +806,14 @@ deleted_query<span class="token operator">=</span><span class="token triple-quot
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">bigquery_experts_query <span class="token operator">=</span> <span class="token triple-quoted-string string">"""
+<pre class="language-python"><code class="language-python">bigquery_experts_query <span class="token operator">=</span> <span class="token triple-quoted-string string">"""
                         SELECT a.owner_user_id AS user_id, COUNT(1) AS number_of_answers
                         FROM `bigquery-public-data.stackoverflow.posts_answers` as a
                             INNER JOIN `bigquery-public-data.stackoverflow.posts_questions` as q
                             ON a.parent_id = q.id
                         WHERE q.tags LIKE '%bigquery%'
                         GROUP BY user_id
-                        """</span>
-</code></pre>
+                        """</span></code></pre>
 <p>Qui retourne les utilisateurs ayant répondu à le plus de questions sur bigquery sur Stackoverflow :</p>
 <table>
 <thead>
@@ -896,7 +883,7 @@ deleted_query<span class="token operator">=</span><span class="token triple-quot
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># Write a query that shows, for each hour of the day in the dataset, the corresponding number of trips and average speed.</span>
+<pre class="language-python"><code class="language-python"><span class="token comment"># Write a query that shows, for each hour of the day in the dataset, the corresponding number of trips and average speed.</span>
 
 speeds_query <span class="token operator">=</span> <span class="token triple-quoted-string string">"""
                WITH RelevantRides AS
@@ -916,8 +903,7 @@ speeds_query <span class="token operator">=</span> <span class="token triple-quo
                FROM RelevantRides
                GROUP BY hour_of_day
                ORDER BY hour_of_day
-               """</span>
-</code></pre>
+               """</span></code></pre>
 <p>Qui retourne :</p>
 <table>
 <thead>
@@ -1118,7 +1104,7 @@ speeds_query <span class="token operator">=</span> <span class="token triple-quo
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># Query to count the (cumulative) number of trips per day</span>
+<pre class="language-python"><code class="language-python"><span class="token comment"># Query to count the (cumulative) number of trips per day</span>
 num_trips_query <span class="token operator">=</span> <span class="token triple-quoted-string string">"""
                   WITH trips_by_day AS
                   (
@@ -1135,8 +1121,7 @@ num_trips_query <span class="token operator">=</span> <span class="token triple-
                                ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
                                ) AS cumulative_trips
                       FROM trips_by_day
-                  """</span>
-</code></pre>
+                  """</span></code></pre>
 <p><img src="cumul.jpg" alt="result"></p>
 </div>
 </details>     

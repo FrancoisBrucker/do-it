@@ -157,29 +157,26 @@ Le plus simple pour comprendre est de prendre un exemple :
 <p>Dans l'image précédente, on peut voir que la page web est constituée d'un tableau qui permet de disposer de manière simple les différents éléments voulus.</p>
 <h3>Créé un tableau</h3>
 <p>Pour créer un tableau, il faut d'abord créer un <em>container</em> c'est un élément HTML qui va contenir d'autres éléments, comme c'est le cas dans l'exemple suivant :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>Premier élément<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>Deuxième élément<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>Troisième élément<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>Quatrième élément<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-</code></pre>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
 <p>Pour l'instant on a simplement créé un élément avec d'autres à l'intérieur, il faut ensuite préciser que cet élément est un tableau. Pour cela, dans le fichier CSS il suffit d'une simple ligne de code :</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">.container</span> <span class="token punctuation">{</span>
+<pre class="language-css"><code class="language-css"><span class="token selector">.container</span> <span class="token punctuation">{</span>
     <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Cette ligne permet simplement de dire que l'élément de class &quot;container&quot; doit être considéré comme un tableau.</p>
 <h3>Modifier les propriétés du tableau</h3>
 <p>Une fois le tableau créé, on peut jouer sur plusieurs propriétés pour le modifier. Il existe des propriétés qui s'appliquent à l'ensemble du tableau, donc au container, d'autres aux éléments qui constituent le tableau.
 Examinons l'exemple suivant avec quelques propriétés du container :</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">.container</span> <span class="token punctuation">{</span>
+<pre class="language-css"><code class="language-css"><span class="token selector">.container</span> <span class="token punctuation">{</span>
     <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>`
     <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 500px 500px<span class="token punctuation">;</span>
     <span class="token property">grid-template-rows</span><span class="token punctuation">:</span> 100px 500px<span class="token punctuation">;</span>
     <span class="token property">gap</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <ul>
 <li>Avec la propriété <em><strong>grid-template-columns</strong></em>, on fixe la largeur de chaque colonne. Ici, j'ai créé 2 colonnes de 500 pixels de large chacune.</li>
 <li>Avec la propriété <em><strong>grid-template-rows</strong></em>, on fixe la longueur de chaque ligne. J'ai créé 2 lignes, la première fera 100 pixels de long et l'autre 500.</li>
@@ -199,12 +196,11 @@ Le tableau se positionne au milieu du container.</li>
 </ul>
 <p>La propriété <em><strong>align-content</strong></em> permet de faire la même chose verticalement.</p>
 <p>D'autres propriétés existent mais elles s'appliquent cette fois aux éléments du tableau. Par exemple, on peut donner quelques propriétés à l'élément <code>&lt;div class=&quot;first&quot;&gt;Premier élément&lt;/div&gt;</code>:</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">.first</span> <span class="token punctuation">{</span>
+<pre class="language-css"><code class="language-css"><span class="token selector">.first</span> <span class="token punctuation">{</span>
    <span class="token property">background-color</span><span class="token punctuation">:</span> blueviolet<span class="token punctuation">;</span>
    <span class="token property">justify-self</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
    <span class="token property">align-self</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Ici on a trois propriétés, <em><strong>background-color</strong></em> permet de modifier la couleur de la cellule du tableau.
 <em><strong>justify-self</strong></em> permet de centrer horizontalement l'élément dans la cellule tandis que <em><strong>align-self</strong></em> permet de centrer l'élément verticalement dans la cellule.</p>
 <p>Les tableaux sont donc un moyen simple permettant de gérer la mise en place de la page, on peut créer des colonnes, des lignes de la taille que l'on souhaite en y mettant les éléments voulus.</p>
@@ -218,26 +214,23 @@ Le tableau se positionne au milieu du container.</li>
 <img src="flex-exemple.png" alt="Exemple de mise en page avec une flexbox"></p>
 <h2>Créer une Flexbox</h2>
 <p>Voyons maintenant comment créer une Flexbox. D'abord, dans le fichier HTML, il faut créer un container dans lequel on ajoute les différents éléments qui constitueront la Flexbox. Pour cela on entre les lignes suivantes :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-</code></pre>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
 <p>On a un bien un container et des éléments à l'intérieur.</p>
 <p>Ensuite dans le fichier CSS, il faut spécifier que la div de class <em>container</em> est une Flexbox. Pour cela :</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">.container</span> <span class="token punctuation">{</span>
+<pre class="language-css"><code class="language-css"><span class="token selector">.container</span> <span class="token punctuation">{</span>
    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Cela ressemble beaucoup à ce qu'on a fait pour la Grid.
 On précise ensuite si on souhaite créer une Flexbox en colonne ou en ligne grâce à la propriété <em><strong>flex-direction</strong></em>.</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">.container</span> <span class="token punctuation">{</span>
+<pre class="language-css"><code class="language-css"><span class="token selector">.container</span> <span class="token punctuation">{</span>
     <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
     <span class="token property">flex-direction</span><span class="token punctuation">:</span> column<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>On obtiendra ici une Flexbox en colonne comme dans le premier exemple de Flexbox.
 Si on souhaite en créer une en ligne il faudra écrire :
 <em><strong>flex-direction: row;</strong></em>.</p>
@@ -265,12 +258,11 @@ Cette dernière peut prendre plusieurs valeurs :</p>
 <p>Lorsqu'un élément possède la propriété <em><strong>position: static</strong></em> rien de particulier ne se passe, l'élément reste seulement là où il aurait du être.</p>
 <h4>Relative</h4>
 <p>Cette propriété permet d'attribuer un décalage de position à l'élément concernée relativement à la position qu'aurait du avoir l'élément. Par exemple le code suivant :</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">.item1</span> <span class="token punctuation">{</span>
+<pre class="language-css"><code class="language-css"><span class="token selector">.item1</span> <span class="token punctuation">{</span>
      <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
      <span class="token property">right</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
      <span class="token property">bottom</span><span class="token punctuation">:</span> 3px<span class="token punctuation">;</span> 
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Permet de passer de cette disposition :
 <img src="position-static.png" alt="Exemple position static"></p>
 <p>A celle ci où il y a eu un décalage de 100 pixels vers la droite et de 30 pixels vers le haut :

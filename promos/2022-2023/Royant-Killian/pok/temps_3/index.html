@@ -209,7 +209,7 @@
 <p><img src="images/Untitled1.png" alt="Untitled"></p>
 <h2>Arborescence des fichiers</h2>
 <p>Voici l’organisation de mes fichiers sources. J’ai divisé mon application en composants React, appelés dans une application globale App.js. Il n’y a qu’un seul fichier de style car le style des composant est directement écrit en Tailwind dans les fichiers React.</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">src/
+<pre class="language-bash"><code class="language-bash">src/
 ├── components/
 │   ├── AddToCart.js
 │   ├── Catalogue.js
@@ -219,15 +219,14 @@
 │   └── App.css
 ├── App.js
 ├── index.html
-└── index.js
-</code></pre>
+└── index.js</code></pre>
 <h2>Sprint 1 - Création de l’app et du catalogue</h2>
 <p>Le code ci-dessous représente la version 1 du prototype d'application React développée dans le cadre d'un POK sur la création d'une boutique en ligne. Cette version contient la page du catalogue, qui permet d'afficher les produits disponibles à l'achat. Le code utilise TailwindCSS pour appliquer des styles au composant et des composants Material-UI pour ajouter des fonctionnalités supplémentaires tels que les boutons d'ajout au panier.</p>
 <p><img src="images/Untitled2.png" alt="Untitled"></p>
 <h3>App.js</h3>
 <p>./App.js</p>
 <p>Le code suivant est un extrait de l'application React développée dans le cadre d'un POK sur la création d'une boutique en ligne. Il s'agit du code de la fonction <code>App</code>, qui est le composant principal de l'application. Cette fonction retourne du JSX (JavaScript avec des balises XML), qui permet de décrire l'interface utilisateur de l'application.</p>
-<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token keyword">const</span> products <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'...'</span><span class="token punctuation">]</span>  <span class="token comment">// Contient des produits</span>
+<pre class="language-jsx"><code class="language-jsx"><span class="token keyword">const</span> products <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'...'</span><span class="token punctuation">]</span>  <span class="token comment">// Contient des produits</span>
 
 <span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
@@ -249,14 +248,13 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">StyledEngineProvider</span></span><span class="token punctuation">></span></span>
 
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Dans ce code, la fonction <code>useState</code> est utilisée pour stocker les produits ajoutés au panier par l'utilisateur. La fonction <code>addToCart</code> permet d'ajouter un produit au panier en mettant à jour l'état <code>cart</code> avec la fonction <code>setCart</code>.</p>
 <p>Le JSX retourné par la fonction <code>App</code> contient un <code>StyledEngineProvider</code>, qui enveloppe un <code>div</code> avec une classe <code>app</code>. Ce div contient un titre (<code>h1</code>) et un paragraphe (<code>p</code>) qui ne sont pas pertinents pour la compréhension du code. Enfin, il y a un composant <code>Catalogue</code> qui prend deux props (<code>products</code> et <code>addToCart</code>). Cela signifie que le composant <code>Catalogue</code> est appelé avec ces deux props.</p>
 <p>Le composant <code>StyledEngineProvider</code> est utilisé pour faire fonctionner TailwindCSS avec Material-UI. Concrètement, il permet d'injecter les styles dans l'application et de les rendre compatibles avec les composants Material-UI. Il s'agit donc d'un élément important pour utiliser les deux bibliothèques de manière conjointe dans une application React.</p>
 <h3>Catalogue</h3>
 <p>./components/Catalogue.js</p>
-<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token keyword">import</span> <span class="token punctuation">{</span> CatalogueItem <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./CatalogueItem'</span><span class="token punctuation">;</span>
+<pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> <span class="token punctuation">{</span> CatalogueItem <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./CatalogueItem'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">addToCart</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">product</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Adding to cart:'</span><span class="token punctuation">,</span> product<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -270,14 +268,13 @@
             <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token plain-text">
         </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Le code représente le composant <code>Catalogue</code> de l'application React. Ce composant est appelé dans le composant principal <code>App</code>. Le composant <code>Catalogue</code> prend une seule prop appelée <code>products</code>, qui est un tableau d'objets représentant les produits à afficher. Le composant <code>Catalogue</code> utilise la méthode <code>.map()</code> pour itérer sur le tableau des produits et afficher chaque produit à l'aide du composant <code>CatalogueItem</code>.</p>
 <p>Le composant <code>CatalogueItem</code> prend deux props, <code>product</code> et <code>addToCart</code>. Le composant <code>addToCart</code> est une fonction qui sera appelée lorsqu'un utilisateur clique sur le bouton &quot;Add to cart&quot; dans le composant <code>CatalogueItem</code>.</p>
 <p>Le code utilise également TailwindCSS pour appliquer des styles au composant <code>Catalogue</code>. Le conteneur principal est un div avec une classe <code>flex</code> qui utilise la direction verticale (<code>flex-col</code>) et ajoute un espacement vertical (<code>space-y-4</code>) entre chaque élément dans le conteneur. Le composant <code>CatalogueItem</code> est appelé pour chaque produit et est rendu à l'intérieur du conteneur principal.</p>
 <h3>CatalogueItem</h3>
 <p>./components/CatalogueItem.js</p>
-<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token keyword">import</span> <span class="token punctuation">{</span> AddToCart <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./AddToCart'</span><span class="token punctuation">;</span>
+<pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> <span class="token punctuation">{</span> AddToCart <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./AddToCart'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">CatalogueItem</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token punctuation">(</span>
@@ -289,14 +286,13 @@
             </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">AddToCart</span></span> <span class="token attr-name">product</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>props<span class="token punctuation">.</span>product<span class="token punctuation">}</span></span> <span class="token attr-name">addToCart</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>props<span class="token punctuation">.</span>addToCart<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span><span class="token plain-text">
         </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Le composant <code>CatalogueItem</code> est utilisé pour afficher les détails d'un produit dans le catalogue. Il prend deux props: <code>product</code> et <code>addToCart</code>. La prop <code>product</code> est un objet qui contient les informations du produit telles que l'image, le nom, la description et le prix. La prop <code>addToCart</code> est une fonction qui sera appelée lorsque l'utilisateur cliquera sur le bouton &quot;Add to cart&quot;.</p>
 <p>Le code utilise TailwindCSS pour appliquer des styles au composant <code>CatalogueItem</code>. Le conteneur principal est un div avec une classe <code>bg-white</code> qui ajoute une couleur de fond blanche au composant. Il utilise également la classe <code>rounded-lg</code> pour arrondir les coins du composant et <code>flex</code> pour afficher les éléments à l'intérieur du conteneur en ligne. <code>items-center</code> est utilisé pour aligner les éléments verticalement et <code>space-x-16</code> ajoute un espacement horizontal de 16 pixels entre chaque élément.</p>
 <p>Le code utilise également l'objet <code>props.product</code> pour afficher l'image, le nom, la description et le prix du produit. <code>props.product.image</code> est utilisé pour afficher l'image du produit. <code>props.product.name</code> est utilisé pour afficher le nom du produit, et <code>props.product.description</code> est utilisé pour afficher la description du produit. <code>props.product.price</code> est utilisé pour afficher le prix du produit, avec le symbole de l'euro.</p>
 <p>Le composant <code>AddToCart</code> est également appelé à la fin du composant <code>CatalogueItem</code>. Cette fonctionnalité permet à l'utilisateur d'ajouter le produit au panier en cliquant sur le bouton &quot;Add to cart&quot;. La prop <code>product</code> est passée à <code>AddToCart</code> pour que la fonction <code>addToCart</code> sache quel produit ajouter au panier.</p>
 <h3>AddToCart</h3>
-<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token keyword">import</span> Button <span class="token keyword">from</span> <span class="token string">'@mui/material/Button'</span><span class="token punctuation">;</span>
+<pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> Button <span class="token keyword">from</span> <span class="token string">'@mui/material/Button'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> Add <span class="token keyword">from</span> <span class="token string">'@mui/icons-material/Add'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">AddToCart</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -310,8 +306,7 @@
             Add to cart
         </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Button</span></span><span class="token punctuation">></span></span>
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Le composant <code>AddToCart</code> est appelé à partir du composant <code>CatalogueItem</code> et contient un bouton &quot;Add to cart&quot; qui permet à l'utilisateur d'ajouter un produit au panier.</p>
 <p>Le composant <code>AddToCart</code> utilise les composants <code>Button</code> et <code>Add</code> de la bibliothèque MUI pour créer le bouton, et utilise TailwindCSS pour appliquer des styles supplémentaires au bouton. Le bouton est configuré pour avoir une icône &quot;Add&quot; à gauche du texte &quot;Add to cart&quot;, et le texte du bouton est centré.</p>
 <p>Lorsque l'utilisateur clique sur le bouton &quot;Add to cart&quot;, la fonction <code>props.addToCart</code> est appelée avec l'objet <code>props.product</code> en tant que paramètre. Cela permet à la fonction <code>addToCart</code> de savoir quel produit ajouter au panier.</p>
@@ -322,11 +317,10 @@
 <p>Dans cette section, nous allons ajouter une page produit à notre application de commerce électronique. Nous allons utiliser <code>React Router</code> pour créer des routes pour chaque page produit, en utilisant l'ID du produit comme paramètre d'entrée.</p>
 <h3>Installation de React Router</h3>
 <p>Pour commencer, nous devons installer <code>React Router</code>. Vous pouvez l'installer en utilisant <code>npm</code> en exécutant la commande suivante :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> react-router-dom <span class="token parameter variable">--save</span>
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> react-router-dom <span class="token parameter variable">--save</span></code></pre>
 <h3>Configuration de l'application</h3>
 <p>Tout d'abord, nous allons ajouter une nouvelle page pour afficher les détails du produit. Créez un nouveau fichier nommé <code>Product.js</code> dans le dossier <code>components</code> et ajoutez le code suivant :</p>
-<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token keyword">import</span> <span class="token punctuation">{</span> useParams <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react-router"</span><span class="token punctuation">;</span>
+<pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> <span class="token punctuation">{</span> useParams <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react-router"</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> CatalogueItem <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./CatalogueItem'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> Link <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-router-dom'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> AddToCart <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"./AddToCart"</span><span class="token punctuation">;</span>
@@ -367,11 +361,10 @@
       </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Ce composant récupère l'ID du produit à partir des paramètres d'URL et affiche toutes les informations concernant ce composant de la même manière que le composant <code>CatalogItem</code>.</p>
 <p>Ensuite, nous allons déplacer notre page d’accueil dans un composant <code>Home</code>.</p>
-<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token keyword">import</span> <span class="token punctuation">{</span> Catalogue <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./Catalogue'</span><span class="token punctuation">;</span>
+<pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> <span class="token punctuation">{</span> Catalogue <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./Catalogue'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> Link <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-router-dom'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">Home</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -385,10 +378,9 @@
           </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Catalogue</span></span> <span class="token attr-name">products</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>props<span class="token punctuation">.</span>products<span class="token punctuation">}</span></span> <span class="token attr-name">addToCart</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>props<span class="token punctuation">.</span>addToCart<span class="token punctuation">}</span></span> <span class="token attr-name">removeFromCart</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>props<span class="token punctuation">.</span>removeFromCart<span class="token punctuation">}</span></span> <span class="token attr-name">cart</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>props<span class="token punctuation">.</span>cart<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span><span class="token plain-text">
         </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-</code></pre>
+  <span class="token punctuation">}</span></code></pre>
 <p>Enfin, nous allons ajouter une nouvelle route pour notre page produit. Ouvrez le fichier <code>App.js</code> et ajoutez le code suivant :</p>
-<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token keyword">import</span> <span class="token punctuation">{</span> BrowserRouter <span class="token keyword">as</span> Router<span class="token punctuation">,</span> Routes<span class="token punctuation">,</span> Route <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-router-dom'</span><span class="token punctuation">;</span>
+<pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> <span class="token punctuation">{</span> BrowserRouter <span class="token keyword">as</span> Router<span class="token punctuation">,</span> Routes<span class="token punctuation">,</span> Route <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-router-dom'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> Home <span class="token keyword">from</span> <span class="token string">'./components/Home'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> Product <span class="token keyword">from</span> <span class="token string">'./components/Product'</span><span class="token punctuation">;</span>
 
@@ -411,12 +403,11 @@
       </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Router</span></span><span class="token punctuation">></span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Nous avons ajouté une nouvelle route pour notre page produit. La route utilise le paramètre d'entrée <code>id</code> pour identifier le produit à afficher. Notez que nous avons également ajouté un en-tête et enveloppé les routes dans une balise <code>div</code> pour faciliter la mise en page.</p>
 <h3>Mise à jour du composant CatalogueItem</h3>
 <p>Maintenant que nous avons ajouté une page produit, nous devons mettre à jour le composant <code>CatalogueItem</code> pour inclure un lien vers la page produit pour chaque produit. Ouvrez le fichier <code>CatalogueItem.js</code> et ajoutez le code suivant :</p>
-<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token keyword">import</span> Card <span class="token keyword">from</span> <span class="token string">'@mui/material/Card'</span><span class="token punctuation">;</span>
+<pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> Card <span class="token keyword">from</span> <span class="token string">'@mui/material/Card'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> AddToCart <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./AddToCart'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> Link <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-router-dom'</span><span class="token punctuation">;</span>
 
@@ -432,14 +423,13 @@
             </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">AddToCart</span></span> <span class="token attr-name">product</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>props<span class="token punctuation">.</span>product<span class="token punctuation">}</span></span> <span class="token attr-name">addToCart</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>props<span class="token punctuation">.</span>addToCart<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span><span class="token plain-text">
         </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Nous avons enveloppé l'image du produit dans un lien <code>Link</code> pour que l'utilisateur puisse cliquer sur l'image pour accéder à la page produit. La prop <code>to</code> de <code>Link</code> utilise l'ID du produit pour créer une URL unique pour chaque produit.</p>
 <h2>Sprint 3 - Ajout de la gestion du panier</h2>
 <p><img src="images/Untitled4.png" alt="Untitled"></p>
 <h3>Création de la page du panier</h3>
 <p>Le composant <code>Cart</code> est une page qui affiche la liste des produits du panier. Il importe le composant <code>CatalogueItem</code>. Attention: le panier ne doit afficher qu'une seule instance de chaque produit, même si le même produit a été ajouté plusieurs fois au panier.</p>
-<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token keyword">import</span> <span class="token punctuation">{</span> CatalogueItem <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./CatalogueItem'</span><span class="token punctuation">;</span>
+<pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> <span class="token punctuation">{</span> CatalogueItem <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./CatalogueItem'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> Link <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-router-dom'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">Cart</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -460,7 +450,6 @@
         </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-
 </code></pre>
 <p>Le composant <code>Cart</code> utilise <code>Array.from(new Set(props.cart))</code> pour obtenir un tableau unique de produits (c'est-à-dire qu'il n'y aura qu'une seule instance de chaque produit dans le tableau). Le code utilise également <code>Link</code> pour permettre à l'utilisateur de revenir à la page du catalogue. La prop <code>to</code> de <code>Link</code> est utilisée pour créer une URL pour la page du catalogue.</p>
 <p>Le composant <code>Cart</code> utilise <code>uniqueProducts.map()</code> pour itérer sur le tableau de produits uniques et afficher chaque produit à l'aide du composant <code>CatalogueItem</code>. Les props <code>product</code>, <code>addToCart</code>, <code>removeFromCart</code> et <code>cart</code> sont passées à <code>CatalogueItem</code> pour permettre l'affichage du produit, l'ajout et la suppression du produit dans le panier.</p>
@@ -470,7 +459,7 @@
 <p>Le composant <code>AddToCart</code> a été modifié pour afficher la quantité d'un produit dans le panier. Si le produit est déjà dans le panier, le bouton &quot;Add to cart&quot; est remplacé par deux boutons, un pour ajouter une unité du produit et un autre pour en retirer une. Pour cela, le composant utilise la fonction <code>filter()</code> pour compter le nombre d'occurrences du produit dans le panier.</p>
 <p>Le composant <code>AddToCart</code> prend également une nouvelle prop, <code>removeFromCart</code>, qui est une fonction pour supprimer un produit du panier. Cette fonction est appelée lorsque l'utilisateur clique sur le bouton pour retirer une unité du produit.</p>
 <p>Voici le nouveau code pour le composant <code>AddToCart</code> :</p>
-<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token keyword">import</span> Button <span class="token keyword">from</span> <span class="token string">'@mui/material/Button'</span><span class="token punctuation">;</span>
+<pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> Button <span class="token keyword">from</span> <span class="token string">'@mui/material/Button'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> Add <span class="token keyword">from</span> <span class="token string">'@mui/icons-material/Add'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> Button <span class="token keyword">from</span> <span class="token string">'@mui/material/Button'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> Remove <span class="token keyword">from</span> <span class="token string">'@mui/icons-material/Remove'</span><span class="token punctuation">;</span>
@@ -507,12 +496,11 @@
         </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Button</span></span><span class="token punctuation">></span></span>
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-
 </code></pre>
 <p>La fonction <code>addToCart</code> a également été mise à jour pour prendre en charge la gestion de la quantité d'un produit dans le panier. Si le produit est déjà dans le panier, la fonction ne doit ajouter qu'une seule instance du produit. Pour cela, la fonction utilise la fonction <code>indexOf()</code> pour trouver la première occurrence du produit dans le panier. Elle utilise ensuite la fonction <code>filter()</code> pour supprimer cette occurrence du panier, puis ajouter une nouvelle instance du produit.</p>
 <p>La fonction <code>removeFromCart</code> a été ajoutée pour supprimer un produit du panier. Elle utilise la fonction <code>indexOf()</code> pour trouver la première occurrence du produit dans le panier, puis utilise la fonction <code>filter()</code> pour supprimer cette occurrence du panier.</p>
 <p>Voici le nouveau code pour la gestion du panier :</p>
-<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx">  <span class="token keyword">const</span> <span class="token punctuation">[</span>cart<span class="token punctuation">,</span> setCart<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-jsx"><code class="language-jsx">  <span class="token keyword">const</span> <span class="token punctuation">[</span>cart<span class="token punctuation">,</span> setCart<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
   <span class="token keyword">const</span> <span class="token function-variable function">addToCart</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">product</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
     <span class="token keyword">const</span> index <span class="token operator">=</span> cart<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>product<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -529,7 +517,6 @@
     <span class="token keyword">const</span> index <span class="token operator">=</span> cart<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>product<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token function">setCart</span><span class="token punctuation">(</span>cart<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">_<span class="token punctuation">,</span> i</span><span class="token punctuation">)</span> <span class="token operator">=></span> i <span class="token operator">!==</span> index<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">;</span>
-
 </code></pre>
 <h2>Conclusion du POK</h2>
 <p>Dans ce POK, nous avons appris comment créer une application de commerce électronique avec React, TailwindCSS et MUI. Nous avons commencé par créer un catalogue de produits à l'aide du composant <code>CatalogueItem</code>, puis nous avons appris comment créer des pages de produits avec React Router en utilisant l'ID du produit comme paramètre d'entrée. Enfin, nous avons mis en place la gestion du panier avec la page du panier qui affiche la liste des produits du panier et la possibilité de supprimer des produits du panier.</p>

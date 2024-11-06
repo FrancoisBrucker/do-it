@@ -133,16 +133,14 @@
 <h2>Comment l'utiliser ?</h2>
 <h3>Installation</h3>
 <p>L'Installation peut se faire de 2 <strong>façons</strong> différentes. Celle que j'ai utilisée consiste à installer three js dans le projet avec node ainsi que vite. <em>Vite ne sera utilisé que pour le développement.</em></p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">--save</span> three
-<span class="token function">npm</span> <span class="token function">install</span> --save-dev vite
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">--save</span> three
+<span class="token function">npm</span> <span class="token function">install</span> --save-dev vite</code></pre>
 <p>Pour lancer le code et visualiser votre site, il faut lancer vite :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">npx vite
-</code></pre>
+<pre class="language-bash"><code class="language-bash">npx vite</code></pre>
 <h3>Premiers pas</h3>
 <p><em>Le code de cette section est tiré de la documentation de Three.js</em>
 Commençons par le index.html !</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<pre class="language-html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
 		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -154,10 +152,9 @@ Commençons par le index.html !</p>
 	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
 		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/main.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
-</code></pre>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
 <p>On créer une page HTML simple. Tout se passe dans le javascript.</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> <span class="token constant">THREE</span> <span class="token keyword">from</span> <span class="token string">'three'</span><span class="token punctuation">;</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> <span class="token constant">THREE</span> <span class="token keyword">from</span> <span class="token string">'three'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> scene <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">THREE<span class="token punctuation">.</span>Scene</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> camera <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">THREE<span class="token punctuation">.</span>PerspectiveCamera</span><span class="token punctuation">(</span> <span class="token number">75</span><span class="token punctuation">,</span> window<span class="token punctuation">.</span>innerWidth <span class="token operator">/</span> window<span class="token punctuation">.</span>innerHeight<span class="token punctuation">,</span> <span class="token number">0.1</span><span class="token punctuation">,</span> <span class="token number">1000</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -182,8 +179,7 @@ camera<span class="token punctuation">.</span>position<span class="token punctua
     renderer<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span> scene<span class="token punctuation">,</span> camera <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
     
-<span class="token function">animate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<span class="token function">animate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>On commence par importer le package. Ensuite, pour pouvoir afficher des éléments, il nous faut une scène et une caméra.</p>
 <p>Ensuite, on récupère le renderer WebGL, c'est lui qui va se charger de faire les appels à WebGL et d'afficher nos modèles.</p>
 <p>Puis on crée une forme simple : un cube. Three.js dispose de méthodes de base pour facilement créer les formes usuelles. La géométrie est la forme ici et le mesh va définir la couleur de l'objet. on pourrait ici mettre une texture par exemple. Ici, on veut simplement que notre cube soit vert.

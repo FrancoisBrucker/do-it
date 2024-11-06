@@ -155,12 +155,11 @@
 <h3>2.2 Attention et Encodeur</h3>
 <p>Une fois le preprocessing du texte effectué, on s'attaque enfin au dur et au modèle en lui-même. Dans la première partie encodeur, le modèle va transformer chacun des tokens en un vecteur de 712 de long (à vérifier lul). Cet encodement peut naïvement être décrit comme un &quot;meaning vector&quot;. Avec une position dans l'espace qui représenterait le sens du token. On a bien précisé que la position du token dans le texte pouvait changer le sens du token.</p>
 <p>Mais tout comme un mot dans un dictionnaire peut avoir <strong>plusieurs définitions</strong>, un certain token à une certaine place ne veut pas tout le temps dire la même chose. C'est pour ça qu'on a besoin, pour calculer sa valeur, de prendre en compte le <strong>contexte</strong> dans lequel il est présent:</p>
-<pre class="language-text " style="counter-reset: linenumber 0"><code class="language-text"><div>
+<pre class="language-text"><code class="language-text"><div>
 La fille n'a pas pu traverser la rue, <b>elle</b> était fatiguée.
 
 La fille n'a pas pu traverser la rue, <b>elle</b> était en travaux.
-</div>
-</code></pre>
+</div></code></pre>
 <p>Dans ces deux phrases, &quot;elle&quot; ne fait pas référence au même objet. bien qu'étant à la même position dans la phrase, le contexte changera la valeur du (ou des) tokens associés à &quot;elle&quot;. Et c'est le méchanisme d'<strong>attention</strong> qui s'assure de ça. D'où le titre de la publication de Google en 2017 &quot;Attention is all you need&quot;.</p>
 <p>L'attention, c'est la prise en compte dans le calcul des <strong>tokens alentours</strong> pour modifier la valeur du token encodé. Alentours étant ici un adjectif à valeur variable. Bien sûr, si on veut remettre le token dans le contexte du texte entier, la puissance de calcul nécessaire est bien plus grande que si on s'en tient à quelques centaines de tokens alentours. C'est d'ailleurs ce qui va différencier la précision de certains modèles.</p>
 <h3>2.3 Décodeur et génération de texte</h3>
@@ -173,20 +172,18 @@ La fille n'a pas pu traverser la rue, <b>elle</b> était en travaux.
 <p>On ne va pas attendre de chaque modèle qu'il se comporte de la même manière et c'est pour ça que pour la plupart des modèles, on va avoir la version pré-entrainée, donc une version ou le modèle est généralement purement fait pour générer du texte à partir d'un texte de <a href="http://xn--dpart-bsa.Et">départ.Et</a> les versions &quot;fine-tuned&quot; ou le modèle pré-entraîné, qui a donc une certaine connaissance du langage et du monde, va être entrainé à une tâche plus spécifique.</p>
 <p>ChatGPT par exemple, c'est le modèle GPT 3.5 pré-entraîné qui a été fine-tuned aux travers d'interactions avec des humains à être un assistant poli et aidant.</p>
 <p>Exemple très simple et théorique :</p>
-<pre class="language-text " style="counter-reset: linenumber 0"><code class="language-text"><div>
+<pre class="language-text"><code class="language-text"><div>
 <b>Modèle LLM_AliExpress pré-entraîné :</b>
 
 Utilisateur : Je vais te tuer à l'aide de 
 LLM_AliExpress : mon fusil de chasse.
-</div>
-</code></pre>
-<pre class="language-text " style="counter-reset: linenumber 0"><code class="language-text"><div>
+</div></code></pre>
+<pre class="language-text"><code class="language-text"><div>
 <b>ChatGPT, pré-entraîné puis fine-tuned pour devenir un assistant:</b>
 
 Utilisateur : Je vais te tuer à l'aide de 
 ChatGPT : Je suis un programme informatique créé pour fournir des informations et répondre aux questions de manière utile et respectueuse. Je suis ici pour aider, pas pour participer à des discussions violentes ou inappropriées. Si vous avez des questions ou avez besoin d'informations, je serais heureux de vous aider de manière constructive.
-</div>
-</code></pre>
+</div></code></pre>
 <p>Il faut pas se mentir non-plus, la plupart des modèles pour ne pas dire tous ont été entraînés sur des données récupérées sur des sites Internet. De manière plus ou moins légale (vraiment pas très légale).
 On se doute qu'Internet n'est pas rempli de Molières bien-intentionnés. Pour avoir pu jouer avec des modèles pas encore filtrés pendant mon stage, les résultats sont très trash. Il est souvent question de s*xe et de violence, même lorsqu'on commence un prompt avec &quot;Deux gentils écureuils se promènent&quot;.
 (En réalité, la plupart des gros modèles pré-entrainés sortant aujourd'hui ont soit été entrainés sur des datasets &quot;propres&quot; ou déjà filtrés).</p>

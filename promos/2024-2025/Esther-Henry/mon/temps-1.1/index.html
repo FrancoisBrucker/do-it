@@ -199,8 +199,7 @@ Ce MON 1.1 a pour but de (ré)acquérir les bases de Python, afin de pouvoir dé
 <p>Vérifiez alors qu’un fichier Python s’est bien ouvert : le fichier se nomme “quelque-chose <strong>.py</strong>” et en bas à droite de votre fenêtre, il est bien écrit “Python”.</p>
 </div></div>
 <p>Dans cette fenêtre, vous allez donc pouvoir écrire vos premières lignes de code pour dire bonjour au monde et que l’ordinateur vous l’affiche. Pour ce faire, tapez le code suivant puis cliquez sur la flèche en haut à droite :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Hello World !"</span><span class="token punctuation">)</span>
-</code></pre>
+<pre class="language-python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Hello World !"</span><span class="token punctuation">)</span></code></pre>
 <p><img src="images/hello-world.png" alt="Hello World"></p>
 <p>Vous voyez alors que dans le terminal il est marqué:  Hello World !. Cela signifie que votre code est bien éxecuter et que tout est bien installé.</p>
 <h4>Comprendre l’organisation des fichiers dans votre ordinateur</h4>
@@ -228,8 +227,7 @@ Ce MON 1.1 a pour but de (ré)acquérir les bases de Python, afin de pouvoir dé
 <h4>Les variables</h4>
 <p>Lorsque l’on veut analyser des données, il nous faut des données à stocker quelque part. Dans le code, cela se traduit par des variables qui vont stocker une information (du texte ou des nombres, par exemple) que l’on appelle <strong>objets</strong>, que l’on associe à un nom pour les identifier. Une variable stocke alors un objet à un instant donné, mais celui-ci peut évoluer au fur et à mesure de l’avancement du code.</p>
 <p>Par exemple, on peut créer la variable :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">pop_do_it <span class="token operator">=</span> <span class="token number">25</span>
-</code></pre>
+<pre class="language-python"><code class="language-python">pop_do_it <span class="token operator">=</span> <span class="token number">25</span></code></pre>
 <p>Cette ligne permet de créer la variable pop_do_it et de lui attribuer l’objet nombre ayant la valeur 25 (à l'aide de l'opérateur =).</p>
 <div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -255,36 +253,29 @@ Ce MON 1.1 a pour but de (ré)acquérir les bases de Python, afin de pouvoir dé
 <ul>
 <li><strong>str</strong> : chaîne de caractères (string) permet de stocker du texte entre guillemets</li>
 </ul>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">nom <span class="token operator">=</span> “Henry”
-</code></pre>
+<pre class="language-python"><code class="language-python">nom <span class="token operator">=</span> “Henry”</code></pre>
 <p>-<strong>int</strong> : nombre entier (integer)</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">age <span class="token operator">=</span> <span class="token number">22</span>
-</code></pre>
+<pre class="language-python"><code class="language-python">age <span class="token operator">=</span> <span class="token number">22</span></code></pre>
 <ul>
 <li><strong>float</strong> : nombre à virgule</li>
 </ul>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">pi <span class="token operator">=</span> <span class="token number">3.14</span>
-</code></pre>
+<pre class="language-python"><code class="language-python">pi <span class="token operator">=</span> <span class="token number">3.14</span></code></pre>
 <ul>
 <li><strong>bool</strong> : booléen renvoie une valeur vrai ou fausse (True ou False)</li>
 </ul>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">mon_est_interessant <span class="token operator">=</span> <span class="token boolean">True</span>
-</code></pre>
+<pre class="language-python"><code class="language-python">mon_est_interessant <span class="token operator">=</span> <span class="token boolean">True</span></code></pre>
 <ul>
 <li><strong>list</strong> : liste est une séquence ordonnées d'éléments modifiable, les éléments peuvent être de différents types</li>
 </ul>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">eleve <span class="token operator">=</span> <span class="token punctuation">[</span>“Esther”<span class="token punctuation">,</span> ”Henry”<span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">]</span>
-</code></pre>
+<pre class="language-python"><code class="language-python">eleve <span class="token operator">=</span> <span class="token punctuation">[</span>“Esther”<span class="token punctuation">,</span> ”Henry”<span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">]</span></code></pre>
 <ul>
 <li><strong>tuple</strong> : similaire à une liste mais les éléments ne sont pas modifiables</li>
 </ul>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">coordonnees <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span>
-</code></pre>
+<pre class="language-python"><code class="language-python">coordonnees <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span></code></pre>
 <ul>
 <li><strong>dict</strong> : dictionnaire est une collection de paires clé-valeur, où chaque clé est unique</li>
 </ul>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">etudiante <span class="token operator">=</span> <span class="token punctuation">{</span>“nom” <span class="token punctuation">:</span> “Henry”<span class="token punctuation">,</span> “age” <span class="token punctuation">:</span> <span class="token number">22</span><span class="token punctuation">,</span> “étudiante” <span class="token punctuation">:</span> <span class="token boolean">True</span><span class="token punctuation">}</span>
-</code></pre>
+<pre class="language-python"><code class="language-python">etudiante <span class="token operator">=</span> <span class="token punctuation">{</span>“nom” <span class="token punctuation">:</span> “Henry”<span class="token punctuation">,</span> “age” <span class="token punctuation">:</span> <span class="token number">22</span><span class="token punctuation">,</span> “étudiante” <span class="token punctuation">:</span> <span class="token boolean">True</span><span class="token punctuation">}</span></code></pre>
 <h4>Les opérations</h4>
 <p>En Python, il existe un certain nombre d’opérateurs permettant de faire les opérations de base sur les nombres</p>
 <table>
@@ -345,8 +336,7 @@ Lorsque l’on veut entrer des variables de type texte, il est essentiel de les 
 <div class="pl-8 mr-8">
 <p>Dans le cas de texte plutôt long où vous risquez d’avoir des guillemets de différents types, il est conseillé d’utiliser les triples guillemets afin d’éviter les erreurs !</p>
 <p>Par exemple :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span>“”” <span class="token string">"Le bonheur, ce n'est pas d'avoir tout ce que l'on désire, mais d'apprécier ce que l'on a."</span>  <span class="token operator">-</span> P<span class="token punctuation">.</span> Coelho”””<span class="token punctuation">)</span>
-</code></pre>
+<pre class="language-python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span>“”” <span class="token string">"Le bonheur, ce n'est pas d'avoir tout ce que l'on désire, mais d'apprécier ce que l'on a."</span>  <span class="token operator">-</span> P<span class="token punctuation">.</span> Coelho”””<span class="token punctuation">)</span></code></pre>
 <p>Qui affichera : &quot;Le bonheur, ce n'est pas d'avoir tout ce que l'on désire, mais d'apprécier ce que l'on a.&quot;  - P. Coelho</p>
 </div></div>
 <p><strong>Les caractères spéciaux</strong>
@@ -358,24 +348,21 @@ La gestion des caractères spéciaux est un autre point de vigilance lors de la 
 <div class="pl-8 mr-8">
 <p>Pour eviter la confusion, la solution est de mettre un backslash devant le caractère en question.
 Par exemple pour mettre un % sans un texte on ecrira :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span>“Le pourcentage de réussite au bac en <span class="token number">2019</span> est de <span class="token number">88.1</span>\<span class="token operator">%</span>”<span class="token punctuation">)</span>
-</code></pre>
+<pre class="language-python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span>“Le pourcentage de réussite au bac en <span class="token number">2019</span> est de <span class="token number">88.1</span>\<span class="token operator">%</span>”<span class="token punctuation">)</span></code></pre>
 <p>Qui retournera sans erreur : Le pourcentage de réussite au bac en 2019 est de 88.1%</p>
 </div></div>
 <p><strong>Faire des opérations sur du texte</strong>
 Il est possible de faire des opérations sur des variables de type texte. En effet, l’opérateur <code>+</code> permet d’assembler du texte et la fonction <code>str()</code> permet de convertir un nombre en texte. Ainsi, on pourrait écrire le texte suivant en partant de différents éléments :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">pop_do_it <span class="token operator">=</span> <span class="token number">25</span>
+<pre class="language-python"><code class="language-python">pop_do_it <span class="token operator">=</span> <span class="token number">25</span>
 texte <span class="token operator">=</span> “Il y a” <span class="token operator">+</span> <span class="token builtin">str</span> <span class="token punctuation">(</span>pop_do_it<span class="token punctuation">)</span> <span class="token operator">+</span> “élèves en Do<span class="token operator">-</span>It”
-<span class="token keyword">print</span><span class="token punctuation">(</span>texte<span class="token punctuation">)</span>
-</code></pre>
+<span class="token keyword">print</span><span class="token punctuation">(</span>texte<span class="token punctuation">)</span></code></pre>
 <p>Qui retournera : Il y a 25 élèves en Do-It</p>
 <h4>Maîtriser les listes et les bibliothèques</h4>
 <p>Afin d’analyser des données, il est essentiel de maîtriser les listes et les bibliothèques que nous avons définies plus haut.</p>
 <h5>Les listes</h5>
 <p>Nous allons travailler sur les opérations de base afin de se familiariser avec les listes. Pour ce faire, nous allons utiliser l’exemple d’une recette de gâteau et créer la liste suivante, puis l’afficher :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">proportion <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">,</span><span class="token number">200</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span>
-<span class="token keyword">print</span> <span class="token punctuation">(</span>proportion<span class="token punctuation">)</span>
-</code></pre>
+<pre class="language-python"><code class="language-python">proportion <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">,</span><span class="token number">200</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span>proportion<span class="token punctuation">)</span></code></pre>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
@@ -385,8 +372,7 @@ texte <span class="token operator">=</span> “Il y a” <span class="token oper
 Mais aussi -1 pour le dernier, -2 pour l'avant-dernier, etc.</p>
 </div></div>
 <p>Ainsi, si l’on veut afficher le troisième élément de notre liste, on notera :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">print</span> <span class="token punctuation">(</span> proportion <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token punctuation">)</span>
-</code></pre>
+<pre class="language-python"><code class="language-python"><span class="token keyword">print</span> <span class="token punctuation">(</span> proportion <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token punctuation">)</span></code></pre>
 <p>Une fois notre liste créée, nous allons voir quelques opérations qu’il est possible d’effectuer afin de la modifier :</p>
 <ul>
 <li>La fonction <strong>.append ( )</strong> permet d’ajouter un élément à la fin de la liste.</li>
@@ -415,9 +401,8 @@ Mais aussi -1 pour le dernier, -2 pour l'avant-dernier, etc.</p>
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">proportion <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>  <span class="token operator">=</span> <span class="token number">2</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>proportion<span class="token punctuation">)</span>
-</code></pre>
+<pre class="language-python"><code class="language-python">proportion <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>  <span class="token operator">=</span> <span class="token number">2</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>proportion<span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>
@@ -443,9 +428,8 @@ Mais aussi -1 pour le dernier, -2 pour l'avant-dernier, etc.</p>
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">proportion<span class="token punctuation">.</span>remove <span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>proportion<span class="token punctuation">)</span>
-</code></pre>
+<pre class="language-python"><code class="language-python">proportion<span class="token punctuation">.</span>remove <span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>proportion<span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>
@@ -471,19 +455,16 @@ Mais aussi -1 pour le dernier, -2 pour l'avant-dernier, etc.</p>
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">proportion<span class="token punctuation">.</span>append <span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>proportion<span class="token punctuation">)</span>
-</code></pre>
+<pre class="language-python"><code class="language-python">proportion<span class="token punctuation">.</span>append <span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>proportion<span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>
 <h5>Les dictionnaires</h5>
 <p>Pour continuer avec l’exemple de notre gâteau au chocolat, nous allons créer un dictionnaire afin d’associer à chaque ingrédient sa proportion :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">recette<span class="token operator">=</span><span class="token punctuation">{</span>“sucre” <span class="token punctuation">:</span> <span class="token number">100</span><span class="token punctuation">,</span> “farine” <span class="token punctuation">:</span> <span class="token number">50</span><span class="token punctuation">,</span> “beurre” <span class="token punctuation">:</span> <span class="token number">100</span><span class="token punctuation">,</span> “chocolat” <span class="token punctuation">:</span> <span class="token number">200</span><span class="token punctuation">,</span> “oeuf” <span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">}</span>
-</code></pre>
+<pre class="language-python"><code class="language-python">recette<span class="token operator">=</span><span class="token punctuation">{</span>“sucre” <span class="token punctuation">:</span> <span class="token number">100</span><span class="token punctuation">,</span> “farine” <span class="token punctuation">:</span> <span class="token number">50</span><span class="token punctuation">,</span> “beurre” <span class="token punctuation">:</span> <span class="token number">100</span><span class="token punctuation">,</span> “chocolat” <span class="token punctuation">:</span> <span class="token number">200</span><span class="token punctuation">,</span> “oeuf” <span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">}</span></code></pre>
 <p>Le dictionnaire fonctionne sur un système de clé/valeur séparés par &quot;:&quot;, et pour accéder à une valeur, il faut passer par sa clé. Par exemple, pour afficher la quantité de chocolat :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span>recette <span class="token punctuation">[</span>“chocolat”<span class="token punctuation">]</span> <span class="token punctuation">)</span>
-</code></pre>
+<pre class="language-python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span>recette <span class="token punctuation">[</span>“chocolat”<span class="token punctuation">]</span> <span class="token punctuation">)</span></code></pre>
 <p>Qui retournera : 200</p>
 <p>Passons maintenant aux exercices pour manipuler un dictionnaire :</p>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-orange-500 bg-orange-100">
@@ -508,9 +489,8 @@ Mais aussi -1 pour le dernier, -2 pour l'avant-dernier, etc.</p>
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">recette<span class="token punctuation">[</span>“sel”<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span>
-<span class="token keyword">print</span> <span class="token punctuation">(</span>recette<span class="token punctuation">)</span>
-</code></pre>
+<pre class="language-python"><code class="language-python">recette<span class="token punctuation">[</span>“sel”<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span>recette<span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>
@@ -536,9 +516,8 @@ Mais aussi -1 pour le dernier, -2 pour l'avant-dernier, etc.</p>
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">recette<span class="token punctuation">[</span>“chocolat”<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">250</span>
-<span class="token keyword">print</span> <span class="token punctuation">(</span>recette<span class="token punctuation">)</span>
-</code></pre>
+<pre class="language-python"><code class="language-python">recette<span class="token punctuation">[</span>“chocolat”<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">250</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span>recette<span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>
@@ -550,9 +529,8 @@ Mais aussi -1 pour le dernier, -2 pour l'avant-dernier, etc.</p>
 <div class="pl-8 mr-8">
 <p>Lorsque l’on écrit du code, il peut être utile d’y ajouter des commentaires, que ce soit pour soi-même se souvenir de ce que l’on a fait, ou pour permettre à quelqu’un à qui vous partagez le code de comprendre la logique qui se cache derrière.</p>
 <p>Pour ajouter un commentaire, c’est très simple : il suffit d’aller à la ligne et de commencer celle-ci par un #. La ligne en question ne sera donc pas exécutée par la machine.</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment">#Voici ma recette de gâteau favorite !</span>
-recette<span class="token operator">=</span><span class="token punctuation">{</span>“sucre” <span class="token punctuation">:</span> <span class="token number">100</span><span class="token punctuation">,</span> “farine” <span class="token punctuation">:</span> <span class="token number">50</span><span class="token punctuation">,</span> “beurre” <span class="token punctuation">:</span> <span class="token number">100</span><span class="token punctuation">,</span> “chocolat” <span class="token punctuation">:</span> <span class="token number">200</span><span class="token punctuation">,</span> “oeuf” <span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">}</span>
-</code></pre>
+<pre class="language-python"><code class="language-python"><span class="token comment">#Voici ma recette de gâteau favorite !</span>
+recette<span class="token operator">=</span><span class="token punctuation">{</span>“sucre” <span class="token punctuation">:</span> <span class="token number">100</span><span class="token punctuation">,</span> “farine” <span class="token punctuation">:</span> <span class="token number">50</span><span class="token punctuation">,</span> “beurre” <span class="token punctuation">:</span> <span class="token number">100</span><span class="token punctuation">,</span> “chocolat” <span class="token punctuation">:</span> <span class="token number">200</span><span class="token punctuation">,</span> “oeuf” <span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">}</span></code></pre>
 </div></div>
 <h4>Opérateurs de condition et de comparaison</h4>
 <p>Lorsque l’on veut faire de l’analyse de données, il est important de maîtriser les opérateurs de condition et de comparaison, car ce sont eux qui vont nous permettre de s’adapter à telle ou telle situation. Ainsi, les principaux opérateurs de condition et de comparaison sont :</p>
@@ -614,7 +592,7 @@ recette<span class="token operator">=</span><span class="token punctuation">{</s
 <p>En Python, ces blocs ont la particularité d’être décalés de quatre espaces. Ils sont essentiels, car si vous les oubliez, Python vous renverra un message d’erreur et ne pourra pas exécuter votre code. Par ailleurs, ces alinéas permettent de mieux visualiser vos blocs et de structurer correctement votre code.</p>
 <h5>Condition : si … alors …</h5>
 <p>Pour tester une condition, on utilise les fonctions <strong>if</strong>, <strong>else</strong> et <strong>elif</strong>. Prenons un exemple pour mieux comprendre.</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment">#Regarder si en Do-It le nombre d’élève est pair et à defaut un multiple de 5</span>
+<pre class="language-python"><code class="language-python"><span class="token comment">#Regarder si en Do-It le nombre d’élève est pair et à defaut un multiple de 5</span>
 pop_do_it <span class="token operator">=</span> <span class="token number">25</span>
 <span class="token keyword">if</span> pop_do_it <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token punctuation">:</span> 
     <span class="token keyword">print</span><span class="token punctuation">(</span>“Le nombre d’éléve en Do It est pair”<span class="token punctuation">)</span>
@@ -622,7 +600,6 @@ pop_do_it <span class="token operator">=</span> <span class="token number">25</s
     <span class="token keyword">print</span><span class="token punctuation">(</span>“Le nombre d’éléve en Do It est multiple de <span class="token number">5</span>”<span class="token punctuation">)</span>
 <span class="token keyword">else</span> <span class="token punctuation">:</span> 
     <span class="token keyword">print</span><span class="token punctuation">(</span>“Le nombre d’élève en Do It n’est ni pair ni un multiple de <span class="token number">5</span>”<span class="token punctuation">)</span>
-
 </code></pre>
 <p>Ici, le code nous retournera : <strong>Le nombre d’élèves en Do It est multiple de 5</strong>.</p>
 <p>En effet, le code suit cet ordre :</p>
@@ -635,25 +612,22 @@ pop_do_it <span class="token operator">=</span> <span class="token number">25</s
 <h5>Les boucles</h5>
 <p>Les boucles sont très utiles lorsque l’on veut répéter une opération. En Python, les boucles <strong>for</strong> et <strong>while</strong> permettent de répéter des actions, mais elles s'utilisent différemment.</p>
 <p>La boucle <strong>for</strong> est généralement utilisée pour itérer sur une séquence (comme une liste, un tuple, ou une chaîne de caractères) ou un intervalle de valeurs prédéfini. Elle s'arrête automatiquement lorsque tous les éléments de la séquence ont été parcourus. Par exemple :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
-</code></pre>
+<pre class="language-python"><code class="language-python"><span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span></code></pre>
 <p>Ou dans une liste :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token builtin">list</span><span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">978</span><span class="token punctuation">]</span>
+<pre class="language-python"><code class="language-python"><span class="token builtin">list</span><span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">978</span><span class="token punctuation">]</span>
 <span class="token keyword">for</span> p <span class="token keyword">in</span> <span class="token builtin">list</span> <span class="token punctuation">:</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span>“Age”<span class="token punctuation">,</span> p<span class="token punctuation">)</span>
-</code></pre>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>“Age”<span class="token punctuation">,</span> p<span class="token punctuation">)</span></code></pre>
 <p>La boucle <strong>while</strong>, quant à elle, continue à s'exécuter tant qu'une condition est vraie. Elle est plus flexible, mais doit être contrôlée avec précaution pour éviter des boucles infinies. Par exemple :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">i <span class="token operator">=</span> <span class="token number">0</span>
+<pre class="language-python"><code class="language-python">i <span class="token operator">=</span> <span class="token number">0</span>
 <span class="token keyword">while</span> i <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">:</span>
     <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
-    i <span class="token operator">+=</span> <span class="token number">1</span>
-</code></pre>
+    i <span class="token operator">+=</span> <span class="token number">1</span></code></pre>
 <p>En résumé, <strong>for</strong> est idéal pour des itérations définies à l'avance, tandis que <strong>while</strong> est utilisé lorsque la répétition dépend d'une condition à évaluer dynamiquement.</p>
 <h5>Construire des fonctions</h5>
 <p>Une fonction est un bloc de code qui prend des données en entrée, les traite, puis renvoie des résultats modifiés en conséquence.</p>
 <p>Quel que soit le contenu de la fonction, elle s’organise toujours de la même manière. Prenons l’exemple d’une fonction qui, peu importe notre liste d’ingrédients, nous renvoie si elle contient du chocolat :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">contient_chocolat</span> <span class="token punctuation">(</span>list_ingredient<span class="token punctuation">)</span> <span class="token punctuation">:</span> 
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">contient_chocolat</span> <span class="token punctuation">(</span>list_ingredient<span class="token punctuation">)</span> <span class="token punctuation">:</span> 
     <span class="token keyword">for</span> i <span class="token keyword">in</span> list_ingredient <span class="token punctuation">:</span> 
         <span class="token keyword">if</span> i <span class="token operator">==</span> <span class="token string">"chocolat"</span> <span class="token punctuation">:</span>
             <span class="token keyword">return</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Il y a du chocolat"</span><span class="token punctuation">)</span>
@@ -661,8 +635,7 @@ pop_do_it <span class="token operator">=</span> <span class="token number">25</s
         <span class="token keyword">return</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Il n'y a pas de chocolat"</span><span class="token punctuation">)</span>
     
 ingredient <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"lait"</span><span class="token punctuation">,</span><span class="token string">"oeuf"</span><span class="token punctuation">,</span><span class="token string">"beurre"</span><span class="token punctuation">,</span><span class="token string">"farine"</span><span class="token punctuation">,</span><span class="token string">"chocolat"</span><span class="token punctuation">,</span><span class="token string">"levure"</span><span class="token punctuation">]</span>
-contient_chocolat<span class="token punctuation">(</span>ingredient<span class="token punctuation">)</span>
-</code></pre>
+contient_chocolat<span class="token punctuation">(</span>ingredient<span class="token punctuation">)</span></code></pre>
 <p>On vient de :</p>
 <ul>
 <li>Définir la fonction <code>contient_chocolat</code> grâce à <strong>def ()</strong>.</li>
@@ -689,9 +662,8 @@ contient_chocolat<span class="token punctuation">(</span>ingredient<span class="
 </svg>
 <div class="pl-8 mr-8">
 <p>Pour rappel, si l’on veut faire appel dans notre code à une bibliothèque déjà installée, il faut l’importer avec <strong>import</strong>. Par exemple :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">import</span> math <span class="token keyword">as</span> m
-m<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span>
-</code></pre>
+<pre class="language-python"><code class="language-python"><span class="token keyword">import</span> math <span class="token keyword">as</span> m
+m<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span></code></pre>
 <p>Ici, nous donnons à la bibliothèque le nom <code>m</code> lors de l’importation, ce qui nous permet par la suite d’y faire appel pour ses différentes fonctions via <strong>m.</strong>.</p>
 </div></div>
 <p>La méthode la plus simple pour installer une nouvelle bibliothèque est la méthode <strong>pip</strong>, qui va aller chercher dans les bases de données en ligne pour la télécharger.</p>
@@ -699,9 +671,8 @@ m<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</
 <pre><code>pip install requests 
 </code></pre>
 <p>Une fois <code>requests</code> installé, il peut être utile de vérifier que l’installation a bien été effectuée et qu’il n’y a pas eu de bug. Pour cela, ouvrez une nouvelle fenêtre Python et saisissez le code suivant :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">import</span> requests <span class="token keyword">as</span> req
-<span class="token keyword">print</span><span class="token punctuation">(</span> req<span class="token punctuation">.</span>get<span class="token punctuation">(</span>“https<span class="token punctuation">:</span><span class="token operator">//</span>www<span class="token punctuation">.</span>lequipe<span class="token punctuation">.</span>fr”<span class="token punctuation">)</span> <span class="token punctuation">)</span>
-</code></pre>
+<pre class="language-python"><code class="language-python"><span class="token keyword">import</span> requests <span class="token keyword">as</span> req
+<span class="token keyword">print</span><span class="token punctuation">(</span> req<span class="token punctuation">.</span>get<span class="token punctuation">(</span>“https<span class="token punctuation">:</span><span class="token operator">//</span>www<span class="token punctuation">.</span>lequipe<span class="token punctuation">.</span>fr”<span class="token punctuation">)</span> <span class="token punctuation">)</span></code></pre>
 <p>Si tout s’est bien passé, l’ordinateur doit nous retourner : &lt;Response [200]&gt;, ce qui signifie que tout s’est bien déroulé et que la page de l’Équipe a bien été récupérée.</p>
 <div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -714,10 +685,9 @@ m<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</
 <p>L’objectif de cette partie est de voir comment utiliser certaines fonctions de requests qui pourraient être utiles pour faire de l’analyse de données textuelles par la suite.</p>
 <h5>Récupérer une page internet</h5>
 <p>Nous allons voir ici comment récupérer une page sur le site internet de l’Équipe et afficher une partie de son contenu.</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">reponse <span class="token operator">=</span> req<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">"https://www.lequipe.fr"</span><span class="token punctuation">)</span>
+<pre class="language-python"><code class="language-python">reponse <span class="token operator">=</span> req<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">"https://www.lequipe.fr"</span><span class="token punctuation">)</span>
 contenu <span class="token operator">=</span> reponse<span class="token punctuation">.</span>text
-<span class="token keyword">print</span><span class="token punctuation">(</span>contenu<span class="token punctuation">[</span><span class="token number">100</span><span class="token punctuation">:</span><span class="token number">150</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-</code></pre>
+<span class="token keyword">print</span><span class="token punctuation">(</span>contenu<span class="token punctuation">[</span><span class="token number">100</span><span class="token punctuation">:</span><span class="token number">150</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
 <p>Ce code nous permet alors :</p>
 <ul>
 <li>Via la fonction <strong>.get</strong> de <code>requests</code>, de récupérer une page internet via son URL et de la stocker dans <code>reponse</code>.</li>
@@ -733,7 +703,7 @@ contenu <span class="token operator">=</span> reponse<span class="token punctuat
 </div></div>
 <h5>Vérifier la présence d’un mot sur une page</h5>
 <p>Pour vérifier qu’un mot est bien présent sur une page, on peut importer la page comme précédemment puis utiliser les fonctions <strong>if</strong> et <strong>in</strong> pour vérifier si le mot est présent ou non :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment">#Récupérer la page </span>
+<pre class="language-python"><code class="language-python"><span class="token comment">#Récupérer la page </span>
 url<span class="token operator">=</span><span class="token string">"https://www.lequipe.fr"</span>
 reponse <span class="token operator">=</span> req<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">)</span>
 contenu <span class="token operator">=</span> reponse<span class="token punctuation">.</span>text
@@ -742,8 +712,7 @@ contenu <span class="token operator">=</span> reponse<span class="token punctuat
 <span class="token keyword">if</span> <span class="token string">"vélo"</span> <span class="token keyword">in</span> contenu <span class="token punctuation">:</span>
     <span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">"Le mot est présent"</span><span class="token punctuation">)</span>
 <span class="token keyword">else</span> <span class="token punctuation">:</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Le mot n'est pas présent"</span><span class="token punctuation">)</span>
-</code></pre>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Le mot n'est pas présent"</span><span class="token punctuation">)</span></code></pre>
 <h5>Un petit exercice pour voir si on a bien compris</h5>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-orange-500 bg-orange-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -767,14 +736,13 @@ contenu <span class="token operator">=</span> reponse<span class="token punctuat
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">presence_mot</span><span class="token punctuation">(</span>mot<span class="token punctuation">,</span>url<span class="token punctuation">)</span> <span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">presence_mot</span><span class="token punctuation">(</span>mot<span class="token punctuation">,</span>url<span class="token punctuation">)</span> <span class="token punctuation">:</span>
     reponse <span class="token operator">=</span> req<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">)</span>
     contenu <span class="token operator">=</span> reponse<span class="token punctuation">.</span>text
     <span class="token keyword">if</span> mot <span class="token keyword">in</span> contenu <span class="token punctuation">:</span>
         <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Le mot est présent"</span><span class="token punctuation">)</span>
     <span class="token keyword">else</span> <span class="token punctuation">:</span>
-        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Le mot n'est pas présent"</span><span class="token punctuation">)</span>
-</code></pre>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Le mot n'est pas présent"</span><span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>
@@ -800,15 +768,14 @@ contenu <span class="token operator">=</span> reponse<span class="token punctuat
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">pages <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"https://www.lemonde.fr"</span><span class="token punctuation">,</span><span class="token string">"https://www.lequipe.fr"</span><span class="token punctuation">,</span><span class="token string">"https://www.causette.fr"</span><span class="token punctuation">]</span>
+<pre class="language-python"><code class="language-python">pages <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"https://www.lemonde.fr"</span><span class="token punctuation">,</span><span class="token string">"https://www.lequipe.fr"</span><span class="token punctuation">,</span><span class="token string">"https://www.causette.fr"</span><span class="token punctuation">]</span>
 mots <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"femme"</span><span class="token punctuation">,</span><span class="token string">"santé"</span><span class="token punctuation">]</span>
 resultats <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
 <span class="token keyword">for</span> p <span class="token keyword">in</span> pages <span class="token punctuation">:</span> 
     resultats<span class="token punctuation">[</span>p<span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
     <span class="token keyword">for</span> j <span class="token keyword">in</span> mots <span class="token punctuation">:</span>
         resultats<span class="token punctuation">[</span>p<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">=</span>presence_mot<span class="token punctuation">(</span>j<span class="token punctuation">,</span>p<span class="token punctuation">)</span>
-<span class="token keyword">print</span> <span class="token punctuation">(</span>resultats<span class="token punctuation">)</span>
-</code></pre>
+<span class="token keyword">print</span> <span class="token punctuation">(</span>resultats<span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>

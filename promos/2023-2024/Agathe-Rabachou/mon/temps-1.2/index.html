@@ -181,17 +181,16 @@ Pour reprendre un des exemples précédents, on pourrait imaginer une classe qui
 <li>Le premier exemple simule un dé que l'on peut lancer, dont on peut lire la valeur, et également que l'on peut lancer jusqu'à obtenir une certaine valeur choisie, on peut dans ce cas récupérer le nombre de lancers qui ont été nécessaires pour atteindre cette valeur.</li>
 </ol>
 <p>Voici la modélisation du dé :</p>
-<pre class="language-py " style="counter-reset: linenumber 0"><code class="language-py"><span class="token keyword">import</span> random
+<pre class="language-py"><code class="language-py"><span class="token keyword">import</span> random
 
 <span class="token keyword">class</span> <span class="token class-name">D</span>é<span class="token punctuation">:</span>
     <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> position_initiale<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
         self<span class="token punctuation">.</span>position <span class="token operator">=</span> position_initiale
 
     <span class="token keyword">def</span> <span class="token function">lancer</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        self<span class="token punctuation">.</span>position <span class="token operator">=</span> random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span>
-</code></pre>
+        self<span class="token punctuation">.</span>position <span class="token operator">=</span> random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span></code></pre>
 <p>Les tests associés :</p>
-<pre class="language-py " style="counter-reset: linenumber 0"><code class="language-py"><span class="token keyword">from</span> dé <span class="token keyword">import</span> Dé
+<pre class="language-py"><code class="language-py"><span class="token keyword">from</span> dé <span class="token keyword">import</span> Dé
 
 <span class="token keyword">def</span> <span class="token function">test_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     d <span class="token operator">=</span> Dé<span class="token punctuation">(</span><span class="token punctuation">)</span>
@@ -207,10 +206,9 @@ Pour reprendre un des exemples précédents, on pourrait imaginer une classe qui
 
 <span class="token keyword">def</span> <span class="token function">test_lancer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     d<span class="token operator">=</span>Dé<span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token keyword">assert</span> <span class="token number">1</span> <span class="token operator">&lt;=</span> d<span class="token punctuation">.</span>position <span class="token operator">&lt;=</span> <span class="token number">6</span>
-</code></pre>
+    <span class="token keyword">assert</span> <span class="token number">1</span> <span class="token operator">&lt;=</span> d<span class="token punctuation">.</span>position <span class="token operator">&lt;=</span> <span class="token number">6</span></code></pre>
 <p>Et le code principal du jeu :</p>
-<pre class="language-py " style="counter-reset: linenumber 0"><code class="language-py"><span class="token keyword">from</span> dé <span class="token keyword">import</span> Dé
+<pre class="language-py"><code class="language-py"><span class="token keyword">from</span> dé <span class="token keyword">import</span> Dé
 
 position_initiale <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"Position initiale :"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 valeur_arrêt <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"Valeur pour laquelle arrêter les lancers :"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
@@ -220,12 +218,11 @@ i <span class="token operator">=</span> <span class="token number">0</span>
 <span class="token keyword">while</span> d<span class="token punctuation">.</span>position <span class="token operator">!=</span> valeur_arrêt<span class="token punctuation">:</span>
     d<span class="token punctuation">.</span>lancer<span class="token punctuation">(</span><span class="token punctuation">)</span>
     i<span class="token operator">+=</span><span class="token number">1</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
-</code></pre>
+<span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span></code></pre>
 <ol start="2">
 <li>Dans un deuxième temps, j'ai modélisé un jeu de cartes que l'on mélange et dans lequel on tire trois cartes:</li>
 </ol>
-<pre class="language-py " style="counter-reset: linenumber 0"><code class="language-py">SEPT <span class="token operator">=</span> <span class="token string">"sept"</span>
+<pre class="language-py"><code class="language-py">SEPT <span class="token operator">=</span> <span class="token string">"sept"</span>
 HUIT <span class="token operator">=</span> <span class="token string">"huit"</span>
 NEUF <span class="token operator">=</span> <span class="token string">"neuf"</span>
 DIX <span class="token operator">=</span> <span class="token string">"dix"</span>
@@ -290,10 +287,9 @@ COULEURS <span class="token operator">=</span> <span class="token punctuation">[
         <span class="token keyword">elif</span> self<span class="token punctuation">.</span>valeur <span class="token operator">==</span> carte2<span class="token punctuation">.</span>valeur <span class="token punctuation">:</span>
             <span class="token keyword">return</span> COULEURS<span class="token punctuation">.</span>index<span class="token punctuation">(</span>self<span class="token punctuation">.</span>couleur<span class="token punctuation">)</span> <span class="token operator">>=</span> COULEURS<span class="token punctuation">.</span>index<span class="token punctuation">(</span>carte2<span class="token punctuation">.</span>couleur<span class="token punctuation">)</span>
         <span class="token keyword">else</span> <span class="token punctuation">:</span>
-            <span class="token keyword">return</span> <span class="token boolean">False</span>
-</code></pre>
+            <span class="token keyword">return</span> <span class="token boolean">False</span></code></pre>
 <p>Avec les tests associés :</p>
-<pre class="language-py " style="counter-reset: linenumber 0"><code class="language-py"><span class="token keyword">from</span> carte <span class="token keyword">import</span> <span class="token operator">*</span>
+<pre class="language-py"><code class="language-py"><span class="token keyword">from</span> carte <span class="token keyword">import</span> <span class="token operator">*</span>
 <span class="token keyword">import</span> random
 
 <span class="token keyword">def</span> <span class="token function">test_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -304,10 +300,9 @@ COULEURS <span class="token operator">=</span> <span class="token punctuation">[
 <span class="token keyword">def</span> <span class="token function">test__str__</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     c <span class="token operator">=</span> Carte<span class="token punctuation">(</span>SEPT<span class="token punctuation">,</span> PIQUE<span class="token punctuation">)</span>
     <span class="token keyword">assert</span> c<span class="token punctuation">.</span>__str__ <span class="token operator">==</span> <span class="token string">"sept de pique"</span>
-
 </code></pre>
 <p>Et le jeu en lui même :</p>
-<pre class="language-py " style="counter-reset: linenumber 0"><code class="language-py"><span class="token keyword">import</span> random
+<pre class="language-py"><code class="language-py"><span class="token keyword">import</span> random
 <span class="token keyword">from</span> carte <span class="token keyword">import</span> <span class="token operator">*</span>
 
 PAQUET <span class="token operator">=</span> <span class="token punctuation">[</span>Carte<span class="token punctuation">(</span>SEPT<span class="token punctuation">,</span> TREFLE<span class="token punctuation">)</span><span class="token punctuation">,</span> Carte<span class="token punctuation">(</span>HUIT<span class="token punctuation">,</span> TREFLE<span class="token punctuation">)</span><span class="token punctuation">,</span> Carte<span class="token punctuation">(</span>NEUF<span class="token punctuation">,</span> TREFLE<span class="token punctuation">)</span><span class="token punctuation">,</span> Carte<span class="token punctuation">(</span>DIX<span class="token punctuation">,</span> TREFLE<span class="token punctuation">)</span><span class="token punctuation">,</span> Carte <span class="token punctuation">(</span>VALET<span class="token punctuation">,</span> TREFLE<span class="token punctuation">)</span><span class="token punctuation">,</span> Carte<span class="token punctuation">(</span>DAME<span class="token punctuation">,</span> TREFLE<span class="token punctuation">)</span><span class="token punctuation">,</span> Carte <span class="token punctuation">(</span>ROI<span class="token punctuation">,</span> TREFLE<span class="token punctuation">)</span><span class="token punctuation">,</span> Carte<span class="token punctuation">(</span>AS<span class="token punctuation">,</span> TREFLE<span class="token punctuation">)</span><span class="token punctuation">,</span>
@@ -323,8 +318,7 @@ cartes_tirees <span class="token operator">=</span> random<span class="token pun
 
 <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span> <span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>cartes_tirees<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     carte <span class="token operator">=</span> cartes_tirees<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span>carte<span class="token punctuation">)</span>
-</code></pre>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>carte<span class="token punctuation">)</span></code></pre>
 <p>J'ai ensuite réfléchi à la suite de ce TD qui a pour but de créer une sorte de bataille avec ce jeu de cartes et les fonctions de comparaison, mais je n'ai pas eu le temps de l'implémenter proprement.</p>
 <h2>4. Pour approfondir</h2>
 <p>Enfin, pour aller un peu plus loin dans la prise en main de ce modèle de programmation et de ses applications, j'ai parcouru le chapitre <a href="https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/h%C3%A9ritage/">Héritage</a> du cours, les exemples associés, ainsi que la suite des chapitres de <a href="https://automatetheboringstuff.com/">Automate the Boring Stuff with Python</a>, mais je n'ai pas eu le temps de les mettre en pratique par moi-même.</p>

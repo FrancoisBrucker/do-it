@@ -467,7 +467,7 @@
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-vb " style="counter-reset: linenumber 0"><code class="language-vb">  <span class="token keyword">Sub</span> FeuillesParGen<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<pre class="language-vb"><code class="language-vb">  <span class="token keyword">Sub</span> FeuillesParGen<span class="token punctuation">(</span><span class="token punctuation">)</span>
   
     <span class="token comment">'Je récupère le numéro de la génération que je veux</span>
     <span class="token keyword">Dim</span> gen <span class="token keyword">As</span> <span class="token keyword">Integer</span>
@@ -491,8 +491,7 @@
     Worksheets<span class="token punctuation">(</span><span class="token string">"pokemon_formaté"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"A:N"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>AdvancedFilter <span class="token operator">_</span>
         Action<span class="token punctuation">:</span><span class="token operator">=</span>xlFilterCopy<span class="token punctuation">,</span> CriteriaRange<span class="token punctuation">:</span><span class="token operator">=</span>Worksheets<span class="token punctuation">(</span><span class="token string">"pokemon_formaté"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"P1:P2"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> CopyToRange<span class="token punctuation">:</span><span class="token operator">=</span>ActiveSheet<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"A1"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> Unique<span class="token punctuation">:</span><span class="token operator">=</span><span class="token boolean">False</span>
             
-<span class="token keyword">End</span> <span class="token keyword">Sub</span>
-</code></pre>
+<span class="token keyword">End</span> <span class="token keyword">Sub</span></code></pre>
 </div>
 </details>     
 </div>
@@ -530,15 +529,14 @@
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-vb " style="counter-reset: linenumber 0"><code class="language-vb">  <span class="token keyword">Sub</span> affiche_nb_type<span class="token punctuation">(</span>nb_lignes <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">)</span>
+<pre class="language-vb"><code class="language-vb">  <span class="token keyword">Sub</span> affiche_nb_type<span class="token punctuation">(</span>nb_lignes <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">)</span>
     
     Range<span class="token punctuation">(</span><span class="token string">"O1"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>FormulaR1C1 <span class="token operator">=</span> <span class="token string">"NB type"</span>
     Range<span class="token punctuation">(</span><span class="token string">"O2"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">Select</span>
     Selection<span class="token punctuation">.</span>FormulaR1C1 <span class="token operator">=</span> <span class="token string">"=IF(ISBLANK(RC[-10]),1,2)"</span>
     Selection<span class="token punctuation">.</span>AutoFill Destination<span class="token punctuation">:</span><span class="token operator">=</span>Range<span class="token punctuation">(</span><span class="token string">"O2:O"</span> <span class="token operator">&amp;</span> nb_lignes<span class="token punctuation">)</span>
     
-<span class="token keyword">End</span> <span class="token keyword">Sub</span>
-</code></pre>
+<span class="token keyword">End</span> <span class="token keyword">Sub</span></code></pre>
 </div>
 </details>     
 </div>
@@ -569,7 +567,7 @@
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-vb " style="counter-reset: linenumber 0"><code class="language-vb">  <span class="token keyword">Sub</span> initialisation_tableau<span class="token punctuation">(</span>nb_lignes <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">,</span> ind <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">)</span>
+<pre class="language-vb"><code class="language-vb">  <span class="token keyword">Sub</span> initialisation_tableau<span class="token punctuation">(</span>nb_lignes <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">,</span> ind <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">)</span>
     
     <span class="token comment">'Style de la 1e ligne</span>
     Range<span class="token punctuation">(</span><span class="token string">"C"</span> <span class="token operator">&amp;</span> ind <span class="token operator">&amp;</span> <span class="token string">":L"</span> <span class="token operator">&amp;</span> ind<span class="token punctuation">)</span><span class="token punctuation">.</span>Font<span class="token punctuation">.</span>Bold <span class="token operator">=</span> <span class="token boolean">True</span>
@@ -598,8 +596,7 @@
         Range<span class="token punctuation">(</span><span class="token string">"C"</span> <span class="token operator">&amp;</span> <span class="token punctuation">(</span>i <span class="token operator">+</span> ind <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token operator">=</span> types<span class="token punctuation">(</span>i<span class="token punctuation">)</span>
     <span class="token keyword">Next</span> i
         
-<span class="token keyword">End</span> <span class="token keyword">Sub</span>
-</code></pre>
+<span class="token keyword">End</span> <span class="token keyword">Sub</span></code></pre>
 </div>
 </details>     
 </div>
@@ -622,7 +619,7 @@
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-vb " style="counter-reset: linenumber 0"><code class="language-vb"><span class="token keyword">Sub</span> calcul_valeurs<span class="token punctuation">(</span>nb_lignes <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">,</span> ind <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">)</span>
+<pre class="language-vb"><code class="language-vb"><span class="token keyword">Sub</span> calcul_valeurs<span class="token punctuation">(</span>nb_lignes <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">,</span> ind <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">)</span>
     
     <span class="token comment">'On remplit les nombres</span>
     <span class="token keyword">For</span> l <span class="token operator">=</span> ind <span class="token operator">+</span> <span class="token number">1</span> <span class="token keyword">To</span> ind <span class="token operator">+</span> <span class="token number">18</span>
@@ -643,8 +640,7 @@
         
     <span class="token comment">'Meilleur et pire pokémon : à trouver car formule trop complexe</span>
     
-<span class="token keyword">End</span> <span class="token keyword">Sub</span>
-</code></pre>
+<span class="token keyword">End</span> <span class="token keyword">Sub</span></code></pre>
 </div>
 </details>     
 </div>
@@ -669,7 +665,7 @@
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-vb " style="counter-reset: linenumber 0"><code class="language-vb"><span class="token keyword">Sub</span> graphe<span class="token punctuation">(</span>ind <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">)</span>
+<pre class="language-vb"><code class="language-vb"><span class="token keyword">Sub</span> graphe<span class="token punctuation">(</span>ind <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">)</span>
 
     <span class="token keyword">Dim</span> graph <span class="token keyword">As</span> ChartObject
     <span class="token keyword">Set</span> graph <span class="token operator">=</span> ActiveSheet<span class="token punctuation">.</span>ChartObjects<span class="token punctuation">.</span>Add<span class="token punctuation">(</span>Left<span class="token punctuation">:</span><span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">,</span> Width<span class="token punctuation">:</span><span class="token operator">=</span><span class="token number">500</span><span class="token punctuation">,</span> Top<span class="token punctuation">:</span><span class="token operator">=</span><span class="token number">17</span> <span class="token operator">*</span> ind<span class="token punctuation">,</span> Height<span class="token punctuation">:</span><span class="token operator">=</span><span class="token number">400</span><span class="token punctuation">)</span>
@@ -677,8 +673,7 @@
     graph<span class="token punctuation">.</span>Chart<span class="token punctuation">.</span>ChartType <span class="token operator">=</span> xlBarStacked
     graph<span class="token punctuation">.</span>Chart<span class="token punctuation">.</span>ChartTitle<span class="token punctuation">.</span>Text <span class="token operator">=</span> <span class="token string">"Répartition des types"</span>
     
-<span class="token keyword">End</span> <span class="token keyword">Sub</span>
-</code></pre>
+<span class="token keyword">End</span> <span class="token keyword">Sub</span></code></pre>
 </div>
 </details>     
 </div>
@@ -703,7 +698,7 @@
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-vb " style="counter-reset: linenumber 0"><code class="language-vb"><span class="token keyword">Sub</span> AnalyseParGen<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<pre class="language-vb"><code class="language-vb"><span class="token keyword">Sub</span> AnalyseParGen<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
     <span class="token comment">'Je crée la nouvelle feuille</span>
     FeuillesParGen
@@ -745,8 +740,7 @@
     graphe ind
     
     
-<span class="token keyword">End</span> <span class="token keyword">Sub</span>
-</code></pre>
+<span class="token keyword">End</span> <span class="token keyword">Sub</span></code></pre>
 </div>
 </details>     
 </div>
@@ -784,7 +778,7 @@
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-vb " style="counter-reset: linenumber 0"><code class="language-vb"><span class="token keyword">Sub</span> nombre_legendaire<span class="token punctuation">(</span>nb_lignes <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">,</span> poktype <span class="token keyword">As</span> <span class="token keyword">String</span><span class="token punctuation">,</span> ligne <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">)</span>
+<pre class="language-vb"><code class="language-vb"><span class="token keyword">Sub</span> nombre_legendaire<span class="token punctuation">(</span>nb_lignes <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">,</span> poktype <span class="token keyword">As</span> <span class="token keyword">String</span><span class="token punctuation">,</span> ligne <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">)</span>
 
     <span class="token comment">'Définir les variables</span>
     <span class="token keyword">Dim</span> leg <span class="token keyword">As</span> <span class="token keyword">Variant</span>
@@ -802,8 +796,7 @@
     
     Range<span class="token punctuation">(</span><span class="token string">"E"</span> <span class="token operator">&amp;</span> ligne<span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token operator">=</span> compteur
 
-<span class="token keyword">End</span> <span class="token keyword">Sub</span>
-</code></pre>
+<span class="token keyword">End</span> <span class="token keyword">Sub</span></code></pre>
 </div>
 </details>     
 </div>
@@ -825,7 +818,7 @@
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-vb " style="counter-reset: linenumber 0"><code class="language-vb"><span class="token keyword">Sub</span> influence_legendaire<span class="token punctuation">(</span>nb_lignes <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">,</span> ind3 <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">)</span>
+<pre class="language-vb"><code class="language-vb"><span class="token keyword">Sub</span> influence_legendaire<span class="token punctuation">(</span>nb_lignes <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">,</span> ind3 <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">)</span>
     
     <span class="token comment">'Style</span>
     <span class="token keyword">With</span> Range<span class="token punctuation">(</span><span class="token string">"J"</span> <span class="token operator">&amp;</span> ind3<span class="token punctuation">)</span>
@@ -864,8 +857,7 @@
     Range<span class="token punctuation">(</span><span class="token string">"K"</span> <span class="token operator">&amp;</span> ind3 <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token operator">=</span> WorksheetFunction<span class="token punctuation">.</span>Round<span class="token punctuation">(</span>total <span class="token operator">/</span> compteur<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
     Range<span class="token punctuation">(</span><span class="token string">"K"</span> <span class="token operator">&amp;</span> ind3 <span class="token operator">+</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token operator">=</span> WorksheetFunction<span class="token punctuation">.</span>Round<span class="token punctuation">(</span><span class="token punctuation">(</span>WorksheetFunction<span class="token punctuation">.</span>Sum<span class="token punctuation">(</span>Range<span class="token punctuation">(</span><span class="token string">"F2:F"</span> <span class="token operator">&amp;</span> nb_lignes<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">-</span> total<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token punctuation">(</span>nb_lignes <span class="token operator">-</span> <span class="token number">1</span> <span class="token operator">-</span> compteur<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
 
-<span class="token keyword">End</span> <span class="token keyword">Sub</span>
-</code></pre>
+<span class="token keyword">End</span> <span class="token keyword">Sub</span></code></pre>
 </div>
 </details>     
 </div>
@@ -887,7 +879,7 @@
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-vb " style="counter-reset: linenumber 0"><code class="language-vb"><span class="token keyword">Sub</span> influence_type<span class="token punctuation">(</span>nb_lignes <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">,</span> ind3 <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">)</span>
+<pre class="language-vb"><code class="language-vb"><span class="token keyword">Sub</span> influence_type<span class="token punctuation">(</span>nb_lignes <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">,</span> ind3 <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">)</span>
     
     <span class="token comment">'Style</span>
     <span class="token keyword">With</span> Range<span class="token punctuation">(</span><span class="token string">"G"</span> <span class="token operator">&amp;</span> ind3<span class="token punctuation">)</span>
@@ -912,8 +904,7 @@
     Range<span class="token punctuation">(</span><span class="token string">"H"</span> <span class="token operator">&amp;</span> ind3 <span class="token operator">+</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token operator">=</span> WorksheetFunction<span class="token punctuation">.</span>Round<span class="token punctuation">(</span>WorksheetFunction<span class="token punctuation">.</span>SumIf<span class="token punctuation">(</span>Range<span class="token punctuation">(</span><span class="token string">"O2:O"</span> <span class="token operator">&amp;</span> nb_lignes<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> Range<span class="token punctuation">(</span><span class="token string">"F2:F"</span> <span class="token operator">&amp;</span> nb_lignes<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">/</span> WorksheetFunction<span class="token punctuation">.</span>CountIf<span class="token punctuation">(</span>Range<span class="token punctuation">(</span><span class="token string">"O2:O"</span> <span class="token operator">&amp;</span> nb_lignes<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
     
 
-<span class="token keyword">End</span> <span class="token keyword">Sub</span>
-</code></pre>
+<span class="token keyword">End</span> <span class="token keyword">Sub</span></code></pre>
 </div>
 </details>     
 </div>
@@ -935,7 +926,7 @@
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-vb " style="counter-reset: linenumber 0"><code class="language-vb"><span class="token keyword">Sub</span> records<span class="token punctuation">(</span>nb_lignes <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">,</span> ind2 <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">)</span>
+<pre class="language-vb"><code class="language-vb"><span class="token keyword">Sub</span> records<span class="token punctuation">(</span>nb_lignes <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">,</span> ind2 <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">)</span>
 
     <span class="token comment">'Reprise des attributs de la 1e ligne du dataset</span>
     <span class="token keyword">Dim</span> rg <span class="token keyword">As</span> Range
@@ -970,8 +961,7 @@
         Range<span class="token punctuation">(</span>C <span class="token operator">&amp;</span> ind2 <span class="token operator">+</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">=</span> WorksheetFunction<span class="token punctuation">.</span>Index<span class="token punctuation">(</span>Range<span class="token punctuation">(</span><span class="token string">"A1:O"</span> <span class="token operator">&amp;</span> nb_lignes<span class="token punctuation">)</span><span class="token punctuation">,</span> WorksheetFunction<span class="token punctuation">.</span>Match<span class="token punctuation">(</span>WorksheetFunction<span class="token punctuation">.</span>Min<span class="token punctuation">(</span>Range<span class="token punctuation">(</span>C <span class="token operator">&amp;</span> <span class="token string">"1:"</span> <span class="token operator">&amp;</span> C <span class="token operator">&amp;</span> nb_lignes<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> Range<span class="token punctuation">(</span>C <span class="token operator">&amp;</span> <span class="token string">"1:"</span> <span class="token operator">&amp;</span> C <span class="token operator">&amp;</span> nb_lignes<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
     <span class="token keyword">Next</span>
 
-<span class="token keyword">End</span> <span class="token keyword">Sub</span>
-</code></pre>
+<span class="token keyword">End</span> <span class="token keyword">Sub</span></code></pre>
 </div>
 </details>     
 </div>
@@ -994,7 +984,7 @@
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-vb " style="counter-reset: linenumber 0"><code class="language-vb"><span class="token keyword">Sub</span> AnalyseParGen<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<pre class="language-vb"><code class="language-vb"><span class="token keyword">Sub</span> AnalyseParGen<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
     <span class="token comment">'Je crée la nouvelle feuille</span>
     FeuillesParGen
@@ -1037,8 +1027,7 @@
     <span class="token comment">'Influence du nomre de legendaires</span>
     influence_legendaire nb_lignes<span class="token punctuation">,</span> ind3
     
-<span class="token keyword">End</span> <span class="token keyword">Sub</span>
-</code></pre>
+<span class="token keyword">End</span> <span class="token keyword">Sub</span></code></pre>
 </div>
 </details>     
 </div>

@@ -137,33 +137,30 @@
 </ul>
 <p>Tout comme Python, JS est un langage interprété et le code va donc s'exécuter de haut en bas en renvoyant le résultat immédiatement. Contrairement par exemple au C et au C++ qui sont compilés en langage assembleur pour ensuite être exécuté par l'ordinateur.</p>
 <p>Le script JS se lie avec le code HTML grâce à cette ligne de code :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>script.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
-</code></pre>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>script.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
 <p>Le fonctionnement et la syntaxe de JS sont globalement assez semblables à Python et c'est donc assez facile de prendre en main ces aspects du langage. On y retrouve de multiples similitudes :</p>
 <ul>
 <li>l'utilisation de variables</li>
 </ul>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">let</span> myVariable <span class="token operator">=</span> <span class="token number">12</span> <span class="token comment">//déclaration de la variable</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">let</span> myVariable <span class="token operator">=</span> <span class="token number">12</span> <span class="token comment">//déclaration de la variable</span>
 my variable <span class="token operator">=</span> <span class="token number">14</span> <span class="token comment">//modification de la variable</span>
 
-<span class="token keyword">const</span> myConst <span class="token operator">=</span> <span class="token string">"Daniel"</span> <span class="token comment">//déclaration d'une constante</span>
-</code></pre>
+<span class="token keyword">const</span> myConst <span class="token operator">=</span> <span class="token string">"Daniel"</span> <span class="token comment">//déclaration d'une constante</span></code></pre>
 <ul>
 <li>la programmation orientée objet</li>
 </ul>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">let</span> monPC <span class="token operator">=</span> <span class="token punctuation">{</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">let</span> monPC <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token literal-property property">marque</span><span class="token operator">:</span> <span class="token string">"Dell"</span><span class="token punctuation">,</span>
   <span class="token literal-property property">gamme</span><span class="token operator">:</span> <span class="token string">"XPS"</span><span class="token punctuation">,</span>
   <span class="token literal-property property">couleur</span><span class="token operator">:</span> <span class="token string">"gris"</span><span class="token punctuation">,</span>
   <span class="token literal-property property">annee</span><span class="token operator">:</span> <span class="token string">"2021"</span>
 <span class="token punctuation">}</span>
 
-<span class="token keyword">let</span> maMarque <span class="token operator">=</span> monPC<span class="token punctuation">.</span>marque <span class="token comment">//appel à une propriété</span>
-</code></pre>
+<span class="token keyword">let</span> maMarque <span class="token operator">=</span> monPC<span class="token punctuation">.</span>marque <span class="token comment">//appel à une propriété</span></code></pre>
 <ul>
 <li>les conditions et boucles</li>
 </ul>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">if</span> <span class="token punctuation">(</span>condition<span class="token punctuation">)</span><span class="token punctuation">{</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">if</span> <span class="token punctuation">(</span>condition<span class="token punctuation">)</span><span class="token punctuation">{</span>
   <span class="token operator">...</span>
 <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
   <span class="token operator">...</span>
@@ -174,8 +171,7 @@ my variable <span class="token operator">=</span> <span class="token number">14<
 
 <span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span>
 <span class="token keyword">while</span><span class="token punctuation">(</span>i<span class="token operator">&lt;</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-  <span class="token operator">...</span><span class="token punctuation">}</span>
-</code></pre>
+  <span class="token operator">...</span><span class="token punctuation">}</span></code></pre>
 <p>Le grand intérêt du JS est le lien avec les langages HTML et CSS. Il permet :</p>
 <ul>
 <li><strong>d'ajouter des balises</strong></li>
@@ -183,18 +179,16 @@ my variable <span class="token operator">=</span> <span class="token number">14<
 <li><strong>de les modifier</strong></li>
 </ul>
 <p>Pour cela il faut tout d'abord récupérer les éléments d'une page Web grâce aux diverses méthodes</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">let</span> baliseZone <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"zone"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//pour récupérer un élément particulier</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">let</span> baliseZone <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"zone"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//pour récupérer un élément particulier</span>
 
 <span class="token keyword">let</span> baliseZoneSpan <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#zone span"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//pour récupérer seulement un type parmi un groupe parent (comme un div par exemple)</span>
 
-<span class="token keyword">let</span> listeInputRadio <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">".zoneChoix input"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//pour récupérer tous les inputs du groupe parent zoneChoix</span>
-</code></pre>
+<span class="token keyword">let</span> listeInputRadio <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">".zoneChoix input"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//pour récupérer tous les inputs du groupe parent zoneChoix</span></code></pre>
 <p>Afin d'avoir une page plus dynamique il faut programmer de <strong>manière événementielle</strong>. Les événements peuvent être : un clic de la souris, une frappe d'un clavier, un bouton coché, ...
 Ces derniers sont écoutés grâce à <em>addEventListener</em> puis utilisés à l'aide d'une fonction <em>=&gt;</em></p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">monBouton<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<pre class="language-js"><code class="language-js">monBouton<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Vous avez cliqué sur le bouton"</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <h2>II. La pratique</h2>
 <p>Afin de mettre en pratique ces différents aspects principaux du code, j'ai suivi l'exercice d'un cours OpenClassRoom pour mettre en place une application en ligne pour apprendre à taper des mots plus vite.</p>
 <p><img src="images/appli1.png" alt="Appli"></p>
@@ -207,7 +201,7 @@ Ces derniers sont écoutés grâce à <em>addEventListener</em> puis utilisés �
 <li>afficher un popup pour partager notre score</li>
 </ul>
 <p>Début de la fonction pour lancer le jeu :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">function</span> <span class="token function">lancerJeu</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">lancerJeu</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token function">initAddEventListenerPopup</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
   <span class="token keyword">let</span> score <span class="token operator">=</span> <span class="token number">0</span>
   <span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span>
@@ -232,8 +226,7 @@ Ces derniers sont écoutés grâce à <em>addEventListener</em> puis utilisés �
       <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
           <span class="token function">afficherProposition</span><span class="token punctuation">(</span>listeProposition<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
       <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span>
-</code></pre>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
 <p>En plus de cela j'ai effectué des exercices en ligne pour continuer d'améliorer mes réflexes en JS et apprendre plus de fonctionnalités. Les sites utilisés sont dans les sources après la conclusion.</p>
 <h2>III. Quelques principes importants pour le back</h2>
 <h3>Le JSON</h3>

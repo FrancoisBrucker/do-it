@@ -188,17 +188,16 @@ Objectifs du Portfolio :
 <li>Création d'une base de données sur MongoDB Atlas</li>
 <li>Etablissement de la connexion de la base données et le serveur</li>
 </ul>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token comment">//La chaine de connexion est fournie par MongoDB</span>
+<pre class="language-js"><code class="language-js"><span class="token comment">//La chaine de connexion est fournie par MongoDB</span>
 mongoose<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span>'chaine de connexion<span class="token punctuation">,</span>
   <span class="token punctuation">{</span> <span class="token literal-property property">useNewUrlParser</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
     <span class="token literal-property property">useUnifiedTopology</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
   <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Connexion à MongoDB réussie !'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-  <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Connexion à MongoDB échouée !'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+  <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Connexion à MongoDB échouée !'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <ul>
 <li>Conception du schéma de base de données</li>
 </ul>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> mongoose <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mongoose'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> mongoose <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mongoose'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> monSchema <span class="token operator">=</span> mongoose<span class="token punctuation">.</span><span class="token function">Schema</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   <span class="token comment">//le nom est un champs non obligatoire</span>
@@ -207,8 +206,7 @@ mongoose<span class="token punctuation">.</span><span class="token function">con
   <span class="token literal-property property">Statut</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">type</span><span class="token operator">:</span> String<span class="token punctuation">,</span> <span class="token keyword">default</span><span class="token operator">:</span> <span class="token string">'en attente'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-module<span class="token punctuation">.</span>exports <span class="token operator">=</span> mongoose<span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span><span class="token string">'Recommandations'</span><span class="token punctuation">,</span> monSchema<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> mongoose<span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span><span class="token string">'Recommandations'</span><span class="token punctuation">,</span> monSchema<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p><em><strong>4. Configuration des routes</strong></em></p>
 <ul>
 <li>Route POST pour récupérer les recommandations provenant du formulaire</li>

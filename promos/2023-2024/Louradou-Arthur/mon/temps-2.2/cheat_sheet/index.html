@@ -128,12 +128,11 @@
 
 
 <p><em>Une fois l’installation de minikube faite avec Docker, voici les commandes utiles pour setup un nouveau projet, couplées avec les configurations de base pour lancer une app web avec une base de données MongoDB.</em></p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">minikube start <span class="token parameter variable">--driver</span><span class="token operator">=</span>none 
-</code></pre>
+<pre class="language-bash"><code class="language-bash">minikube start <span class="token parameter variable">--driver</span><span class="token operator">=</span>none </code></pre>
 <p>Sur Ubuntu, <code>--driver=qemu</code> fonctionne, <code>--driver=docker</code> aussi, à condition de rentrer dans <code>newgrp docker</code></p>
 <h2>Commandes</h2>
 <p>Après la configuration, voilà les commandes à disposition si les fichiers de configuration sont déjà prêts (<code>fichier.yaml</code> désigne les fichiers configmap, secret, deployment, service…) :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">kubectl apply <span class="token parameter variable">-f</span> fichier.yaml
+<pre class="language-bash"><code class="language-bash">kubectl apply <span class="token parameter variable">-f</span> fichier.yaml
 kubectl get pod
 kubectl get services
 kubectl get all
@@ -141,32 +140,29 @@ kubectl logs <span class="token operator">&lt;</span>nom <span class="token func
 kubectl describe pod <span class="token operator">&lt;</span>nom <span class="token function">du</span> <span class="token function">service</span> dans get pods<span class="token operator">></span> <span class="token comment"># pour corriger certains bugs</span>
 
 minikube <span class="token function">ip</span> <span class="token comment"># afficher l'ip de sortie</span>
-kubectl get <span class="token function">node</span> <span class="token parameter variable">-o</span> wide <span class="token comment"># alternantive sans minikube</span>
-</code></pre>
+kubectl get <span class="token function">node</span> <span class="token parameter variable">-o</span> wide <span class="token comment"># alternantive sans minikube</span></code></pre>
 <h2>Fichiers de configuration</h2>
 <h3>ConfigMap</h3>
-<pre class="language-yaml " style="counter-reset: linenumber 0"><code class="language-yaml"><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
 <span class="token key atrule">kind</span><span class="token punctuation">:</span> ConfigMap
 <span class="token key atrule">metadata</span><span class="token punctuation">:</span>
   <span class="token key atrule">name</span><span class="token punctuation">:</span> mongo<span class="token punctuation">-</span>config
 <span class="token key atrule">data</span><span class="token punctuation">:</span>
-  <span class="token key atrule">mongo-url</span><span class="token punctuation">:</span> mongo<span class="token punctuation">-</span>service
-</code></pre>
+  <span class="token key atrule">mongo-url</span><span class="token punctuation">:</span> mongo<span class="token punctuation">-</span>service</code></pre>
 <h3>Secret</h3>
-<pre class="language-yaml " style="counter-reset: linenumber 0"><code class="language-yaml"><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
 <span class="token key atrule">kind</span><span class="token punctuation">:</span> Secret
 <span class="token key atrule">metadata</span><span class="token punctuation">:</span>
   <span class="token key atrule">name</span><span class="token punctuation">:</span> mongo<span class="token punctuation">-</span>secret
 <span class="token key atrule">type</span><span class="token punctuation">:</span> Opaque
 <span class="token key atrule">data</span><span class="token punctuation">:</span>
   <span class="token key atrule">mongo-user</span><span class="token punctuation">:</span> YWRtaW4=
-  <span class="token key atrule">mongo-password</span><span class="token punctuation">:</span> YWRtaW4=
-</code></pre>
+  <span class="token key atrule">mongo-password</span><span class="token punctuation">:</span> YWRtaW4=</code></pre>
 <aside>
 ⚠️ Dans le pod MongoDB, il doit figurer la base64 des mots de passes et user sous peine d’erreur !
 </aside>
 <h3>Deployment</h3>
-<pre class="language-yaml " style="counter-reset: linenumber 0"><code class="language-yaml"><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> apps/v1
+<pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> apps/v1
 <span class="token key atrule">kind</span><span class="token punctuation">:</span> Deployment
 <span class="token key atrule">metadata</span><span class="token punctuation">:</span>
   <span class="token key atrule">name</span><span class="token punctuation">:</span> mongo<span class="token punctuation">-</span>deployment
@@ -197,10 +193,9 @@ kubectl get <span class="token function">node</span> <span class="token paramete
           <span class="token key atrule">valueFrom</span><span class="token punctuation">:</span>
             <span class="token key atrule">secretKeyRef</span><span class="token punctuation">:</span>
               <span class="token key atrule">name</span><span class="token punctuation">:</span> mongo<span class="token punctuation">-</span>secret
-              <span class="token key atrule">key</span><span class="token punctuation">:</span> mongo<span class="token punctuation">-</span>password
-</code></pre>
+              <span class="token key atrule">key</span><span class="token punctuation">:</span> mongo<span class="token punctuation">-</span>password</code></pre>
 <p>Pour ajouter des variables d’environnement au déploiement :</p>
-<pre class="language-yaml " style="counter-reset: linenumber 0"><code class="language-yaml"><span class="token key atrule">spec</span><span class="token punctuation">:</span>
+<pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">spec</span><span class="token punctuation">:</span>
   <span class="token key atrule">containers</span><span class="token punctuation">:</span>
   <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> envar<span class="token punctuation">-</span>demo<span class="token punctuation">-</span>container
     <span class="token key atrule">image</span><span class="token punctuation">:</span> gcr.io/google<span class="token punctuation">-</span>samples/node<span class="token punctuation">-</span>hello<span class="token punctuation">:</span><span class="token number">1.0</span>
@@ -208,13 +203,12 @@ kubectl get <span class="token function">node</span> <span class="token paramete
     <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> DEMO_GREETING
       <span class="token key atrule">value</span><span class="token punctuation">:</span> <span class="token string">"Hello from the environment"</span>
     <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> DEMO_FAREWELL
-      <span class="token key atrule">value</span><span class="token punctuation">:</span> <span class="token string">"Such a sweet sorrow"</span>
-</code></pre>
+      <span class="token key atrule">value</span><span class="token punctuation">:</span> <span class="token string">"Such a sweet sorrow"</span></code></pre>
 <p>Ces variables seront considérées comme des variables de la ligne du dockerfile contenant “ENV”</p>
 <pre><code>ENV MONGO_DB_USERNAME=admin MONGO_DB_PWD=password
 </code></pre>
 <h3>Service</h3>
-<pre class="language-yaml " style="counter-reset: linenumber 0"><code class="language-yaml"><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
 <span class="token key atrule">kind</span><span class="token punctuation">:</span> Service
 <span class="token key atrule">metadata</span><span class="token punctuation">:</span>
   <span class="token key atrule">name</span><span class="token punctuation">:</span> mongo<span class="token punctuation">-</span>service
@@ -224,9 +218,8 @@ kubectl get <span class="token function">node</span> <span class="token paramete
   <span class="token key atrule">ports</span><span class="token punctuation">:</span>
     <span class="token punctuation">-</span> <span class="token key atrule">protocol</span><span class="token punctuation">:</span> TCP
       <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">27017</span> <span class="token comment"># quelconque</span>
-      <span class="token key atrule">targetPort</span><span class="token punctuation">:</span> <span class="token number">27017</span> <span class="token comment"># lié au containerPort</span>
-</code></pre>
-<pre class="language-yaml " style="counter-reset: linenumber 0"><code class="language-yaml"><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+      <span class="token key atrule">targetPort</span><span class="token punctuation">:</span> <span class="token number">27017</span> <span class="token comment"># lié au containerPort</span></code></pre>
+<pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
 <span class="token key atrule">kind</span><span class="token punctuation">:</span> Service
 <span class="token key atrule">metadata</span><span class="token punctuation">:</span>
   <span class="token key atrule">name</span><span class="token punctuation">:</span> webapp<span class="token punctuation">-</span>service
@@ -238,8 +231,7 @@ kubectl get <span class="token function">node</span> <span class="token paramete
     <span class="token punctuation">-</span> <span class="token key atrule">protocol</span><span class="token punctuation">:</span> TCP
       <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">3000</span> <span class="token comment"># quelconque</span>
       <span class="token key atrule">targetPort</span><span class="token punctuation">:</span> <span class="token number">3000</span> <span class="token comment"># lié au containerPort</span>
-      <span class="token key atrule">nodePort</span><span class="token punctuation">:</span> <span class="token number">30100</span> <span class="token comment"># port ouvert sur l'extérieur avec l'ip du NodePort</span>
-</code></pre>
+      <span class="token key atrule">nodePort</span><span class="token punctuation">:</span> <span class="token number">30100</span> <span class="token comment"># port ouvert sur l'extérieur avec l'ip du NodePort</span></code></pre>
 <aside>
 💡 Il est possible de mettre deux configurations (Deployment et Service par exemple) dans le même fichier en les séparant selon la syntaxe yaml : `---` sur une nouvelle ligne.
 </aside>

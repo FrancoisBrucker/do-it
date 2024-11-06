@@ -143,7 +143,7 @@
 <p>C# est un langage orienté objet, ce qui signifie qu'il repose sur la notion d'objets et de classes. Elle se fonde sur l'idée de modéliser des entités du monde réel ou des abstractions informatiques sous forme d'objets, qui possèdent des caractéristiques (appelées attributs) et des comportements (appelés méthodes). La POO permet de structurer et d'organiser le code de manière plus modulaire, ce qui facilite la compréhension, la maintenance et la réutilisation du code. C'est une notion centrale à C# qu'il faut bien comprendre avant de vouloir commencer à coder.</p>
 <h4>1. Classes</h4>
 <p>Une classe est un modèle pour créer des objets. Elle définit les attributs (variables) et les méthodes (fonctions) que les objets auront. Voici un exemple simple de définition de classe :</p>
-<pre class="language-csharp " style="counter-reset: linenumber 0"><code class="language-csharp"><span class="token keyword">class</span> <span class="token class-name">Personne</span>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">class</span> <span class="token class-name">Personne</span>
 <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token class-name"><span class="token keyword">string</span></span> Nom<span class="token punctuation">;</span>
     <span class="token keyword">public</span> <span class="token class-name"><span class="token keyword">int</span></span> Age<span class="token punctuation">;</span>
@@ -152,18 +152,16 @@
     <span class="token punctuation">{</span>
         Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Bonjour"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>On a déclaré une classe s'appelant &quot;Personne&quot;. Un objet de la catégorie Personne aura deux attributs : son nom et son âge. Cet objet a aussi une fonction Parler qui renvoie simplement dans le terminal le texte &quot;Bonjour&quot;. L'intérêt de cette méthode est que c'est ensuite facile de définir des Personnes, et on peut en avoir plusieurs représentants dans le programme.</p>
 <h4>2. Objets</h4>
 <p>Les objets sont les instances de classe. Par exemple, si je veux créer une nouvelle personne :</p>
-<pre class="language-csharp " style="counter-reset: linenumber 0"><code class="language-csharp"><span class="token class-name">Personne</span> personne1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Personne</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-csharp"><code class="language-csharp"><span class="token class-name">Personne</span> personne1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Personne</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 personne1<span class="token punctuation">.</span>Nom <span class="token operator">=</span> <span class="token string">"Alice"</span><span class="token punctuation">;</span>
 personne1<span class="token punctuation">.</span>Age <span class="token operator">=</span> <span class="token number">25</span><span class="token punctuation">;</span>
-personne1<span class="token punctuation">.</span><span class="token function">Parler</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+personne1<span class="token punctuation">.</span><span class="token function">Parler</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>Cela me permet de définir un représentant de la classe Personne avec tous les attributs et méthodes qui vont avec. Ceux qui ont bien suivi les cours d'informatique en 1A se rendront compte qu'on se rapproche beaucoup de la structure en Java, à quelques différences de syntaxe près. On a aussi les notions de constructeurs, qui permettent de faciliter la création d'objets.</p>
-<pre class="language-csharp " style="counter-reset: linenumber 0"><code class="language-csharp"><span class="token keyword">class</span> <span class="token class-name">Personne</span>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">class</span> <span class="token class-name">Personne</span>
 <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token class-name"><span class="token keyword">string</span></span> Nom<span class="token punctuation">;</span>
     <span class="token keyword">public</span> <span class="token class-name"><span class="token keyword">int</span></span> Age<span class="token punctuation">;</span>
@@ -179,15 +177,13 @@ personne1<span class="token punctuation">.</span><span class="token function">Pa
     <span class="token punctuation">{</span>
         Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Bonjour"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Cela peut paraître fastidieux à implémenter au début, mais la création d'objets par la suite devient beaucoup plus simple.</p>
-<pre class="language-csharp " style="counter-reset: linenumber 0"><code class="language-csharp"><span class="token class-name">Personne</span> personne1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Personne</span><span class="token punctuation">(</span><span class="token string">"Alice"</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-csharp"><code class="language-csharp"><span class="token class-name">Personne</span> personne1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Personne</span><span class="token punctuation">(</span><span class="token string">"Alice"</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>En une seule ligne, on a créé un nouvel objet; les constructeurs permettent de créer plusieurs objets très rapidement et accélèrent le développement.</p>
 <h2>Exemples d'application</h2>
 <p>Pour apprendre à me servir de C#, j'ai codé quelques exemples simples pour me familiariser avec les méthodes. On a d'abord le plus simple, l'incontournable :</p>
-<pre class="language-csharp " style="counter-reset: linenumber 0"><code class="language-csharp"><span class="token keyword">using</span> <span class="token namespace">System</span><span class="token punctuation">;</span>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">using</span> <span class="token namespace">System</span><span class="token punctuation">;</span>
 
 <span class="token keyword">class</span> <span class="token class-name">Program</span>
 <span class="token punctuation">{</span>
@@ -195,10 +191,9 @@ personne1<span class="token punctuation">.</span><span class="token function">Pa
     <span class="token punctuation">{</span>
         Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Hello, World!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>J'ai aussi expérimenté avec des boucles et des conditions, en créant un programme qui liste les nombres premiers jusqu'à une certaine limite :</p>
-<pre class="language-csharp " style="counter-reset: linenumber 0"><code class="language-csharp"><span class="token keyword">using</span> <span class="token namespace">System</span><span class="token punctuation">;</span>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">using</span> <span class="token namespace">System</span><span class="token punctuation">;</span>
 
 <span class="token keyword">class</span> <span class="token class-name">Program</span>
 <span class="token punctuation">{</span>
@@ -227,15 +222,12 @@ personne1<span class="token punctuation">.</span><span class="token function">Pa
             <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Pour exécuter ce fichier, on se place dans le dossier où se trouve le fichier avec le code (au format .cs) et on exécute dans le terminal :</p>
-<pre class="language-powershell " style="counter-reset: linenumber 0"><code class="language-powershell">dotnet new console
-</code></pre>
+<pre class="language-powershell"><code class="language-powershell">dotnet new console</code></pre>
 <p>Cela nous crée un environnement de projet. On peut maintenant compiler le code et le faire tourner et avoir la sortie :</p>
-<pre class="language-powershell " style="counter-reset: linenumber 0"><code class="language-powershell">dotnet build
-dotnet run
-</code></pre>
+<pre class="language-powershell"><code class="language-powershell">dotnet build
+dotnet run</code></pre>
 <p>Output :</p>
 <pre><code>2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 
 </code></pre>

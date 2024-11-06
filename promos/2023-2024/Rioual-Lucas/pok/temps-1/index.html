@@ -216,7 +216,7 @@ Voici le resultat du sprint 1 :</p>
 <p><strong>Le modèle 3D</strong> est interactif. On peut tourner autour avec la souris. En plus, j’ai rajouté des particules qui gravitent autour de la boîte. Pour cela, j’ai utilisé <a href="https://www.youtube.com/watch?v=Uh7yvnBnLj0&amp;t=606s">ce tuto</a>.</p>
 <p>J’ai un petit soucis de lumière. Quand on tourne l’objet, on ne distingue plus ses formes car la scène devient trop sombre</p>
 <p>Ensuite, je voulais que cette page soit dynamique. C’est à dire que cette page s’adapte en fonction du produit visualisé. J’ai donc crée un fichier JSON avec 4 produits tests :</p>
-<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token punctuation">[</span>
+<pre class="language-jsx"><code class="language-jsx"><span class="token punctuation">[</span>
       <span class="token punctuation">{</span>
         <span class="token string-property property">"id"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
         <span class="token string-property property">"titre"</span><span class="token operator">:</span> <span class="token string">"Ring Box"</span><span class="token punctuation">,</span>
@@ -263,8 +263,7 @@ Voici le resultat du sprint 1 :</p>
    
       <span class="token punctuation">}</span>
       
-<span class="token punctuation">]</span>
-</code></pre>
+<span class="token punctuation">]</span></code></pre>
 <p>L’attribut “Ressource” désigne le dossier qui contient les images de la boîte et le modèle 3d. Pour l’instant, toutes les boîtes désignent le même dossier.</p>
 <p>Ainsi, cette page est dynamique et affiche les données en fonction de ce tableau JSON.</p>
 <img src="pagebis.png">

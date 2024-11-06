@@ -213,25 +213,20 @@ Autrement dit, un projet peut avoir ses propres bibliothèques et versions de mo
 <p>venv est une nouveauté de Python 3.3 donc il devrait être installer par défaut.</p>
 </blockquote>
 <p>Afin de créer un environnement virtuel, il suffit d'utiliser un terminal, de se placer dans le dossier du projet, et de taper la commmande :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">$ python <span class="token parameter variable">-m</span> venv <span class="token function">env</span>
-</code></pre>
+<pre class="language-bash"><code class="language-bash">$ python <span class="token parameter variable">-m</span> venv <span class="token function">env</span></code></pre>
 <p>Sur windows, la commande permettant d'activer l'environnement virtuel est la suivante :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">env<span class="token punctuation">\</span>Scripts<span class="token punctuation">\</span>activate.bat
-</code></pre>
+<pre class="language-bash"><code class="language-bash">env<span class="token punctuation">\</span>Scripts<span class="token punctuation">\</span>activate.bat</code></pre>
 <p>Sur Linux :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token builtin class-name">source</span> env/bin/activate
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">source</span> env/bin/activate</code></pre>
 <p>L'environnement virtuel est maintenant activé.</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">C:<span class="token punctuation">\</span>Users<span class="token punctuation">\</span>samid<span class="token punctuation">\</span>Documents<span class="token operator">></span>env<span class="token punctuation">\</span>Scripts<span class="token punctuation">\</span>activate.bat
+<pre class="language-bash"><code class="language-bash">C:<span class="token punctuation">\</span>Users<span class="token punctuation">\</span>samid<span class="token punctuation">\</span>Documents<span class="token operator">></span>env<span class="token punctuation">\</span>Scripts<span class="token punctuation">\</span>activate.bat
 
-<span class="token punctuation">(</span>env<span class="token punctuation">)</span> C:<span class="token punctuation">\</span>Users<span class="token punctuation">\</span>samid<span class="token punctuation">\</span>Documents<span class="token operator">></span>
-</code></pre>
+<span class="token punctuation">(</span>env<span class="token punctuation">)</span> C:<span class="token punctuation">\</span>Users<span class="token punctuation">\</span>samid<span class="token punctuation">\</span>Documents<span class="token operator">></span></code></pre>
 <blockquote>
 <p>Le petit (env) tout à gauche permet de savoir si l'environnement virtuel est activée ou non.</p>
 </blockquote>
 <p>Pour désactiver l'environnement virtuel, il suffit de taper la commande :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">deactivate
-</code></pre>
+<pre class="language-bash"><code class="language-bash">deactivate</code></pre>
 <p>Une fois cela fait, on peut maintenant passer à la création d'une application web.</p>
 <h3>Utilisation de Flask <a id="subsection-2"></a></h3>
 <p>Après avoir appris comment créer un environnement virtuel, il est enfin temps de créer une application !</p>
@@ -243,37 +238,33 @@ Autrement dit, un projet peut avoir ses propres bibliothèques et versions de mo
 <p>Après cela, j'ai suivi le tutoriel et j'ai réussi à avoir une application basique qui fonctionnait avec des données en static, puis les problèmes ont commencé lorsque j'ai tenté de connecter une base de données SQL Lite.</p>
 <p>C'est au moment d'interagir avec la console Flask, pour ajouter/modifier/supprimer des données qui rien ne fonctionnait.</p>
 <p>Pour lancer la console Flask :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">$ <span class="token builtin class-name">set</span> <span class="token assign-left variable">FLASK_APP</span><span class="token operator">=</span>run.py
-$ flask shell
-</code></pre>
+<pre class="language-bash"><code class="language-bash">$ <span class="token builtin class-name">set</span> <span class="token assign-left variable">FLASK_APP</span><span class="token operator">=</span>run.py
+$ flask shell</code></pre>
 <p>La console doit s'ouvrir après cela :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">Python <span class="token number">3.6</span>.1 <span class="token punctuation">(</span>default, Mar <span class="token number">23</span> <span class="token number">2017</span>, <span class="token number">16</span>:49:06<span class="token punctuation">)</span>
+<pre class="language-bash"><code class="language-bash">Python <span class="token number">3.6</span>.1 <span class="token punctuation">(</span>default, Mar <span class="token number">23</span> <span class="token number">2017</span>, <span class="token number">16</span>:49:06<span class="token punctuation">)</span>
 <span class="token punctuation">[</span>GCC <span class="token number">4.2</span>.1 Compatible Apple LLVM <span class="token number">8.0</span>.0 <span class="token punctuation">(</span>clang-800.0.42.1<span class="token punctuation">)</span><span class="token punctuation">]</span> on darwin
 App: fbapp.views
 Instance: /Users/celinems/sites/oc/exercices_exemples/flask_example/instance
-<span class="token operator">>></span><span class="token operator">></span> 
-</code></pre>
+<span class="token operator">>></span><span class="token operator">></span> </code></pre>
 <p>Après avoir perdu beaucoup de temps à tenter de lancer la console, j'ai décidé de changer de tutoriel.</p>
 <h2>2ème tentative : DigitalOcean <a id="section-2"></a></h2>
 <p>Ce deuxième tutoriel reprend les mêmes bases que le précedent, à savoir la création d'un environnement virtuel.</p>
 <p>Il permet ensuite de déployer un application de base</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> flask <span class="token keyword">import</span> Flask
+<pre class="language-python"><code class="language-python"><span class="token keyword">from</span> flask <span class="token keyword">import</span> Flask
 
 app <span class="token operator">=</span> Flask<span class="token punctuation">(</span>__name__<span class="token punctuation">)</span>
 
 <span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span>
 <span class="token keyword">def</span> <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">return</span> <span class="token string">'Hello, World!'</span>
-</code></pre>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"> <span class="token operator">*</span> Serving Flask app <span class="token string">"__main__"</span> <span class="token punctuation">(</span>lazy loading<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token string">'Hello, World!'</span></code></pre>
+<pre class="language-python"><code class="language-python"> <span class="token operator">*</span> Serving Flask app <span class="token string">"__main__"</span> <span class="token punctuation">(</span>lazy loading<span class="token punctuation">)</span>
  <span class="token operator">*</span> Environment<span class="token punctuation">:</span> production
    WARNING<span class="token punctuation">:</span> This <span class="token keyword">is</span> a development server<span class="token punctuation">.</span> Do <span class="token keyword">not</span> use it <span class="token keyword">in</span> a production deployment<span class="token punctuation">.</span>
    Use a production WSGI server instead<span class="token punctuation">.</span>
  <span class="token operator">*</span> Debug mode<span class="token punctuation">:</span> off
  <span class="token operator">*</span> Running on http<span class="token punctuation">:</span><span class="token operator">//</span><span class="token number">127.0</span><span class="token number">.0</span><span class="token number">.1</span><span class="token punctuation">:</span><span class="token number">5000</span><span class="token operator">/</span> <span class="token punctuation">(</span>Press CTRL<span class="token operator">+</span>C to quit<span class="token punctuation">)</span>
 <span class="token number">127.0</span><span class="token number">.0</span><span class="token number">.1</span> <span class="token operator">-</span> <span class="token operator">-</span> <span class="token punctuation">[</span><span class="token number">17</span><span class="token operator">/</span>Oct<span class="token operator">/</span><span class="token number">2023</span> <span class="token number">20</span><span class="token punctuation">:</span><span class="token number">32</span><span class="token punctuation">:</span><span class="token number">55</span><span class="token punctuation">]</span> <span class="token string">"GET / HTTP/1.1"</span> <span class="token number">200</span> <span class="token operator">-</span>
-<span class="token number">127.0</span><span class="token number">.0</span><span class="token number">.1</span> <span class="token operator">-</span> <span class="token operator">-</span> <span class="token punctuation">[</span><span class="token number">17</span><span class="token operator">/</span>Oct<span class="token operator">/</span><span class="token number">2023</span> <span class="token number">20</span><span class="token punctuation">:</span><span class="token number">32</span><span class="token punctuation">:</span><span class="token number">55</span><span class="token punctuation">]</span> <span class="token string">"GET / HTTP/1.1"</span> <span class="token number">200</span> <span class="token operator">-</span>
-</code></pre>
+<span class="token number">127.0</span><span class="token number">.0</span><span class="token number">.1</span> <span class="token operator">-</span> <span class="token operator">-</span> <span class="token punctuation">[</span><span class="token number">17</span><span class="token operator">/</span>Oct<span class="token operator">/</span><span class="token number">2023</span> <span class="token number">20</span><span class="token punctuation">:</span><span class="token number">32</span><span class="token punctuation">:</span><span class="token number">55</span><span class="token punctuation">]</span> <span class="token string">"GET / HTTP/1.1"</span> <span class="token number">200</span> <span class="token operator">-</span></code></pre>
 <p>Et voici ce que l'on obtient</p>
 <p><img src="ex_1.png" alt="ex1"></p>
 <p>Après ça, on nous demande à nous d'interagir avec la console Flask.</p>

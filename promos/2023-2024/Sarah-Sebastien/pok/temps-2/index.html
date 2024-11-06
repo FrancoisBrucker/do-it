@@ -638,7 +638,7 @@ Sarah a une moyenne de 14.0
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java"><span class="token keyword">private</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Color</span><span class="token punctuation">></span></span> <span class="token function">generateCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+<pre class="language-java"><code class="language-java"><span class="token keyword">private</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Color</span><span class="token punctuation">></span></span> <span class="token function">generateCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
         <span class="token class-name">Random</span> random <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Color</span><span class="token punctuation">></span></span> secretCode <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
@@ -655,8 +655,7 @@ Sarah a une moyenne de 14.0
         <span class="token punctuation">}</span>
         <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>secretCode<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token keyword">return</span> secretCode<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-</code></pre>
+    <span class="token punctuation">}</span></code></pre>
 </div>
 </details>     
 </div>
@@ -678,15 +677,14 @@ Sarah a une moyenne de 14.0
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java"><span class="token keyword">public</span> <span class="token class-name">Color</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> initializeGrid <span class="token punctuation">(</span><span class="token keyword">int</span> rows<span class="token punctuation">,</span> <span class="token keyword">int</span> columns<span class="token punctuation">,</span> <span class="token class-name">Color</span> color<span class="token punctuation">)</span><span class="token punctuation">{</span>
+<pre class="language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token class-name">Color</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> initializeGrid <span class="token punctuation">(</span><span class="token keyword">int</span> rows<span class="token punctuation">,</span> <span class="token keyword">int</span> columns<span class="token punctuation">,</span> <span class="token class-name">Color</span> color<span class="token punctuation">)</span><span class="token punctuation">{</span>
     <span class="token class-name">Color</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> tableau <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Color</span><span class="token punctuation">[</span>rows<span class="token punctuation">]</span><span class="token punctuation">[</span>columns<span class="token punctuation">]</span><span class="token punctuation">;</span>
     <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> tableau<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
         <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> tableau<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
             tableau<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> color<span class="token punctuation">;</span>
     <span class="token punctuation">}</span><span class="token punctuation">}</span>
     <span class="token keyword">return</span> tableau<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 </div>
 </details>     
 </div>
@@ -717,7 +715,7 @@ Sarah a une moyenne de 14.0
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java"><span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">updateChoice</span><span class="token punctuation">(</span><span class="token class-name">Color</span> color<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-java"><code class="language-java"><span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">updateChoice</span><span class="token punctuation">(</span><span class="token class-name">Color</span> color<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token comment">//méthode permettant de mettre à jour les couleurs choisies par l'utilisateur </span>
         <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token class-name">Choices</span><span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">Choices</span><span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token operator">==</span><span class="token class-name">Color</span><span class="token punctuation">.</span><span class="token constant">LIGHT_GRAY</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -776,7 +774,6 @@ Sarah a une moyenne de 14.0
             <span class="token class-name">MessageFrame</span><span class="token punctuation">.</span><span class="token function">go</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">,</span>secretCode<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
-
 </code></pre>
 </div>
 </details>     
@@ -810,7 +807,7 @@ Sarah a une moyenne de 14.0
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">paint</span><span class="token punctuation">(</span><span class="token class-name">Graphics</span> g<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">paint</span><span class="token punctuation">(</span><span class="token class-name">Graphics</span> g<span class="token punctuation">)</span> <span class="token punctuation">{</span>
      <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">paint</span><span class="token punctuation">(</span>g<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token comment">//creation du rectangle de fond</span>
         g<span class="token punctuation">.</span>setColor <span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Color</span><span class="token punctuation">(</span><span class="token number">91</span><span class="token punctuation">,</span> <span class="token number">91</span><span class="token punctuation">,</span> <span class="token number">91</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -839,8 +836,7 @@ Sarah a une moyenne de 14.0
         <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">changeColor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token comment">//permet d'appeler à nouveau la méthode paint pour redessiner les formes</span>
             <span class="token function">repaint</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-</code></pre>
+        <span class="token punctuation">}</span></code></pre>
 </div>
 </details>     
 </div>
@@ -865,7 +861,7 @@ Sarah a une moyenne de 14.0
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java">    <span class="token comment">//Panel boutons "valider" et "effacer"</span>
+<pre class="language-java"><code class="language-java">    <span class="token comment">//Panel boutons "valider" et "effacer"</span>
         <span class="token class-name">JPanel</span> <span class="token class-name">ButtonPanel</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JPanel</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token class-name">ButtonPanel</span><span class="token punctuation">.</span><span class="token function">setLayout</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
@@ -889,8 +885,7 @@ Sarah a une moyenne de 14.0
 
         <span class="token class-name">ButtonPanel</span><span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>btnValider<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token class-name">ButtonPanel</span><span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>btnEffacer<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token class-name">ButtonPanel</span><span class="token punctuation">.</span><span class="token function">setOpaque</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+        <span class="token class-name">ButtonPanel</span><span class="token punctuation">.</span><span class="token function">setOpaque</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 </div>
 </details>     
 </div>
@@ -923,7 +918,7 @@ Sarah a une moyenne de 14.0
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java"><span class="token comment">// Panneau choix couleurs</span>
+<pre class="language-java"><code class="language-java"><span class="token comment">// Panneau choix couleurs</span>
         <span class="token class-name">JPanel</span> colorPanel <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JPanel</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         colorPanel<span class="token punctuation">.</span>setLayout <span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">GridLayout</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         colorPanel<span class="token punctuation">.</span><span class="token function">setSize</span><span class="token punctuation">(</span><span class="token number">700</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -961,8 +956,7 @@ Sarah a une moyenne de 14.0
         colorPanel<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>btnCyan<span class="token punctuation">)</span><span class="token punctuation">;</span>
         colorPanel<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>btnYellow<span class="token punctuation">)</span><span class="token punctuation">;</span>
         colorPanel<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>btnGreen<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        colorPanel<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>btnPink<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+        colorPanel<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>btnPink<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 </div>
 </details>     
 </div>
@@ -985,7 +979,7 @@ Sarah a une moyenne de 14.0
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java">       <span class="token class-name">JPanel</span> mainPanel <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JPanel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-java"><code class="language-java">       <span class="token class-name">JPanel</span> mainPanel <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JPanel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         mainPanel<span class="token punctuation">.</span><span class="token function">setLayout</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">BorderLayout</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         mainPanel<span class="token punctuation">.</span><span class="token function">setBackground</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Color</span><span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token comment">//On ajoute le form panel au main Panel dans la partie "sud"</span>
@@ -999,17 +993,15 @@ Sarah a une moyenne de 14.0
         <span class="token function">setTitle</span><span class="token punctuation">(</span><span class="token string">"Mastermind"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token function">setSize</span><span class="token punctuation">(</span><span class="token number">700</span><span class="token punctuation">,</span><span class="token number">700</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token function">setDefaultCloseOperation</span><span class="token punctuation">(</span><span class="token class-name">WindowConstants</span><span class="token punctuation">.</span><span class="token constant">EXIT_ON_CLOSE</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token function">setVisible</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+        <span class="token function">setVisible</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 </div>
 </details>     
 </div>
 <p>Enfin, on créé la méthode principale pour executer le panneau principal :</p>
-<pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java">    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> main <span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+<pre class="language-java"><code class="language-java">    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> main <span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
         <span class="token class-name">MainFrame</span> myFrame <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MainFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         myFrame<span class="token punctuation">.</span><span class="token function">initialize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-</code></pre>
+        <span class="token punctuation">}</span></code></pre>
 <h3 id="messageframe"> Message Frame</h3>
 <p>On réitère la même démarche que pour le Main Panel. Le besoin des méthodes et des boutons ne sera pas le même:</p>
 <ul>
@@ -1035,7 +1027,7 @@ Sarah a une moyenne de 14.0
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MessageFrame</span> <span class="token keyword">extends</span> <span class="token class-name">JFrame</span><span class="token punctuation">{</span>
+<pre class="language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MessageFrame</span> <span class="token keyword">extends</span> <span class="token class-name">JFrame</span><span class="token punctuation">{</span>
     <span class="token keyword">final</span> <span class="token keyword">private</span> <span class="token class-name">Font</span> mainFont <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Font</span> <span class="token punctuation">(</span><span class="token string">"Poppins"</span><span class="token punctuation">,</span> <span class="token class-name">Font</span><span class="token punctuation">.</span><span class="token constant">BOLD</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">final</span> <span class="token keyword">private</span> <span class="token class-name">Font</span> secondFont <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Font</span> <span class="token punctuation">(</span><span class="token string">"Poppins"</span><span class="token punctuation">,</span><span class="token class-name">Font</span><span class="token punctuation">.</span><span class="token constant">CENTER_BASELINE</span><span class="token punctuation">,</span> <span class="token number">19</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">private</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Color</span><span class="token punctuation">></span></span> secretCode<span class="token punctuation">;</span>
@@ -1117,8 +1109,7 @@ Sarah a une moyenne de 14.0
         <span class="token class-name">MessageFrame</span> my2Frame <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MessageFrame</span><span class="token punctuation">(</span>secretCode<span class="token punctuation">)</span><span class="token punctuation">;</span>
         my2Frame<span class="token punctuation">.</span><span class="token function">displayMessage</span><span class="token punctuation">(</span><span class="token class-name">IsWin</span><span class="token punctuation">,</span>secretCode<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 </div>
 </details>     
 </div>

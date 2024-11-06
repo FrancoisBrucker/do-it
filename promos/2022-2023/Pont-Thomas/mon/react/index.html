@@ -141,26 +141,24 @@
 <p>Comme expliqué précédemment, la logique de React est basée sur les composants. Chaque partie du site que l’on souhaite avoir sera défini par un composant. Par exemple, un site peut avoir un header, un footer,...</p>
 <p>Pour créer et organiser nos composants, on peut créer un dossier les regroupant tous. Chaque composant sera ensuite créé à l’aide d’un fichier en .js.</p>
 <p>Par exemple le fichier Banner.js suivant :</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">Banner</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">Banner</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token operator">&lt;</span>h1<span class="token operator">></span>La boîte aux lettres<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span>
 <span class="token punctuation">}</span>
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> Banner
-</code></pre>
+<span class="token keyword">export</span> <span class="token keyword">default</span> Banner</code></pre>
 <p>créera un composant Banner qui pourra être mis sur notre site.
 Dans ce fichier en .js, on peut ajouter tous les éléments que l’on souhaite avec les balises de HTML (&lt;h1&gt; pour un titre, &lt;ul&gt; pour une liste, &lt;p&gt; pour un paragraphe, &lt;img&gt; pour une image,...).</p>
 <p>On peut également associer un fichier CSS pour donner du style au texte ou aux éléments présents sur un composant.</p>
 <p>Mais comment afficher notre site ensuite ?
 Pour cela, à la création de notre projet, un fichier App.js a été créé. On peut lui ajouter les composants que l’on a créés.</p>
 <p>Ainsi :</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">import</span> Banner <span class="token keyword">from</span> <span class="token string">'./Banner'</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> Banner <span class="token keyword">from</span> <span class="token string">'./Banner'</span>
 
 <span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token operator">&lt;</span>Banner <span class="token operator">/</span><span class="token operator">></span>
 <span class="token punctuation">}</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> App
-
 </code></pre>
 <p>permettra d’avoir un site avec la Banner précédemment défini.</p>
 <p>En lançant la commande suivante dans la console, notre site s’affiche sur un serveur local:</p>
@@ -172,7 +170,7 @@ On crée également un composant main qui regroupe la liste des utilisateurs et 
 <p>Par exemple, ou peut mettre en avant nos meilleurs amis en affichant une flamme à côté de leur nom.
 La liste des utilisateurs est située dans datas/allUsers.txt. Pour chaque personne on peut lui attribuer un booléen isBestFriend qui indique si oui ou non on est meilleur ami avec lui.</p>
 <p>Le script suivant affichera cela:</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">import</span> <span class="token punctuation">{</span> userList <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../datas/allUser'</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token punctuation">{</span> userList <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../datas/allUser'</span>
 
 <span class="token keyword">function</span> <span class="token function">UserItem</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token punctuation">(</span>
@@ -188,14 +186,13 @@ La liste des utilisateurs est située dans datas/allUsers.txt. Pour chaque perso
 <span class="token punctuation">}</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> UserItem
-
 </code></pre>
 <h3>Les interactions</h3>
 <p>On a ainsi vu jusque là que l'on pouvait créer et afficher des composants et qu’on pouvait les contextualiser. Cependant, pour le moment, notre site reste statique et ne prend pas en compte les interactions que l’utilisateur pouvait avoir avec les composants.</p>
 <p>On souhaite pouvoir voir les messages qu'on a eu avec une personne si l'on clique sur son nom.</p>
 <p>Pour cela on utilise les liens de parenté entre les composants. L'utilisateur va cliquer sur un UserItem. L'information va remonter à son parent Main puis redescendre jusqu'à MessageList et c'est la liste de message avec le bon utilisateur qui va s'afficher.
 Pour cela on utilise la fonction useState.</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">import</span> UserList <span class="token keyword">from</span> <span class="token string">'./UserList'</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> UserList <span class="token keyword">from</span> <span class="token string">'./UserList'</span>
 <span class="token keyword">import</span> MessageList <span class="token keyword">from</span> <span class="token string">'./MessageList'</span>
 <span class="token keyword">import</span> BarreMessage <span class="token keyword">from</span> <span class="token string">'./BarreMessage'</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> allMessage <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../datas/allMessage'</span>
@@ -222,8 +219,7 @@ Pour cela on utilise la fonction useState.</p>
     <span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> Main
-</code></pre>
+<span class="token keyword">export</span> <span class="token keyword">default</span> Main</code></pre>
 <p>La ligne <strong>const [conversationwith, setconversation]=useState('Alice')</strong> permet de créer une zone de stockage pour savoir ce que l'on affiche et pouvoir le modifier. La fonction useState permettra de modifier les informations de la page si l'utilisateur clique sur une autre personne.
 La ligne <strong>UserList changeConversation={setconversation}</strong> permet de récupérer l'information de UserList de quel utilisateur a été sélectionné. La ligne <strong>MessageList list={allMessage[conversationwith]}</strong> permet elle de modifier ce qui va s'afficher.</p>
 <h2>Ressources utilisées</h2>

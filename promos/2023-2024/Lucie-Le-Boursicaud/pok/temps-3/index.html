@@ -182,12 +182,10 @@ Voici une capture d'écran du jeu qui est disponible sur téléphone :</p>
 Je me suis rendue sur une <a href="https://brm.io/matter-js/">documentation</a> pour comprendre comment fonctionne cette bibliothèque. J'ai donc regardé une première vidéo <a href="https://www.youtube.com/watch?v=urR596FsU68&amp;list=PLRqwX-V7Uu6akvoNKE4GAxf6ZeBYoJ4uh">Introduction to Matter.js</a> et la deuxième <a href="https://www.youtube.com/watch?v=uITcoKpbQq4&amp;list=PLRqwX-V7Uu6akvoNKE4GAxf6ZeBYoJ4uh&amp;index=21">Introduction to Matter.js Continued</a>.</p>
 <h3>2. Créer l'environnement de code</h3>
 <p>Je me crée un dossier <em>Pasteque</em> et j'initialise mon projet avec :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">npm init 
-</code></pre>
+<pre class="language-html"><code class="language-html">npm init </code></pre>
 <p>J'ajoute la ligne &quot;type&quot; : &quot;module&quot;, je crée un fichier index.js et index.html et j'installe Express et Matter via les commandes :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">npm add --save express
-npm install matter-js 
-</code></pre>
+<pre class="language-html"><code class="language-html">npm add --save express
+npm install matter-js </code></pre>
 <p>J'ajoute un fichier main.js dans lequel je vais coder les différentes fonctions pour le jeu.</p>
 <p>J'ai eu beaucoup de difficultés en suivant cette méthode dont une que j'ai pas réussi à corriger :</p>
 <div style="display:flex">
@@ -217,7 +215,7 @@ La première chose à créer est donc une boite, pour ça j'ai juste suivi la <a
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">import {Engine, Render, Runner} from "matter-js";
+<pre class="language-html"><code class="language-html">import {Engine, Render, Runner} from "matter-js";
 
 const engine = Engine.create();
 const render = Render.create({
@@ -257,8 +255,7 @@ const murdroite = Bodies.rectangle(410,470,20,700,{
 World.add(world, [sol,murgauche,murdroite]);
 
 Render.run(render);
-Runner.run(engine);
-</code></pre>
+Runner.run(engine);</code></pre>
 </div>
 </details>     
 </div>
@@ -284,7 +281,7 @@ Runner.run(engine);
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">import {Engine, Render, Runner} from "matter-js";
+<pre class="language-html"><code class="language-html">import {Engine, Render, Runner} from "matter-js";
 
 const engine = Engine.create();
 const render = Render.create({
@@ -335,8 +332,7 @@ function ajouterFruit(){
     World.add(world,body);
 };
 
-ajouterFruit();
-</code></pre>
+ajouterFruit();</code></pre>
 </div>
 </details>     
 </div>
@@ -359,7 +355,7 @@ ajouterFruit();
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">import {Engine, Render, Runner} from "matter-js";
+<pre class="language-html"><code class="language-html">import {Engine, Render, Runner} from "matter-js";
 
 const engine = Engine.create();
 const render = Render.create({
@@ -411,14 +407,13 @@ function ajouterFruit(){
     World.add(world,body);
 };
 
-ajouterFruit();
-</code></pre>
+ajouterFruit();</code></pre>
 </div>
 </details>     
 </div>
 <h2>6. Faire bouger le rond avec les flèches</h2>
 <p>Maintenant que le rond reste endormi il faut pouvoir utiliser les flèches de notre clavier pour le faire bouger. Pour cela j'utilise des écouteurs d'évements <strong>onkeydown</strong> et en fonction du <strong> code </strong> de la touche sur laquelle j'appuie je ne vais pas faire la même action donc j'utilise un <strong>switch</strong> sur <strong>event.code</strong>. Afin de récupérer mon élement rond (qui sera un fruit par la suite) j'ajoute une ligne dans le code de la fonction <em>ajouterFruit()</em> qui affecte à la variable <strong>monFruit</strong> le body de l'élément en question. Voilà où j'en suis :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">function ajouterFruit(){
+<pre class="language-html"><code class="language-html">function ajouterFruit(){
     const body = Bodies.circle(300, 150,30, {
         isSleeping: true,
         render : {
@@ -436,13 +431,11 @@ window.onkeydown = (event) => {
     case "ArrowRight":
 
   }
-  }
-</code></pre>
+  }</code></pre>
 <p>Maintenant je veux pouvoir bouger mon élement. Pour ça on va devoir importer <em>Body</em> dans cette ligne ci :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">import {Engine, Render, Runner, Bodies, World, Body} from 'matter-js';
-</code></pre>
+<pre class="language-html"><code class="language-html">import {Engine, Render, Runner, Bodies, World, Body} from 'matter-js';</code></pre>
 <p>et on va utiliser la méthode <strong>setPosition()</strong> comme ci dessous.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">function ajouterFruit(){
+<pre class="language-html"><code class="language-html">function ajouterFruit(){
     const body = Bodies.circle(300, 150,30, {
         isSleeping: true,
         render : {
@@ -462,10 +455,9 @@ window.onkeydown = (event) => {
       Body.setPosition(currentFruit, {x: monFruit.position.x + 1, y:monFruit.position.y,
       });
   }
-  }
-</code></pre>
+  }</code></pre>
 <p>Le soucis est que le mouvement de notre fruit est très lent, et si j'augmente en passant de 1 à 10 par exemple, le mouvement est saccadé et je ne peux pas faire tomber mon fruit avec précision. J'ai beaucoup cherché à résoudre ce problème pour trouver et mettre en place la solution : <strong>utiliser des intervalles</strong>. Ca permet d'automatiser la mise à jour de la position pour qu'elle se fasse toutes les <em>temps</em> milisecondes.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">
+<pre class="language-html"><code class="language-html">
 let interval = null;
 
 window.onkeydown = (event) => {
@@ -492,8 +484,7 @@ window.onkeyup = (event) => {
       clearInterval(interval);
       interval = null;
   }
-}
-</code></pre>
+}</code></pre>
 <p>Le problème c'est que je peux déplacer le fruit à l'extérieur des murs ce qui n'est pas envisageable. Il faut donc vérifier que notre fruit ne se situe pas au bord de la boite si l'on veut le déplacer. Pour ça j'ai utilisé un <strong>if()</strong> sur la position de <em>monFruit</em>.</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
 <details class="group">
@@ -512,7 +503,7 @@ window.onkeyup = (event) => {
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">window.onkeydown = (event) => {
+<pre class="language-html"><code class="language-html">window.onkeydown = (event) => {
     switch (event.code) {
         case "ArrowDown":
             if(interval) return ; 
@@ -544,8 +535,7 @@ window.onkeyup = (event) => {
             clearInterval(interval);
             interval = null;
     }
-};
-</code></pre>
+};</code></pre>
 </div>
 </details>     
 </div>
@@ -557,10 +547,9 @@ window.onkeyup = (event) => {
 <h2>7. Faire tomber le fruit avec la barre espace</h2>
 <p>L'ojectif est clair : lorsque l'on appuie sur la barre espace, le fruit &quot;se réveille&quot; et tombe.
 Pour ça on utilise encore l'écouteur d'évenement <strong>onkeydown</strong> et on va devoir importer <strong>Sleeping</strong> depuis la bibliothèque matter.js.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">import {Engine, Render, Runner, Bodies, World, Body, Sleeping} from 'matter-js';
-</code></pre>
+<pre class="language-html"><code class="language-html">import {Engine, Render, Runner, Bodies, World, Body, Sleeping} from 'matter-js';</code></pre>
 <p>On va donc ajouter le cas où l'on appuie sur la touche espace dans notre écouteur, et passer le booléen <strong>isSleeping</strong> à la valeur <strong>false</strong> avec la méthode <strong>set()</strong>.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">window.onkeydown = (event) => {
+<pre class="language-html"><code class="language-html">window.onkeydown = (event) => {
     switch (event.code) {
         case "ArrowDown":
             if(interval) return ; 
@@ -586,16 +575,14 @@ Pour ça on utilise encore l'écouteur d'évenement <strong>onkeydown</strong> e
             Sleeping.set(monFruit, false);
     }
 };
-
 </code></pre>
 <p>Notre fruit tombe quand on appuie sur espace !
 Sauf que l'on a qu'un seul fruit... Il faudrait qu'un autre fruit apparaisse lorsque le premier fruit est tombé. J'ai donc rajouté l'appel à la fonction <strong>ajouterFruit()</strong> à la suite de mon cas.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">case "Space":
+<pre class="language-html"><code class="language-html">case "Space":
   Sleeping.set(monFruit, false);
-  ajouterFruit();
-</code></pre>
+  ajouterFruit();</code></pre>
 <p>Mais dans le jeu il y a un petit moment de latence entre le fruit qui est tombé et l'apparition d'un nouveau fruit et là c'est direct donc c'est moins agréable. On va alors ajouter un delais avec la fonction <strong>setTimeout</strong> avant d'ajouter un nouveau fruit.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">window.onkeydown = (event) => {
+<pre class="language-html"><code class="language-html">window.onkeydown = (event) => {
     switch (event.code) {
         case "ArrowDown":
             if(interval) return ; 
@@ -624,20 +611,17 @@ Sauf que l'on a qu'un seul fruit... Il faudrait qu'un autre fruit apparaisse lor
             }, 1000);
     }
 };
-
 </code></pre>
 <p>Mais ça ne suffit pas le problème persiste. Il faut donc empêcher le joueur de lacher le fruit, donc rendre la touche espace &quot;inactive&quot;. Pour ça on va créer une variable booléenne qui permettra de savoir si lorsque j'appuie sur espace le fruit est laché ou non.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">import {FRUITS} from "./fruits";
-</code></pre>
+<pre class="language-html"><code class="language-html">import {FRUITS} from "./fruits";</code></pre>
 <p>Maintenant on va créer la fonction qui permet de générer un fruit aléatoire pour succéder à celui qu'on vient de lâcher. Pour ce faire on va générer un <strong>index</strong> aléatoire qu'on appliquera au tableau pour récupérer un fruit. On a la possibilité de tomber seulement sur les 5 premiers fruits sinon ça serait trop facile. Voilà ma fonction :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">function randomFruit(){
+<pre class="language-html"><code class="language-html">function randomFruit(){
   const randomIndex = Math.floor(Math.random()*5)
   const fruit = FRUITS[randomIndex];
   return fruit;
-}
-</code></pre>
+}</code></pre>
 <p>Maintenant on va utiliser cette fonction pour la génération automatique du fruit d'après. On va donc modifier un peu la fonction <strong>ajouterFruit()</strong>.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">function ajouterFruit(){
+<pre class="language-html"><code class="language-html">function ajouterFruit(){
     const randomFruit = randomFruit();
 
     const body = Bodies.circle(300, 150,randomFruit.radius, {
@@ -649,8 +633,7 @@ Sauf que l'on a qu'un seul fruit... Il faudrait qu'un autre fruit apparaisse lor
     });
     monFruit = body;
     World.add(world,body);
-};
-</code></pre>
+};</code></pre>
 <div style="display:flex">
 <div><img src="plusieursTailleetAléatoire.png"></div>
 </div>
@@ -670,24 +653,22 @@ Sauf que l'on a qu'un seul fruit... Il faudrait qu'un autre fruit apparaisse lor
 </ul>
 <h2>1. Faire apparaitre le fruit suivant lors de la collision de deux fruits identiques</h2>
 <p>Pour gérer la fusion des fruits, on va utiliser l'objet <strong>Events</strong> que l'on importe depuis la bibliothèque matter.js.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">import {Engine, Render, Runner, Bodies, World, Body, Sleeping, Events} from 'matter-js';
-</code></pre>
+<pre class="language-html"><code class="language-html">import {Engine, Render, Runner, Bodies, World, Body, Sleeping, Events} from 'matter-js';</code></pre>
 <p>On va pouvoir écouter certains type d'évenements qui peuvent arriver dans le moteur physique avec <strong>Events.on()</strong>. On va chercher à savoir si les deux éléments qui sont entrés en collision on le même label et dans ce cas supprimer ceux-là.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">Events.on(engine, "collisionStart", (event) => {
+<pre class="language-html"><code class="language-html">Events.on(engine, "collisionStart", (event) => {
   event.pairs.forEach(collision => {
     if(collision.bodyA.label == collision.bodyB.label){
       World.remove(world, [collision.bodyA, collision.bodyB]);
     }
   })
-})
-</code></pre>
+})</code></pre>
 <div style="display:flex">
 <div><img src="disparition.png"></div>
 <div><img src="disparition2.png"></div>
 </div>
 <p>Lorsque deux fruits identiques se touchent ils disparaisent.
 Maintenant il faut faire apparaitre le fruit d'après à l'endroit de la collision. Comment savoir le fruit prochain ? Et bien le tableau <strong>FRUITS</strong> doit être ordonné par croissance des fruits pour nous faciliter la tâche. On va donc récupérer l'<strong>index</strong> du fruit qui est rentré en collision et l'incrémenter de 1 pour obtenir l'index du nouveau fruit et extraire ses propriétés du tableau.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">Events.on(engine, "collisionStart", (event) => {
+<pre class="language-html"><code class="language-html">Events.on(engine, "collisionStart", (event) => {
   event.pairs.forEach(collision => {
     if(collision.bodyA.label == collision.bodyB.label){
       World.remove(world, [collision.bodyA, collision.bodyB]);
@@ -708,15 +689,14 @@ Maintenant il faut faire apparaitre le fruit d'après à l'endroit de la collisi
       World.add(world,body);
     }
   });
-})
-</code></pre>
+})</code></pre>
 <div style="display:flex">
 <div><img src="colission1.png"></div>
 <div><img src="colission2.png"></div>
 </div>
 <p>Désormais quand deux fruits se rencontrent, le fruit suivant apparait !
 Par contre il faut que l'on fasse attention au cas ou deux derniers fruits se rencontrent. Dans le jeu les deux pastèques disparaisent mais rien ne réapparait. On va donc rajouter cette règle dans notre fonction.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">Events.on(engine, "collisionStart", (event) => {
+<pre class="language-html"><code class="language-html">Events.on(engine, "collisionStart", (event) => {
   event.pairs.forEach(collision => {
     if(collision.bodyA.label == collision.bodyB.label){
       World.remove(world, [collision.bodyA, collision.bodyB]);
@@ -739,21 +719,19 @@ Par contre il faut que l'on fasse attention au cas ou deux derniers fruits se re
       World.add(world,body);
     }
   });
-})
-</code></pre>
+})</code></pre>
 <h2>2. Gérer la fin de la partie</h2>
 <p>Pour ça on va rajouter une ligne en haut et si un fruit dépasse la ligne notre partie prendra fin.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">const lignehaut = Bodies.rectangle(310,150,620,2, {
+<pre class="language-html"><code class="language-html">const lignehaut = Bodies.rectangle(310,150,620,2, {
     isStatic: true,
     isSensor: true,
     render: {fillStyle: "#9EA1D4"},
     label: "ligne",
 })
 
-World.add(world, [sol,murgauche,murdroite,lignehaut]);
-</code></pre>
+World.add(world, [sol,murgauche,murdroite,lignehaut]);</code></pre>
 <p>La propriété <strong>isSensor</strong> permet de déterminer si l'élément n'est sensible à la collision ou non. On doit le mettre à true car sinon nos fruits vont rester bloqué par cette ligne en haut et ne tomberont pas. Pas contre on détecte quand même les collisions ce qui permet de savoir si la partie est fini ou non, on va rajouter cette règle dans le jeu sur l'écouteur <strong>Events.on()</strong>.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">Events.on(engine, "collisionStart", (event) => {
+<pre class="language-html"><code class="language-html">Events.on(engine, "collisionStart", (event) => {
   event.pairs.forEach(collision => {
     if(collision.bodyA.label == collision.bodyB.label){
       World.remove(world, [collision.bodyA, collision.bodyB]);
@@ -779,8 +757,7 @@ World.add(world, [sol,murgauche,murdroite,lignehaut]);
       alert("Game over");
     }
   });
-})
-</code></pre>
+})</code></pre>
 <h2>3. Ajouter des images pour remplacer les ronds</h2>
 <p>Pour ça je me suis rendue sur Canva et j'ai cherché des images de légumes/fruits qui iront bien dans le jeu, voici ceux que j'ai sélectioné :</p>
 <div style="display:flex">
@@ -800,7 +777,7 @@ World.add(world, [sol,murgauche,murdroite,lignehaut]);
 </div>
 <p>Le set n'est pas parfait et il y a les filligrames de Canva mais si j'ai le temps j'essaierais de trouver quelque chose de mieux à la fin.
 On va ajouter toutes ces images dans le dossier public et les ajouter dans le code. On fera attention de nommer les images avec le label du fruit correspondant. Par exemple <em>garlic.png</em> pour notre ail. Au lieu d'ajouter une couleur à nos fruits on va leur rajouter une image avec <strong>sprite</strong>.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">function ajouterFruit(){
+<pre class="language-html"><code class="language-html">function ajouterFruit(){
     const randomFruit = randomFruit();
 
     const body = Bodies.circle(300, 150,randomFruit.radius, {
@@ -813,8 +790,7 @@ On va ajouter toutes ces images dans le dossier public et les ajouter dans le co
     });
     monFruit = body;
     World.add(world,body);
-};
-</code></pre>
+};</code></pre>
 <p>Il faut faire la même modification lorsque deux fruits se rencontrent et que le prochain fruit apparait.</p>
 <div style="display:flex">
 <div><img src="avecfruit.png"></div>
@@ -822,13 +798,12 @@ On va ajouter toutes ces images dans le dossier public et les ajouter dans le co
 </div>
 <h2>4. Ajout d'un score pour la partie</h2>
 <p>On va rajouter un tableau de score pour notre jeu. D'abord j'ajoute une nouvelle variable <strong>score</strong> qui ajoutera les points à chaque fois que l'on ajout un fruit dans notre boite.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">let score = 0;
+<pre class="language-html"><code class="language-html">let score = 0;
 
 function updateScore(points) {
     score += points;
     document.getElementById('score').innerText = `Score: ${score}`;
-}
-</code></pre>
+}</code></pre>
 <p>Ensuite je modifie mon tableau <strong>FRUITS</strong> en rajoutant une propriété <strong>point</strong> pour chaque fruit.</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
 <details class="group">
@@ -847,7 +822,7 @@ function updateScore(points) {
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">export const FRUITS = [
+<pre class="language-html"><code class="language-html">export const FRUITS = [
   {
     label: "radish",
     radius: 40 / 2,
@@ -914,13 +889,12 @@ function updateScore(points) {
     color: "#26AA1E",
     points: 450
   },
-];
-</code></pre>
+];</code></pre>
 </div>
 </details>     
 </div>
 <p>Ensuite je vais appeler la fonction <strong>updateScore</strong> lorsque je lâche un fruit et aussi quand un nouveau fruit apparait.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">case "Space":
+<pre class="language-html"><code class="language-html">case "Space":
             disableAction=true;
             const indexF = FRUITS.findIndex((fruit)=> fruit.label==fruitActuel.label);
             const monFruit = FRUITS[indexF] ; 
@@ -929,9 +903,8 @@ function updateScore(points) {
                 ajouterFruit();
                 disableAction = false;
             },1000);
-            updateScore(monFruit.points);
-</code></pre>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">Events.on(engine,"collisionStart",(event)=>{
+            updateScore(monFruit.points);</code></pre>
+<pre class="language-html"><code class="language-html">Events.on(engine,"collisionStart",(event)=>{
     event.pairs.forEach(collision => {
         if(collision.bodyA.label == collision.bodyB.label){
             World.remove(world, [collision.bodyA, collision.bodyB]);
@@ -959,23 +932,21 @@ function updateScore(points) {
             alert("Game over");
           } 
     })
-});
-</code></pre>
+});</code></pre>
 <p>J'améliore un peu l'hmtl et j'obtiens ça :</p>
 <div style="display:flex">
 <div><img src="amelioration.png"></div>
 <div><img src="ameliorationavecscore.png"></div>
 </div>
 <p>Ensuite j'ai changé les couleurs de la boite et du fond et j'ai rajouté un bouton pour lancer une nouvelle partie. Pour cela j'ai supprimé tous les corps autre que les constituants de la boite et mis le score à zero lorsque le joueur clique sur le bouton.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">document.getElementById('newGameButton').addEventListener('click', () => {
+<pre class="language-html"><code class="language-html">document.getElementById('newGameButton').addEventListener('click', () => {
     score = 0;
     updateScore(score);
     world.bodies.filter(body => body.label !== "sol" &amp;&amp; body.label !== "ligne" &amp;&amp; body.label !== "murgauche"&amp;&amp; body.label !== "murdroite").forEach(body => {
         World.remove(world, body);
     });
     ajouterFruit();
- } );
-</code></pre>
+ } );</code></pre>
 <div style="display:flex">
 <div><img src="nouvellescouleuretnouvellepartie.png"></div>
 </div>

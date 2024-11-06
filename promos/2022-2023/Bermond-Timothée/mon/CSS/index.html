@@ -145,18 +145,16 @@ Mon POK avec css.
 <li>un id</li>
 </ul>
 <p>Pour ce faire on écrit le nom de la balise / classe / id puis on ajoute entre acolades les propriétés que l'on veut appliquer.</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">balise</span><span class="token punctuation">{</span>
+<pre class="language-css"><code class="language-css"><span class="token selector">balise</span><span class="token punctuation">{</span>
   <span class="token property">propriété1</span><span class="token punctuation">:</span> valeur1<span class="token punctuation">;</span>
   <span class="token property">propriété2</span><span class="token punctuation">:</span> valeur2<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Pour chaque propriété on doit indiquer une valeur.</p>
 <p>On peut égalemement appliquer un style à plusieurs balises en les séparant d'une virgule.</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">balise1, balise2</span><span class="token punctuation">{</span>
+<pre class="language-css"><code class="language-css"><span class="token selector">balise1, balise2</span><span class="token punctuation">{</span>
   <span class="token property">propriété1</span><span class="token punctuation">:</span> valeur1<span class="token punctuation">;</span>
   <span class="token property">propriété2</span><span class="token punctuation">:</span> valeur2<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <h3>Formater du texte</h3>
 <p>Il est possible de modifier de nombreuses caractéristiques du texte.</p>
 <p><strong>La taille</strong></p>
@@ -165,10 +163,9 @@ Mon POK avec css.
 <li>Taille absolue
 On indique le nombre de pixels (ou cm, mm mais plus rare) :</li>
 </ul>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">p</span><span class="token punctuation">{</span>
+<pre class="language-css"><code class="language-css"><span class="token selector">p</span><span class="token punctuation">{</span>
   <span class="token property">font-size</span><span class="token punctuation">:</span> 14px<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <ul>
 <li>Taille relative
 On peut écrire la taille en mot anglais :
@@ -187,10 +184,9 @@ Ou indiquer la taille en <em>em</em> :</li>
 </ul>
 </li>
 </ul>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">p</span><span class="token punctuation">{</span>
+<pre class="language-css"><code class="language-css"><span class="token selector">p</span><span class="token punctuation">{</span>
   <span class="token property">font-size</span><span class="token punctuation">:</span> 1.8em<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p><strong>La police</strong></p>
 <p>Pour modifier la police il faut utiliser la propriété <em>font-family</em> suivi d'au moins une police. Le mieux est d'indiquer au moins 4 polices (séparées par des virgules) au cas où l'internaute n'aurait pas la 1ère police. (le navigateur essaiera tout d'abord d'utiliser a <em>police1</em>, s'il ne l'a pas il essaiera la <em>police2</em>, etc...)</p>
 <p><strong>Italique</strong></p>
@@ -287,12 +283,11 @@ Ou indiquer la taille en <em>em</em> :</li>
 <p>Le principe de la mise en page est simple :
 On définit un conteneur dans lequel on place des éléments.
 Le conteneur est une balise HTML et les éléments sont d'autres balises HTML à l'intérieur de cette balise :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>conteneur<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>conteneur<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>element 1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Element<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>element 2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Element<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>element 3<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Element<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-</code></pre>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
 <p>Il faut ensuite ajouter la valeur <em>flex</em> à la propriété <em>display</em> du conteneur.</p>
 <p>On peut maintenant modifier la direction avec la propriété <em>flex-direction</em> qui peut prendre les valeurs suivantes :</p>
 <ul>
@@ -310,15 +305,14 @@ Il est possible d'aligner un seul élément sur l'axe secondaire avec la propri�
 <p>La propriété <em>order</em> permet de changer l'ordre des éléments du conteneur.</p>
 <p>Enfin la propriété <em>flex</em> peut autoriser les éléments à occuper plus ou moins d'espace restant.
 Par exemple :</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">.element:nth-child(1)</span>
+<pre class="language-css"><code class="language-css"><span class="token selector">.element:nth-child(1)</span>
 <span class="token punctuation">{</span>
     <span class="token property">flex</span><span class="token punctuation">:</span> 2<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 <span class="token selector">.element:nth-child(2)</span>
 <span class="token punctuation">{</span>
     <span class="token property">flex</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>permet à l'élément 1 de grossir 2 fois plus que l'élément 1.</p>
 <p>Il existe également d'autres manières de structurer les pages que je n'ai pas étudier durant ce MON.</p>
 <h2>Simplification du CSS avec Sass</h2>
@@ -328,26 +322,22 @@ Par exemple :</p>
 <p><strong>Principe du DRY</strong></p>
 <p>Le principe DRY, signifiant &quot;Don't Repeat Yourself&quot;, est très important : il ne faut pas que l'on retrouve des règles qui se répètent.
 Dans mon POK par exemple on peut retrouver la répétion de la même règle pour deux balises différentes.</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">#div_choix3</span><span class="token punctuation">{</span>
+<pre class="language-css"><code class="language-css"><span class="token selector">#div_choix3</span><span class="token punctuation">{</span>
     <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
 <span class="token selector">#div_choix4</span><span class="token punctuation">{</span>
     <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>J'ai donc ajouté une règle <em>.div_choix-hide</em> que j'applique à mes deux <em>div</em> en ajoutant <em>div_choix-hide</em> à leur classe.
 On passe donc de ceci :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>div_choix4<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>div_choix<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-</code></pre>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>div_choix4<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>div_choix<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre>
 <p>A ceci :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>div_choix4<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>div_choix div_choix-hide<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-</code></pre>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>div_choix4<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>div_choix div_choix-hide<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre>
 <p>J'ai fusionné mes deux règles redondantes en une seule :</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">.div_choix-hide</span><span class="token punctuation">{</span>
+<pre class="language-css"><code class="language-css"><span class="token selector">.div_choix-hide</span><span class="token punctuation">{</span>
     <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-
 </code></pre>
 <p>Ce qui me permet d'avoir un codebase plus facile à maintenir.</p>
 <p>Je l'ai appliqué à mon POK et suis passé d'un fichier .css de plus de 300 lignes à un fichier de moins de 200 lignes.</p>
@@ -371,7 +361,7 @@ Il est possible d'écrire du Sass dans des fichiers <em>.sass</em> ou <em>.scss<
 <p>Dans ce MON nous allons nous concentrer sur les fichiers <em>.scss</em>.</p>
 <p>Grâce à Sass, il est possible d'utiliser le <strong>nesting</strong>, càd l'imbrication des sélécteurs.
 Au lieu d'écrire :</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">ul</span> <span class="token punctuation">{</span>
+<pre class="language-css"><code class="language-css"><span class="token selector">ul</span> <span class="token punctuation">{</span>
   <span class="token property">list-style</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
   <span class="token property">text-align</span><span class="token punctuation">:</span> right<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
@@ -380,10 +370,9 @@ Au lieu d'écrire :</p>
   <span class="token property">display</span><span class="token punctuation">:</span> inline<span class="token punctuation">;</span>
   <span class="token property">font-size</span><span class="token punctuation">:</span> 3rem<span class="token punctuation">;</span>
   <span class="token property">color</span><span class="token punctuation">:</span> #D6FFF5<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>On écrit :</p>
-<pre class="language-scss " style="counter-reset: linenumber 0"><code class="language-scss"><span class="token selector">ul </span><span class="token punctuation">{</span>
+<pre class="language-scss"><code class="language-scss"><span class="token selector">ul </span><span class="token punctuation">{</span>
   <span class="token property">list-style</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
   <span class="token property">text-align</span><span class="token punctuation">:</span> right<span class="token punctuation">;</span>
   <span class="token selector">li </span><span class="token punctuation">{</span>
@@ -391,8 +380,7 @@ Au lieu d'écrire :</p>
       <span class="token property">font-size</span><span class="token punctuation">:</span> 3rem<span class="token punctuation">;</span>
       <span class="token property">color</span><span class="token punctuation">:</span> #D6FFF5<span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
@@ -406,7 +394,7 @@ Cela n'est pas une bonne idée car on va se retrouver avec des sélécteurs de h
 <p><strong>Utiliser des sélécteurs BEM avec Sass</strong></p>
 <p>On peut fusionner la méthodologie BEM et le nesting de Sass.</p>
 <p>Pour cela on utilise les &amp; ce qui nous permet d'être plus clair visuellement et de ne pas avoir à répeter le nom des blocs ou des éléments :</p>
-<pre class="language-scss " style="counter-reset: linenumber 0"><code class="language-scss"><span class="token selector">.block</span><span class="token punctuation">{</span>
+<pre class="language-scss"><code class="language-scss"><span class="token selector">.block</span><span class="token punctuation">{</span>
   <span class="token property">background-color</span><span class="token punctuation">:</span> #15DEA5<span class="token punctuation">;</span>
   <span class="token selector"><span class="token parent important">&amp;</span>__element </span><span class="token punctuation">{</span>
       <span class="token property">color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
@@ -414,10 +402,9 @@ Cela n'est pas une bonne idée car on va se retrouver avec des sélécteurs de h
             <span class="token property">background-color</span><span class="token punctuation">:</span> #001534<span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Ce qui nous donne en CSS compilé :</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">.block</span> <span class="token punctuation">{</span>
+<pre class="language-css"><code class="language-css"><span class="token selector">.block</span> <span class="token punctuation">{</span>
   <span class="token property">background-color</span><span class="token punctuation">:</span> #15DEA5<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
@@ -427,8 +414,7 @@ Cela n'est pas une bonne idée car on va se retrouver avec des sélécteurs de h
 
 <span class="token selector">.block__element--modifier</span> <span class="token punctuation">{</span>
   <span class="token property">background-color</span><span class="token punctuation">:</span> #001534<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <h3>Améliorer la maintenabilité du code avec les variables Sass</h3>
 <p>Afin de pouvoir rapidement modifier une valeur qui apparait de nombreuses fois dans le CSS, il est possible d'utiliser les variables Sass.
 Par exemple, si l'on retrouve un grand nombre de fois la couleur vert menthe dans notre fichier, il est possible d'écrire <em>$color-primary: #15DEA5</em> au début de votre fichier .scss et puis de remplacer tous les <em>#15DEA5</em> par <em>$color-primary</em> dans le reste du fichier. Comme ça si l'on décide de changer la couleur principale de notre site il suffit de changer le code hexadécimal et tous les éléments changeront de couleur plutôt que de devoir les changer 1 à 1.</p>
@@ -452,38 +438,33 @@ Par exemple, si l'on retrouve un grand nombre de fois la couleur vert menthe dan
 <h3>Les mixins Sass</h3>
 <p>Les mixins fonctionnent un peu comme une variable sauf qu'elles stockent des blocs entiers de code.
 C'est donc très pratique pour stocker des ensembles de règles CSS que l'on utilise fréquemment.</p>
-<pre class="language-scss " style="counter-reset: linenumber 0"><code class="language-scss"><span class="token keyword">@mixin</span> <span class="token selector">mixin-name </span><span class="token punctuation">{</span>
+<pre class="language-scss"><code class="language-scss"><span class="token keyword">@mixin</span> <span class="token selector">mixin-name </span><span class="token punctuation">{</span>
   <span class="token property">css-property</span><span class="token punctuation">:</span> value<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Par exemple, si l'on veut ajouter des ombres à de nombreux textes on peut créer une mixin :</p>
-<pre class="language-scss " style="counter-reset: linenumber 0"><code class="language-scss"><span class="token keyword">@mixin</span> <span class="token selector">heading-shadow</span><span class="token punctuation">{</span>
+<pre class="language-scss"><code class="language-scss"><span class="token keyword">@mixin</span> <span class="token selector">heading-shadow</span><span class="token punctuation">{</span>
   <span class="token property">text-shadow</span><span class="token punctuation">:</span> .55rem .55rem #15DEA5<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Et puis l'ajouter dans notre sélecteur :</p>
-<pre class="language-scss " style="counter-reset: linenumber 0"><code class="language-scss"><span class="token selector">.form </span><span class="token punctuation">{</span>
+<pre class="language-scss"><code class="language-scss"><span class="token selector">.form </span><span class="token punctuation">{</span>
   <span class="token selector"><span class="token parent important">&amp;</span>__heading </span><span class="token punctuation">{</span>
       <span class="token keyword">@include</span> heading-shadow<span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Il est également possible d'ajouter des arguments à nos mixins :</p>
-<pre class="language-scss " style="counter-reset: linenumber 0"><code class="language-scss"><span class="token keyword">@mixin</span> <span class="token function">heading-shadow</span><span class="token punctuation">(</span><span class="token variable">$colour</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+<pre class="language-scss"><code class="language-scss"><span class="token keyword">@mixin</span> <span class="token function">heading-shadow</span><span class="token punctuation">(</span><span class="token variable">$colour</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
   <span class="token property">text-shadow</span><span class="token punctuation">:</span> .55rem .55rem <span class="token variable">$colour</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Ce qui nous permet ici d'appliquer les ombres de la couleur que l'on veut.</p>
 <p>On peut régler la valeur par défaut qui sera utilisé en écrivant :</p>
-<pre class="language-scss " style="counter-reset: linenumber 0"><code class="language-scss"><span class="token keyword">@mixin</span> <span class="token function">heading-shadow</span><span class="token punctuation">(</span><span class="token property"><span class="token variable">$colour</span></span><span class="token punctuation">:</span> <span class="token variable">$colour-primary</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+<pre class="language-scss"><code class="language-scss"><span class="token keyword">@mixin</span> <span class="token function">heading-shadow</span><span class="token punctuation">(</span><span class="token property"><span class="token variable">$colour</span></span><span class="token punctuation">:</span> <span class="token variable">$colour-primary</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
   <span class="token property">text-shadow</span><span class="token punctuation">:</span> .55rem .55rem <span class="token variable">$colour</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Si aucune couleur n'est spécifiée alors l'ombre sera de la couleur principale (colour-primary).</p>
 <h3>Écrire du code plus propre grâce aux extensions Sass</h3>
 <p>Attention en utilisant trop de mixins cela créer une duplication de l'ensemble de règles dans le CSS compilé. Il comporte de multiples répétitions.</p>
 <p>Heureusement, les extensions existent. Pour cela on utilise un placeholder, càd un bloc de code qui va être réutilisé dans les à l'aide de <em>@extend</em> pour les sélecteurs voulus.</p>
-<pre class="language-scss " style="counter-reset: linenumber 0"><code class="language-scss"><span class="token selector"><span class="token placeholder">%typography</span> </span><span class="token punctuation">{</span>
+<pre class="language-scss"><code class="language-scss"><span class="token selector"><span class="token placeholder">%typography</span> </span><span class="token punctuation">{</span>
   <span class="token property">color</span><span class="token punctuation">:</span> <span class="token variable">$colour-primary</span><span class="token punctuation">;</span>
   <span class="token property">font-size</span><span class="token punctuation">:</span> 2rem<span class="token punctuation">;</span>
   <span class="token property">font-weight</span><span class="token punctuation">:</span> 100<span class="token punctuation">;</span>
@@ -500,49 +481,44 @@ C'est donc très pratique pour stocker des ensembles de règles CSS que l'on uti
 <span class="token punctuation">}</span>
 <span class="token selector">input </span><span class="token punctuation">{</span>
   <span class="token keyword">@extend</span> <span class="token placeholder selector">%typography</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Ainsi lorsque l'on regarde le CSS compilé, il n'y a plus de répétitions mais une liste des sélecteurs concernés :</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">h1, textarea, button, input</span> <span class="token punctuation">{</span>
+<pre class="language-css"><code class="language-css"><span class="token selector">h1, textarea, button, input</span> <span class="token punctuation">{</span>
 <span class="token property">color</span><span class="token punctuation">:</span> #15dea5<span class="token punctuation">;</span>
 <span class="token property">font-size</span><span class="token punctuation">:</span> 2rem<span class="token punctuation">;</span>
 <span class="token property">font-weight</span><span class="token punctuation">:</span> 100<span class="token punctuation">;</span>
 <span class="token property">line-height</span><span class="token punctuation">:</span> 1.7<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <h3>Mixins Vs Extensions</h3>
 <p>Bien que les extensions évitent les répétions, il est préférable d'utiliser les mixins. En effet, les extensions démolissent l'ordre et la prédictibilité du codebase. De plus, les extensions n'acceptent pas d'arguments contrairement aux mixins.</p>
 <h3>Conditions dans Sass</h3>
 <p>Il est possible d'instaurer des conditions dans Sass.
 Cela s'écrit :</p>
-<pre class="language-scss " style="counter-reset: linenumber 0"><code class="language-scss"><span class="token keyword">@if</span> <span class="token punctuation">(</span> <span class="token function">lightness</span><span class="token punctuation">(</span><span class="token variable">$colour</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> 25% <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-scss"><code class="language-scss"><span class="token keyword">@if</span> <span class="token punctuation">(</span> <span class="token function">lightness</span><span class="token punctuation">(</span><span class="token variable">$colour</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> 25% <span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token property"><span class="token variable">$colour</span></span><span class="token punctuation">:</span> <span class="token function">lighten</span><span class="token punctuation">(</span><span class="token variable">$colour</span><span class="token punctuation">,</span> 10%<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token keyword">@else</span><span class="token punctuation">{</span>
   <span class="token property"><span class="token variable">$colour</span></span><span class="token punctuation">:</span> <span class="token function">darken</span><span class="token punctuation">(</span><span class="token variable">$colour</span><span class="token punctuation">,</span> 10%<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>On peut donc créer des mixins modulables en fonctions de certains paramètres ;</p>
-<pre class="language-scss " style="counter-reset: linenumber 0"><code class="language-scss"><span class="token keyword">@mixin</span> <span class="token function">heading-shadow</span><span class="token punctuation">(</span><span class="token property"><span class="token variable">$colour</span></span><span class="token punctuation">:</span> <span class="token variable">$colour-primary</span><span class="token punctuation">,</span> <span class="token property"><span class="token variable">$size</span></span><span class="token punctuation">:</span> <span class="token variable">$heading-shadow-size</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+<pre class="language-scss"><code class="language-scss"><span class="token keyword">@mixin</span> <span class="token function">heading-shadow</span><span class="token punctuation">(</span><span class="token property"><span class="token variable">$colour</span></span><span class="token punctuation">:</span> <span class="token variable">$colour-primary</span><span class="token punctuation">,</span> <span class="token property"><span class="token variable">$size</span></span><span class="token punctuation">:</span> <span class="token variable">$heading-shadow-size</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
   <span class="token keyword">@if</span> <span class="token punctuation">(</span> <span class="token function">lightness</span><span class="token punctuation">(</span><span class="token variable">$colour</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> 25% <span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token property"><span class="token variable">$colour</span></span><span class="token punctuation">:</span> <span class="token function">lighten</span><span class="token punctuation">(</span><span class="token variable">$colour</span><span class="token punctuation">,</span> 10%<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token keyword">@else</span><span class="token punctuation">{</span>
       <span class="token property"><span class="token variable">$colour</span></span><span class="token punctuation">:</span> <span class="token function">darken</span><span class="token punctuation">(</span><span class="token variable">$colour</span><span class="token punctuation">,</span> 10%<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
   <span class="token property">text-shadow</span><span class="token punctuation">:</span> <span class="token variable">$size</span> <span class="token variable">$size</span> <span class="token variable">$colour</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <h3>Créer des fonctions</h3>
 <p>Il est possible de créer des fonctions avec le <em>@function Nom_de_la_fonction(Arguments)</em>.
 Pour récupérer une valeur on utilise <em>@return</em>.
 Voici un exemple de fonction qui modifie la couleur :</p>
-<pre class="language-scss " style="counter-reset: linenumber 0"><code class="language-scss"><span class="token keyword">@function</span> <span class="token function">lightness-shift</span><span class="token punctuation">(</span><span class="token variable">$colour</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+<pre class="language-scss"><code class="language-scss"><span class="token keyword">@function</span> <span class="token function">lightness-shift</span><span class="token punctuation">(</span><span class="token variable">$colour</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
   <span class="token keyword">@if</span> <span class="token punctuation">(</span> <span class="token function">lightness</span><span class="token punctuation">(</span><span class="token variable">$colour</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> 25% <span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token keyword">@return</span> <span class="token function">lighten</span><span class="token punctuation">(</span><span class="token variable">$colour</span><span class="token punctuation">,</span> 10%<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token keyword">@else</span><span class="token punctuation">{</span>
       <span class="token keyword">@return</span> <span class="token function">darken</span><span class="token punctuation">(</span><span class="token variable">$colour</span><span class="token punctuation">,</span> 10%<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Je n'ai pas eu le temps de finir toute la formation openclassrooms, il me reste encore la dernière partie : <a href="https://openclassrooms.com/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/6599201-utilisez-le-systeme-7-1-pour-une-codebase-plus-simple-a-gerer">&quot;Optimisez votre code en utilisant les techniques avancées de Sass&quot;</a></p>
 
 

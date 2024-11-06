@@ -154,7 +154,7 @@ Attention, l'ancienne documentation est obsolète et plus valable.</p>
 <h3>Les components</h3>
 <p>Les components sont essentiels dans le fonctionnement de React. Ce sont des éléments réutilisables qui encapsulent du code et les fonctionnalités. Un component peut être aussi simple qu'un bouton ou aussi complexe qu'une section entière.</p>
 <p>Voici un exemple d’un component représentant le header d’un site web (généré par Chat GPT) :</p>
-<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token comment">// Header.js</span>
+<pre class="language-jsx"><code class="language-jsx"><span class="token comment">// Header.js</span>
 <span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">Header</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
@@ -172,10 +172,9 @@ Attention, l'ancienne documentation est obsolète et plus valable.</p>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> Header<span class="token punctuation">;</span>
-</code></pre>
+<span class="token keyword">export</span> <span class="token keyword">default</span> Header<span class="token punctuation">;</span></code></pre>
 <p>On peut maintenant utiliser ce component n’importe où dans le projet :</p>
-<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> Header <span class="token keyword">from</span> <span class="token string">'./Header'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
@@ -189,11 +188,10 @@ Attention, l'ancienne documentation est obsolète et plus valable.</p>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
-</code></pre>
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span></code></pre>
 <h3>Les props</h3>
 <p>Les composants peuvent accepter des propriétés (props) pour paramétrer leur comportement. Les props sont des passées de parent à enfant. Par exemple, nous pouvons rendre le titre de notre header dynamique en utilisant une prop :</p>
-<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token keyword">const</span> <span class="token function-variable function">Header</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<pre class="language-jsx"><code class="language-jsx"><span class="token keyword">const</span> <span class="token function-variable function">Header</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> <span class="token punctuation">(</span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>header</span><span class="token punctuation">></span></span><span class="token plain-text">
       </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span><span class="token punctuation">{</span>props<span class="token punctuation">.</span>titre<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span><span class="token plain-text">
@@ -206,9 +204,8 @@ Attention, l'ancienne documentation est obsolète et plus valable.</p>
       </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nav</span><span class="token punctuation">></span></span><span class="token plain-text">
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>header</span><span class="token punctuation">></span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code></pre>
-<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+<pre class="language-jsx"><code class="language-jsx"><span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> titreHeader <span class="token operator">=</span> <span class="token string">"Mon App"</span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> <span class="token punctuation">(</span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">
@@ -218,11 +215,10 @@ Attention, l'ancienne documentation est obsolète et plus valable.</p>
       </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">></span></span><span class="token plain-text">
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
 <h3>Le state</h3>
 <p>En plus des props, React propose le concept d'état (state) pour gérer les données qui changent au fil du temps à l'intérieur d'un composant. Pour illustrer cette notion, nous pouvons ajouter un bouton qui incrémente un compteur :</p>
-<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<pre class="language-jsx"><code class="language-jsx"><span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> titreHeader <span class="token operator">=</span> <span class="token string">"Mon App"</span><span class="token punctuation">;</span>
 
 	<span class="token keyword">const</span> <span class="token punctuation">[</span>count<span class="token punctuation">,</span> setCount<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -241,8 +237,7 @@ Attention, l'ancienne documentation est obsolète et plus valable.</p>
       </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">></span></span><span class="token plain-text">
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
 <p>La fonction <strong><code>useState</code></strong> permet de déclarer et d'initialiser le state <strong><code>count</code></strong></p>
 <p><strong><code>setCount</code></strong> est une fonction qui permet de modifier la valeur de cette variable d'état.</p>
 <h2>Tailwind CSS</h2>

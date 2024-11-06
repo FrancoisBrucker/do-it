@@ -173,52 +173,44 @@
 <p>Concrétement voici comment procédé lorsque l'on veut faire du Machine Learning avec Python :</p>
 <h5>Importer les bibliothèques nécessaires</h5>
 <p>Avant de commencer, il est nécessaire <strong>d'importer les bibliothèques nécessaires</strong>, y compris scikit-learn pour les algorithmes de machine learning.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">import pandas as pd 
+<pre class="language-html"><code class="language-html">import pandas as pd 
 import seaborn as sns
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import cross_val_score
-from sklearn.neighbors import KNeighborsClassifier
-</code></pre>
+from sklearn.neighbors import KNeighborsClassifier</code></pre>
 <h5>Charger les données</h5>
 <p>Pour avoir avoir accès aux données on utilise la fonction suivante :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">data = pd.read_csv('chemin/vers/votre/fichier.csv')
-</code></pre>
+<pre class="language-html"><code class="language-html">data = pd.read_csv('chemin/vers/votre/fichier.csv')</code></pre>
 <h5>Explorez les données pour mieux les comprendre</h5>
 <p>Il est important de connaitre <strong>la structure des données</strong> que l'on a à disposition avant de se lancer dans les opérations de ML, pour ça on utilise ces trois fonctions :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">print(data.head())
-</code></pre>
+<pre class="language-html"><code class="language-html">print(data.head())</code></pre>
 <p>Cette fonction permt de retrouner les informations suivantes :</p>
 <div stype="display:flex"><img src="datahead.png"></div>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">print(data.info())
-</code></pre>
+<pre class="language-html"><code class="language-html">print(data.info())</code></pre>
 <p>Cette fonction permt de retrouner les informations suivantes :</p>
 <div stype="display:flex"><img src="datainfo.png"></div>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">print(data.describe())
-</code></pre>
+<pre class="language-html"><code class="language-html">print(data.describe())</code></pre>
 <p>Cette fonction permet de retrouner les informations suivantes :</p>
 <div stype="display:flex"><img src="datadescribes.png"></div>
 <h5>Traitement des données</h5>
 <p>Pour ne pas amoindrir l'efficacité de notre modèle il est important de vérifier que les données ont du sens et d'éliminer celles dont des informations primordiales manquent ou semble trop extrême.
 Pour cela on utilise la fonction suivante :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">data = data.dropna()
-</code></pre>
+<pre class="language-html"><code class="language-html">data = data.dropna()</code></pre>
 <h5>Séparation des données</h5>
 <p>On va diviser les données en deux ensembles : un ensemble d'entrainement et un ensemble de test.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">X = data.drop('variable_cible', axis=1)
+<pre class="language-html"><code class="language-html">X = data.drop('variable_cible', axis=1)
 y = data['variable_cible']
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-</code></pre>
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)</code></pre>
 <p>Une fois que la fonction <em>train_test_split</em> est utilisée, elle génère deux ensembles distincts : l'ensemble d'entraînement (train) et l'ensemble de test. Ce découpage des données offre la possibilité <strong>d'évaluer un modèle de Machine Learning sous deux perspectives distinctes.</strong></p>
 <p>Initialement, le modèle est formé en utilisant <strong>l'ensemble d'entraînement </strong> fourni par la fonction. Ensuite, ses capacités prédictives sont évaluées en utilisant <strong>l'ensemble de test </strong>également fourni par la fonction. Cette approche permet de tester la performance du modèle sur des données qu'il n'a pas vues pendant l'entraînement, offrant ainsi un aperçu de sa généralisation à de nouvelles données.</p>
 <h5>Normalisation/Standardisation des données</h5>
 <p>Cette étape n'est pas obligatoire mais elle peut permettre de gagner quelques pourcentage en plus leur de l'évaluation de notre modèle.  Elle vise à mettre toutes les variables (features) des données sur une échelle commune, ce qui peut être particulièrement important pour certains algorithmes et modèles.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">scaler = StandardScaler()
+<pre class="language-html"><code class="language-html">scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
-X_test = scaler.transform(X_test)
-</code></pre>
+X_test = scaler.transform(X_test)</code></pre>
 <p>Globalement normaliser ou standardiser les données à pour but de <strong>garantir que le modèle utilisé fonctionne de manière optimale</strong>, en particulière lorsque l'on travaille avec des <strong>algortihmes sensibles aux échelles des variables</strong>. Le choix entre la normalisation et la standardisation dépend du contaxte spécifique des données utilisées et des exigences associées au modèle utilisé.</p>
 <h5>Choix du modèle</h5>
 <p>Dans cette étape on décide du modèle que l'on va utiliser en fonction de nos données.
@@ -227,32 +219,28 @@ Les modèles de machine learning sont classés en différentes catégories en fo
 <li>Modèles de <strong>Régression</strong> : <em>Utilisés lorsque la variable cible (output) est continue.</em></li>
 </ul>
 <p>Par exemple on peut utiliser le modèle <em>LinearRegression</em> qui permet de modéliser la relation linéaire entre une variable dépendante et une variable indépendante. Il existe aussi des modèles de régression linéaire multiple, polynomiale et encore bien d'autres...</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">from sklearn.linear_model import LinearRegression
-model = LinearRegression()
-</code></pre>
+<pre class="language-html"><code class="language-html">from sklearn.linear_model import LinearRegression
+model = LinearRegression()</code></pre>
 <ul>
 <li>Modèles de <strong>Classification</strong> : <em>Utilisés lorsque la variable cible est une classe ou une catégorie.</em></li>
 </ul>
 <p>Dans cette catégorie de modèle on retrouve plusieurs modèles. Par exemple le modèle <em>KNeighborsClassifier</em> regarde les plus proches voisins (le nombre est déterminer en hyperparamètre <em>n_neighbors</em>) de l'élément qu'il souhaite classer et choisis la catégorie à la majorité. Tandis que le modèle <em>RandomForestClassifier</em> fonctionne à l'aide d'arbre de décision dont les dernières feuilles sont les différentes catégories possibles. Il existe encore tout plein d'autres modèle dans la même catégorie mais qui ne fonctionne pas de la même manière et à chaque problème un modèle est plus adapté qu'un autre.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">
+<pre class="language-html"><code class="language-html">
 from sklearn.ensemble import RandomForestClassifier
 model = RandomForestClassifier()
 
 from sklearn.neighbors import KNeighborsClassifier
 model = KNeighborsClassifier(n_neighbors=5)
-
 </code></pre>
 <h5>Entraînement du modèle</h5>
 <p>Ici, on va <strong>entrainer notre modèle</strong> sur l'ensemble des données d'entrainements qu'on a déterminer lors de la séparation des données. Pour ce faire on utilise la fonction suivante :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">model.fit(X_train, y_train)
-</code></pre>
+<pre class="language-html"><code class="language-html">model.fit(X_train, y_train)</code></pre>
 <h5>Evaluation du modèle</h5>
 <p>Une fois notre modèle entraîné on va s'intéresser à <strong>ces performances sur des données qu'il n'a jamais vu </strong> (l'ensemble des données test). Concrétement on veut répondre à la question &quot;A-t-il bien appris ?&quot;. Pour ce faire on utilise la fonction suivante :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">y_pred = model.predict(X_test)
+<pre class="language-html"><code class="language-html">y_pred = model.predict(X_test)
 print("Accuracy:", accuracy_score(y_test, y_pred))
 print("Confusion Matrix:\n", confusion_matrix(y_test, y_pred))
-print("Classification Report:\n", classification_report(y_test, y_pred))
-</code></pre>
+print("Classification Report:\n", classification_report(y_test, y_pred))</code></pre>
 <h5>Cross-Validation</h5>
 <p>La Cross-Validation permet de <strong>s'assurer de la stabilité du modèle</strong>. Elle permet d'évaluer la performance d'un modèle sur un ensemble de données de manière plus robuste que l'utilisation d'une seule division en ensemble d'entraînement et ensemble de test. Elle aide à <strong>estimer comment le modèle généralise aux données non vues</strong>. La procédure de validation croisée implique de diviser l'ensemble de données en plusieurs sous-ensembles, puis de former et évaluer le modèle plusieurs fois. Il existe différentes variantes de la validation croisée, la plus courante étant la validation croisée k-fold. Elle fonctionne de cette façon :</p>
 <ul>
@@ -267,20 +255,18 @@ Ces étapes sont répétées k fois, chaque sous-ensemble étant utilisé comme 
 <li><strong>Moyenne des Performances : </strong>
 Les performances (mesures d'évaluation telles que la précision, le F-score, etc.) de chaque itération sont généralement moyennées pour obtenir une estimation plus stable et représentative de la performance du modèle.</li>
 </ul>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">cv_scores = cross_val_score(model, X, y, cv=5)
+<pre class="language-html"><code class="language-html">cv_scores = cross_val_score(model, X, y, cv=5)
 print("Cross-Validation Scores:", cv_scores)
-print("Mean CV Score:", cv_scores.mean())
-</code></pre>
+print("Mean CV Score:", cv_scores.mean())</code></pre>
 <h5>Optimisation des hyperparamètres du modèle</h5>
 <p>On a vu que les modèles peuvent avoir des <strong>hyperparramètres</strong>. En fonction de leur valeur, le modèle est plus ou moins efficace, le but est donc de trouver les hyperparamètres optimaux pour que notre modèle soit le plus précis possible.
 Pour ça on utilise la fonction suivante à adapter en fonction des hyperparamètres de notre modèle :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">from sklearn.model_selection import GridSearchCV
+<pre class="language-html"><code class="language-html">from sklearn.model_selection import GridSearchCV
 
 param_grid = {'n_estimators': [50, 100, 200], 'max_depth': [None, 10, 20]}
 grid_search = GridSearchCV(RandomForestClassifier(), param_grid, cv=5)
 grid_search.fit(X, y)
-best_model = grid_search.best_estimator_
-</code></pre>
+best_model = grid_search.best_estimator_</code></pre>
 <h3>Apprentissage avec Kaggle</h3>
 <p>J'ai tout d'abord suivi le cours <strong><em>Learn Intro to Machine Learning</em></strong> sur la plateforme <a href="https://www.kaggle.com/">Kaggle</a>. Puis je me suis lancé dans le challenge <em>House Price Prediction</em> sur ce Jupyter Notebook <a href="MONMachineLearning.ipynb">MON : Machine Learning</a>.
 J'ai essayé plusieurs modèles d'abord un peu naïvement puis en cherchant à avoir les meilleurs hyperparamètres possibles. J'ai obtenue les résultats suivants :</p>

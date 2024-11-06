@@ -484,7 +484,7 @@ Cependant, le back-end développé durant le premier sprint a permis à Lucas d'
 <p>Au début de ce sprint, Lucas a voulu se concentrer sur la conteneurisation de l'API, de la base de donnée et du front.</p>
 <p>Il s'est d'abord concentré sur cet aspect car il pensait que c'est l'étape qui allait poser le plus de problème. Et c'est pas faux.</p>
 <p>L'objectif de cette étape était de créer une pipeline d'intégration continue, comme on l'avait vu dans le cours de Docker. Cependant, il y a eu beaucoup de problème avec la connexion entre la base de donnée mysql et l'api Spring Boot. Voici le DockerFile utilisé :</p>
-<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token literal-property property">version</span><span class="token operator">:</span> <span class="token string">'1'</span>
+<pre class="language-jsx"><code class="language-jsx"><span class="token literal-property property">version</span><span class="token operator">:</span> <span class="token string">'1'</span>
 <span class="token literal-property property">services</span><span class="token operator">:</span>
   <span class="token literal-property property">mysql</span><span class="token operator">:</span>
     <span class="token literal-property property">image</span><span class="token operator">:</span> mysql<span class="token operator">:</span><span class="token number">8.0</span>
@@ -517,7 +517,6 @@ Cependant, le back-end développé durant le premier sprint a permis à Lucas d'
       <span class="token literal-property property">dockerfile</span><span class="token operator">:</span> Dockerfile
     <span class="token literal-property property">ports</span><span class="token operator">:</span>
       <span class="token operator">-</span> <span class="token string">"3000:80"</span>
-
 </code></pre>
 <p>Le problème était que lorsque que le conteneur était exécuté, cela afficher une erreur car les tables de la base de donnée était vide. Après beaucoup de temps passé dessus, Lucas a abandonné pour ce concentrer sur l’interaction entre l’API et React.</p>
 <h3>Connection entre Spring Boot et React avec des websockets</h3>

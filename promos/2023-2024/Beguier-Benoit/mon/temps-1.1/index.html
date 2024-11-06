@@ -169,8 +169,7 @@ Je vais utiliser l'environnement de travail RStudio tout au long de cette format
 <h2>2. Bases</h2>
 <h4>Répertoire</h4>
 <p>Comme dans beaucoup d'environnements, il faut spécifier à RStudio le répertoire de travail avec la commande</p>
-<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell">setwd<span class="token punctuation">(</span><span class="token string">"C:Users..."</span><span class="token punctuation">)</span>
-</code></pre>
+<pre class="language-shell"><code class="language-shell">setwd<span class="token punctuation">(</span><span class="token string">"C:Users..."</span><span class="token punctuation">)</span></code></pre>
 <h4>Types d'objets</h4>
 <p>S'en suivent ensuite d'autres explications basiques sur les trois manières d'attribuer des variables, ou <em>objets</em> comme ils sont appelés dans la formation ; ainsi que la suppression des objets et l'explication sur les différents types d'objets en R.</p>
 <p>J'ai trouvé très intéressante la partie sur la conversion entre les types. R permet de convertir un objet en n'importe quel type, et ce même quand cela n'a pas de sens (par exemple : un nombre en type <em>numeric</em> que l'on peut convertir en booléen de type <em>logical</em>). Cette liberté peut permettre, à mon sens, des facilités de programmation utiles dans certains cas.</p>
@@ -179,7 +178,7 @@ Je vais utiliser l'environnement de travail RStudio tout au long de cette format
 <h4>La sélection d'éléments dans les différents types d'objets</h4>
 <p>Un réel atout de R par rapport à Python repose, à mon sens, dans la syntaxe de sélection d'éléments. Je trouve celle-ci très intuitive et logique et ce pour tous types d'objets, là où cela peut s'avérer plus technique selon les objets manipulés sur Python.
 La sélection peut se faire par condition, par exemple :</p>
-<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell"><span class="token comment">#Créons la matrice X</span>
+<pre class="language-shell"><code class="language-shell"><span class="token comment">#Créons la matrice X</span>
 
 X <span class="token operator">&lt;</span>- matrix<span class="token punctuation">(</span><span class="token number">1</span>:12,nrow<span class="token operator">=</span><span class="token number">3</span>,ncol<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">)</span>
 X
@@ -193,19 +192,16 @@ X<span class="token punctuation">[</span>,X<span class="token punctuation">[</sp
 <span class="token comment">#      [,1] [,2] [,3]</span>
 <span class="token comment"># [1,]    4    7   10</span>
 <span class="token comment"># [2,]    5    8   11</span>
-<span class="token comment"># [3,]    6    9   12</span>
-</code></pre>
+<span class="token comment"># [3,]    6    9   12</span></code></pre>
 <p>ou alors par indice :</p>
-<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell">X<span class="token punctuation">[</span><span class="token number">1</span>,-1:2<span class="token punctuation">]</span> <span class="token comment"># Première ligne de X privée de ses deux premières colonnes</span>
+<pre class="language-shell"><code class="language-shell">X<span class="token punctuation">[</span><span class="token number">1</span>,-1:2<span class="token punctuation">]</span> <span class="token comment"># Première ligne de X privée de ses deux premières colonnes</span>
 <span class="token comment">#      [,1] [,2]</span>
-<span class="token comment"># [1,]    7   10</span>
-</code></pre>
+<span class="token comment"># [1,]    7   10</span></code></pre>
 <h2>3. Importation de données à partir de fichiers externes</h2>
 <h4>A partir d'un fichier texte (.txt ou .csv)</h4>
 <p>Pour lire les données d'un fichier texte externe avec R, il faut utiliser la commande</p>
-<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell">maVariable <span class="token operator">&lt;</span>- read.table<span class="token punctuation">(</span><span class="token string">"monFichier.txt"</span>, <span class="token assign-left variable">sep</span><span class="token operator">=</span><span class="token string">";"</span>, <span class="token assign-left variable">row.names</span><span class="token operator">=</span><span class="token number">1</span>, <span class="token assign-left variable">header</span><span class="token operator">=</span>TRUE<span class="token punctuation">)</span>
-<span class="token comment">#header indique si la première ligne contient ou non les intitulés des variables. Il est FALSE par défaut.</span>
-</code></pre>
+<pre class="language-shell"><code class="language-shell">maVariable <span class="token operator">&lt;</span>- read.table<span class="token punctuation">(</span><span class="token string">"monFichier.txt"</span>, <span class="token assign-left variable">sep</span><span class="token operator">=</span><span class="token string">";"</span>, <span class="token assign-left variable">row.names</span><span class="token operator">=</span><span class="token number">1</span>, <span class="token assign-left variable">header</span><span class="token operator">=</span>TRUE<span class="token punctuation">)</span>
+<span class="token comment">#header indique si la première ligne contient ou non les intitulés des variables. Il est FALSE par défaut.</span></code></pre>
 <h4>A partir d'un fichier quelconque</h4>
 <div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -217,15 +213,14 @@ X<span class="token punctuation">[</span>,X<span class="token punctuation">[</sp
 <h4>Gérer les erreurs d'importations</h4>
 <p>J'ai appris dans ce MOOC à détecter les erreurs d'importation (provenant du fichier source généralement), notamment avec la bonne pratique d'utiliser la fonction <code>summary()</code>.
 Celle-ci permet de visualiser un résumé de chaque donnée, ainsi que le nombre de type <em>NA</em>, en l'occurrence des erreurs de données. Un trop grand nombre de <em>NA</em> montre que le fichier source manque d'un grand nombre de données.</p>
-<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell"><span class="token operator">></span> summary<span class="token punctuation">(</span>data1<span class="token punctuation">)</span>
+<pre class="language-shell"><code class="language-shell"><span class="token operator">></span> summary<span class="token punctuation">(</span>data1<span class="token punctuation">)</span>
      noms               sexe                age    
  Length:6           Length:6           Min.   :16  
  Class :character   Class :character   1st Qu.:17  
  Mode  :character   Mode  :character   Median :17  
                                        Mean   :17  
                                        3rd Qu.:17  
-                                       Max.   :18  
-</code></pre>
+                                       Max.   :18  </code></pre>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
@@ -247,13 +242,12 @@ Source : Pitwall</p>
 <h4>Récupérer les données</h4>
 <p>A partir du site <a href="https://pitwall.app">Pitwall</a>, j'ai extrait les positions à chaque tour de deux pilotes (seulement deux pour l'exemple car je dois faire la procédure manuellement), Max Verstappen et lando Norris, pour le Grand Prix du Japon qui s'est déroulé le 24/09/2023. J'ai ensuite placé ces données dans un fichier Excel puis je les ai exporté en .csv.
 J'importe ensuite les fichiers dans RStudio, en déclarant des variables <code>Lando</code> et <code>Max</code> qui sont de type <code>dataframe</code> :</p>
-<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell">setwd<span class="token punctuation">(</span><span class="token string">"C:/Users/Beguier/Desktop"</span><span class="token punctuation">)</span>
+<pre class="language-shell"><code class="language-shell">setwd<span class="token punctuation">(</span><span class="token string">"C:/Users/Beguier/Desktop"</span><span class="token punctuation">)</span>
 Lando  <span class="token operator">&lt;</span>- read.csv<span class="token punctuation">(</span><span class="token string">"Norris.csv"</span>, header <span class="token operator">=</span> TRUE, sep <span class="token operator">=</span> <span class="token string">";"</span><span class="token punctuation">)</span>
 
-Max  <span class="token operator">&lt;</span>- read.csv<span class="token punctuation">(</span><span class="token string">"Verstappen.csv"</span>, header <span class="token operator">=</span> TRUE, sep <span class="token operator">=</span> <span class="token string">";"</span><span class="token punctuation">)</span>
-</code></pre>
+Max  <span class="token operator">&lt;</span>- read.csv<span class="token punctuation">(</span><span class="token string">"Verstappen.csv"</span>, header <span class="token operator">=</span> TRUE, sep <span class="token operator">=</span> <span class="token string">";"</span><span class="token punctuation">)</span></code></pre>
 <p>Je peux ensuite facilement demander à R une représentation graphique de la position des pilotes en fonction du tour dans lequel ils se situent.</p>
-<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell"><span class="token comment"># Créez un graphique avec la première colonne en abscisse et la deuxième colonne des deux fichiers en ordonnée</span>
+<pre class="language-shell"><code class="language-shell"><span class="token comment"># Créez un graphique avec la première colonne en abscisse et la deuxième colonne des deux fichiers en ordonnée</span>
 plot<span class="token punctuation">(</span>Lando<span class="token variable">$Lap</span>, Lando<span class="token variable">$Position</span>, <span class="token assign-left variable">type</span><span class="token operator">=</span><span class="token string">"l"</span>, <span class="token assign-left variable">col</span><span class="token operator">=</span><span class="token string">"blue"</span>, <span class="token assign-left variable">xlab</span><span class="token operator">=</span><span class="token string">"Tours"</span>, <span class="token assign-left variable">ylab</span><span class="token operator">=</span><span class="token string">"Positions"</span>, <span class="token assign-left variable">ylim</span><span class="token operator">=</span>rev<span class="token punctuation">(</span>range<span class="token punctuation">(</span>Lando<span class="token variable">$Position</span><span class="token punctuation">))</span><span class="token punctuation">)</span>
 lines<span class="token punctuation">(</span>Lando<span class="token variable">$Lap</span>, Max<span class="token variable">$Position</span>, <span class="token assign-left variable">type</span><span class="token operator">=</span><span class="token string">"l"</span>, <span class="token assign-left variable">col</span><span class="token operator">=</span><span class="token string">"red"</span><span class="token punctuation">)</span>
 
@@ -261,12 +255,11 @@ lines<span class="token punctuation">(</span>Lando<span class="token variable">$
 axis<span class="token punctuation">(</span><span class="token number">2</span>, <span class="token assign-left variable">at</span><span class="token operator">=</span>pretty<span class="token punctuation">(</span>rev<span class="token punctuation">(</span>Lando<span class="token variable">$Position</span><span class="token punctuation">))</span><span class="token punctuation">)</span>
 
 <span class="token comment"># Légendes</span>
-legend<span class="token punctuation">(</span><span class="token string">"topright"</span>, <span class="token assign-left variable">legend</span><span class="token operator">=</span>c<span class="token punctuation">(</span><span class="token string">"Lando Norris"</span>, <span class="token string">"Max Verstappen"</span><span class="token punctuation">)</span>, <span class="token assign-left variable">col</span><span class="token operator">=</span>c<span class="token punctuation">(</span><span class="token string">"blue"</span>, <span class="token string">"red"</span><span class="token punctuation">)</span>, <span class="token assign-left variable">lty</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
-</code></pre>
+legend<span class="token punctuation">(</span><span class="token string">"topright"</span>, <span class="token assign-left variable">legend</span><span class="token operator">=</span>c<span class="token punctuation">(</span><span class="token string">"Lando Norris"</span>, <span class="token string">"Max Verstappen"</span><span class="token punctuation">)</span>, <span class="token assign-left variable">col</span><span class="token operator">=</span>c<span class="token punctuation">(</span><span class="token string">"blue"</span>, <span class="token string">"red"</span><span class="token punctuation">)</span>, <span class="token assign-left variable">lty</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span></code></pre>
 <p>On obtient alors ce graphique :</p>
 <p><img src="graphique1.png" alt="Graphique1"></p>
 <p>Afin d'améliorer l'esthétisme de ce graphique, j'y apporte quelques modifications pour obtenir le résultat suivant :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">setwd<span class="token punctuation">(</span><span class="token string">"C:/Users/Beguier/Desktop"</span><span class="token punctuation">)</span>
+<pre class="language-python"><code class="language-python">setwd<span class="token punctuation">(</span><span class="token string">"C:/Users/Beguier/Desktop"</span><span class="token punctuation">)</span>
 Lando  <span class="token operator">&lt;</span><span class="token operator">-</span> read<span class="token punctuation">.</span>csv<span class="token punctuation">(</span><span class="token string">"Norris.csv"</span><span class="token punctuation">,</span> header <span class="token operator">=</span> TRUE<span class="token punctuation">,</span> sep <span class="token operator">=</span> <span class="token string">";"</span><span class="token punctuation">)</span>
 
 Max  <span class="token operator">&lt;</span><span class="token operator">-</span> read<span class="token punctuation">.</span>csv<span class="token punctuation">(</span><span class="token string">"Verstappen.csv"</span><span class="token punctuation">,</span> header <span class="token operator">=</span> TRUE<span class="token punctuation">,</span> sep <span class="token operator">=</span> <span class="token string">";"</span><span class="token punctuation">)</span>
@@ -294,8 +287,7 @@ mtext<span class="token punctuation">(</span><span class="token string">"Positio
 <span class="token comment"># Légendes (positionnée en bas à droite)</span>
 legend<span class="token punctuation">(</span><span class="token string">"bottomright"</span><span class="token punctuation">,</span> legend<span class="token operator">=</span>c<span class="token punctuation">(</span><span class="token string">"Lando Norris"</span><span class="token punctuation">,</span> <span class="token string">"Max Verstappen"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> col<span class="token operator">=</span>c<span class="token punctuation">(</span><span class="token string">"blue"</span><span class="token punctuation">,</span> <span class="token string">"red"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> lty<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> text<span class="token punctuation">.</span>col<span class="token operator">=</span><span class="token string">"black"</span><span class="token punctuation">,</span> bty<span class="token operator">=</span><span class="token string">"n"</span><span class="token punctuation">)</span> <span class="token comment"># Texte en noir, position en bas à droite</span>
 <span class="token comment"># Titre du graphique avec retour à la ligne au milieu</span>
-title<span class="token punctuation">(</span>main<span class="token operator">=</span><span class="token string">"Position des pilotes par rapport \n au tour dans lequel ils se situent"</span><span class="token punctuation">,</span> col<span class="token punctuation">.</span>main<span class="token operator">=</span><span class="token string">"black"</span><span class="token punctuation">)</span> <span class="token comment"># Titre en noir avec retour à la ligne au milieu</span>
-</code></pre>
+title<span class="token punctuation">(</span>main<span class="token operator">=</span><span class="token string">"Position des pilotes par rapport \n au tour dans lequel ils se situent"</span><span class="token punctuation">,</span> col<span class="token punctuation">.</span>main<span class="token operator">=</span><span class="token string">"black"</span><span class="token punctuation">)</span> <span class="token comment"># Titre en noir avec retour à la ligne au milieu</span></code></pre>
 <p><img src="graphique2.png" alt="Graphique2"></p>
 <p>J'ai donc réussi mon cas pratique. J'aimerais poursuivre plus loin l'utilisation de R, peut-être dans un prochain MON ou de mon côté.</p>
 

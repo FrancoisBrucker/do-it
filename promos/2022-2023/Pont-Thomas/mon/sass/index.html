@@ -157,19 +157,16 @@
 <p>Pour déclarer une variable, on utilise le <strong>symbole $</strong>.</p>
 <p>Il est possible de déclarer des <strong>variables globales</strong>. Celles-ci doivent être déclarées en haut du document et font effet sur tout le document. Mais, on peut également créer des <strong>variables locales</strong>. Celles-ci sont déclarées dans les accolades d'un bloc et sont à application dans celui-ci.</p>
 <p>On peut notamment utiliser les variables pour définir une charte de couleurs. Si celle-ci change, il sera facile de la modifier partout sur le site. Par exemple, le code qui suit définit une charte graphique globale à tout le site.</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css">$<span class="token property">main-color</span><span class="token punctuation">:</span> #0000FF<span class="token punctuation">;</span>
-$<span class="token property">secondary-color</span><span class="token punctuation">:</span> #FF0000<span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-css"><code class="language-css">$<span class="token property">main-color</span><span class="token punctuation">:</span> #0000FF<span class="token punctuation">;</span>
+$<span class="token property">secondary-color</span><span class="token punctuation">:</span> #FF0000<span class="token punctuation">;</span></code></pre>
 <p>Il est également possible de laisser le choix à l'utilisateur de personnaliser le site. Cela est faisable grâce à la balise <strong>!default</strong>. Si la valeur n'est pas définie c'est cette valeur pas défaut qui est utilisé, sinon c'est celle définie par l'utilisateur qui l'est.</p>
 <p>Les variables peuvent être des couleurs, des chaînes de caractères, des nombres, des listes, des maps, des booléens, des nulls ou des fonctions.</p>
 <p>Une liste permet de stocker plusieurs variables, comme par exemple plusieurs couleurs.</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css">$<span class="token property">fonts-family</span><span class="token punctuation">:</span> [<span class="token string">'Roboto'</span><span class="token punctuation">,</span> <span class="token string">'Source Code Pro'</span><span class="token punctuation">,</span> <span class="token string">'Fira Code'</span>]<span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-css"><code class="language-css">$<span class="token property">fonts-family</span><span class="token punctuation">:</span> [<span class="token string">'Roboto'</span><span class="token punctuation">,</span> <span class="token string">'Source Code Pro'</span><span class="token punctuation">,</span> <span class="token string">'Fira Code'</span>]<span class="token punctuation">;</span></code></pre>
 <p>Pour se servir de la 3ème police pour les titres, on peut procéder de cette manière :</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">h1</span><span class="token punctuation">{</span>
+<pre class="language-css"><code class="language-css"><span class="token selector">h1</span><span class="token punctuation">{</span>
     <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token function">nth</span><span class="token punctuation">(</span>$fonts-family<span class="token punctuation">,</span> 3<span class="token punctuation">)</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
@@ -183,29 +180,26 @@ $<span class="token property">secondary-color</span><span class="token punctuati
 <p>Une <strong>mixin</strong> définit un <strong>ensemble de règles</strong> qui pourra être réutilisé pour <strong>stylisé</strong> un ensemble d'élément sur une page Web. Cela permet d'alléger le code en évitant les répétitions si ces paramètres sont utilisés à plusieurs endroits. Et, tout comme précédemment, cela facilite la maintenabilité du site. Pour déclarer une mixin, on utilise <strong>@mixin</strong>.</p>
 <p>On peut également avoir des mixins qui prennent des <strong>paramètres</strong>.</p>
 <p>On peut définir une mixin pour les titres de notre page. On la définit en haut de notre fichier Sass grâce au code suivant :</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token atrule"><span class="token rule">@mixin</span> <span class="token function">title-shadow</span><span class="token punctuation">(</span>$color<span class="token punctuation">)</span></span><span class="token punctuation">{</span>
+<pre class="language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@mixin</span> <span class="token function">title-shadow</span><span class="token punctuation">(</span>$color<span class="token punctuation">)</span></span><span class="token punctuation">{</span>
     <span class="token property">font-family</span><span class="token punctuation">:</span> $fontGeorgia<span class="token punctuation">,</span> serif<span class="token punctuation">;</span>
     <span class="token property">text-shadow</span><span class="token punctuation">:</span> .15rem .15rem $color<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Pour l'utiliser, on l'intègre de cette manière dans le code :</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">h1</span><span class="token punctuation">{</span>
+<pre class="language-css"><code class="language-css"><span class="token selector">h1</span><span class="token punctuation">{</span>
     <span class="token property">text-decoration-line</span><span class="token punctuation">:</span>underline<span class="token punctuation">;</span>
     <span class="token property">text-decoration-style</span><span class="token punctuation">:</span> solid<span class="token punctuation">;</span>
     <span class="token property">text-decoration-color</span><span class="token punctuation">:</span> $secondary-color<span class="token punctuation">;</span>
     <span class="token atrule"><span class="token rule">@include</span> <span class="token function">title-shadow</span><span class="token punctuation">(</span>#a5a3a3<span class="token punctuation">)</span><span class="token punctuation">;</span></span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <h3>Les fonctions</h3>
 <p>Sass a également des <strong>fonctions préprogrammées</strong> qui permettent de simplifier la gestion du style de notre page. Par exemple, il existe des <a href="https://sass-lang.com/documentation/modules/color">fonctions</a> pour les couleurs. Des fonctions permettant de <strong>désaturer</strong>, d'<strong>assombrir</strong>, d'<strong>éclaircir</strong> ou encore de <strong>griser</strong> une couleur sont ainsi disponible. Cela peut s'avérer très pratique pour garder une cohérence dans un visuel et faciliter la maintenabilité en cas de changement de couleur.</p>
 <p>Pour exemple, si l'on souhaite faire un cadre de couleur légèrement plus foncé que la couleur du texte qu'il contient, on peut procéder de cette manière :</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">#p_encadre</span><span class="token punctuation">{</span>
+<pre class="language-css"><code class="language-css"><span class="token selector">#p_encadre</span><span class="token punctuation">{</span>
     <span class="token property">color</span><span class="token punctuation">:</span>$main-color<span class="token punctuation">;</span>
     <span class="token property">border</span><span class="token punctuation">:</span>1px solid <span class="token function">darken</span><span class="token punctuation">(</span>$main-color<span class="token punctuation">,</span> 20%<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Il est également possible de <strong>créer ses propres fonctions</strong> en utilisant <strong>@function</strong>. On peut alors utiliser des <strong>conditions</strong> tel que <em>if ... then ... else ...</em>, des variables,... Cela permet plus de liberté et un code simple. Ainsi, pour que la différence de couleur entre le cadre et le texte soit bien marquée, on peut faire en sorte d'assombrir le trait du cadre quand la couleur du texte est clair et inversement quand elle est foncée. Pour cela, on crée une mixin qu'on utilise ensuite.</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token atrule"><span class="token rule">@function</span> <span class="token function">encadre</span><span class="token punctuation">(</span>$color<span class="token punctuation">)</span></span><span class="token punctuation">{</span>
+<pre class="language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@function</span> <span class="token function">encadre</span><span class="token punctuation">(</span>$color<span class="token punctuation">)</span></span><span class="token punctuation">{</span>
     <span class="token atrule"><span class="token rule">@if</span> <span class="token punctuation">(</span> <span class="token function">lightness</span><span class="token punctuation">(</span>$color<span class="token punctuation">)</span> &lt; 25% <span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
         <span class="token atrule"><span class="token rule">@return</span> <span class="token function">lighten</span><span class="token punctuation">(</span>$color<span class="token punctuation">,</span> 20%<span class="token punctuation">)</span><span class="token punctuation">;</span></span>
     <span class="token punctuation">}</span><span class="token atrule"><span class="token rule">@else</span></span><span class="token punctuation">{</span>
@@ -220,15 +214,13 @@ $<span class="token property">secondary-color</span><span class="token punctuati
 <span class="token selector">#p_encadre</span><span class="token punctuation">{</span>
     <span class="token property">color</span><span class="token punctuation">:</span>$main-color<span class="token punctuation">;</span>
     @include p_<span class="token function">encadre</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Il est également possible d'utiliser d'autres boucles comme <em>for</em> grâce au bloc <strong>@for</strong>. Cela permet par exemple de faire varier une valeur comme par exemple la taille d'un composant.</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token atrule"><span class="token rule">@for</span> $i from 1 through 6</span> <span class="token punctuation">{</span>
+<pre class="language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@for</span> $i from 1 through 6</span> <span class="token punctuation">{</span>
     <span class="token selector">.grid-#</span><span class="token punctuation">{</span>$i<span class="token punctuation">}</span> <span class="token punctuation">{</span>
         <span class="token property">width</span><span class="token punctuation">:</span> 100px*$i<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>D'autres boucles sont disponibles :</p>
 <ul>
 <li><strong>@while</strong> : pour faire varier une valeur tant qu'une condition est vérifiée;</li>

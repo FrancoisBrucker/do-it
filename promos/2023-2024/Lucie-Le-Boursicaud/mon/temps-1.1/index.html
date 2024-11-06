@@ -177,10 +177,9 @@
 <p>Il est nécessaire de déclarer une variable avant de devoir l'utiliser en C++.
 Pour déclarer une variable on utilise la syntaxe suivante : <em>type liste_de_variables</em>.
 Exemples :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"> int a, b, c;    // déclare trois entiers a,b et c
+<pre class="language-html"><code class="language-html"> int a, b, c;    // déclare trois entiers a,b et c
  const float Taille = 1.67;  // déclare une constante de type float
- const Nom = 'Lucie'; // déclare une constante littérale
-</code></pre>
+ const Nom = 'Lucie'; // déclare une constante littérale</code></pre>
 <h4>Les différents opérateurs</h4>
 <ul>
 <li>&quot;+&quot; : addition</li>
@@ -190,22 +189,19 @@ Exemples :</p>
 <li>&quot;%&quot; : donne le reste modulo entre deux entiers
 Exemples :</li>
 </ul>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"> 20.0 / 3.2    donnera  6.25
+<pre class="language-html"><code class="language-html"> 20.0 / 3.2    donnera  6.25
  15 / 8       donnera 1
- 15 % 8       donnera 7
-</code></pre>
+ 15 % 8       donnera 7</code></pre>
 <p>Comme d'autres langage l'utilisation de ++ ou de -- permet d'incrémenter ou de décrémenter une variable.</p>
 <h4>Instructions</h4>
 <p>Pour donner des instruction en C++ on peut soit faire une instruction par ligne comme ceci :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">int a = 4;
-a++; 
-</code></pre>
+<pre class="language-html"><code class="language-html">int a = 4;
+a++; </code></pre>
 <p>Ou utiliser des instruction-bloc comme ceci :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">{
+<pre class="language-html"><code class="language-html">{
   int a = 4;
   a++ ;
-}
-</code></pre>
+}</code></pre>
 <p>Si je déclare une variable dans un bloc alors elle ne pourra pas être utilisée en dehors de ce bloc., il s'agit d'une variable <em>locale</em>.
 Il est interdit de donner le même nom à deux variables distinctes au sein d'un même bloc.
 Si je déclare une variable en dehors d'un bloc alors c'est une variable dite <em>globale</em>.</p>
@@ -221,10 +217,9 @@ Si je déclare une variable en dehors d'un bloc alors c'est une variable dite <e
 <p>Toute fonction doit être définie avant de pouvoir être utilisée.
 Pour déclarer une fonction on utilise cette syntaxe : type nom(liste_des_paramètres).
 Exemples :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">double Distance(double x1, double y1, double x2, double y2);
+<pre class="language-html"><code class="language-html">double Distance(double x1, double y1, double x2, double y2);
 char Concatenation(char mot1, char mot2);
-void AfficherUnNombreXFois(int nombre, int x);
-</code></pre>
+void AfficherUnNombreXFois(int nombre, int x);</code></pre>
 <p>On voit ici l'utilité de <strong><em>void</em></strong> rencontré plus tôt. La dernière fonction n'a pour vocation que d'afficher et ne return pas de valeur.</p>
 <h5>Définir une fonction</h5>
 <p>Pour déclarer une fonction voici la syntaxe :
@@ -233,17 +228,15 @@ type nom_de_la_fonction(tous_les_paramètres)
 corps de la fonction
 }</p>
 <p>Exemples :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">double Moyenne(double x, double y){
+<pre class="language-html"><code class="language-html">double Moyenne(double x, double y){
   return (x + y) / 2.0
-}
-</code></pre>
+}</code></pre>
 <p>Lorsque l'on utilise <em>return</em> cela interrompt l'exécution de la fonction.</p>
 <h5>Utiliser une fonction</h5>
 <p>Une fois ma fonction déclarée je peux appeler ma fonction pour l'utiliser sur différentes valeurs.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">double n=3;
+<pre class="language-html"><code class="language-html">double n=3;
 double m=4;
-double resultat = Moyenne(n,m);
-</code></pre>
+double resultat = Moyenne(n,m);</code></pre>
 <p>Alors la variable <em>resultat</em> récupérera la valeur de la moyenne de 3 et 4 soit 3.5.</p>
 <h5>Les différentes instructions</h5>
 <p>Comme d'autres langages on retrouve les instructions de bases <em>if</em>, <em>while</em>, <em>do</em>, <em>for</em>, et aussi <em>switch</em> qui permet de dissocier différents cas pour lequels on ne veut pas lancer la même instruction.</p>
@@ -270,15 +263,13 @@ Les énumérations sont des listes de noms représentant les valeurs entières s
 On peut l'a défini de la façon suivante : <strong>enum</strong> <em>nom</em> { <em>liste_de_noms</em> }
 Exemple :</li>
 </ul>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">enum Chiffres { un, deux, trois, quatre, cinq, six, sept, huit, neuf}
-enum Peinture { huile, gouache, acrylique, aquarelle}
-</code></pre>
+<pre class="language-html"><code class="language-html">enum Chiffres { un, deux, trois, quatre, cinq, six, sept, huit, neuf}
+enum Peinture { huile, gouache, acrylique, aquarelle}</code></pre>
 <p>Alors on obtiendra la déclaration implicite des constantes entières :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">const int huile=0;
+<pre class="language-html"><code class="language-html">const int huile=0;
 const int gouache=1;
 const int acrylique=2;
-...
-</code></pre>
+...</code></pre>
 <p>Et attribue à ces constantes un type appelé Peinture.</p>
 <ul>
 <li>Tableaux
@@ -289,10 +280,9 @@ On peut le définir de la façon suivante : <em>type</em> <em>nom</em> [<em>tail
 <em>taille</em> est une constante entière égale au nmbre d'éléments du tableau.</li>
 </ul>
 <p>Exemples:</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">int taille[2];       //tableau de deux entiers pour indiquer sa taille
+<pre class="language-html"><code class="language-html">int taille[2];       //tableau de deux entiers pour indiquer sa taille
 double tempsdouche[7];     //tableau de 7 réels pour indiquer le nombre de minutes passées sous la douche
-Peinture collection[10];    //tableau de 10 peintures
-</code></pre>
+Peinture collection[10];    //tableau de 10 peintures</code></pre>
 <blockquote>
 <p>Soit i une expression entière, on note Peinture[i] l'élement d'indice i du tableau <em>Peinture</em>.</p>
 </blockquote>
@@ -301,30 +291,27 @@ Peinture collection[10];    //tableau de 10 peintures
 En C++, une chaine de caractères est en fait un tableau de caractères avec un caractère nul '\0' en fin de chaîne.
 Exemple :</li>
 </ul>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">char couleur[8]; // on a 7 caractères utiles
-strcpy(couleur, "rouge")
-</code></pre>
+<pre class="language-html"><code class="language-html">char couleur[8]; // on a 7 caractères utiles
+strcpy(couleur, "rouge")</code></pre>
 <p>Les chaines de caractères peuvent être affichées grâce aux habituels <em>cin</em> et <em>cout</em>. De nombreuses fonctions de bases utiles pour les chaines de caractères sont déjà pré-définies en C++.</p>
 <h2>3.Premiers algorithmes</h2>
 <p>Dans cette partie je vais m'exercer à coder de petits algorithmes simples avec ce que j'ai appris du langage.</p>
 <h4>Algorithme de calcul de distance entre deux points</h4>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">double Distance(x1,y1,x2,y2){
+<pre class="language-html"><code class="language-html">double Distance(x1,y1,x2,y2){
   double dx,dy;
   dx = x1-x2;
   dy = y1-y2;
   return sqrt(dx*dx+dy*dy);
-}
-</code></pre>
+}</code></pre>
 <h4>Algorithme de calcul du maximum entre deux entiers</h4>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">int Max(int a, int b)
+<pre class="language-html"><code class="language-html">int Max(int a, int b)
 {
 if ((a &lt;= b))
 return b;
 return a;
-}
-</code></pre>
+}</code></pre>
 <h4>Algorithme de calcul du maximum entre une liste d'entiers</h4>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">int main()
+<pre class="language-html"><code class="language-html">int main()
 {
     int arr[] = { 2, 7, 9, -1, 0, 3, 6, 21, 8, -12};
  
@@ -336,8 +323,7 @@ return a;
         }
     }
     return max;
-}
-</code></pre>
+}</code></pre>
 <h4>Entrainement sur CodeSignal</h4>
 <p>Suite à cela j'ai repris le mode arcade de CodeSignal depuis le début mais en codant en C++ cette fois-ci. CodeSignal est une plateforme qui permet d'évaluer ses compétences en développement. Elle propose une variété de défis de programmations qui peuvent résolu en utilisant le langage de son choix.</p>
 <h2>4. Orientation Objet</h2>
@@ -357,14 +343,13 @@ Ainsi avant de décrire un objet il est important de décrire la classe à laque
 </ul>
 <h5>Déclaration</h5>
 <p>Cette partie se traite dans un fichier .h qui se présente sous cette forme :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">class Classe
+<pre class="language-html"><code class="language-html">class Classe
 {
   public : 
     *déclaration*
   private :
     *déclaration*
-}
-</code></pre>
+}</code></pre>
 <h5>Définition</h5>
 <p>Cette partie se traite dans un fichier .cpp qui contient les définitions des fonctions de la classe.</p>
 <h5>Utilisation</h5>

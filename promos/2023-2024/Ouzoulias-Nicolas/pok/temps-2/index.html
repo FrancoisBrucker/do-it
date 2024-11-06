@@ -156,7 +156,7 @@
 <p>Le second sprint du POK s'est déroulé bien plus difficilement que ce qui était attendu. Une bonne partie de ce que j'avais fait au temps 1 ne fonctionnait finalement pas suffisament bien et j'ai donc dû quasiment tout reprendre à 0.</p>
 <h3>Initialisation du back</h3>
 <p>Pour bien démarrer le <strong>backend</strong> il faut bien l'initialiser. Comme je n'ai suivi que des tutos guidés pour mon <a href="../../mon/temps-2.2/index.md">MON 2.2</a> et que je ne l'ai jamais fait totalement moi même je me suis un peu perdu dans toute la syntaxe et le système de routes etc...</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> http <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'http'</span><span class="token punctuation">)</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> http <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'http'</span><span class="token punctuation">)</span>
 <span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./app'</span><span class="token punctuation">)</span>
 
 <span class="token keyword">const</span> port <span class="token operator">=</span> <span class="token number">4000</span><span class="token punctuation">;</span>
@@ -165,12 +165,11 @@
     res<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token string">'Réponse du serveur'</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-server<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span>port<span class="token punctuation">)</span>
-</code></pre>
+server<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span>port<span class="token punctuation">)</span></code></pre>
 <h3>Ajout des match</h3>
 <p>Mon form initial a tout d'abord été repris pour véritablement bien fonctionner avec le back.</p>
 <p><img src="images/ajout_resultat.png" alt="formulaire"></p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">method</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>post<span class="token punctuation">"</span></span> <span class="token attr-name">action</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/ajouter-resultat<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<pre class="language-html"><code class="language-html"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">method</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>post<span class="token punctuation">"</span></span> <span class="token attr-name">action</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/ajouter-resultat<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>form-noms<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
                 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>form-column<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
                     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span><span class="token punctuation">></span></span> Equipe 1 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">></span></span>
@@ -207,10 +206,9 @@ server<span class="token punctuation">.</span><span class="token function">liste
             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 
                 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ENVOYER<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>cta<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span>
-</code></pre>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span></code></pre>
 <p>Une fois le form bien créé il faut pouvoir récupérer les données :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span>
 <span class="token keyword">const</span> mongoose <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mongoose'</span><span class="token punctuation">)</span>
 <span class="token keyword">const</span> Match <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./models/match'</span><span class="token punctuation">)</span>
 
@@ -234,10 +232,9 @@ app<span class="token punctuation">.</span><span class="token function">post</sp
         console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">"Erreur lors de l'ajout du résultat:"</span><span class="token punctuation">,</span> error<span class="token punctuation">)</span><span class="token punctuation">;</span>
         res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">"Erreur lors de l'ajout du résultat"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
 <p>Ces dernières sont basées sur un model MongoDB qui me sert de base de données.</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> mongoose <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mongoose'</span><span class="token punctuation">)</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> mongoose <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mongoose'</span><span class="token punctuation">)</span>
 
 <span class="token keyword">const</span> matchSchema <span class="token operator">=</span> mongoose<span class="token punctuation">.</span><span class="token function">Schema</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
     <span class="token literal-property property">equipe1</span><span class="token operator">:</span> <span class="token punctuation">{</span>
@@ -257,7 +254,6 @@ app<span class="token punctuation">.</span><span class="token function">post</sp
 <span class="token keyword">const</span> Match <span class="token operator">=</span> mongoose<span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span><span class="token string">'Match'</span><span class="token punctuation">,</span> matchSchema<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 module<span class="token punctuation">.</span>exports <span class="token operator">=</span> Match<span class="token punctuation">;</span>
-
 </code></pre>
 <p>Une fois dans la base de donnée il est possible de modifier la page <code>histo.html</code> pour afficher les nouveaux résultats.</p>
 <p><img src="images/affichage_resultats2.png" alt="resultatsmaj"></p>

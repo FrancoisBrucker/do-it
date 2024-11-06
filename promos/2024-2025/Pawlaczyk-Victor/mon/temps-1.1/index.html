@@ -183,20 +183,17 @@ Pas de prérequis en VBA</p>
 <p>Cet outil très simple d'utilisation limite cependant très vite les possibilités si l'on s'arrête là, le codage en VBA permet foison de manipulations qui ne peuvent être enregistrées de la sorte. Pour autant, il peut s'avérer très pratique pour démarrer un programme sur une base fiable en l'enrichissant par la suite ou encore pour retrouver le codage de certaines manipulations en VBA.</p>
 <h3>Sélectionner une cellule</h3>
 <p>Sélectionner la cellule B12 de la feuille &quot;Feuil3&quot; du classeur excel &quot;MonTableau.xlsx&quot; :</p>
-<pre class="language-vb " style="counter-reset: linenumber 0"><code class="language-vb">Workbooks<span class="token punctuation">(</span><span class="token string">"MonTableau.xlsx"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Sheets<span class="token punctuation">(</span><span class="token string">"Feuil3"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"B12"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">Select</span>
+<pre class="language-vb"><code class="language-vb">Workbooks<span class="token punctuation">(</span><span class="token string">"MonTableau.xlsx"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Sheets<span class="token punctuation">(</span><span class="token string">"Feuil3"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"B12"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">Select</span>
 
 <span class="token comment">'ou bien</span>
-Workbooks<span class="token punctuation">(</span><span class="token string">"MonTableau.xlsx"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Sheets<span class="token punctuation">(</span><span class="token string">"Feuil3"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Cells<span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">Select</span>
-</code></pre>
+Workbooks<span class="token punctuation">(</span><span class="token string">"MonTableau.xlsx"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Sheets<span class="token punctuation">(</span><span class="token string">"Feuil3"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Cells<span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">Select</span></code></pre>
 <p>On peut s'affranchir de tout celà pour sélectionner simplement la cellule B15 de la feuille active. Dans ce cas il suffit d'écrire :</p>
-<pre class="language-vb " style="counter-reset: linenumber 0"><code class="language-vb">Range<span class="token punctuation">(</span><span class="token string">"B15"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">Select</span>
+<pre class="language-vb"><code class="language-vb">Range<span class="token punctuation">(</span><span class="token string">"B15"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">Select</span>
 
 <span class="token comment">'ou de manière équivalente</span>
-Cells<span class="token punctuation">(</span><span class="token number">15</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">Select</span>
-</code></pre>
+Cells<span class="token punctuation">(</span><span class="token number">15</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">Select</span></code></pre>
 <p>Et bien sûr on peut sélectionner une plage de données entrière :</p>
-<pre class="language-vb " style="counter-reset: linenumber 0"><code class="language-vb">Range<span class="token punctuation">(</span><span class="token string">"B2:C5"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">Select</span>
-</code></pre>
+<pre class="language-vb"><code class="language-vb">Range<span class="token punctuation">(</span><span class="token string">"B2:C5"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">Select</span></code></pre>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
@@ -211,16 +208,15 @@ Cells<span class="token punctuation">(</span><span class="token number">15</span
 <p>Pour éviter de répéter tout le temps le nom de la cellule à laquelle on applique de nombreuses propriétés à la suite, on peut simplement utiliser &quot;With&quot;.</p>
 <h3>Les Fonctions et procédures</h3>
 <p>Pour déclarer une fonction, il suffit d'utiliser la syntaxe suivante :</p>
-<pre class="language-vb " style="counter-reset: linenumber 0"><code class="language-vb"><span class="token keyword">Function</span> Plus_Un<span class="token punctuation">(</span>x <span class="token keyword">as</span> <span class="token keyword">Integer</span><span class="token punctuation">)</span>
+<pre class="language-vb"><code class="language-vb"><span class="token keyword">Function</span> Plus_Un<span class="token punctuation">(</span>x <span class="token keyword">as</span> <span class="token keyword">Integer</span><span class="token punctuation">)</span>
   Plus_Un <span class="token operator">=</span> x<span class="token operator">+</span><span class="token number">1</span>
-<span class="token keyword">End</span> <span class="token keyword">Function</span>
-</code></pre>
+<span class="token keyword">End</span> <span class="token keyword">Function</span></code></pre>
 <p>En VBA, on utilise beaucoup les procédures, déclarées avec &quot;sub&quot;. C'est similaire à une fonction, à la différence qu'une fonction retourne une valeur, ce qui n'est pas le cas d'une procédure.</p>
 <p>Par exemple, on n'a pas besoin de retourner une valeur quand on met en forme une plage de données dans un tableau.</p>
 <p>L'exemple suivant met en application les quelques points précédents en créant une procédure qui met sous forme de tableau une plage de données.</p>
 <p><img src="Tableau.png" alt="Alternate Text"></p>
 <p><img src="TableauMisEnForme.png" alt="Alternate"></p>
-<pre class="language-vb " style="counter-reset: linenumber 0"><code class="language-vb"><span class="token keyword">Sub</span> Exemple_Mise_En_Forme<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<pre class="language-vb"><code class="language-vb"><span class="token keyword">Sub</span> Exemple_Mise_En_Forme<span class="token punctuation">(</span><span class="token punctuation">)</span>
     Range<span class="token punctuation">(</span><span class="token string">"A1:C13"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Borders<span class="token punctuation">.</span>Weight <span class="token operator">=</span> <span class="token number">2</span>
     
     <span class="token keyword">With</span> Range<span class="token punctuation">(</span><span class="token string">"A1:C1"</span><span class="token punctuation">)</span>
@@ -241,30 +237,26 @@ Cells<span class="token punctuation">(</span><span class="token number">15</span
         <span class="token keyword">End</span> <span class="token keyword">With</span>
     <span class="token keyword">End</span> <span class="token keyword">With</span>
     
-<span class="token keyword">End</span> <span class="token keyword">Sub</span>
-</code></pre>
+<span class="token keyword">End</span> <span class="token keyword">Sub</span></code></pre>
 <h3>Les Boutons</h3>
 <p>Depuis l'onglet &quot;Développeur&quot;, on peut insérer des boutons. Ensuite il suffit de lui affecter une macro et le bouton exécutera la macro lorsqu'il sera pressé.</p>
 <h3>Les variables</h3>
 <p>Pour coder, on a besoin de variables. Pour les déclarer, on utilise simplement &quot;Dim&quot; comme suit :</p>
-<pre class="language-vb " style="counter-reset: linenumber 0"><code class="language-vb"><span class="token keyword">Dim</span> x <span class="token keyword">as</span> <span class="token keyword">Integer</span>
-</code></pre>
+<pre class="language-vb"><code class="language-vb"><span class="token keyword">Dim</span> x <span class="token keyword">as</span> <span class="token keyword">Integer</span></code></pre>
 <h3>Les Boucles</h3>
 <p>On peut utiliser une boucle &quot;Do While ... Loop&quot;, &quot;Do Until ... Loop&quot; ou bien &quot;For ... Next&quot;</p>
 <h3>Les Message Boxes</h3>
 <p>C'est un outil très pratique pour intéragir avec l'utilisateur de la Macro. On peut par exemple afficher à l'utilisateur un message ou encore la valeur d'une variable.</p>
-<pre class="language-vb " style="counter-reset: linenumber 0"><code class="language-vb"><span class="token comment">'Pour afficher la valeur de la variable x</span>
+<pre class="language-vb"><code class="language-vb"><span class="token comment">'Pour afficher la valeur de la variable x</span>
 MsgBox<span class="token punctuation">.</span>x
 
 <span class="token comment">'Pour afficher un message quelconque </span>
 MsgBox <span class="token string">"Sincères Salutations"</span>
 
 <span class="token comment">'Et pour concaténer les 2, on utilise &amp;</span>
-MsgBox <span class="token string">"La variable x vaut "</span> <span class="token operator">&amp;</span> x
-</code></pre>
+MsgBox <span class="token string">"La variable x vaut "</span> <span class="token operator">&amp;</span> x</code></pre>
 <p>Une message box ne sert pas qu'à afficher quelque chose, elle peut demander une confirmation par exemple à l'utilisateur. Par exemple :</p>
-<pre class="language-vb " style="counter-reset: linenumber 0"><code class="language-vb">MsgBox<span class="token punctuation">(</span><span class="token string">"Veux-tu vraiment lancer la Macro Exemple1 ?"</span><span class="token punctuation">,</span> vbYesNo<span class="token punctuation">,</span> <span class="token string">"Lancement de Exemple1"</span><span class="token punctuation">)</span> 
-</code></pre>
+<pre class="language-vb"><code class="language-vb">MsgBox<span class="token punctuation">(</span><span class="token string">"Veux-tu vraiment lancer la Macro Exemple1 ?"</span><span class="token punctuation">,</span> vbYesNo<span class="token punctuation">,</span> <span class="token string">"Lancement de Exemple1"</span><span class="token punctuation">)</span> </code></pre>
 <p>Voici les principales possibilités qui ont retenu mon attention :</p>
 <table>
 <thead>
@@ -303,9 +295,8 @@ MsgBox <span class="token string">"La variable x vaut "</span> <span class="toke
 <h3>Les UserForms</h3>
 <p>Une autre manière d'intéragir avec l'utilisateur de la Macro, c'est l'Userform. C'est une fenêtre que l'on peut faire apparître à l'utilisateur dans laquelle il peut rentrer des données par exemple ou faire des choix. Cet outil est riche en possibilités. On peut ainsi très facilement faire figurer dans cette fenêtre des zones de texte, des images, des listes, des cases à cocher, des options à choisir, etc.</p>
 <p>Pour que le UserForm soit une vraie interaction et non pas un simple affichage, il est nécessaire de coder ces interactions dans le code du UserForm. La fenêtre de code propre au UserForm va s'exécuter automatiquement à l'ouverture du UserForm. Pour ouvrir un UserForm à partir d'une procédure, il suffit d'insérer dans le code de la procédure la commande suivante :</p>
-<pre class="language-vb " style="counter-reset: linenumber 0"><code class="language-vb"><span class="token comment">'On souhaite lance le UserForm nommé "Exemple"</span>
-Exemple<span class="token punctuation">.</span>Show
-</code></pre>
+<pre class="language-vb"><code class="language-vb"><span class="token comment">'On souhaite lance le UserForm nommé "Exemple"</span>
+Exemple<span class="token punctuation">.</span>Show</code></pre>
 <h2>Conclusion</h2>
 <p>La formation proposée par Excel-Pratique m'as permis d'aborder progressivement le langage VBA et d'en découvrir les bases. Même si je ne l'ai pas indiqué dans les prérequis, il m'apparaît assez clairement que mes connaissances acquises sur python m'ont beaucoup aidées à aborder ce nouveau langage.</p>
 

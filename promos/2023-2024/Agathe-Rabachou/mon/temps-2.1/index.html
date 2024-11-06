@@ -182,16 +182,15 @@ Avec les mises en forme conditionnelles existantes dans Excel, on peut modifier 
 <p>Un moyen très simple d’automatiser une tâche ou une suite de tâches est d’utiliser l’enregistreur de macro. Il enregistre l’ensemble des clics et des frappes de clavier sur la durée choisie, et transforme ces actions en code VBA. On peut alors voir ce code dans l’éditeur (que l’on ouvre en cliquant sur Visual Basic ou grâce au raccourci Alt+F11), le modifier, le renommer ou encore le commenter. Pour l’utiliser, il suffit d’insérer un bouton et de lui affecter la macro. Chaque clic sur ce bouton lancera alors la suite de tâches enregistrée au préalable.</p>
 <h3>B. Création d'une macro</h3>
 <p>L’autre possibilité est de créer une macro en la codant à la main. Pour cela, on crée un nouveau module dans l’éditeur, dans lequel on écrit :</p>
-<pre class="language-vba " style="counter-reset: linenumber 0"><code class="language-vba"><span class="token keyword">Sub</span> nom_de_la_macro<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<pre class="language-vba"><code class="language-vba"><span class="token keyword">Sub</span> nom_de_la_macro<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-<span class="token keyword">End</span> <span class="token keyword">Sub</span>
-</code></pre>
+<span class="token keyword">End</span> <span class="token keyword">Sub</span></code></pre>
 <p>Le code de la macro doit être écrit entre ces deux lignes. De la même manière que précédemment, une fois la macro écrite, il faudra l’associer à un bouton pour pouvoir l’utiliser.</p>
 <ul>
 <li><strong>Instructions de base :</strong></li>
 </ul>
 <p>Voici les principales commandes qui permettent d’écrire les actions les plus basiques :</p>
-<pre class="language-vba " style="counter-reset: linenumber 0"><code class="language-vba"><span class="token keyword">Sub</span> instructions_de_bases<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<pre class="language-vba"><code class="language-vba"><span class="token keyword">Sub</span> instructions_de_bases<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
     <span class="token comment">'sélectionner une plage de cellules (on peut également sélectionner des lignes, des colonnes ou des cellules distinctes)</span>
     Range<span class="token punctuation">(</span><span class="token string">"C3:C7"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">Select</span>
@@ -233,24 +232,21 @@ Avec les mises en forme conditionnelles existantes dans Excel, on peut modifier 
     Sheets<span class="token punctuation">(</span><span class="token string">"Feuil1"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Tab<span class="token punctuation">.</span>Color <span class="token operator">=</span> RGB<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">)</span>
     <span class="token comment">'la dernière commande colore l'onglet de la feuille</span>
     
-<span class="token keyword">End</span> <span class="token keyword">Sub</span>
-</code></pre>
+<span class="token keyword">End</span> <span class="token keyword">Sub</span></code></pre>
 <ul>
 <li><strong>Variables :</strong></li>
 </ul>
 <p>Pour aller plus loin et simplifier des codes plus complexes, on peut ensuite déclarer des variables. Pour cela, on écrit :</p>
-<pre class="language-vba " style="counter-reset: linenumber 0"><code class="language-vba"><span class="token keyword">Sub</span> variables<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<pre class="language-vba"><code class="language-vba"><span class="token keyword">Sub</span> variables<span class="token punctuation">(</span><span class="token punctuation">)</span>
     <span class="token keyword">Dim</span> Nom_variable <span class="token keyword">As</span> <span class="token keyword">Integer</span>
     Nom_variable <span class="token operator">=</span> <span class="token number">12</span>
-<span class="token keyword">End</span> <span class="token keyword">Sub</span>
-</code></pre>
+<span class="token keyword">End</span> <span class="token keyword">Sub</span></code></pre>
 <p>Le type peut être un entier, un flottant, une date ou encore une chaîne de caractères par exemple. Chacun de ces types à une notation en VBA (integer, single, date, string…).</p>
 <p>On peut ensuite afficher cette variable dans une boîte de dialogue grâce à la commande :</p>
-<pre class="language-vba " style="counter-reset: linenumber 0"><code class="language-vba">MsgBox Nom_variable
-</code></pre>
+<pre class="language-vba"><code class="language-vba">MsgBox Nom_variable</code></pre>
 <p>Ainsi, on peut par exemple afficher une phrase contenant plusieurs informations extraites d’une base de données. A noter que, comme en Excel, on utilise &amp; pour concaténer du texte et des valeurs de variables. Voici une illustration :</p>
 <img src="variables tab.png">
-<pre class="language-vba " style="counter-reset: linenumber 0"><code class="language-vba"><span class="token keyword">Sub</span> variables<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<pre class="language-vba"><code class="language-vba"><span class="token keyword">Sub</span> variables<span class="token punctuation">(</span><span class="token punctuation">)</span>
     <span class="token keyword">Dim</span> Nom <span class="token keyword">As</span> <span class="token keyword">String</span><span class="token punctuation">,</span> Prenom <span class="token keyword">As</span> <span class="token keyword">String</span><span class="token punctuation">,</span> Numero <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">,</span> Poste <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">,</span> Ligne <span class="token keyword">As</span> <span class="token keyword">Integer</span>
     Ligne <span class="token operator">=</span> Range<span class="token punctuation">(</span><span class="token string">"G6"</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span>
     <span class="token comment">'+1 pour ne pas tenir compte de la première ligne qui contient les titres</span>
@@ -259,8 +255,7 @@ Avec les mises en forme conditionnelles existantes dans Excel, on peut modifier 
     Numero <span class="token operator">=</span> Cells<span class="token punctuation">(</span>Ligne<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
     Poste <span class="token operator">=</span> Cells<span class="token punctuation">(</span>Ligne<span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span>
     MsgBox <span class="token string">"La joueuse "</span> <span class="token operator">&amp;</span> Nom <span class="token operator">&amp;</span> <span class="token string">" "</span> <span class="token operator">&amp;</span> Prenom <span class="token operator">&amp;</span> <span class="token string">" porte le numéro "</span> <span class="token operator">&amp;</span> Numero <span class="token operator">&amp;</span> <span class="token string">" et évolue au poste "</span> <span class="token operator">&amp;</span> Poste
-<span class="token keyword">End</span> <span class="token keyword">Sub</span>
-</code></pre>
+<span class="token keyword">End</span> <span class="token keyword">Sub</span></code></pre>
 <img src="variables boite dialogue.png">
 <p>Une variable est utilisable dans l’environnement dans lequel elle a été définie. Dans une procédure (Sub) si elle est définie au début de cette procédure, dans tout un module si elle est initiée au début du module ou même dans l’ensemble des modules si l’on remplace Dim par Public.</p>
 <p>Pour conserver la valeur d’une variable d’une procédure après la fin de cette procédure il faut remplacer <code>Dim</code> par <code>Static</code>, et pour conserver la valeur de toutes les variables d’une procédure il faut ajouter Static devant Sub.</p>
@@ -269,7 +264,7 @@ Avec les mises en forme conditionnelles existantes dans Excel, on peut modifier 
 <li><strong>Tableaux :</strong></li>
 </ul>
 <p>Les tableaux fonctionnent sur le même principe que les variables mais permettent de stocker plusieurs informations. La syntaxe de définition est la suivante :</p>
-<pre class="language-vba " style="counter-reset: linenumber 0"><code class="language-vba"><span class="token keyword">Sub</span> tableaux<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<pre class="language-vba"><code class="language-vba"><span class="token keyword">Sub</span> tableaux<span class="token punctuation">(</span><span class="token punctuation">)</span>
     <span class="token comment">'créer un tableau à 1 dimension, 7 cases contenant des chaînes de caractères</span>
     <span class="token keyword">Dim</span> Nom_tableau<span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span> <span class="token keyword">As</span> <span class="token keyword">String</span>
     <span class="token comment">'attribuer une valeur à la case 3</span>
@@ -280,8 +275,7 @@ Avec les mises en forme conditionnelles existantes dans Excel, on peut modifier 
     <span class="token keyword">Dim</span> Nom_tableau<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token keyword">As</span> <span class="token keyword">Integer</span>
     <span class="token comment">'attribuer une valeur à la case en haut à gauche</span>
     Nom_tableau<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">2</span>
-<span class="token keyword">End</span> <span class="token keyword">Sub</span>
-</code></pre>
+<span class="token keyword">End</span> <span class="token keyword">Sub</span></code></pre>
 <ul>
 <li><strong>Constantes :</strong></li>
 </ul>
@@ -290,7 +284,7 @@ Avec les mises en forme conditionnelles existantes dans Excel, on peut modifier 
 <li><strong>Conditions :</strong></li>
 </ul>
 <p>On peut ensuite ajouter des conditions, qui fonctionnent exactement comme en Python, avec la syntaxe suivante :</p>
-<pre class="language-vba " style="counter-reset: linenumber 0"><code class="language-vba"><span class="token keyword">Sub</span> conditions<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<pre class="language-vba"><code class="language-vba"><span class="token keyword">Sub</span> conditions<span class="token punctuation">(</span><span class="token punctuation">)</span>
     <span class="token keyword">If</span> [CONDITION] <span class="token keyword">Then</span> 
         [INSTRUCTION]
     <span class="token keyword">ElseIf</span> [CONDITION2]
@@ -298,18 +292,16 @@ Avec les mises en forme conditionnelles existantes dans Excel, on peut modifier 
     <span class="token keyword">Else</span>
         [INSTRUCTION3]
     <span class="token keyword">End</span> <span class="token keyword">If</span>
-<span class="token keyword">End</span> <span class="token keyword">Sub</span>
-</code></pre>
+<span class="token keyword">End</span> <span class="token keyword">Sub</span></code></pre>
 <p>Dans certains cas, plutôt que d’utiliser beaucoup de ElseIf, il peut être pertinent d’utiliser la fonction Select. On peut alors remplacer la série de ElseIf par :</p>
-<pre class="language-vba " style="counter-reset: linenumber 0"><code class="language-vba"><span class="token keyword">Select</span> <span class="token keyword">Case</span> Valeur_à_tester
+<pre class="language-vba"><code class="language-vba"><span class="token keyword">Select</span> <span class="token keyword">Case</span> Valeur_à_tester
     <span class="token keyword">Case</span> <span class="token keyword">Is</span> <span class="token operator">=</span> A
         [INSTRUCTION]
     <span class="token keyword">Case</span> <span class="token keyword">Is</span> <span class="token operator">></span><span class="token operator">=</span> B
         [INSTRUCTION2]
     <span class="token keyword">Case</span> C <span class="token keyword">to</span> D
         [INSTRUCTION3]
-<span class="token keyword">End</span> <span class="token keyword">Select</span>
-</code></pre>
+<span class="token keyword">End</span> <span class="token keyword">Select</span></code></pre>
 <p>Il existe également de nombreuses fonctions prédéfinies pour conditionner une instruction, telles que <code>IsNumeric</code> (vraie si la valeur est numérique), <code>IsDate</code> (vraie si la valeur est une date), <code>Day</code> ou <code>Year</code> (renvoie le jour ou l’année d’une date), ou encore <code>IsEmpty</code> (vraie si la variable n’a pas été initialisée).</p>
 <p>Enfin, on peut aussi vérifier si une variable contient une chaîne de caractères avec <code>If Variable Like &quot;*chaîne_caractères*&quot;</code>, où <code>*</code> peut remplacer n’importe quoi. A la place de <code>*</code>, <code>#</code> remplacerait un unique caractère numérique, et <code>?</code> un unique caractère quelconque. Il existe d’autres notations pour préciser les caractères ou types de caractères que l’on cherche dans une variable.</p>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
@@ -331,7 +323,7 @@ Avec les mises en forme conditionnelles existantes dans Excel, on peut modifier 
 <p><strong>Attention</strong> à ne pas créer de boucles infinies !</p>
 </div></div>
 <p>Voici les utilisations et syntaxes des différents types de boucles :</p>
-<pre class="language-vba " style="counter-reset: linenumber 0"><code class="language-vba"><span class="token keyword">Sub</span> boucles<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<pre class="language-vba"><code class="language-vba"><span class="token keyword">Sub</span> boucles<span class="token punctuation">(</span><span class="token punctuation">)</span>
     <span class="token comment">'tant que la condition est vraie, l'instruction est exécutée</span>
     <span class="token keyword">Do</span> <span class="token keyword">While</span> [CONDITION]
         [INSTRUCTION]
@@ -365,8 +357,7 @@ Avec les mises en forme conditionnelles existantes dans Excel, on peut modifier 
     <span class="token keyword">Exit</span> <span class="token keyword">Do</span> <span class="token comment">'une boucle Do</span>
     <span class="token keyword">Exit</span> <span class="token keyword">Sub</span> <span class="token comment">'une procédure</span>
     <span class="token keyword">Exit</span> <span class="token keyword">Function</span> <span class="token comment">'une fonction</span>
-<span class="token keyword">End</span> <span class="token keyword">Sub</span>
-</code></pre>
+<span class="token keyword">End</span> <span class="token keyword">Sub</span></code></pre>
 <ul>
 <li><strong>Procédures :</strong></li>
 </ul>
@@ -374,13 +365,12 @@ Avec les mises en forme conditionnelles existantes dans Excel, on peut modifier 
 <p>Premièrement, les Subs tels qu’ils ont été décris ci-dessus sont dit publics. Si l’on rajoute <code>Private</code> avant le Sub, il devient privé, c’est-à-dire inaccessible en dehors du module dans lequel il a été créé.</p>
 <p>Ensuite, on peut appeler une procédure à s’exécuter à l’intérieur d’une autre, simplement en écrivant son nom.</p>
 <p>On peut également entrer des valeurs en argument d’une procédure, afin qu’elles soient conservées si l’on appelle cette procédure dans une autre. Voici une illustration simple :</p>
-<pre class="language-vba " style="counter-reset: linenumber 0"><code class="language-vba"><span class="token keyword">Sub</span> procédure1<span class="token punctuation">(</span>texte <span class="token keyword">As</span> <span class="token keyword">String</span><span class="token punctuation">)</span>
+<pre class="language-vba"><code class="language-vba"><span class="token keyword">Sub</span> procédure1<span class="token punctuation">(</span>texte <span class="token keyword">As</span> <span class="token keyword">String</span><span class="token punctuation">)</span>
     [INSTRUCTION utilisant texte]
 <span class="token keyword">End</span> <span class="token keyword">Sub</span>
 <span class="token keyword">Sub</span> procédure2<span class="token punctuation">(</span><span class="token punctuation">)</span>
     [INSTRUCTION appelant procédure1 «texte à utiliser»]
-<span class="token keyword">End</span> <span class="token keyword">Sub</span>
-</code></pre>
+<span class="token keyword">End</span> <span class="token keyword">Sub</span></code></pre>
 <p>Si plusieurs arguments doivent être entrés, on les sépare par une virgule.</p>
 <p>Si l’on ajoute <code>Optional</code> devant un argument, il n’est pas obligatoire à l’exécution de la procédure. Dans ce cas, la procédure doit comprendre différents cas selon les arguments entrés. On peut tester qu’un argument a été renseigné avec la fonction <code>IsMissing</code> (attention elle ne fonctionne pas avec tous les types de variables), ou bien on peut renseigner des valeurs par défaut aux arguments optionnels et tester ensuite ces valeurs. Pour utiliser cette dernière option, on écrirait par exemple en argument <code>Optional numéro As Integer = 0</code>. Ainsi, un numéro non renseigné vaudrait 0.</p>
 <p>Par défaut en VBA, lorsque l’on appelle un Sub qui contient des arguments, ce sont les références de ces arguments qui sont transmises. Cela signifie que si l’on modifie une variable dans la procédure initiale, elle changera aussi dans la procédure d’appel. Pour faire l’inverse et donc transmettre uniquement la valeur de la variable au moment de l’appel, sans possibilité de la modifier, on ajoute ByVal devant l’argument.</p>
@@ -388,22 +378,20 @@ Avec les mises en forme conditionnelles existantes dans Excel, on peut modifier 
 <li><strong>Fonctions :</strong></li>
 </ul>
 <p>Une fonction est un Sub qui retourne une valeur en sortie. Par exemple :</p>
-<pre class="language-vba " style="counter-reset: linenumber 0"><code class="language-vba"><span class="token keyword">Function</span> carre<span class="token punctuation">(</span>nombre <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">)</span>
+<pre class="language-vba"><code class="language-vba"><span class="token keyword">Function</span> carre<span class="token punctuation">(</span>nombre <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">)</span>
     carre <span class="token operator">=</span> nombre <span class="token operator">^</span><span class="token number">2</span>
-<span class="token keyword">End</span> <span class="token keyword">Function</span>
-</code></pre>
+<span class="token keyword">End</span> <span class="token keyword">Function</span></code></pre>
 <p>On peut ensuite l’utiliser dans un Sub en l’appelant à l’aide de l’instruction <code>resultat = carre(7)</code>. resultat vaut alors 49.</p>
 <ul>
 <li><strong>Boîtes de dialogue :</strong></li>
 </ul>
 <p>La première utilisation possible des boîtes de dialogue est le simple affichage d’un message grâce à la requête <code>MsgBox &quot;texte à afficher&quot;</code>, comme mentionné dans la section sur les variables.</p>
 <p>Ensuite, il est possible d’afficher une boîte de dialogue qui requiert une interaction. La structure globale est <code>MsgBox([texte], [bouton], [titre])</code>. Par exemple, on peut écrire :</p>
-<pre class="language-vba " style="counter-reset: linenumber 0"><code class="language-vba"><span class="token keyword">Sub</span> boîte_dialogue_interactive<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<pre class="language-vba"><code class="language-vba"><span class="token keyword">Sub</span> boîte_dialogue_interactive<span class="token punctuation">(</span><span class="token punctuation">)</span>
     <span class="token keyword">If</span> MsgBox<span class="token punctuation">(</span><span class="token string">"Voulez-vous vraiment supprimer le contenu de A1 ?"</span><span class="token punctuation">,</span> vbYesNo<span class="token punctuation">,</span> <span class="token string">"Confirmation"</span><span class="token punctuation">)</span> <span class="token operator">=</span> vbYes <span class="token keyword">Then</span>
         Range<span class="token punctuation">(</span><span class="token string">"A1"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>ClearContents
     <span class="token keyword">End</span> <span class="token keyword">If</span>
-<span class="token keyword">End</span> <span class="token keyword">Sub</span>
-</code></pre>
+<span class="token keyword">End</span> <span class="token keyword">Sub</span></code></pre>
 <p>On obtient alors à l’exécution :</p>
 <img src="boite dialogue.png">
 <p>Puis l’action s’effectue ou non selon la réponse à la boîte de dialogue. Il existe de nombreux boutons qui permettent des interactions différentes telles que Ok, Annuler, Recommencer…, qui ajoutent une icône ou encore qui forcent à répondre avant de continuer. Il est possible de mettre plusieurs valeurs dans le deuxième argument de la MsgBox, séparés par des <code>+</code>.</p>

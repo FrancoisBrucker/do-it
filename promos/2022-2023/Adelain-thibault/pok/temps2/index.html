@@ -143,7 +143,7 @@
 </li>
 </ul>
 <p><strong>Google Oauth</strong> : j'ai utilisé ce <a href="https://www.youtube.com/watch?v=SBvmnHTQIPY&amp;t=3223s&amp;ab_channel=TraversyMedia">tuto</a> (<a href="https://github.com/bradtraversy/storybooks">repo Github</a>). J'ai également utilisé la doc de <a href="https://www.passportjs.org/packages/passport-google-oauth20/">passport-google-oauth20</a>, qui est assez basique ; j'ai trouvé le tuto plus clair. J'ai également adatpé le tuto pour que le serveur renvoie des cookies après l'authentification google :</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token comment">// @desc Google auth callback</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token comment">// @desc Google auth callback</span>
 <span class="token comment">// @route GET auth/google/callback</span>
 router<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/google/callback'</span><span class="token punctuation">,</span> passport<span class="token punctuation">.</span><span class="token function">authenticate</span><span class="token punctuation">(</span><span class="token string">'google'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
     <span class="token literal-property property">failureRedirect</span><span class="token operator">:</span> <span class="token string">'/user/Register'</span><span class="token punctuation">,</span>
@@ -160,8 +160,7 @@ router<span class="token punctuation">.</span><span class="token function">get</
     <span class="token punctuation">}</span><span class="token punctuation">)</span>
     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'User successfully login'</span><span class="token punctuation">)</span>
     res<span class="token punctuation">.</span><span class="token function">redirect</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
 <h4>ToDo : 2ème Sprint</h4>
 <ul>
 <li>Déploiement sur serveur distant : <a href="http://node.stevia.ovh1.ec-m.fr/">http://node.stevia.ovh1.ec-m.fr/</a>
@@ -179,11 +178,9 @@ router<span class="token punctuation">.</span><span class="token function">get</
 <h5>Ngrok</h5>
 <p><a href="https://ngrok.com/">Ngrok</a> est un outil qui permet de créer des tunnels sécurisés entre des ordinateurs distants. Il sert d'intermédiaire entre l'utilisateur et serveur ovh : utilisateur &lt;-&gt; ngrok &lt;-&gt; ovh. Les connexions utilisent le protocole sécurisé TLS, donc le navigateur peut se connecter en https et transmettre la localisation de l'utilisateur au serveur. J'ai utilisé cette solution car il n'était pas possible à l'instant t d'avoir un certificat sur le serveur ovh.</p>
 <p>Ngrok écoute sur un port de localhost et crée un tunnel entre l'utilisateur et le serveur. Sur votre serveur, Après avoir lancé une app sur le port 8080 par exemple, rentrez en ligne de commande :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">ngrok http <span class="token number">8080</span>
-</code></pre>
+<pre class="language-bash"><code class="language-bash">ngrok http <span class="token number">8080</span></code></pre>
 <p>Si vous utilisez une application React comme moi, il faudra peut-être plutôt écrire :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">ngrok http <span class="token number">8080</span> --host-header<span class="token operator">=</span><span class="token string">"localhost:8080"</span>
-</code></pre>
+<pre class="language-bash"><code class="language-bash">ngrok http <span class="token number">8080</span> --host-header<span class="token operator">=</span><span class="token string">"localhost:8080"</span></code></pre>
 <p>(Cf ce <a href="https://stackoverflow.com/questions/45425721/invalid-host-header-when-ngrok-tries-to-connect-to-react-dev-server">post</a>)</p>
 <p>Si vous voulez en savoir plus sur ngrok: <a href="https://grafikart.fr/tutoriels/ngrok-637">https://grafikart.fr/tutoriels/ngrok-637</a></p>
 <p>Pour que votre appli reste en ligne même après la fermeture du terminal, vous pouvez utiliser tmux. Voici une CheatSheet des lignes de commande <a href="https://tmuxcheatsheet.com/">tmux</a>.</p>

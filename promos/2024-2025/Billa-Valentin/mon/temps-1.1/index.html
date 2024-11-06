@@ -169,8 +169,7 @@ ces requêtes. Une des méthodes essentielles pour obtenir y arriver est l'utili
 détaillées sur le plan d'exécution d'une requête, ce qui peut aider à identifier les parties de la requête qui
 pourraient être optimisées pour améliorer les performances.</p>
 <p>Pour utiliser <code>EXPLAIN</code>, il suffit de la précéder à une requête SQL :</p>
-<pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">EXPLAIN</span> <span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> users <span class="token keyword">WHERE</span> age <span class="token operator">></span> <span class="token number">25</span><span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-sql"><code class="language-sql"><span class="token keyword">EXPLAIN</span> <span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> users <span class="token keyword">WHERE</span> age <span class="token operator">></span> <span class="token number">25</span><span class="token punctuation">;</span></code></pre>
 <p>Le résultat de <code>EXPLAIN</code> comprend plusieurs colonnes importantes, notamment :</p>
 <ul>
 <li><strong>id</strong> : l'identifiant unique de l'étape de requête.</li>
@@ -191,13 +190,12 @@ Avec le temps, on comprend de mieux en mieux les particularités à prendre en c
 <strong>select_type</strong> et en l'occurrence ceux qui sont symptomatiques d'une query qui va être lente.</p>
 </div></div>
 <p>Par exemple, pour la requête précédente, le résultat de <code>EXPLAIN</code> pourrait ressembler à ceci :</p>
-<pre class="language-text " style="counter-reset: linenumber 0"><code class="language-text">> EXPLAIN EXPLAIN SELECT * FROM users WHERE age > 25;
+<pre class="language-text"><code class="language-text">> EXPLAIN EXPLAIN SELECT * FROM users WHERE age > 25;
 +----+-------------+-------+---------------+---------+---------+------+---------+-------------+
 | id | select_type | table | possible_keys | key     | key_len | ref  | rows    | Extra       |
 +----+-------------+-------+---------------+---------+---------+------+---------+-------------+
 |  1 | SIMPLE      | users | NULL          | NULL    | NULL    | NULL | 1000000 | Using where |
-+----+-------------+-------+---------------+---------+---------+------+---------+-------------+
-</code></pre>
++----+-------------+-------+---------------+---------+---------+------+---------+-------------+</code></pre>
 <p>Dans cet exemple, on voit que la table <code>users</code> est analysée sans utiliser d'index (NULL), et que la requête estime
 devoir parcourir un million de lignes pour trouver les résultats. Cette estimation n'est pas anodyne, le SGBD fait
 des statistiques au fur et à mesure des requêtes faites en bases de données et s'en sert pour mieux adapter le plan
@@ -205,7 +203,7 @@ d'exécution, il est important que ces estimations ne soient pas trop loin du co
 <p>Une autre utilité d'<code>EXPLAIN</code> est de déterminer si deux requêtes SQL sont strictement équivalentes lors de leur exécution.
 Ça peut être utile quand on essaie de réécrire une requête pour qu'elle soit plus lisible.</p>
 <p>Par exemple</p>
-<pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token comment">-- requête 1 (on parlera du mot clés WITH en dessous)</span>
+<pre class="language-sql"><code class="language-sql"><span class="token comment">-- requête 1 (on parlera du mot clés WITH en dessous)</span>
 <span class="token keyword">EXPLAIN</span> <span class="token keyword">WITH</span> filtered_users <span class="token keyword">AS</span> <span class="token punctuation">(</span>
     <span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> users <span class="token keyword">WHERE</span> age <span class="token operator">></span> <span class="token number">25</span>
 <span class="token punctuation">)</span>
@@ -216,16 +214,14 @@ d'exécution, il est important que ces estimations ne soient pas trop loin du co
 <span class="token comment">-- requête 2</span>
 <span class="token keyword">EXPLAIN</span> <span class="token keyword">SELECT</span> u<span class="token punctuation">.</span><span class="token operator">*</span><span class="token punctuation">,</span> o<span class="token punctuation">.</span><span class="token operator">*</span>
 <span class="token keyword">FROM</span> users u<span class="token punctuation">,</span> orders o
-<span class="token keyword">WHERE</span> u<span class="token punctuation">.</span>age <span class="token operator">></span> <span class="token number">25</span> <span class="token operator">AND</span> u<span class="token punctuation">.</span>user_id <span class="token operator">=</span> o<span class="token punctuation">.</span>user_id<span class="token punctuation">;</span>
-</code></pre>
+<span class="token keyword">WHERE</span> u<span class="token punctuation">.</span>age <span class="token operator">></span> <span class="token number">25</span> <span class="token operator">AND</span> u<span class="token punctuation">.</span>user_id <span class="token operator">=</span> o<span class="token punctuation">.</span>user_id<span class="token punctuation">;</span></code></pre>
 <p>Les plans d'exécution pour ces deux requêtes sont identiques, car elles accomplissent essentiellement la même tâche.</p>
-<pre class="language-text " style="counter-reset: linenumber 0"><code class="language-text">+----+-------------+-------+---------------+---------+---------+------+---------+--------------------------------+
+<pre class="language-text"><code class="language-text">+----+-------------+-------+---------------+---------+---------+------+---------+--------------------------------+
 | id | select_type | table | possible_keys | key     | key_len | ref  | rows    | Extra                          |
 +----+-------------+-------+---------------+---------+---------+------+---------+--------------------------------+
 |  1 | SIMPLE      | users | NULL          | NULL    | NULL    | NULL | 1000000 | Using where; Using join buffer |
 |  1 | SIMPLE      | orders| NULL          | NULL    | NULL    | NULL | 1000000 |                                |
-+----+-------------+-------+---------------+---------+---------+------+---------+--------------------------------+
-</code></pre>
++----+-------------+-------+---------------+---------+---------+------+---------+--------------------------------+</code></pre>
 <div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -239,15 +235,13 @@ comme il le souhaite la seule garantie est qu'il renverra les résultats qu'on l
 <p>La commande <code>ANALYZE</code> est utilisée pour analyser et stocker les informations clé pour une table.
 Elle permet d'explicitement demander au SGBD de collecter des statistiques sur la distribution des données dans une table.
 Comme on l'a vu dans la partie <code>EXPLAIN</code> elle peut être très utile pour corriger des erreurs d'estimations.</p>
-<pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">ANALYZE</span> <span class="token keyword">TABLE</span> users<span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-sql"><code class="language-sql"><span class="token keyword">ANALYZE</span> <span class="token keyword">TABLE</span> users<span class="token punctuation">;</span></code></pre>
 <h3>La commande <code>OPTIMIZE</code></h3>
 <p>La commande <code>OPTIMIZE</code> est utilisée pour optimiser les tables dans des bases de données comme MySQL. Elle est utile pour
 récupérer l'espace inutilisé et pour améliorer les performances des requêtes. Après de nombreuses opérations
 d'insertion, de mise à jour et de suppression, les tables peuvent devenir fragmentées. Utiliser la commande <code>OPTIMIZE</code>
 aide à défragmenter les tables et à réorganiser les données sur le disque pour une performance optimale.</p>
-<pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">OPTIMIZE</span> <span class="token keyword">TABLE</span> users<span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-sql"><code class="language-sql"><span class="token keyword">OPTIMIZE</span> <span class="token keyword">TABLE</span> users<span class="token punctuation">;</span></code></pre>
 <p>Lorsque la commande est exécutée, le SGBD effectue les étapes suivantes:</p>
 <ul>
 <li>Défragmente la table et libère l'espace inutilisé.</li>
@@ -280,18 +274,16 @@ peut ajouter un surcoût en termes de temps de traitement.</p>
 <p>Une bonne pratique est de prioriser l'indexage des colones que l'on utilise beaucoup pour faire des tris ou filtres.</p>
 </div></div>
 <p>Voici un exemple de création d'index pour la colonne <code>age</code> de la table <code>users</code> :</p>
-<pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">CREATE</span> <span class="token keyword">INDEX</span> idx_users_age <span class="token keyword">ON</span> users <span class="token punctuation">(</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-sql"><code class="language-sql"><span class="token keyword">CREATE</span> <span class="token keyword">INDEX</span> idx_users_age <span class="token keyword">ON</span> users <span class="token punctuation">(</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>Ce code crée un index sur la colonne <code>age</code> de la table <code>users</code>, ce qui peut améliorer la performance des requêtes qui
 filtrent ou trient par la colonne <code>age</code>.</p>
 <p>L'impact de cet index peut être observé dans le tableau <code>EXPLAIN</code> précédent :</p>
-<pre class="language-text " style="counter-reset: linenumber 0"><code class="language-text">> EXPLAIN EXPLAIN SELECT * FROM users WHERE age > 25;
+<pre class="language-text"><code class="language-text">> EXPLAIN EXPLAIN SELECT * FROM users WHERE age > 25;
 +----+-------------+-------+---------------+---------------+---------+------+---------+--------------------------+
 | id | select_type | table | possible_keys | key           | key_len | ref  | rows    | Extra                    |
 +----+-------------+-------+---------------+---------------+---------+------+---------+--------------------------+
 |  1 | SIMPLE      | users | idx_users_age | idx_users_age | 5       | NULL | 1000000 | Using where; Using index |
-+----+-------------+-------+---------------+---------------+---------+------+---------+--------------------------+
-</code></pre>
++----+-------------+-------+---------------+---------------+---------+------+---------+--------------------------+</code></pre>
 <p>Avec l'index <code>idx_users_age</code>, le SGBD (Système de Gestion de Base de Données) peut utiliser cet index pour optimiser
 l'accès aux lignes de la table <code>users</code> en fonction de la colonne <code>age</code>, réduisant ainsi le temps de traitement des
 requêtes.</p>
@@ -301,12 +293,11 @@ opérations géospatiales impliquant des centaines de millions de points. J'ai u
 PostGIS pour optimiser les requêtes géospatiales, telles que les recherches de proximité et les calculs d'intersection,
 qui seraient autrement très coûteux en termes de temps de traitement (surtout avec des dizaines de millions de coordonnées).</p>
 <p>Voici un exemple d'utilisation d'un index spatial pour optimiser une requête :</p>
-<pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">CREATE</span> <span class="token keyword">INDEX</span> idx_spatial_users_location <span class="token keyword">ON</span> users <span class="token keyword">USING</span> GIST <span class="token punctuation">(</span>location<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-sql"><code class="language-sql"><span class="token keyword">CREATE</span> <span class="token keyword">INDEX</span> idx_spatial_users_location <span class="token keyword">ON</span> users <span class="token keyword">USING</span> GIST <span class="token punctuation">(</span>location<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token keyword">EXPLAIN</span> <span class="token keyword">ANALYZE</span>
 <span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> users
-<span class="token keyword">WHERE</span> ST_DWithin<span class="token punctuation">(</span>location<span class="token punctuation">,</span> ST_MakePoint<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">73.9866</span><span class="token punctuation">,</span> <span class="token number">40.7306</span><span class="token punctuation">)</span>::geography<span class="token punctuation">,</span> <span class="token number">5000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<span class="token keyword">WHERE</span> ST_DWithin<span class="token punctuation">(</span>location<span class="token punctuation">,</span> ST_MakePoint<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">73.9866</span><span class="token punctuation">,</span> <span class="token number">40.7306</span><span class="token punctuation">)</span>::geography<span class="token punctuation">,</span> <span class="token number">5000</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>Créer un index spatial sur la colonne <code>location</code> permet au SGBD de traiter beaucoup plus rapidement les requêtes
 impliquant des opérations géospatiales complexes.</p>
 <div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
@@ -321,15 +312,13 @@ Ce sont des mots clés, options, possibilités utiles individuellement.</p>
 <p>Les <strong>vues</strong> (mot clé <code>VIEW</code>) sont des objets de la base de données qui permettent de sauvegarder des requêtes
 sous la forme d'une table virtuelle. Elles permettent de simplifier l'écriture de requête, souvent  en encapsulant
 des jointures complexes. Voici un exemple de création de vue :</p>
-<pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">CREATE</span> <span class="token keyword">VIEW</span> users_over_25 <span class="token keyword">AS</span>
+<pre class="language-sql"><code class="language-sql"><span class="token keyword">CREATE</span> <span class="token keyword">VIEW</span> users_over_25 <span class="token keyword">AS</span>
 <span class="token keyword">SELECT</span> <span class="token operator">*</span>
 <span class="token keyword">FROM</span> users
-<span class="token keyword">WHERE</span> age <span class="token operator">></span> <span class="token number">25</span><span class="token punctuation">;</span>
-</code></pre>
+<span class="token keyword">WHERE</span> age <span class="token operator">></span> <span class="token number">25</span><span class="token punctuation">;</span></code></pre>
 <p>Cette vue <code>users_over_25</code> peut ensuite être utilisée comme une table normale :</p>
-<pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span>
-<span class="token keyword">FROM</span> users_over_25<span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> users_over_25<span class="token punctuation">;</span></code></pre>
 <p>Les vues peuvent également être mises à jour si elles satisfont certaines conditions, notamment si elles référencent une
 seule table.</p>
 <div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
@@ -345,19 +334,18 @@ gagner en lisibilité sans gain de performance.</p>
 <p>Le mot clé <code>WITH</code> est utilisé pour introduire une clause <code>Common Table Expressions</code> (CTE) qui permet de définir des
 tables temporaires dont la portée est limitée à la requête dans laquelle elles sont définies. Cela peut entraîner une
 meilleure lisibilité et réutilisation des requêtes complexes. Voici un exemple de CTE :</p>
-<pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">WITH</span> UsersOver25 <span class="token keyword">AS</span> <span class="token punctuation">(</span>
+<pre class="language-sql"><code class="language-sql"><span class="token keyword">WITH</span> UsersOver25 <span class="token keyword">AS</span> <span class="token punctuation">(</span>
     <span class="token keyword">SELECT</span> <span class="token operator">*</span>
     <span class="token keyword">FROM</span> users
     <span class="token keyword">WHERE</span> age <span class="token operator">></span> <span class="token number">25</span>
 <span class="token punctuation">)</span>
 <span class="token keyword">SELECT</span> <span class="token operator">*</span>
 <span class="token keyword">FROM</span> UsersOver25
-<span class="token keyword">WHERE</span> name <span class="token operator">LIKE</span> <span class="token string">'A%'</span><span class="token punctuation">;</span>
-</code></pre>
+<span class="token keyword">WHERE</span> name <span class="token operator">LIKE</span> <span class="token string">'A%'</span><span class="token punctuation">;</span></code></pre>
 <p>Dans cet exemple, la CTE <code>UsersOver25</code> est définie et utilisée dans la même requête pour filtrer les utilisateurs dont
 le nom commence par 'A'.</p>
 <p>Les CTE peuvent également être récursives. Voici un exemple de CTE récursive :</p>
-<pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">WITH</span> RECURSIVE EmployeeHierarchy <span class="token keyword">AS</span> <span class="token punctuation">(</span>
+<pre class="language-sql"><code class="language-sql"><span class="token keyword">WITH</span> RECURSIVE EmployeeHierarchy <span class="token keyword">AS</span> <span class="token punctuation">(</span>
     <span class="token keyword">SELECT</span> employee_id<span class="token punctuation">,</span> manager_id<span class="token punctuation">,</span> name
     <span class="token keyword">FROM</span> employees
     <span class="token keyword">WHERE</span> manager_id <span class="token operator">IS</span> <span class="token boolean">NULL</span>
@@ -367,8 +355,7 @@ le nom commence par 'A'.</p>
     <span class="token keyword">INNER</span> <span class="token keyword">JOIN</span> EmployeeHierarchy eh <span class="token keyword">ON</span> e<span class="token punctuation">.</span>manager_id <span class="token operator">=</span> eh<span class="token punctuation">.</span>employee_id
 <span class="token punctuation">)</span>
 <span class="token keyword">SELECT</span> <span class="token operator">*</span>
-<span class="token keyword">FROM</span> EmployeeHierarchy<span class="token punctuation">;</span>
-</code></pre>
+<span class="token keyword">FROM</span> EmployeeHierarchy<span class="token punctuation">;</span></code></pre>
 <p>Ce code permet de créer une hiérarchie de l'organisation des employés où chaque employé est relié à son manager.</p>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -388,18 +375,16 @@ nous allons devoir faire une disjonction de cas en fonction du SGBD.</p>
 directement dans le programme appellant en créant des scripts.</p>
 <h3>MySQL</h3>
 <p>La syntaxe pour créer une procédure stockée en MySQL est la suivante :</p>
-<pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">DELIMITER</span> $$
+<pre class="language-sql"><code class="language-sql"><span class="token keyword">DELIMITER</span> $$
 
 <span class="token keyword">CREATE</span> <span class="token keyword">PROCEDURE</span> AjouterUtilisateur<span class="token punctuation">(</span><span class="token operator">IN</span> nom <span class="token keyword">VARCHAR</span><span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">IN</span> age <span class="token keyword">INT</span><span class="token punctuation">)</span>
 <span class="token keyword">BEGIN</span>
     <span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> users <span class="token punctuation">(</span>name<span class="token punctuation">,</span> age<span class="token punctuation">)</span> <span class="token keyword">VALUES</span> <span class="token punctuation">(</span>nom<span class="token punctuation">,</span> age<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">END</span>$$
 
-<span class="token keyword">DELIMITER</span> <span class="token punctuation">;</span>
-</code></pre>
+<span class="token keyword">DELIMITER</span> <span class="token punctuation">;</span></code></pre>
 <p>Vous pouvez appeler cette procédure comme suit :</p>
-<pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">CALL</span> AjouterUtilisateur<span class="token punctuation">(</span><span class="token string">'John Doe'</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-sql"><code class="language-sql"><span class="token keyword">CALL</span> AjouterUtilisateur<span class="token punctuation">(</span><span class="token string">'John Doe'</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>Les procédures stockées peuvent accepter des paramètres d'entrée (<code>IN</code>), de sortie (<code>OUT</code>), ou des
 paramètres d'entrée/sortie (<code>INOUT</code>).</p>
 <h3>PostgreSQL</h3>
@@ -407,25 +392,22 @@ paramètres d'entrée/sortie (<code>INOUT</code>).</p>
 <ol>
 <li><code>CREATE FUNCTION</code></li>
 </ol>
-<pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">CREATE</span> <span class="token keyword">FUNCTION</span> AjouterUtilisateur<span class="token punctuation">(</span>nom <span class="token keyword">VARCHAR</span><span class="token punctuation">,</span> age <span class="token keyword">INTEGER</span><span class="token punctuation">)</span>
+<pre class="language-sql"><code class="language-sql"><span class="token keyword">CREATE</span> <span class="token keyword">FUNCTION</span> AjouterUtilisateur<span class="token punctuation">(</span>nom <span class="token keyword">VARCHAR</span><span class="token punctuation">,</span> age <span class="token keyword">INTEGER</span><span class="token punctuation">)</span>
 <span class="token keyword">RETURNS</span> VOID <span class="token keyword">AS</span> $$
 <span class="token keyword">BEGIN</span>
     <span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> users <span class="token punctuation">(</span>name<span class="token punctuation">,</span> age<span class="token punctuation">)</span> <span class="token keyword">VALUES</span> <span class="token punctuation">(</span>nom<span class="token punctuation">,</span> age<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">END</span><span class="token punctuation">;</span>
-$$ <span class="token keyword">LANGUAGE</span> plpgsql<span class="token punctuation">;</span>
-</code></pre>
+$$ <span class="token keyword">LANGUAGE</span> plpgsql<span class="token punctuation">;</span></code></pre>
 <ol start="2">
 <li><code>CREATE PROCEDURE</code> <em>introduite à partir de la version 11</em></li>
 </ol>
-<pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">CREATE</span> <span class="token keyword">PROCEDURE</span> AjouterUtilisateur<span class="token punctuation">(</span>nom <span class="token keyword">VARCHAR</span><span class="token punctuation">,</span> age <span class="token keyword">INTEGER</span><span class="token punctuation">)</span>
+<pre class="language-sql"><code class="language-sql"><span class="token keyword">CREATE</span> <span class="token keyword">PROCEDURE</span> AjouterUtilisateur<span class="token punctuation">(</span>nom <span class="token keyword">VARCHAR</span><span class="token punctuation">,</span> age <span class="token keyword">INTEGER</span><span class="token punctuation">)</span>
 <span class="token keyword">LANGUAGE</span> <span class="token keyword">SQL</span>
 <span class="token keyword">AS</span> $$
 <span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> users <span class="token punctuation">(</span>name<span class="token punctuation">,</span> age<span class="token punctuation">)</span> <span class="token keyword">VALUES</span> <span class="token punctuation">(</span>nom<span class="token punctuation">,</span> age<span class="token punctuation">)</span><span class="token punctuation">;</span>
-$$<span class="token punctuation">;</span>
-</code></pre>
+$$<span class="token punctuation">;</span></code></pre>
 <p>Pour appeler cette fonction, on utilise :</p>
-<pre class="language-sql " style="counter-reset: linenumber 0"><code class="language-sql"><span class="token keyword">SELECT</span> AjouterUtilisateur<span class="token punctuation">(</span><span class="token string">'Jane Doe'</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> AjouterUtilisateur<span class="token punctuation">(</span><span class="token string">'Jane Doe'</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>Les fonctions peuvent retourner différentes valeurs types (par exemple, <code>VOID</code>, <code>TABLE</code>, etc.)
 et prennent en charge un large éventail de langages de programmation via des langages procéduraux comme <code>plpgsql</code>.</p>
 <h2>Bibliographie</h2>

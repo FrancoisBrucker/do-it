@@ -223,19 +223,17 @@
 <li>La méthode <strong>close</strong> nous permet de fermer le fichier.</li>
 <li>Nous affichons les 50 premiers éléments de <code>contenu</code> (afin de vérifier que l’opération a bien fonctionné).</li>
 </ul>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment">#Ouvrir, lire et fermer un fichier</span>
+<pre class="language-python"><code class="language-python"><span class="token comment">#Ouvrir, lire et fermer un fichier</span>
 fichier <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"./data/ma-base-de-donnees.csv"</span><span class="token punctuation">,</span><span class="token string">"r"</span><span class="token punctuation">)</span>
 contenu <span class="token operator">=</span> fichier<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
 fichier<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>contenu<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">50</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-</code></pre>
+<span class="token keyword">print</span><span class="token punctuation">(</span>contenu<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">50</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
 <p>Pour un code plus compact, il est aussi possible d’utiliser le bloc <strong>with</strong> pour obtenir le même résultat et automatiser la fermeture du fichier :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment">#Ouverture, lecture et fermeture avec le block with</span>
+<pre class="language-python"><code class="language-python"><span class="token comment">#Ouverture, lecture et fermeture avec le block with</span>
 <span class="token comment">##Permet la fermeture automatique du fichier en sortant de with</span>
 <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"./data/ma-base-de-donnees.csv"</span><span class="token punctuation">,</span><span class="token string">"r"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> fichier <span class="token punctuation">:</span>
     contenu <span class="token operator">=</span> fichier<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>contenu<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">50</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-</code></pre>
+<span class="token keyword">print</span><span class="token punctuation">(</span>contenu<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">50</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
@@ -243,11 +241,10 @@ fichier<span class="token punctuation">.</span>close<span class="token punctuati
 <div class="pl-8 mr-8">
 <p>La fonction <strong>readlines( )</strong> est aussi intéressante, car elle permet de lire en séparant les lignes. En théorie, les lignes sont séparées par le caractère spécial <strong>\n</strong>. Si l’on utilise simplement la fonction <strong>read</strong>, on risque de voir apparaître plein de ‘\n’ dans notre texte.</p>
 <p>Ainsi, si l’on veut par exemple afficher les cinq premières lignes de ma base de données :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment">#Afficher les 5 premieres lignes d'un fichier</span>
+<pre class="language-python"><code class="language-python"><span class="token comment">#Afficher les 5 premieres lignes d'un fichier</span>
 <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"./data/ma-base-de-donnees.csv"</span><span class="token punctuation">,</span><span class="token string">"r"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> fichier <span class="token punctuation">:</span>
     lignes <span class="token operator">=</span> fichier<span class="token punctuation">.</span>readlines<span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>lignes<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-</code></pre>
+<span class="token keyword">print</span><span class="token punctuation">(</span>lignes<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
 </div></div>
 <h5>Écrire dans un fichier texte</h5>
 <p>Afin d’écrire dans un fichier texte, il suffit de préciser dans la fonction <strong>open</strong>, le mode d’écriture <strong>“w”</strong> ou <strong>“a”</strong>.</p>
@@ -257,10 +254,9 @@ fichier<span class="token punctuation">.</span>close<span class="token punctuati
 </ul>
 <p>De plus, la fonction <strong>write( )</strong> permet d’écrire dans notre fichier.</p>
 <p>Ainsi, si l’on veut sauvegarder un fichier texte dans lequel on veut écrire le nombre d’élèves présents en Do-It, par exemple :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment">#Faire la sauvegarde d'un résultat</span>
+<pre class="language-python"><code class="language-python"><span class="token comment">#Faire la sauvegarde d'un résultat</span>
 <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"./eleves.txt"</span><span class="token punctuation">,</span><span class="token string">"w"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> fichier <span class="token punctuation">:</span>
-    fichier<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">"Élèves en Do-It : 25\n"</span><span class="token punctuation">)</span>
-</code></pre>
+    fichier<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">"Élèves en Do-It : 25\n"</span><span class="token punctuation">)</span></code></pre>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
@@ -270,18 +266,16 @@ fichier<span class="token punctuation">.</span>close<span class="token punctuati
 </div></div>
 <h4>Bibliothèques utiles pour écrire dans un fichier</h4>
 <p>La bibliothèque <strong>os</strong> contient la majorité des outils permettant de manipuler des fichiers et des dossiers. On peut par exemple créer un nouveau répertoire avec la fonction <strong>mkdir( )</strong> :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment">#Créer un nouveau répertoire dans lequel on crée un fichier texte</span>
+<pre class="language-python"><code class="language-python"><span class="token comment">#Créer un nouveau répertoire dans lequel on crée un fichier texte</span>
 <span class="token keyword">import</span> os 
 os<span class="token punctuation">.</span>mkdir<span class="token punctuation">(</span><span class="token string">"Eleves"</span><span class="token punctuation">)</span>
 <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"Eleves/effectif.txt"</span><span class="token punctuation">,</span><span class="token string">"w"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> fichier <span class="token punctuation">:</span>
-    fichier<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">"L’effectif d’élèves en Do-It est : 25"</span><span class="token punctuation">)</span>
-</code></pre>
+    fichier<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">"L’effectif d’élèves en Do-It est : 25"</span><span class="token punctuation">)</span></code></pre>
 <p>La fonction <strong>glob( )</strong> de la bibliothèque <strong>Glob</strong> permet de trouver tous les fichiers d’un dossier qui contiennent un motif donné, par exemple :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment">#Rechercher tous les fichiers excel d'un dossier</span>
+<pre class="language-python"><code class="language-python"><span class="token comment">#Rechercher tous les fichiers excel d'un dossier</span>
 <span class="token keyword">import</span> glob
 fichiers_excel <span class="token operator">=</span> glob<span class="token punctuation">.</span>glob<span class="token punctuation">(</span><span class="token string">'*.xls'</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>fichiers_excel<span class="token punctuation">)</span>
-</code></pre>
+<span class="token keyword">print</span><span class="token punctuation">(</span>fichiers_excel<span class="token punctuation">)</span></code></pre>
 <p>Ici <strong>”*”</strong> signifie “tous”.</p>
 <p>Par ailleurs, pour des fichiers non texte, il faut utiliser des bibliothèques spécifiques pour garder une mise en forme adaptée au format (ex : Excel, image).</p>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
@@ -314,12 +308,11 @@ fichiers_excel <span class="token operator">=</span> glob<span class="token punc
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">import</span> requests <span class="token keyword">as</span> req
+<pre class="language-python"><code class="language-python"><span class="token keyword">import</span> requests <span class="token keyword">as</span> req
 url <span class="token operator">=</span><span class="token string">"https://www.lequipe.fr"</span>
 info <span class="token operator">=</span> req<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">)</span>
 <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"./lemonde.txt"</span><span class="token punctuation">,</span><span class="token string">"w"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> fichier <span class="token punctuation">:</span>
-    fichier<span class="token punctuation">.</span>write<span class="token punctuation">(</span>info<span class="token punctuation">.</span>text<span class="token punctuation">)</span>
-</code></pre>
+    fichier<span class="token punctuation">.</span>write<span class="token punctuation">(</span>info<span class="token punctuation">.</span>text<span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>
@@ -338,18 +331,16 @@ info <span class="token operator">=</span> req<span class="token punctuation">.<
 <h4>Les listes emboîtées</h4>
 <p>Maîtriser la notion de liste emboîtée est essentiel si l’on veut traiter des tableaux de données.</p>
 <p>Une <strong>liste emboîtée</strong> (ou liste imbriquée) est une structure de données qui consiste en une liste contenant d'autres listes comme éléments. Cela permet de créer des structures hiérarchiques ou multidimensionnelles, par exemple :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># Une liste emboîtée représentant des coordonnées (x, y)</span>
+<pre class="language-python"><code class="language-python"><span class="token comment"># Une liste emboîtée représentant des coordonnées (x, y)</span>
 coordonnees <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
 
 <span class="token comment"># Accéder à un élément spécifique : le premier élément de la deuxième liste</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>coordonnees<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># Affiche 3</span>
-</code></pre>
+<span class="token keyword">print</span><span class="token punctuation">(</span>coordonnees<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># Affiche 3</span></code></pre>
 <p>Nous allons donc voir ici comment utiliser les listes emboîtées non pas comme un bloc, mais sous la forme d’un tableau qui sépare les informations :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment">#Lire les lignes du fichier</span>
+<pre class="language-python"><code class="language-python"><span class="token comment">#Lire les lignes du fichier</span>
 <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"./data/ma-base-de-donnees.csv"</span><span class="token punctuation">,</span><span class="token string">"r"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f <span class="token punctuation">:</span>
     contenu <span class="token operator">=</span> f<span class="token punctuation">.</span>readlines<span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>contenu<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">40</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-</code></pre>
+<span class="token keyword">print</span><span class="token punctuation">(</span>contenu<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">40</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
 <p>On commence par lire les lignes du fichier, comme vu précédemment.</p>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -359,35 +350,31 @@ coordonnees <span class="token operator">=</span> <span class="token punctuation
 <p>Dans le cas d’un tableau de données classique, la première ligne du fichier va alors contenir les en-têtes des colonnes.</p>
 </div></div>
 <p>Ensuite, nous allons chercher à identifier le nombre de lignes composant notre tableau :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment">#Connaître le nombre de ligne hors entête</span>
+<pre class="language-python"><code class="language-python"><span class="token comment">#Connaître le nombre de ligne hors entête</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"La taillle avant pop est"</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>contenu<span class="token punctuation">)</span><span class="token punctuation">)</span>
 premier_element <span class="token operator">=</span> contenu<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"La taille de la liste est maintennant"</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>contenu<span class="token punctuation">)</span><span class="token punctuation">)</span>
-</code></pre>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"La taille de la liste est maintennant"</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>contenu<span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
 <p>Ce script va alors nous permettre, grâce à la fonction <strong>len</strong>, de mesurer la longueur de notre liste avec l'en-tête. Puis, avec la méthode <strong>pop(0)</strong>, nous allons venir supprimer la première ligne de notre tableau (celle qui contient les en-têtes), tout en stockant cette information dans <code>premier_element</code>, afin d’avoir le nombre de lignes contenant des valeurs.</p>
 <p>Ensuite, notre fichier étant un tableau dans lequel chaque ligne comprend des valeurs séparées par des <strong>”;”</strong>, nous allons séparer ces lignes afin de pouvoir récupérer nos données de manière indépendante.</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment">#Transformer chaque entrée en une liste</span>
+<pre class="language-python"><code class="language-python"><span class="token comment">#Transformer chaque entrée en une liste</span>
 donnees <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
 <span class="token keyword">for</span> ligne <span class="token keyword">in</span> contenu <span class="token punctuation">:</span>
     ligne_decoupe <span class="token operator">=</span> ligne<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">";"</span><span class="token punctuation">)</span>
     donnees<span class="token punctuation">.</span>append<span class="token punctuation">(</span>ligne_decoupe<span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>donnees<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-</code></pre>
+<span class="token keyword">print</span><span class="token punctuation">(</span>donnees<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
 <p>Ici, nous avons donc séparé chaque élément grâce à la méthode <strong>split(“;”)</strong> qui permet de couper entre chaque point-virgule. Ensuite, nous choisissons d’afficher les 5 premiers éléments du premier élément de cette liste.</p>
 <p>La liste que l’on a créée permet maintenant d’accéder à nos données comme dans un tableau à deux entrées. Ainsi, si l’on veut par exemple afficher le troisième élément de la septième ligne :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment">#Afficher le 3eme élement de la 7eme ligne</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>donnees<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-</code></pre>
+<pre class="language-python"><code class="language-python"><span class="token comment">#Afficher le 3eme élement de la 7eme ligne</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>donnees<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
 <p>La septième ligne est à l’indice 6, et le troisième élément de notre tableau est dans la colonne 3, donc à l’indice 2.</p>
 <h3>Manipuler du texte</h3>
 <h4>Notion d’encodage</h4>
 <p>Nous n’allons pas beaucoup rentrer dans les détails de l’encodage ici, mais l’idée à retenir est que si, à l’ouverture de votre fichier, l’affichage comporte des caractères spéciaux un peu partout, c’est que votre fichier ne s’est pas ouvert avec le bon encodage.</p>
 <p>Ainsi, si vous connaissez l’encodage qui a été choisi, vous pouvez ouvrir un fichier en le spécifiant (comme nous allons le voir ci-dessous). Dans le cas où, malheureusement, vous n’avez pas cette information, le mieux est de procéder par essais-erreurs avec les encodages les plus usuels.</p>
 <p>Imaginons que l’on veuille ouvrir notre base de données et que le texte de celle-ci soit encodé en <strong>“latin1”</strong> (un des plus classiques) :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment">#Encodage</span>
+<pre class="language-python"><code class="language-python"><span class="token comment">#Encodage</span>
 <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"./data/ma-base-de-donnees.csv"</span><span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">,</span>encoding<span class="token operator">=</span><span class="token string">"latin1"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> fichier <span class="token punctuation">:</span>
-    contenu <span class="token operator">=</span> fichier<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
+    contenu <span class="token operator">=</span> fichier<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 <p>Ici, <strong>encoding=&quot;latin1&quot;</strong> permet d’ouvrir le fichier avec le mode d’encodage choisi, le latin1.</p>
 <h4>Mise en forme de texte</h4>
 <p>Pour rappel, un texte est un ensemble de symboles (lettres, chiffres, ponctuations), ainsi pour accéder à une lettre d’un texte, cela revient à accéder à un élément de la liste à l’aide de son index.</p>
@@ -399,32 +386,28 @@ Il existe des méthodes permettant de mettre le texte en majuscule, minuscule, o
 <li><strong>capitalize( )</strong> : permet de mettre une majuscule uniquement à la première lettre</li>
 </ul>
 <p>Par exemple :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">texte <span class="token operator">=</span> <span class="token punctuation">[</span>i<span class="token punctuation">.</span>lower<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> texte<span class="token punctuation">]</span>
-</code></pre>
+<pre class="language-python"><code class="language-python">texte <span class="token operator">=</span> <span class="token punctuation">[</span>i<span class="token punctuation">.</span>lower<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> texte<span class="token punctuation">]</span></code></pre>
 <p>La méthode <strong>replace( )</strong> permet de remplacer un ensemble de lettres par un autre.</p>
 <p>Par exemple, si l’on veut remplacer tous les points-virgules par des espaces :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">texte <span class="token operator">=</span> <span class="token punctuation">[</span>i<span class="token punctuation">.</span>replace<span class="token punctuation">(</span>“<span class="token punctuation">;</span>”<span class="token punctuation">,</span>” “<span class="token punctuation">)</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> texte<span class="token punctuation">]</span>
-</code></pre>
+<pre class="language-python"><code class="language-python">texte <span class="token operator">=</span> <span class="token punctuation">[</span>i<span class="token punctuation">.</span>replace<span class="token punctuation">(</span>“<span class="token punctuation">;</span>”<span class="token punctuation">,</span>” “<span class="token punctuation">)</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> texte<span class="token punctuation">]</span></code></pre>
 <h4>Intégrer des variables au texte</h4>
 <p>On s'intéresse ici à comment intégrer une variable, par exemple un nombre, dans un texte. Une méthode est la méthode de formatage : <strong>format( )</strong>, que nous allons détailler ici, mais il est bon de savoir qu’il en existe d’autres.</p>
 <p>L’intérêt de la méthode de formatage est que l’on peut insérer dans le texte une sorte d’espace vide dans lequel on pourra venir intégrer notre variable sans avoir forcément besoin de la définir au préalable :</p>
 <p>Par exemple :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment">#Intégrer des variables</span>
+<pre class="language-python"><code class="language-python"><span class="token comment">#Intégrer des variables</span>
 nb_eleves_do_it <span class="token operator">=</span> <span class="token number">25</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Il y a {} élèves en Do_It"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>nb_eleves_do_it<span class="token punctuation">)</span><span class="token punctuation">)</span>
-</code></pre>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Il y a {} élèves en Do_It"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>nb_eleves_do_it<span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
 <p>La variable que l’on va ajouter se rajoutera donc à l’endroit où nous avons mis les <strong>{}</strong>, et la valeur de la variable est ajoutée grâce au <strong>.format(variable)</strong>. On retournera donc : <strong>Il y a 25 élèves enDo_It</strong>
 Cette fonction peut notamment être utile pour faire de la restitution de données et donc intégrer vos résultats d’analyse à du texte.</p>
 <h4>Traitement de données réelles</h4>
 <p>Dans cette partie, nous allons apprendre à faire une analyse sur du texte réel. Il faudra donc le formater avant de pouvoir extraire l’information recherchée.</p>
 <p>Ici, nous allons créer un programme permettant de compter le <strong>nombre de mots composés</strong> dans une base de données. Si vous voulez le tester aussi assurez vous que votre base de données en comprenne (par exemple des noms de communes ou des prénoms).</p>
 <p>Nous allons commencer par ouvrir notre base de données contenant du texte,comme précédement :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment">#Ouvrir le fichier en séparant les lignes</span>
+<pre class="language-python"><code class="language-python"><span class="token comment">#Ouvrir le fichier en séparant les lignes</span>
 <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"./data/ma-base-de-donnees.csv"</span><span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token builtin">file</span><span class="token punctuation">:</span>
     contenu <span class="token operator">=</span> <span class="token builtin">file</span><span class="token punctuation">.</span>readlines<span class="token punctuation">(</span><span class="token punctuation">)</span>
 donnees <span class="token operator">=</span> <span class="token punctuation">[</span>ligne<span class="token punctuation">.</span>split <span class="token punctuation">(</span><span class="token string">";"</span><span class="token punctuation">)</span> <span class="token keyword">for</span> ligne <span class="token keyword">in</span> contenu<span class="token punctuation">]</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>donnees<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-</code></pre>
+<span class="token keyword">print</span><span class="token punctuation">(</span>donnees<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
 <p>L’objectif ici est d’ouvrir notre fichier et de le séparer par ligne, puis d’afficher une partie des éléments afin d’identifier les éléments à nettoyer. Dans ce cas, nous devons nettoyer des <strong>”</strong> et des <strong>\n</strong> qui apparaîtront dans nos résultats.</p>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -436,29 +419,26 @@ donnees <span class="token operator">=</span> <span class="token punctuation">[<
 <p>Lorsque l’on veut faire apparaître notre chiffre en entier, il peut donc être utile de nettoyer ce code en le remplaçant, par exemple, par rien.</p>
 </div></div>
 <p>Une fois le fichier ouvert, nous allons créer une fonction de nettoyage afin de remplacer les caractères indésirables identifiés par rien (c’est une façon de les supprimer).</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># Définir une fonction de nettoyage</span>
+<pre class="language-python"><code class="language-python"><span class="token comment"># Définir une fonction de nettoyage</span>
 <span class="token keyword">def</span> <span class="token function">nettoyage</span> <span class="token punctuation">(</span>ligne<span class="token punctuation">)</span> <span class="token punctuation">:</span>
     nouvelle_ligne <span class="token operator">=</span> ligne<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'"'</span><span class="token punctuation">,</span><span class="token string">''</span><span class="token punctuation">)</span>
     nouvelle_ligne <span class="token operator">=</span> nouvelle_ligne<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">,</span><span class="token string">""</span><span class="token punctuation">)</span>
-    <span class="token keyword">return</span> nouvelle_ligne
-</code></pre>
+    <span class="token keyword">return</span> nouvelle_ligne</code></pre>
 <p>Cette fonction nous permet donc de supprimer les guillemets et les indicateurs de saut de ligne, et nous retourne notre texte sans. Pour s’en assurer, nous pouvons l’appliquer à notre base de données et retourner la même portion que précédemment. Nous constatons donc que les caractères qui nous dérangeaient ne sont plus là.</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># Nettoyer et afficher</span>
+<pre class="language-python"><code class="language-python"><span class="token comment"># Nettoyer et afficher</span>
 donnees <span class="token operator">=</span> <span class="token punctuation">[</span>nettoyage<span class="token punctuation">(</span>ligne<span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">";"</span><span class="token punctuation">)</span> <span class="token keyword">for</span> ligne <span class="token keyword">in</span> contenu<span class="token punctuation">]</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>donnees<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-</code></pre>
+<span class="token keyword">print</span><span class="token punctuation">(</span>donnees<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
 <p>Une fois notre base de données textuelles nettoyée, nous allons pouvoir passer au comptage.</p>
 <p>Pour ce faire, nous avons besoin d’une nouvelle fonction, la fonction <strong>.count()</strong>, qui permet de compter l’occurrence d’un élément.</p>
 <p>Comme nous cherchons à compter les mots composés, nous allons compter le nombre de fois où apparaissent un tiret ou un espace (ces éléments sont caractéristiques des mots composés).</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># Compter le nombre de nom composé</span>
+<pre class="language-python"><code class="language-python"><span class="token comment"># Compter le nombre de nom composé</span>
 nb_compose <span class="token operator">=</span> <span class="token number">0</span>
 
 <span class="token keyword">for</span> ligne <span class="token keyword">in</span> donnees <span class="token punctuation">:</span>
     nom <span class="token operator">=</span> ligne<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span>
     <span class="token keyword">if</span><span class="token punctuation">(</span>nom<span class="token punctuation">.</span>count<span class="token punctuation">(</span><span class="token string">"-"</span><span class="token punctuation">)</span><span class="token operator">></span><span class="token number">0</span> <span class="token punctuation">)</span><span class="token keyword">or</span> <span class="token punctuation">(</span>nom<span class="token punctuation">.</span>count<span class="token punctuation">(</span><span class="token string">" "</span><span class="token punctuation">)</span><span class="token operator">></span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">:</span>
         nb_compose<span class="token operator">+=</span><span class="token number">1</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Il y a {} nom(s) composé(s)"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>nb_compose<span class="token punctuation">)</span><span class="token punctuation">)</span>
-</code></pre>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Il y a {} nom(s) composé(s)"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>nb_compose<span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
 <p>Ainsi, tout cela nous permet d’appliquer les fonctions vues jusqu'ici dans un cas concret sur des données réelles.</p>
 <h3>Les expressions régulières</h3>
 <p>Les <strong>expressions régulières</strong> (ou regex) sont des séquences de caractères qui définissent un motif de recherche dans une chaîne de caractères. Elles sont largement utilisées en analyse de données textuelles pour effectuer des opérations telles que la recherche, la validation, la substitution ou le découpage de chaînes.</p>
@@ -475,7 +455,7 @@ nb_compose <span class="token operator">=</span> <span class="token number">0</s
 <h3>Faire l’analyse</h3>
 <p>La première étape va être d’ouvrir le fichier dans Python (comme vu précédemment) afin d’en extraire les colonnes qui nous intéressent et que l’on va nettoyer par la suite.</p>
 <h4>Extraction des colonnes “review” et “score”</h4>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment">#Ouvrir le fichier en séparant les lignes</span>
+<pre class="language-python"><code class="language-python"><span class="token comment">#Ouvrir le fichier en séparant les lignes</span>
 <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">".data/reviews.csv"</span><span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token builtin">file</span><span class="token punctuation">:</span>
     lignes <span class="token operator">=</span> <span class="token builtin">file</span><span class="token punctuation">.</span>readlines<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
@@ -502,8 +482,7 @@ colonnes_quatre <span class="token operator">=</span> <span class="token punctua
 
 <span class="token comment">## Appel de la fonction pour créer la base de données</span>
 base_de_donnees <span class="token operator">=</span> creation_bdd<span class="token punctuation">(</span>colonnes_deux<span class="token punctuation">,</span> colonnes_quatre<span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>base_de_donnees<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-</code></pre>
+<span class="token keyword">print</span><span class="token punctuation">(</span>base_de_donnees<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
@@ -513,18 +492,17 @@ base_de_donnees <span class="token operator">=</span> creation_bdd<span class="t
 </div></div>
 <h4>Nettoyage des données</h4>
 <p>Une fois nos données correctement extraites de notre base de données, nous allons les nettoyer, comme vu précédemment. Ici, après avoir affiché nos 100 premières chaînes de caractères, nous observons des guillemets au début de chaque commentaire, mais qui ne sont jamais fermés. Nous allons donc les remplacer par rien pour nettoyer nos valeurs.</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># Création de la fonction de nettoyage adaptée</span>
+<pre class="language-python"><code class="language-python"><span class="token comment"># Création de la fonction de nettoyage adaptée</span>
 <span class="token keyword">def</span> <span class="token function">nettoyage</span><span class="token punctuation">(</span>ligne<span class="token punctuation">)</span><span class="token punctuation">:</span>
     nouvelle_ligne <span class="token operator">=</span> <span class="token punctuation">[</span>colonne<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'"'</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span> <span class="token keyword">for</span> colonne <span class="token keyword">in</span> ligne<span class="token punctuation">]</span>
     <span class="token keyword">return</span> nouvelle_ligne
 
 <span class="token comment"># Appliquer nettoyage à chaque ligne dans base_de_donnees</span>
 base_de_donnees_propre <span class="token operator">=</span> <span class="token punctuation">[</span>nettoyage<span class="token punctuation">(</span>ligne<span class="token punctuation">)</span> <span class="token keyword">for</span> ligne <span class="token keyword">in</span> base_de_donnees<span class="token punctuation">]</span>
-
 </code></pre>
 <h4>Créer des fichiers texte contenant les avis regroupés par score</h4>
 <p>Notre base de données regroupe maintenant une note correspondant à un avis. L’idée est donc de rassembler, pour chaque note (de 0 à 5), chaque avis correspondant dans un fichier texte. Ainsi, nous pourrons rechercher, pour chaque score, le mot qui ressort le plus et voir s'ils diffèrent.</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># Créer la fonction pour créer des fichiers textes contenant les avis par score</span>
+<pre class="language-python"><code class="language-python"><span class="token comment"># Créer la fonction pour créer des fichiers textes contenant les avis par score</span>
 <span class="token keyword">def</span> <span class="token function">texte_par_note</span><span class="token punctuation">(</span>b_d_d<span class="token punctuation">,</span> score<span class="token punctuation">,</span> nom_fichier_texte<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>nom_fichier_texte<span class="token punctuation">,</span> <span class="token string">"w"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> fichier<span class="token punctuation">:</span>
         <span class="token keyword">for</span> ligne <span class="token keyword">in</span> b_d_d<span class="token punctuation">:</span>
@@ -548,8 +526,7 @@ texte_score_4 <span class="token operator">=</span> <span class="token string">"
 texte_par_note<span class="token punctuation">(</span>base_de_donnees_propre<span class="token punctuation">,</span> <span class="token number">4.0</span><span class="token punctuation">,</span> texte_score_4<span class="token punctuation">)</span>
 
 texte_score_5 <span class="token operator">=</span> <span class="token string">"avis_score_5.txt"</span>  
-texte_par_note<span class="token punctuation">(</span>base_de_donnees_propre<span class="token punctuation">,</span> <span class="token number">5.0</span><span class="token punctuation">,</span> texte_score_5<span class="token punctuation">)</span>
-</code></pre>
+texte_par_note<span class="token punctuation">(</span>base_de_donnees_propre<span class="token punctuation">,</span> <span class="token number">5.0</span><span class="token punctuation">,</span> texte_score_5<span class="token punctuation">)</span></code></pre>
 <h4>Supprimer du texte les “stop words”</h4>
 <p>Une fois nos fichiers textes créés, nous allons chercher le mot le plus utilisé dans les avis d’un score donné. Cependant, si nous effectuons cette opération directement sur nos commentaires, le mot qui ressortira sera probablement ce que l’on appelle un <strong>stop word</strong>. Nous allons donc supprimer tous les stop words de nos textes afin de pouvoir effectuer notre comptage des mots par la suite. Étant donné que les commentaires sont en espagnol, nous allons récupérer en ligne une liste de stop words en espagnol.</p>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
@@ -560,7 +537,7 @@ texte_par_note<span class="token punctuation">(</span>base_de_donnees_propre<spa
 <p>Un <strong>stop word</strong> est un mot courant qui est souvent ignoré dans le traitement du langage naturel et l'analyse de texte. Ces mots, comme &quot;et&quot;, &quot;ou&quot;, &quot;le&quot;, &quot;la&quot;, et &quot;de&quot; en français, n'apportent généralement pas d'information significative au sens du texte et peuvent être filtrés pour simplifier l'analyse. L'élimination des stop words permet de se concentrer sur les mots qui portent plus de sens et d'améliorer l'efficacité des algorithmes d'analyse.</p>
 </div></div>
 <p>Nous en profitons aussi pour venir supprimer les signes de <strong>poncuation</strong> car ils sont inutiles et risquent de venir perturber notre analyse.</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment">#Créer une liste de short word en espagnol à partir d'un fichier texte</span>
+<pre class="language-python"><code class="language-python"><span class="token comment">#Créer une liste de short word en espagnol à partir d'un fichier texte</span>
 <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"stop_words_spanish.txt"</span><span class="token punctuation">,</span><span class="token string">"r"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> lexique <span class="token punctuation">:</span>
     stop_word <span class="token operator">=</span> <span class="token punctuation">[</span>ligne<span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>lower<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">for</span> ligne <span class="token keyword">in</span> lexique<span class="token punctuation">.</span>readlines<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
 
@@ -593,11 +570,10 @@ texte_ssw_score_4 <span class="token operator">=</span> <span class="token strin
 sans_stop_word<span class="token punctuation">(</span>texte_score_4<span class="token punctuation">,</span> stop_word<span class="token punctuation">,</span> texte_ssw_score_4<span class="token punctuation">)</span>
 
 texte_ssw_score_5 <span class="token operator">=</span> <span class="token string">"avis_ssw_score_5.txt"</span>
-sans_stop_word<span class="token punctuation">(</span>texte_score_5<span class="token punctuation">,</span> stop_word<span class="token punctuation">,</span> texte_ssw_score_5<span class="token punctuation">)</span>
-</code></pre>
+sans_stop_word<span class="token punctuation">(</span>texte_score_5<span class="token punctuation">,</span> stop_word<span class="token punctuation">,</span> texte_ssw_score_5<span class="token punctuation">)</span></code></pre>
 <h4>Compter les mots les plus fréquents dans le texte en fonction de la note</h4>
 <p>On va venir ici, compter pour chaque fichier texte regroupant les avis par note, les 1O mots les plus utilisés ainsi que leur occurrence dans le texte. On va ensuite venir regrouper ces résultats dans un unique fichier texte.</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># Créer une fonction comptant les occurrences des mots dans le texte et renvoie les 10 plus fréquents</span>
+<pre class="language-python"><code class="language-python"><span class="token comment"># Créer une fonction comptant les occurrences des mots dans le texte et renvoie les 10 plus fréquents</span>
 <span class="token keyword">def</span> <span class="token function">compter_mots</span><span class="token punctuation">(</span>fichier<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>fichier<span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
         contenu <span class="token operator">=</span> f<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
@@ -618,8 +594,7 @@ fichier_resultats <span class="token operator">=</span> <span class="token strin
 
 <span class="token comment"># Appeler la fonction pour chaque score</span>
 <span class="token keyword">for</span> score <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    resultat<span class="token punctuation">(</span>fichier_resultats<span class="token punctuation">,</span> score<span class="token punctuation">,</span> <span class="token string-interpolation"><span class="token string">f"avis_ssw_score_</span><span class="token interpolation"><span class="token punctuation">{</span>score<span class="token punctuation">}</span></span><span class="token string">.txt"</span></span><span class="token punctuation">)</span>
-</code></pre>
+    resultat<span class="token punctuation">(</span>fichier_resultats<span class="token punctuation">,</span> score<span class="token punctuation">,</span> <span class="token string-interpolation"><span class="token string">f"avis_ssw_score_</span><span class="token interpolation"><span class="token punctuation">{</span>score<span class="token punctuation">}</span></span><span class="token string">.txt"</span></span><span class="token punctuation">)</span></code></pre>
 <div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>

@@ -165,11 +165,9 @@ Pour ce MON j'ai suivi le cours d'OpenClassroom <a href="https://openclassrooms.
 <li>un <strong>événement pour déclencher votre transition </strong></li>
 </ul>
 <p>On applique la valeur initiale à l’élément qu’on veut modifier, et la valeur finale dans la pseudoclasse qui déclenche la transition. La durée de la transition peut s'exprimer en secondes ou en millisecondes. On peut déclarer les propriétés d'une transistion individuellement ou en les combinant.</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token property">transition</span><span class="token punctuation">:</span> transform <span class="token punctuation">;</span>
-<span class="token property">transition-duration</span><span class="token punctuation">:</span> 400ms <span class="token punctuation">;</span> 
-</code></pre>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token property">transition</span><span class="token punctuation">:</span> transform 400ms <span class="token punctuation">;</span> 
-</code></pre>
+<pre class="language-css"><code class="language-css"><span class="token property">transition</span><span class="token punctuation">:</span> transform <span class="token punctuation">;</span>
+<span class="token property">transition-duration</span><span class="token punctuation">:</span> 400ms <span class="token punctuation">;</span> </code></pre>
+<pre class="language-css"><code class="language-css"><span class="token property">transition</span><span class="token punctuation">:</span> transform 400ms <span class="token punctuation">;</span> </code></pre>
 <h3>Pseudos-classes pour déclencher une transition</h3>
 <p>Les pseudoclasses sont essentielles pour déclencher des transitions en CSS, les plus adaptées sont celles qui impliquent une interaction avec l'utilisateur. On peut aussi combiner des pseudoclasses entre elles pour créer des sélecteurs un peu plus précis, et permette aussi de changer le style d'un élément voisin.</p>
 <ul>
@@ -208,16 +206,13 @@ Pour ce MON j'ai suivi le cours d'OpenClassroom <a href="https://openclassrooms.
 Ainsi, au sein d'une transition, on peut facilement animer deux propriétés, ou même autant que l'on désire.</p>
 <p>L’utilisation du mot-clé <strong>all</strong> permet de déclencher plusieurs changements au même moment et pour la même durée, mais il existe un autre moyen d’ajouter des propriétés multiples à une transition.
 On peut aussi faire une <strong>liste des animations</strong> de chaque propriété à laquelle nous voulons ajouter une transition, séparées par des virgules.</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token property">transition</span><span class="token punctuation">:</span> transform 450ms<span class="token punctuation">,</span> background-color 450ms <span class="token punctuation">;</span> 
-</code></pre>
+<pre class="language-css"><code class="language-css"><span class="token property">transition</span><span class="token punctuation">:</span> transform 450ms<span class="token punctuation">,</span> background-color 450ms <span class="token punctuation">;</span> </code></pre>
 <p>On peut donner une <strong>durée différente</strong> pour chaque changements. C’est très utile pour obtenir un rendu <strong> moins uniforme</strong>, et ainsi créer quelque chose de plus intéressant visuellement et de plus engageant pour l’utilisateur.</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token property">transition</span><span class="token punctuation">:</span> transform 450ms<span class="token punctuation">,</span> background-color 300ms <span class="token punctuation">;</span> 
-</code></pre>
+<pre class="language-css"><code class="language-css"><span class="token property">transition</span><span class="token punctuation">:</span> transform 450ms<span class="token punctuation">,</span> background-color 300ms <span class="token punctuation">;</span> </code></pre>
 <p>La différence ne se voit qu'à peine, mais ces quelques fractions de secondes permettent de rendre l’animation un peu <strong>moins parfaite</strong> et lui apportent un peu de <strong>texture</strong>.</p>
 <p>Pour accentuer encore plus le côté &quot;imparfait&quot; de l'animation on peut retarder le changement sur une des propriétés. Par exemple faire démarer la transition sur <em>background-color</em> 150ms plus tard pour que les deux transistions se terminrent en même temps.</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token property">transition</span><span class="token punctuation">:</span> transform 450ms<span class="token punctuation">,</span> background-color 300ms<span class="token punctuation">;</span>
-<span class="token property">transition-delay</span><span class="token punctuation">:</span> 0<span class="token punctuation">,</span> 150ms<span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-css"><code class="language-css"><span class="token property">transition</span><span class="token punctuation">:</span> transform 450ms<span class="token punctuation">,</span> background-color 300ms<span class="token punctuation">;</span>
+<span class="token property">transition-delay</span><span class="token punctuation">:</span> 0<span class="token punctuation">,</span> 150ms<span class="token punctuation">;</span></code></pre>
 <h3>Créer des animations plus naturelles avec les fonctions de timing</h3>
 <p>Pour que les animations soient encore <strong>plus réaliste</strong> il faut penser que dans la nature un objet en mouvement doit accèléré à un moment donner et déccelérer lorsque son mouvement prend fin. On parle de <strong>ease-in</strong> et <strong>ease-out</strong>.</p>
 <p>En CSS on utilise la propriété <strong>transition-timing-function</strong> pour régler la courbe d’accélération d’une transition.</p>
@@ -225,21 +220,18 @@ On peut aussi faire une <strong>liste des animations</strong> de chaque proprié
 <ul>
 <li>la fonction <strong>linear</strong> : elle ne connaît pas d'accentuation à l'accélération ou à la décélération. Sa courbe est totalement droite du point A au point B.</li>
 </ul>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token property">transition</span><span class="token punctuation">:</span> transform 1000ms<span class="token punctuation">;</span>
-<span class="token property">transition-timing-function</span><span class="token punctuation">:</span> linear<span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-css"><code class="language-css"><span class="token property">transition</span><span class="token punctuation">:</span> transform 1000ms<span class="token punctuation">;</span>
+<span class="token property">transition-timing-function</span><span class="token punctuation">:</span> linear<span class="token punctuation">;</span></code></pre>
 <ul>
 <li>les fonctions <strong>ease-in-out</strong>, <strong>ease-in</strong>,<strong>ease-out</strong> : elles suivent une courbe d’accélération (pour ease-in et ease-in-out) et de décélération (pour ease-out et ease-in-out) subtile.</li>
 </ul>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token property">transition</span><span class="token punctuation">:</span> transform 1000ms ease-in-out<span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-css"><code class="language-css"><span class="token property">transition</span><span class="token punctuation">:</span> transform 1000ms ease-in-out<span class="token punctuation">;</span></code></pre>
 <div style="display:flex"><img src="courbeseases.png"></div>
 <ul>
 <li>la fonction <strong>ease</strong> : c'est la fonction qui est utilisée par défaut lorsqu'aucune fonction n'est précisée. Elle ressemble beaucoup aux fonctions ci-dessus mais avec une accélération plus nette et une rampe de décélération plus prononcée.</li>
 </ul>
 <p>Ces fonctions sont des raccourcis de la fonction <strong>cubic-bezier</strong> : on lui indique une liste de valeurs numériques, qu'elle transforme en courbe d’accélération. Par exemple,  ease-in-out  peut être écrite ainsi :</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token property">transition-timing-function</span><span class="token punctuation">:</span> <span class="token function">cubic-bezier</span><span class="token punctuation">(</span>.42<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> .58<span class="token punctuation">,</span> 1<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-css"><code class="language-css"><span class="token property">transition-timing-function</span><span class="token punctuation">:</span> <span class="token function">cubic-bezier</span><span class="token punctuation">(</span>.42<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> .58<span class="token punctuation">,</span> 1<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>Avec des outils comme le site <a href="https://cubic-bezier.com/#.17,.67,.83,.67">Cubic Bezier</a> on peut créer facilement la courbe de bézier qui correspond à l'accélèration et la déccélération que l'on désire et récupérer les valeur numérique correspondante.</p>
 <h3>Optimisez les performances de votre navigateur pour vos animations CSS</h3>
 <p>À l'écran, il n'y a pas de réel déplacement, mais plutôt <strong>une séquence d'images</strong> se succédant suffisamment rapidement pour être interprétée par notre cerveau comme un mouvement. Cette séquence d'images est appelée les <strong>FPS</strong> (Images par seconde).</p>
@@ -250,8 +242,7 @@ On peut aussi faire une <strong>liste des animations</strong> de chaque proprié
 <p>La propriété &quot;transform&quot; offre une <strong>flexibilité</strong> exceptionnelle pour manipuler et animer les sites de manière variée. Étant donné que toutes ces manipulations se produisent pendant l'étape de <strong>composition</strong>, les animations sont fluides sur tous les supports.</p>
 <p>Il est possible de déplacer des éléments grâce aux <strong>fonctions de translation</strong> telles que &quot;translate()&quot;, &quot;translateX()&quot;, &quot;translateY()&quot;, et &quot;translate3d()&quot;. De même, on peut ajuster la taille avec les fonctions de mise à l'échelle telles que &quot;scale()&quot;, &quot;scaleX()&quot;, &quot;scaleY()&quot;, et &quot;scale3d()&quot;. En outre, il est possible de réaliser des rotations en utilisant les fonctions &quot;rotate()&quot;, &quot;rotateX()&quot;, &quot;rotateY()&quot;, et &quot;rotateZ()&quot;.</p>
 <p>Il est important de noter qu'ajouter une deuxième propriété &quot;transform&quot; annule la première, ce qui signifie qu'<strong>un seul &quot;transform&quot; peut être défini dans un même sélecteur</strong>. Pour effectuer plusieurs transformations, il suffit de les lister dans une seule propriété &quot;transform&quot;, comme suit :</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token property">transform</span><span class="token punctuation">:</span><span class="token function">translateX</span><span class="token punctuation">(</span>200%<span class="token punctuation">)</span> <span class="token function">scale</span><span class="token punctuation">(</span>2<span class="token punctuation">)</span>
-</code></pre>
+<pre class="language-css"><code class="language-css"><span class="token property">transform</span><span class="token punctuation">:</span><span class="token function">translateX</span><span class="token punctuation">(</span>200%<span class="token punctuation">)</span> <span class="token function">scale</span><span class="token punctuation">(</span>2<span class="token punctuation">)</span></code></pre>
 <p>L'ordre y est important car une propriété contenant plusieurs fonctions <strong>exécute ces fonctions dans l'ordre, de droite à gauche.</strong></p>
 <p>Pour les fonctions de transformations en 3D telles que &quot;translate3d()&quot;, &quot;rotateZ()&quot;, et &quot;scale3d()&quot;, il est également nécessaire d'inclure la fonction &quot;perspective&quot;. Cela permet d'indiquer au navigateur <strong>la distance à laquelle se trouve l'utilisateur</strong> : plus la distance est grande, moins l'animation sera perceptible.</p>
 <h3>Modifier le point d'ancrage d'un élément grâce à transform-origin</h3>
@@ -266,17 +257,14 @@ On peut aussi faire une <strong>liste des animations</strong> de chaque proprié
 <h3>Animer les couleurs de manière performante avec opacity</h3>
 <p>Animer la couleur d'une propriété entraîne <strong>des calculs de peinture</strong>, mais la propriété &quot;opacity&quot; offre une alternative en permettant <strong>des transitions entre les couleurs tout en contournant ces calculs</strong>. Pour définir le niveau de transparence, la propriété &quot;opacity&quot; prend une valeur entre 0 et 1, où 0 représente une transparence totale et 1 une opacité totale.</p>
 <p>Afin d'éviter d'ajouter des balises </p><div> supplémentaires au HTML, ce qui pourrait être nécessaire pour chaque ajout, on peut recourir aux pseudo-éléments <strong>&quot;::before&quot; ou &quot;::after&quot;</strong>. La création d'un pseudo-élément se réalise en ajoutant le nom du pseudo-élément à un sélecteur, préfixé par deux-points doubles, comme ceci :<p></p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">.selector::after{...}
-</code></pre>
+<pre class="language-html"><code class="language-html">.selector::after{...}</code></pre>
 <p>Les pseudo-éléments &quot;::before&quot; et &quot;::after&quot; engendrent respectivement un élément qui est le premier ou le dernier enfant de l'élément sélectionné. Il est possible de créer des dégradés de couleur en attribuant un dégradé à la propriété &quot;background-color&quot; de l'élément d'arrière-plan. Ensuite, on peut faire disparaître l'élément superposé en ajustant l'opacité à 0.</p>
 <h3>Créer des animations plus complexes avec la règle CSS @keyframes</h3>
 <p>Les animations <strong>@keyframes</strong> nous offrent la possibilité de créer des animations <strong> élaborées </strong> en définissant plusieurs étapes pour les propriétés tout au long de l'animation.</p>
 <p>Les keyframes CSS sont créés en utilisant la règle @keyframes suivie d'un nom pour l'ensemble des keyframes, comme illustré ci-dessous :</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token atrule"><span class="token rule">@keyframes</span> example-frames</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@keyframes</span> example-frames</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
 <p>Chaque keyframe peut être défini en utilisant le pourcentage d'avancement de l'animation comme valeur, tel que :</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">33%</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-css"><code class="language-css"><span class="token selector">33%</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
 <p>Dans le cas où un seul keyframe de début et de fin est requis, les mots-clés <strong>« from » et « to » peuvent être utilisés</strong> en remplacement de 0% et 100%, respectivement.</p>
 <p>En l'absence d'un keyframe de début ou de fin, <strong>l'animation débute et/ou se termine avec les valeurs de propriété assignées au sélecteur</strong>. Si aucune valeur n'est explicitement assignée dans le sélecteur, la valeur par défaut est choisie.</p>
 <p>Une animation définie par la règle @keyframes peut inclure plusieurs keyframes avec des propriétés distinctes. De plus, <strong>plusieurs pourcentages peuvent être attribués à un seul keyframe</strong>, et les valeurs définies dans ce keyframe seront appliquées aux pourcentages spécifiés au cours de l'animation.</p>

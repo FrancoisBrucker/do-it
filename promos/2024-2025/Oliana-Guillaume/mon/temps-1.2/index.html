@@ -199,7 +199,7 @@ $$</p>
 <h2>1.2 Téléchargement des données avec <code>yfinance</code></h2>
 <p>Pour créer et optimiser un portefeuille, nous devons d'abord récupérer les données des prix historiques des actifs que nous voulons inclure dans notre portefeuille. La bibliothèque Python <code>yfinance</code> permet de télécharger ces données directement depuis Yahoo Finance.</p>
 <h3>Exemple de code pour télécharger les données :</h3>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">import</span> yfinance <span class="token keyword">as</span> yf
+<pre class="language-python"><code class="language-python"><span class="token keyword">import</span> yfinance <span class="token keyword">as</span> yf
 <span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
 <span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
 <span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
@@ -271,7 +271,6 @@ resultats <span class="token operator">=</span> pd<span class="token punctuation
 <span class="token comment"># Afficher le tableau dans une manière plus lisible dans VSCode</span>
 <span class="token keyword">import</span> ace_tools <span class="token keyword">as</span> tools<span class="token punctuation">;</span> tools<span class="token punctuation">.</span>display_dataframe_to_user<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">"Rendements et Volatilité"</span><span class="token punctuation">,</span> dataframe<span class="token operator">=</span>resultats<span class="token punctuation">)</span>
 
-
 </code></pre>
 <p><img src="image.png" alt="alt text">
 <img src="image-1.png" alt="alt text">
@@ -304,7 +303,7 @@ $$</p>
 <h3>Code Python pour l'optimisation du portefeuille</h3>
 <p>On va ici chercher à optimiser le portefeuille, c'est-à-dire le poids des actifs selon les critères de volatilité, rendement et risque.</p>
 <p>Avec le code python suivant, on obtient les figures ci-dessous :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">import</span> yfinance <span class="token keyword">as</span> yf
+<pre class="language-python"><code class="language-python"><span class="token keyword">import</span> yfinance <span class="token keyword">as</span> yf
 <span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
 <span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
 <span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
@@ -458,8 +457,7 @@ plt<span class="token punctuation">.</span>figure<span class="token punctuation"
 plt<span class="token punctuation">.</span>pie<span class="token punctuation">(</span>poids_optimal_volatilite<span class="token punctuation">,</span> labels<span class="token operator">=</span>actions<span class="token punctuation">,</span> autopct<span class="token operator">=</span><span class="token string">'%1.1f%%'</span><span class="token punctuation">,</span> startangle<span class="token operator">=</span><span class="token number">90</span><span class="token punctuation">,</span> colors<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'lightblue'</span><span class="token punctuation">,</span> <span class="token string">'lightgreen'</span><span class="token punctuation">,</span> <span class="token string">'coral'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
 plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">"Répartition des actifs - Minimisation de la volatilité"</span><span class="token punctuation">)</span>
 plt<span class="token punctuation">.</span>axis<span class="token punctuation">(</span><span class="token string">'equal'</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 <p><img src="image-8.png" alt="Frontière de Markowitz"></p>
 <p><img src="image-4.png" alt="alt text"></p>
 <p><img src="image-5.png" alt="alt text"></p>

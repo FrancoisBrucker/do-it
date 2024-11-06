@@ -135,21 +135,18 @@ Mon objectif pour ce MON est d'apprendre à faire des animations et des tranform
 <h3>Outils et bibliothèques d'animation</h3>
 <h4>Animated API de React Native :</h4>
 <p>Une bibliothèque intégrée pour réaliser des animations de base, fournissant une grande variété de composants et de méthodes animables.</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> Animated <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-native'</span><span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> Animated <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-native'</span><span class="token punctuation">;</span></code></pre>
 <h4>Lottie : <a href="https://lottiefiles.com/search?q=eliminated&amp;category=animations">LottieFiles</a></h4>
 <p>Pour intégrer des animations vectorielles de haute qualité conçues avec Adobe After Effects.</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> LottieView <span class="token keyword">from</span> <span class="token string">'lottie-react-native'</span><span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-js"><code class="language-js"><span class="token keyword">import</span> LottieView <span class="token keyword">from</span> <span class="token string">'lottie-react-native'</span><span class="token punctuation">;</span></code></pre>
 <h4>React Native Reanimated :</h4>
 <p>Une bibliothèque plus avancée pour des animations complexes qui nécessitent des interactions plus fluides et performantes.</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> Animated <span class="token keyword">from</span> <span class="token string">'react-native-reanimated'</span><span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-js"><code class="language-js"><span class="token keyword">import</span> Animated <span class="token keyword">from</span> <span class="token string">'react-native-reanimated'</span><span class="token punctuation">;</span></code></pre>
 <h2>Création d'Animations Simples</h2>
 <h3>Interpolation :</h3>
 <p>L'interpolation permet de transformer une valeur d'entrée en une nouvelle valeur
 de sortie, généralement dans un but d'animation.</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> value <span class="token operator">=</span> <span class="token function">useRef</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Animated<span class="token punctuation">.</span>Value</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>current<span class="token punctuation">;</span> <span class="token comment">// Initialisation d'une valeur animée</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> value <span class="token operator">=</span> <span class="token function">useRef</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Animated<span class="token punctuation">.</span>Value</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>current<span class="token punctuation">;</span> <span class="token comment">// Initialisation d'une valeur animée</span>
 
 <span class="token comment">// Interpolation de cette valeur</span>
 <span class="token keyword">const</span> opacity <span class="token operator">=</span> value<span class="token punctuation">.</span><span class="token function">interpolate</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
@@ -163,27 +160,24 @@ Animated<span class="token punctuation">.</span><span class="token function">tim
   <span class="token literal-property property">duration</span><span class="token operator">:</span> <span class="token number">1000</span><span class="token punctuation">,</span>
   <span class="token literal-property property">useNativeDriver</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// Utilisation du driver natif pour de meilleures performances</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
 </code></pre>
 <p>Dans cet exemple, <em>value</em> passe de 0 à 1 en 1000 millisecondes, ce qui entraîne un changement d'opacité de complètement transparent à complètement opaque.</p>
 <h3>Animated.View :</h3>
 <p><strong>Animated.View</strong> est un composant qui peut être animé, généralement utilisé pour envelopper tout élément qu'on souhaite animer.</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token operator">&lt;</span>Animated<span class="token punctuation">.</span>View style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> opacity <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">></span>
+<pre class="language-js"><code class="language-js"><span class="token operator">&lt;</span>Animated<span class="token punctuation">.</span>View style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> opacity <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">></span>
   <span class="token punctuation">{</span><span class="token comment">/* Le contenu de la vue s'effacera progressivement */</span><span class="token punctuation">}</span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>Animated<span class="token punctuation">.</span>View<span class="token operator">></span>
-
 </code></pre>
 <h3>Animated.Text:</h3>
 <p>De même, <strong>Animated.Text</strong> permet d'animer les propriétés d'un élément texte.</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token operator">&lt;</span>Animated<span class="token punctuation">.</span>Text style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> opacity <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">></span>
+<pre class="language-js"><code class="language-js"><span class="token operator">&lt;</span>Animated<span class="token punctuation">.</span>Text style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> opacity <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">></span>
   Je m'estompe <span class="token operator">!</span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>Animated<span class="token punctuation">.</span>Text<span class="token operator">></span>
-
 </code></pre>
 <h3>Exemples</h3>
 <h4>Animation de <strong>fade-in/fade-out</strong> :</h4>
 <p>On utilise l'opacité pour faire apparaître ou disparaître un élément progressivement.</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token comment">// Animation de fade-in</span>
+<pre class="language-js"><code class="language-js"><span class="token comment">// Animation de fade-in</span>
 Animated<span class="token punctuation">.</span><span class="token function">timing</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span> <span class="token punctuation">{</span>
   <span class="token literal-property property">toValue</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
   <span class="token literal-property property">duration</span><span class="token operator">:</span> <span class="token number">2000</span><span class="token punctuation">,</span>
@@ -195,11 +189,10 @@ Animated<span class="token punctuation">.</span><span class="token function">tim
   <span class="token literal-property property">toValue</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
   <span class="token literal-property property">duration</span><span class="token operator">:</span> <span class="token number">2000</span><span class="token punctuation">,</span>
   <span class="token literal-property property">useNativeDriver</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <h4>Translation, rotation, et échelle :</h4>
 <p>Animer la position, la rotation et la taille des éléments.</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token comment">// Exemple de translation</span>
+<pre class="language-js"><code class="language-js"><span class="token comment">// Exemple de translation</span>
 <span class="token keyword">const</span> translateY <span class="token operator">=</span> value<span class="token punctuation">.</span><span class="token function">interpolate</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   <span class="token literal-property property">inputRange</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
   <span class="token literal-property property">outputRange</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// Déplacer de 100 pixels vers le bas</span>
@@ -228,8 +221,7 @@ Animated<span class="token punctuation">.</span><span class="token function">tim
   <span class="token punctuation">}</span><span class="token punctuation">}</span>
 <span class="token operator">></span>
   <span class="token punctuation">{</span><span class="token comment">/* Contenu à animer */</span><span class="token punctuation">}</span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>Animated<span class="token punctuation">.</span>View<span class="token operator">></span>
-</code></pre>
+<span class="token operator">&lt;</span><span class="token operator">/</span>Animated<span class="token punctuation">.</span>View<span class="token operator">></span></code></pre>
 <h1>Android Emulator</h1>
 <p>J'avais besoin d'installer Android Emulator car je n'ai pas pu lancer la simulation du projet 3A avec n'importe quel réseau wifi, et vue que je ne peux pas coder sans voir la simulation vertuelle de mon travail, j'ai dû chercher un moyen pour visualiser mon travail sans passer par l'application Expo Go sur mon smartphone.</p>
 <h2>Définition</h2>

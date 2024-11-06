@@ -170,13 +170,12 @@
 <h3>Initialisation du projet avec Vite</h3>
 <p>Nous allons utiliser Vite dans ce tutoriel, tout comme dans mon POK 2. Pour rappel, Vite est une technologie permettant la création d'applications back-end. Je l'utilise car j'apprécie sa fluidité et sa réactivité.</p>
 <p>Pour créer une application :</p>
-<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell"><span class="token function">npm</span> create vite@latest part1 -- <span class="token parameter variable">--template</span> react
+<pre class="language-shell"><code class="language-shell"><span class="token function">npm</span> create vite@latest part1 -- <span class="token parameter variable">--template</span> react
 
 <span class="token builtin class-name">cd</span> part1
 <span class="token function">npm</span> <span class="token function">install</span>
 
-<span class="token function">npm</span> run dev
-</code></pre>
+<span class="token function">npm</span> run dev</code></pre>
 <p>NPM signifie Node Package Manager.
 Vite dirige l'application sur le port 5173. Cela crée un répertoire entier avec des modules, un fichier <code>index.html</code>, un fichier .css, et un package .json. Le code de l'application est dans le dossier <em>src</em>.</p>
 <p><img src="dossier.png" alt="alt"></p>
@@ -184,10 +183,9 @@ Vite dirige l'application sur le port 5173. Cela crée un répertoire entier ave
 <p>Node.js est un environnement d'exécution JavaScript côté serveur, basé sur le moteur V8 de Google. L'un de ses principaux avantages réside dans sa capacité à créer des serveurs de manière efficace et non bloquante. Pour mettre en place un serveur avec Node.js de manière traditionnelle, le processus est relativement simple.
 Tout d'abord, il faut importer le module &quot;http&quot; inclus dans Node.js, puis créer un serveur en utilisant la méthode <code>createServer()</code>. Ensuite, on définit une fonction de rappel qui sera appelée à chaque fois qu'une requête est reçue. Cette fonction de rappel prend généralement deux paramètres, représentant la requête (<em>request</em>) et la réponse (<em>response</em>). À l'intérieur de cette fonction, on spécifie les actions à effectuer en réponse à la requête, comme par exemple l'envoi de données ou la lecture de fichiers. On spécifie enfin le port sur lequel le serveur &quot;écoutera&quot; les requêtes entrantes, en utilisant la méthode <code>listen()</code>.</p>
 <p>Pour ajouter un serveur Node.js, je vais plutôt utiliser Express, un framework web reposant sur Node. Cette méthode est relativement plus rapide et simple. Express s'installe avec la commande :</p>
-<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell"><span class="token function">npm</span> <span class="token function">install</span> express
-</code></pre>
+<pre class="language-shell"><code class="language-shell"><span class="token function">npm</span> <span class="token function">install</span> express</code></pre>
 <p>On crée ensuite un fichier <code>server.js</code> à la racine du projet pour configurer le serveur.</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> port <span class="token operator">=</span> <span class="token number">3001</span><span class="token punctuation">;</span>
 
@@ -198,25 +196,22 @@ app<span class="token punctuation">.</span><span class="token function">get</spa
 app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span>port<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Server running at http://localhost:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>port<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
 </code></pre>
 <h3>Configuration du Proxy</h3>
 <p>Un proxy est un serveur intermédiaire qui agit comme un relais entre l'utilisateur et le serveur de destination. Son rôle principal est de filtrer, rediriger et contrôler les requêtes et les réponses échangées entre les deux parties. Les proxies sont largement utilisés pour plusieurs raisons, notamment la gestion des performances, la sécurité et la confidentialité.</p>
 <p>Pour ce faire, on modifie ensuite le fichier <em>vite.config.js</em> pour configurer le proxy vers le serveur Node.js.</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
   <span class="token literal-property property">server</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token literal-property property">proxy</span><span class="token operator">:</span> <span class="token punctuation">{</span>
       <span class="token string-property property">'/api'</span><span class="token operator">:</span> <span class="token string">'http://localhost:3001'</span><span class="token punctuation">,</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
 <h3>Communication Client-Serveur</h3>
 <p>On peut utiliser une commande <code>fetch</code> pour communiquer avec le serveur depuis le client React. Par exemple :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'/api'</span><span class="token punctuation">)</span>
+<pre class="language-js"><code class="language-js"><span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'/api'</span><span class="token punctuation">)</span>
   <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">response</span> <span class="token operator">=></span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">data</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">data</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>Le développement Frontend, lui, s'effectue comme d'habitude.</p>
 <h3>Formation d'OpenClassrooms</h3>
 <p>Je ne recommande pas spécialement la formation d'OpenClassrooms. La première partie est suffisante pour créer sa propre application, et la description de la route <code>GET</code> est bien faite. Le reste manque cependant de détails. La partie de sécurisation de l'API ne m'intéressait pas, tout comme l'utilisation de <em>multer</em>.</p>

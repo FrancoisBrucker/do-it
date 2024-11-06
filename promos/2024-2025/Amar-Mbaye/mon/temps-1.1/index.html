@@ -263,7 +263,7 @@
 <h3>Les Composants 🧩</h3>
 <p>Les composants sont les blocs de construction de toute application React. Ils permettent de diviser l'interface utilisateur en morceaux réutilisables.</p>
 <p><strong>Exemple : Composant Header</strong></p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> Link <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-router-dom'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token string">'./Header.css'</span><span class="token punctuation">;</span>
 
@@ -284,8 +284,7 @@
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> Header<span class="token punctuation">;</span>
-</code></pre>
+<span class="token keyword">export</span> <span class="token keyword">default</span> Header<span class="token punctuation">;</span></code></pre>
 <p>Ce morceau a pour but de gerer la navigation entre les diferentes pages.</p>
 <hr>
 <p><strong>Composants Principaux :</strong></p>
@@ -315,7 +314,7 @@ Mise en forme des éléments avec des balises HTML et du CSS.</p>
 <p>Ce répertoire contient les vues ou les pages complètes de l'application. Une page est généralement une vue entière que l'utilisateur peut voir lorsqu'il accède à une route spécifique dans l'application. Par exemple, la page d'accueil, la page des projets, et la page de contact sont des pages distinctes.
 Les pages sont souvent composées de plusieurs composants et peuvent être considérées comme des &quot;containers&quot; pour ces composants.</p>
 <p><strong>Exemple : HomePage</strong></p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token string">'./HomePage.css'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">function</span> <span class="token function">HomePage</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -354,8 +353,7 @@ Les pages sont souvent composées de plusieurs composants et peuvent être consi
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> HomePage<span class="token punctuation">;</span>
-</code></pre>
+<span class="token keyword">export</span> <span class="token keyword">default</span> HomePage<span class="token punctuation">;</span></code></pre>
 <div class="tip">
   <strong>Astuce :</strong> Utilise des techniques comme le lazy loading pour charger dynamiquement les composants et améliorer la performance de ton application React.
 </div>

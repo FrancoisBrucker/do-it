@@ -161,7 +161,7 @@
 <h3>Event Loop</h3>
 <p>Dans cette partie, nous allons expliciter des fondamentaux de l’ordre d’exécution des fonctions en JavaScript, dont l’ignorance provoque beaucoup d’erreurs inexplicables.</p>
 <p>Voici un exemple assez parlant :</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">var</span> value<span class="token punctuation">;</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">var</span> value<span class="token punctuation">;</span>
 
 <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     value <span class="token operator">=</span> <span class="token string">'VALUE'</span><span class="token punctuation">;</span>
@@ -173,16 +173,14 @@ console<span class="token punctuation">.</span><span class="token function">log<
     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 3 - VALUE</span>
 <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 2 - undefined</span>
-</code></pre>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 2 - undefined</span></code></pre>
 <p>Ici, nous inscrivons des <strong>fonctions de callback</strong>  <code>function() {}</code> après l’exécution des <strong>événements</strong> <code>setTimeout, addEventListener, ...</code>. Le <strong>thread</strong> garde en mémoire la file d’exécution et joue les événements asynchrones dans l’ordre.</p>
 <h3>Programmation orientée objet</h3>
 <p>En JavaScript, tout est objet. Cependant, c’est un langage très peu typé, ce que TypeScript vient corriger à sa manière. Nous allons voir ce qui le caractérise.</p>
 <p>La norme ECMAScript 2015 (ES6) caractérise les objets de cette manière <a href="#bibliographie">[2]</a> :</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">ClassName</span> <span class="token punctuation">{</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">ClassName</span> <span class="token punctuation">{</span>
   <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <h3>var, let, const</h3>
 <p>Petit point sur ces mots clés avant les variables <a href="#bibliographie">[4]</a> : <code>let</code> ne permet l’accès aux variables que dans leur scope et après leur déclaration. On ne peut pas déclarer deux fois avec <code>let</code>. <code>const</code> permet quant à lui de ne pas réinitialiser une constante par erreur. <code>var</code> peut être redéclaré et causer des erreurs.</p>
 <p>On préfèrera utiliser <code>let</code> et délaisser <code>var</code> pour des raisons de clareté et de lisibilité.</p>
@@ -197,7 +195,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>Le binding dans les callbacks en JavaScript est une méthode pour s'assurer que la valeur de &quot;this&quot; dans une fonction de rappel correspond à l'objet attendu, et non à l'objet global.</p>
 <h3>Exemple de Binding dans les classes et les callbacks</h3>
 <p>Supposons que vous avez une classe <code>Person</code> avec une méthode que vous voulez utiliser cette méthode comme un callback.</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
   <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
@@ -205,19 +203,16 @@ console<span class="token punctuation">.</span><span class="token function">log<
 	<span class="token keyword">const</span> timeout <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 	    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span> <span class="token operator">===</span> timeout<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// true</span>
 	<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Ici, le contexte d’exécution de la fonction dans un callback (ici <code>setTimeout</code>) amène le <code>this</code> à avoir la valeur de la fonction elle-même. Ce n’est pas ce que l’on souhaite et il existe des méthodes pour l’éviter. La première consiste à ajouter à la fin de la fonction un <code>.bind(this)</code> correspondant au bon contexte d’exécution.</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">const</span> timeout <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> timeout <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 	    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span> <span class="token operator">===</span> timeout<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// true</span>
-	<span class="token punctuation">}</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+	<span class="token punctuation">}</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <h3>Bonne pratique : les fonctions fléchées !</h3>
 <p>On lit qu’à partir de ES6, nous pouvons utiliser des fonctions fléchées pour préserver le contexte d'exécution sans avoir à recourir à <code>.bind(this)</code>. Dans l'exemple précédent, cela donnerait :</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">const</span> timeout <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> timeout <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span> <span class="token operator">===</span> timeout<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// false</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
 </code></pre>
 <p>En effet, <code>this</code> fait référence au contexte dans lequel la fonction fléchée a été définie, et non à l'objet <code>timeout</code>. C'est une manière plus concise et souvent plus claire de gérer le contexte <code>this</code> dans les fonctions de rappel.</p>
 <p>Pour résumer, il existe de nombreuses manières de définir des fonctions en Javascript mais la fonction fléchée nous sera très utile pour éviter les ambigüités liées au contexte d’exécution.</p>

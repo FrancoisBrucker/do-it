@@ -201,7 +201,7 @@
 <h3>Présentation du JSON</h3>
 <p>Le <strong>JSON</strong> est un format de données très utilisé pour échanger des informations entre un serveur et un site web. Il est très simple à utiliser et à comprendre. Il est composé de <strong>paires clé/valeur</strong>. Les clés sont des <strong>chaînes de caractères</strong> et les valeurs peuvent être de différents types : <strong>chaînes de caractères, nombres, booléens, tableaux, objets ou null</strong>.</p>
 <p>Exemple :</p>
-<pre class="language-json " style="counter-reset: linenumber 0"><code class="language-json"><span class="token punctuation">{</span>
+<pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
   <span class="token property">"nom"</span><span class="token operator">:</span> <span class="token string">"Dupont"</span><span class="token punctuation">,</span>
   <span class="token property">"prenom"</span><span class="token operator">:</span> <span class="token string">"Jean"</span><span class="token punctuation">,</span>
   <span class="token property">"age"</span><span class="token operator">:</span> <span class="token number">42</span><span class="token punctuation">,</span>
@@ -212,8 +212,7 @@
     <span class="token property">"codePostal"</span><span class="token operator">:</span> <span class="token string">"75000"</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token property">"enfants"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"Marc"</span><span class="token punctuation">,</span> <span class="token string">"Marie"</span><span class="token punctuation">,</span> <span class="token string">"Julie"</span><span class="token punctuation">]</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Pour importer un fichier JSON dans un fichier JavaScript, on utilise la méthode <code>fetch()</code> que l'on verra plus loin.</p>
 <h3>Utilisation du DOM</h3>
 <p>Le <strong>DOM</strong> est un <strong>modèle de données</strong> qui représente les <strong>éléments HTML</strong> d'une page web. Il est composé de <strong>noeuds</strong> qui sont des <strong>éléments HTML</strong>. Ces éléments sont <strong>hiérarchisés</strong> et peuvent être <strong>sélectionnés</strong> à l'aide de <strong>sélecteurs</strong>. Le DOM est très utilisé pour <strong>modifier le contenu</strong> d'une page web, <strong>ajouter</strong> ou <strong>supprimer</strong> des éléments HTML.</p>
@@ -226,13 +225,12 @@
 <li>etc...</li>
 </ul>
 <p>Exemple :</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token comment">// Création d'un élément HTML</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token comment">// Création d'un élément HTML</span>
 <span class="token keyword">const</span> p <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'p'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">// Ajout d'un texte à l'élément HTML</span>
 p<span class="token punctuation">.</span>textContent <span class="token operator">=</span> <span class="token string">'Bonjour !'</span><span class="token punctuation">;</span>
 <span class="token comment">// Ajout de l'élément HTML à la page web</span>
-document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <h3>Présentation des API</h3>
 <p>Les <strong>API</strong> sont des <strong>interfaces</strong> qui permettent de <strong>récupérer des données</strong> depuis un serveur. Ces données peuvent être des <strong>données brutes</strong> ou des <strong>données structurées</strong>. Les API sont très utilisées pour <strong>récupérer des données</strong> depuis un serveur et les <strong>afficher</strong> sur une page web. Il existe de nombreuses API open source auxquelles ont peut accéder librement, par exemple : <strong>OpenWeatherMap</strong>, <strong>OpenFoodFacts</strong>, <strong>OpenStreetMap</strong>, <strong>OpenDataSoft</strong>, <strong>OpenDataFrance</strong>, <strong>OpenDataParis</strong>, etc.</p>
 <p>Pour accéder à une API, on peut également utiliser <strong>JavaScript</strong>. Il est possible d'utiliser <strong>XMLHttpRequest</strong> ou <strong>Fetch</strong>. Les deux méthodes sont très similaires. La méthode <strong>Fetch</strong> est plus récente et plus simple à utiliser. Elle est donc préférée.</p>
@@ -250,12 +248,11 @@ document<span class="token punctuation">.</span>body<span class="token punctuati
 <li><code>catch()</code> : permet de <strong>traiter</strong> les erreurs de la promesse.</li>
 </ul>
 <p>Exemple :</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">let</span> promise <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">let</span> promise <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">"Promesse résolue"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <h3>Présentation de Fetch</h3>
 <p>La méthode <strong>Fetch</strong> permet de <strong>récupérer des données</strong> depuis un serveur. Elle est très simple à utiliser et à comprendre. Elle est composée de <strong>deux étapes</strong> :</p>
 <ol>
@@ -263,7 +260,7 @@ document<span class="token punctuation">.</span>body<span class="token punctuati
 <li>On <strong>traite</strong> la réponse à l'aide de la méthode <code>json()</code>. Cette méthode retourne une <strong>promesse</strong>. On peut donc également utiliser la méthode <code>then()</code> pour <strong>traiter</strong> la réponse.</li>
 </ol>
 <p>Exemple :</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">"https://api.openweathermap.org/data/2.5/weather?q=Paris&amp;appid=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"</span><span class="token punctuation">)</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">"https://api.openweathermap.org/data/2.5/weather?q=Paris&amp;appid=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"</span><span class="token punctuation">)</span>
   <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span>
@@ -275,11 +272,10 @@ document<span class="token punctuation">.</span>body<span class="token punctuati
   <span class="token punctuation">}</span><span class="token punctuation">)</span>
   <span class="token punctuation">.</span><span class="token function">finally</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Requête terminée"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>La méthode <code>fetch()</code> utilise la méthode <code>GET</code> par défaut. Il est possible de <strong>modifier</strong> la méthode à l'aide de la propriété <code>method</code>. Il est également possible de <strong>modifier</strong> les <strong>en-têtes</strong> de la requête à l'aide de la propriété <code>headers</code>. Il est possible de <strong>modifier</strong> les <strong>paramètres</strong> de la requête à l'aide de la propriété <code>body</code>.</p>
 <p>Exemple :</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">"https://api.openweathermap.org/data/2.5/weather"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">"https://api.openweathermap.org/data/2.5/weather"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
   <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">"POST"</span><span class="token punctuation">,</span>
   <span class="token literal-property property">headers</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token string-property property">"Content-Type"</span><span class="token operator">:</span> <span class="token string">"application/json"</span><span class="token punctuation">,</span>
@@ -300,17 +296,15 @@ document<span class="token punctuation">.</span>body<span class="token punctuati
   <span class="token punctuation">}</span><span class="token punctuation">)</span>
   <span class="token punctuation">.</span><span class="token function">finally</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Requête terminée"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <h3>Présentation du Local Storage</h3>
 <p>Le <strong>Local Storage</strong> est un <strong>espace de stockage</strong> qui permet de <strong>stocker des données</strong> sur le <strong>navigateur</strong> de l'utilisateur. Il est possible de <strong>stocker des données</strong> sous forme de <strong>chaîne de caractères</strong>. Il est possible de <strong>stocker des données</strong> de manière <strong>permanente</strong> ou <strong>temporaire</strong>. Il est possible de <strong>stocker des données</strong> de manière <strong>sécurisée</strong> ou <strong>non sécurisée</strong>. Il est possible de <strong>stocker des données</strong> de manière <strong>synchronisée</strong> ou <strong>non synchronisée</strong>.</p>
 <p>Il est possible de <strong>stocker des données</strong> dans le <strong>Local Storage</strong> à l'aide de la méthode <code>setItem()</code>. En paramètre, on passe la <strong>clé</strong> et la <strong>valeur</strong> de la donnée à stocker. Il est possible de <strong>récupérer des données</strong> dans le <strong>Local Storage</strong> à l'aide de la méthode <code>getItem()</code>. En paramètre, on passe la <strong>clé</strong> de la donnée à récupérer. Il est possible de <strong>supprimer des données</strong> dans le <strong>Local Storage</strong> à l'aide de la méthode <code>removeItem()</code>. En paramètre, on passe la <strong>clé</strong> de la donnée à supprimer. Il est possible de <strong>supprimer toutes les données</strong> dans le <strong>Local Storage</strong> à l'aide de la méthode <code>clear()</code>.</p>
 <p>Exemple :</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span><span class="token string">"key"</span><span class="token punctuation">,</span> <span class="token string">"value"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-javascript"><code class="language-javascript">localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span><span class="token string">"key"</span><span class="token punctuation">,</span> <span class="token string">"value"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">"key"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 localStorage<span class="token punctuation">.</span><span class="token function">removeItem</span><span class="token punctuation">(</span><span class="token string">"key"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-localStorage<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+localStorage<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <h3>Présentation des librairies</h3>
 <p>Les <strong>librairies</strong> sont des <strong>bibliothèques</strong> qui contiennent des <strong>fonctions</strong> et des <strong>méthodes</strong> qui permettent de <strong>réaliser des tâches</strong> plus rapidement. Il existe de nombreuses librairies, par exemple : <strong>jQuery</strong>, <strong>Bootstrap</strong>, <strong>React</strong>, <strong>Vue</strong>, <strong>Angular</strong>, <strong>Lodash</strong>, <strong>Moment</strong>, <strong>Chart.js</strong>, <strong>Leaflet</strong>, <strong>D3</strong>, etc.</p>
 <p>Pour utiliser une librairie, il faut la <strong>télécharger</strong> et la <strong>inclure</strong> dans notre page web. Il est également possible d'utiliser des <strong>CDN</strong> (Content Delivery Network) qui permettent d'inclure une librairie dans notre page web sans avoir à la télécharger. Les librairies sont très utiles pour, par exemple, <strong>réaliser des animations</strong> ou pour <strong>générer des graphiques</strong>.</p>
@@ -328,14 +322,12 @@ localStorage<span class="token punctuation">.</span><span class="token function"
 <p><img src="https://i.vimeocdn.com/video/822498516-042feb94146f0232cf0caa3c3d498aee6056890e327b1093b3eb3d838dbd686e-d_640" alt="Introduction à jQuery"></p>
 <p>Un exemple de librairie est <strong>jQuery</strong> qui permet de <strong>sélectionner</strong> des éléments dans le <strong>DOM</strong> à l'aide de la méthode <code>$(selector)</code>. En paramètre, on passe le <strong>sélecteur</strong> de l'élément à sélectionner, qui peut être un <strong>sélecteur CSS</strong> ou un <strong>sélecteur jQuery</strong>. Cette méthode retourne un <strong>objet jQuery</strong> qui contient des <strong>méthodes</strong> qui permettent de <strong>modifier</strong> les éléments sélectionnés.</p>
 <p>Pour utiliser jQuery, il faut inclure le fichier <code>jquery.min.js</code> dans notre page web comme ceci :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://code.jquery.com/jquery-3.6.0.min.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
-</code></pre>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://code.jquery.com/jquery-3.6.0.min.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
 <p>On pourra ensuite utiliser les méthodes de jQuery comme ceci :</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token comment">// Sans jQuery</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token comment">// Sans jQuery</span>
 document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"h1"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>style<span class="token punctuation">.</span>color <span class="token operator">=</span> <span class="token string">"red"</span><span class="token punctuation">;</span>
 <span class="token comment">// Avec jQuery</span>
-<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"h1"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token string">"color"</span><span class="token punctuation">,</span> <span class="token string">"red"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"h1"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token string">"color"</span><span class="token punctuation">,</span> <span class="token string">"red"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p><a href="../">&lt;-- Retour</a></p>
 
 

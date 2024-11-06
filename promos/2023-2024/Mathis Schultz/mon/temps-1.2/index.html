@@ -168,7 +168,7 @@
 <li>Choisir ses couleurs</li>
 </ol>
 <p>Choisir des couleurs est extrêmement simple avec TailwindCSS, il suffit de ce rendre dans le dossier tailwind.config.js et de rajouter les couleurs que l'on souhaite utiliser dans le thème :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token comment">/** @type {import('tailwindcss').Config} */</span>
+<pre class="language-js"><code class="language-js"><span class="token comment">/** @type {import('tailwindcss').Config} */</span>
 module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token literal-property property">content</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'*.html'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
   <span class="token literal-property property">theme</span><span class="token operator">:</span> <span class="token punctuation">{</span>
@@ -180,8 +180,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
     <span class="token literal-property property">extend</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token literal-property property">plugins</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Ici, j'ai implémenter le bleu de Centrale ainsi que les deux gris majoritairement utilisé.</p>
 <ol start="2">
 <li>Choisir des typographies :</li>
@@ -209,7 +208,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <ul>
 <li>transformer votre fichier input.css : coller le @import de votre presse-papier puis rajouter les lignes concernant le layer.</li>
 </ul>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token atrule"><span class="token rule">@import</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">'https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&amp;family=Barlow:wght@100&amp;display=swap'</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span></span>
+<pre class="language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@import</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">'https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&amp;family=Barlow:wght@100&amp;display=swap'</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span></span>
 <span class="token atrule"><span class="token rule">@tailwind</span> base<span class="token punctuation">;</span></span>
 <span class="token atrule"><span class="token rule">@tailwind</span> components<span class="token punctuation">;</span></span>
 <span class="token atrule"><span class="token rule">@tailwind</span> utilities<span class="token punctuation">;</span></span>
@@ -218,15 +217,13 @@ module<span class="token punctuation">.</span>exports <span class="token operato
     <span class="token selector">html</span> <span class="token punctuation">{</span>
         <span class="token property">font-family</span><span class="token punctuation">:</span> Barlow<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <ul>
 <li>Enfin, la dernière étape consiste à ajouter le code suivant au fichier tailwind.config.js :</li>
 </ul>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">    <span class="token literal-property property">fontFamily</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+<pre class="language-js"><code class="language-js">    <span class="token literal-property property">fontFamily</span><span class="token operator">:</span> <span class="token punctuation">{</span>
       <span class="token string-property property">'custom'</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'Barlow'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-</code></pre>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
 <p>Voilà le résultat avec la charte de Centrale : une typographie Barlow et les nuances de bleus et de gris :</p>
 <img src="site_charte.png">
 <p>Image du site avec la charte de Centrale</p>
@@ -241,7 +238,7 @@ L'objectif est d'avoir :</p>
 </ul>
 <p>Cette partie ne propose pas de mettre en oeuvre la partie Java, ainsi bien que les boutons ou case puissent être rempli, il n'y a que la forme qui n'est créé.</p>
 <p><strong>Un champ à remplir</strong></p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>mb-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>mb-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
           <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>inputField<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>block text-gray-700 font-bold mb-2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Text Field Label<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
           <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span>
             <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span>
@@ -250,10 +247,9 @@ L'objectif est d'avoir :</p>
             <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>w-full px-3 py-2 border rounded-lg text-gray-700 focus:outline-none focus:border-blue-500<span class="token punctuation">"</span></span>
             <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Enter text<span class="token punctuation">"</span></span>
           <span class="token punctuation">/></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-</code></pre>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
 <p><strong>Une question à choix multiple</strong></p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>mb-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>mb-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
           <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>selectField<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>block text-gray-700 font-bold mb-2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Select Field Label<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
           <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>select</span>
             <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>selectField<span class="token punctuation">"</span></span>
@@ -264,10 +260,9 @@ L'objectif est d'avoir :</p>
             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>option2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Option 2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>option3<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Option 3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
           <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>select</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-</code></pre>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
 <p><strong>Une case à cocher</strong></p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>mb-6<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>mb-6<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
           <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>block text-gray-700 font-bold mb-2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>mr-2 leading-tight<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span> Checkbox Label
           <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
@@ -277,18 +272,16 @@ L'objectif est d'avoir :</p>
           <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>block text-gray-700 font-bold<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>radio<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>mr-2 leading-tight<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>radioGroup<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>radioOption2<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span> Radio Option 2
           <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-</code></pre>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
 <p><strong>Un bouton soumettre</strong></p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex items-center justify-between<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<pre class="language-html"><code class="language-html">        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex items-center justify-between<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
           <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span>
             <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span>
             <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:bg-blue-600<span class="token punctuation">"</span></span>
           <span class="token punctuation">></span></span>
             Submit
           <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-</code></pre>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
 <img src="questionnaire.png">
 <p>Image du site avec un questionnaire simple</p>
 <h2 id="h5"> Outils complémentaires </h2>

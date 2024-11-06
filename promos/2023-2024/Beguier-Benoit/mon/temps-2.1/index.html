@@ -208,14 +208,13 @@ J'ai effectué l'ensemble des exercices proposés par M. Brucker sur les pages q
 <h2>Découverte de la bibliothèque Seaborn</h2>
 <h3>Introduction</h3>
 <p>Suite aux recommandations d'<a href="https://www.facebook.com/olivier.bastide.902">Olivier Bastide</a>, qui, après avoir suivi ses semaines de filières métier en ADAD, m'a chanté les louanges de la bibliothèque <a href="https://seaborn.pydata.org/">Seaborn</a>, je décide de lui faire confiance et d'apprendre à utiliser cette bibliothèque. Basée sur matplotlib, cette bibliothèque bénéficie donc de l'intégration sur tous les environnements supportés par matplotlib, ce qui est très pratique. Seaborn est plutôt orientée statistique et analyse des données, ce qui me convient parfaitement pour ce que je veux en faire. Il ne suffit que d'un</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">pip install seaborn
-</code></pre>
+<pre class="language-python"><code class="language-python">pip install seaborn</code></pre>
 <p>pour installer la bibliothèque.</p>
 <p><img src="Seaborn.png" alt="Seaborn"></p>
 <h3>Analyse de la documentation fournie sur le site Seaborn (2 heures)</h3>
 <p>J'ai d'abord fait un tour sur la page <a href="https://seaborn.pydata.org/tutorial/introduction">Introduction</a> de Seaborn. Une rapide présentation des possibilités permises par la bibliothèque sont montrées et on a une première approche avec les méthodes de la bibliothèque.</p>
 <p>L'ensemble des exemples fournis par Seaborn utilisent des <em>datasets</em> pré-existants. Il est possible de les consulter avec la commande</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">sns<span class="token punctuation">.</span>get_dataset_names<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<pre class="language-python"><code class="language-python">sns<span class="token punctuation">.</span>get_dataset_names<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
 <span class="token punctuation">[</span><span class="token string">'anagrams'</span><span class="token punctuation">,</span>
  <span class="token string">'anscombe'</span><span class="token punctuation">,</span>
@@ -238,8 +237,7 @@ J'ai effectué l'ensemble des exercices proposés par M. Brucker sur les pages q
  <span class="token string">'seaice'</span><span class="token punctuation">,</span>
  <span class="token string">'taxis'</span><span class="token punctuation">,</span>
  <span class="token string">'tips'</span><span class="token punctuation">,</span>
- <span class="token string">'titanic'</span><span class="token punctuation">]</span>
-</code></pre>
+ <span class="token string">'titanic'</span><span class="token punctuation">]</span></code></pre>
 <p>Je m'attarde ensuite sur la partie <a href="https://seaborn.pydata.org/tutorial/distributions.html">Visualizing distributions of data</a> car c'est ce que j'aimerais effectuer dans la suite de ce MON.
 J'apprends d'abord à paramétrer l'affichage des histogrammes, dans les cas simples et dans les cas de données multiples. Seaborn permet par exemple de sélectionner <strong>très facilement</strong> le mode d'affichage de données multiples sur un même graphique. En jouant sur deux paramètres, on peut alors empiler (<em>stack</em>) les barres des données au lieu de les superposer, les faire afficher en <em>step</em>, ou encore les afficher côte-à-côte.</p>
 <p><img src="histo.png" alt="histo"></p>
@@ -252,17 +250,15 @@ J'apprends d'abord à paramétrer l'affichage des histogrammes, dans les cas sim
 <li><em><code>heatmap()</code></em> que je trouve très stylé même si je n'en vois pas l'utilisation pour les données que j'utilise.</li>
 </ul>
 <p>Dédicace à la fonction <em><code>pairplot()</code></em> qui permet, lorsque l'on étudie un grand <em>dataset</em> et que l'on ne connaît pas les relations entre chaque variable, d'afficher la distribution univariée de chaque variable ainsi que leurs relations par pair.</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">penguins <span class="token operator">=</span> sns<span class="token punctuation">.</span>load_dataset<span class="token punctuation">(</span><span class="token string">"penguins"</span><span class="token punctuation">)</span>
-sns<span class="token punctuation">.</span>pairplot<span class="token punctuation">(</span>penguins<span class="token punctuation">)</span>
-</code></pre>
+<pre class="language-python"><code class="language-python">penguins <span class="token operator">=</span> sns<span class="token punctuation">.</span>load_dataset<span class="token punctuation">(</span><span class="token string">"penguins"</span><span class="token punctuation">)</span>
+sns<span class="token punctuation">.</span>pairplot<span class="token punctuation">(</span>penguins<span class="token punctuation">)</span></code></pre>
 <p><strong>Output :</strong>
 <img src="pairplot.png" alt="pairplot"></p>
 <h4>Vidéos Youtube (1 heure)</h4>
 <p>J'ai ensuite décidé de regarder plusieurs vidéos Youtube sur la bibliothèque Seaborn, car en général il y a souvent des applications ou des pratiques que je n'aurais pas soupconnées en lisant uniquement la documentation.</p>
 <p>J'ai d'abord regardé la vidéo de Gaelim Holland : <a href="https://www.youtube.com/watch?v=LnGz20B3nTU"><em>How to Visualize Data in Python Using Seaborn | Seaborn Tutorial.</em></a>. Honnêtement je ne la recommande pas, car le contenu n'est pas très différent de la documentation, et il commet quelques imprécisions malvenues (par exemple dans <code>import seaborn as sb</code>, il affirme que <code>sb</code> est une variable alors que c'est un alias).</p>
 <p>Je retiens cependant la ligne de commande</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">data<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
+<pre class="language-python"><code class="language-python">data<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 <p>qui permet d'afficher les premières lignes du dataset, ce qui est très pratique en particulier dans les Notebooks.</p>
 <p>J'ai ensuite regardé la vidéo <a href="https://www.youtube.com/watch?v=6GUZXDef2U0"><em>Seaborn Tutorial : Seaborn Full Course</em></a> de Derek Banas. Claire et directe, elle permet de revoir toutes les possibilités offertes par Seaborn. Bonus : son notebook qu'il rend disponible dans la description.</p>
 <h2>Mise en pratique en reprenant l'exemple du MON 1.1</h2>

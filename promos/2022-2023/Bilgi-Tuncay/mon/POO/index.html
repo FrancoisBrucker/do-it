@@ -214,10 +214,9 @@ il est très facile en python de créer callables qui prennent en paramètre d'a
 <p>Comme dit précédemment, les getters et setters sont dans une position assez particulière en python.
 D'un coté, ils sont indispensable pour avoir un code maintenable mais de l'autre, ils vont a l'encontre de la philosophie de python. En effet, ils rajoutent de la complexité dans le code et ils perdent un de leur role qui est d'assurer le coté privé d'un attribut.
 Ainsi <code>dé.position='lol'</code> peut être utilisé malgré le fait que l'on a définit :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">    <span class="token keyword">def</span> <span class="token function">set_position</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>value<span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment">#setter qui s'assure que la valeur de position reste un int</span>
+<pre class="language-python"><code class="language-python">    <span class="token keyword">def</span> <span class="token function">set_position</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>value<span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment">#setter qui s'assure que la valeur de position reste un int</span>
         <span class="token keyword">assert</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span><span class="token builtin">int</span><span class="token punctuation">)</span>
-        dé<span class="token punctuation">.</span>position <span class="token operator">=</span> value
-</code></pre>
+        dé<span class="token punctuation">.</span>position <span class="token operator">=</span> value</code></pre>
 <p>comme on peut le voir avec la classe Dice et son fichier main.
 Pour éviter se comportement, on créer des @property, qui permettent d’appeler les setters que l'on a implémenté, même avec <code>dé.position</code>. Ce sont donc des décorateurs pré-construits dans python avec une syntaxe particulière. Les créateurs de python préconisent cette manière de faire.
 <a href="https://www.youtube.com/watch?v=45R-gynfbnw&amp;list=PL2CXLryTKuwwV4NzULvBuchMipWgOvja-&amp;index=1&amp;ab_channel=CoursPython">Tuto vidéo disponible ici</a> et un <a href="https://www.programiz.com/python-programming/property">un explication très détaillée ici</a></p>

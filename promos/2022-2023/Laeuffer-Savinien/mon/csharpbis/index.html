@@ -183,30 +183,25 @@ L'avantage de travailler avec des conteneurs est de garantir une stabilité et s
 Ce repository est accessible à l'adresse suivate:
 <a href="https://github.com/MicrosoftDocs/mslearn-dotnetmicroservices/">https://github.com/MicrosoftDocs/mslearn-dotnetmicroservices/</a></p>
 <p>Dans VS Code, on ouvre le dossier <code>backend</code> et dans le fichier Dockerfile vide on colle le code suivant afin de le configurer:</p>
-<pre class="language-dockerfile " style="counter-reset: linenumber 0"><code class="language-dockerfile"><span class="token instruction"><span class="token keyword">FROM</span> mcr.microsoft.com/dotnet/sdk:6.0 <span class="token keyword">AS</span> build</span>
+<pre class="language-dockerfile"><code class="language-dockerfile"><span class="token instruction"><span class="token keyword">FROM</span> mcr.microsoft.com/dotnet/sdk:6.0 <span class="token keyword">AS</span> build</span>
 <span class="token instruction"><span class="token keyword">WORKDIR</span> /src</span>
 <span class="token instruction"><span class="token keyword">COPY</span> backend.csproj .</span>
 <span class="token instruction"><span class="token keyword">RUN</span> dotnet restore</span>
 <span class="token instruction"><span class="token keyword">COPY</span> . .</span>
-<span class="token instruction"><span class="token keyword">RUN</span> dotnet publish -c release -o /app</span>
-</code></pre>
+<span class="token instruction"><span class="token keyword">RUN</span> dotnet publish -c release -o /app</span></code></pre>
 <p>En dessous de la dernière on ajoute les lignes suivantes et on enregistre le Dockerfile:</p>
-<pre class="language-dockerfile " style="counter-reset: linenumber 0"><code class="language-dockerfile"><span class="token instruction"><span class="token keyword">FROM</span> mcr.microsoft.com/dotnet/aspnet:6.0</span>
+<pre class="language-dockerfile"><code class="language-dockerfile"><span class="token instruction"><span class="token keyword">FROM</span> mcr.microsoft.com/dotnet/aspnet:6.0</span>
 <span class="token instruction"><span class="token keyword">WORKDIR</span> /app</span>
 <span class="token instruction"><span class="token keyword">EXPOSE</span> 80</span>
 <span class="token instruction"><span class="token keyword">EXPOSE</span> 443</span>
 <span class="token instruction"><span class="token keyword">COPY</span> <span class="token options"><span class="token property">--from</span><span class="token punctuation">=</span><span class="token string">build</span></span> /app .</span>
-<span class="token instruction"><span class="token keyword">ENTRYPOINT</span> [<span class="token string">"dotnet"</span>, <span class="token string">"backend.dll"</span>]</span>
-</code></pre>
+<span class="token instruction"><span class="token keyword">ENTRYPOINT</span> [<span class="token string">"dotnet"</span>, <span class="token string">"backend.dll"</span>]</span></code></pre>
 <p>Dans le terminal, on accède au dossier contenant ce fichier et on créer l'image à partir de la commande suivante:</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">docker</span> build <span class="token parameter variable">-t</span> backend1 <span class="token builtin class-name">.</span>
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">docker</span> build <span class="token parameter variable">-t</span> backend1 <span class="token builtin class-name">.</span></code></pre>
 <p>Au bout d'un certant temps, l'image a été générée et on peut retrouver toutes les images sur notre ordinateur à partir de la commande</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">docker</span> images
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">docker</span> images</code></pre>
 <p>Si on veut exécuter l'API localement sur le port 5200 on utilise la commande</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">docker</span> run <span class="token parameter variable">-it</span> <span class="token parameter variable">--rm</span> <span class="token parameter variable">-p</span> <span class="token number">5200</span>:80 <span class="token parameter variable">--name</span> backendcontainer backend
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">docker</span> run <span class="token parameter variable">-it</span> <span class="token parameter variable">--rm</span> <span class="token parameter variable">-p</span> <span class="token number">5200</span>:80 <span class="token parameter variable">--name</span> backendcontainer backend</code></pre>
 <p>On peut maintenant accéder à notre API à partir de la racine <a href="http://localhost:5200/">http://localhost:5200/</a></p>
 <h2>Utilité de Docker Compose</h2>
 <p>Docker Compose est un outil opensource associé à Docker qui permet la gestion d'applications multi-conteneurs. C'est à dire qu'il facilite la gestion de plusieurs conteneurs Docker au sein d'une même application. Cet outil est adapté à l'architecture de multiservices puisque chaque service peut avoir son propre conteneur. Il permet notamment d'exécuter tous les services en une fois afin d'exécuter l'application toute entière.</p>
@@ -219,7 +214,7 @@ Ce repository est accessible à l'adresse suivate:
 <p>Un fichier YAML est utilisé avec Docker Compose afin de configurer les différents services d'une application.
 Docker Compose est une fonctionnalité de Docker qui est installé par défaut lorsque l'on a Docker.</p>
 <p>Dans VS Code, toujours dans le même répertoire, on peut trouver un fichier <code>docker-compose.yml</code> vide où l'on ajoute le code suivant:</p>
-<pre class="language-yml " style="counter-reset: linenumber 0"><code class="language-yml"><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">'3.4'</span>
+<pre class="language-yml"><code class="language-yml"><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">'3.4'</span>
 
 <span class="token key atrule">services</span><span class="token punctuation">:</span> 
 
@@ -240,14 +235,12 @@ Docker Compose est une fonctionnalité de Docker qui est installé par défaut l
       <span class="token key atrule">context</span><span class="token punctuation">:</span> backend
       <span class="token key atrule">dockerfile</span><span class="token punctuation">:</span> Dockerfile
     <span class="token key atrule">ports</span><span class="token punctuation">:</span> 
-      <span class="token punctuation">-</span> <span class="token string">"5000:80"</span>
-</code></pre>
+      <span class="token punctuation">-</span> <span class="token string">"5000:80"</span></code></pre>
 <p>Ce code permet de créer la partie front-end du site inter dans un premier temps, et il indique à Docker quel est le chemin vers le Dockerfile du front-end afin de le générer. Un port est choisi pour la partie back-end.
 Ensuite le service du back-end est créé et est généré à partir du Dockerfile créé précédemment.</p>
 <p>Afin de générer les images conteneur, on utilise la commande <code>docker-compose build</code> dans notre terminal.
 Finalement pour démarrer les deux services simultanément grâce à Docker Compose, on utilise la commande suivante:</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">docker-compose</span> up
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">docker-compose</span> up</code></pre>
 <p>On peut donc accéder en local à notre site sur le port 5902 à l'adresse <a href="http://localhost:5902">http://localhost:5902</a>
 Nous avons donc réussi à conteneuriser le service d'API et le front-end séparément et de les générer/exécuter simultanément grâce à Docker Compose</p>
 <h2>Resources</h2>

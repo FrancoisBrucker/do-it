@@ -244,11 +244,10 @@
 </li>
 <li>
 <p><strong>Corps de la Requête (Body) :</strong> Données envoyées, utilisé avec <code>POST</code>, <code>PUT</code>, etc. Ex. pour créer un utilisateur :</p>
-<pre class="language-json " style="counter-reset: linenumber 0"><code class="language-json"><span class="token punctuation">{</span>
+<pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
     <span class="token property">"nom"</span><span class="token operator">:</span> <span class="token string">"Jean Dupont"</span><span class="token punctuation">,</span>
     <span class="token property">"email"</span><span class="token operator">:</span> <span class="token string">"jean.dupont@example.com"</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 </li>
 <li>
 <p><strong>Code de Statut :</strong> Indique si l'opération a réussi, comme <code>200 OK</code> ou <code>404 Not Found</code>.</p>
@@ -389,13 +388,12 @@
 <li><strong>Suggestions de correction</strong> : Des orientations sur la façon de corriger l'erreur.</li>
 </ul>
 <p><strong>Exemple de réponse JSON pour une erreur 400 :</strong></p>
-<pre class="language-json " style="counter-reset: linenumber 0"><code class="language-json"><span class="token punctuation">{</span>
+<pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
   <span class="token property">"error"</span><span class="token operator">:</span> <span class="token string">"Bad Request"</span><span class="token punctuation">,</span>
   <span class="token property">"message"</span><span class="token operator">:</span> <span class="token string">"Le champ 'email' est obligatoire."</span><span class="token punctuation">,</span>
   <span class="token property">"code"</span><span class="token operator">:</span> <span class="token number">400</span><span class="token punctuation">,</span>
   <span class="token property">"timestamp"</span><span class="token operator">:</span> <span class="token string">"2024-10-14T12:00:00Z"</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <h3><strong>Traitement des Exceptions sur le Serveur</strong></h3>
 <p>Le traitement des exceptions est responsable de la capture des erreurs inattendues. Les exceptions internes doivent être enregistrées, mais jamais envoyées directement au client.</p>
 <h3><strong>Bonnes Pratiques de Traitement des Erreurs</strong></h3>

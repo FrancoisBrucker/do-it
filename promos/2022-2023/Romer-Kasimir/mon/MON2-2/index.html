@@ -222,8 +222,7 @@ Other special use cases are <strong>OS and driver development</strong> because s
 </ul>
 <h4>Instructions</h4>
 <p>In general, an instruction in ARM is constructed as following (based on <a href="https://azeria-labs.com/arm-instruction-set-part-3/#:~:text=INTRODUCTION%20TO%20ARM%20INSTRUCTIONS">this article</a>):</p>
-<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm"><span class="token instruction keyword">MNEMONIC</span>{S}{condition} {Rd}<span class="token punctuation">,</span> Operand1<span class="token punctuation">,</span> Operand2
-</code></pre>
+<pre class="language-armasm"><code class="language-armasm"><span class="token instruction keyword">MNEMONIC</span>{S}{condition} {Rd}<span class="token punctuation">,</span> Operand1<span class="token punctuation">,</span> Operand2</code></pre>
 <ul>
 <li>MNEMONIC     - Short name (mnemonic) of the instruction (e.g. ADD, MOV, LDR, ...). It doesn't matter if the mnemonic is in upper or lower case.</li>
 <li>{S}          - An optional suffix. If S is specified, the condition flags are updated on the result of the operation</li>
@@ -234,57 +233,46 @@ Other special use cases are <strong>OS and driver development</strong> because s
 </ul>
 <h5>Entry point</h5>
 <p>The emulator automatically inserts the first two lines of the program automatically:</p>
-<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm">.global _start
-_start:
-</code></pre>
+<pre class="language-armasm"><code class="language-armasm">.global _start
+_start:</code></pre>
 <p><em>_start:</em> is a label that is used to divide the code into segments. If we go to a label, we execute the code below this label. <em>.global</em> makes the start label globally accessible.</p>
 <h5>Move and load</h5>
 <p>The <em>MOV</em> instruction moves a value from the source register to the destination register. The syntax is:</p>
-<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm"><span class="token instruction keyword">MOV</span> <span class="token operator">&lt;</span>destination register<span class="token operator">></span><span class="token punctuation">,</span> <span class="token operator">&lt;</span>source register<span class="token operator">></span> or <span class="token operator">&lt;</span>value<span class="token operator">></span>
-</code></pre>
+<pre class="language-armasm"><code class="language-armasm"><span class="token instruction keyword">MOV</span> <span class="token operator">&lt;</span>destination register<span class="token operator">></span><span class="token punctuation">,</span> <span class="token operator">&lt;</span>source register<span class="token operator">></span> or <span class="token operator">&lt;</span>value<span class="token operator">></span></code></pre>
 <p>The <em>LDR</em> instruction loads a value from a memory address to the destination register:</p>
-<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm"><span class="token instruction keyword">LDR</span> <span class="token operator">&lt;</span>destination register<span class="token operator">></span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">&lt;</span>register where an address is stored<span class="token operator">></span><span class="token punctuation">]</span>
-</code></pre>
+<pre class="language-armasm"><code class="language-armasm"><span class="token instruction keyword">LDR</span> <span class="token operator">&lt;</span>destination register<span class="token operator">></span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">&lt;</span>register where an address is stored<span class="token operator">></span><span class="token punctuation">]</span></code></pre>
 <p>A value can be a number or a label. The value is stored in the destination register. If it is a number, it must be preceded by a #. So the first instructions can be:</p>
-<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm">.global _start
+<pre class="language-armasm"><code class="language-armasm">.global _start
 _start:
     <span class="token instruction keyword">MOV</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token operator">#</span><span class="token number">30</span>         <span class="token comment">; move the decimal value 30 to register r0 </span>
     <span class="token instruction keyword">MOV</span> <span class="token register symbol">r1</span><span class="token punctuation">,</span> <span class="token operator">#</span><span class="token number">0x1F</span>       <span class="token comment">; move the hex value 0x1F (31 decimal) to register r1</span>
     <span class="token instruction keyword">MOV</span> <span class="token register symbol">r2</span><span class="token punctuation">,</span> <span class="token register symbol">r0</span>          <span class="token comment">; move the value from register r0 in register r2</span>
     <span class="token instruction keyword">MOV</span> <span class="token register symbol">r3</span><span class="token punctuation">,</span> <span class="token number">0x20ffab12</span>  <span class="token comment">; store a specific memory address in register r3</span>
-    <span class="token instruction keyword">LDR</span> <span class="token register symbol">r4</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token register symbol">r3</span><span class="token punctuation">]</span>        <span class="token comment">; go to the address that is stored in r3 and load the value that is found there   into r4</span>
-</code></pre>
+    <span class="token instruction keyword">LDR</span> <span class="token register symbol">r4</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token register symbol">r3</span><span class="token punctuation">]</span>        <span class="token comment">; go to the address that is stored in r3 and load the value that is found there   into r4</span></code></pre>
 <h5>Comments</h5>
 <p>Comments are used to explain the code. They are ignored by the assembler and therefore not executed by the CPU. The syntax for comments in assembly is:</p>
-<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm"><span class="token comment">; &lt;comment></span>
-</code></pre>
+<pre class="language-armasm"><code class="language-armasm"><span class="token comment">; &lt;comment></span></code></pre>
 <p>Unfortunately, the CPUlator emulator can't handle comments in this style, so for CPUlator, the comments are written in C style (<em>//</em>):</p>
-<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm"><span class="token operator">/</span><span class="token operator">/</span> <span class="token operator">&lt;</span>comment<span class="token operator">></span>
-</code></pre>
+<pre class="language-armasm"><code class="language-armasm"><span class="token operator">/</span><span class="token operator">/</span> <span class="token operator">&lt;</span>comment<span class="token operator">></span></code></pre>
 <p>Note that this won't be recognized by any ARM assembler in the real world.</p>
 <h5>End the program</h5>
 <p>To end the program, we need to make a system call to let the operating system know that the program has finished. The syntax for a system call is:</p>
-<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm"><span class="token instruction keyword">MOV</span> <span class="token register symbol">r7</span><span class="token punctuation">,</span> <span class="token operator">&lt;</span>system call number<span class="token operator">></span>  <span class="token comment">; move the system call number to the r7 register. The system call number for exit is 1.</span>
-<span class="token instruction keyword">SWI</span> <span class="token operator">&lt;</span>interrupt number<span class="token operator">></span>        <span class="token comment">; make the system call by interrupting the CPU (SWI = software interrupt).</span>
-</code></pre>
+<pre class="language-armasm"><code class="language-armasm"><span class="token instruction keyword">MOV</span> <span class="token register symbol">r7</span><span class="token punctuation">,</span> <span class="token operator">&lt;</span>system call number<span class="token operator">></span>  <span class="token comment">; move the system call number to the r7 register. The system call number for exit is 1.</span>
+<span class="token instruction keyword">SWI</span> <span class="token operator">&lt;</span>interrupt number<span class="token operator">></span>        <span class="token comment">; make the system call by interrupting the CPU (SWI = software interrupt).</span></code></pre>
 <p>When the OS receives the interrupt, it looks at the r7 register to see which system call was made. In this case, it is the exit system call (1), so the OS knows that the program has finished and can free the memory that was allocated for the program. In the emulator, software interrupts are not supported, but in later real-world use, this is how a program is finished.</p>
 <h5>Addressing modes</h5>
 <p>There are different ways to address the memory. The most common ones are:</p>
 <p><strong>immediate addressing</strong>: the value is stored in the instruction itself</p>
-<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm"><span class="token instruction keyword">MOV</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token operator">#</span><span class="token number">30</span> <span class="token comment">; move the decimal value 30 to the r0 register</span>
-</code></pre>
+<pre class="language-armasm"><code class="language-armasm"><span class="token instruction keyword">MOV</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token operator">#</span><span class="token number">30</span> <span class="token comment">; move the decimal value 30 to the r0 register</span></code></pre>
 <p><strong>register direct addressing</strong>: the value is stored in a register</p>
-<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm"><span class="token instruction keyword">MOV</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token register symbol">r1</span> <span class="token comment">; move the value in the r1 register to the r0 register</span>
-</code></pre>
+<pre class="language-armasm"><code class="language-armasm"><span class="token instruction keyword">MOV</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token register symbol">r1</span> <span class="token comment">; move the value in the r1 register to the r0 register</span></code></pre>
 <p><strong>register indirect addressing</strong>: the value is stored in the memory address that is stored in a register</p>
-<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm"><span class="token instruction keyword">LDR</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token register symbol">r1</span><span class="token punctuation">]</span> <span class="token comment">; load the value in the memory address that is stored in the r1 register to the r0 register</span>
-</code></pre>
+<pre class="language-armasm"><code class="language-armasm"><span class="token instruction keyword">LDR</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token register symbol">r1</span><span class="token punctuation">]</span> <span class="token comment">; load the value in the memory address that is stored in the r1 register to the r0 register</span></code></pre>
 <h5>Arithmetic operations</h5>
 <p>The most basic arithmetic operations (addition, subtraction, multiplication) are very easy to use in ARM:</p>
-<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm"><span class="token instruction keyword">ADD</span> <span class="token register symbol">r2</span><span class="token punctuation">,</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token register symbol">r1</span> <span class="token comment">; add r0 and r1 and store the value in r2</span>
+<pre class="language-armasm"><code class="language-armasm"><span class="token instruction keyword">ADD</span> <span class="token register symbol">r2</span><span class="token punctuation">,</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token register symbol">r1</span> <span class="token comment">; add r0 and r1 and store the value in r2</span>
 <span class="token instruction keyword">SUB</span> <span class="token register symbol">r2</span><span class="token punctuation">,</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token register symbol">r1</span> <span class="token comment">; r2 = r0 - r1</span>
-<span class="token instruction keyword">MUL</span> <span class="token register symbol">r2</span><span class="token punctuation">,</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token register symbol">r1</span> <span class="token comment">; r2 = r0 * r1</span>
-</code></pre>
+<span class="token instruction keyword">MUL</span> <span class="token register symbol">r2</span><span class="token punctuation">,</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token register symbol">r1</span> <span class="token comment">; r2 = r0 * r1</span></code></pre>
 <p>There's no division here because divisions can lead to floating point numbers that are difficult to handle. We won't cover operations on floating point numbers in this MON.</p>
 <h5>CPSR register</h5>
 <p>Negative numbers are stored as 2's complement, so -1 is stored as ffffff. But the computer doesn't know if <em>ffffff</em> is a representing a negative number (-1) or a huge positive number (16777215). To solve this, the CPSR register is used. Each bit in this register has a special purpose. The MSB (most significant bit) is the <em>N</em> bit. If it is set to 1, it indicates that the last operation returned a negative value. Similarly, the carry bit and the overflow bit of the CPSR are used.</p>
@@ -296,11 +284,9 @@ _start:
 <p>To use the CPSR register, the suffix &quot;S&quot; must be appended to the mnemonic (use <em>SUBS</em> instead of <em>SUB</em>, <em>MULS</em> instead of <em>MUL</em>, ...). Else, the CPSR won't be used.</p>
 </div></div>
 <p>Example:</p>
-<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm"><span class="token instruction keyword">SUBS</span> <span class="token register symbol">r2</span><span class="token punctuation">,</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token register symbol">r1</span>   <span class="token comment">; r2 = r0-r1 and the "negative" bit in CPSR is set if r1&lt;r0.</span>
-</code></pre>
+<pre class="language-armasm"><code class="language-armasm"><span class="token instruction keyword">SUBS</span> <span class="token register symbol">r2</span><span class="token punctuation">,</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token register symbol">r1</span>   <span class="token comment">; r2 = r0-r1 and the "negative" bit in CPSR is set if r1&lt;r0.</span></code></pre>
 <p>Another bit in CPSR is the <em>carry</em> bit that indicates if a carry took place, e.g. when the operation returns a value bigger than the register can hold. For that, a slightly different add-operation is needed:</p>
-<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm"><span class="token instruction keyword">ADCS</span> <span class="token register symbol">r2</span><span class="token punctuation">,</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token register symbol">r1</span> <span class="token comment">; ADCS = "add with carry and use the cpsr register" - r2 = r0+r1+carry</span>
-</code></pre>
+<pre class="language-armasm"><code class="language-armasm"><span class="token instruction keyword">ADCS</span> <span class="token register symbol">r2</span><span class="token punctuation">,</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token register symbol">r1</span> <span class="token comment">; ADCS = "add with carry and use the cpsr register" - r2 = r0+r1+carry</span></code></pre>
 <h5>Logical operations</h5>
 <p><strong>AND</strong>
 The AND operation iterates through every pair of bits A and B and returns a binary value X based on this table:</p>
@@ -336,8 +322,7 @@ The AND operation iterates through every pair of bits A and B and returns a bina
 </tbody>
 </table>
 <p>In ARM assembly, it works as following:</p>
-<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm"><span class="token instruction keyword">AND</span> <span class="token register symbol">r2</span><span class="token punctuation">,</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token register symbol">r1</span> <span class="token comment">; bitwise AND between r0 and r1, stored in r2</span>
-</code></pre>
+<pre class="language-armasm"><code class="language-armasm"><span class="token instruction keyword">AND</span> <span class="token register symbol">r2</span><span class="token punctuation">,</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token register symbol">r1</span> <span class="token comment">; bitwise AND between r0 and r1, stored in r2</span></code></pre>
 <p><strong>OR</strong>
 The OR operation iterates through every pair of bits A and B and returns a binary value X based on this table:</p>
 <table>
@@ -372,8 +357,7 @@ The OR operation iterates through every pair of bits A and B and returns a binar
 </tbody>
 </table>
 <p>In ARM assembly, it works as following:</p>
-<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm"><span class="token instruction keyword">ORR</span> <span class="token register symbol">r2</span><span class="token punctuation">,</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token register symbol">r1</span> <span class="token comment">; bitwise OR between r0 and r1, stored in r2</span>
-</code></pre>
+<pre class="language-armasm"><code class="language-armasm"><span class="token instruction keyword">ORR</span> <span class="token register symbol">r2</span><span class="token punctuation">,</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token register symbol">r1</span> <span class="token comment">; bitwise OR between r0 and r1, stored in r2</span></code></pre>
 <p>(Yes, <em>ORR</em> is the right instruction)</p>
 <p><strong>XOR</strong>
 The exclusive OR (XOR) operation iterates through every pair of bits A and B and returns a binary value X based on this table:</p>
@@ -409,8 +393,7 @@ The exclusive OR (XOR) operation iterates through every pair of bits A and B and
 </tbody>
 </table>
 <p>In ARM assembly, it works as following:</p>
-<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm"><span class="token instruction keyword">EOR</span> <span class="token register symbol">r2</span><span class="token punctuation">,</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token register symbol">r1</span> <span class="token comment">; bitwise XOR between r0 and r1, stored in r2 - the instruction is eor, not xor</span>
-</code></pre>
+<pre class="language-armasm"><code class="language-armasm"><span class="token instruction keyword">EOR</span> <span class="token register symbol">r2</span><span class="token punctuation">,</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token register symbol">r1</span> <span class="token comment">; bitwise XOR between r0 and r1, stored in r2 - the instruction is eor, not xor</span></code></pre>
 <p><strong>Logical shift</strong>
 Logical shifts are operations to shift bits of a register. The <a href="https://developer.arm.com/documentation/dui0068/b/Thumb-Instruction-Reference/Thumb-general-data-processing-instructions/ASR--LSL--LSR--and-ROR">official documentation</a> explains each one in greater detail than I do here.</p>
 <ul>
@@ -419,14 +402,13 @@ Logical shifts are operations to shift bits of a register. The <a href="https://
 <li><strong>ror</strong>: &quot;Rotation to right&quot; - Like the <em>lsr</em> instruction, but the LSB doesn't get dropped, it is re-appended as MSB. There is no <em>rol</em> instruction to rotate to left, but if you execute the <em>ror</em> instruction 32-n times (n being the number of rotations to left), it has the same effect.</li>
 </ul>
 <p>In ARM assembly, it works as following:</p>
-<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm"><span class="token instruction keyword">LSL</span> <span class="token register symbol">r1</span><span class="token punctuation">,</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token operator">#</span><span class="token number">1</span> <span class="token comment">; do one lsl on r0 and store the result in r1</span>
+<pre class="language-armasm"><code class="language-armasm"><span class="token instruction keyword">LSL</span> <span class="token register symbol">r1</span><span class="token punctuation">,</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token operator">#</span><span class="token number">1</span> <span class="token comment">; do one lsl on r0 and store the result in r1</span>
 <span class="token instruction keyword">LSR</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token operator">#</span><span class="token number">5</span> <span class="token comment">; do lsr 5 times on r0 and store it back in r0</span>
-<span class="token instruction keyword">ROR</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token operator">#</span><span class="token number">1</span> <span class="token comment">; do one ror on r0</span>
-</code></pre>
+<span class="token instruction keyword">ROR</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span> <span class="token operator">#</span><span class="token number">1</span> <span class="token comment">; do one ror on r0</span></code></pre>
 <h5>Conditions</h5>
 <p><strong>Branching</strong>
 Conditions and branches are the equivalent to <em>if-else</em>-statements in higher level languages. In ARM assembly, we do a &quot;compare&quot; (CMP) instruction between two values/registers and after that, we can jump to different locations using branches.</p>
-<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm">.global _start
+<pre class="language-armasm"><code class="language-armasm">.global _start
 _start:
   <span class="token comment">; fill some values in r0 and r1</span>
   <span class="token instruction keyword">MOV</span> <span class="token register symbol">r0</span><span class="token punctuation">,</span><span class="token operator">#</span><span class="token number">1</span>
@@ -440,8 +422,7 @@ greater:
 	<span class="token instruction keyword">MOV</span> <span class="token register symbol">r2</span><span class="token punctuation">,</span> <span class="token operator">#</span><span class="token number">0xff</span>
 	
 default:
-	<span class="token instruction keyword">MOV</span> <span class="token register symbol">r2</span><span class="token punctuation">,</span> <span class="token operator">#</span><span class="token number">0xaa</span>
-</code></pre>
+	<span class="token instruction keyword">MOV</span> <span class="token register symbol">r2</span><span class="token punctuation">,</span> <span class="token operator">#</span><span class="token number">0xaa</span></code></pre>
 <p>The following branch instructions are available:</p>
 <ul>
 <li><strong>BGT</strong> - greater than</li>
@@ -454,7 +435,7 @@ default:
 </ul>
 <p><strong>Looping</strong>
 By using the branches, we can implement loops like <em>for</em> or <em>while</em>-loops in higher-level languages. In this example, we load a list with the values from 1-10 in the variable <em>list</em> and then we iterate through all values until we reach the end of the list:</p>
-<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm">.global _start
+<pre class="language-armasm"><code class="language-armasm">.global _start
 .equ endlist<span class="token punctuation">,</span> <span class="token number">0xaaaaaaaa</span> <span class="token comment">; memory after the list</span>
 
 _start:
@@ -476,33 +457,30 @@ exit:
 .data
 list:
 	.word <span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">10</span>
-	
-</code></pre>
+	</code></pre>
 <p><strong>Conditional instruction execution</strong>
 To make matters simpler, instead of branching, we can use conditional instructions to execute the instruction only if a condition is met. Almost every instruction in ARM assembly can be modified so that it only gets executed if a condition is met.
 This happens by exchanging the &quot;B&quot; in the conditional branches with the instruction, e.g. <em>BLT</em> (branch if less then) becomes <em>MOVLT</em> (move if less then) or <em>BEQ</em> (branch if equal) becomes <em>ADDEQ</em> (add if equal).
 Example:</p>
-<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm"><span class="token instruction keyword">MOV</span> R0<span class="token punctuation">,</span><span class="token operator">#</span><span class="token number">2</span>
+<pre class="language-armasm"><code class="language-armasm"><span class="token instruction keyword">MOV</span> R0<span class="token punctuation">,</span><span class="token operator">#</span><span class="token number">2</span>
 <span class="token instruction keyword">MOV</span> R1<span class="token punctuation">,</span><span class="token operator">#</span><span class="token number">5</span>
 
 <span class="token instruction keyword">CMP</span> R0<span class="token punctuation">,</span>R1
 <span class="token instruction keyword">ADDLT</span> R2<span class="token punctuation">,</span><span class="token operator">#</span><span class="token number">1</span>   <span class="token comment">; add 1 to R2 if the comparison returns that R0 is less than R1.</span>
-<span class="token instruction keyword">MOVEQ</span> R2<span class="token punctuation">,</span>R0   <span class="token comment">; move the value of R0 to R2 if R0=R1</span>
-</code></pre>
+<span class="token instruction keyword">MOVEQ</span> R2<span class="token punctuation">,</span>R0   <span class="token comment">; move the value of R0 to R2 if R0=R1</span></code></pre>
 <h5>Functions</h5>
 <p>Simple functions in ARM assembly can be easily implemented with the known concepts of branching. If we use <em>BL</em> to branch (instead of <em>BAL</em>), the location of the instruction that follows the branch is being stored in the link register, so after the function is executed, if we branch back with <em>BX</em>, the program jumps to this address and continues execution after the branch:</p>
-<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm">  <span class="token instruction keyword">MOV</span> R0<span class="token punctuation">,</span><span class="token operator">#</span><span class="token number">2</span>
+<pre class="language-armasm"><code class="language-armasm">  <span class="token instruction keyword">MOV</span> R0<span class="token punctuation">,</span><span class="token operator">#</span><span class="token number">2</span>
   <span class="token instruction keyword">MOV</span> R1<span class="token punctuation">,</span><span class="token operator">#</span><span class="token number">5</span>
   <span class="token instruction keyword">BL</span> myfunc     <span class="token comment">; branch to "myfunc"</span>
   <span class="token instruction keyword">MOV</span> R3<span class="token punctuation">,</span> <span class="token operator">#</span><span class="token number">0xff</span>
 
 myfunc:
   <span class="token instruction keyword">ADD</span> R2<span class="token punctuation">,</span> R0<span class="token punctuation">,</span> R1
-  <span class="token instruction keyword">BR</span> <span class="token register symbol">lr</span>         <span class="token comment">; branch back to the address stored in the link register</span>
-</code></pre>
+  <span class="token instruction keyword">BR</span> <span class="token register symbol">lr</span>         <span class="token comment">; branch back to the address stored in the link register</span></code></pre>
 <p><strong>Push and Pop</strong>
 If we want to preserve the register values, but we need the registers else (e.g. for executing a function), we can store the current registers to the stack and read them back from the stack to the registers afterwards. This is done by using <em>PUSH</em> and <em>POP</em>.</p>
-<pre class="language-armasm " style="counter-reset: linenumber 0"><code class="language-armasm">_start:
+<pre class="language-armasm"><code class="language-armasm">_start:
   <span class="token instruction keyword">MOV</span> R0<span class="token punctuation">,</span><span class="token operator">#</span><span class="token number">2</span>
   <span class="token instruction keyword">MOV</span> R1<span class="token punctuation">,</span><span class="token operator">#</span><span class="token number">5</span>
   <span class="token instruction keyword">PUSH</span> {R0<span class="token punctuation">,</span> R1}   <span class="token comment">; store R0 and R1 on the stack</span>
@@ -517,8 +495,7 @@ myfunc:
   <span class="token instruction keyword">BR</span> <span class="token register symbol">lr</span>           <span class="token comment">; branch back to the address stored in the link register</span>
 
 end:
-<span class="token comment">; do nothing</span>
-</code></pre>
+<span class="token comment">; do nothing</span></code></pre>
 <p>Note that the stack is a LIFO (last in first out) architecture, so the data that is pushed last needs to be popped from the stack first.</p>
 <h2>Useful resources</h2>
 <h3>Tutorials</h3>

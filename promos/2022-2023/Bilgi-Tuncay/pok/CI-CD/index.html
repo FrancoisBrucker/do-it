@@ -223,13 +223,12 @@ Le but final est d'avoir un site disponible sur internet. Quand un développeur 
 <p>Jest est très pratique, il permet de lancer tous les tests contenues dans les fichiers présents dans le répertoire &quot;<strong>tests</strong>&quot;</p>
 <p>La batterie de tests se lance avec <code>npx jest</code>, que l'on eut ajouter dans le config.json pour utiliser <code>npm run test</code>.
 le fichier config.json ressemble alors à cela :</p>
-<pre class="language-json " style="counter-reset: linenumber 0"><code class="language-json"><span class="token punctuation">{</span><span class="token property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+<pre class="language-json"><code class="language-json"><span class="token punctuation">{</span><span class="token property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token property">"test"</span> <span class="token operator">:</span> <span class="token string">"npx jest"</span><span class="token punctuation">,</span>
     <span class="token property">"dev"</span><span class="token operator">:</span> <span class="token string">"next dev"</span><span class="token punctuation">,</span>
     <span class="token property">"build"</span><span class="token operator">:</span> <span class="token string">"next build"</span><span class="token punctuation">,</span>
     <span class="token property">"start"</span><span class="token operator">:</span> <span class="token string">"next start -p 10438"</span>
-  <span class="token punctuation">}</span><span class="token punctuation">}</span>
-</code></pre>
+  <span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre>
 <p>Ensuite on créer un dossier <strong>tests</strong> à la racine et on y créer le fichier &quot;categoriepage.js&quot; qui contiendra tous les tests liés à la fonctionnalité du site que l'on va ajouter.</p>
 <p>Jest utilise des méthodes built-in pour tester pleins de choses différentes, allez voir la documentation sur internet pour savoir lesquelles utiliser.</p>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
@@ -240,37 +239,34 @@ le fichier config.json ressemble alors à cela :</p>
 <p>Par défaut Jest utilise la syntaxe <code>const a = require('./module')</code> qui n'est pas compatible avec le reste du projet qui lui est en ES6 et donc utilise la syntaxe suivante <code>import {a} from module</code></p>
 </div></div>
 <p>Pour pallier ce problème, on créer un fichier de configuration jest qui vient supplanté la configuration par défaut et qui demande à jest d'utiliser ES6 : config.jest</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> nextJest <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"next/jest"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> nextJest <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"next/jest"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> createJestConfig <span class="token operator">=</span> <span class="token function">nextJest</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   <span class="token literal-property property">dir</span><span class="token operator">:</span> <span class="token string">"./"</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> customJestConfig <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token literal-property property">moduleDirectories</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"node_modules"</span><span class="token punctuation">,</span> <span class="token string">"&lt;rootDir>/"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token function">createJestConfig</span><span class="token punctuation">(</span>customJestConfig<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token function">createJestConfig</span><span class="token punctuation">(</span>customJestConfig<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>Nous voilà prêt pour la TDD!</p>
 <h3>TDD: Ajout d'une page dans mon site.</h3>
 <p>Je veux ajouter une série de pages dynamiques. On clique sur une catégorie de publication, cela nous redirige vers une page qui liste tous les posts possédant cette catégorie.</p>
 <p>Pour ce faire, on commence par écrire les tests qui devront être validés par le code de la nouvelle fonctionnalité :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> getCategories<span class="token punctuation">,</span>getPostsByCat <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"../services"</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> getCategories<span class="token punctuation">,</span>getPostsByCat <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"../services"</span>
 
 <span class="token function">test</span><span class="token punctuation">(</span>
     <span class="token string">'CategoriesProps are fetched'</span><span class="token punctuation">,</span> <span class="token keyword">async</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span><span class="token punctuation">{</span>
         <span class="token keyword">const</span> categories <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">getCategories</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token function">expect</span><span class="token punctuation">(</span>categories<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toContainEqual</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token literal-property property">name</span> <span class="token operator">:</span><span class="token string">'Sculpture'</span><span class="token punctuation">,</span><span class="token literal-property property">slug</span><span class="token operator">:</span><span class="token string">'sculpture'</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">)</span>
-</code></pre>
+<span class="token punctuation">)</span></code></pre>
 <p>Ce test s'assure que les informations fetcher sont sous le bon format et qu'elle sont bien cohérentes.</p>
 <p>Maintenant, il faut implémenter le code qui valide le test, ici il nous faut une fonction qui renvoie les données demander, c'est un fetch.:</p>
 <ul>
 <li>Implémentation minimale :</li>
 </ul>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">function</span> <span class="token function">getCategories</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">getCategories</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token literal-property property">name</span> <span class="token operator">:</span><span class="token string">'Sculpture'</span><span class="token punctuation">,</span><span class="token literal-property property">slug</span><span class="token operator">:</span><span class="token string">'sculpture'</span><span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Cette implémentation paraît débile, mais si vous coder en équipe, elle permet de valider le test ET de laisser à vous collègue la possibilité de coder le front en ayant une idée de la structure de données à laquelle le code doit s'attendre.</p>
 <ul>
 <li>Implémentation finale :
@@ -303,7 +299,7 @@ Néanmoins, cette mise en place possède plusieurs problème :</p>
 Dans le MON Jenkins on avait créer un conteneur Jenkins en prenant simplement l'image officielle.
 Ici, nous allons utiliser l'image officielle alpine (basée sur Linux alpine) a laquelle j'ajoute node et tmux (je n'ai pas eu besoin de tmux).</p>
 <p>Voici le dockerfile :</p>
-<pre class="language-dockerfile " style="counter-reset: linenumber 0"><code class="language-dockerfile"><span class="token instruction"><span class="token keyword">FROM</span> jenkins/jenkins:lts-alpine-jdk11</span>
+<pre class="language-dockerfile"><code class="language-dockerfile"><span class="token instruction"><span class="token keyword">FROM</span> jenkins/jenkins:lts-alpine-jdk11</span>
 
 <span class="token instruction"><span class="token keyword">USER</span> root</span>
 
@@ -311,10 +307,9 @@ Ici, nous allons utiliser l'image officielle alpine (basée sur Linux alpine) a 
 <span class="token instruction"><span class="token keyword">RUN</span> apk add tmux</span>
 
 <span class="token instruction"><span class="token keyword">USER</span> jenkins</span>
-
 </code></pre>
 <p>et le docker-compose qui s'occupe des connexions :</p>
-<pre class="language-yml " style="counter-reset: linenumber 0"><code class="language-yml"><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">'3'</span>
+<pre class="language-yml"><code class="language-yml"><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">'3'</span>
 <span class="token key atrule">services</span><span class="token punctuation">:</span>
   <span class="token key atrule">jenkins</span><span class="token punctuation">:</span>
     <span class="token key atrule">build</span><span class="token punctuation">:</span> .
@@ -327,8 +322,7 @@ Ici, nous allons utiliser l'image officielle alpine (basée sur Linux alpine) a 
       <span class="token key atrule">JAVA_OPTS</span><span class="token punctuation">:</span> <span class="token string">"-Djenkins.install.runSetupWizard=false"</span>
 
 <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
-  <span class="token key atrule">jenkins_home</span><span class="token punctuation">:</span>
-</code></pre>
+  <span class="token key atrule">jenkins_home</span><span class="token punctuation">:</span></code></pre>
 <p>Grâce à cela on à un conteneur qui contient Jenkins et qui enregistre ces données entre deux lancements.</p>
 <h4>Les secrets :</h4>
 <p>Tous d'abord on donne à Jenkins, dans la partie <strong>manage credentials</strong> les clés nécessaires à faire fonctionner et à déployer le projet.</p>

@@ -390,7 +390,7 @@
 <p>Pour télécharger le fichier python complet : <a href="PythonFile.zip">Fichier python base de donnée</a></p>
 <p>Pour construire cette base de données, j'ai choisi d'utiliser python avec sa library Pony de base de données car je n'ai pour l'instant eu que l'occasion d'en construire en no-code (Airtable, Salesforce ...). Je souhaitais donc en construire une en partant un peu plus de zéro. Pour cela, j'ai utilisé la <a href="https://ponyorm.readthedocs.io/en/latest/firststeps.html">documentation</a>. J'ai donc construit ma base de données en commençant par faire le model de données.</p>
 <p>J'ai donc créé chacun des objets en utilisant des lignes de la forme :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Material</span><span class="token punctuation">(</span>db<span class="token punctuation">.</span>Entity<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Material</span><span class="token punctuation">(</span>db<span class="token punctuation">.</span>Entity<span class="token punctuation">)</span><span class="token punctuation">:</span>
     material_id <span class="token operator">=</span> orm<span class="token punctuation">.</span>PrimaryKey<span class="token punctuation">(</span><span class="token builtin">int</span> <span class="token punctuation">,</span> auto <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span>
     name <span class="token operator">=</span> orm<span class="token punctuation">.</span>Required<span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">)</span>
     <span class="token builtin">type</span> <span class="token operator">=</span> orm<span class="token punctuation">.</span>Required<span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">)</span>
@@ -398,22 +398,20 @@
     description <span class="token operator">=</span> orm<span class="token punctuation">.</span>Required<span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">)</span>
     created_at <span class="token operator">=</span> orm<span class="token punctuation">.</span>Required<span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">)</span>
     skills <span class="token operator">=</span> orm<span class="token punctuation">.</span>Required<span class="token punctuation">(</span>Skill<span class="token punctuation">)</span>
-    Order <span class="token operator">=</span> orm<span class="token punctuation">.</span>Set<span class="token punctuation">(</span><span class="token string">"Order"</span><span class="token punctuation">)</span>
-</code></pre>
+    Order <span class="token operator">=</span> orm<span class="token punctuation">.</span>Set<span class="token punctuation">(</span><span class="token string">"Order"</span><span class="token punctuation">)</span></code></pre>
 <p>Chacun des champs de l'objet est défini avec un type de façon obligatoire car l'on souhaite que tous les champs soient remplis. Pour créer des liens entre les objets, il faut les définir avec le type de l'objet que l'on veut lier et utiliser la fonction set sur l'objet lié.</p>
 <p>Pour une relation en many to many, pony créer automatiquement l'objet intérmédiaire et il suffit de définir sur chacun des objets à lié l'autre objet en utilisant la fonction <em>set</em> sur les deux.</p>
 <p>Ensuite, j'ai créé la base de données à l'aide du model défini précédement :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> pony <span class="token keyword">import</span> orm
+<pre class="language-python"><code class="language-python"><span class="token keyword">from</span> pony <span class="token keyword">import</span> orm
 <span class="token keyword">from</span> DataModel <span class="token keyword">import</span> Tool<span class="token punctuation">,</span> Employee<span class="token punctuation">,</span> Supplier<span class="token punctuation">,</span> Order<span class="token punctuation">,</span> Skill<span class="token punctuation">,</span> Client<span class="token punctuation">,</span> Material<span class="token punctuation">,</span> ConstructionSite<span class="token punctuation">,</span> db
  
 db<span class="token punctuation">.</span>bind<span class="token punctuation">(</span><span class="token string">'sqlite'</span><span class="token punctuation">,</span> <span class="token string">'database.sqlite'</span><span class="token punctuation">,</span> create_db<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
 orm<span class="token punctuation">.</span>sql_debug<span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">)</span>
-db<span class="token punctuation">.</span>generate_mapping<span class="token punctuation">(</span>create_tables<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
-</code></pre>
+db<span class="token punctuation">.</span>generate_mapping<span class="token punctuation">(</span>create_tables<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span></code></pre>
 <p>Grâce a ceci, la table se créer et l'on va pouvoir surveiller les requètes SQL graçe au mode debug. Ainsi, avant les réponses dans le terminal de commande, j'obtiens les requètes effectuées.</p>
 <h2>Création de données dans la base</h2>
 <p>Maintenant, je vais créer de la donnée dans la base afin d'être sur de son bon fonctionnement pour pouvoir intéragir avec :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">    ConstructionSite1 <span class="token operator">=</span> ConstructionSite<span class="token punctuation">(</span>
+<pre class="language-python"><code class="language-python">    ConstructionSite1 <span class="token operator">=</span> ConstructionSite<span class="token punctuation">(</span>
         name<span class="token operator">=</span><span class="token string">"Maison4"</span><span class="token punctuation">,</span> 
         address<span class="token operator">=</span><span class="token string">'Rue des patates'</span><span class="token punctuation">,</span> 
         <span class="token builtin">type</span><span class="token operator">=</span><span class="token string">"Maison"</span><span class="token punctuation">,</span> 
@@ -426,13 +424,12 @@ db<span class="token punctuation">.</span>generate_mapping<span class="token pun
     ConstructionSite1<span class="token punctuation">.</span>tools<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Tool1<span class="token punctuation">)</span>
     ConstructionSite1<span class="token punctuation">.</span>employees<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Employee1<span class="token punctuation">)</span>
 
-    db<span class="token punctuation">.</span>commit<span class="token punctuation">(</span><span class="token punctuation">)</span> 
-</code></pre>
+    db<span class="token punctuation">.</span>commit<span class="token punctuation">(</span><span class="token punctuation">)</span> </code></pre>
 <p>J'ai aussi créé chacun des autres objets en utilisant toujours la typographie NomDeLaClasse1. Une fois tous les liens et les champs remplis, il faut insérer le tout dans la base afin de créer la data avec la fonction <em>commit</em></p>
 <p>Il est temps d'intéragir avec pour vérifier le bon fonctionnement !</p>
 <h2>Intéraction avec la base de données</h2>
 <p>Pour intéragir avec la base de donnée, il est possible d'utiliser du language python :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> pony <span class="token keyword">import</span> orm
+<pre class="language-python"><code class="language-python"><span class="token keyword">from</span> pony <span class="token keyword">import</span> orm
 <span class="token keyword">from</span> DataModel <span class="token keyword">import</span> db<span class="token punctuation">,</span> Client
 
 db<span class="token punctuation">.</span>bind<span class="token punctuation">(</span><span class="token string">'sqlite'</span><span class="token punctuation">,</span> <span class="token string">'database.sqlite'</span><span class="token punctuation">,</span> create_db<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
@@ -444,10 +441,9 @@ db<span class="token punctuation">.</span>generate_mapping<span class="token pun
     <span class="token keyword">if</span> client<span class="token punctuation">:</span>
         <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>client<span class="token punctuation">.</span>first_name<span class="token punctuation">}</span></span><span class="token string"> </span><span class="token interpolation"><span class="token punctuation">{</span>client<span class="token punctuation">.</span>last_name<span class="token punctuation">}</span></span><span class="token string">, Email: </span><span class="token interpolation"><span class="token punctuation">{</span>client<span class="token punctuation">.</span>email<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
     <span class="token keyword">else</span><span class="token punctuation">:</span>
-        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Le client n'existe pas"</span><span class="token punctuation">)</span>
-</code></pre>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Le client n'existe pas"</span><span class="token punctuation">)</span></code></pre>
 <p>Grâce à ceci, on obtient bien le client cherché avec ses informations. Il est aussi possible de faire des requètes légèrement plus technique :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">with</span> orm<span class="token punctuation">.</span>db_session<span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">with</span> orm<span class="token punctuation">.</span>db_session<span class="token punctuation">:</span>
     sql <span class="token operator">=</span> <span class="token triple-quoted-string string">"""
     SELECT o.order_id, o.created_at, o.price, o.currency, 
            s.name AS supplier_name, s.phone_number AS supplier_phone
@@ -459,8 +455,7 @@ db<span class="token punctuation">.</span>generate_mapping<span class="token pun
 
     <span class="token keyword">for</span> row <span class="token keyword">in</span> result<span class="token punctuation">:</span>
         <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Order ID: </span><span class="token interpolation"><span class="token punctuation">{</span>row<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">, Created At: </span><span class="token interpolation"><span class="token punctuation">{</span>row<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">, Price: </span><span class="token interpolation"><span class="token punctuation">{</span>row<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">, Currency: </span><span class="token interpolation"><span class="token punctuation">{</span>row<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">, "</span></span>
-              <span class="token string-interpolation"><span class="token string">f"Supplier: </span><span class="token interpolation"><span class="token punctuation">{</span>row<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">, Phone: </span><span class="token interpolation"><span class="token punctuation">{</span>row<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
-</code></pre>
+              <span class="token string-interpolation"><span class="token string">f"Supplier: </span><span class="token interpolation"><span class="token punctuation">{</span>row<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">, Phone: </span><span class="token interpolation"><span class="token punctuation">{</span>row<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span></code></pre>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
 <details class="group">
 <summary class="list-none py-0.5">

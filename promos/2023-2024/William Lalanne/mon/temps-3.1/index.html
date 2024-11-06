@@ -154,14 +154,11 @@
 <p>Expo est une plateforme qui permet de faire tourner une application mobile lors du développement de cette dernière. C'est très pratique pour voir à quoi ressemble l'application.
 Voyons comment expo fonctionne.
 D'abord, pour installer Expo il faut ouvrir un terminal et entrer la commande :</p>
-<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell"><span class="token function">npm</span> <span class="token function">install</span> expo-cli
-</code></pre>
+<pre class="language-shell"><code class="language-shell"><span class="token function">npm</span> <span class="token function">install</span> expo-cli</code></pre>
 <p>Une fois Expo installée, il faut créer un projet. On se place dans le dossier dans lequel on souhaite créer l'app et on utilise la commande :</p>
-<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell">npx create-expo-app nomDeLApp
-</code></pre>
+<pre class="language-shell"><code class="language-shell">npx create-expo-app nomDeLApp</code></pre>
 <p>Une fois l'application créée, pour la visualiser, il suffit d'ouvrir un terminal, se placer dans le dossier dans lequel on a créé l'app et utiliser la commande :</p>
-<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell"><span class="token function">npm</span> start
-</code></pre>
+<pre class="language-shell"><code class="language-shell"><span class="token function">npm</span> start</code></pre>
 <p>Quand on fait ça, un qr code apparaît dans le terminal comme ci-dessous :</p>
 <div style="display:flex">
 <div><img src="start_expo.png"></div>
@@ -178,7 +175,7 @@ Comme pour React, React Native utilise des composants (components en anglais) qu
 <li>TextInput : input qui permet à l'utilisateur d'entrer du texte.</li>
 </ul>
 <p>En combinant tous ces composants, on peut réussir à créer des pages pour une application. C'est ce que je vais essayer de faire pour montrer comment React Native fonctionne.</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> StatusBar <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'expo-status-bar'</span><span class="token punctuation">;</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> StatusBar <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'expo-status-bar'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> StyleSheet<span class="token punctuation">,</span> Text<span class="token punctuation">,</span> TextInput<span class="token punctuation">,</span> View<span class="token punctuation">,</span> Image<span class="token punctuation">,</span> ScrollView <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-native'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -213,13 +210,12 @@ Comme pour React, React Native utilise des composants (components en anglais) qu
   <span class="token literal-property property">scrollViewContainer</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token literal-property property">flexGrow</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <div style="display:flex">
 <div><img src="demo_app.jpg" width="300" height="600"></div>
 </div>
 <p>On va améliorer un peu cette page pour qu'elle ressemble à une page de connexion sur un site web. Il faut donc des input pour que l'utilisateur puisse entrer son prenom, so nom et un bouton pour se connecter.</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> <span class="token punctuation">(</span>
       <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>container<span class="token punctuation">}</span><span class="token operator">></span>
         <span class="token operator">&lt;</span>Text<span class="token operator">></span>Bienvenue sur l'application de William<span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
@@ -238,13 +234,12 @@ Comme pour React, React Native utilise des composants (components en anglais) qu
         <span class="token operator">&lt;</span>CustomButton title<span class="token operator">=</span><span class="token string">"S'inscrire"</span> onPress<span class="token operator">=</span><span class="token punctuation">{</span>addProfil<span class="token punctuation">}</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>CustomButton<span class="token operator">></span>
       <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <div style="display:flex">
 <div><img src="amelioration_app.jpg" width="300" height="600"></div>
 </div>
 <p>Pour faire cela j'ai du créer un component <strong>CustomButton</strong> car le component <strong><Button></Button></strong> de base n'est pas modifiable. Voici le fichier CustomButton.js :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> <span class="token function-variable function">CustomButton</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span>title<span class="token punctuation">,</span> onPress<span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token function-variable function">CustomButton</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span>title<span class="token punctuation">,</span> onPress<span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token punctuation">(</span>
         <span class="token operator">&lt;</span>TouchableOpacity style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">[</span>styles<span class="token punctuation">.</span>button<span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token operator">></span>
             <span class="token operator">&lt;</span>Text style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>textButton<span class="token punctuation">}</span><span class="token operator">></span><span class="token punctuation">{</span>title<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
@@ -267,28 +262,25 @@ Comme pour React, React Native utilise des composants (components en anglais) qu
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> CustomButton<span class="token punctuation">;</span>
-</code></pre>
+<span class="token keyword">export</span> <span class="token keyword">default</span> CustomButton<span class="token punctuation">;</span></code></pre>
 <p>Le component prend deux paramètres en argument, <strong>title</strong> qui correspond à ce qu'on veut écrire dans le boutton et <strong>onPress</strong> qui correspond à la fonction qui sera déclenchée à chaque appuie sur le bouton.</p>
 <h2>4.Créer une base de données pour l'app</h2>
 <p>Pour créer une base de données pour mon application j'ai décidé tout comme Vladimir d'utiliser SQLite qui permet de stocker localement des données.</p>
 <p>Tout d'abord, il faut créer la base de données, pour cela il existe une commande très simple qui est la suivante :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> db <span class="token operator">=</span> SQLite<span class="token punctuation">.</span><span class="token function">openDatabase</span><span class="token punctuation">(</span><span class="token string">"database.db"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> db <span class="token operator">=</span> SQLite<span class="token punctuation">.</span><span class="token function">openDatabase</span><span class="token punctuation">(</span><span class="token string">"database.db"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>La méthode <em><strong>openDatabase</strong></em> prend en argument le nom que l'on veut donner à notre base de données et crée la base de données. Si celle-ci existe déjà elle ne sera pas recréée mais simplement récupérée pour que l'on puisse travailler dessus.</p>
 <p>db est le nom de la constante à appeler lorsqu'on veut utiliser la base de données.</p>
 <p>Après avoir créer notre bdd, créons une table avec une requête SQL :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token function">useEffect</span><span class="token punctuation">(</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<pre class="language-js"><code class="language-js"><span class="token function">useEffect</span><span class="token punctuation">(</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
     db<span class="token punctuation">.</span><span class="token function">transaction</span><span class="token punctuation">(</span><span class="token parameter">tx</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
         tx<span class="token punctuation">.</span><span class="token function">executeSql</span><span class="token punctuation">(</span><span class="token string">'CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMRAY KEY AUTOINCREMENT, prenom TEXT, nom TEXT'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>Plusieurs choses à dire sur cette partie du code. Une &quot;transaction&quot; est une série d'opérations sur une base de données qui doivent être éxecutées ensemble. Donc <strong>db.transaction(tx)</strong> permet de dire que l'on va réaliser une suite d'opérations sur la base de données db, cette suite d'opérations est appelée <em><strong>tx</strong></em>. Ensuite on précise quelles instructions tx doit réaliser. Ici, <em><strong>tx.executeSql('CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMRAY KEY AUTOINCREMENT, prenom TEXT, nom TEXT'));</strong></em> permet de créer une table <strong>users</strong> avec trois colonnes : id, prenom, nom.</p>
 <p>J'aimerais maintenant que quand l'utilisateur clique sur le bouton s'inscrire après avoir rentré son prénom et son nom, ses informations soient enregistrées dans la base de données.
 Pour cela voilà les commandes :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> <span class="token punctuation">[</span>prenom<span class="token punctuation">,</span> setPrenom<span class="token punctuation">]</span> <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token punctuation">[</span>prenom<span class="token punctuation">,</span> setPrenom<span class="token punctuation">]</span> <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> <span class="token punctuation">[</span>nom<span class="token punctuation">,</span> setNom<span class="token punctuation">]</span> <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">addProfil</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
@@ -311,8 +303,7 @@ Pour cela voilà les commandes :</p>
 <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
     console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'Les valeurs prenom et nom ne doivent pas être vides'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
 <p>Pour faire simple, lorsqu'on appuie sur le bouton s'inscrire, la fonction addProfil est lancée.
 Si l'utilisateur a rentré un nom et un prénom, tout est ajouté à la base de données.</p>
 <h2>4.Horodatage</h2>

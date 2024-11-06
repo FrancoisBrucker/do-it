@@ -174,7 +174,7 @@
 <h2>Exemples de code</h2>
 <p>Ici je veux montrer quelques exemples intéressants de code que j'ai écrit pour ce projet.</p>
 <h3>Implémentation de l'algorithme de traitement des dates</h3>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">var</span> datesAndDoneColumnRange <span class="token operator">=</span> activeSheet<span class="token punctuation">.</span><span class="token function">getRange</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span>lastRow<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//get range that includes the dates and done values (done/not done)</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">var</span> datesAndDoneColumnRange <span class="token operator">=</span> activeSheet<span class="token punctuation">.</span><span class="token function">getRange</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span>lastRow<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//get range that includes the dates and done values (done/not done)</span>
 <span class="token keyword">var</span> dateAndDoneValues <span class="token operator">=</span> datesAndDoneColumnRange<span class="token punctuation">.</span><span class="token function">getValues</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// get the values from this range -> Array[Date][done]</span>
 
 <span class="token comment">// create new sheet to store temporary data</span>
@@ -206,12 +206,10 @@ dateAndDoneValues<span class="token punctuation">.</span><span class="token func
   <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
     Logger<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Impossible state, currentDoneState is neither true nor false'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// this case should never happen</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <h3>Trier par Date</h3>
 <p>Dans Google Sheet, c'est très facile de trier par colonne:</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">  dataSection<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 2 = 2nd column which includes the date</span>
-</code></pre>
+<pre class="language-javascript"><code class="language-javascript">  dataSection<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 2 = 2nd column which includes the date</span></code></pre>
 <h2>Ce que je n'ai pas pu faire de plus</h2>
 <p>Au cours des 10h que j'ai investies dans ce projet, je n'ai malheureusement pas réussi à faire certaines choses non plus :</p>
 <ul>

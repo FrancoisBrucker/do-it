@@ -177,38 +177,33 @@
 <p>Par la suite, j'ai changé la configuration de ma machine pour pourvoir installer Docker Desktop et profiter pleinement du MON pour mettre en pratique les tutoriels et documentations consultées.</p>
 <h3 id="commandes-basiques">Commandes basiques</h3>
 <p>La base, par exemple pour installer une distribution Linux partielle comme fedora :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">docker</span> pull fedora
+<pre class="language-bash"><code class="language-bash"><span class="token function">docker</span> pull fedora
 <span class="token function">docker</span> run fedora <span class="token operator">&lt;</span>commande à exécuter dans le Docker<span class="token operator">></span>
-<span class="token function">docker</span> run <span class="token parameter variable">--interactive</span> <span class="token parameter variable">--tty</span> fedora
-</code></pre>
+<span class="token function">docker</span> run <span class="token parameter variable">--interactive</span> <span class="token parameter variable">--tty</span> fedora</code></pre>
 <p>Cette dernière commande (-i -t) ouvre un terminal interactif dans le container : ces options sont plus utilisées à des fins de debug que de production mais permettent de voir ce qui se passe dans le container en direct et interagir avec.</p>
 <h3 id="création-dun-dockerfile--exemple-dapplication">Création d’un DockerFile : exemple d’application</h3>
 <p>Afin d’automatiser les actions à exécuter à la création de notre image Docker, nous pouvons créer un fichier qui dira à Docker quelles actions effectuer pour créer notre container.</p>
 <p>La vidéo nous invite donc, après avoir installé DockerDesktop sur notre machine, à créer un fichier DockerFile qui se présente comme cela :</p>
-<pre class="language-docker " style="counter-reset: linenumber 0"><code class="language-docker"><span class="token instruction"><span class="token keyword">FROM</span> fedora</span>
-<span class="token instruction"><span class="token keyword">RUN</span> yum install -y figlet</span>
-</code></pre>
+<pre class="language-docker"><code class="language-docker"><span class="token instruction"><span class="token keyword">FROM</span> fedora</span>
+<span class="token instruction"><span class="token keyword">RUN</span> yum install -y figlet</span></code></pre>
 <p>Pour reprendre l’exemple du cours, voici comment installer la bibliothèque Figlet (un exemple de commande qui affiche des mots en text-art) avec la commande <a href="https://access.redhat.com/articles/yum-cheat-sheet">yum</a> (un peu comme aptitude pour installer des paquets sur Fedora).</p>
 <p>Ensuite, depuis le terminal, à partir du moment où il y a le fichier <code>Dockerfile</code> dans le répertoire courant, nous pouvons exécuter la commande suivante avec <code>-t nom_de_l'image</code> pour nommer l’image docker nom_de_l’image. Appliqué à notre exemple, cela donne :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">docker</span> build <span class="token parameter variable">-t</span> figlet ./
-<span class="token function">docker</span> run figlet
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">docker</span> build <span class="token parameter variable">-t</span> figlet ./
+<span class="token function">docker</span> run figlet</code></pre>
 <h3 id="la-commande-cmd--exécuter-une-commande-dans-le-docker">La commande CMD : exécuter une commande dans le Docker</h3>
 <p>Il convient avant d’exécuter nos premiers scripts de définir un entrypoint, qui définit une valeur par défaut à la commande CMD.</p>
 <p>Exemple :</p>
-<pre class="language-docker " style="counter-reset: linenumber 0"><code class="language-docker"><span class="token instruction"><span class="token keyword">ENTRYPOINT</span> [<span class="token string">"figlet"</span>]</span>
-<span class="token instruction"><span class="token keyword">CMD</span> [<span class="token string">"Hello World!"</span>]</span>
-</code></pre>
+<pre class="language-docker"><code class="language-docker"><span class="token instruction"><span class="token keyword">ENTRYPOINT</span> [<span class="token string">"figlet"</span>]</span>
+<span class="token instruction"><span class="token keyword">CMD</span> [<span class="token string">"Hello World!"</span>]</span></code></pre>
 <p>Pour plus de détails sur la syntaxe, voir <a href="https://docs.docker.com/engine/reference/builder/#cmd">Référence CMD dans la documentation Docker</a>  et <a href="https://docs.docker.com/engine/reference/builder/#entrypoint">Référence ENTRYPOINT dans la documentation Docker</a>.</p>
 <p>Où le entrypoint est la commande à exécuter et le CMD la valeur optionnelle en l’absence de paramètre à l’exécution de l’image docker.</p>
 <p>→ C’est parti pour le test sur play-with-docker, en n’oubliant pas d’enregistrer le fichier Dockerfile sur lequel repose tout le service créé.</p>
-<pre class="language-docker " style="counter-reset: linenumber 0"><code class="language-docker"><span class="token instruction"><span class="token keyword">FROM</span> fedora</span>
+<pre class="language-docker"><code class="language-docker"><span class="token instruction"><span class="token keyword">FROM</span> fedora</span>
 <span class="token instruction"><span class="token keyword">RUN</span> yum install -y figlet</span>
 <span class="token instruction"><span class="token keyword">ENTRYPOINT</span> [<span class="token string">"figlet"</span>]</span>
-<span class="token instruction"><span class="token keyword">CMD</span> [<span class="token string">"Hello Word!"</span>]</span>
-</code></pre>
+<span class="token instruction"><span class="token keyword">CMD</span> [<span class="token string">"Hello Word!"</span>]</span></code></pre>
 <p>Résultat :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">$ <span class="token function">docker</span> run figlet                                                             
+<pre class="language-bash"><code class="language-bash">$ <span class="token function">docker</span> run figlet                                                             
  _   _      _ _        __        __            _ _ 
 <span class="token operator">|</span> <span class="token operator">|</span> <span class="token operator">|</span> <span class="token operator">|</span> ___<span class="token operator">|</span> <span class="token operator">|</span> <span class="token operator">|</span> ___   <span class="token punctuation">\</span> <span class="token punctuation">\</span>      / /__  _ __ __<span class="token operator">|</span> <span class="token operator">|</span> <span class="token operator">|</span>
 <span class="token operator">|</span> <span class="token operator">|</span>_<span class="token operator">|</span> <span class="token operator">|</span>/ _ <span class="token punctuation">\</span> <span class="token operator">|</span> <span class="token operator">|</span>/ _ <span class="token punctuation">\</span>   <span class="token punctuation">\</span> <span class="token punctuation">\</span> /<span class="token punctuation">\</span> / / _ <span class="token punctuation">\</span><span class="token operator">|</span> <span class="token punctuation">\</span>__/ _` <span class="token operator">|</span> <span class="token operator">|</span>
@@ -220,15 +215,13 @@ $ <span class="token function">docker</span> run figlet coucou<span class="token
   ___ ___  _   _  ___ ___  _   _<span class="token operator">|</span> <span class="token operator">|</span>
  / __/ _ <span class="token punctuation">\</span><span class="token operator">|</span> <span class="token operator">|</span> <span class="token operator">|</span> <span class="token operator">|</span>/ __/ _ <span class="token punctuation">\</span><span class="token operator">|</span> <span class="token operator">|</span> <span class="token operator">|</span> <span class="token operator">|</span> <span class="token operator">|</span>
 <span class="token operator">|</span> <span class="token punctuation">(</span>_<span class="token operator">|</span> <span class="token punctuation">(</span>_<span class="token punctuation">)</span> <span class="token operator">|</span> <span class="token operator">|</span>_<span class="token operator">|</span> <span class="token operator">|</span> <span class="token punctuation">(</span>_<span class="token operator">|</span> <span class="token punctuation">(</span>_<span class="token punctuation">)</span> <span class="token operator">|</span> <span class="token operator">|</span>_<span class="token operator">|</span> <span class="token operator">|</span>_<span class="token operator">|</span>
- <span class="token punctuation">\</span>___<span class="token punctuation">\</span>___/ <span class="token punctuation">\</span>__,_<span class="token operator">|</span><span class="token punctuation">\</span>___<span class="token punctuation">\</span>___/ <span class="token punctuation">\</span>__,_<span class="token punctuation">(</span>_<span class="token punctuation">)</span>
-</code></pre>
+ <span class="token punctuation">\</span>___<span class="token punctuation">\</span>___/ <span class="token punctuation">\</span>__,_<span class="token operator">|</span><span class="token punctuation">\</span>___<span class="token punctuation">\</span>___/ <span class="token punctuation">\</span>__,_<span class="token punctuation">(</span>_<span class="token punctuation">)</span></code></pre>
 <h3 id="construire-une-image-python">Construire une image Python</h3>
 <p>Nous allons mettre en pratique les acquis précédent pour construire une application avec un Dockerfile un peu plus élaboré. Il s’agira de construire une image Python et de la configurer pour la mettre en réseau et d’y accéder. Pour cela, nous allons utiliser un back-end en Django.</p>
 <p>Avec l’aide de quelques informations trouvées en ligne, on peut déployer l’application en quelques minutes : <a href="https://dockerize.io/guides/python-django-guide">https://dockerize.io/guides/python-django-guide</a>.</p>
 <p>Une fois dans le répertoire du projet :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">docker</span> build <span class="token parameter variable">-t</span> python-django-app <span class="token builtin class-name">.</span>
-<span class="token function">docker</span> run <span class="token parameter variable">-t</span> python-django-app
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">docker</span> build <span class="token parameter variable">-t</span> python-django-app <span class="token builtin class-name">.</span>
+<span class="token function">docker</span> run <span class="token parameter variable">-t</span> python-django-app</code></pre>
 <blockquote>
 <p>Mon application n’est pas accessible depuis le port 8000 où elle est censé être déployée d’après ce qu’indique le container. Pourquoi ?</p>
 </blockquote>
@@ -239,22 +232,19 @@ $ <span class="token function">docker</span> run figlet coucou<span class="token
 <h3 id="faire-persister-la-donnée">Faire persister la donnée</h3>
 <p>Jusqu’ici nous avons vu que les <code>docker build</code> généraient toujours la même image avec une suite d’instructions. Dès lors, on peut se demander comment une suite d’instruction déterministe pourrait donner un résultat différent avec des données différentes dans le cas où une image serait relancée. C’est pour cela que Docker gère <strong>les volumes</strong>.</p>
 <p>La documentation indique ceci pour se lancer :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">docker</span> volume create todo-db
-<span class="token function">docker</span> run <span class="token parameter variable">--mount</span> <span class="token assign-left variable">type</span><span class="token operator">=</span>volume,src<span class="token operator">=</span>todo-db,target<span class="token operator">=</span>/etc/todos getting-started
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">docker</span> volume create todo-db
+<span class="token function">docker</span> run <span class="token parameter variable">--mount</span> <span class="token assign-left variable">type</span><span class="token operator">=</span>volume,src<span class="token operator">=</span>todo-db,target<span class="token operator">=</span>/etc/todos getting-started</code></pre>
 <p>Ces deux commandes ont pour but d’attacher le fichier <code>/etc/todos/todo.db</code> à notre container Docker lors de sa création. De la sorte, lorsqu’il est crée ou arrêté, il gardera le fichier <code>.db</code> en mémoire hors de l’image Docker, dans le Volume.</p>
 <p>Il existe aussi les volumes de type “Bind Mounts”, qui permets de partager un dossier de la machine hôte sur le conteneur exécuté.</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">docker</span> run <span class="token parameter variable">-it</span> <span class="token parameter variable">--mount</span> <span class="token assign-left variable">type</span><span class="token operator">=</span>bind,src<span class="token operator">=</span><span class="token string">"<span class="token variable"><span class="token variable">$(</span><span class="token builtin class-name">pwd</span><span class="token variable">)</span></span>"</span>,target<span class="token operator">=</span>/src ubuntu <span class="token function">bash</span>
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">docker</span> run <span class="token parameter variable">-it</span> <span class="token parameter variable">--mount</span> <span class="token assign-left variable">type</span><span class="token operator">=</span>bind,src<span class="token operator">=</span><span class="token string">"<span class="token variable"><span class="token variable">$(</span><span class="token builtin class-name">pwd</span><span class="token variable">)</span></span>"</span>,target<span class="token operator">=</span>/src ubuntu <span class="token function">bash</span></code></pre>
 <h3 id="aller-plus-loin-dans-la-gestion-du-réseau-et-docker-compose">Aller plus loin dans la gestion du réseau (et Docker Compose…)</h3>
 <p>Il est possible de procéder de deux manières pour faire communiquer deux conteneurs entre eux, d’abord en démarrant le container avec un réseau attaché ou bien en connectant un container en cours d’exécution au réseau. Dans tous les cas, on commence par la commande :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">docker</span> network create mon-application
+<pre class="language-bash"><code class="language-bash"><span class="token function">docker</span> network create mon-application
 <span class="token function">docker</span> run <span class="token punctuation">\</span>
 		<span class="token parameter variable">--network</span> mon-application <span class="token punctuation">\</span>
 		--network-alias mysql <span class="token punctuation">\</span>
 		<span class="token parameter variable">--volume</span> mon-app-mysql-data:/var/lib/mysql <span class="token punctuation">\</span>
-		mysql
-</code></pre>
+		mysql</code></pre>
 <blockquote>
 <p>Petit point cependant, l’argument <code>--volume</code> s’utilise comme ceci :
 <code>docker run --volume &lt;chemin_hote&gt;:&lt;chemin_conteneur&gt; nom_de_l_image</code>
@@ -265,9 +255,8 @@ C’est donc une simplification de la syntaxe de <code>--mount</code></p>
 <h3 id="mettre-en-ligne-limage-docker-sur-docker-hub">Mettre en ligne l’image Docker sur Docker Hub</h3>
 <p>Dans cette partie, nous allons nous interroger sur la façon de sauvegarder le travail accompli sur notre image Docker de test. Pour cela, nous utiliserons un repo à la manière de Github pour y placer nos images et les récupérer depuis n’importe quelle machine autorisée.</p>
 <p>Alors, après avoir créé mon repo appelé tutorial-1, nous pouvons exécuter ceci :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">docker</span> image tag figlet alouradou/tutorial-1:latest
-<span class="token function">docker</span> image push alouradou/tutorial-1
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">docker</span> image tag figlet alouradou/tutorial-1:latest
+<span class="token function">docker</span> image push alouradou/tutorial-1</code></pre>
 <p>Pour voir le résultat sur docker hub : <a href="https://hub.docker.com/repository/docker/alouradou/tutorial-django/general">https://hub.docker.com/repository/docker/alouradou/tutorial-django/</a></p>
 <h2 id="regard-critique-et-ouverture">Regard critique et ouverture</h2>
 <p>Nous avons ici abordé les points de compréhension de Docker et de la mise ne place de containers. Pour déployer des applications plus complexes, nous allons ensuite approfondir la notion d’orchestrateurs pour lancer nos conteneurs Docker de façon redondante.</p>

@@ -201,13 +201,12 @@ Tout les codes présentés sont disponibles dans le dossier Git du POK2: <a href
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Cell</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Cell</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> row<span class="token punctuation">,</span> column<span class="token punctuation">,</span> promote <span class="token operator">=</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
         self<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token builtin">chr</span><span class="token punctuation">(</span>column <span class="token operator">+</span> <span class="token number">97</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>row<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">}</span></span><span class="token string">"</span></span>
         self<span class="token punctuation">.</span>row <span class="token operator">=</span> row
         self<span class="token punctuation">.</span>column <span class="token operator">=</span> column
-        self<span class="token punctuation">.</span>promote <span class="token operator">=</span> promote
-</code></pre>
+        self<span class="token punctuation">.</span>promote <span class="token operator">=</span> promote</code></pre>
 </div>
 </details>     
 </div>
@@ -237,14 +236,13 @@ Tout les codes présentés sont disponibles dans le dossier Git du POK2: <a href
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Piece</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Piece</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> IsWhite<span class="token punctuation">,</span> value<span class="token punctuation">,</span> letter<span class="token punctuation">,</span> current_cell<span class="token punctuation">)</span><span class="token punctuation">:</span>
         self<span class="token punctuation">.</span>possible_moves <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
         self<span class="token punctuation">.</span>current_cell <span class="token operator">=</span> current_cell
         self<span class="token punctuation">.</span>IsWhite <span class="token operator">=</span> IsWhite
         self<span class="token punctuation">.</span>value <span class="token operator">=</span> value
-        self<span class="token punctuation">.</span>letter <span class="token operator">=</span> letter
-</code></pre>
+        self<span class="token punctuation">.</span>letter <span class="token operator">=</span> letter</code></pre>
 </div>
 </details>     
 </div>
@@ -271,7 +269,7 @@ Tout les codes présentés sont disponibles dans le dossier Git du POK2: <a href
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">King</span><span class="token punctuation">(</span>Piece<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">King</span><span class="token punctuation">(</span>Piece<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> IsWhite<span class="token punctuation">,</span> current_cell<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token keyword">if</span> IsWhite<span class="token punctuation">:</span>
             <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>IsWhite<span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">,</span> <span class="token string">"K"</span><span class="token punctuation">,</span> current_cell<span class="token punctuation">)</span>
@@ -532,8 +530,7 @@ Tout les codes présentés sont disponibles dans le dossier Git du POK2: <a href
                     obstacle_color <span class="token operator">=</span> board<span class="token punctuation">[</span>new_row<span class="token punctuation">]</span><span class="token punctuation">[</span>new_column<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>IsWhite
                     <span class="token keyword">if</span> obstacle_color <span class="token operator">^</span> self<span class="token punctuation">.</span>IsWhite<span class="token punctuation">:</span>
                         new_cell <span class="token operator">=</span> Cell<span class="token punctuation">(</span>new_row<span class="token punctuation">,</span> new_column<span class="token punctuation">)</span>
-                        self<span class="token punctuation">.</span>possible_moves<span class="token punctuation">.</span>append<span class="token punctuation">(</span>new_cell<span class="token punctuation">)</span>
-</code></pre>
+                        self<span class="token punctuation">.</span>possible_moves<span class="token punctuation">.</span>append<span class="token punctuation">(</span>new_cell<span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>
@@ -556,13 +553,12 @@ Tout les codes présentés sont disponibles dans le dossier Git du POK2: <a href
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Chessboard</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Chessboard</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
         self<span class="token punctuation">.</span>board <span class="token operator">=</span> <span class="token punctuation">[</span> <span class="token punctuation">[</span><span class="token boolean">None</span> <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span> <span class="token punctuation">]</span>
         <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
             <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-                self<span class="token punctuation">.</span>board<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span>Cell<span class="token punctuation">(</span>i<span class="token punctuation">,</span> j<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">]</span>
-</code></pre>
+                self<span class="token punctuation">.</span>board<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span>Cell<span class="token punctuation">(</span>i<span class="token punctuation">,</span> j<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">]</span></code></pre>
 </div>
 </details>     
 </div>
@@ -585,7 +581,7 @@ Tout les codes présentés sont disponibles dans le dossier Git du POK2: <a href
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">get_position_from_fen</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> fen_position<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">get_position_from_fen</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> fen_position<span class="token punctuation">)</span><span class="token punctuation">:</span>
         new_board <span class="token operator">=</span> <span class="token punctuation">[</span> <span class="token punctuation">[</span><span class="token boolean">None</span> <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span> <span class="token punctuation">]</span>
         <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
             <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -629,8 +625,7 @@ Tout les codes présentés sont disponibles dans le dossier Git du POK2: <a href
                         new_board<span class="token punctuation">[</span>nb_row<span class="token punctuation">]</span><span class="token punctuation">[</span>counter<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> Pawn<span class="token punctuation">(</span>row<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">.</span>isupper<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> Cell<span class="token punctuation">(</span>nb_row<span class="token punctuation">,</span> counter<span class="token punctuation">)</span><span class="token punctuation">)</span>
                     counter <span class="token operator">+=</span> <span class="token number">1</span>
             nb_row <span class="token operator">-=</span> <span class="token number">1</span>
-        <span class="token keyword">return</span><span class="token punctuation">(</span>new_board<span class="token punctuation">,</span> IsWhiteToPlay<span class="token punctuation">)</span>
-</code></pre>
+        <span class="token keyword">return</span><span class="token punctuation">(</span>new_board<span class="token punctuation">,</span> IsWhiteToPlay<span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>
@@ -653,7 +648,7 @@ Tout les codes présentés sont disponibles dans le dossier Git du POK2: <a href
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">move</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> current_cell<span class="token punctuation">,</span> final_cell<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">move</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> current_cell<span class="token punctuation">,</span> final_cell<span class="token punctuation">)</span><span class="token punctuation">:</span>
     piece <span class="token operator">=</span> self<span class="token punctuation">.</span>board<span class="token punctuation">[</span>current_cell<span class="token punctuation">.</span>row<span class="token punctuation">]</span><span class="token punctuation">[</span>current_cell<span class="token punctuation">.</span>column<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
     <span class="token keyword">if</span> piece <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
         <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Il n'y a pas de pièce dans la case indiquée"</span><span class="token punctuation">)</span>
@@ -705,8 +700,7 @@ Tout les codes présentés sont disponibles dans le dossier Git du POK2: <a href
     <span class="token keyword">for</span> row <span class="token keyword">in</span> self<span class="token punctuation">.</span>board<span class="token punctuation">:</span>
         <span class="token keyword">for</span> cell <span class="token keyword">in</span> row<span class="token punctuation">:</span>
             <span class="token keyword">if</span> cell<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
-                cell<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>get_possible_moves<span class="token punctuation">(</span>self<span class="token punctuation">.</span>board<span class="token punctuation">)</span>
-</code></pre>
+                cell<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>get_possible_moves<span class="token punctuation">(</span>self<span class="token punctuation">.</span>board<span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>
@@ -730,7 +724,7 @@ Tout les codes présentés sont disponibles dans le dossier Git du POK2: <a href
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">CanBeCaptured</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> piece<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">CanBeCaptured</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> piece<span class="token punctuation">)</span><span class="token punctuation">:</span>
     captured_by <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
     opponent_moves <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>cell<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> cell<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token keyword">for</span> cell <span class="token keyword">in</span> self<span class="token punctuation">.</span>get_all_possible_moves2<span class="token punctuation">(</span><span class="token keyword">not</span> piece<span class="token punctuation">.</span>IsWhite<span class="token punctuation">)</span><span class="token punctuation">]</span>
     <span class="token keyword">for</span> k <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>opponent_moves<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -742,8 +736,7 @@ Tout les codes présentés sont disponibles dans le dossier Git du POK2: <a href
     <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>captured_by<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
         <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">,</span> captured_by<span class="token punctuation">)</span>
     <span class="token keyword">else</span><span class="token punctuation">:</span>
-        <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">,</span> captured_by<span class="token punctuation">)</span>
-</code></pre>
+        <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">,</span> captured_by<span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>
@@ -766,7 +759,7 @@ Tout les codes présentés sont disponibles dans le dossier Git du POK2: <a href
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">get_all_possible_moves</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> IsWhiteToPlay<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">get_all_possible_moves</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> IsWhiteToPlay<span class="token punctuation">)</span><span class="token punctuation">:</span>
     all_possible_moves <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
     initial_board <span class="token operator">=</span> copy<span class="token punctuation">.</span>deepcopy<span class="token punctuation">(</span>self<span class="token punctuation">.</span>board<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
     <span class="token keyword">for</span> row <span class="token keyword">in</span> self<span class="token punctuation">.</span>board<span class="token punctuation">:</span>
@@ -796,8 +789,7 @@ Tout les codes présentés sont disponibles dans le dossier Git du POK2: <a href
                             self<span class="token punctuation">.</span>board <span class="token operator">=</span> copy<span class="token punctuation">.</span>deepcopy<span class="token punctuation">(</span>initial_board<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
                     <span class="token comment"># current_moves = killer_moves + current_moves</span>
                     all_possible_moves<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">[</span>piece<span class="token punctuation">.</span>current_cell<span class="token punctuation">,</span> current_moves<span class="token punctuation">]</span><span class="token punctuation">)</span>
-    <span class="token keyword">return</span><span class="token punctuation">(</span>all_possible_moves<span class="token punctuation">)</span>
-</code></pre>
+    <span class="token keyword">return</span><span class="token punctuation">(</span>all_possible_moves<span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>
@@ -828,7 +820,7 @@ Il est inutile d'expliquer en détail comment cette fonction gère ces cas, mais
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">IsCheckmate</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> IsWhiteToPlay<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">IsCheckmate</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> IsWhiteToPlay<span class="token punctuation">)</span><span class="token punctuation">:</span>
     initial_board <span class="token operator">=</span> copy<span class="token punctuation">.</span>deepcopy<span class="token punctuation">(</span>self<span class="token punctuation">.</span>board<span class="token punctuation">)</span>
     count <span class="token operator">=</span> <span class="token number">0</span>
     <span class="token keyword">for</span> row <span class="token keyword">in</span> self<span class="token punctuation">.</span>board<span class="token punctuation">:</span>
@@ -951,8 +943,7 @@ Il est inutile d'expliquer en détail comment cette fonction gère ces cas, mais
                             <span class="token keyword">else</span><span class="token punctuation">:</span> <span class="token comment">#2 pièces ou plus mettent en échec</span>
                                 <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">)</span>
                     <span class="token keyword">else</span><span class="token punctuation">:</span>
-                        <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">)</span>
-</code></pre>
+                        <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>
@@ -975,7 +966,7 @@ Il est inutile d'expliquer en détail comment cette fonction gère ces cas, mais
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">evaluation</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">evaluation</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token builtin">eval</span> <span class="token operator">=</span> <span class="token number">0</span>
     <span class="token keyword">if</span> self<span class="token punctuation">.</span>IsCheckmate<span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1000000</span><span class="token punctuation">)</span>
@@ -985,8 +976,7 @@ Il est inutile d'expliquer en détail comment cette fonction gère ces cas, mais
         <span class="token keyword">for</span> cell <span class="token keyword">in</span> row<span class="token punctuation">:</span>
             <span class="token keyword">if</span> cell<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
                 <span class="token builtin">eval</span> <span class="token operator">+=</span> cell<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value
-    <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token builtin">eval</span><span class="token punctuation">)</span>
-</code></pre>
+    <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token builtin">eval</span><span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>
@@ -1017,7 +1007,7 @@ Cet algorithme, bien connu dans la théorie des jeux, s'appelle <a href="https:/
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">solve</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> fen_position<span class="token punctuation">,</span> IsWhiteToPlay<span class="token punctuation">,</span> depth<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">solve</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> fen_position<span class="token punctuation">,</span> IsWhiteToPlay<span class="token punctuation">,</span> depth<span class="token punctuation">)</span><span class="token punctuation">:</span>
     self<span class="token punctuation">.</span>c <span class="token operator">=</span> <span class="token number">0</span> 
     self<span class="token punctuation">.</span>tot <span class="token operator">=</span> <span class="token number">0</span>
     self<span class="token punctuation">.</span>best_moves <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token boolean">None</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>depth<span class="token punctuation">)</span><span class="token punctuation">]</span>
@@ -1138,8 +1128,7 @@ Cet algorithme, bien connu dans la théorie des jeux, s'appelle <a href="https:/
                 <span class="token keyword">break</span>
         <span class="token keyword">if</span> IsStalemate<span class="token punctuation">:</span>
             <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>best_moves<span class="token punctuation">)</span>
-    <span class="token keyword">return</span><span class="token punctuation">(</span>best<span class="token punctuation">,</span> self<span class="token punctuation">.</span>best_moves<span class="token punctuation">)</span>
-</code></pre>
+    <span class="token keyword">return</span><span class="token punctuation">(</span>best<span class="token punctuation">,</span> self<span class="token punctuation">.</span>best_moves<span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>
@@ -1200,7 +1189,7 @@ Pour finir, voici l'exemple de résolution d'un mat en 4 sur la position suivant
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
     pygame<span class="token punctuation">.</span>init<span class="token punctuation">(</span><span class="token punctuation">)</span>
     <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
     self<span class="token punctuation">.</span>set_starting_board<span class="token punctuation">(</span><span class="token punctuation">)</span>
@@ -1291,8 +1280,7 @@ Pour finir, voici l'exemple de résolution d'un mat en 4 sur la position suivant
     self<span class="token punctuation">.</span>move_sound <span class="token operator">=</span> pygame<span class="token punctuation">.</span>mixer<span class="token punctuation">.</span>Sound<span class="token punctuation">(</span><span class="token string">'Sounds/move.ogg'</span><span class="token punctuation">)</span>
     self<span class="token punctuation">.</span>capture_sound <span class="token operator">=</span> pygame<span class="token punctuation">.</span>mixer<span class="token punctuation">.</span>Sound<span class="token punctuation">(</span><span class="token string">'Sounds/capture.ogg'</span><span class="token punctuation">)</span>
     self<span class="token punctuation">.</span>check_sound <span class="token operator">=</span> pygame<span class="token punctuation">.</span>mixer<span class="token punctuation">.</span>Sound<span class="token punctuation">(</span><span class="token string">'Sounds/check.ogg'</span><span class="token punctuation">)</span>
-    self<span class="token punctuation">.</span>castle_sound <span class="token operator">=</span> pygame<span class="token punctuation">.</span>mixer<span class="token punctuation">.</span>Sound<span class="token punctuation">(</span><span class="token string">'Sounds/castle.ogg'</span><span class="token punctuation">)</span>
-</code></pre>
+    self<span class="token punctuation">.</span>castle_sound <span class="token operator">=</span> pygame<span class="token punctuation">.</span>mixer<span class="token punctuation">.</span>Sound<span class="token punctuation">(</span><span class="token string">'Sounds/castle.ogg'</span><span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>
@@ -1324,7 +1312,7 @@ Pour finir, voici l'exemple de résolution d'un mat en 4 sur la position suivant
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">display_position</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">display_position</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">if</span> self<span class="token punctuation">.</span>state <span class="token operator">==</span> <span class="token string">"piece_selected"</span><span class="token punctuation">:</span>
         nb_row<span class="token punctuation">,</span> nb_column <span class="token operator">=</span> self<span class="token punctuation">.</span>coord_piece_selected
         <span class="token keyword">if</span> self<span class="token punctuation">.</span>cells_selected<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
@@ -1548,8 +1536,7 @@ Pour finir, voici l'exemple de résolution d'un mat en 4 sur la position suivant
             coord_x <span class="token operator">=</span> self<span class="token punctuation">.</span>delta_x <span class="token operator">+</span> self<span class="token punctuation">.</span>size <span class="token operator">+</span> delta_move_x <span class="token operator">+</span> <span class="token number">70</span>
             text_move <span class="token operator">=</span> self<span class="token punctuation">.</span>font_moves<span class="token punctuation">.</span>render<span class="token punctuation">(</span>list_move_to_display<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token boolean">False</span><span class="token punctuation">,</span> <span class="token string">"Black"</span><span class="token punctuation">)</span>
             text_rect <span class="token operator">=</span> text_move<span class="token punctuation">.</span>get_rect<span class="token punctuation">(</span>center <span class="token operator">=</span> <span class="token punctuation">(</span>coord_x<span class="token punctuation">,</span> coord_y<span class="token punctuation">)</span><span class="token punctuation">)</span>
-            self<span class="token punctuation">.</span>screen<span class="token punctuation">.</span>blit<span class="token punctuation">(</span>text_move<span class="token punctuation">,</span> text_rect<span class="token punctuation">)</span>
-</code></pre>
+            self<span class="token punctuation">.</span>screen<span class="token punctuation">.</span>blit<span class="token punctuation">(</span>text_move<span class="token punctuation">,</span> text_rect<span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>
@@ -1572,7 +1559,7 @@ Pour finir, voici l'exemple de résolution d'un mat en 4 sur la position suivant
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">get_row_column</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">get_row_column</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
     pos <span class="token operator">=</span> pygame<span class="token punctuation">.</span>mouse<span class="token punctuation">.</span>get_pos<span class="token punctuation">(</span><span class="token punctuation">)</span>
     pos_x <span class="token operator">=</span> pos<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">-</span> self<span class="token punctuation">.</span>delta_x
     pos_y <span class="token operator">=</span> pos<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">-</span> self<span class="token punctuation">.</span>delta_y
@@ -1581,8 +1568,7 @@ Pour finir, voici l'exemple de résolution d'un mat en 4 sur la position suivant
         nb_column <span class="token operator">=</span> pos_x <span class="token operator">//</span> self<span class="token punctuation">.</span>cell_size
         <span class="token keyword">return</span><span class="token punctuation">(</span>nb_row<span class="token punctuation">,</span> nb_column<span class="token punctuation">)</span>
     <span class="token keyword">else</span><span class="token punctuation">:</span>
-        <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token boolean">None</span><span class="token punctuation">)</span>
-</code></pre>
+        <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token boolean">None</span><span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>
@@ -1604,7 +1590,7 @@ Pour finir, voici l'exemple de résolution d'un mat en 4 sur la position suivant
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">update_cells_selected</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> piece<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">update_cells_selected</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> piece<span class="token punctuation">)</span><span class="token punctuation">:</span>
     valid_moves <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
     current_cell <span class="token operator">=</span> copy<span class="token punctuation">.</span>deepcopy<span class="token punctuation">(</span>piece<span class="token punctuation">.</span>current_cell<span class="token punctuation">)</span>
     initial_board <span class="token operator">=</span> copy<span class="token punctuation">.</span>deepcopy<span class="token punctuation">(</span>self<span class="token punctuation">.</span>board<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
@@ -1660,8 +1646,7 @@ Pour finir, voici l'exemple de résolution d'un mat en 4 sur la position suivant
             <span class="token keyword">if</span> <span class="token keyword">not</span> self<span class="token punctuation">.</span>IsCheck<span class="token punctuation">(</span>self<span class="token punctuation">.</span>IsWhiteToPlay<span class="token punctuation">)</span><span class="token punctuation">:</span>
                 valid_moves<span class="token punctuation">.</span>append<span class="token punctuation">(</span>copy<span class="token punctuation">.</span>deepcopy<span class="token punctuation">(</span>cell<span class="token punctuation">)</span><span class="token punctuation">)</span>
             self<span class="token punctuation">.</span>board <span class="token operator">=</span> copy<span class="token punctuation">.</span>deepcopy<span class="token punctuation">(</span>initial_board<span class="token punctuation">)</span>
-    self<span class="token punctuation">.</span>cells_selected <span class="token operator">=</span> <span class="token punctuation">[</span>piece<span class="token punctuation">.</span>current_cell<span class="token punctuation">,</span> copy<span class="token punctuation">.</span>deepcopy<span class="token punctuation">(</span>valid_moves<span class="token punctuation">)</span><span class="token punctuation">]</span>
-</code></pre>
+    self<span class="token punctuation">.</span>cells_selected <span class="token operator">=</span> <span class="token punctuation">[</span>piece<span class="token punctuation">.</span>current_cell<span class="token punctuation">,</span> copy<span class="token punctuation">.</span>deepcopy<span class="token punctuation">(</span>valid_moves<span class="token punctuation">)</span><span class="token punctuation">]</span></code></pre>
 </div>
 </details>     
 </div>

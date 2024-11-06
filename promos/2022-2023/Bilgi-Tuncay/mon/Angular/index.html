@@ -244,17 +244,15 @@ Tailwind propose de divisé nos tailles d'écran en 4 catégories, que l'on peut
 <h3>Component</h3>
 <p>Comme dit plus haut, Angular marche avec des components.
 Par exemple, si on a besoin d'un bouton, au lieu de le faire en plein milieu de notre page principale, on va créer un component Bouton que l'on va inserer dans la page principale. Comme ça, si on a besoind e plusieurs boutons similairs, au lieu de recopier le code completement à chaque fois, on replace simplement le component ailleurs. Par exemple :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>MonBouttonPersonalisé</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>MonBouttonPersonalisé</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>MonBouttonPersonalisé</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>MonBouttonPersonalisé</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-</code></pre>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span></code></pre>
 <p>et à coté on a un fichier qui définit à quoi ressemble MonBouttonPersonalisé, ici un bouton qui quand cliqué, nous redirige sur <a href="http://unlien.fr">unlien.fr</a> :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span><span class="token punctuation">></span></span>BOUTON<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>https://unlien.fr<span class="token punctuation">'</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-</code></pre>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
 <p>Pour créer un component vide avec l'ossature désirée on tape <code>ng generate component nom-component</code>
 On l'appelle dans un html avec la balise <code>&lt;app-nom-component&gt;&lt;/app-nom-component&gt;</code>.</p>
 <p>En guise d'exemple plus concret, pour mon projet, j'ai plusieurs components :</p>

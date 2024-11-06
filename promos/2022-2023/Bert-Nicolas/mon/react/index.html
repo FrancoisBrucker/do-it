@@ -158,7 +158,7 @@
 <h3>useState</h3>
 <p>Le hook <code>useState</code> est probablement un des plus simples. Il permet de définir une variable d'état locale au component.</p>
 <p>Pour un component &quot;Fonction&quot; :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">function</span> <span class="token function">Example</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 <span class="token comment">// Déclare une nouvelle variable d'état, que l'on va appeler « count »</span>
@@ -172,10 +172,9 @@
     <span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
     <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Son équivalent pour un component &quot;Classe&quot; :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">class</span> <span class="token class-name">Example</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">class</span> <span class="token class-name">Example</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
   <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span>
@@ -193,12 +192,11 @@
       <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>On adopte la syntaxe <code>[myVariable, setMyVariable]</code> en <a href="https://fr.wikipedia.org/wiki/Camel_case">camelCase</a> pour plus de clarté. En utilisant <code>useState</code>, on récupère donc une variable dont l'état est réactif et une fonction pour modifier cette variable et par la même occasion &quot;re-render&quot; le component. La valeur passée en paramètre de <code>useState</code> correspond à la valeur  de la variable lors de l'initialisation du component. Dans l'exemple avec les classes, on utilise une seule variable qui est de type objet et qui s'appelle state et on la modifie avec setState en lui spécifiant un attribut.</p>
 <h3>useEffect</h3>
 <p>Le hook <code>useEffect</code>permet l'exécution d'effets de bord dans les components fonctions. Il permet d'indiquer à React que notre composant doit exécuter quelque chose après chaque affichage. React enregistre la fonction passée en argument (appelée &quot;effet&quot;) et l'appellera plus tard après avoir mis à jour le DOM.</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useState<span class="token punctuation">,</span> useEffect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useState<span class="token punctuation">,</span> useEffect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">function</span> <span class="token function">Example</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> <span class="token punctuation">[</span>count<span class="token punctuation">,</span> setCount<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -217,16 +215,14 @@
       <span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
     <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Il également possible d'ajouter une liste de dépendances à notre <code>useEffect</code>afin de lui indiquer de s'exécuter uniquement que si certaines variables changent afin d'éviter de surcharger.</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<pre class="language-js"><code class="language-js"><span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   document<span class="token punctuation">.</span>title <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Vous avez cliqué </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>count<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> fois</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>count<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// N’exécute l’effet que si count a changé</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>count<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// N’exécute l’effet que si count a changé</span></code></pre>
 <h3>useContext</h3>
 <p>Ce hook permet de récupérer la valeur du contexte. Un contexte peut être identifié à un state défini dans les components parents ou de manière global à l'application. Par exemple, pour gérer un dark mode.</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> themes <span class="token operator">=</span> <span class="token punctuation">{</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> themes <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token literal-property property">light</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token literal-property property">foreground</span><span class="token operator">:</span> <span class="token string">"#000000"</span><span class="token punctuation">,</span>
     <span class="token literal-property property">background</span><span class="token operator">:</span> <span class="token string">"#eeeeee"</span>
@@ -263,14 +259,13 @@
     <span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-
 </code></pre>
 <h3>Autres ...</h3>
 <p>Les autres hooks existants ne sont que des variantes spécifiques à ceux déjà présentés.</p>
 <ul>
 <li><code>useReducer</code> permet de gérer un state avec en plus un reducer, il s'agit d'une fonction que l'on définit et qui est plus complexe que le simple setter définit dans le <code>useState</code> et permet d'inclure plus de logique. Voici un exemple :</li>
 </ul>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> initialState <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token literal-property property">count</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> initialState <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token literal-property property">count</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
 
 <span class="token keyword">function</span> <span class="token function">reducer</span><span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> action</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">switch</span> <span class="token punctuation">(</span>action<span class="token punctuation">.</span>type<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -292,12 +287,11 @@
       <span class="token operator">&lt;</span>button onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'increment'</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">></span><span class="token operator">+</span><span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
     <span class="token operator">&lt;</span><span class="token operator">/</span><span class="token operator">></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <ul>
 <li><code>useRef</code> permet de récupérer et modifier un élement du DOM.</li>
 </ul>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">function</span> <span class="token function">TextInputWithFocusButton</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">TextInputWithFocusButton</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> inputEl <span class="token operator">=</span> <span class="token function">useRef</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">const</span> <span class="token function-variable function">onButtonClick</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
     <span class="token comment">// `current` fait référence au champ textuel monté dans le DOM</span>
@@ -309,8 +303,7 @@
       <span class="token operator">&lt;</span>button onClick<span class="token operator">=</span><span class="token punctuation">{</span>onButtonClick<span class="token punctuation">}</span><span class="token operator">></span>Donner le focus au champ<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
     <span class="token operator">&lt;</span><span class="token operator">/</span><span class="token operator">></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Pour plus d'informations : <a href="https://fr.reactjs.org/docs/hooks-reference.html">https://fr.reactjs.org/docs/hooks-reference.html</a></p>
 
 

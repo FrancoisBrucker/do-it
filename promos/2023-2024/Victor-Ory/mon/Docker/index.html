@@ -176,8 +176,7 @@
 <h2>On fait quoi avec ça ?</h2>
 <p>Ainsi, l'objectif pour une application de ce genre est de créer un container à base d'une image adaptée à chaque composant. Pour cela, nous pouvons nous aider de <a href="https://hub.docker.com/">Docker Hub</a>, un répertoire d'images pour les différents usages avec une documentation associée souvent.</p>
 <p>Une fois téléchargée, l'image peut être utilisée à travers ce genre de ligne de commande :</p>
-<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell"><span class="token function">docker</span> run <span class="token parameter variable">-phostport:containerport</span> <span class="token parameter variable">-d</span> <span class="token parameter variable">-e</span> variable environnement 
-</code></pre>
+<pre class="language-shell"><code class="language-shell"><span class="token function">docker</span> run <span class="token parameter variable">-phostport:containerport</span> <span class="token parameter variable">-d</span> <span class="token parameter variable">-e</span> variable environnement </code></pre>
 <p>La commande permet de créer un container à partir d'une image où :</p>
 <ul>
 <li><code>-p</code> permet de faire le binding de port.</li>

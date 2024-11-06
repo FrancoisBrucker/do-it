@@ -172,7 +172,7 @@
 <h3>Implémentation</h3>
 <h4>Intégration et Gestion des Données des Joueurs</h4>
 <p>Jusqu'à présent, j'ai pu avancer sur la fonctionnalité &quot;Intégration et Gestion des Données des Joueurs&quot;. J'ai réussi à importer manuellement les données des joueurs dans la base de données MongoDB, comme une base de mon processus. Bien que l'automatisation complète ne soit pas encore mise en place, Cette étape initiale sert de fondement solide pour la suite du développement. Les prochaines étapes impliqueront la recherche et l'intégration d'une API appropriée pour garantir la mise à jour en temps réel des données des joueurs et de la ligue.</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> mongoose <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mongoose'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> mongoose <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mongoose'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> PlayerModel <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./models/player'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
 <span class="token keyword">const</span> mongoURI <span class="token operator">=</span> <span class="token string">"mongodb+srv://TinySpy:@cluster0.guwuhmj.mongodb.net/MFL"</span>
@@ -198,7 +198,6 @@ mongoose<span class="token punctuation">.</span><span class="token function">con
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span class="token function">importPlayers</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
 </code></pre>
 <img src="players_schema.png" width="650" height="500">
 <h4>Création et Gestion d'Équipe</h4>
@@ -280,7 +279,7 @@ mongoose<span class="token punctuation">.</span><span class="token function">con
 </div></div>
 <h4>Intégration et Gestion des Données de la Botola Pro</h4>
 <p>Pour l'intégration des données de la ligue, j'ai rencontré quelques difficultés car mon plan initial était de rechercher et d'intégrer une API appropriée pour les données en temps réel des joueurs et de la ligue. Cependant, la ligue marocaine n'est pas avancée dans ce domaine et l'accès à une API serait payant. Par conséquent, j'ai modifié ma méthode tout en conservant le même objectif. Je vais utiliser le web scraping pour extraire les données du site web, notamment les statistiques des joueurs et des équipes, ainsi que les scores et le classement de tous les matchs. J'ai utilisé le <a href="https://site.frmf.ma/fr/competitions/botola-d1/">site officiel de la Botola Pro</a> pour obtenir toutes les données dont j'avais besoin:</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> axios <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'axios'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> axios <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'axios'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> cheerio <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'cheerio'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">scrapeJournee</span><span class="token punctuation">(</span><span class="token parameter">url</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -309,8 +308,7 @@ mongoose<span class="token punctuation">.</span><span class="token function">con
 <span class="token punctuation">}</span>
 
 <span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">'https://botolapro.gestfootball.com/fr/p4755/#1560926979862-d8bdd234-a3403'</span><span class="token punctuation">;</span>
-<span class="token function">scrapeJournee</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">fixtures</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>fixtures<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<span class="token function">scrapeJournee</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">fixtures</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>fixtures<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <img src="scrapbotola.png" width="700" height="550">
 <h2>2eme Sprint: Développement Front<a id="section-3"></a></h2>
 <h3>Backlog</h3>

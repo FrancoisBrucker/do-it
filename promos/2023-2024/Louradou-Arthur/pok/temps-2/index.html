@@ -280,11 +280,10 @@ En effet, ce projet comporte une phase de recherche importante, car il faut comp
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> google<span class="token punctuation">.</span>colab <span class="token keyword">import</span> drive
-drive<span class="token punctuation">.</span>mount<span class="token punctuation">(</span><span class="token string">'/content/drive'</span><span class="token punctuation">)</span>
-</code></pre>
+<pre class="language-python"><code class="language-python"><span class="token keyword">from</span> google<span class="token punctuation">.</span>colab <span class="token keyword">import</span> drive
+drive<span class="token punctuation">.</span>mount<span class="token punctuation">(</span><span class="token string">'/content/drive'</span><span class="token punctuation">)</span></code></pre>
 <p>Ensuite, il faut autoriser google à nous authentifier sur ses services :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> google<span class="token punctuation">.</span>colab <span class="token keyword">import</span> auth
+<pre class="language-python"><code class="language-python"><span class="token keyword">from</span> google<span class="token punctuation">.</span>colab <span class="token keyword">import</span> auth
 auth<span class="token punctuation">.</span>authenticate_user<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
 <span class="token keyword">import</span> gspread
@@ -294,10 +293,9 @@ creds<span class="token punctuation">,</span> _ <span class="token operator">=</
 gc <span class="token operator">=</span> gspread<span class="token punctuation">.</span>authorize<span class="token punctuation">(</span>creds<span class="token punctuation">)</span>
 
 workbook <span class="token operator">=</span> gc<span class="token punctuation">.</span>open_by_url<span class="token punctuation">(</span><span class="token operator">&lt;</span>url du spreadsheet Do_It<span class="token operator">></span><span class="token punctuation">)</span>
-ws <span class="token operator">=</span> workbook<span class="token punctuation">.</span>worksheet<span class="token punctuation">(</span><span class="token string">'année'</span><span class="token punctuation">)</span>
-</code></pre>
+ws <span class="token operator">=</span> workbook<span class="token punctuation">.</span>worksheet<span class="token punctuation">(</span><span class="token string">'année'</span><span class="token punctuation">)</span></code></pre>
 <p>On peut ensuite récupérer les données de la feuille de calcul :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+<pre class="language-python"><code class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
 <span class="token keyword">from</span> datetime <span class="token keyword">import</span> datetime
 <span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
 
@@ -328,8 +326,7 @@ two_first <span class="token operator">=</span> two_first<span class="token punc
 first <span class="token operator">=</span> two_first<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">","</span> <span class="token operator">+</span> two_first<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
 
 headers <span class="token operator">=</span> df<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>values
-df<span class="token punctuation">.</span>columns <span class="token operator">=</span> first
-</code></pre>
+df<span class="token punctuation">.</span>columns <span class="token operator">=</span> first</code></pre>
 </div>
 </details>     
 </div>
@@ -524,7 +521,7 @@ df<span class="token punctuation">.</span>columns <span class="token operator">=
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> icalendar <span class="token keyword">import</span> Calendar<span class="token punctuation">,</span> Event
+<pre class="language-python"><code class="language-python"><span class="token keyword">from</span> icalendar <span class="token keyword">import</span> Calendar<span class="token punctuation">,</span> Event
 <span class="token keyword">from</span> datetime <span class="token keyword">import</span> datetime<span class="token punctuation">,</span> timedelta
 
 row <span class="token operator">=</span> df<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token number">17</span><span class="token punctuation">]</span>  <span class="token comment"># Prenons un ligne pour exemple</span>
@@ -555,8 +552,7 @@ cal <span class="token operator">=</span> Calendar<span class="token punctuation
 
             cal<span class="token punctuation">.</span>add_component<span class="token punctuation">(</span>event<span class="token punctuation">)</span>
         <span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
-            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Erreur dans la colonne"</span><span class="token punctuation">,</span>col_value<span class="token punctuation">,</span><span class="token string">": "</span><span class="token punctuation">,</span>e<span class="token punctuation">)</span>
-</code></pre>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Erreur dans la colonne"</span><span class="token punctuation">,</span>col_value<span class="token punctuation">,</span><span class="token string">": "</span><span class="token punctuation">,</span>e<span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>
@@ -584,9 +580,8 @@ Petit point méthodologique cependant : j'utilise principalement chatGPT dans ce
 <p>J’ai donc abandonné cette piste qui m’a conduit à d’autres recherches.</p>
 <h3 id="solution">Une solution inespérée, plus simple..!</h3>
 <p>Durant les recherches sur l’API, certains posts ont mentionné des liens d’export et nous aurions pu commencer par là : analyser les requêtes effectuées par le navigateur pour télécharger un Google Spreadsheet en PDF, Excel, CSV, etc. En effet, à l’aide d’un simple lien composé de cette façon :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">csv_url <span class="token operator">=</span> <span class="token string">"https://docs.google.com/spreadsheets/d/"</span> <span class="token operator">+</span> sheet_id <span class="token operator">+</span> <span class="token string">"/gviz/tq?tqx=out:csv&amp;sheet="</span> <span class="token operator">+</span> sheet_name
-xlsx_url <span class="token operator">=</span> <span class="token string">"https://docs.google.com/spreadsheets/d/"</span> <span class="token operator">+</span> sheet_id <span class="token operator">+</span> <span class="token string">"/export?format=xlsx&amp;id="</span> <span class="token operator">+</span> sheet_id
-</code></pre>
+<pre class="language-python"><code class="language-python">csv_url <span class="token operator">=</span> <span class="token string">"https://docs.google.com/spreadsheets/d/"</span> <span class="token operator">+</span> sheet_id <span class="token operator">+</span> <span class="token string">"/gviz/tq?tqx=out:csv&amp;sheet="</span> <span class="token operator">+</span> sheet_name
+xlsx_url <span class="token operator">=</span> <span class="token string">"https://docs.google.com/spreadsheets/d/"</span> <span class="token operator">+</span> sheet_id <span class="token operator">+</span> <span class="token string">"/export?format=xlsx&amp;id="</span> <span class="token operator">+</span> sheet_id</code></pre>
 <p>Avec le Sheet id se trouvant dans l’URL de l’emploi du temps de Do_It.</p>
 <aside>
 💡 Merveilleux : nous avons désormais un Google Sheet qui se télécharge tout seul et qui peut être exploité par la bibliothèque `openpyxl` comme le fait DUC dans son MON !
@@ -634,8 +629,7 @@ Problème relevé : lorsque l’orthographe des cours est inexacte dans la premi
 <li>En relevant les différences, on sait si des problèmes d’orthographe ont été repérés.</li>
 </ol>
 <p>Pour l’heure, je corrige ces problèmes en ajoutant dans CreateTimetable, la liste des cours problématiques comme s’ils s’agissait de tronc commun :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token string">"architecture si"</span><span class="token punctuation">,</span> <span class="token string">"stratégje &amp; si"</span><span class="token punctuation">,</span> <span class="token string">"people analytics"</span><span class="token punctuation">,</span> <span class="token string">"it &amp; dynamique organisationnelle"</span>
-</code></pre>
+<pre class="language-python"><code class="language-python"><span class="token string">"architecture si"</span><span class="token punctuation">,</span> <span class="token string">"stratégje &amp; si"</span><span class="token punctuation">,</span> <span class="token string">"people analytics"</span><span class="token punctuation">,</span> <span class="token string">"it &amp; dynamique organisationnelle"</span></code></pre>
 <p>Il conviendrait d'en réaliser de nouveaux.</p>
 <h2 id="perspectives-et-conclusion">Perspectives et conclusion</h2>
 <p>Ce projet a été très intéressant à réaliser car il m’a permis de découvrir des outils très utiles pour la gestion de données et de me sentir à l'aise avec des concepts de développement complets pour un résulat utilisable par les élèves de Do_It.</p>

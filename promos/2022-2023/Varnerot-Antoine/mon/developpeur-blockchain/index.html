@@ -169,15 +169,14 @@ Truffle :
 <p>J'ai ensuite suivi le tuto quickstart qui permet d'explorer des petits projets déja existants avec des explications :</p>
 <p><a href="https://trufflesuite.com/docs/truffle/quickstart/">https://trufflesuite.com/docs/truffle/quickstart/</a></p>
 <p>Pour déployer nos smarts contracts, on doit se connecter à une blockchain. On pourrait se connecter à celle d'Ethereum mais on a pas envie dépenser de l'argent pour le dev. Heuresement, Truffle à sa propre blockchain local. On s'y connecte avec la commande</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">truffle develop
-</code></pre>
+<pre class="language-bash"><code class="language-bash">truffle develop</code></pre>
 <p>qui renvoit ici :</p>
 <figure>
   <img src="../assets/truffleDevelop.png">
 </figure>
 <p>On voit que ca a créé 10 comptes avec leurs clés respectives.</p>
 <p>Pour migrer les contrats sur la blockchain on utilise <code>migrate</code> qui renvoie :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">Starting migrations<span class="token punctuation">..</span>.
+<pre class="language-bash"><code class="language-bash">Starting migrations<span class="token punctuation">..</span>.
 <span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span>
 <span class="token operator">></span> Network name:    <span class="token string">'develop'</span>
 <span class="token operator">></span> Network id:      <span class="token number">5777</span>
@@ -235,8 +234,7 @@ Truffle :
 Summary
 <span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">=</span>
 <span class="token operator">></span> Total deployments:   <span class="token number">2</span>
-<span class="token operator">></span> Final cost:          <span class="token number">0.001894367934056634</span> ETH
-</code></pre>
+<span class="token operator">></span> Final cost:          <span class="token number">0.001894367934056634</span> ETH</code></pre>
 <p>On voit qu'il a bien déployer les deux contrats et on voit, comme sur une facture, le detail de chaque transaction. On reconnait les concepts appris sur le site <a href="http://ethereum.org">ethereum.org</a> comme le gas, les différentes unités de monnaie (Wei, ETH).
 Le coût total du contrat correspond environ à 3€ en mars 2023. Ce n'est pas énorme mais le code est très basique. Si on était ammené à utiliser beaucoup de la mémoire sur la blockchain, ce coût grimperait vite.</p>
 <p>Pour la suite du tuto, il est conseillé d'utiliser Ganache :

@@ -182,20 +182,17 @@ Source : [8]
 <h4>Quelques règles pour faire des transitions</h4>
 <p>C’est maintenant que nous plongeons tout droit dans le cours d’Openclassrooms <a href="#bibliographie">[1]</a> suivi par Lucie. Je recommande la lecture de son MON pour se faire une idée et si cela vous intéresse, du cours tout entier. Voici ce que j’en retiens à ma manière :</p>
 <h4>Les propriétés à retenir</h4>
-<pre class="language-scss " style="counter-reset: linenumber 0"><code class="language-scss"><span class="token property">transition-property</span><span class="token punctuation">:</span> transform<span class="token punctuation">;</span> <span class="token comment">/* Propriété à modifier */</span>
+<pre class="language-scss"><code class="language-scss"><span class="token property">transition-property</span><span class="token punctuation">:</span> transform<span class="token punctuation">;</span> <span class="token comment">/* Propriété à modifier */</span>
 <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scale</span><span class="token punctuation">(</span>1<span class="token punctuation">)</span> <span class="token comment">/* Valeur initiale */</span>
 <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scale</span><span class="token punctuation">(</span>1.2<span class="token punctuation">)</span> <span class="token comment">/* Valeur finale (même propriété) */</span>
 <span class="token property">transition-duration</span><span class="token punctuation">:</span> 1ms<span class="token punctuation">,</span> 1s<span class="token punctuation">,</span> ...<span class="token punctuation">;</span>
-<span class="token comment">/* Événement déclencheur (pseudo-classe ou infini et répétitif) */</span>
-</code></pre>
+<span class="token comment">/* Événement déclencheur (pseudo-classe ou infini et répétitif) */</span></code></pre>
 <p>Il est possible de combiner ces propriétés en une seule, bien sûr. Par exemple :</p>
-<pre class="language-scss " style="counter-reset: linenumber 0"><code class="language-scss"><span class="token property">transition</span><span class="token punctuation">:</span> transform 100ms<span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-scss"><code class="language-scss"><span class="token property">transition</span><span class="token punctuation">:</span> transform 100ms<span class="token punctuation">;</span></code></pre>
 <h4>Complexifier ses transitions</h4>
 <p>On peut séparer les transitions par des virgules et plusieurs se produiront. On peut dès lors les espacer avec la propriété <code>transition-delay</code> à mettre après <code>transition-duration</code> dans <code>transition</code>. On a donc :</p>
-<pre class="language-scss " style="counter-reset: linenumber 0"><code class="language-scss"><span class="token property">transition</span><span class="token punctuation">:</span> transition-property transition-delay<span class="token punctuation">,</span>
-            transition-property transition-delay transition-duration<span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-scss"><code class="language-scss"><span class="token property">transition</span><span class="token punctuation">:</span> transition-property transition-delay<span class="token punctuation">,</span>
+            transition-property transition-delay transition-duration<span class="token punctuation">;</span></code></pre>
 <p>Plus d’informations peuvent être trouvées sur l’excellente documentation de Mozilla <a href="#bibliographie">[5]</a>.</p>
 <h4>Performances</h4>
 <p>Arrêtons-nous quelques instants sur la partie performances du site avant d’y ajouter des animations supplémentaires. En se référant au chapitre qui traite des performances, on se rend compte qu’il ne faut animer que certaines propriétés pour que le navigateur rende le moins d’éléments possibles.</p>
@@ -222,7 +219,7 @@ Source : [8]
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-scss " style="counter-reset: linenumber 0"><code class="language-scss"><span class="token keyword">@import</span> <span class="token string">'../../scss/variables'</span><span class="token punctuation">;</span>
+<pre class="language-scss"><code class="language-scss"><span class="token keyword">@import</span> <span class="token string">'../../scss/variables'</span><span class="token punctuation">;</span>
 
 <span class="token selector">.background, .background::before </span><span class="token punctuation">{</span>
   <span class="token property">position</span><span class="token punctuation">:</span> fixed<span class="token punctuation">;</span>
@@ -318,8 +315,7 @@ Source : [8]
     <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">blur</span><span class="token punctuation">(</span>9px<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-<span class="token comment">/* --- */</span>
-</code></pre>
+<span class="token comment">/* --- */</span></code></pre>
 </div>
 </details>     
 </div>

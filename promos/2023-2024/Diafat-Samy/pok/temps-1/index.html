@@ -200,40 +200,30 @@
 <p>On passe maintenant à un notebook afin d'automatiser tout cela avec python !</p>
 <h3>Automatiser les requêtes sur python<a id="subsection-2"></a></h3>
 <p>Import de notre clef</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">api_key <span class="token operator">=</span> <span class="token string">'RGAPI-d26162a7-7ea3-4af5-91b3-1087f97591e8'</span>
-</code></pre>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">api_key
-</code></pre>
+<pre class="language-python"><code class="language-python">api_key <span class="token operator">=</span> <span class="token string">'RGAPI-d26162a7-7ea3-4af5-91b3-1087f97591e8'</span></code></pre>
+<pre class="language-python"><code class="language-python">api_key</code></pre>
 <p>'RGAPI-d26162a7-7ea3-4af5-91b3-1087f97591e8'</p>
 <p>On récupère ensuite une URL venant du site de Riot Games : <a href="https://developer.riotgames.com/apis">https://developer.riotgames.com/apis</a></p>
 <p>On s'interesse tout d'abord aux données d'un compte en particulier, on utilise ici l'API V4</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">pseudo <span class="token operator">=</span> <span class="token string">'Yomm'</span>
-</code></pre>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">api_url <span class="token operator">=</span> <span class="token string">'https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/'</span> <span class="token operator">+</span> pseudo
-</code></pre>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">api_url
-</code></pre>
+<pre class="language-python"><code class="language-python">pseudo <span class="token operator">=</span> <span class="token string">'Yomm'</span></code></pre>
+<pre class="language-python"><code class="language-python">api_url <span class="token operator">=</span> <span class="token string">'https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/'</span> <span class="token operator">+</span> pseudo</code></pre>
+<pre class="language-python"><code class="language-python">api_url</code></pre>
 <p>'<a href="https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/Yomm">https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/Yomm</a>'</p>
 <p>Afin d'avoir l'autorisation d'accès à l'API, nous devons ajouter notre clef à l'url</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">api_url <span class="token operator">=</span> api_url <span class="token operator">+</span> <span class="token string">'?api_key='</span> <span class="token operator">+</span> api_key
-</code></pre>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">api_url
-</code></pre>
+<pre class="language-python"><code class="language-python">api_url <span class="token operator">=</span> api_url <span class="token operator">+</span> <span class="token string">'?api_key='</span> <span class="token operator">+</span> api_key</code></pre>
+<pre class="language-python"><code class="language-python">api_url</code></pre>
 <p>'<a href="https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/Yomm?api_key=RGAPI-d26162a7-7ea3-4af5-91b3-1087f97591e8">https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/Yomm?api_key=RGAPI-d26162a7-7ea3-4af5-91b3-1087f97591e8</a>'</p>
 <p>On importe ensuite la bibliothèque requests qui va nous permettre de faire des requêtes via python.</p>
 <blockquote>
 <p>La bibliothèque requests en Python est utilisée pour envoyer des requêtes HTTP vers des serveurs web et interagir avec des ressources en ligne. Elle permet de créer des applications qui peuvent effectuer des opérations telles que l'envoi de requêtes GET, POST, PUT, DELETE, etc., pour récupérer des données depuis des API, envoyer des données à des serveurs, télécharger des fichiers à partir d'Internet, et bien plus encore.</p>
 </blockquote>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">import</span> requests
-</code></pre>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>api_url<span class="token punctuation">)</span>
-</code></pre>
+<pre class="language-python"><code class="language-python"><span class="token keyword">import</span> requests</code></pre>
+<pre class="language-python"><code class="language-python">requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>api_url<span class="token punctuation">)</span></code></pre>
 <p>&lt;Response [200]&gt;</p>
 <p>La réponse nous permet de savoir l'état de la requête envoyée, 200 correspond à une requête réussi !</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">resp <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>api_url<span class="token punctuation">)</span>
+<pre class="language-python"><code class="language-python">resp <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>api_url<span class="token punctuation">)</span>
 player_info <span class="token operator">=</span> resp<span class="token punctuation">.</span>json<span class="token punctuation">(</span><span class="token punctuation">)</span>
-player_info
-</code></pre>
+player_info</code></pre>
 <p>{'id': 'sowIMP6jk8jfAEMsUR9W9TwUlqcHLpk-sGD727LdzXTJKJU',
 'accountId': 'XEOycCgqv9jSoYu25_24LPzueZGvKrcdUX7yUy_p-6vrxw',
 'puuid': 'u-bz6k4v2VzDEVkG5brW_NBGfYmjCGstDEoK0ruij3BpbwkhseE4knsJZH_Sx3NjnSzQy8iv60vTjA',
@@ -243,12 +233,10 @@ player_info
 'summonerLevel': 184}</p>
 <p>La méthode .json() est appelée, et le contenu JSON de la réponse est automatiquement analysé et converti en une structure de données Python</p>
 <p>On voit que player_info est un dictionnaire contenant plusieurs informations</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">player_info<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
+<pre class="language-python"><code class="language-python">player_info<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 <p>dict_keys(['id', 'accountId', 'puuid', 'name', 'profileIconId', 'revisionDate', 'summonerLevel'])</p>
 <p>On peut par exemple obtenir l'ID associée à un pseudo</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">player_info<span class="token punctuation">[</span><span class="token string">'id'</span><span class="token punctuation">]</span>
-</code></pre>
+<pre class="language-python"><code class="language-python">player_info<span class="token punctuation">[</span><span class="token string">'id'</span><span class="token punctuation">]</span></code></pre>
 <h3>Faire des calculs à l'aide des données récoltées<a id="subsection-3"></a></h3>
 <p>Par la suite, j'ai créé des fonctions me permettant de faire des requêtes dans plusieurs sources différentes afin de croiser les informations, et de faire des calculs de moyenne par exemple.</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
@@ -268,7 +256,7 @@ player_info
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># Cette fonction permet de récupérer le puuid d'un joueur à partir du nom d'invocateur, de la région, et d'une clef api</span>
+<pre class="language-python"><code class="language-python"><span class="token comment"># Cette fonction permet de récupérer le puuid d'un joueur à partir du nom d'invocateur, de la région, et d'une clef api</span>
 <span class="token keyword">def</span> <span class="token function">get_puuid</span><span class="token punctuation">(</span>summoner_name<span class="token punctuation">,</span> region<span class="token punctuation">,</span> api_key<span class="token punctuation">)</span><span class="token punctuation">:</span>
     api_url <span class="token operator">=</span> <span class="token punctuation">(</span>
         <span class="token string">"https://"</span> <span class="token operator">+</span> 
@@ -337,35 +325,29 @@ player_info
         <span class="token comment"># if resp.status_code isn't 429, then we carry on to the end of the function and return the data</span>
         resp <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>api_url<span class="token punctuation">)</span>
         match_data <span class="token operator">=</span> resp<span class="token punctuation">.</span>json<span class="token punctuation">(</span><span class="token punctuation">)</span>
-        <span class="token keyword">return</span> match_data 
-</code></pre>
+        <span class="token keyword">return</span> match_data </code></pre>
 </div>
 </details>     
 </div>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">pseudo <span class="token operator">=</span> <span class="token string">'Yomm'</span>
+<pre class="language-python"><code class="language-python">pseudo <span class="token operator">=</span> <span class="token string">'Yomm'</span>
 region <span class="token operator">=</span> <span class="token string">'euw1'</span>
 mass_region <span class="token operator">=</span> <span class="token string">'EUROPE'</span>
-
 </code></pre>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">get_puuid<span class="token punctuation">(</span>pseudo<span class="token punctuation">,</span>region<span class="token punctuation">,</span>api_key<span class="token punctuation">)</span>
-</code></pre>
+<pre class="language-python"><code class="language-python">get_puuid<span class="token punctuation">(</span>pseudo<span class="token punctuation">,</span>region<span class="token punctuation">,</span>api_key<span class="token punctuation">)</span></code></pre>
 <p>'u-bz6k4v2VzDEVkG5brW_NBGfYmjCGstDEoK0ruij3BpbwkhseE4knsJZH_Sx3NjnSzQy8iv60vTjA'</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">puuid_player <span class="token operator">=</span> get_puuid<span class="token punctuation">(</span>pseudo<span class="token punctuation">,</span>region<span class="token punctuation">,</span>api_key<span class="token punctuation">)</span>
+<pre class="language-python"><code class="language-python">puuid_player <span class="token operator">=</span> get_puuid<span class="token punctuation">(</span>pseudo<span class="token punctuation">,</span>region<span class="token punctuation">,</span>api_key<span class="token punctuation">)</span>
 id_matches <span class="token operator">=</span> get_match_ids<span class="token punctuation">(</span>puuid_player<span class="token punctuation">,</span> mass_region<span class="token punctuation">,</span> api_key<span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Les identifiants des 20 dernières parties de'</span><span class="token punctuation">,</span>pseudo<span class="token punctuation">,</span><span class="token string">'sont'</span><span class="token punctuation">,</span>id_matches<span class="token punctuation">)</span>
-</code></pre>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Les identifiants des 20 dernières parties de'</span><span class="token punctuation">,</span>pseudo<span class="token punctuation">,</span><span class="token string">'sont'</span><span class="token punctuation">,</span>id_matches<span class="token punctuation">)</span></code></pre>
 <p>Les identifiants des 20 dernières parties de Yomm sont ['EUW1_6620612418', 'EUW1_6620591242', 'EUW1_6620117730', 'EUW1_6616569027', 'EUW1_6616516559', 'EUW1_6615412808', 'EUW1_6611335474', 'EUW1_6611256844', 'EUW1_6610248381', 'EUW1_6610147341', 'EUW1_6609656368', 'EUW1_6607254752', 'EUW1_6607085859', 'EUW1_6606463762', 'EUW1_6603360397', 'EUW1_6603288425', 'EUW1_6603210097', 'EUW1_6601582307', 'EUW1_6601554856', 'EUW1_6600766557']</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># Fonction permettant de récupérer les données d'un joueur à partie des données d'une partie et d'un ID</span>
+<pre class="language-python"><code class="language-python"><span class="token comment"># Fonction permettant de récupérer les données d'un joueur à partie des données d'une partie et d'un ID</span>
 <span class="token keyword">def</span> <span class="token function">find_player_data</span><span class="token punctuation">(</span>match_data<span class="token punctuation">,</span> puuid<span class="token punctuation">)</span><span class="token punctuation">:</span>
     participants <span class="token operator">=</span> match_data<span class="token punctuation">[</span><span class="token string">'metadata'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'participants'</span><span class="token punctuation">]</span>
     player_index <span class="token operator">=</span> participants<span class="token punctuation">.</span>index<span class="token punctuation">(</span>puuid<span class="token punctuation">)</span>
     player_data <span class="token operator">=</span> match_data<span class="token punctuation">[</span><span class="token string">'info'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'participants'</span><span class="token punctuation">]</span><span class="token punctuation">[</span>player_index<span class="token punctuation">]</span>
-    <span class="token keyword">return</span> player_data
-</code></pre>
+    <span class="token keyword">return</span> player_data</code></pre>
 <p>Si l'on veut regarder uniquement une info</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
-data<span class="token punctuation">[</span><span class="token string">'kda'</span><span class="token punctuation">]</span>
-</code></pre>
+<pre class="language-python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+data<span class="token punctuation">[</span><span class="token string">'kda'</span><span class="token punctuation">]</span></code></pre>
 <p champion:="" [TwistedFate,="" TwistedFate,="" Talon,="" Taliyah,="" KSante,="" Gangplank,="" Gangplank],="" kills:="" [4,="" 7,="" 6,="" 3,="" 2,="" 1,="" 4,="" 18,="" 8,="" 5,="" 15,="" 14,="" 9,="" 14],="" deaths:="" [11,="" 11,="" 19,="" 10,="" 12,="" 13,="" 17,="" 16,="" 8],="" assists:="" 3],="" kda:="" [5.0,="" 8.333333333333334,="" 6.636363636363637,="" 3.526315789473684,="" 2.5454545454545454,="" 1.2857142857142856,="" 4.8,="" 19.0,="" 1.4444444444444444,="" 8.75,="" 5.75,="" 3.2142857142857144,="" 5.615384615384615,="" 2.5384615384615383,="" 5.777777777777778,="" 16.076923076923077,="" 14.75,="" 9.411764705882353,="" 5.3125,="" 14.375],="" win:="" [Défaite,="" Défaite,="" Victoire,="" Victoire]=""></p>
 <p>[5.0,
 8.333333333333334,
@@ -407,7 +389,7 @@ data<span class="token punctuation">[</span><span class="token string">'kda'</sp
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> flask <span class="token keyword">import</span> Flask<span class="token punctuation">,</span> render_template<span class="token punctuation">,</span>request
+<pre class="language-python"><code class="language-python"><span class="token keyword">from</span> flask <span class="token keyword">import</span> Flask<span class="token punctuation">,</span> render_template<span class="token punctuation">,</span>request
 app <span class="token operator">=</span> Flask<span class="token punctuation">(</span>__name__<span class="token punctuation">)</span>
 
 <span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">"/"</span><span class="token punctuation">)</span>
@@ -472,8 +454,7 @@ app <span class="token operator">=</span> Flask<span class="token punctuation">(
             <span class="token keyword">return</span> <span class="token string">"Aucun pseudo n'a été spécifié dans la demande GET."</span>
    
 <span class="token keyword">if</span> __name__ <span class="token operator">==</span><span class="token string">"__main__"</span><span class="token punctuation">:</span>  
-    app<span class="token punctuation">.</span>run<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
+    app<span class="token punctuation">.</span>run<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 <p>* Serving Flask app &quot;<strong>main</strong>&quot; (lazy loading)
 * Environment: production
 WARNING: This is a development server. Do not use it in a production deployment.

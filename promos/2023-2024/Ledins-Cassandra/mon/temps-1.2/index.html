@@ -143,7 +143,7 @@
 <h2>A l'abordage !</h2>
 <p>On commence par nous rassurer et nous guider dans la création d'un projet C. <strong>Je n'ai pas suivi les conseils exacts donnés</strong> car j'avais envie de continuer à travailler dans VSCode et ils proposaient d'autres IDE.</p>
 <p>On créé donc notre premier petit code &quot;minimal&quot; <strong>main.c</strong> qui a la tête suivante :</p>
-<pre class="language-c " style="counter-reset: linenumber 0"><code class="language-c">
+<pre class="language-c"><code class="language-c">
 <span class="token comment">/* Mon super programme de hacker 
 Attention à vos mirettes*/</span>
 
@@ -154,8 +154,7 @@ Attention à vos mirettes*/</span>
 <span class="token punctuation">{</span>
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Hello world!\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//Ici, on veut impressioner en soirée mondaine en disant Bonjour monde.</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p><strong>stdio.h</strong> et <strong>stdlib.h</strong> sont des librairies avec lesquelles on travaille dans le code. Comme dans un code python où on import les librairies.
 D'après ce que j'ai compris, stdio s'occupera de la gestion des standard input/output, et stdlib de l'exit.</p>
 <p>On créé une fonction <strong>main</strong> qui sera exécutée en première par défaut. Elle retourne un &quot;int&quot; par convention (0) pour dire que tout s'est bien passé.</p>
@@ -185,10 +184,9 @@ echo $!
 <h3>Variables</h3>
 <p>Il y a plusieurs types de variables, et on doit également déclarer leurs types à la création. Il y a des variables pour les entiers (<strong>int</strong>, <strong>long</strong>, <strong>signed char</strong>), et pour les float (<strong>float</strong>, <strong>double</strong>). Leur différence tient dans la place en mémoire qu'ils prennent, ils sont donc aussi limités dans leur grandeur. On peut aussi ajouter <strong>unsigned</strong> devant tout ça, si on veut déclarer un nombre positif, et avoir la possibilité qu'il soit plus grand.</p>
 <p>On peut annoncer au monde en quelle année on est, en utilisant les outils de remplacement de variable <strong>%</strong>. Après ce symbole, on ajoute une lettre pour indiquer de quel type de variable il s'agira. Ici <strong>d</strong> pour un entier int, <strong>f</strong> pour un float.</p>
-<pre class="language-c " style="counter-reset: linenumber 0"><code class="language-c"> <span class="token keyword">int</span> annee <span class="token operator">=</span> <span class="token number">2023</span><span class="token punctuation">;</span>
+<pre class="language-c"><code class="language-c"> <span class="token keyword">int</span> annee <span class="token operator">=</span> <span class="token number">2023</span><span class="token punctuation">;</span>
  <span class="token keyword">float</span> compotes_mangées <span class="token operator">=</span> <span class="token number">2.5</span><span class="token punctuation">;</span>
- <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Hello world!\nNous sommes actuellement en %d\nJ'ai actuellement mangé %f compotes depuis le début de ce MON.\n"</span><span class="token punctuation">,</span> annee<span class="token punctuation">,</span> compotes_mangées<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+ <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Hello world!\nNous sommes actuellement en %d\nJ'ai actuellement mangé %f compotes depuis le début de ce MON.\n"</span><span class="token punctuation">,</span> annee<span class="token punctuation">,</span> compotes_mangées<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>Après compilation et exécution (avec le reste du code qu'on a écrit plus haut) :</p>
 <pre><code>Hello world!
 Nous sommes actuellement en 2023
@@ -196,32 +194,28 @@ J'ai actuellement mangé 2.500000 compotes depuis le début de ce MON.
 </code></pre>
 <p>Pour les opérations mathématiques, ça ressemble à Python à ceci près que la division est automatiquement euclidienne entre 2 entiers. Pour avoir un résultat en float, il faudra diviser des floats. (5/2 = 2 mais 5.0/2.0 = 2.5). On va passer là-dessus.</p>
 <p>On peut se servir de la variable dans une opération pour la redéfinir par exemple pour l'incrémentation:</p>
-<pre class="language-c " style="counter-reset: linenumber 0"><code class="language-c"><span class="token keyword">int</span> pouet <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-pouet <span class="token operator">=</span> pouet <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-c"><code class="language-c"><span class="token keyword">int</span> pouet <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+pouet <span class="token operator">=</span> pouet <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span></code></pre>
 <p>Ce qui peut aussi être écrit avec :</p>
-<pre class="language-c " style="counter-reset: linenumber 0"><code class="language-c"><span class="token keyword">int</span> pouet <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-pouet<span class="token operator">++</span>
-</code></pre>
+<pre class="language-c"><code class="language-c"><span class="token keyword">int</span> pouet <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+pouet<span class="token operator">++</span></code></pre>
 <p>On peut aussi vouloir fixer une constante avec <strong>const</strong>. On ne pourra plus la modifier après sa déclaration !</p>
-<pre class="language-c " style="counter-reset: linenumber 0"><code class="language-c"><span class="token keyword">const</span> <span class="token keyword">int</span> mes_compotes <span class="token operator">=</span> <span class="token number">8</span><span class="token punctuation">;</span> <span class="token comment">//PAS TOUCHE</span>
-</code></pre>
+<pre class="language-c"><code class="language-c"><span class="token keyword">const</span> <span class="token keyword">int</span> mes_compotes <span class="token operator">=</span> <span class="token number">8</span><span class="token punctuation">;</span> <span class="token comment">//PAS TOUCHE</span></code></pre>
 <p>Il existe aussi l'option <strong>static</strong> qui peut avoir 2 utilités : rendre une variable d'un fichier &quot;locale&quot; c'est-à-dire qu'elle ne sera pas accessible dans un autre fichier.
 Ou si elle est utilisée sur une variable à l'intérieur d'une fonction, la variable ne sera pas &quot;supprimée&quot; à la fin de la fonction. Donc si elle est modifiée dans la fonction et que la fonction est ensuite rappelée, la fonction débutera avec la valeur <strong>déjà modifiée</strong> de la variable.</p>
 <h2>Conditions</h2>
 <p>Pour les conditions c'est encore pareil que python à ceci près qu'on rajoute des accolades, des parenthèses et des points virgules.</p>
-<pre class="language-c " style="counter-reset: linenumber 0"><code class="language-c"><span class="token keyword">if</span> <span class="token punctuation">(</span>maConditionEstVraie<span class="token punctuation">)</span>
+<pre class="language-c"><code class="language-c"><span class="token keyword">if</span> <span class="token punctuation">(</span>maConditionEstVraie<span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
   mesinstructions<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>uneAutreCondition<span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
   mesautresinstructions<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>On a les comparateurs <strong>==</strong>,<strong>&lt;=</strong>, et les opérateurs <strong>&amp;&amp;</strong>, <strong>||</strong>, <strong>!</strong>.</p>
 <p>Pour éviter d'utiliser des conditions else if à la suite, on peut construire un <strong>switch</strong>:</p>
-<pre class="language-c " style="counter-reset: linenumber 0"><code class="language-c"><span class="token keyword">switch</span> <span class="token punctuation">(</span>mescompotes<span class="token punctuation">)</span>
+<pre class="language-c"><code class="language-c"><span class="token keyword">switch</span> <span class="token punctuation">(</span>mescompotes<span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
 <span class="token keyword">case</span> <span class="token number">0</span><span class="token operator">:</span>
   <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Je suis dans la sauce"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -235,11 +229,9 @@ Ou si elle est utilisée sur une variable à l'intérieur d'une fonction, la var
 <span class="token keyword">default</span><span class="token operator">:</span>
   <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Tout va bien"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">break</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>On peut <strong>assigner</strong> une valeur à une variable en fonction de si une <strong>condition</strong> est vérifiée ou non de cette sorte:</p>
-<pre class="language-c " style="counter-reset: linenumber 0"><code class="language-c">variable <span class="token operator">=</span> <span class="token punctuation">(</span>condition<span class="token punctuation">)</span> <span class="token operator">?</span> valeur1 <span class="token operator">:</span> valeur2<span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-c"><code class="language-c">variable <span class="token operator">=</span> <span class="token punctuation">(</span>condition<span class="token punctuation">)</span> <span class="token operator">?</span> valeur1 <span class="token operator">:</span> valeur2<span class="token punctuation">;</span></code></pre>
 <h2>Boucles</h2>
 <p>Il y a 3 boucles différentes: while, do... while et for.</p>
 <p>Avec tout ce qu'on a appris je décide de faire un code de braquage de compotes. Vous allez me donner toutes vos compotes maintenant.</p>
@@ -260,7 +252,7 @@ Ou si elle est utilisée sur une variable à l'intérieur d'une fonction, la var
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-c " style="counter-reset: linenumber 0"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<pre class="language-c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h></span></span>
 
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
@@ -300,31 +292,27 @@ Ou si elle est utilisée sur une variable à l'intérieur d'une fonction, la var
     <span class="token punctuation">}</span>
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"*s'endort*\nTu as réussi à apaiser le monstre des compotes, et il te reste %d compotes !\n"</span><span class="token punctuation">,</span> ses_compotes<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 </div>
 </details>     
 </div>
 <img src="braquage.png">
 <h2>Fonctions</h2>
 <p>On peut bien sûr créer des fonctions comme ceci :</p>
-<pre class="language-c " style="counter-reset: linenumber 0"><code class="language-c">type <span class="token function">maFonction</span><span class="token punctuation">(</span>type arg1<span class="token punctuation">,</span> type arg2<span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span>
+<pre class="language-c"><code class="language-c">type <span class="token function">maFonction</span><span class="token punctuation">(</span>type arg1<span class="token punctuation">,</span> type arg2<span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
   mesInstructions<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Puis les appeler autre part :</p>
-<pre class="language-c " style="counter-reset: linenumber 0"><code class="language-c"><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<pre class="language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
   type arg1 <span class="token operator">=</span> valeur1<span class="token punctuation">;</span>
   <span class="token function">maFonction</span><span class="token punctuation">(</span>type arg1<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <h2>Headers et fonctions modulaires</h2>
 <p>On peut également créer des fichiers annexes de headers et d'autres fonctions, comme des librairies.</p>
 <p>Dans notre code, si on définit une fonction après la fonction main, cela ne marchera pas. Pour faire cela, il faut indiquer dans un header (donc au début du code) le format de la fonction. Pour notre braquage par exemple on pourrait créer:</p>
-<pre class="language-c " style="counter-reset: linenumber 0"><code class="language-c"><span class="token keyword">void</span> <span class="token function">braquage</span><span class="token punctuation">(</span><span class="token keyword">int</span> compotes_voulues<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-c"><code class="language-c"><span class="token keyword">void</span> <span class="token function">braquage</span><span class="token punctuation">(</span><span class="token keyword">int</span> compotes_voulues<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>On peut même créer la fonction dans un autre fichier, par exemple fonctions.c. On créé avec celà un fichier header fonctions.h, qui contient des directives préprocesseurs de protection :</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
 <details class="group">
@@ -343,15 +331,14 @@ Ou si elle est utilisée sur une variable à l'intérieur d'une fonction, la var
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-c " style="counter-reset: linenumber 0"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifndef</span> <span class="token expression">fonctions_h</span></span>
+<pre class="language-c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifndef</span> <span class="token expression">fonctions_h</span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">fonctions_h</span></span>
 
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
 
 <span class="token keyword">void</span> <span class="token function">braquage</span><span class="token punctuation">(</span><span class="token keyword">int</span> mes_compotes<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span> </span>
-</code></pre>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span> </span></code></pre>
 </div>
 </details>     
 </div>
@@ -373,7 +360,7 @@ Ou si elle est utilisée sur une variable à l'intérieur d'une fonction, la var
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-c " style="counter-reset: linenumber 0"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"fonctions.h"</span></span>
+<pre class="language-c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"fonctions.h"</span></span>
 
 <span class="token keyword">void</span> <span class="token function">braquage</span><span class="token punctuation">(</span><span class="token keyword">int</span> compotes_voulues<span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
@@ -411,13 +398,12 @@ Ou si elle est utilisée sur une variable à l'intérieur d'une fonction, la var
         ses_compotes <span class="token operator">=</span> ses_compotes <span class="token operator">-</span> compotes_transit<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"*s'endort*\nTu as réussi à apaiser le monstre des compotes, et il te reste %d compotes !\n"</span><span class="token punctuation">,</span> ses_compotes<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 </div>
 </details>     
 </div>
 <p>On appelle ce fichier annexe dans les headers de la fonction main comme suit :</p>
-<pre class="language-c " style="counter-reset: linenumber 0"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<pre class="language-c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h></span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"fonctions.h"</span></span>
 
@@ -425,30 +411,26 @@ Ou si elle est utilisée sur une variable à l'intérieur d'une fonction, la var
 <span class="token punctuation">{</span>
     <span class="token function">braquage</span><span class="token punctuation">(</span><span class="token number">457</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>On oublie pas de compiler l'ensemble des fichiers en .c en tapant:</p>
 <pre><code>gcc main.c fonctions.c -o test.exe
 </code></pre>
 <p>Et maintenant notre test fonctionne <strong>exactement</strong> comme toute à l'heure ! Sauf que notre fonction main est plus propre et pourra être complexifiée.</p>
 <h2>Pointeurs</h2>
 <p>Une variable est toujours stockée à une adresse. Un pointeur c'est un outil qui stocke l'adresse mémoire d'une variable. On le déclare avec le type de la variable et une étoile. On peut récupérer l'adresse d'une variable avec <strong>&amp;</strong>.</p>
-<pre class="language-c " style="counter-reset: linenumber 0"><code class="language-c"><span class="token keyword">int</span> variable <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token keyword">int</span> <span class="token operator">*</span>pointeur <span class="token operator">=</span> <span class="token operator">&amp;</span>variable<span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-c"><code class="language-c"><span class="token keyword">int</span> variable <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token operator">*</span>pointeur <span class="token operator">=</span> <span class="token operator">&amp;</span>variable<span class="token punctuation">;</span></code></pre>
 <p>Maintenant le côté surprenant (en tout cas pour moi), c'est qu'afficher *pointeur retourne la valeur de la variable, et afficher pointeur retourne l'adresse de la variable.</p>
 <p>On ainsi modifier depuis n'importe où la valeur de notre variable :</p>
-<pre class="language-c " style="counter-reset: linenumber 0"><code class="language-c"><span class="token operator">*</span>pointeur <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> variable<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-c"><code class="language-c"><span class="token operator">*</span>pointeur <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> variable<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>Ce code retournera 1.</p>
 <h2>Tableaux</h2>
 <p>On peut créer un tableau, de taille fixe, avec des crochets. On peut initialiser des valeurs ou non, les changer une par une. On peut aussi jouer avec les pointeurs : toutes les cases du tableaux sont stockées dans des <strong>adresses succintes</strong>, sachant que la première valeur se récupère à l'adresse indiquée par le nom de la variable. On ne peut stocker que des variables du <strong>même type</strong> dans un tableau.</p>
-<pre class="language-c " style="counter-reset: linenumber 0"><code class="language-c"><span class="token keyword">int</span> monTableau<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<pre class="language-c"><code class="language-c"><span class="token keyword">int</span> monTableau<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 monTableau<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
 <span class="token operator">*</span><span class="token punctuation">(</span>monTableau <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
-monTableau<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
-</code></pre>
+monTableau<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span></code></pre>
 <h2>Conclusion</h2>
 <p>Ca a été très intéressant pour moi de découvrir C et les concepts de pointeurs, de les appliquer dans des exercices. Ca a aussi permis de débloquer des problèmes de compréhension que j'avais dans les scripts en général (javascript ou shell). Je recommande vivement le cours d'OpenClassroom pour qui veut s'aventurer au C.</p>
 

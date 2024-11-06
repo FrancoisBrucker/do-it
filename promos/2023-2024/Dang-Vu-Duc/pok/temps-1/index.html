@@ -228,7 +228,7 @@
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Blackjack_methods</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Blackjack_methods</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
         self<span class="token punctuation">.</span>newdeck<span class="token punctuation">(</span><span class="token punctuation">)</span>
     
@@ -258,8 +258,7 @@
 <span class="token keyword">class</span> <span class="token class-name">Card</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">:</span>
         self<span class="token punctuation">.</span>value <span class="token operator">=</span> value
-        self<span class="token punctuation">.</span>name <span class="token operator">=</span> name
-</code></pre>
+        self<span class="token punctuation">.</span>name <span class="token operator">=</span> name</code></pre>
 </div>
 </details>     
 </div>
@@ -289,7 +288,7 @@
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Blackjack</span><span class="token punctuation">(</span>QMainWindow<span class="token punctuation">,</span> Blackjack_methods<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Blackjack</span><span class="token punctuation">(</span>QMainWindow<span class="token punctuation">,</span> Blackjack_methods<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
@@ -384,8 +383,7 @@
         self<span class="token punctuation">.</span>restartButton<span class="token punctuation">.</span>clicked<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>restart<span class="token punctuation">)</span>
         self<span class="token punctuation">.</span>stayButton<span class="token punctuation">.</span>clicked<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>stay<span class="token punctuation">)</span>
         self<span class="token punctuation">.</span>splitButton<span class="token punctuation">.</span>clicked<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>split<span class="token punctuation">)</span>
-        self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
+        self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>
@@ -418,7 +416,7 @@
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">restart</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">restart</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>deck<span class="token punctuation">)</span> <span class="token operator">&lt;=</span> <span class="token number">52</span><span class="token punctuation">:</span>
         self<span class="token punctuation">.</span>newdeck<span class="token punctuation">(</span><span class="token punctuation">)</span>
     self<span class="token punctuation">.</span>player_bust <span class="token operator">=</span> <span class="token boolean">False</span>
@@ -466,8 +464,7 @@
     <span class="token keyword">if</span> card1<span class="token punctuation">.</span>value <span class="token operator">==</span> card2<span class="token punctuation">.</span>value<span class="token punctuation">:</span>
         self<span class="token punctuation">.</span>splitButton<span class="token punctuation">.</span>setEnabled<span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">)</span>
     <span class="token keyword">else</span><span class="token punctuation">:</span>
-        self<span class="token punctuation">.</span>splitButton<span class="token punctuation">.</span>setEnabled<span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">)</span>
-</code></pre>
+        self<span class="token punctuation">.</span>splitButton<span class="token punctuation">.</span>setEnabled<span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>
@@ -490,13 +487,12 @@
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">draw</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">draw</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
         card <span class="token operator">=</span> random<span class="token punctuation">.</span>choice<span class="token punctuation">(</span>self<span class="token punctuation">.</span>deck<span class="token punctuation">)</span>
         self<span class="token punctuation">.</span>deck<span class="token punctuation">.</span>remove<span class="token punctuation">(</span>card<span class="token punctuation">)</span>
         self<span class="token punctuation">.</span>cardsLeft<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>deck<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
         self<span class="token punctuation">.</span>cardsLeft_split<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>deck<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
-        <span class="token keyword">return</span><span class="token punctuation">(</span>card<span class="token punctuation">)</span>
-</code></pre>
+        <span class="token keyword">return</span><span class="token punctuation">(</span>card<span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>
@@ -525,7 +521,7 @@
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">hit</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">hit</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
     self<span class="token punctuation">.</span>splitButton<span class="token punctuation">.</span>setEnabled<span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">)</span>
     card <span class="token operator">=</span> self<span class="token punctuation">.</span>draw<span class="token punctuation">(</span><span class="token punctuation">)</span>
     self<span class="token punctuation">.</span>player_hand<span class="token punctuation">.</span>append<span class="token punctuation">(</span>card<span class="token punctuation">)</span>
@@ -564,8 +560,7 @@
         self<span class="token punctuation">.</span>player_bust <span class="token operator">=</span> <span class="token boolean">True</span>
         self<span class="token punctuation">.</span>result<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string">"Le joueur a bust"</span><span class="token punctuation">)</span>
         self<span class="token punctuation">.</span>PlayerCount<span class="token punctuation">.</span>setStyleSheet<span class="token punctuation">(</span><span class="token string">"color : red"</span><span class="token punctuation">)</span>
-        self<span class="token punctuation">.</span>stay<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
+        self<span class="token punctuation">.</span>stay<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>
@@ -593,7 +588,7 @@
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">stay</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">stay</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">if</span> <span class="token number">1</span> <span class="token keyword">in</span> <span class="token punctuation">(</span>card<span class="token punctuation">.</span>value <span class="token keyword">for</span> card <span class="token keyword">in</span> self<span class="token punctuation">.</span>player_hand<span class="token punctuation">)</span><span class="token punctuation">:</span>
         self<span class="token punctuation">.</span>PlayerCount<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>self<span class="token punctuation">.</span>sum_hand<span class="token punctuation">(</span>self<span class="token punctuation">.</span>player_hand<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
     <span class="token keyword">while</span> self<span class="token punctuation">.</span>sum_hand<span class="token punctuation">(</span>self<span class="token punctuation">.</span>dealer_hand<span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">17</span><span class="token punctuation">:</span>
@@ -645,7 +640,6 @@
     self<span class="token punctuation">.</span>stayButton<span class="token punctuation">.</span>setEnabled<span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">)</span>
     self<span class="token punctuation">.</span>doubleButton<span class="token punctuation">.</span>setEnabled<span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">)</span>
     self<span class="token punctuation">.</span>splitButton<span class="token punctuation">.</span>setEnabled<span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">)</span>
-
 </code></pre>
 </div>
 </details>     
@@ -669,7 +663,7 @@
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">display_player_count_split</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">display_player_count_split</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
   <span class="token keyword">if</span> self<span class="token punctuation">.</span>IsFirst<span class="token punctuation">:</span>
       count <span class="token operator">=</span> self<span class="token punctuation">.</span>sum_hand<span class="token punctuation">(</span>self<span class="token punctuation">.</span>player_hand_split_1<span class="token punctuation">)</span>
       <span class="token keyword">if</span> <span class="token number">1</span> <span class="token keyword">in</span> <span class="token punctuation">(</span>card<span class="token punctuation">.</span>value <span class="token keyword">for</span> card <span class="token keyword">in</span> self<span class="token punctuation">.</span>player_hand_split_1<span class="token punctuation">)</span> <span class="token keyword">and</span> <span class="token punctuation">(</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token punctuation">[</span>card<span class="token punctuation">.</span>value <span class="token keyword">for</span> card <span class="token keyword">in</span> self<span class="token punctuation">.</span>player_hand_split_1<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">21</span><span class="token punctuation">:</span>
@@ -845,17 +839,15 @@
   self<span class="token punctuation">.</span>split_PlayerCount1<span class="token punctuation">.</span>setStyleSheet<span class="token punctuation">(</span><span class="token string">"color : white"</span><span class="token punctuation">)</span>
   self<span class="token punctuation">.</span>split_PlayerCount2<span class="token punctuation">.</span>setStyleSheet<span class="token punctuation">(</span><span class="token string">"color : white"</span><span class="token punctuation">)</span>
   self<span class="token punctuation">.</span>split_DealerCount<span class="token punctuation">.</span>setStyleSheet<span class="token punctuation">(</span><span class="token string">"color : white"</span><span class="token punctuation">)</span>
-  self<span class="token punctuation">.</span>restart<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
+  self<span class="token punctuation">.</span>restart<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>
 <h2>Démonstration du code</h2>
 <p>Pour exécuter ce code, on exécute ces quelques lignes dans un fichier <a href="http://main.py">main.py</a>:</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">app <span class="token operator">=</span> QApplication<span class="token punctuation">(</span>sys<span class="token punctuation">.</span>argv<span class="token punctuation">)</span>
+<pre class="language-python"><code class="language-python">app <span class="token operator">=</span> QApplication<span class="token punctuation">(</span>sys<span class="token punctuation">.</span>argv<span class="token punctuation">)</span>
 window <span class="token operator">=</span> Blackjack<span class="token punctuation">(</span><span class="token punctuation">)</span>
-app<span class="token punctuation">.</span><span class="token keyword">exec</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
+app<span class="token punctuation">.</span><span class="token keyword">exec</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 <p><img src="Image3.png" alt="Image démo1"></p>
 <p>On voit bien l'interface que l'on a créé plus tôt sur Qt Designer. Voici ce à quoi ressemble la fenêtre à la fin d'un tour:</p>
 <p><img src="Image4.png" alt="Image demo2"></p>
@@ -890,7 +882,7 @@ app<span class="token punctuation">.</span><span class="token keyword">exec</spa
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
     self<span class="token punctuation">.</span>player_stack <span class="token operator">=</span> <span class="token number">200</span>
 
@@ -1031,8 +1023,7 @@ app<span class="token punctuation">.</span><span class="token keyword">exec</spa
     self<span class="token punctuation">.</span>restartButton<span class="token punctuation">.</span>clicked<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>restart<span class="token punctuation">)</span>
     self<span class="token punctuation">.</span>stayButton<span class="token punctuation">.</span>clicked<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>stay<span class="token punctuation">)</span>
     self<span class="token punctuation">.</span>splitButton<span class="token punctuation">.</span>clicked<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>split<span class="token punctuation">)</span>
-    self<span class="token punctuation">.</span>doubleButton<span class="token punctuation">.</span>clicked<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>double<span class="token punctuation">)</span>
-</code></pre>
+    self<span class="token punctuation">.</span>doubleButton<span class="token punctuation">.</span>clicked<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>double<span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>
@@ -1061,7 +1052,7 @@ app<span class="token punctuation">.</span><span class="token keyword">exec</spa
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">line_edit_changed</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">line_edit_changed</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">if</span> value <span class="token operator">!=</span> <span class="token string">''</span><span class="token punctuation">:</span>
         value <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>
         <span class="token keyword">if</span> value <span class="token operator">></span> self<span class="token punctuation">.</span>player_stack<span class="token punctuation">:</span>
@@ -1079,8 +1070,7 @@ app<span class="token punctuation">.</span><span class="token keyword">exec</spa
                 self<span class="token punctuation">.</span>validerButton<span class="token punctuation">.</span>setEnabled<span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">)</span>
             self<span class="token punctuation">.</span>slideBet<span class="token punctuation">.</span>setValue<span class="token punctuation">(</span>value<span class="token punctuation">)</span>
             self<span class="token punctuation">.</span>playerBet<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Mise du joueur: </span><span class="token interpolation"><span class="token punctuation">{</span>value<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
-            self<span class="token punctuation">.</span>player_bet <span class="token operator">=</span> value
-</code></pre>
+            self<span class="token punctuation">.</span>player_bet <span class="token operator">=</span> value</code></pre>
 </div>
 </details>     
 </div>
@@ -1103,7 +1093,7 @@ app<span class="token punctuation">.</span><span class="token keyword">exec</spa
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">slide_changed</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">slide_changed</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">:</span>
     value <span class="token operator">=</span> value <span class="token operator">/</span> <span class="token number">10</span>
     value <span class="token operator">=</span> <span class="token builtin">round</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>
     value <span class="token operator">=</span> value <span class="token operator">*</span> <span class="token number">10</span>
@@ -1114,8 +1104,7 @@ app<span class="token punctuation">.</span><span class="token keyword">exec</spa
     self<span class="token punctuation">.</span>slideBet<span class="token punctuation">.</span>setValue<span class="token punctuation">(</span>value<span class="token punctuation">)</span>
     self<span class="token punctuation">.</span>playerBet<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Mise du joueur: </span><span class="token interpolation"><span class="token punctuation">{</span>value<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
     self<span class="token punctuation">.</span>player_bet <span class="token operator">=</span> value
-    self<span class="token punctuation">.</span>line_edit_bet<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span>
-</code></pre>
+    self<span class="token punctuation">.</span>line_edit_bet<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>
@@ -1138,7 +1127,7 @@ Notons que ce bouton est désactivé lorsque la mise est égale à 0.</p>
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">valider_bet</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">valider_bet</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">if</span> self<span class="token punctuation">.</span>player_bet <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">:</span>
         self<span class="token punctuation">.</span>player_stack <span class="token operator">-=</span> self<span class="token punctuation">.</span>player_bet
         self<span class="token punctuation">.</span>player_stack_main<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Stack du joueur: </span><span class="token interpolation"><span class="token punctuation">{</span>self<span class="token punctuation">.</span>player_stack<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
@@ -1149,8 +1138,7 @@ Notons que ce bouton est désactivé lorsque la mise est égale à 0.</p>
         <span class="token keyword">else</span><span class="token punctuation">:</span>
             self<span class="token punctuation">.</span>doubleButton<span class="token punctuation">.</span>setEnabled<span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">)</span>
         self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
-        self<span class="token punctuation">.</span>bet_window<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
+        self<span class="token punctuation">.</span>bet_window<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>
@@ -1173,7 +1161,7 @@ Notons que ce bouton est désactivé lorsque la mise est égale à 0.</p>
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">add_10</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">add_10</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">if</span> self<span class="token punctuation">.</span>player_bet <span class="token operator">+</span> <span class="token number">10</span> <span class="token operator">></span> self<span class="token punctuation">.</span>player_stack<span class="token punctuation">:</span>
         <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
     <span class="token keyword">else</span><span class="token punctuation">:</span>
@@ -1225,8 +1213,7 @@ Notons que ce bouton est désactivé lorsque la mise est égale à 0.</p>
         self<span class="token punctuation">.</span>player_bet <span class="token operator">-=</span> <span class="token number">50</span>
         self<span class="token punctuation">.</span>slideBet<span class="token punctuation">.</span>setValue<span class="token punctuation">(</span>self<span class="token punctuation">.</span>player_bet<span class="token punctuation">)</span>
         self<span class="token punctuation">.</span>playerBet<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Mise du joueur: </span><span class="token interpolation"><span class="token punctuation">{</span>self<span class="token punctuation">.</span>player_bet<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
-        self<span class="token punctuation">.</span>line_edit_bet<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>player_bet<span class="token punctuation">)</span><span class="token punctuation">)</span>
-</code></pre>
+        self<span class="token punctuation">.</span>line_edit_bet<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>player_bet<span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>
@@ -1272,7 +1259,7 @@ Pour rappel, d'après les règles du jeu, le dealer pioche tant qu'il n'a pas 16
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
     <span class="token comment">#0: stay</span>
     <span class="token comment">#1: hit</span>
@@ -1336,8 +1323,7 @@ Pour rappel, d'après les règles du jeu, le dealer pioche tant qu'il n'a pas 16
             self<span class="token punctuation">.</span>strat3<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span>
     self<span class="token punctuation">.</span>strat3<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span>
     self<span class="token punctuation">.</span>strat3<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span>
-    self<span class="token punctuation">.</span>strat3<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span>
-</code></pre>
+    self<span class="token punctuation">.</span>strat3<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span></code></pre>
 </div>
 </details>     
 </div>
@@ -1367,12 +1353,11 @@ Pour rappel, d'après les règles du jeu, le dealer pioche tant qu'il n'a pas 16
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">play_casino</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>hand<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">play_casino</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>hand<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token keyword">while</span> self<span class="token punctuation">.</span>sum_hand<span class="token punctuation">(</span>hand<span class="token punctuation">)</span> <span class="token operator">&lt;=</span> <span class="token number">16</span><span class="token punctuation">:</span>
             card <span class="token operator">=</span> self<span class="token punctuation">.</span>draw<span class="token punctuation">(</span><span class="token punctuation">)</span>
             self<span class="token punctuation">.</span>count<span class="token punctuation">(</span>card<span class="token punctuation">)</span>
-            hand<span class="token punctuation">.</span>append<span class="token punctuation">(</span>card<span class="token punctuation">)</span>
-</code></pre>
+            hand<span class="token punctuation">.</span>append<span class="token punctuation">(</span>card<span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>
@@ -1415,7 +1400,7 @@ Pour rappel, d'après les règles du jeu, le dealer pioche tant qu'il n'a pas 16
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">simulation</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>n<span class="token punctuation">,</span>count<span class="token punctuation">,</span>graph_type<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">simulation</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>n<span class="token punctuation">,</span>count<span class="token punctuation">,</span>graph_type<span class="token punctuation">)</span><span class="token punctuation">:</span>
     gain <span class="token operator">=</span> <span class="token number">0</span>
     winrate_player <span class="token operator">=</span> <span class="token number">0</span>
     bust_player <span class="token operator">=</span> <span class="token number">0</span>
@@ -1867,8 +1852,7 @@ Pour rappel, d'après les règles du jeu, le dealer pioche tant qu'il n'a pas 16
     <span class="token comment"># print(gain/n,winrate_player/n,bust_player/n,bust_casino/n,number_count/n)</span>
     <span class="token keyword">if</span> graph_type <span class="token operator">>=</span> <span class="token number">1</span><span class="token punctuation">:</span>
         plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token builtin">round</span><span class="token punctuation">(</span>gain<span class="token operator">*</span><span class="token number">100</span><span class="token operator">/</span>n<span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-</code></pre>
+    <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token builtin">round</span><span class="token punctuation">(</span>gain<span class="token operator">*</span><span class="token number">100</span><span class="token operator">/</span>n<span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>
@@ -1924,14 +1908,13 @@ Pour rappel, d'après les règles du jeu, le dealer pioche tant qu'il n'a pas 16
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">count</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>card<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">count</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>card<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">if</span> card<span class="token punctuation">.</span>value <span class="token operator">>=</span> <span class="token number">2</span> <span class="token keyword">and</span> card<span class="token punctuation">.</span>value <span class="token operator">&lt;=</span> <span class="token number">6</span><span class="token punctuation">:</span>
         self<span class="token punctuation">.</span>running_count <span class="token operator">+=</span> <span class="token number">1</span>
     <span class="token keyword">if</span> card<span class="token punctuation">.</span>value <span class="token operator">==</span> <span class="token number">10</span> <span class="token keyword">or</span> card<span class="token punctuation">.</span>value <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">:</span>
         self<span class="token punctuation">.</span>running_count <span class="token operator">-=</span> <span class="token number">1</span>
     nb_deck <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>deck<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">52</span>
-    self<span class="token punctuation">.</span>true_count <span class="token operator">=</span> self<span class="token punctuation">.</span>running_count<span class="token operator">/</span>nb_deck
-</code></pre>
+    self<span class="token punctuation">.</span>true_count <span class="token operator">=</span> self<span class="token punctuation">.</span>running_count<span class="token operator">/</span>nb_deck</code></pre>
 </div>
 </details>     
 </div>

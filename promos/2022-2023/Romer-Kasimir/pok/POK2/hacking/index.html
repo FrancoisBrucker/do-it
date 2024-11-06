@@ -174,8 +174,7 @@ Dirb est livré avec un ensemble de listes de mots d'attaque préconfigurées po
 <li><code>-o</code> : enregistre le résultat dans un fichier texte</li>
 </ul>
 <p>Une ligne de commande typique pour Dirb ressemble à ceci :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">dirb http://adresse_web <span class="token parameter variable">-w</span> /usr/share/dirb/wordlists/common.txt <span class="token parameter variable">-o</span> resultat.txt
-</code></pre>
+<pre class="language-bash"><code class="language-bash">dirb http://adresse_web <span class="token parameter variable">-w</span> /usr/share/dirb/wordlists/common.txt <span class="token parameter variable">-o</span> resultat.txt</code></pre>
 <h3>Shodan</h3>
 <p>Shodan est un moteur de recherche pour les appareils connectés à l'internet (appareils IoT). Il permet aux utilisateurs de trouver et d'accéder à des appareils tels que des webcams, des routeurs, des serveurs et des systèmes de contrôle industriel, entre autres, qui sont connectés à l'internet. Contrairement aux moteurs de recherche traditionnels qui indexent les sites web, Shodan indexe des informations sur les appareils qui composent l'internet, notamment le type d'appareil, son emplacement et les ports ouverts. Ces informations peuvent être utiles aux chercheurs en sécurité et aux testeurs de pénétration pour identifier les vulnérabilités et les vecteurs d'attaque potentiels. En outre, elles peuvent être utilisées par les organisations pour identifier et surveiller les appareils connectés à leurs réseaux, ainsi que par les particuliers pour surveiller leurs propres appareils et vérifier s'ils sont exposés à l'internet.
 Shodan se trouve à l'adresse suivante : <a href="https://www.shodan.io/">https://www.shodan.io/</a></p>
@@ -184,7 +183,7 @@ Shodan se trouve à l'adresse suivante : <a href="https://www.shodan.io/">https:
 <h3>Listes de mots de passe</h3>
 <p>Il existe de nombreuses listes de mots de passe disponibles sur Internet. Ceux-ci contiennent souvent les mots de passe les plus fréquemment utilisés dans le passé. La célèbre liste de mots de passe <em>rockyou.txt</em> contient plus de 14 millions de mots de passe. Elle a été publiée en 2009 par un pirate informatique qui l'avait volée sur un serveur (de la site web &quot;RockYou&quot; - d'où le nom). La liste est disponible publiquement et peut être téléchargée sur GitHub. En outre, elle est déjà déposée dans Kali Linux. Cette liste est souvent le point de départ d'attaques par bruteforce de mots de passe.
 Ici sont les 15 mots de passe les plus courants de la liste <em>rockyou.txt</em> :</p>
-<pre class="language-markup " style="counter-reset: linenumber 0"><code class="language-markup">123456
+<pre class="language-markup"><code class="language-markup">123456
 12345
 123456789
 password
@@ -198,8 +197,7 @@ nicole
 daniel
 babygirl
 monkey
-lovely
-</code></pre>
+lovely</code></pre>
 <p>Il est également possible de créer soi-même des listes de mots de passe, par exemple pour générer des mots de passe composés d'un mot et d'un chiffre spécifiques. L'outil <em>cewl</em> peut être utilisé pour extraire des possibles mots de passe du texte source d'une page web. L'outil <em>crunch</em> peut être utilisé pour créer des listes de mots de passe à partir de chaînes de caractères prédéfinies.</p>
 <h3>John the Ripper et Hashcat</h3>
 <p>John the Ripper est un outil populaire pour cracker les mots de passe. Il est capable de cracker des mots de passe sur différents systèmes d'exploitation et peut utiliser différentes méthodes pour deviner les mots de passe, comme la force brute ou la méthode de dictionnaire. Il peut également utiliser des modules pour cracker des mots de passe cryptés spécifiques, tels que des mots de passe salés ou des mots de passe cryptés avec des algorithmes de hachage tels que MD5 et SHA. John the Ripper peut être utilisé de manière interactive ou en mode script pour automatiser les tâches de cracking de mot de passe. Il est important de noter que l'utilisation de John the Ripper peut violer les termes d'utilisation et les lois sur la sécurité informatique. Il est donc important de s'assurer d'avoir l'autorisation avant d'utiliser cet outil.</p>
@@ -209,31 +207,26 @@ lovely
 <h3>Outils intégrés</h3>
 <p>Il existe plusieurs outils d'analyse légale de base qui sont couramment utilisés sur les systèmes Linux pour analyser et étudier les données. Certains de ces outils incluent :</p>
 <p><strong>file</strong> : Cet outil est utilisé pour identifier le type de fichier en fonction de son contenu. Il peut être utilisé pour déterminer si un fichier est une image, un document texte ou un exécutable, par exemple.</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">$ <span class="token function">file</span> ~/Downloads/flag.png
-~/Downloads/flag.png: PNG image data, <span class="token number">800</span> x <span class="token number">600</span>, <span class="token number">8</span>-bit/color RGB, non-interlaced
-</code></pre>
+<pre class="language-bash"><code class="language-bash">$ <span class="token function">file</span> ~/Downloads/flag.png
+~/Downloads/flag.png: PNG image data, <span class="token number">800</span> x <span class="token number">600</span>, <span class="token number">8</span>-bit/color RGB, non-interlaced</code></pre>
 <p><strong>strings</strong> : Cet outil est utilisé pour extraire des chaînes de caractères imprimables d'un fichier. Il peut être utile pour identifier des mots-clés ou du texte dans un fichier qui peuvent être pertinents pour une enquête.</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">$ strings ~/Downloads/flag.png
+<pre class="language-bash"><code class="language-bash">$ strings ~/Downloads/flag.png
 libc.so.6
 puts
 /<span class="token operator">=</span>*"H
 Enter key
 flag<span class="token punctuation">{</span>strings_are_useful<span class="token punctuation">}</span>
-__cxa_finalize
-</code></pre>
+__cxa_finalize</code></pre>
 <p><strong>dd</strong> : Cet outil est utilisé pour effectuer des copies au niveau des bits de supports de stockage, tels que des disques durs ou des clés USB. Il peut être utilisé pour créer une copie exacte d'un périphérique de stockage à des fins d'analyse médico-légale.
 Cette commande va créer une copie exacte de l'ensemble du disque dur /dev/sda et l'enregistrer dans le fichier /path/to/image.dd :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">$ <span class="token function">dd</span> <span class="token assign-left variable">if</span><span class="token operator">=</span>/dev/sda <span class="token assign-left variable">of</span><span class="token operator">=</span>/path/to/image.dd <span class="token assign-left variable">bs</span><span class="token operator">=</span>1M
-</code></pre>
+<pre class="language-bash"><code class="language-bash">$ <span class="token function">dd</span> <span class="token assign-left variable">if</span><span class="token operator">=</span>/dev/sda <span class="token assign-left variable">of</span><span class="token operator">=</span>/path/to/image.dd <span class="token assign-left variable">bs</span><span class="token operator">=</span>1M</code></pre>
 <p><strong>grep</strong> : Cet outil est utilisé pour rechercher des motifs ou du texte spécifiques dans un fichier ou un groupe de fichiers. Il peut être utilisé pour rechercher des mots-clés ou des chaînes de texte spécifiques dans un fichier.</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">$ <span class="token function">grep</span> <span class="token string">"example"</span> /path/to/file
-example text found on line <span class="token number">10</span>
-</code></pre>
+<pre class="language-bash"><code class="language-bash">$ <span class="token function">grep</span> <span class="token string">"example"</span> /path/to/file
+example text found on line <span class="token number">10</span></code></pre>
 <p><strong>hexdump</strong> : Cet outil est utilisé pour afficher le contenu d'un fichier au format hexadécimal. Il peut être utile pour identifier des modèles hexadécimaux dans un fichier qui peuvent être pertinents pour une enquête.</p>
 <p><strong>md5sum</strong> : Cet outil est utilisé pour vitement calculer le hachage MD5 d'un fichier. Un hachage est une représentation unique du contenu d'un fichier, et peut être utilisé pour vérifier l'intégrité d'un fichier ou pour identifier si deux fichiers sont identiques.</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">$ md5sum ~/Downloads/flag.png
-a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4  /home/user/Downloads/flag.png
-</code></pre>
+<pre class="language-bash"><code class="language-bash">$ md5sum ~/Downloads/flag.png
+a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4  /home/user/Downloads/flag.png</code></pre>
 <h3>Wireshark</h3>
 <p>Wireshark est un logiciel de capture de paquets et d'analyse réseau. Il permet aux utilisateurs de capturer les paquets réseau en utilisant les protocoles de la couche 2 et 3 du modèle OSI, et de les analyser pour identifier les erreurs, les anomalies et les attaques. Wireshark est capable de capturer des paquets en utilisant différents protocoles de réseau tels que TCP, UDP, HTTP, FTP, SSH, etc. Il est également capable d'analyser des fichiers de capture de paquets (.pcap) pour identifier les anomalies et les attaques. Les fichiers pcap sont souvent utilisés dans les CTF (Capture the Flag) pour tester les compétences en sécurité des participants et pour analyser les captures de paquets réseau.</p>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-orange-500 bg-orange-100">

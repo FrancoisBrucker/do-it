@@ -191,8 +191,7 @@ Par exemple, le C est un language informatique compilé, et Python est un langua
 <p>Un language compilé peut être lu, pour comprendre ce que fait un programme avant de l'executer, ce qui peut être une bonne idée si le programme compilé est un virus.</p>
 </div></div>
 <p>Sur Linux, il est possible de récupérer le code machine d'un fichier compilé grâce à la commande <strong>objdump</strong> (pas disponible par défaut)</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">objdump <span class="token parameter variable">-d</span> fichierCompilé <span class="token operator">></span> languageMachine.txt
-</code></pre>
+<pre class="language-bash"><code class="language-bash">objdump <span class="token parameter variable">-d</span> fichierCompilé <span class="token operator">></span> languageMachine.txt</code></pre>
 <p>Il existe aussi un logiciel permettant de décompiler des fichiers : <a href="https://ghidra-sre.org/">Ghidra</a>.
 Ce logiciel est disponible sur Linux, Windows et MacOS et a beaucoup plus d'outil permettant de comprendre comment fonctionne le fichier compilé.</p>
 <p>Voilà à quoi peut ressembler une partie de code désassemblée. (Ici seulement la partie principal du code)</p>
@@ -224,7 +223,7 @@ Ce logiciel est disponible sur Linux, Windows et MacOS et a beaucoup plus d'outi
 <li>La 3e colonne est la <strong>traduction fonctionnelle</strong> de ces instructions avec les paramètres associés.</li>
 </ul>
 <p>L'exemple précédent est le language machine associé à cette fonction écrite en C.</p>
-<pre class="language-c " style="counter-reset: linenumber 0"><code class="language-c"><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<pre class="language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
     <span class="token keyword">int</span> a<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>
     <span class="token keyword">int</span> b<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">;</span>
@@ -233,8 +232,7 @@ Ce logiciel est disponible sur Linux, Windows et MacOS et a beaucoup plus d'outi
     c<span class="token operator">=</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Voici quelques fonction qui permettent de comprendre le fonctionnement global du code.</p>
 <ul>
 <li><strong>mov</strong> et <strong>movl</strong></li>

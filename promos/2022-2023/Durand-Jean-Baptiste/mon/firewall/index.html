@@ -213,8 +213,7 @@ Si personne n'a jamais été administrateur, il suffit souvent seulement de trou
 <p><strong>Installation</strong></p>
 <p>Cet application est installée par défaut sur tous les appareils Ubuntu.</p>
 <p>Elle peut sinon être installée par :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> ufw
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> ufw</code></pre>
 <p><strong>Utilisation</strong></p>
 <div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -230,8 +229,7 @@ J'ai utilisé une machine virtuelle Ubuntu, sur laquelle j'ai mis un pare-feu, e
 </ul>
 </div></div>
 <p>Pour voir si mes services fonctionnent, et sont accessibles de l'extérieur, j'ai utilisé <em>nmap</em> (cf <a href="https://francoisbrucker.github.io/do-it/mon/TA/pentest">explication de Thibault dessus</a>) un outil de scan de port.</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">sudo</span> nmap <span class="token parameter variable">-A</span> <span class="token parameter variable">-T4</span> -p- <span class="token number">192.168</span>.56.101
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">sudo</span> nmap <span class="token parameter variable">-A</span> <span class="token parameter variable">-T4</span> -p- <span class="token number">192.168</span>.56.101</code></pre>
 <p>-A permet d'avoir une détection de l'OS, des versions des logiciels, et le chemin qu'a pris les paquets</p>
 <p>-T&lt;0-5&gt; permet de définir le timing de ping de la cible 5 est très rapide/0 est très lent</p>
 <p>-p permet de choisir les ports ciblés, ex: -p22 / -p1-65535 / -p U:53,111,137,T:21-25,80,139,8080 / -p- permet de scanner tous les ports.</p>
@@ -262,8 +260,7 @@ J'ai utilisé une machine virtuelle Ubuntu, sur laquelle j'ai mis un pare-feu, e
 </summary>
 <div class="mx-8 pb-2">
 <p>Toutes les commandes nécessitent des droits <em>root</em>, pour éviter d'avoir à recopier <em>sudo</em> pour chacune des commandes, il est possible de se mettre en utilisateur <em>root</em> avec la commande :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">su</span> root
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">su</span> root</code></pre>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
@@ -273,16 +270,14 @@ J'ai utilisé une machine virtuelle Ubuntu, sur laquelle j'ai mis un pare-feu, e
 </div><div class="pl-8 mr-8">
 </div></div>
 <p>Pour sortir de <em>root</em>, on peut exécuter la commande</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token builtin class-name">exit</span>
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">exit</span></code></pre>
 </div>
 </details>     
 </div>
 <p><strong>Règles par défaut</strong></p>
 <p>Tout d'abord, on va mettre en place des règles par défaut, pour les flux entrant et sortant :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">sudo</span> ufw default allow outgoing
-<span class="token function">sudo</span> ufw default deny incoming
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">sudo</span> ufw default allow outgoing
+<span class="token function">sudo</span> ufw default deny incoming</code></pre>
 <p>On autorise tous les flux sortant, et on interdit les flux entrant.</p>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -294,28 +289,22 @@ J'ai utilisé une machine virtuelle Ubuntu, sur laquelle j'ai mis un pare-feu, e
 <p>si vous pouvez seulement vous connecter via une connexion <em>SSH</em> au serveur, il ne faut surtout pas se déconnecter maintenant, car vous ne pourriez plus avoir accès à votre serveur.</p>
 </div></div>
 <p><strong>Autoriser les connexions SSH</strong></p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">sudo</span> ufw allow <span class="token function">ssh</span>
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">sudo</span> ufw allow <span class="token function">ssh</span></code></pre>
 <p>le port ssh étant par défaut le 22, cette commande autorise les connxions au port 22, si le port est différent (par exemple le 2222), il faut executer :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">sudo</span> ufw allow <span class="token number">2222</span>/tcp
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">sudo</span> ufw allow <span class="token number">2222</span>/tcp</code></pre>
 <p>On peut aussi autoriser seulement les connexions ssh provenant d'une adresse IP - celle du sysadmin - pour plus de sécurité.</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">sudo</span> ufw allow proto tcp from <span class="token number">202.54</span>.2.5 to <span class="token number">172.24</span>.13.45 port <span class="token number">22</span>
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">sudo</span> ufw allow proto tcp from <span class="token number">202.54</span>.2.5 to <span class="token number">172.24</span>.13.45 port <span class="token number">22</span></code></pre>
 <p>avec <em>202.54.2.5</em> l'IP du sysadmin et <em>172.24.13.45</em> l'IP du serveur.</p>
 <p><strong>Activer le pare-feu</strong></p>
 <p>Il faut executer la commande :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">sudo</span> ufw <span class="token builtin class-name">enable</span>
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">sudo</span> ufw <span class="token builtin class-name">enable</span></code></pre>
 <p>pour le désactiver, il faut exécuter :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">sudo</span> ufw disable
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">sudo</span> ufw disable</code></pre>
 <h3 id="h3-3"> Utiliser cette configuration </h3>
 <p><strong>Maintenant qu'on a mis en place le pare-feu, qu'est ce qu'on accéder depuis l'extérieur ?</strong></p>
 <p>Refaisons un scan des ports du serveur (avec <em>nmap</em>) :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">PORT   STATE SERVICE VERSION
-<span class="token number">22</span>/tcp <span class="token function">open</span>  <span class="token function">ssh</span>     OpenSSH <span class="token number">8</span>.9p1 Ubuntu 3ubuntu0.1 <span class="token punctuation">(</span>Ubuntu Linux<span class="token punctuation">;</span> protocol <span class="token number">2.0</span><span class="token punctuation">)</span>
-</code></pre>
+<pre class="language-bash"><code class="language-bash">PORT   STATE SERVICE VERSION
+<span class="token number">22</span>/tcp <span class="token function">open</span>  <span class="token function">ssh</span>     OpenSSH <span class="token number">8</span>.9p1 Ubuntu 3ubuntu0.1 <span class="token punctuation">(</span>Ubuntu Linux<span class="token punctuation">;</span> protocol <span class="token number">2.0</span><span class="token punctuation">)</span></code></pre>
 <p>Heureusement, on a encore accès à SSH, et à priori, on n'a plus accès au site internet.</p>
 <p>On peut vérifier en essayant : <a href="http://192.168.56.101:8080">http://192.168.56.101:8080</a></p>
 <p>-&gt; on obtient une erreur, donc tout est bon, bravo, notre site n'est plus accessible depuis l'extérieur</p>
@@ -323,8 +312,7 @@ J'ai utilisé une machine virtuelle Ubuntu, sur laquelle j'ai mis un pare-feu, e
 <p>Dans un contexte d'entreprise, on veut pas que notre serveur ne soit pas accessible par tous le monde, mais on aimerait que nos employés puissent y avoir accès à distance.</p>
 <p>Il n'est pas possible d'accéder directement à la page web, car le port est fermé. Donc la seule option pour y accéder c'est une connexion SSH. Ça tombe bien, SSH c'est une technologie sécurisé, qui nécessite une authentification. On peut donner l'accès que à certains personnes, notamment les employés.</p>
 <p>On va créer un tunnel SSH entre le serveur distant et la machine de l'employé, et on va demander de rediriger le port de la machine distante sur la machine locale :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">ssh</span> <span class="token parameter variable">-L</span> <span class="token number">8080</span>:localhost:8080 username@server
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">ssh</span> <span class="token parameter variable">-L</span> <span class="token number">8080</span>:localhost:8080 username@server</code></pre>
 <p>Le paramètre -L permet la redirection de ports.</p>
 <p>Maintenant, il est possible d'accéder à la page web, non pas avec : <a href="http://192.168.56.101:8080">http://192.168.56.101:8080</a> mais avec <a href="http://localhost:8080">http://localhost:8080</a></p>
 <h2 id="h4"> Packet Tracer </h2>

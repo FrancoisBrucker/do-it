@@ -164,16 +164,15 @@
 <h4>Word count</h4>
 <p>Un des exemples basiques du MapReduce est le problème <strong>&quot;Word Count&quot;</strong>. Il permet de compter le nombre d'itération de chaque mot dans un texte. Afin de vérifier que j'avais bien compris le principe, j'ai recodé cette fonction.</p>
 <p>On suppose que le texte a été découpé en différentes parties. La fonction Map associe à chaque mot d'une partie du texte la couple (clé, valeur), <strong>(mot, 1)</strong>.</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">compte_mot_map</span><span class="token punctuation">(</span>ligne<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">compte_mot_map</span><span class="token punctuation">(</span>ligne<span class="token punctuation">)</span><span class="token punctuation">:</span>
     mots <span class="token operator">=</span> ligne<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
 
     liste_paire <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">(</span>mot<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">for</span> mot <span class="token keyword">in</span> mots<span class="token punctuation">]</span>
    
-    <span class="token keyword">return</span> liste_paire
-</code></pre>
+    <span class="token keyword">return</span> liste_paire</code></pre>
 <p>La fonction Shuffle permet de créer un dictionnaire de tous les mots présents et d'ajouter des 1 à chaque apparition d'un mot.</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">compte_mot_shuffle</span><span class="token punctuation">(</span>liste_paire<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">compte_mot_shuffle</span><span class="token punctuation">(</span>liste_paire<span class="token punctuation">)</span><span class="token punctuation">:</span>
     dictionnaire_paire <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
    
     <span class="token keyword">for</span> élément <span class="token keyword">in</span> liste_paire<span class="token punctuation">:</span>
@@ -184,19 +183,16 @@
         <span class="token keyword">else</span><span class="token punctuation">:</span>
             dictionnaire_paire<span class="token punctuation">[</span>clé<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span>valeur<span class="token punctuation">]</span>
    
-    <span class="token keyword">return</span> dictionnaire_paire
-</code></pre>
+    <span class="token keyword">return</span> dictionnaire_paire</code></pre>
 <p>Enfin la fonction Reduce somme tous les 1 pour un mot présent dans le dictionnaire et permet donc de connaître son nombre d'itération.</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">compte_mot_reduce</span><span class="token punctuation">(</span>dictionnaire<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">compte_mot_reduce</span><span class="token punctuation">(</span>dictionnaire<span class="token punctuation">)</span><span class="token punctuation">:</span>
     result_liste<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
     <span class="token keyword">for</span> mot <span class="token keyword">in</span> dictionnaire <span class="token punctuation">:</span>
         result_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span>compte_mot_indiv<span class="token punctuation">(</span>mot<span class="token punctuation">,</span> dictionnaire<span class="token punctuation">)</span><span class="token punctuation">)</span>
-    <span class="token keyword">return</span> <span class="token punctuation">(</span>result_liste<span class="token punctuation">)</span>
-</code></pre>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>result_liste<span class="token punctuation">)</span></code></pre>
 <p>En réunissant ces trois fonctions, on obtient la fonction <em>compte_mot</em> :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">compte_mot</span><span class="token punctuation">(</span>texte<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">return</span> <span class="token punctuation">(</span>compte_mot_reduce<span class="token punctuation">(</span>compte_mot_shuffle<span class="token punctuation">(</span>compte_mot_map<span class="token punctuation">(</span>texte<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-</code></pre>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">compte_mot</span><span class="token punctuation">(</span>texte<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>compte_mot_reduce<span class="token punctuation">(</span>compte_mot_shuffle<span class="token punctuation">(</span>compte_mot_map<span class="token punctuation">(</span>texte<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
 <h4>Autres exemples</h4>
 <p>Cette méthode peut paraître simple mais, elle peut également s'appliquer à d'autres problèmes beaucoup plus complexes tel que la multiplication de matrice par un vecteur. C'est notamment à partir de ceci que Google a mis au point son algorithme de <strong>Page Ranking</strong>.</p>
 <h3>Hadoop</h3>
@@ -213,7 +209,7 @@ Le framework <strong>Hadoop</strong> permet ceci. Celui-ci est composé d'un <st
 <p>Les programmes de Spark peuvent être écrits en Python ou en Java.</p>
 <p>Voici le lien d'un tutoriel pour <a href="http://www.xavierdupre.fr/app/sparkouille/helpsphinx/lectures/spark_install.html">télécharger Spark sous Windows</a>.</p>
 <p>Voici un exemple de réécriture d'une fonction permettant de faire Word Count via Spark :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">import</span> sys
+<pre class="language-python"><code class="language-python"><span class="token keyword">import</span> sys
 <span class="token keyword">from</span> pyspark <span class="token keyword">import</span> SparkContext
 
 sc <span class="token operator">=</span> SparkContext<span class="token punctuation">(</span><span class="token punctuation">)</span>
@@ -225,8 +221,7 @@ compte_mot <span class="token operator">=</span> ligne<span class="token punctua
                    <span class="token punctuation">.</span>collect<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
 <span class="token keyword">for</span> <span class="token punctuation">(</span>mot<span class="token punctuation">,</span> compteur<span class="token punctuation">)</span> <span class="token keyword">in</span> compte_mot<span class="token punctuation">:</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span>mot<span class="token punctuation">,</span> compteur<span class="token punctuation">)</span>
-</code></pre>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>mot<span class="token punctuation">,</span> compteur<span class="token punctuation">)</span></code></pre>
 <p>Les premières lignes du code permettent d'importer les bons modules. Notre fichier est ensuite mis en RDD (cf lien dans les sources pour plus d'informations). Enfin, on définit les méthodes <em>Map</em> et <em>Reduce</em> qui sont ensuite directement gérées par Spark.
 Ici Spark tourne en <strong>local</strong> sur notre ordinateur mais il prévoit déjà une architecture si on possède <strong>plusieurs machines connectées</strong>.</p>
 <h3>Compléments</h3>

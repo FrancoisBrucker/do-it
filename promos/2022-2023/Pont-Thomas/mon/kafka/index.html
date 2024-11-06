@@ -177,34 +177,27 @@ Cependant, si les appels au serveur externes sont faits avant que la page s'affi
 <h3>Installation et commandes de base</h3>
 <p>L'installation est un peu compliqué sur Windows et pas toujours forcément bien détaillé dans les articles. Je recommande se plutôt regarder une vidéo comme <a href="https://www.youtube.com/watch?v=BwYFuhVhshI">celle-ci</a>. Toute la suite du cours OpenClassroom est fait pour un Linux. Je détaillerai ici comment faire avec un Windows.</p>
 <p>Pour lancer Kafka, il faut lancer deux composants : <strong>Zookeeper</strong> et <strong>Kafka</strong>. Zookeeper permet de gérer les <strong>clusters</strong> de Kafka. On le lance à l'aide de la commande :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">.<span class="token punctuation">\</span>bin<span class="token punctuation">\</span>windows<span class="token punctuation">\</span>zookeeper-server-start.sh .<span class="token punctuation">\</span>config<span class="token punctuation">\</span>zookeeper.properties
-</code></pre>
+<pre class="language-bash"><code class="language-bash">.<span class="token punctuation">\</span>bin<span class="token punctuation">\</span>windows<span class="token punctuation">\</span>zookeeper-server-start.sh .<span class="token punctuation">\</span>config<span class="token punctuation">\</span>zookeeper.properties</code></pre>
 <p>On peut ensuite lancer le serveur Kafka comme ceci :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">.<span class="token punctuation">\</span>bin<span class="token punctuation">\</span>windows<span class="token punctuation">\</span>kafka-server-start.sh .<span class="token punctuation">\</span>config<span class="token punctuation">\</span>zookeeper.properties
-</code></pre>
+<pre class="language-bash"><code class="language-bash">.<span class="token punctuation">\</span>bin<span class="token punctuation">\</span>windows<span class="token punctuation">\</span>kafka-server-start.sh .<span class="token punctuation">\</span>config<span class="token punctuation">\</span>zookeeper.properties</code></pre>
 <p>On peut créer un topic appelé <em>topic1</em> (le port 9092 est le port par défaut utilisé mais il peut être modifié) :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">.<span class="token punctuation">\</span>bin<span class="token punctuation">\</span>windows<span class="token punctuation">\</span>kafka-topics.bat <span class="token parameter variable">--create</span> --bootstrap-server localhost:9092 <span class="token parameter variable">--topic</span> topic1
-</code></pre>
+<pre class="language-bash"><code class="language-bash">.<span class="token punctuation">\</span>bin<span class="token punctuation">\</span>windows<span class="token punctuation">\</span>kafka-topics.bat <span class="token parameter variable">--create</span> --bootstrap-server localhost:9092 <span class="token parameter variable">--topic</span> topic1</code></pre>
 <p>La commande suivante permet de lister les différents topics créés :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">.<span class="token punctuation">\</span>bin<span class="token punctuation">\</span>windows<span class="token punctuation">\</span>kafka-topics.bat <span class="token parameter variable">--list</span> --bootstrap-server localhost:9092
-</code></pre>
+<pre class="language-bash"><code class="language-bash">.<span class="token punctuation">\</span>bin<span class="token punctuation">\</span>windows<span class="token punctuation">\</span>kafka-topics.bat <span class="token parameter variable">--list</span> --bootstrap-server localhost:9092</code></pre>
 <p>Remplacer <em>--list</em> par <em>--describe</em> permet d'avoir plus d'informations sur les partitions.</p>
 <p>Il est dès lors possible de produire des messages pour cette partition grâce à la commande :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">.<span class="token punctuation">\</span>bin<span class="token punctuation">\</span>windows<span class="token punctuation">\</span>kafka-console-producer.bat --broker-list localhost:9092 <span class="token parameter variable">--topic</span> topic1
-</code></pre>
+<pre class="language-bash"><code class="language-bash">.<span class="token punctuation">\</span>bin<span class="token punctuation">\</span>windows<span class="token punctuation">\</span>kafka-console-producer.bat --broker-list localhost:9092 <span class="token parameter variable">--topic</span> topic1</code></pre>
 <p>On peut dès lors entrer toutes les données que l'on souhaite.</p>
 <p>On peut écouter les messages envoyés. Dans un autre terminal, on lance la commande :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">.<span class="token punctuation">\</span>bin<span class="token punctuation">\</span>windows<span class="token punctuation">\</span>kafka-console-consumer.bat <span class="token parameter variable">--topic</span> topic1 --bootstrap-server localhost:9092
-</code></pre>
+<pre class="language-bash"><code class="language-bash">.<span class="token punctuation">\</span>bin<span class="token punctuation">\</span>windows<span class="token punctuation">\</span>kafka-console-consumer.bat <span class="token parameter variable">--topic</span> topic1 --bootstrap-server localhost:9092</code></pre>
 <p>On vérifie bien que quand on envoie des données, on les récupère dans ce second terminal.</p>
 <h3>Utilisation</h3>
 <p>Dans la suite du tutoriel, on s'intéresse à la <strong>gestion d'une flotte de vélo en temps réel</strong>. Pour cela, on récupère les données de l'API Decault. Le but est d'afficher le delta du nombre de vélos dans les différentes stations. En suivant le tutoriel, on construit progressivement le projet souhaité. Toutes les étapes sont très clairement expliquées et les commentaires permettent de bien comprendre ce que l'on fait.</p>
 <p>Jusque là, le code ne s'effectue que sur un serveur en local sur notre ordinateur. Pour des calculs avec plus de données et/ou plus complexe, il est possible de le <strong>déployer sur plusieurs serveurs en parallèle</strong> (ici tous sur notre ordinateur). Cela permet de répéter les informations et donc d'être <strong>tolérant aux pannes des serveurs</strong>. On crée un deuxième serveur :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">$ <span class="token function">vim</span> config/server1.properties
+<pre class="language-bash"><code class="language-bash">$ <span class="token function">vim</span> config/server1.properties
 <span class="token assign-left variable">broker.id</span><span class="token operator">=</span><span class="token number">1</span>  <span class="token comment">## L'id doit être différent pour chaque server</span>
 <span class="token assign-left variable">listeners</span><span class="token operator">=</span>PLAINTEXT://:9093  <span class="token comment">## Chaque serveur est sur un port différent</span>
-<span class="token assign-left variable">log.dirs</span><span class="token operator">=</span>/tmp/kafka-logs-1
-</code></pre>
+<span class="token assign-left variable">log.dirs</span><span class="token operator">=</span>/tmp/kafka-logs-1</code></pre>
 <p>De la même manière, on peut ajouter des serveurs Zookeeper pour qu'ils fonctionnent en parallèle.</p>
 <h3>Projet</h3>
 <p>Par la suite, j'ai réalisé un mini-projet avec Storm. Le but est de savoir grâce à l'API précédemment utilisé quand une borne de vélo devient vide ou n'est plus vide.

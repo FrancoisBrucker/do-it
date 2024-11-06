@@ -144,7 +144,7 @@
 <h2>Switch</h2>
 <p>En JavaScript, comme dans de nombreux langages de programmation, lorsqu'on a une variable qui prend des valeurs différentes et que pour chacune de ses valeurs on veut afficher un message différent, on peut utiliser un switch. Pour mieux comprendre, prenons un exemple.
 Imaginons que j'ai une fonction qui prend un paramètre un prénom et qui renvoie en sortie un chanteur qui possède le même prénom cela donnerait :</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">famousSinger</span><span class="token punctuation">(</span><span class="token parameter">firstName</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">famousSinger</span><span class="token punctuation">(</span><span class="token parameter">firstName</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">let</span> familyName <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
 
   <span class="token keyword">if</span> <span class="token punctuation">(</span>firstName<span class="token operator">==</span><span class="token string">"Bob"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -170,10 +170,9 @@ Imaginons que j'ai une fonction qui prend un paramètre un prénom et qui renvoi
   <span class="token punctuation">}</span>
 
   <span class="token keyword">return</span> familyName<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>On voit que si on a de nombreuses conditions, il est très long d'écrire à chaque fois le else if et cela manque de clarté. C'est pourquoi les switch ont été inventés, voilà ce que ça donne :</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">famousSinger</span><span class="token punctuation">(</span><span class="token parameter">firstName</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">famousSinger</span><span class="token punctuation">(</span><span class="token parameter">firstName</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">let</span> familyName <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
   <span class="token keyword">switch</span><span class="token punctuation">(</span>firstName<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">case</span> <span class="token string">"Bob"</span><span class="token operator">:</span>
@@ -199,18 +198,16 @@ Imaginons que j'ai une fonction qui prend un paramètre un prénom et qui renvoi
       <span class="token keyword">break</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
   <span class="token keyword">return</span> familyName<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>On gagne en clarté avec le switch.</p>
 <h2>Objets</h2>
 <p>Il est possible de créer des objets en JavaScript et d'accéder aux différentes propriétés qui constituent l'objet. Prenons un exemple pour mieux comprendre :</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">const</span> dog <span class="token operator">=</span> <span class="token punctuation">{</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> dog <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token string-property property">"name"</span><span class="token operator">:</span> <span class="token string">"Nicolas"</span><span class="token punctuation">,</span>
   <span class="token string-property property">"legs"</span><span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
   <span class="token string-property property">"tails number"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
   <span class="token string-property property">"enemies"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"Water"</span><span class="token punctuation">,</span> <span class="token string">"Cats"</span><span class="token punctuation">]</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
 <p>Ici, nous avons créé l'objet <strong>cat</strong> qui possède 4 propriétés :</p>
 <ul>
 <li><em>name</em></li>
@@ -219,57 +216,48 @@ Imaginons que j'ai une fonction qui prend un paramètre un prénom et qui renvoi
 <li><em>enemies</em></li>
 </ul>
 <p>On peut accéder aux propriétés de l'objet et même les modifier, pour cela on peut faire :</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">const</span> enemiesValue <span class="token operator">=</span> cat<span class="token punctuation">.</span>enemies<span class="token punctuation">;</span>
-enemiesValue <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"Mouses"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> enemiesValue <span class="token operator">=</span> cat<span class="token punctuation">.</span>enemies<span class="token punctuation">;</span>
+enemiesValue <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"Mouses"</span><span class="token punctuation">]</span><span class="token punctuation">;</span></code></pre>
 <p>si on connait le nom de la propriété à laquelle on veut accéder.</p>
 <p>Ou alors si le nom de la propriété possède un espace :</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">const</span> tailsNumberValue <span class="token operator">=</span> cat<span class="token punctuation">[</span><span class="token string">"tails number"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-tailsNumberValue <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> tailsNumberValue <span class="token operator">=</span> cat<span class="token punctuation">[</span><span class="token string">"tails number"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+tailsNumberValue <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span></code></pre>
 <p>Il est également possible de supprimer des propriétés, par exemple avec notre objet <em>dog</em> :</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">delete</span> dog<span class="token punctuation">.</span>enemies<span class="token punctuation">;</span>
-<span class="token keyword">delete</span> dog<span class="token punctuation">[</span><span class="token string">"tails number"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">delete</span> dog<span class="token punctuation">.</span>enemies<span class="token punctuation">;</span>
+<span class="token keyword">delete</span> dog<span class="token punctuation">[</span><span class="token string">"tails number"</span><span class="token punctuation">]</span><span class="token punctuation">;</span></code></pre>
 <p>Pour savoir si un objet possède une certaine propriété, la méthode <em><strong>.hasOwnProperty(proprietes)</strong></em> existe. Si l'object possède la propriété, la fonction retourne true, sinon elle retourne false :</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">dog<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span><span class="token string">"name"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-dog<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span><span class="token string">"gender"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-javascript"><code class="language-javascript">dog<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span><span class="token string">"name"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+dog<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span><span class="token string">"gender"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <h2>Fonctions anonymes</h2>
 <p>Parfois en JavaScript il n'y pas besoin de nommer des fonctions, surtout lorsqu'elles sont utilisés comme argument par d'autres fonctions. On dit alors que c'est une fonction anonymé.
 Par exemple au lieu d'écrire ça :</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">const</span> <span class="token function-variable function">myFunc</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token function-variable function">myFunc</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> myVar <span class="token operator">=</span> <span class="token string">"value"</span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> myVar<span class="token punctuation">;</span>
-<span class="token punctuation">}</span> 
-</code></pre>
+<span class="token punctuation">}</span> </code></pre>
 <p>On écrira plutôt :</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">const</span> <span class="token function-variable function">myFunc</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token function-variable function">myFunc</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> myVar <span class="token operator">=</span> <span class="token string">"value"</span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> myVar<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <h2>Les classes</h2>
 <p>Il est possible de créer des objets plus facilement qu'avec la méthode que nous avons utilisé précedemment, ce qui peut être très pratique quand on crée de nombreux objets. Pour cela on utilise des classes qui agissent en quelques sortes comme des plans pour les objets.
 Par exemple pour créer une classe livre :</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">Book</span> <span class="token punctuation">{</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">Book</span> <span class="token punctuation">{</span>
 
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Pour cette classe, on voudra que tous les livres aient certaines propriétés comme un titre, un auteur, un nombre de pages. Pour cela on utilise un constructeur :</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">Book</span> <span class="token punctuation">{</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">Book</span> <span class="token punctuation">{</span>
   <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">title<span class="token punctuation">,</span> author<span class="token punctuation">,</span> pages</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>title <span class="token operator">=</span> title<span class="token punctuation">;</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>author <span class="token operator">=</span> author<span class="token punctuation">;</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>pages <span class="token operator">=</span> pages<span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Une fois que cela est fait on peut facilement créer des livres :</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">let</span> harryPotter <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Book</span><span class="token punctuation">(</span><span class="token string">"Chamber of secrets"</span><span class="token punctuation">,</span> <span class="token string">"J.K Rowling"</span><span class="token punctuation">,</span> <span class="token number">1200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">let</span> harryPotter <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Book</span><span class="token punctuation">(</span><span class="token string">"Chamber of secrets"</span><span class="token punctuation">,</span> <span class="token string">"J.K Rowling"</span><span class="token punctuation">,</span> <span class="token number">1200</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>On peut aussi ajouter après le constructeur des méthodes, ce sont des fonctions qui seront applicables à tous les objets appartenant à la classe dans laquelle la méthode est écrite :</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">BankAccount</span> <span class="token punctuation">{</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">BankAccount</span> <span class="token punctuation">{</span>
     <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">owner<span class="token punctuation">,</span> balance</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">this</span><span class="token punctuation">.</span>owner <span class="token operator">=</span> owner<span class="token punctuation">;</span>
         <span class="token keyword">this</span><span class="token punctuation">.</span>balance <span class="token operator">=</span> balance<span class="token punctuation">;</span>
@@ -277,8 +265,7 @@ Par exemple pour créer une classe livre :</p>
     <span class="token function">showBalance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Balance: '</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>balance <span class="token operator">+</span> <span class="token string">' EUR'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Ainsi si on crée un bankAccount on peut lui appliquer la méthode.</p>
 <h2>Pour le développement web</h2>
 <p>JavaScript est très utilisé pour le développement web, notamment pour modifer la strucuture et le style des pages web par l'intermédiraire du DOM (Document Object Model).</p>
@@ -291,34 +278,30 @@ Par exemple pour créer une classe livre :</p>
 <li>.getElementById() ---&gt; permet de sélectionner l'élément ayant l'Id demandé.</li>
 <li>.querySelector() ---&gt; un mélange de toutes les autres méthodes, on peut même combiner les sélecteurs (classe, Id, tag).</li>
 </ul>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"myID"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-javascript"><code class="language-javascript">document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"myID"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <h3>Modifier les éléments</h3>
 <p>Pour modifier le contenu d'un élément, il y a deux méthodes principales à connaître :</p>
 <ul>
 <li>innerHTML ---&gt; permet d'avoir accès au contenu de l'élément HTML sélectionné.</li>
 <li>textContent ---&gt; permet d'avoir accès au texte du noeud choisi mais aussi celui de tous ses descendants</li>
 </ul>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">var</span> htmlElement <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"myID"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-htmlElement<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">"je remplace l'élément"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">var</span> htmlElement <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"myID"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+htmlElement<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">"je remplace l'élément"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>Après avoir modifier le contenu de l'élément, on peut aussi modifier son style notamment en changeant sa classe :</p>
 <ul>
 <li>.style.color</li>
 <li>classList.add()</li>
 <li>classList.remove()</li>
 </ul>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">var</span> htmlElement <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"myID"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">var</span> htmlElement <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"myID"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 htmlElement<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">"je remplace l'élément"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-htmlElement<span class="token punctuation">.</span>style<span class="token punctuation">.</span>color<span class="token operator">=</span><span class="token punctuation">(</span><span class="token string">'red'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+htmlElement<span class="token punctuation">.</span>style<span class="token punctuation">.</span>color<span class="token operator">=</span><span class="token punctuation">(</span><span class="token string">'red'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <h3>Ajouter des éléments</h3>
 <p>On peut ajouter de nouveaux éléments au DOM grâce à plusieurs méthodes :</p>
 <ul>
 <li>.createElement()</li>
 </ul>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">let</span> newDiv <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">let</span> newDiv <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <h3>Les event listeners</h3>
 <p>Pouvoir modifier les éléments de la page web par l'intermédiaire du DOM c'est bien, mais comment faire pour que ces modifications se fassent à la suite d'une action d'un utilisateur ?
 C'est là qu'intervienne les event listeners.
@@ -332,9 +315,8 @@ On peut savoir à quel moment ont lieux ces évènements.
 Pour cela on place des event listeners sur les éléments qui avec lesquels l'utilisateur est susceptible d'intéragir.</li>
 </ul>
 <p>Prenons l'exemple d'un bouton, l'utilisateur peut cliquer dessus, cela déclenchera une action. Pour cela :</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">var</span> button <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"button"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-button<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token keyword">do</span> an action<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">var</span> button <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"button"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+button<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token keyword">do</span> an action<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>L'action peut être un changement de page ou une modification, il faut préciser à l'event listener quel action on attend (clique, mouvement de souris...)</p>
 <h3>Conclusion</h3>
 <p>De nombreuses autres choses peuvent être faites avec JavaScript en web, mais pour l'instant nous nous limiterons à ce que nous avons déjà vu. La suite viendra éventuellement dans un autre MON.</p>

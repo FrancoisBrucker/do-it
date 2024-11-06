@@ -134,7 +134,7 @@ Ces chapitres proviennent du site <a href="http://Mozilla.developer.org">Mozilla
 Dans ce chapitre nous sommes inités à ce qu'est un objet, comment ils sont construits ainsi que leurs différentes notations.
 Un objet est une collection de variable et de fonctionalités.</li>
 </ol>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">       var personne <span class="token operator">=</span> <span class="token punctuation">{</span>
+<pre class="language-bash"><code class="language-bash">       var personne <span class="token operator">=</span> <span class="token punctuation">{</span>
         nom: <span class="token punctuation">[</span><span class="token string">'Jean'</span>, <span class="token string">'Martin'</span><span class="token punctuation">]</span>,
         age: <span class="token number">32</span>,
         sexe: <span class="token string">'masculin'</span>,
@@ -145,14 +145,13 @@ Un objet est une collection de variable et de fonctionalités.</li>
         salutation: <span class="token function-name function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
           alert<span class="token punctuation">(</span><span class="token string">'Bonjour ! Je suis '</span> + this.nom<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> + <span class="token string">'.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
-      <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code></pre>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
 <ol start="2">
 <li>Prototypes objet.
 Ici, nous détaillons un peu plus le prototypage, les méthodes, la notion d'héritage ainsi que les constructeurs. <br>
 Le prototypage permet d'hériter des attributs et des méthodes d'autres objets : ci-dessous, personne1 est construit à partir de Personne.</li>
 </ol>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">    <span class="token keyword">function</span> Personne<span class="token punctuation">(</span>prenom, famille, age, genre, interets<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-bash"><code class="language-bash">    <span class="token keyword">function</span> Personne<span class="token punctuation">(</span>prenom, famille, age, genre, interets<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         this.nom <span class="token operator">=</span> <span class="token punctuation">{</span>
           <span class="token string">'prenom'</span><span class="token builtin class-name">:</span> prenom,
           <span class="token string">'famille'</span> <span class="token builtin class-name">:</span> famille
@@ -161,28 +160,25 @@ Le prototypage permet d'hériter des attributs et des méthodes d'autres objets 
         this.genre <span class="token operator">=</span> genre<span class="token punctuation">;</span>
         this.interets <span class="token operator">=</span> interets<span class="token punctuation">;</span>
 
-    <span class="token builtin class-name">let</span> personne1 <span class="token operator">=</span> new Personne<span class="token punctuation">(</span><span class="token string">'Jean'</span>, <span class="token string">'Biche'</span>, <span class="token number">32</span>, <span class="token string">'neutre'</span>, <span class="token punctuation">[</span><span class="token string">'musique'</span>, <span class="token string">'tricot'</span>, <span class="token string">'boxe'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> //personne1 hérite des attributs de Personne<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
+    <span class="token builtin class-name">let</span> personne1 <span class="token operator">=</span> new Personne<span class="token punctuation">(</span><span class="token string">'Jean'</span>, <span class="token string">'Biche'</span>, <span class="token number">32</span>, <span class="token string">'neutre'</span>, <span class="token punctuation">[</span><span class="token string">'musique'</span>, <span class="token string">'tricot'</span>, <span class="token string">'boxe'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> //personne1 hérite des attributs de Personne<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 <p>Nous avons aussi vu comment modifier ce prototypage selon la chaine de prototypage. Tous les objets hérite des prototypes de 'Object()' qui est l'objet original disons.  <img src="../Images/Chaine_prototypage.png"><br>
 Nous pouvons aussi rajouter des méthodes à notre constructeur 'Personne' avec la structure :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">Personne.prototype.aurevoir <span class="token operator">=</span> <span class="token function-name function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-bash"><code class="language-bash">Personne.prototype.aurevoir <span class="token operator">=</span> <span class="token function-name function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   alert<span class="token punctuation">(</span>this.nom.prenom + <span class="token string">' est sorti. Au revoir !'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <ol start="3">
 <li>Heritage au sein de JS</li>
 </ol>
 <p>Nous voyons ici l'héritage et les constructeurs de manière plus précise et plus concrète. Dans l'exemple ci-dessous, nous créons un objet Professeur qui hérite des attributs de Personne. Nous y rajoutons ensuite un attribut et les deux dernières lignes servent à attribuer les méthodes de Personne à Professeur.</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"> <span class="token keyword">function</span> Professeur<span class="token punctuation">(</span>prenom, nom, age, genre, interets, matiere<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-bash"><code class="language-bash"> <span class="token keyword">function</span> Professeur<span class="token punctuation">(</span>prenom, nom, age, genre, interets, matiere<span class="token punctuation">)</span> <span class="token punctuation">{</span>
   Personne.call<span class="token punctuation">(</span>this, prenom, nom, age, genre, interets<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
   this.matiere <span class="token operator">=</span> matiere<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 Professeur.prototype <span class="token operator">=</span> Object.create<span class="token punctuation">(</span>Personne.prototype<span class="token punctuation">)</span><span class="token punctuation">;</span>
-Professeur.prototype.constructor <span class="token operator">=</span> Professeur<span class="token punctuation">;</span>
-</code></pre>
+Professeur.prototype.constructor <span class="token operator">=</span> Professeur<span class="token punctuation">;</span></code></pre>
 <p>Nous voyons ensuite comment attribuer une nouvelle méthode ou encore modifier une méthode de Personne pour notre nouvel objet.</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">Professeur.prototype.saluer <span class="token operator">=</span> <span class="token function-name function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-bash"><code class="language-bash">Professeur.prototype.saluer <span class="token operator">=</span> <span class="token function-name function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   var prefix<span class="token punctuation">;</span>
 
   <span class="token keyword">if</span> <span class="token punctuation">(</span>this.genre <span class="token operator">==</span><span class="token operator">=</span> <span class="token string">'mâle'</span> <span class="token operator">||</span> this.genre <span class="token operator">==</span><span class="token operator">=</span> <span class="token string">'Mâle'</span> <span class="token operator">||</span> this.genre <span class="token operator">==</span><span class="token operator">=</span> <span class="token string">'m'</span> <span class="token operator">||</span> this.genre <span class="token operator">==</span><span class="token operator">=</span> <span class="token string">'M'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -194,18 +190,16 @@ Professeur.prototype.constructor <span class="token operator">=</span> Professeu
   <span class="token punctuation">}</span>
 
   alert<span class="token punctuation">(</span><span class="token string">'Bonjour. Mon nom est '</span> + prefix + <span class="token string">' '</span> + this.nom_complet.nom + <span class="token string">', et j\'</span>enseigne <span class="token string">' + this.matiere + '</span>.'<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
 <ol start="4">
 <li>Json</li>
 </ol>
 <p>Le JSON est un moyen de stocker des objets et leurs propriétés afin de les réutiliser dans différents codes, et pas uniquement des codes JS !<br>
 Cela peut aussi être un tableau ou une suite de caractères ou de nombres.
 Nous voyons aussi une méthode de récupération de JSON sur github grâce à l'API XMLHttpRequest.</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">var requestURL <span class="token operator">=</span> <span class="token string">'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json'</span><span class="token punctuation">;</span>
+<pre class="language-bash"><code class="language-bash">var requestURL <span class="token operator">=</span> <span class="token string">'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json'</span><span class="token punctuation">;</span>
 var request <span class="token operator">=</span> new XMLHttpRequest<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-request.open<span class="token punctuation">(</span><span class="token string">'GET'</span>, requestURL<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+request.open<span class="token punctuation">(</span><span class="token string">'GET'</span>, requestURL<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>Nous voyons aussi un exemple permettant de créer une page web grâce aux données récoltées sous format JSON, cet exemple est particulièrement intéressant pous son mélange CSS et JS dans la structure &quot;document.createElement&quot;<br>
 <img src="../Images/json-superheroes.png"></p>
 <ol start="5">
@@ -225,7 +219,7 @@ Nous voyons aussi les définitions de framework et bibliothèque.</p>
 </ol>
 <p>Nous voyons ici un cours théorique pour commencer ou l'on nous explique la structure DOM d'une page HTML. J'ai trouvé ceci plutot intéressant car j'éprouvais certaines difficultés à bien utiliser les structures &quot;appenChild&quot; et &quot;removeChild&quot; car je ne prenais pas les bons noeuds et enfants à chaque fois. C'est beaucoup plus clair désormais. <br>
 Nous voyons aussi comment manipuler le style CSS sur JavaScript ce qui peut s'avérer très utile, notamment avec les propriétés &quot;setAttribute&quot;. Nous voyons finalement un exemple concret où l'on crée une liste de courses de manière dynamique pour illustrer toutes ces propriétés :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">        var <span class="token assign-left variable">btn</span><span class="token operator">=</span>document.querySelector<span class="token punctuation">(</span><span class="token string">'button'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-bash"><code class="language-bash">        var <span class="token assign-left variable">btn</span><span class="token operator">=</span>document.querySelector<span class="token punctuation">(</span><span class="token string">'button'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         var <span class="token assign-left variable">liste</span><span class="token operator">=</span>document.querySelector<span class="token punctuation">(</span><span class="token string">'ul'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         var <span class="token assign-left variable">input</span><span class="token operator">=</span>document.querySelector<span class="token punctuation">(</span><span class="token string">'input'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
@@ -250,8 +244,7 @@ Nous voyons aussi comment manipuler le style CSS sur JavaScript ce qui peut s'av
             <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
             input.focus<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-</code></pre>
+        <span class="token punctuation">}</span></code></pre>
 <ol start="3">
 <li>API tierce</li>
 </ol>
@@ -272,7 +265,7 @@ Nous voyons finalement un exemple de récupération et d'utilisation des donnée
 <li>Premier site web</li>
 </ol>
 <p>Dans un premier temps, nous apprenons à créer des &quot;components&quot; et à y associer des données. Nous créons les components dans notre fichier.TypeScript de telle manière :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token builtin class-name">export</span> class FaceSnapComponent <span class="token punctuation">{</span>
+<pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">export</span> class FaceSnapComponent <span class="token punctuation">{</span>
   title<span class="token operator">!</span>: string<span class="token punctuation">;</span> 
   description<span class="token operator">!</span>: string<span class="token punctuation">;</span>
   createdDate<span class="token operator">!</span>: Date<span class="token punctuation">;</span>
@@ -284,33 +277,29 @@ Nous voyons finalement un exemple de récupération et d'utilisation des donnée
   <span class="token assign-left variable">this.createdDate</span><span class="token operator">=</span>new Date<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token assign-left variable">this.snaps</span><span class="token operator">=</span><span class="token number">6</span><span class="token punctuation">;</span>
   <span class="token assign-left variable">this.imageUrl</span><span class="token operator">=</span><span class="token string">'https://cdn.pixabay.com/photo/2015/05/31/16/03/teddy-bear-792273_1280.jpg'</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Nous les affichons ensuite dans notre fihier html associé à ce component :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">"face-snap-card"</span><span class="token operator">></span>
+<pre class="language-bash"><code class="language-bash"><span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">"face-snap-card"</span><span class="token operator">></span>
     <span class="token operator">&lt;</span>h<span class="token operator"><span class="token file-descriptor important">2</span>></span>Dev Web <span class="token operator"><span class="token file-descriptor important">2</span>&lt;</span>/h<span class="token operator"><span class="token file-descriptor important">2</span>></span>
     <span class="token operator">&lt;</span>p<span class="token operator">></span>Mis en ligne le <span class="token operator">&lt;</span>/p<span class="token operator">></span>
     <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token operator">&lt;</span>/p<span class="token operator">></span>
     <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token operator">&lt;</span>/p<span class="token operator">></span>
     <span class="token operator">&lt;</span>img <span class="token punctuation">[</span>src<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"imageUrl"</span> <span class="token punctuation">[</span>alt<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"title"</span><span class="token operator">></span>
-<span class="token operator">&lt;</span>/div<span class="token operator">></span>
-</code></pre>
+<span class="token operator">&lt;</span>/div<span class="token operator">></span></code></pre>
 <p>Nous nous occupons ensuite de rendre notre application plus dynamique en y ajoutant un premier évènement. Nous cherchons à créer une fonction permettant de réagir à notre image. Nous rajoutons donc un bouton exprimant cette réaction. qui prend une valeur lorsqu'il est cliqué et retourne à sa valeur initiale lorsqu'il est reclické. Cela permet une seule réaction par utilisateur.</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function-name function">onSnap</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-bash"><code class="language-bash"><span class="token function-name function">onSnap</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
  <span class="token keyword">if</span> <span class="token punctuation">(</span>this.buttonText <span class="token operator">==</span><span class="token operator">=</span> <span class="token string">':D'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
    this.snaps++<span class="token punctuation">;</span>
    this.buttonText <span class="token operator">=</span> <span class="token string">'Je retire'</span><span class="token punctuation">;</span>
  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
    this.snaps--<span class="token punctuation">;</span>
    this.buttonText <span class="token operator">=</span> <span class="token string">':D'</span><span class="token punctuation">;</span>
- <span class="token punctuation">}</span>
-</code></pre>
+ <span class="token punctuation">}</span></code></pre>
 <p>Nous appelons bien sur cette fonction dans notre component.html :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">    <span class="token operator">&lt;</span>p<span class="token operator">></span>
+<pre class="language-bash"><code class="language-bash">    <span class="token operator">&lt;</span>p<span class="token operator">></span>
         <span class="token operator">&lt;</span>button <span class="token punctuation">(</span>click<span class="token punctuation">)</span><span class="token operator">=</span><span class="token string">"onSnap()"</span><span class="token operator">></span><span class="token operator">&lt;</span>/button<span class="token operator">></span>
         :D 
-    <span class="token operator">&lt;</span>/p<span class="token operator">></span>
-</code></pre>
+    <span class="token operator">&lt;</span>/p<span class="token operator">></span></code></pre>
 <p>Voici à quoi ressemble mon site : <br>
 <img src="../Images/Premier_site.png"></p>
 

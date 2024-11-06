@@ -204,7 +204,7 @@ Lorsque l'on définit une classe, python lui associe un espace de noms. Les diff
 <p><a href="https://francoisbrucker.github.io/cours_informatique/cours/algorithme-code-th%C3%A9orie/code/programmation-objet/projet-code-objets/">projet : coder des objets</a></p>
 </div></div>
 <p>On commence par coder la classe Grille:</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">
+<pre class="language-python"><code class="language-python">
 <span class="token keyword">from</span> bateau <span class="token keyword">import</span> Bateau
 
 <span class="token keyword">class</span> <span class="token class-name">Grille</span><span class="token punctuation">:</span>
@@ -239,11 +239,10 @@ Lorsque l'on définit une classe, python lui associe un espace de noms. Les diff
             <span class="token keyword">if</span> self<span class="token punctuation">.</span>nb_ligne<span class="token operator">>=</span> bateau<span class="token punctuation">.</span>colonne<span class="token operator">+</span>bateau<span class="token punctuation">.</span>longueur<span class="token punctuation">:</span>
                 <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span> <span class="token punctuation">(</span>bateau<span class="token punctuation">.</span>longueur<span class="token punctuation">)</span><span class="token punctuation">:</span>
                     self<span class="token punctuation">.</span>carte<span class="token punctuation">[</span>bateau<span class="token punctuation">.</span>ligne<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>bateau<span class="token punctuation">.</span>colonne<span class="token operator">+</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">'X'</span>
-
 </code></pre>
 <p>La méthode tirer remplace le &quot;.&quot; par un &quot;o&quot; dans la grille à l'endroit du tir</p>
 <p>On code ensuite la classe Bateau:</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">
+<pre class="language-python"><code class="language-python">
 <span class="token keyword">class</span> <span class="token class-name">Bateau</span> <span class="token punctuation">:</span>
     <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> ligne<span class="token punctuation">,</span> colonne<span class="token punctuation">,</span> longueur<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> vertical<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
         self<span class="token punctuation">.</span>ligne <span class="token operator">=</span> ligne
@@ -272,12 +271,11 @@ Lorsque l'on définit une classe, python lui associe un espace de noms. Les diff
              <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span> <span class="token punctuation">(</span>self<span class="token punctuation">.</span>longueur<span class="token punctuation">)</span><span class="token punctuation">:</span>
                 <span class="token keyword">if</span> grille<span class="token punctuation">.</span>carte<span class="token punctuation">[</span>self<span class="token punctuation">.</span>ligne<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>self<span class="token punctuation">.</span>colonne<span class="token operator">+</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">==</span><span class="token string">'o'</span><span class="token punctuation">:</span>
                     <span class="token keyword">return</span> <span class="token boolean">True</span>
-
 </code></pre>
 <p>La méthode &quot;touché&quot; permet de savoir si un tir  a atteint le bateau ou non.
 Enfin on ajoute les méthodes ajoute(Bateau) à Grille et coulé() à Bateau  qui vont lier les 2 classes.</p>
 <p>Le code final du jeu de la bataille final est:</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">
+<pre class="language-python"><code class="language-python">
 <span class="token keyword">from</span> grille <span class="token keyword">import</span> Grille
 <span class="token keyword">from</span> bateau <span class="token keyword">import</span> Bateau
 
@@ -295,7 +293,6 @@ g1<span class="token operator">=</span> Grille<span class="token punctuation">(<
         g1<span class="token punctuation">.</span>carte<span class="token punctuation">[</span>x<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>y<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"X"</span>
 
 g1<span class="token punctuation">.</span>affiche<span class="token punctuation">(</span><span class="token punctuation">)</span>    
-
 </code></pre>
 <p>Tous cela est très imparfait bien sûr et j'ai eu pas mal de problèmes d'index.</p>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
@@ -335,7 +332,7 @@ Une agrégation représente un ensemble d'objets ajoutés par une méthode dans 
 Représentation UML:</p>
 <img src="ulm_tapis.png">
 <p>Code:</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> random <span class="token keyword">import</span> <span class="token operator">*</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">from</span> random <span class="token keyword">import</span> <span class="token operator">*</span>
 
 
 <span class="token keyword">class</span> <span class="token class-name">Dice</span><span class="token punctuation">:</span>
@@ -364,10 +361,9 @@ Représentation UML:</p>
 
     <span class="token keyword">def</span> <span class="token function">get_valeur</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token keyword">return</span> self<span class="token punctuation">.</span>liste  
-
 </code></pre>
 <p>Tests associés:</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">from</span> dice <span class="token keyword">import</span> <span class="token operator">*</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">from</span> dice <span class="token keyword">import</span> <span class="token operator">*</span>
 
 <span class="token keyword">def</span> <span class="token function">test_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     de <span class="token operator">=</span> Dice<span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span>
@@ -406,8 +402,7 @@ Représentation UML:</p>
     tapis<span class="token operator">=</span>TapisV<span class="token punctuation">(</span><span class="token punctuation">)</span>
     tapis<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">3</span>
     <span class="token keyword">if</span> tapis<span class="token punctuation">.</span>get_valeur<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token keyword">return</span> <span class="token boolean">True</span>
-</code></pre>
+        <span class="token keyword">return</span> <span class="token boolean">True</span></code></pre>
 <h2>3.Héritage</h2>
 <h1>Cours</h1>
 <p>L'héritage permet de créer des classes filles qui sont des cas particuliers de leur classe mère.
@@ -427,7 +422,7 @@ Une classe fille hérite de tous les attributs et méthodes de sa mère. On peut
 <h1>Pratique</h1>
 <p>Pour tester l'héritage j'ai ajouté une classe de sous-marins à ma bataille navale.
 Ces sous marins peuvent plonger. Ils sont alors invisibles et intouchables:</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">
+<pre class="language-python"><code class="language-python">
 <span class="token keyword">class</span> <span class="token class-name">Sous_marin</span><span class="token punctuation">(</span>Bateau<span class="token punctuation">)</span><span class="token punctuation">:</span>
 
     <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> ligne<span class="token punctuation">,</span> colonne<span class="token punctuation">,</span> longueur<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> vertical<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> visibilité<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -447,7 +442,6 @@ Ces sous marins peuvent plonger. Ils sont alors invisibles et intouchables:</p>
             <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>coulé<span class="token punctuation">(</span>grille<span class="token punctuation">)</span>    
         <span class="token keyword">else</span><span class="token punctuation">:</span>
             <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"c'est raté "</span><span class="token punctuation">)</span>
-
 </code></pre>
 <h2>4. Retour sur le cours de M.Brucker</h2>
 <p>Pour conclure ce MON voici un petit retour d'expérience concernant le cours de Monsieur Brucker.</p>

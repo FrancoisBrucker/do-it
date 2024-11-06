@@ -338,12 +338,10 @@ C'est cette dernière option que j'ai choisie d'utiliser :</p>
 <p><img src="img/machineVirtuelle.png" alt="Machine Virtuelle"> <em>Capture d'écran depuis Android Studio</em></p>
 <h3>4. Apprendre à coder sur Android Studio <a id="section4"></a></h3>
 <p>Les chaînes de caractères ne sont pas codées en dur dans la page xml dédiée à l'activité (activity_main.xml). Les chaînes sont définies dans /res/values/strings.xml puis sont appelées à partir du layout. Ainsi dans le fichier strings.xml on retrouve la définition de notre string :</p>
-<pre class="language-xml " style="counter-reset: linenumber 0"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>choose_number<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> Choisis un nombre entre 1 et 10 :<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">></span></span>
-</code></pre>
+<pre class="language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>choose_number<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> Choisis un nombre entre 1 et 10 :<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">></span></span></code></pre>
 <p>Et dans le fichier activity_main.xml, on fait référence au string défini :</p>
-<pre class="language-xml " style="counter-reset: linenumber 0"><code class="language-xml">&lt;TextView
-        android:text="@string/choose_number"
-</code></pre>
+<pre class="language-xml"><code class="language-xml">&lt;TextView
+        android:text="@string/choose_number"</code></pre>
 <p>Pour apprendre à coder une application basique, j'ai suivi principalement deux tutoriels :</p>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=TCJFoExOBUE">TUTO Android : Votre première application Android (mise en oeuvre avec Android Studio)</a></li>
@@ -392,7 +390,7 @@ C'est cette dernière option que j'ai choisie d'utiliser :</p>
 <p>Une fois la vision du futur rendu de notre application établie (grâce aux wireframes), j'ai commencé à coder le visuel de l'application. J'ai ainsi commencé par définir toutes les couleurs utilisées dans mes wireframes :</p>
 <p><img src="img/definitionCouleurs.png" alt="Définition couleurs"></p>
 <p>De même, j'ai saisi le contenu textuel (dans le fichier ./res/values/string.xml)   :</p>
-<pre class="language-kotlin " style="counter-reset: linenumber 0"><code class="language-kotlin"><span class="token operator">&lt;</span>resources<span class="token operator">></span>
+<pre class="language-kotlin"><code class="language-kotlin"><span class="token operator">&lt;</span>resources<span class="token operator">></span>
     <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"app_name"</span></span><span class="token operator">></span>Evasion<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
     <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"app_name_capital_letters"</span></span><span class="token operator">></span>EVASION<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
 
@@ -455,8 +453,7 @@ C'est cette dernière option que j'ai choisie d'utiliser :</p>
     <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"modify_my_experience_page_input_description"</span></span><span class="token operator">></span><span class="token label symbol">@string</span><span class="token operator">/</span>detail_my_experience_page_description<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span> <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> On récupère la description complète de l'expérience <span class="token operator">--</span><span class="token operator">></span>
     <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"modify_my_experience_page_change_picture"</span></span><span class="token operator">></span>Click <span class="token keyword">to</span> upload <span class="token operator">or</span> change the picture<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
 
-<span class="token operator">&lt;</span><span class="token operator">/</span>resources<span class="token operator">></span>
-</code></pre>
+<span class="token operator">&lt;</span><span class="token operator">/</span>resources<span class="token operator">></span></code></pre>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>

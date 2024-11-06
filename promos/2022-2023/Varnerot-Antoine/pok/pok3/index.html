@@ -168,23 +168,20 @@
 </ol>
 <p>L'API et le front-ent étant décomposés en deux dossier différents, on commence d'abord par mettre en ligne l'API sur l'OVH.
 Tout d'abord dans notre API, on replace le port dé déploiement par défaut par un port géré par l'OVH. Dans notre fichier <code>server.js</code> on remplace le port 3000 par le 8080 comme suit:</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> port <span class="token operator">=</span> <span class="token function">normalizePort</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">PORT</span> <span class="token operator">||</span> <span class="token string">'8080'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> port <span class="token operator">=</span> <span class="token function">normalizePort</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">PORT</span> <span class="token operator">||</span> <span class="token string">'8080'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>On voudra lancer la commande <code>nodemon serve</code> sur notre OVH une fois les fichiers déployés, mais l'OVH ne reconnait pas la commande nodemon directement, cependant il reconnait les commandes npm.
 Pour pouvoir lancer la commande nodemon, il faut donc la renseigner dans notre fichier <code>package.json</code>:</p>
-<pre class="language-json " style="counter-reset: linenumber 0"><code class="language-json">scripts"<span class="token operator">:</span> <span class="token punctuation">{</span>
-  <span class="token property">"start"</span><span class="token operator">:</span> <span class="token string">"nodemon serve"</span><span class="token punctuation">,</span>
-</code></pre>
+<pre class="language-json"><code class="language-json">scripts"<span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token property">"start"</span><span class="token operator">:</span> <span class="token string">"nodemon serve"</span><span class="token punctuation">,</span></code></pre>
 <p>Il nous suffit maintenant de copier les fichiers de notre dossier API dans le dossier /node de l'OVH puis, directement depuis la console, lancer notre commande</p>
-<pre class="language-shell " style="counter-reset: linenumber 0"><code class="language-shell"><span class="token function">npm</span> run serve
-</code></pre>
+<pre class="language-shell"><code class="language-shell"><span class="token function">npm</span> run serve</code></pre>
 <p>L'API est désormais en ligne sur le port 8080.</p>
 <ol start="2">
 <li>Mise en ligne du front</li>
 </ol>
 <p>Maintenant que notre API est en ligne sur l'OVH, il faut relier le front-end à l'API en changeant l'adresse des requêtes.
 Dans <code>/src/app/services/music.service.ts</code>, on va remplacer les URL par ceux de l'API en ligne comme suit:</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token function">getMusics</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-js"><code class="language-js"><span class="token function">getMusics</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> route <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">http://node.origan.ovh1.ec-m.fr:8080/api/musics</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>http<span class="token punctuation">.</span>get<span class="token operator">&lt;</span>Music<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">></span><span class="token punctuation">(</span>route<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
@@ -192,8 +189,7 @@ Dans <code>/src/app/services/music.service.ts</code>, on va remplacer les URL pa
 <span class="token function">addMusic</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">newMusic</span><span class="token operator">:</span> Partial<span class="token operator">&lt;</span>Music<span class="token operator">></span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> route <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">http://node.origan.ovh1.ec-m.fr:8080/api/newMusic</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>http<span class="token punctuation">.</span>post<span class="token operator">&lt;</span>any<span class="token operator">></span><span class="token punctuation">(</span>route<span class="token punctuation">,</span> newMusic<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>On build notre application localement avec la commande <code>npm run build</code>. Cela va nous générer les fichiers nécessaire à déployer.
 Un dossier <code>/dist</code> s'est alors créé avec un sous-dossier (chez nous: <code>/projet3a</code>)</p>
 <p>On supprime au prélable sur l'OVH tous les fichiers du dossier <code>/www</code>, puis on colle tout le contenu de notre dossier dans ce dernier.</p>
@@ -208,7 +204,7 @@ Un dossier <code>/dist</code> s'est alors créé avec un sous-dossier (chez nous
 <p>Il est dans notre cas possible d'utiliser l'outil Docker Compose pour créer une application multi-conteneurs avec le front et l'API.</p>
 <p>Tout d'abord il nous faut définir le Dockerfile pour l'API.
 Dans notre dossier <code>/front</code> on crée un fichier <code>Dockerfile</code> puis on copie le code suivant:</p>
-<pre class="language-dockerfile " style="counter-reset: linenumber 0"><code class="language-dockerfile"><span class="token instruction"><span class="token keyword">FROM</span> node:14-alpine <span class="token keyword">as</span> development</span>
+<pre class="language-dockerfile"><code class="language-dockerfile"><span class="token instruction"><span class="token keyword">FROM</span> node:14-alpine <span class="token keyword">as</span> development</span>
 <span class="token instruction"><span class="token keyword">WORKDIR</span> /usr/src/app/front</span>
 
 <span class="token instruction"><span class="token keyword">COPY</span> package*.json ./</span>
@@ -217,13 +213,11 @@ Dans notre dossier <code>/front</code> on crée un fichier <code>Dockerfile</cod
 
 <span class="token instruction"><span class="token keyword">EXPOSE</span> 4201</span>
 
-<span class="token instruction"><span class="token keyword">CMD</span> [<span class="token string">"npm"</span>, <span class="token string">"start"</span>]</span>
-</code></pre>
+<span class="token instruction"><span class="token keyword">CMD</span> [<span class="token string">"npm"</span>, <span class="token string">"start"</span>]</span></code></pre>
 <p>Dans notre fichier <code>package.json</code> on cherche la ligne associée à la commande &quot;start&quot; et on remplace par</p>
-<pre class="language-json " style="counter-reset: linenumber 0"><code class="language-json"><span class="token string">"ng serve --host=0.0.0.0 --port 4201"</span><span class="token punctuation">,</span>
-</code></pre>
+<pre class="language-json"><code class="language-json"><span class="token string">"ng serve --host=0.0.0.0 --port 4201"</span><span class="token punctuation">,</span></code></pre>
 <p>Pareil dans le dossier API on crée un fichier <code>Dockerfile</code> qui contient le code:</p>
-<pre class="language-dockerfile " style="counter-reset: linenumber 0"><code class="language-dockerfile"><span class="token instruction"><span class="token keyword">FROM</span> node:14-alpine <span class="token keyword">as</span> development</span>
+<pre class="language-dockerfile"><code class="language-dockerfile"><span class="token instruction"><span class="token keyword">FROM</span> node:14-alpine <span class="token keyword">as</span> development</span>
 
 <span class="token instruction"><span class="token keyword">WORKDIR</span> /usr/src/app/api</span>
 
@@ -233,14 +227,12 @@ Dans notre dossier <code>/front</code> on crée un fichier <code>Dockerfile</cod
 
 <span class="token instruction"><span class="token keyword">EXPOSE</span> 3080</span>
 
-<span class="token instruction"><span class="token keyword">CMD</span> [<span class="token string">"npm"</span>, <span class="token string">"run"</span>, <span class="token string">"start"</span>]</span>
-</code></pre>
+<span class="token instruction"><span class="token keyword">CMD</span> [<span class="token string">"npm"</span>, <span class="token string">"run"</span>, <span class="token string">"start"</span>]</span></code></pre>
 <p>Dans notre fichier <code>package.json</code> on cherche la ligne associée à la commande &quot;start&quot; et on remplace par</p>
-<pre class="language-json " style="counter-reset: linenumber 0"><code class="language-json"><span class="token property">"start"</span><span class="token operator">:</span> <span class="token string">"nodemon serve"</span><span class="token punctuation">,</span>
-</code></pre>
+<pre class="language-json"><code class="language-json"><span class="token property">"start"</span><span class="token operator">:</span> <span class="token string">"nodemon serve"</span><span class="token punctuation">,</span></code></pre>
 <p>On supprime les dossiers <code>node_modules</code> et le fichier <code>package-lock.json</code> pour éviter les potentiels conflits et erreurs.</p>
 <p>On crée notre fichier <code>docker-compose.yml</code></p>
-<pre class="language-yml " style="counter-reset: linenumber 0"><code class="language-yml"><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">'3'</span>
+<pre class="language-yml"><code class="language-yml"><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">'3'</span>
 <span class="token key atrule">services</span><span class="token punctuation">:</span>
   <span class="token key atrule">nodejs-server</span><span class="token punctuation">:</span>
     <span class="token key atrule">build</span><span class="token punctuation">:</span>
@@ -261,12 +253,10 @@ Dans notre dossier <code>/front</code> on crée un fichier <code>Dockerfile</cod
     <span class="token key atrule">container_name</span><span class="token punctuation">:</span> angular<span class="token punctuation">-</span>ui
     <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
       <span class="token punctuation">-</span> ./front<span class="token punctuation">:</span>/usr/src/app/front
-      <span class="token punctuation">-</span> /usr/src/app/app<span class="token punctuation">-</span>ui/node_modules
-</code></pre>
+      <span class="token punctuation">-</span> /usr/src/app/app<span class="token punctuation">-</span>ui/node_modules</code></pre>
 <p>Et il suffit dans le terminal les commandes suivantes pour lancer en local l'application</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">docker-compose</span> build --no-cache
-<span class="token function">docker-compose</span> up
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">docker-compose</span> build --no-cache
+<span class="token function">docker-compose</span> up</code></pre>
 <p>Attention à bien changer les ports et les appels à l'API dans le code de l'application !</p>
 
 

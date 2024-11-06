@@ -209,16 +209,15 @@
 <p>Nous allons désormais voir pas à pas comment créer un tel projet.</p>
 <h3>Initialisation du projet Express</h3>
 <p>Nous allons donc initialiser un projet <strong>npm</strong> puis installer quelques librairies dont <code>express</code>.</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">mkdir</span> graphql-express
+<pre class="language-bash"><code class="language-bash"><span class="token function">mkdir</span> graphql-express
 <span class="token builtin class-name">cd</span> graphql-express
 <span class="token function">npm</span> init <span class="token parameter variable">-y</span>
-<span class="token function">npm</span> i express dotenv dotenv-expand nodemon
-</code></pre>
+<span class="token function">npm</span> i express dotenv dotenv-expand nodemon</code></pre>
 <p>Nous allons ensuite créer le fichier <code>.env</code> qui contiendra toutes les variables d'environnement du projet. Nous le compléterons au fur et à mesure. Pour l'instant, écrivez-y :</p>
 <pre><code>NODE_PORT=3000
 </code></pre>
 <p>Créons ensuite le fichier <code>index.js</code>qui contiendra la configuration express.</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'dotenv'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">config</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'dotenv'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">config</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
 <span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span>
 
@@ -231,23 +230,21 @@ app<span class="token punctuation">.</span><span class="token function">get</spa
 
 app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span>port<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">The app is running on port </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>port<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
 <p>Allons désormais dans le fichier <code>package.json</code> pour y écrire la commande de lancement du projet :</p>
-<pre class="language-json " style="counter-reset: linenumber 0"><code class="language-json"><span class="token punctuation">{</span>
+<pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
   ...
   <span class="token property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token property">"start"</span><span class="token operator">:</span> <span class="token string">"node index.js"</span><span class="token punctuation">,</span>
     <span class="token property">"dev"</span><span class="token operator">:</span> <span class="token string">"nodemon index.js"</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
   ...
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p><em>Ici, la commande <code>npm run dev</code>sert uniquement à recharger automatiquement le serveur lorsqu'il y a une modification, c'est pour cela qu'on ne l'utilise qu'en dev.</em>
 Lançons <code>npm run dev</code>, aller sur <a href="localhost:3000">localhost:3000</a> et vous devriez voir un magnifique Hello World !</p>
 <h3>Mise en place de PostgreSQL via docker compose</h3>
 <p>Afin d'éviter d'avoir à installer une instance de PostgreSQL sur la machine, on va utiliser la version plus rapide avec docker compose. Si jamais vous ne connaissez pas docker, vous pouvez consulter le <a href="/do-it/do-it/mon/TBi/MON/Docker">magnifique MON de Tunçay sur Docker</a>. Voilà le fichier <code>docker-compose.yml</code> qu'il faut créer à la racine.</p>
-<pre class="language-yml " style="counter-reset: linenumber 0"><code class="language-yml"><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">'3.8'</span>
+<pre class="language-yml"><code class="language-yml"><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">'3.8'</span>
 
 <span class="token key atrule">services</span><span class="token punctuation">:</span>
   <span class="token key atrule">db</span><span class="token punctuation">:</span>
@@ -263,8 +260,7 @@ Lançons <code>npm run dev</code>, aller sur <a href="localhost:3000">localhost:
       <span class="token punctuation">-</span> db_data<span class="token punctuation">:</span>/var/lib/postgresql/data
 
 <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
-  <span class="token key atrule">db_data</span><span class="token punctuation">:</span>
-</code></pre>
+  <span class="token key atrule">db_data</span><span class="token punctuation">:</span></code></pre>
 <p>On voit que le service <code>db</code>a besoin de variables d'environnement (POSTGRES_DB, POSTGRES_USER, POSTGRES_PASSWORD ainsi que le port). Au lieu d'écrire directement les valeurs de ces variables dans le fichier, nous allons les écrire dans le <code>.env</code>.</p>
 <pre><code># Database connection
 PG_PORT=5432
@@ -277,19 +273,17 @@ DATABASE_URL=postgresql://${PG_USER}:${PG_PASSWORD}@localhost:${PG_PORT}/${PG_DB
 <p>Afin de lancer le service PostgreSQL, il suffit juste de lancer la commande <code>docker compose up -d</code> en ayant au préalable lancer Docker.</p>
 <h3>Mise en place du schéma de base de données et manipulations Prisma</h3>
 <p>Pour communiquer avec la base de données j'ai choisi un ORM que je ne connaissais pas <a href="https://www.prisma.io/">Prisma</a>. Nous allons donc installer la CLI de Prisma en dev ainsi que le client Prisma.</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">npm</span> i <span class="token parameter variable">-D</span> prisma 
-<span class="token function">npm</span> i @prisma/client
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">npm</span> i <span class="token parameter variable">-D</span> prisma 
+<span class="token function">npm</span> i @prisma/client</code></pre>
 <p>Nous allons désormais initialiser Prisma avec <code>npx prisma init</code>. Cela crée un dossier <code>prisma</code> avec un fichier <code>schema.prisma</code> que nous allons modifier.</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">generator client <span class="token punctuation">{</span>
+<pre class="language-javascript"><code class="language-javascript">generator client <span class="token punctuation">{</span>
   provider <span class="token operator">=</span> <span class="token string">"prisma-client-js"</span>
 <span class="token punctuation">}</span>
 
 datasource db <span class="token punctuation">{</span>
   provider <span class="token operator">=</span> <span class="token string">"postgresql"</span>
   url      <span class="token operator">=</span> <span class="token function">env</span><span class="token punctuation">(</span><span class="token string">"DATABASE_URL"</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Nous allons ensuite spécifier notre schéma de base de données dans le fichier <code>schema.prisma</code>.</p>
 <pre><code>model Post {
   id        Int      @id @default(autoincrement())
@@ -348,19 +342,17 @@ model User {
 <h3>Création de fausses données</h3>
 <p>Nous allons désormais créer un fichier de fausses données à charger dans la base de données. Ce fichier s'appelle <code>prisma/seed.js</code>.
 Afin de pouvoir charger ces fausses données nous devons modifier le <code>package.json</code>.</p>
-<pre class="language-json " style="counter-reset: linenumber 0"><code class="language-json"><span class="token punctuation">{</span>
+<pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
   ...
   <span class="token property">"prisma"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token property">"seed"</span><span class="token operator">:</span> <span class="token string">"node prisma/seed.js"</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <h3>Installation de GraphQL et paramétrisation</h3>
 <p>Comme nous l'avons au début de ce MON, GraphQL est un langage de requête API. Pour fonctionner, nos serveur express a besoin d'un serveur GraphQL afin d'interpréter les requêtes et les transformer en requête Prisma qui les transformera ensuite en requête SQL. Nous allons utiliser <code>express-graphql</code>.</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">npm</span> i express-graphql graphql
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">npm</span> i express-graphql graphql</code></pre>
 <p>GraphQL fonctionne avec des types, des queries et des mutations. Ici nous allons montrer en exemple la class User. On commence pas créer un type User qui va définir les types de données que nous allons renvoyer au client.</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> UserType <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">GraphQLObjectType</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> UserType <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">GraphQLObjectType</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
     <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"User"</span><span class="token punctuation">,</span>
     <span class="token function-variable function">fields</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
         <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token literal-property property">type</span><span class="token operator">:</span> GraphQLInt<span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -370,10 +362,9 @@ Afin de pouvoir charger ces fausses données nous devons modifier le <code>packa
         <span class="token literal-property property">posts</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token function">GraphQLList</span><span class="token punctuation">(</span>PostType<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
         <span class="token literal-property property">profile</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token literal-property property">type</span><span class="token operator">:</span> ProfileType<span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
 <p>On peut ensuite définir une query associée qui permet de récupérer la liste de tous les users.</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> RootQuery <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">GraphQLObjectType</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> RootQuery <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">GraphQLObjectType</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
     <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"RootQueryType"</span><span class="token punctuation">,</span>
     <span class="token literal-property property">fields</span><span class="token operator">:</span> <span class="token punctuation">{</span>
         <span class="token literal-property property">getAllUsers</span><span class="token operator">:</span> <span class="token punctuation">{</span>
@@ -383,10 +374,9 @@ Afin de pouvoir charger ces fausses données nous devons modifier le <code>packa
             <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
 <p>On met en place ensuite la mutation pour créer un user.</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> Mutation <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">GraphQLObjectType</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> Mutation <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">GraphQLObjectType</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
     <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Mutation"</span><span class="token punctuation">,</span>
     <span class="token literal-property property">fields</span><span class="token operator">:</span> <span class="token punctuation">{</span>
         <span class="token literal-property property">createUser</span><span class="token operator">:</span> <span class="token punctuation">{</span>
@@ -406,16 +396,14 @@ Afin de pouvoir charger ces fausses données nous devons modifier le <code>packa
             <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
 <p>On crée ensuite le schéma GraphQL qui va nous permette de gérer les requêtes et la route Express associée.</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> schema <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">GraphQLSchema</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token literal-property property">query</span><span class="token operator">:</span> RootQuery<span class="token punctuation">,</span> <span class="token literal-property property">mutation</span><span class="token operator">:</span> Mutation<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> schema <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">GraphQLSchema</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token literal-property property">query</span><span class="token operator">:</span> RootQuery<span class="token punctuation">,</span> <span class="token literal-property property">mutation</span><span class="token operator">:</span> Mutation<span class="token punctuation">}</span><span class="token punctuation">)</span>
 
 app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token string">'/api'</span><span class="token punctuation">,</span> <span class="token function">graphqlHTTP</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
     schema<span class="token punctuation">,</span>
     <span class="token literal-property property">graphiql</span><span class="token operator">:</span> <span class="token boolean">true</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
@@ -424,17 +412,16 @@ app<span class="token punctuation">.</span><span class="token function">use</spa
 <p>L'option <code>graphiql: true</code>nous permet d'avoir un GUI sur la route <em>&quot;/api&quot;</em> et ainsi pour voir faire les requêtes plus simplement pour la période de test.</p>
 </div></div>
 <p>Testons désormais notre api !</p>
-<pre class="language-graphql " style="counter-reset: linenumber 0"><code class="language-graphql"><span class="token comment"># je demande la liste de tous les users et pour chaque user je veux son mail son nom et son prénom</span>
+<pre class="language-graphql"><code class="language-graphql"><span class="token comment"># je demande la liste de tous les users et pour chaque user je veux son mail son nom et son prénom</span>
 <span class="token keyword">query</span> <span class="token punctuation">{</span>
     <span class="token object">getAllUsers</span> <span class="token punctuation">{</span>
         <span class="token property">email</span>
         <span class="token property">first_name</span>
         <span class="token property">last_name</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Le serveur répond alors :</p>
-<pre class="language-json " style="counter-reset: linenumber 0"><code class="language-json"><span class="token punctuation">{</span>
+<pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
   <span class="token property">"data"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token property">"getAllUsers"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
       <span class="token punctuation">{</span>
@@ -449,19 +436,17 @@ app<span class="token punctuation">.</span><span class="token function">use</spa
       <span class="token punctuation">}</span>
     <span class="token punctuation">]</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>On teste maintenant la mutation !</p>
-<pre class="language-graphql " style="counter-reset: linenumber 0"><code class="language-graphql"><span class="token keyword">mutation</span> <span class="token punctuation">{</span>
+<pre class="language-graphql"><code class="language-graphql"><span class="token keyword">mutation</span> <span class="token punctuation">{</span>
   <span class="token property-query property-mutation">createUser</span><span class="token punctuation">(</span><span class="token attr-name">email</span><span class="token punctuation">:</span> <span class="token string">"mrbean@email.com"</span><span class="token punctuation">,</span> <span class="token attr-name">first_name</span><span class="token punctuation">:</span><span class="token string">"Harry"</span><span class="token punctuation">,</span> <span class="token attr-name">last_name</span><span class="token punctuation">:</span><span class="token string">"Cover"</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
     <span class="token property">email</span>
     <span class="token property">first_name</span>
     <span class="token property">last_name</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Le serveur répond alors :</p>
-<pre class="language-json " style="counter-reset: linenumber 0"><code class="language-json"><span class="token punctuation">{</span>
+<pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
   <span class="token property">"data"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token property">"createUser"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
       <span class="token property">"email"</span><span class="token operator">:</span> <span class="token string">"mrbean@email.com"</span><span class="token punctuation">,</span>
@@ -469,8 +454,7 @@ app<span class="token punctuation">.</span><span class="token function">use</spa
       <span class="token property">"last_name"</span><span class="token operator">:</span> <span class="token string">"Cover"</span>
     <span class="token punctuation">}</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>On peut ainsi continuer et créer d'autres requêtes....</p>
 <h2>Conclusion</h2>
 <p>Pour conclure, GraphQL est un langage de requête API qui est assez novateur. Toutes les requêtes client sont des requêtes POST et se font sur un seul endpoint. Je pensais qu'il suffisait d'exposer ses données sur une route et que le client pouvait ensuite demander n'importe quoi sous le format qu'il veut mais en fait le développeur doit quand même tout définir à la main comme à la manière d'une API REST. Ainsi, GraphQL est censé apporter de la flexibilité aux développeurs mais le travail reste tout aussi fastidieux qu'une API REST, voire plus...</p>

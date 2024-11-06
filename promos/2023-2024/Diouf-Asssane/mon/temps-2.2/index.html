@@ -144,55 +144,52 @@
 <p>Le dossier Pages contient toutes les pages et définis aussi les différents url accessibles depuis notre site; par exemple si vous avez un fichiers Pages/About.cshtml, alors cette page s'affiche lorsque le client va sur l'url /about. Il est rempli de fichiers .cshtml qui permettent de faire de templates html avec C# et d'utiliser Razor. C'est fichiers sont en fait comme des dossiers comme le montre l'image ci-dessous.
 <img src="penduExempleRazorPage.png" alt="Exemple Razor Page"></p>
 <p>Le fichier cshtml contient du code qui ressemble à ça:</p>
-<pre class="language-c line-numbers" style="counter-reset: linenumber 0"><code class="language-c"><span class="token comment">// Pages/Index.cshtml</span>
+<pre class="language-c#"><code class="language-c#">// Pages/Index.cshtml
 @page
 @model IndexModel
-@<span class="token punctuation">{</span>
-    ViewData<span class="token punctuation">[</span><span class="token string">"Title"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"Le pendu de DO It"</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+@{
+    ViewData["Title"] = "Le pendu de DO It";
+}
 
-<span class="token operator">&lt;</span>div class<span class="token operator">=</span><span class="token string">"text-center"</span><span class="token operator">></span>
-    <span class="token operator">&lt;</span>h1 class<span class="token operator">=</span><span class="token string">"display-4 custom-font"</span><span class="token operator">></span>Le Pendu<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<div class="text-center">
+    <h1 class="display-4 custom-font">Le Pendu</h1>
+</div>
 
-<span class="token operator">&lt;</span>p<span class="token operator">></span>
-    Bienvenue sur ce jeu développé dans le cadre d'un MON<span class="token punctuation">.</span>
-    Il s<span class="token char">'agit d'</span>un pendu utilisant une liste de mots en rapport avec la gestion de projet<span class="token punctuation">,</span>
-    le management et le développement<span class="token punctuation">.</span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
-<span class="token operator">&lt;</span>a asp<span class="token operator">-</span>page<span class="token operator">=</span><span class="token string">"Jeu"</span> class<span class="token operator">=</span><span class="token string">"btn btn-primary"</span><span class="token operator">></span>Jouer au pendu du jour<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>
+    Bienvenue sur ce jeu développé dans le cadre d'un MON.
+    Il s'agit d'un pendu utilisant une liste de mots en rapport avec la gestion de projet,
+    le management et le développement.
+</p>
+<a asp-page="Jeu" class="btn btn-primary">Jouer au pendu du jour</a></code></pre>
 <p><em>Si vous trouvez que ce n'est pas suffisant pour faire une page web, vous avez raison. Au fait, la balise html, les éléments du head, le footer et la navbar sont dans un fichiers de Layouts sur lequel toutes nos pages se basent.</em></p>
 <p>Tandis que le fichier .cshtml.cs contient une classe qui définit les données accessibles par cette page, ainsi que les différentes méthodes que l'on peut appeler :</p>
-<pre class="language-c line-numbers" style="counter-reset: linenumber 0"><code class="language-c"><span class="token comment">// Pages/Index.cshtml/Index.cshtml.cs</span>
-using Microsoft<span class="token punctuation">.</span>AspNetCore<span class="token punctuation">.</span>Mvc<span class="token punctuation">.</span>RazorPages<span class="token punctuation">;</span>
+<pre class="language-c#"><code class="language-c#">// Pages/Index.cshtml/Index.cshtml.cs
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Pendu<span class="token punctuation">.</span>Pages
-<span class="token punctuation">{</span>
-    public class IndexModel <span class="token operator">:</span> PageModel
-    <span class="token punctuation">{</span>
-        private readonly ILogger<span class="token operator">&lt;</span>IndexModel<span class="token operator">></span> _logger<span class="token punctuation">;</span>
+namespace Pendu.Pages
+{
+    public class IndexModel : PageModel
+    {
+        private readonly ILogger<IndexModel> _logger;
 
-        public <span class="token function">IndexModel</span><span class="token punctuation">(</span>ILogger<span class="token operator">&lt;</span>IndexModel<span class="token operator">></span> logger<span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            _logger <span class="token operator">=</span> logger<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
+        public IndexModel(ILogger<IndexModel> logger)
+        {
+            _logger = logger;
+        }
 
-        public <span class="token keyword">void</span> <span class="token function">OnGet</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
+        public void OnGet()
+        {
 
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+        }
+    }
+}</IndexModel></IndexModel></code></pre>
 <p>Le fichier le plus important est sans doute le Program.cs. C'est dans ce fichier que notre programme se lance et qu'il est configuré. C'est dans ce fichier qu'on va ajouter nos services, configurer notre base de données, activer l'architecture MVC et ainsi de suite.</p>
 <h2>Comment faire un site pour jouer au pendu ?</h2>
 <p>Entrons dans le vif du sujet. Dans mon premier MON du temps, j'ai développé un pendu version texte en C#; J'ai essayé de faire le développement en ayant bien en tête que je voulais qu'un maximum de code soit réutilisable. Mais pour faire celà, j'ai d'abord dû comprendre comment ajouter des services.</p>
 <h3>Ajouter mes services</h3>
 <p>Tout d'abord, un service c'est du code que l'on souhaite pouvoir utiliser à plusieurs endroit de notre application et qui est chargé d'effectuer une seule chose. Par exemple, les WordProvider de mon MON précédents pourraient y correspondre. L'intérêt d'avoir des services dans ce genre de projets, c'est qu'on peut profiter de l'injection de dépendances et de l'inversion de controle. Pour se faire, il suffit d'ajouter la classe en question et d'ajouter une ligne dans le Program.cs qui indique à <a href="http://ASP.NET">ASP.NET</a> qu'on veut ajouter ce service. Dans mon cas, j'ai d'abord ajoutés mes différents WordProviders dans un dossiers Service de mon projet. Ensuite, j'ai ajouté la ligne suivante dans mon Program.cs :</p>
-<pre class="language-c line-numbers" style="counter-reset: linenumber 0"><code class="language-c"><span class="token comment">// Program.cs</span>
-builder<span class="token punctuation">.</span>Services<span class="token punctuation">.</span>AddTransient<span class="token operator">&lt;</span>IWordProvider<span class="token punctuation">,</span> WordFromFileProvider<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="language-c#"><code class="language-c#">// Program.cs
+builder.Services.AddTransient<IWordProvider, WordFromFileProvider="">();</IWordProvider,></code></pre>
 <p><em>Ce que je dis à <a href="http://ASP.NET">ASP.NET</a> c'est d'instancier un WordFromFileProvider et de le fournir aux classes de mon projet qui ont besoin d'un IWordProvider</em></p>
 <h3>Intégrer le jeu du pendu à l'application</h3>
 <p>Ensuite il a fallu créer une page Jeu.cshtml dans laquelle j'ai pu appeler l'objet jeu de mon Mon précédent. Dans une Razor Page, on peut intéragir avec tous les éléments publics de notre classe dans le fichier .cshtml.cs. On peut aussi intégrer du code en C# en le préfixant d'un @.</p>

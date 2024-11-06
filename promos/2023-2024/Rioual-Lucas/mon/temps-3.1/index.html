@@ -155,7 +155,7 @@ Pour cela, je vais suivre le livre sur symfony 6 : <a href="https://symfony.com/
 <p>Ensuite, il faut ajouter le contenu zip dans sa variable d’environnement PATH. Voilà comment faire : <a href="https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/">https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/</a></p>
 <p>Ensuite, dans le dossier PHP, il faut dupliquer le fichier php.ini-development et renommer le nouveau fichier php.ini. C’est ce fichier qui indiquera les extensions nécessaires au projet. Pour ajouter une dépendance, il faut décommenter la ligne associée.
 Voici les extension à décommenter :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token assign-left variable">extension</span><span class="token operator">=</span>curl
+<pre class="language-bash"><code class="language-bash"><span class="token assign-left variable">extension</span><span class="token operator">=</span>curl
 <span class="token assign-left variable">extension</span><span class="token operator">=</span>gd
 <span class="token assign-left variable">extension</span><span class="token operator">=</span>intl
 <span class="token assign-left variable">extension</span><span class="token operator">=</span>mbstring
@@ -167,17 +167,14 @@ Voici les extension à décommenter :</p>
 
 <span class="token assign-left variable">extension</span><span class="token operator">=</span>sodium
 <span class="token assign-left variable">extension</span><span class="token operator">=</span>xsl
-<span class="token assign-left variable">extension</span><span class="token operator">=</span>zip
-</code></pre>
+<span class="token assign-left variable">extension</span><span class="token operator">=</span>zip</code></pre>
 <p>On peut vérifier l’installation de php avec la commande</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">php <span class="token parameter variable">--version</span>
-</code></pre>
+<pre class="language-bash"><code class="language-bash">php <span class="token parameter variable">--version</span></code></pre>
 <h3><strong>Composer</strong></h3>
 <p><a href="https://getcomposer.org/">Composer</a> permet de gérer les dépendances du projet. Pour l’installer, il faut télecharger le Composer-setup.exe depuis ce site <a href="https://getcomposer.org/download/">https://getcomposer.org/download/</a></p>
 <p>Normalement, cela ajoute directement Composer à la variable PATH.
 On peut vérifier que l’installation s’est bien passée :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">composer</span> <span class="token parameter variable">--version</span>
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">composer</span> <span class="token parameter variable">--version</span></code></pre>
 <h3>Node.js/Docker/Docker Compose</h3>
 <p>Je n’ai pas eu de souci car ils étaient déjà installé sur ma machine. Il faut suivre les sites officiels :</p>
 <p><a href="https://nodejs.org/">NodeJS</a> et <a href="https://docs.docker.com/install/">Docker</a></p>
@@ -189,7 +186,7 @@ On peut vérifier que l’installation s’est bien passée :</p>
 <p>Maintenant dernière étape pour savoir si on a tout bien installé :
 <code>symfony book:check-requirements</code></p>
 <p>Si on a tout fait correctement, on doit avoir cette réponse :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">C:<span class="token punctuation">\</span>Users<span class="token punctuation">\</span>utilisateur<span class="token operator">></span>symfony book:check-requirements
+<pre class="language-bash"><code class="language-bash">C:<span class="token punctuation">\</span>Users<span class="token punctuation">\</span>utilisateur<span class="token operator">></span>symfony book:check-requirements
 <span class="token punctuation">[</span>OK<span class="token punctuation">]</span> Git installed
 <span class="token punctuation">[</span>OK<span class="token punctuation">]</span> PHP installed version <span class="token number">8.3</span>.3 <span class="token punctuation">(</span>C:<span class="token punctuation">\</span>PHP<span class="token punctuation">\</span>php.exe<span class="token punctuation">)</span>
 <span class="token punctuation">[</span>OK<span class="token punctuation">]</span> PHP extension <span class="token string">"tokenizer"</span> installed - required
@@ -216,7 +213,6 @@ On peut vérifier que l’installation s’est bien passée :</p>
                                                                                                                         
  <span class="token punctuation">[</span>OK<span class="token punctuation">]</span> Congrats<span class="token operator">!</span> You are ready to start reading the book.                                                                
                                                                                                                         
-
 </code></pre>
 <h2>Mon retour sur le livre</h2>
 <p>Je ne vais pas détaillé les autres chapitres du livre car je ne vais pas mieux expliquer que l’auteur, qui est le créateur de Symfony.  J’ai eu le temps de faire les 14 premiers chapitres du livre.</p>

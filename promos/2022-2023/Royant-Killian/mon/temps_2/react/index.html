@@ -230,8 +230,7 @@
 <p>Si vous ne souhaitez pas suivre la formation, voici <strong>quelques pistes pour vous aider à commencer</strong> à développer en React.</p>
 <h3>Créer un projet React avec Create React App</h3>
 <p>Pour créer un projet React, vous pouvez utiliser <a href="https://create-react-app.dev/">Create React App</a>. C'est un outil qui permet de créer un projet React en quelques secondes. Pour l'utiliser, vous devez installer Node.js et npm, puis lancer la commande suivante :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">npx create-react-app nom-du-projet
-</code></pre>
+<pre class="language-bash"><code class="language-bash">npx create-react-app nom-du-projet</code></pre>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
@@ -243,12 +242,11 @@
 </div></div>
 <h3>Lancer un projet React</h3>
 <p>Pour lancer un projet React, vous devez vous rendre dans le dossier du projet et lancer la commande suivante :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">yarn</span> start
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">yarn</span> start</code></pre>
 <h3>Créer un composant React</h3>
 <p>Un composant React est un élément de l'interface qui peut être réutilisé. On peut par exemple créer un composant <code>Header</code> qui contient le titre et le logo de notre site, et l'utiliser sur toutes les pages de notre site.</p>
 <p>Pour créer un composant React, vous devez créer un fichier <code>.js</code> ou <code>.jsx</code> dans le dossier <code>src/components</code> et y écrire le code suivant :</p>
-<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">NomDuComposant</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> <span class="token punctuation">(</span>
@@ -259,8 +257,7 @@
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> NomDuComposant<span class="token punctuation">;</span>
-</code></pre>
+<span class="token keyword">export</span> <span class="token keyword">default</span> NomDuComposant<span class="token punctuation">;</span></code></pre>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
@@ -285,7 +282,7 @@
 </div></div>
 <h3>Utiliser un composant React</h3>
 <p>Pour utiliser un composant React, vous devez l'importer dans le fichier où vous souhaitez l'utiliser et l'insérer dans le code JSX du fichier. Par exemple, si vous souhaitez utiliser le composant <code>NomDuComposant</code> dans le fichier <code>App.js</code>, vous devez écrire le code suivant:</p>
-<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">import</span> NomDuComposant <span class="token keyword">from</span> <span class="token string">'./NomDuComposant'</span><span class="token punctuation">;</span>
 
@@ -299,8 +296,7 @@
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
-</code></pre>
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span></code></pre>
 <p>Vous pourrez ensuite lancer l'application avec la commande <code>yarn start</code> et voir le composant s'afficher.</p>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -314,7 +310,7 @@
 <h3>Utiliser le state</h3>
 <p>Le state est un objet qui contient des données. Il est utilisé pour stocker des données et les mettre à jour. Le state est préférable à la variable car il permet de mettre à jour le composant à chaque fois que le state est modifié.</p>
 <p>Pour utiliser le state, vous devez importer <code>useState</code> depuis la bibliothèque <code>react</code> et utiliser la fonction <code>useState</code> dans votre composant :</p>
-<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> <span class="token punctuation">[</span>state<span class="token punctuation">,</span> setState<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">'valeur initiale'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -328,12 +324,11 @@
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
-</code></pre>
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span></code></pre>
 <h3>Utiliser les effets</h3>
 <p>Les effets sont des fonctions qui sont exécutées à chaque fois que le composant est mis à jour. Elles sont utiles pour récupérer des données, mettre à jour le DOM, etc.</p>
 <p>Pour utiliser les effets, vous devez importer <code>useEffect</code> depuis la bibliothèque <code>react</code> et utiliser la fonction <code>useEffect</code> dans votre composant :</p>
-<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useEffect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useEffect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
@@ -348,12 +343,11 @@
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
-</code></pre>
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span></code></pre>
 <h3>Utiliser les props</h3>
 <p>Les props sont des données que vous pouvez passer à un composant React. Elles sont utiles pour réutiliser un composant avec des données différentes.</p>
 <p>Pour utiliser les props, vous devez passer des données à votre composant :</p>
-<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">import</span> NomDuComposant <span class="token keyword">from</span> <span class="token string">'./NomDuComposant'</span><span class="token punctuation">;</span>
 
@@ -367,10 +361,9 @@
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
-</code></pre>
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span></code></pre>
 <p>Et vous devez récupérer ces données dans votre composant :</p>
-<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">NomDuComposant</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> <span class="token punctuation">(</span>
@@ -382,13 +375,11 @@
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> NomDuComposant<span class="token punctuation">;</span>
-</code></pre>
+<span class="token keyword">export</span> <span class="token keyword">default</span> NomDuComposant<span class="token punctuation">;</span></code></pre>
 <h3>Compiler un projet React</h3>
 <p>Afin de pouvoir déployer votre projet React, vous devez le compiler.</p>
 <p>Pour compiler un projet React, vous devez vous rendre dans le dossier du projet et lancer la commande suivante :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">yarn</span> build
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">yarn</span> build</code></pre>
 <p>Vous pouvez ensuite déployer le dossier <code>build</code> sur votre serveur.</p>
 <p><a href="../">&lt;-- Retour</a></p>
 

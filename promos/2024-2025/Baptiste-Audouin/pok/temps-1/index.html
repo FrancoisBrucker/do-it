@@ -238,64 +238,57 @@ Ce code est coposé d'une macro principale <code>new_drive</code> qui utilise é
 </ul>
 </li>
 </ul>
-<pre class="language-vba " style="counter-reset: linenumber 0"><code class="language-vba"><span class="token keyword">Dim</span> ligne <span class="token keyword">As</span> <span class="token keyword">Long</span>
+<pre class="language-vba"><code class="language-vba"><span class="token keyword">Dim</span> ligne <span class="token keyword">As</span> <span class="token keyword">Long</span>
 <span class="token keyword">Dim</span> feuille <span class="token keyword">As</span> Worksheet
 <span class="token keyword">Dim</span> r_min <span class="token keyword">As</span> <span class="token keyword">Long</span>
-<span class="token keyword">Set</span> feuille <span class="token operator">=</span> Sheets<span class="token punctuation">(</span><span class="token string">"Récap"</span><span class="token punctuation">)</span>
-</code></pre>
+<span class="token keyword">Set</span> feuille <span class="token operator">=</span> Sheets<span class="token punctuation">(</span><span class="token string">"Récap"</span><span class="token punctuation">)</span></code></pre>
 <ul>
 <li><strong>Insertion d'une nouvelle ligne en bas de tableau'</strong> :<br>
 Le programme parcourt le tableau de la feuille <code>Récap</code> en cherchant le dernière ligne non-vide avant d'en ajouter une en dessous.</li>
 </ul>
-<pre class="language-vba " style="counter-reset: linenumber 0"><code class="language-vba"><span class="token keyword">For</span> ligne <span class="token operator">=</span> <span class="token number">3</span> <span class="token keyword">To</span> feuille<span class="token punctuation">.</span>Rows<span class="token punctuation">.</span>Count
+<pre class="language-vba"><code class="language-vba"><span class="token keyword">For</span> ligne <span class="token operator">=</span> <span class="token number">3</span> <span class="token keyword">To</span> feuille<span class="token punctuation">.</span>Rows<span class="token punctuation">.</span>Count
     <span class="token keyword">If</span> IsEmpty<span class="token punctuation">(</span>feuille<span class="token punctuation">.</span>Cells<span class="token punctuation">(</span>ligne<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value<span class="token punctuation">)</span> <span class="token keyword">Then</span>
         r_min <span class="token operator">=</span> ligne
         <span class="token keyword">Exit</span> <span class="token keyword">For</span>
     <span class="token keyword">End</span> <span class="token keyword">If</span>
 <span class="token keyword">Next</span> ligne
-feuille<span class="token punctuation">.</span>Rows<span class="token punctuation">(</span>r_min<span class="token punctuation">)</span><span class="token punctuation">.</span>Insert Shift<span class="token punctuation">:</span><span class="token operator">=</span>xlDown<span class="token punctuation">,</span> CopyOrigin<span class="token punctuation">:</span><span class="token operator">=</span>xlFormatFromLeftOrAbove
-</code></pre>
+feuille<span class="token punctuation">.</span>Rows<span class="token punctuation">(</span>r_min<span class="token punctuation">)</span><span class="token punctuation">.</span>Insert Shift<span class="token punctuation">:</span><span class="token operator">=</span>xlDown<span class="token punctuation">,</span> CopyOrigin<span class="token punctuation">:</span><span class="token operator">=</span>xlFormatFromLeftOrAbove</code></pre>
 <h4><code>Sub new_drive()</code></h4>
 <p>Une fois la macro <code>add_empty_row</code> créée, on peut code la macro générale <code>new_drive</code>.</p>
 <ul>
 <li><strong>Définition des feuilles</strong> :<br>
 Les objets <code>sourceFeuille</code> et <code>destinationFeuille</code> sont assignés aux feuilles respectives.</li>
 </ul>
-<pre class="language-vba " style="counter-reset: linenumber 0"><code class="language-vba"><span class="token keyword">Set</span> sourceFeuille <span class="token operator">=</span> Sheets<span class="token punctuation">(</span><span class="token string">"Déplacements"</span><span class="token punctuation">)</span>
-<span class="token keyword">Set</span> destinationFeuille <span class="token operator">=</span> Sheets<span class="token punctuation">(</span><span class="token string">"Récap"</span><span class="token punctuation">)</span>
-</code></pre>
+<pre class="language-vba"><code class="language-vba"><span class="token keyword">Set</span> sourceFeuille <span class="token operator">=</span> Sheets<span class="token punctuation">(</span><span class="token string">"Déplacements"</span><span class="token punctuation">)</span>
+<span class="token keyword">Set</span> destinationFeuille <span class="token operator">=</span> Sheets<span class="token punctuation">(</span><span class="token string">"Récap"</span><span class="token punctuation">)</span></code></pre>
 <ul>
 <li><strong>Initialisation de la variable <code>ligne</code></strong> :<br>
 Le programme commence à chercher une ligne vide à partir de la ligne 5 dans la feuille <code>Récap</code>.<br>
 La procédure <code>add_empty_row</code> est appelée pour ajouter une ligne vide.</li>
 </ul>
-<pre class="language-vba " style="counter-reset: linenumber 0"><code class="language-vba">ligne <span class="token operator">=</span> <span class="token number">4</span>
-<span class="token keyword">Call</span> add_empty_row
-</code></pre>
+<pre class="language-vba"><code class="language-vba">ligne <span class="token operator">=</span> <span class="token number">4</span>
+<span class="token keyword">Call</span> add_empty_row</code></pre>
 <ul>
 <li><strong>Boucle de recherche de la première ligne vide</strong> :<br>
 Cette boucle vérifie la colonne B à partir de la ligne 5 pour trouver la première cellule vide, puis stocke le numéro de cette ligne.</li>
 </ul>
-<pre class="language-vba " style="counter-reset: linenumber 0"><code class="language-vba"><span class="token keyword">Do</span> <span class="token keyword">While</span> destinationFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"b"</span> <span class="token operator">&amp;</span> ligne<span class="token punctuation">)</span> <span class="token operator">&lt;</span><span class="token operator">></span> <span class="token string">""</span>
+<pre class="language-vba"><code class="language-vba"><span class="token keyword">Do</span> <span class="token keyword">While</span> destinationFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"b"</span> <span class="token operator">&amp;</span> ligne<span class="token punctuation">)</span> <span class="token operator">&lt;</span><span class="token operator">></span> <span class="token string">""</span>
     ligne <span class="token operator">=</span> ligne <span class="token operator">+</span> <span class="token number">1</span>
-<span class="token keyword">Loop</span>
-</code></pre>
+<span class="token keyword">Loop</span></code></pre>
 <ul>
 <li><strong>Copie des valeurs</strong> :<br>
 Le programme copie les valeurs des cellules D6, D8, D10, etc. de la feuille <code>Déplacements</code> vers les colonnes B, C, D, etc. de la feuille <code>Récap</code>, à la ligne trouvée.</li>
 </ul>
-<pre class="language-vba " style="counter-reset: linenumber 0"><code class="language-vba">destinationFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"b"</span> <span class="token operator">&amp;</span> ligne<span class="token punctuation">)</span> <span class="token operator">=</span> sourceFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"D6"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value
+<pre class="language-vba"><code class="language-vba">destinationFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"b"</span> <span class="token operator">&amp;</span> ligne<span class="token punctuation">)</span> <span class="token operator">=</span> sourceFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"D6"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value
 destinationFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"c"</span> <span class="token operator">&amp;</span> ligne<span class="token punctuation">)</span> <span class="token operator">=</span> sourceFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"D8"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value
-<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-</code></pre>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span></code></pre>
 <ul>
 <li><strong>Nettoyage des données sources</strong> :<br>
 Après avoir copié les données, le contenu des cellules D6, D8, D10, etc. de la feuille <code>Déplacements</code> est effacé pour les préparer à de nouvelles entrées.</li>
 </ul>
-<pre class="language-vba " style="counter-reset: linenumber 0"><code class="language-vba">sourceFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"D6"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>ClearContents
+<pre class="language-vba"><code class="language-vba">sourceFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"D6"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>ClearContents
 sourceFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"D8"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>ClearContents
-<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-</code></pre>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span></code></pre>
 <p>Ainsi, cette macro permet d'envoyer les informations du formulaire dans le tableau récapitulatif.</p>
 <h3>4. Améliorations pour le second sprint</h3>
 <p>Comme prévue lors de la définition des tâches de mon POK j'avais prévu un temps de relecture et de réflexion pour les futures améliorations envisagées dans le second sprint :</p>
@@ -354,7 +347,7 @@ sourceFeuille<span class="token punctuation">.</span>Range<span class="token pun
 <p>Comme évoqué précédemment, cette partie m'a pris beaucoup plus de temps que prévu mais, en utilisant un autre ordinateur j'ai pu la réaliser.
 Après quelques recherches j'ai choisi l'API <a href="https://openrouteservice.org">Open Route Service</a> qui permet de faire des requêtes de navigation et donc de donner la distance en km d'un itinéraire entre deux villes et non de la distance à vol d'oiseau comme calculée jusque là.
 Voici le code correspondant à cette requête où la fonction <code>GetDirections</code>prend en argument une ligne et renvoie la distance entre les deux villes entrées dans les cellules de cette ligne. Cette fonction sera appelée dans notre fonction <code>new_drive</code> et appliquée à la ligne qui vient d'être ajoutée dans le tableau de la feuille <code>Recap</code> afin d'afficher la distance du trajet.</p>
-<pre class="language-vba " style="counter-reset: linenumber 0"><code class="language-vba"><span class="token keyword">Sub</span> GetDirections<span class="token punctuation">(</span>ligne <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">)</span>
+<pre class="language-vba"><code class="language-vba"><span class="token keyword">Sub</span> GetDirections<span class="token punctuation">(</span>ligne <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">)</span>
     <span class="token comment">'Definition des coordonnees</span>
     <span class="token keyword">Dim</span> startcoord <span class="token keyword">As</span> <span class="token keyword">String</span>
     <span class="token keyword">Dim</span> endcoord <span class="token keyword">As</span> <span class="token keyword">String</span>
@@ -376,12 +369,11 @@ Voici le code correspondant à cette requête où la fonction <code>GetDirection
     responseContent <span class="token operator">=</span> request<span class="token punctuation">.</span>responseText
     
     ThisWorkbook<span class="token punctuation">.</span>Sheets<span class="token punctuation">(</span><span class="token string">"Parametres"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"F6"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token operator">=</span> responseContent
-<span class="token keyword">End</span> <span class="token keyword">Sub</span>
-</code></pre>
+<span class="token keyword">End</span> <span class="token keyword">Sub</span></code></pre>
 <h3>2. Intégrer l'envoie automatique de mail</h3>
 <p>D'après mes recherches lors de la fin du sprint 1, il est possible d'automatiser l'envoie de mail avec des macros en utilisant l'application <strong>Outlook</strong> de <strong>Microsoft</strong>. Cependant, la configuration d'Outlook ainsi que l'élaboration du code m'ont pris beaucoup plus de temps que ce que j'avais envisagé.
 Le code suivant permet d'envoyer par mail le tableau de la feuille <code>recap</code> après avoir cliqué sur le bouton envoyer présent sur cette même page :</p>
-<pre class="language-vba " style="counter-reset: linenumber 0"><code class="language-vba">  <span class="token keyword">Sub</span> EnvoyerMailAvecTableau<span class="token punctuation">(</span>tableau <span class="token keyword">As</span> Range<span class="token punctuation">)</span>
+<pre class="language-vba"><code class="language-vba">  <span class="token keyword">Sub</span> EnvoyerMailAvecTableau<span class="token punctuation">(</span>tableau <span class="token keyword">As</span> Range<span class="token punctuation">)</span>
       <span class="token keyword">Dim</span> OutlookApp <span class="token keyword">As</span> <span class="token keyword">Object</span>
       <span class="token keyword">Dim</span> OutlookMail <span class="token keyword">As</span> <span class="token keyword">Object</span>
       <span class="token keyword">Dim</span> Feuille <span class="token keyword">As</span> Workshee
@@ -414,13 +406,11 @@ Le code suivant permet d'envoyer par mail le tableau de la feuille <code>recap</
       <span class="token keyword">Set</span> OutlookMail <span class="token operator">=</span> <span class="token boolean">Nothing</span>
       <span class="token keyword">Set</span> OutlookApp <span class="token operator">=</span> <span class="token boolean">Nothing</span>
       MsgBox <span class="token string">"E-mail evoyé avec succès  !"</span>
-  <span class="token keyword">End</span> <span class="token keyword">Sub</span>
-</code></pre>
+  <span class="token keyword">End</span> <span class="token keyword">Sub</span></code></pre>
 <h3>3. Calcul du coût de déplacement</h3>
 <p>Il était prévu d'utiliser également une API afin d'avoir le prix du carburant actualisé en temps réel mais en vu du temps restant j'ai choisi de prendre un prix fixe (celui du 13/10/2024) et privilégier le calcul du prix du trajet qui est le but même de ce projet.
 Voici la formule que j'applique dans la cellule correspondant au coût du trajet à l'aide de la macro :</p>
-<pre class="language-vba " style="counter-reset: linenumber 0"><code class="language-vba">destinationFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"i"</span> <span class="token operator">&amp;</span> ligne<span class="token punctuation">)</span><span class="token punctuation">.</span>Formula <span class="token operator">=</span> <span class="token string">"= (INDEX(Parametres!$H$2:$H$4, MATCH(INDEX(Véhicules!AT:AT, MATCH(Recap!G"</span> <span class="token operator">&amp;</span> ligne <span class="token operator">&amp;</span> <span class="token string">", Véhicules!C:C, 0)), Parametres!$G$2:$G$4, 0)) * Recap!H"</span> <span class="token operator">&amp;</span> ligne <span class="token operator">&amp;</span> <span class="token string">" / 100) * INDEX(Véhicules!AW:AW, MATCH(Recap!G"</span> <span class="token operator">&amp;</span> ligne <span class="token operator">&amp;</span> <span class="token string">", Véhicules!C:C, 0))"</span>
-</code></pre>
+<pre class="language-vba"><code class="language-vba">destinationFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"i"</span> <span class="token operator">&amp;</span> ligne<span class="token punctuation">)</span><span class="token punctuation">.</span>Formula <span class="token operator">=</span> <span class="token string">"= (INDEX(Parametres!$H$2:$H$4, MATCH(INDEX(Véhicules!AT:AT, MATCH(Recap!G"</span> <span class="token operator">&amp;</span> ligne <span class="token operator">&amp;</span> <span class="token string">", Véhicules!C:C, 0)), Parametres!$G$2:$G$4, 0)) * Recap!H"</span> <span class="token operator">&amp;</span> ligne <span class="token operator">&amp;</span> <span class="token string">" / 100) * INDEX(Véhicules!AW:AW, MATCH(Recap!G"</span> <span class="token operator">&amp;</span> ligne <span class="token operator">&amp;</span> <span class="token string">", Véhicules!C:C, 0))"</span></code></pre>
 <p>Voici quelques explications concernant cette formule :</p>
 <ul>
 <li><code>INDEX(Véhicules!AT:AT, MATCH(Recap!G&quot; &amp; ligne &amp; &quot;, Véhicules!C:C, 0))</code> : Cette séquence permet d'obtenir le type du carburant utilisé</li>
@@ -431,7 +421,7 @@ Notre tableau est donc finalement complété automatiquement à chaque fois que 
 </ul>
 <h3>4. Intégration des nouvelles fonctions dans <code>new_drive()</code></h3>
 <p>Maintenant que toutes nos fonctionnalités ont été implémenter, on peut appeler les nouvelles fonctions et obtenir le code final qui s'execute à chaque clique sur le bouton <code>Enregistrer</code>:</p>
-<pre class="language-vba " style="counter-reset: linenumber 0"><code class="language-vba"><span class="token keyword">Sub</span> new_drive<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<pre class="language-vba"><code class="language-vba"><span class="token keyword">Sub</span> new_drive<span class="token punctuation">(</span><span class="token punctuation">)</span>
     <span class="token keyword">Dim</span> ligne <span class="token keyword">As</span> <span class="token keyword">Integer</span>
     <span class="token keyword">Dim</span> sourceFeuille <span class="token keyword">As</span> Worksheet
     <span class="token keyword">Dim</span> destinationFeuille <span class="token keyword">As</span> Worksheet
@@ -475,8 +465,7 @@ Notre tableau est donc finalement complété automatiquement à chaque fois que 
     destinationFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"h"</span> <span class="token operator">&amp;</span> ligne<span class="token punctuation">)</span> <span class="token operator">=</span> Sheets<span class="token punctuation">(</span><span class="token string">"Parametres"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"F12"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value
     destinationFeuille<span class="token punctuation">.</span>Range<span class="token punctuation">(</span><span class="token string">"i"</span> <span class="token operator">&amp;</span> ligne<span class="token punctuation">)</span><span class="token punctuation">.</span>Formula <span class="token operator">=</span> <span class="token string">"= (INDEX(Parametres!$H$2:$H$4, MATCH(INDEX(Véhicules!AT:AT, MATCH(Recap!G"</span> <span class="token operator">&amp;</span> ligne <span class="token operator">&amp;</span> <span class="token string">", Véhicules!C:C, 0)), Parametres!$G$2:$G$4, 0)) * Recap!H"</span> <span class="token operator">&amp;</span> ligne <span class="token operator">&amp;</span> <span class="token string">" / 100) * INDEX(Véhicules!AW:AW, MATCH(Recap!G"</span> <span class="token operator">&amp;</span> ligne <span class="token operator">&amp;</span> <span class="token string">", Véhicules!C:C, 0))"</span>
     
-<span class="token keyword">End</span> <span class="token keyword">Sub</span>
-</code></pre>
+<span class="token keyword">End</span> <span class="token keyword">Sub</span></code></pre>
 <h2>Conclusion</h2>
 <p>Après un premier sprint concluant avec toutes les tâches réalisées sans réelles difficultés, le second fut plus compliqué notamment à cause des problèmes d'incompatibilités entre mac et Excel que je n'avais pas anticipé. Cependant, si on récapitule les fonctionnalités de l'outil, elles sont en accord avec la définition du projet :</p>
 <ul>

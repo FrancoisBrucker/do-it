@@ -360,7 +360,7 @@ ssh [...] /publish.sh</p>
 </div></div>
 <h3>Retour au script :</h3>
 <p>Le script devient :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token shebang important">#!/bin/sh</span>
+<pre class="language-bash"><code class="language-bash"><span class="token shebang important">#!/bin/sh</span>
 
     <span class="token builtin class-name">cd</span> /home/curcuma/node/artblog
 
@@ -371,13 +371,12 @@ ssh [...] /publish.sh</p>
     <span class="token function">ps</span> <span class="token parameter variable">-ef</span> <span class="token operator">|</span> <span class="token function">grep</span> artblog <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'{print $2}'</span> <span class="token operator">|</span> <span class="token function">xargs</span> <span class="token function">kill</span> <span class="token parameter variable">-15</span>
     <span class="token function">screen</span> <span class="token parameter variable">-S</span> artblog <span class="token parameter variable">-dmS</span> <span class="token function">npm</span> run start
 
-    <span class="token builtin class-name">echo</span> <span class="token string">"Script ended"</span>
-</code></pre>
+    <span class="token builtin class-name">echo</span> <span class="token string">"Script ended"</span></code></pre>
 <p>On l’envoie et on test.</p>
 <h2>Séparer le build du projet du lancement du serveur :</h2>
 <p>On crée des options qui permettent ou non de build le serveur.</p>
 <p>On crée l'option -h qui affiche de l'aide et -b qui lance le build. Par défaut, on lance un screen.</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">
+<pre class="language-bash"><code class="language-bash">
 <span class="token comment">#!/bin/sh</span>
 
 <span class="token keyword">function</span> <span class="token function-name function">Build</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -417,14 +416,12 @@ ssh [...] /publish.sh</p>
 <span class="token function">screen</span> <span class="token parameter variable">-S</span> artblog <span class="token parameter variable">-dmS</span> <span class="token function">npm</span> run start
 
 <span class="token builtin class-name">echo</span> <span class="token string">"Script ended"</span>
-
 </code></pre>
 <p>Mais à cause de je ne sais quoi le screen ne marche pas a travers ssh.
 On essaie la même chose en utilisant tmux au lieu de screen.</p>
 <p>On remplace les lignes liées a screen part</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">tmux kill-session <span class="token parameter variable">-t</span> artblogDeamon
+<pre class="language-bash"><code class="language-bash">tmux kill-session <span class="token parameter variable">-t</span> artblogDeamon
 tmux new-session <span class="token parameter variable">-d</span> <span class="token parameter variable">-s</span> artblogDeamon <span class="token string">"npm run start"</span>
-
 </code></pre>
 <p>Et cela fonctionne !</p>
 <p>On peut maintenant lancer <a href="http://publish.sh">publish.sh</a> en ssh pour</p>
@@ -444,7 +441,7 @@ tmux new-session <span class="token parameter variable">-d</span> <span class="t
 </div></div>
 <p>Pour être un peu sérieux, on ajoute au script une fonction qui récupère les erreurs à chaque commande lancée. Ces erreurs seront casées dans un fichier de log. On formate les erreurs pour qu'elles affichent la date, la commande lancée avec ses options, et ensuite on print l'erreur.</p>
 <p>Pour cela, on utilise des spécificités bien pratique de bash comme les stderr, le pipe, les $?, les variables d’environnements etc...</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function-name function">Error_Handler</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-bash"><code class="language-bash"><span class="token function-name function">Error_Handler</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
    <span class="token assign-left variable">command</span><span class="token operator">=</span><span class="token variable">$1</span>   <span class="token comment"># 1)</span>
    <span class="token assign-left variable">log_file</span><span class="token operator">=</span><span class="token environment constant">$PWD</span>/error.log <span class="token comment"># 2)</span>
    <span class="token assign-left variable">stderr</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span>$command <span class="token operator"><span class="token file-descriptor important">2</span>></span><span class="token file-descriptor important">&amp;1</span> <span class="token operator">></span>/dev/null<span class="token variable">)</span></span> <span class="token comment"># 3)</span>
@@ -453,8 +450,7 @@ tmux new-session <span class="token parameter variable">-d</span> <span class="t
        <span class="token builtin class-name">echo</span> <span class="token string">"      <span class="token variable">$stderr</span>"</span> <span class="token operator">>></span> <span class="token variable">$log_file</span>
        <span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable">$stderr</span>"</span> <span class="token comment"># 5)</span>
    <span class="token keyword">fi</span>
- <span class="token punctuation">}</span>
-</code></pre>
+ <span class="token punctuation">}</span></code></pre>
 <p>La fonction est compliquée et on y arrive après plusieurs itérations.</p>
 <p>Explication détaillée :</p>
 <ul>
@@ -499,7 +495,7 @@ Ici, le script lance la commande une unique fois, c'est ce qu'on veut.</p>
 </div></div>
 <p>De plus, on conditionne le tmux-kill pour qu'il ne se lance que si il n'y a pas de session artblog déjà présente. Cela permet de ne lancer la commande que si nécessaire puis ça permet d'éviter d'ajouter des logs inutiles dans error.log à chaque fois que la fonction est exécutée.</p>
 <p>le script devient :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token shebang important">#!/bin/sh</span>
+<pre class="language-bash"><code class="language-bash"><span class="token shebang important">#!/bin/sh</span>
 
 <span class="token keyword">function</span> <span class="token function-name function">Error_Handler</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
    <span class="token assign-left variable">command</span><span class="token operator">=</span><span class="token variable">$1</span>
@@ -563,7 +559,6 @@ Ici, le script lance la commande une unique fois, c'est ce qu'on veut.</p>
 
 <span class="token builtin class-name">echo</span> <span class="token string">"Script succesfuly ended"</span>
 <span class="token builtin class-name">exit</span> <span class="token number">0</span>
-
 </code></pre>
 <p>Le script fonctionne come voulue, voici un exemple de logs que l'on récupère si il y a des erreurs :</p>
  <img src="../images/error1.png" alt="error log" style="height: 200px; margin: 0 auto; border: 0">

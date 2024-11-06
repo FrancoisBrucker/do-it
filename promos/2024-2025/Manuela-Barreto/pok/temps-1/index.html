@@ -363,8 +363,7 @@
 <h3>Le JS</h3>
 <p>La partie la plus complexe, cependant, a été le script pour la page des flashcards. J'ai rencontré des difficultés inattendues, en particulier lors de la manipulation des données. Un facteur aggravant a été la panne de mon ordinateur personnel, ce qui m'a obligé à continuer le développement sur l'ordinateur de l'école, où je n'avais pas la possibilité d'installer Python ou Node.js, outils nécessaires pour exécuter un serveur local.</p>
 <p>Le principal obstacle est survenu lorsque j'ai tenté de charger les listes de vocabulaire via le code. La solution nécessitait l'utilisation de la méthode <code>fetch</code>, une API native de JavaScript permettant de faire des requêtes HTTP de manière asynchrone. Cependant, j'ai constamment été confronté à l'erreur &quot;file has been blocked by CORS policy&quot;. Après des recherches, j'ai découvert que la solution idéale serait d'utiliser Python ou Node.js pour générer un serveur local (<code>http://localhost:8000/</code>), afin de contourner la politique CORS.</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">python <span class="token parameter variable">-m</span> http.server
-</code></pre>
+<pre class="language-bash"><code class="language-bash">python <span class="token parameter variable">-m</span> http.server</code></pre>
 <p>Compte tenu des limitations de l'ordinateur que j'utilisais, j'ai tenté diverses alternatives pour résoudre le problème sans ces outils, mais sans succès. Finalement, j'ai pu accéder à un autre ordinateur pour réaliser cette tâche, mais seulement après avoir perdu environ une heure à chercher d'autres solutions.</p>
 <p>Une bonne conséquence de ce problème, cependant, est que j'ai appris à utiliser la console et <code>window.alert</code> pour essayer d'identifier où se trouvent les erreurs</p>
 <h3>Clôture du projet</h3>

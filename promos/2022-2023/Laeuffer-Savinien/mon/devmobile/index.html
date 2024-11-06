@@ -168,7 +168,7 @@ Pour débuter Flutter, on peut se servir de la documentation officielle qui est 
 <h2>Persistence des données (Drift)</h2>
 <h5>Installation de Drift</h5>
 <p>Pour installer Drift à notre projet flutter, il faut ajouter plusieurs packages aux dépences dans notre fichier <code>public.yaml</code>:</p>
-<pre class="language-yaml " style="counter-reset: linenumber 0"><code class="language-yaml"><span class="token key atrule">dependencies</span><span class="token punctuation">:</span>
+<pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">dependencies</span><span class="token punctuation">:</span>
   <span class="token key atrule">drift</span><span class="token punctuation">:</span> ^2.2.0
   <span class="token key atrule">sqlite3_flutter_libs</span><span class="token punctuation">:</span> ^0.5.0
   <span class="token key atrule">path_provider</span><span class="token punctuation">:</span> ^2.0.0
@@ -176,12 +176,11 @@ Pour débuter Flutter, on peut se servir de la documentation officielle qui est 
 
 <span class="token key atrule">dev_dependencies</span><span class="token punctuation">:</span>
   <span class="token key atrule">drift_dev</span><span class="token punctuation">:</span> ^2.2.0+1
-  <span class="token key atrule">build_runner</span><span class="token punctuation">:</span> ^2.2.1
-</code></pre>
+  <span class="token key atrule">build_runner</span><span class="token punctuation">:</span> ^2.2.1</code></pre>
 <p>On télécharge et installe finalement les packages en lançant dans notre terminal la commande <code>flutter pub get</code> (si problème avec des packages déjà existant, on peut lancer <code>flutter clean</code> avant)</p>
 <h5>Déclarer les tables</h5>
 <p>Créons notre fichier tables.dart, où nous allons pouvoir créer directement en Dart notre classe utilisateur et une classe Category, qui définira plusieurs types d'utilisateurs.</p>
-<pre class="language-dart " style="counter-reset: linenumber 0"><code class="language-dart"><span class="token keyword">import</span> <span class="token string-literal"><span class="token string">'package:drift/drift.dart'</span></span><span class="token punctuation">;</span>
+<pre class="language-dart"><code class="language-dart"><span class="token keyword">import</span> <span class="token string-literal"><span class="token string">'package:drift/drift.dart'</span></span><span class="token punctuation">;</span>
 
 <span class="token comment">// Cette ligne affichera d'abord une erreur mais ce fichier se génèrera plus tard</span>
 <span class="token keyword">part</span> <span class="token string-literal"><span class="token string">'tables.g.dart'</span></span><span class="token punctuation">;</span>
@@ -203,8 +202,7 @@ Pour débuter Flutter, on peut se servir de la documentation officielle qui est 
 <span class="token comment">// Les lignes suivantes permettent de dire à Drift de créer les classes des bases de données à partir de ce qu'on a défini plus haut</span>
 <span class="token metadata function">@DriftDatabase</span><span class="token punctuation">(</span>tables<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token class-name">Users</span><span class="token punctuation">,</span> <span class="token class-name">Categories</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
 <span class="token keyword">class</span> <span class="token class-name">MyDatabase</span> <span class="token keyword">extends</span> _$<span class="token class-name">MyDatabase</span> <span class="token punctuation">{</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
@@ -221,7 +219,7 @@ Si on veut rendre une valeur nullable, on peut écrire comme suit:
 </div></div>
 <p>Maintenant que nos tables sont créées, il faut lancer la commande <code>flutter pub run build_runner build</code> afin que le code nécessaire se génère automatiquement. Une classe pour notre base de données et des classes pour nos entitées sont désormais créées.</p>
 <p>Pour ouvrir notre base de données, on modifie le code précédent comme ceci:</p>
-<pre class="language-dart " style="counter-reset: linenumber 0"><code class="language-dart"><span class="token comment">// On ajoute les importations nécessaires à l'accès à la base de données</span>
+<pre class="language-dart"><code class="language-dart"><span class="token comment">// On ajoute les importations nécessaires à l'accès à la base de données</span>
 <span class="token keyword">import</span> <span class="token string-literal"><span class="token string">'dart:io'</span></span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token string-literal"><span class="token string">'package:drift/native.dart'</span></span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token string-literal"><span class="token string">'package:path_provider/path_provider.dart'</span></span><span class="token punctuation">;</span>
@@ -242,10 +240,9 @@ Si on veut rendre une valeur nullable, on peut écrire comme suit:
     <span class="token keyword">final</span> file <span class="token operator">=</span> <span class="token class-name">File</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>dbFolder<span class="token punctuation">.</span>path<span class="token punctuation">,</span> <span class="token string-literal"><span class="token string">'db.sqlite'</span></span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token class-name">NativeDatabase</span><span class="token punctuation">.</span><span class="token function">createInBackground</span><span class="token punctuation">(</span>file<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Notre base de données est créée. Il ne reste plus qu'à créer une instance de <code>MyDatabase</code> dans le fichier main de notre application.</p>
-<pre class="language-dart " style="counter-reset: linenumber 0"><code class="language-dart"><span class="token class-name">Future</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token keyword">void</span><span class="token punctuation">></span></span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">async</span> <span class="token punctuation">{</span>
+<pre class="language-dart"><code class="language-dart"><span class="token class-name">Future</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token keyword">void</span><span class="token punctuation">></span></span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">async</span> <span class="token punctuation">{</span>
   <span class="token keyword">final</span> database <span class="token operator">=</span> <span class="token class-name">MyDatabase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
   <span class="token keyword">await</span> database
@@ -254,35 +251,28 @@ Si on veut rendre une valeur nullable, on peut écrire comme suit:
 
   <span class="token keyword">final</span> allCategories <span class="token operator">=</span> <span class="token keyword">await</span> database<span class="token punctuation">.</span><span class="token function">select</span><span class="token punctuation">(</span>database<span class="token punctuation">.</span>categories<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Categories in database: </span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">allCategories</span></span><span class="token string">'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <h5>Création de requêtes</h5>
 <p>Toutes les requêtes se définissent dans notre classe MyDatabase, elles se basent sur du SQL mais se rédigent intégralement en Dart.
 Voici donc quelques requêtes afin de comprendre comment on peut les créer soi même.</p>
 <p>Récupérer tous les users:</p>
-<pre class="language-dart " style="counter-reset: linenumber 0"><code class="language-dart"><span class="token class-name">Future</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">Todo</span><span class="token punctuation">></span><span class="token punctuation">></span></span> <span class="token keyword">get</span> allUsersEntries <span class="token operator">=</span><span class="token operator">></span> <span class="token function">select</span><span class="token punctuation">(</span>users<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-dart"><code class="language-dart"><span class="token class-name">Future</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">Todo</span><span class="token punctuation">></span><span class="token punctuation">></span></span> <span class="token keyword">get</span> allUsersEntries <span class="token operator">=</span><span class="token operator">></span> <span class="token function">select</span><span class="token punctuation">(</span>users<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>Récupérer 10 users avec un décalage (offset) de 5:</p>
-<pre class="language-dart " style="counter-reset: linenumber 0"><code class="language-dart"><span class="token class-name">Future</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">Todo</span><span class="token punctuation">></span><span class="token punctuation">></span></span> <span class="token keyword">get</span> getFirstTenUsersOffsetFive <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">(</span><span class="token function">select</span><span class="token punctuation">(</span>users<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token function">limit</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> offset<span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-dart"><code class="language-dart"><span class="token class-name">Future</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">Todo</span><span class="token punctuation">></span><span class="token punctuation">></span></span> <span class="token keyword">get</span> getFirstTenUsersOffsetFive <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">(</span><span class="token function">select</span><span class="token punctuation">(</span>users<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token function">limit</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> offset<span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>Trier les users par nom dans l'ordre alphabétique:</p>
-<pre class="language-dart " style="counter-reset: linenumber 0"><code class="language-dart"><span class="token class-name">Future</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">Todo</span><span class="token punctuation">></span><span class="token punctuation">></span></span> <span class="token keyword">get</span> getUsersOrderedByName <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">(</span><span class="token function">select</span><span class="token punctuation">(</span>users<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token function">orderBy</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">(</span>u<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token class-name">OrderingTerm</span><span class="token punctuation">(</span>expression<span class="token punctuation">:</span> u<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-dart"><code class="language-dart"><span class="token class-name">Future</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">Todo</span><span class="token punctuation">></span><span class="token punctuation">></span></span> <span class="token keyword">get</span> getUsersOrderedByName <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">(</span><span class="token function">select</span><span class="token punctuation">(</span>users<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token function">orderBy</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">(</span>u<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token class-name">OrderingTerm</span><span class="token punctuation">(</span>expression<span class="token punctuation">:</span> u<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>Insérer un utilisateur:</p>
-<pre class="language-dart " style="counter-reset: linenumber 0"><code class="language-dart"><span class="token class-name">Future</span><span class="token generics"><span class="token punctuation">&lt;</span>int<span class="token punctuation">></span></span> <span class="token function">addUser</span><span class="token punctuation">(</span><span class="token class-name">User</span> entry<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-dart"><code class="language-dart"><span class="token class-name">Future</span><span class="token generics"><span class="token punctuation">&lt;</span>int<span class="token punctuation">></span></span> <span class="token function">addUser</span><span class="token punctuation">(</span><span class="token class-name">User</span> entry<span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> <span class="token function">into</span><span class="token punctuation">(</span>todos<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span>entry<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Update un utilisateur:</p>
-<pre class="language-dart " style="counter-reset: linenumber 0"><code class="language-dart"><span class="token class-name">Future</span> <span class="token function">updateUser</span><span class="token punctuation">(</span><span class="token class-name">User</span> entry<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-dart"><code class="language-dart"><span class="token class-name">Future</span> <span class="token function">updateUser</span><span class="token punctuation">(</span><span class="token class-name">User</span> entry<span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> <span class="token function">update</span><span class="token punctuation">(</span>users<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>entry<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Trouver un utilisateur par son ID et le supprimer de la base de données:</p>
-<pre class="language-dart " style="counter-reset: linenumber 0"><code class="language-dart"><span class="token class-name">Future</span> <span class="token function">deleteUserByID</span><span class="token punctuation">(</span>int id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-dart"><code class="language-dart"><span class="token class-name">Future</span> <span class="token function">deleteUserByID</span><span class="token punctuation">(</span>int id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> <span class="token function">delete</span><span class="token punctuation">(</span>users<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token punctuation">(</span>u<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> u<span class="token punctuation">.</span>id<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <h2>Firebase (FlutterFire)</h2>
 <p>Afin d'utiliser Firebase et pour pouvoir l'incorporer à notre application, il est avant tout nécessaire de se créer un compte Firebase sur le lien ci dessous:
 <a href="https://firebase.google.com/">Site de Firebase</a></p>
@@ -300,18 +290,16 @@ Ici nous tenterons de nous servir des outils de base de données, donc Realtime 
 </code></pre>
 <p>Un fichier <code>firebase_options.dart</code> se sera alors généré et contient toutes les options de configuration.</p>
 <p>Il reste désormais à importer les packages dans les fichiers Dart adéquats, par exemple notre fichier <code>main.dart</code>.</p>
-<pre class="language-dart " style="counter-reset: linenumber 0"><code class="language-dart"><span class="token keyword">import</span> <span class="token string-literal"><span class="token string">'package:firebase_core/firebase_core.dart'</span></span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token string-literal"><span class="token string">'firebase_options.dart'</span></span><span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-dart"><code class="language-dart"><span class="token keyword">import</span> <span class="token string-literal"><span class="token string">'package:firebase_core/firebase_core.dart'</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string-literal"><span class="token string">'firebase_options.dart'</span></span><span class="token punctuation">;</span></code></pre>
 <p>Et finalement, il faut initaliser FlutterFire dans notre fonction <code>main</code>:</p>
-<pre class="language-dart " style="counter-reset: linenumber 0"><code class="language-dart"><span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">async</span> <span class="token punctuation">{</span>
+<pre class="language-dart"><code class="language-dart"><span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">async</span> <span class="token punctuation">{</span>
   <span class="token class-name">WidgetsFlutterBinding</span><span class="token punctuation">.</span><span class="token function">ensureInitialized</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">await</span> <span class="token class-name">Firebase</span><span class="token punctuation">.</span><span class="token function">initializeApp</span><span class="token punctuation">(</span>
     options<span class="token punctuation">:</span> <span class="token class-name">DefaultFirebaseOptions</span><span class="token punctuation">.</span>currentPlatform<span class="token punctuation">,</span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token function">runApp</span><span class="token punctuation">(</span><span class="token class-name">MyApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <h5>Realtime database</h5>
 <p>Sur notre page d'accueil de projet sur Firebase, on trouve dans le menu &quot;Créer&quot; l'onglet Realtime Database. On peut se lancer, et créer notre base de données. On choisit l'emplacement et les règles, puis on la crée.</p>
 <p>Dans notre application Flutter, on lance la commande:</p>
@@ -321,10 +309,9 @@ Ici nous tenterons de nous servir des outils de base de données, donc Realtime 
 <pre><code>flutter run
 </code></pre>
 <p>Maintenant, pour pouvoir utiliser Realtime Database dans notre projet, il suffit de l'importer et de créer une instance de FirebaseDatabase:</p>
-<pre class="language-dart " style="counter-reset: linenumber 0"><code class="language-dart"><span class="token keyword">import</span> <span class="token string-literal"><span class="token string">'package:firebase_database/firebase_database.dart'</span></span><span class="token punctuation">;</span>
+<pre class="language-dart"><code class="language-dart"><span class="token keyword">import</span> <span class="token string-literal"><span class="token string">'package:firebase_database/firebase_database.dart'</span></span><span class="token punctuation">;</span>
 
-<span class="token class-name">FirebaseDatabase</span> database <span class="token operator">=</span> <span class="token class-name">FirebaseDatabase</span><span class="token punctuation">.</span>instance<span class="token punctuation">;</span>
-</code></pre>
+<span class="token class-name">FirebaseDatabase</span> database <span class="token operator">=</span> <span class="token class-name">FirebaseDatabase</span><span class="token punctuation">.</span>instance<span class="token punctuation">;</span></code></pre>
 <h2>Sources</h2>
 <ul>
 <li><a href="https://docs.flutter.dev/">Documentation Flutter</a></li>

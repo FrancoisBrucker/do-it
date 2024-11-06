@@ -157,9 +157,8 @@ L’objectif est donc de pouvoir tester les différentes routes de l’API et s�
 </ul>
 <p>Cela permet de tester une application Express qui communique avec une base de donnée Mongo DB.</p>
 <p>Voici comment installer les dépendances nécessaire :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> --save-dev jest supertest 
-<span class="token function">npm</span> <span class="token function">install</span> mongoose
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> --save-dev jest supertest 
+<span class="token function">npm</span> <span class="token function">install</span> mongoose</code></pre>
 <ul>
 <li>Jest : tester du code Javascript</li>
 <li>Supertest : permet de tester des routes et des endpoints</li>
@@ -167,19 +166,17 @@ L’objectif est donc de pouvoir tester les différentes routes de l’API et s�
 </ul>
 <p>Ensuite, le but est de tester mon application sans tout casser. En effet, les tests permettront d’intéragir avec la base de donnée. Cependant, lorsqu’on effectue des tests, il ne faut pas modifier la vrai base de donnée qui est utilisé par l’application en production.
 Pour cela, on crée un ficher .env qui stocke des variables d’environnement :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token assign-left variable">MONGODB_URI</span><span class="token operator">=</span><span class="token string">'url'</span>
-<span class="token assign-left variable">MONGODB_URI_TEST</span><span class="token operator">=</span><span class="token string">'url de test'</span>
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token assign-left variable">MONGODB_URI</span><span class="token operator">=</span><span class="token string">'url'</span>
+<span class="token assign-left variable">MONGODB_URI_TEST</span><span class="token operator">=</span><span class="token string">'url de test'</span></code></pre>
 <p>Comme ça on peut choisir quel url choisir n’importe où dans l’application</p>
 <p>Ensuite on rajoute un script dans package.json :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token string">"scripts"</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+<pre class="language-bash"><code class="language-bash"><span class="token string">"scripts"</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
     <span class="token string">"test"</span><span class="token builtin class-name">:</span> <span class="token string">"jest"</span>
-  <span class="token punctuation">}</span>,
-</code></pre>
+  <span class="token punctuation">}</span>,</code></pre>
 <h3>Tester une route</h3>
 <p>Maintenant, je souhaite tester la route <strong>POST</strong> <code>/api/user/testUser</code>  qui permet d’ajouter un nouvel utilisateur dans la base de donnée avec le nom ‘testUser’.</p>
 <p>Voici le code que j’ai qui permet de tester cette route :</p>
-<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx">
+<pre class="language-jsx"><code class="language-jsx">
 <span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">"User API"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token function">beforeAll</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
     <span class="token keyword">await</span> mongoose<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">MONGODB_URI_TEST</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -204,7 +201,6 @@ Pour cela, on crée un ficher .env qui stocke des variables d’environnement :<
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
 </code></pre>
 <p>Le code commence par définir une suite de tests avec <strong><code>describe(&quot;User API&quot;, () =&gt; { ... })</code></strong>. Cette suite de tests contient plusieurs hooks et blocs de tests.</p>
 <ul>
@@ -214,7 +210,7 @@ Pour cela, on crée un ficher .env qui stocke des variables d’environnement :<
 <li>Ensuite, il y a un bloc de tests imbriqué pour tester la création d'un nouvel utilisateur en utilisant la méthode HTTP POST sur l'URL <strong><code>/api/user/testUser</code></strong>. Dans ce test, une requête HTTP est envoyée à l'application Node.js à l'aide de <strong><code>request(app).post(&quot;/api/user/testUser&quot;).send({ expoToken: &quot;testToken&quot; })</code></strong>. La réponse HTTP est ensuite vérifiée pour s'assurer que le code d'état est 200, que la propriété <strong><code>success</code></strong> est définie sur <strong><code>true</code></strong> et que la propriété <strong><code>userId</code></strong> existe dans le corps de la réponse.</li>
 </ul>
 <p>Maintenant si on fait <code>npm run test</code>  on a ce resultat :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">PS D:<span class="token punctuation">\</span>Programmation<span class="token punctuation">\</span>Ecm<span class="token punctuation">\</span>Killer-back<span class="token operator">></span> <span class="token function">npm</span> run <span class="token builtin class-name">test</span>
+<pre class="language-bash"><code class="language-bash">PS D:<span class="token punctuation">\</span>Programmation<span class="token punctuation">\</span>Ecm<span class="token punctuation">\</span>Killer-back<span class="token operator">></span> <span class="token function">npm</span> run <span class="token builtin class-name">test</span>
 
 <span class="token operator">></span> killer-back@1.0.0 <span class="token builtin class-name">test</span>
 <span class="token operator">></span> jest
@@ -228,11 +224,10 @@ Test Suites: <span class="token number">1</span> passed, <span class="token numb
 Tests:       <span class="token number">1</span> passed, <span class="token number">1</span> total
 Snapshots:   <span class="token number">0</span> total
 Time:        <span class="token number">1.952</span> s, estimated <span class="token number">8</span> s
-Ran all <span class="token builtin class-name">test</span> suites.
-</code></pre>
+Ran all <span class="token builtin class-name">test</span> suites.</code></pre>
 <h3>Tester la modification d’un utilisateur</h3>
 <p>Ensuite, je souhaite tester la route PUT <code userId="">/api/user/</code>  qui permet de modifier le surnom d’un utilisateur. Le problème, c’est qu’au début des tests, ma base de donnée est vide. J’ai donc crée 3 utilisateurs de test que j’évite de supprimer à la fin des test :</p>
-<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx">
+<pre class="language-jsx"><code class="language-jsx">
 <span class="token keyword">const</span> user1Id <span class="token operator">=</span> <span class="token string">"65fd4cbe4352edb5a9722609"</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> user2Id <span class="token operator">=</span> <span class="token string">"65fd4cdb034e02d9b0920de8"</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> user3Id <span class="token operator">=</span> <span class="token string">"65fd511875033da71380cc99"</span><span class="token punctuation">;</span>
@@ -287,8 +282,7 @@ Ran all <span class="token builtin class-name">test</span> suites.
       <span class="token function">expect</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>body<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toHaveProperty</span><span class="token punctuation">(</span><span class="token string">"userId"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <h2>Conclusion</h2>
 <p>Il y a pleins d’autres routes à tester pour s’assurer que l’application fonctionne bien. Cependant je n’ai pas eu le temps de toutes les tester. J’ai mis pas mal de temps à faire fonctionner le premier test car j’avais des soucis pour me connecter à la base de donnée. Je n’ai pas eu le temps de passer les 10h sur ce MON. J’ai passé environ 6h sur la documentation et les exemples que j’ai présenté.</p>
 

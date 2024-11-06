@@ -109,7 +109,7 @@
 <h4>Déroulement</h4>
 <p>Contrairement au déploiement précédent, j'ai décidé d'opter pour une solution de déploiement avec conteneur <a href="https://docker.com/">Docker</a> pour apprendre à manipuler l'outil. J'ai utilisé la <a href="https://docs.docker.com/get-started/">documentation</a> officielle en suivant le tuto, ainsi que le <a href="https://francoisbrucker.github.io/do-it/mon/TBi/MON/Docker/">MON de Tuncay</a>.</p>
 <p>En adaptant le tuto, pour bien comprendre le fonctionnement de Docker, j'ai d'abord créer des containers séparés pour mon front et mon back. Voici un exemple de dockerfile pour mon backend :</p>
-<pre class="language-dockerfile " style="counter-reset: linenumber 0"><code class="language-dockerfile"><span class="token instruction"><span class="token keyword">FROM</span> node:16-alpine</span>
+<pre class="language-dockerfile"><code class="language-dockerfile"><span class="token instruction"><span class="token keyword">FROM</span> node:16-alpine</span>
 
 <span class="token instruction"><span class="token keyword">WORKDIR</span> /app</span>
 
@@ -121,10 +121,9 @@
 
 <span class="token instruction"><span class="token keyword">EXPOSE</span> 5000</span>
 
-<span class="token instruction"><span class="token keyword">CMD</span> [<span class="token string">"npm"</span>,<span class="token string">"start"</span> ]</span>
-</code></pre>
+<span class="token instruction"><span class="token keyword">CMD</span> [<span class="token string">"npm"</span>,<span class="token string">"start"</span> ]</span></code></pre>
 <p>Ensuite, j'ai essayé de lier tous les containers avec docker-compose. Voici le fichier docker-compose que j'ai utilisé :</p>
-<pre class="language-yml " style="counter-reset: linenumber 0"><code class="language-yml"><span class="token key atrule">services</span><span class="token punctuation">:</span>
+<pre class="language-yml"><code class="language-yml"><span class="token key atrule">services</span><span class="token punctuation">:</span>
   <span class="token key atrule">app</span><span class="token punctuation">:</span>
     <span class="token key atrule">image</span><span class="token punctuation">:</span> ibback
     <span class="token key atrule">ports</span><span class="token punctuation">:</span>
@@ -149,10 +148,9 @@
       <span class="token punctuation">-</span> <span class="token string">"app"</span>
 
 <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
-  <span class="token key atrule">ib_db</span><span class="token punctuation">:</span>
-</code></pre>
+  <span class="token key atrule">ib_db</span><span class="token punctuation">:</span></code></pre>
 <p>Au début, j'ai eu des problèmes lors de la connexion du front et du back, et du back avec la bdd. En fait, la raison pour laquelle la connexion ne se faisait pas est que le code de l'application responsable de lier le front / back et le back / bdd était écrite pour localhost. J'ai donc dû modifier localhost par l'adresse ip local du container en question. Par exemple pour la liaison back / bdd, dans le code de l'app, au lieu de <code>host: 'localhost'</code> :</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">const</span> sequelize <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Sequelize</span><span class="token punctuation">(</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> sequelize <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Sequelize</span><span class="token punctuation">(</span>
     <span class="token string">'INSTANT_BUDDY_DB'</span><span class="token punctuation">,</span>
     <span class="token string">'username'</span><span class="token punctuation">,</span>
     <span class="token string">'password'</span><span class="token punctuation">,</span>
@@ -160,17 +158,13 @@
         <span class="token literal-property property">host</span><span class="token operator">:</span> <span class="token string">'172.20.0.2'</span><span class="token punctuation">,</span>
         <span class="token literal-property property">dialect</span><span class="token operator">:</span> <span class="token string">'mysql'</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">)</span>
-</code></pre>
+<span class="token punctuation">)</span></code></pre>
 <p>Pour avoir des informations sur un container (par exemple l'adresse ip):</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">docker</span> inspect <span class="token operator">&lt;</span>container<span class="token operator">></span>
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">docker</span> inspect <span class="token operator">&lt;</span>container<span class="token operator">></span></code></pre>
 <p>Pour accéder à un container en cli :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">docker</span> <span class="token builtin class-name">exec</span> <span class="token parameter variable">-it</span> <span class="token operator">&lt;</span>container<span class="token operator">></span> <span class="token function">bash</span> 
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">docker</span> <span class="token builtin class-name">exec</span> <span class="token parameter variable">-it</span> <span class="token operator">&lt;</span>container<span class="token operator">></span> <span class="token function">bash</span> </code></pre>
 <p>ou</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">docker</span> <span class="token builtin class-name">exec</span> <span class="token parameter variable">-it</span> <span class="token operator">&lt;</span>container<span class="token operator">></span> <span class="token function">sh</span> 
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">docker</span> <span class="token builtin class-name">exec</span> <span class="token parameter variable">-it</span> <span class="token operator">&lt;</span>container<span class="token operator">></span> <span class="token function">sh</span> </code></pre>
 <p>Après ces modifications, l'application a bien fonctionnée.</p>
 <h3>Mon site sur l'ovh</h3>
 <p>Mon site : <a href="http://node.stevia.ovh1.ec-m.fr/">http://node.stevia.ovh1.ec-m.fr/</a></p>

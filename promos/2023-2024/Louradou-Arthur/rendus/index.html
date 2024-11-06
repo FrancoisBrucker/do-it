@@ -127,13 +127,10 @@ function turnExportOn() {
 <p><a href="https://francoisbrucker.github.io/cours_informatique/cours/syst%C3%A8me/linux/scripting/DM/">Le sujet du DM</a></p>
 </div></div>
 <h2>Introduction Comte de Monte Cristo</h2>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">curl</span> https://www.gutenberg.org/files/17989/17989-0.txt
-</code></pre>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">curl</span> https://www.gutenberg.org/files/17989/17989-0.txt <span class="token operator">></span> monte-cristo-tome1.txt
-</code></pre>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">wc</span> <span class="token parameter variable">-l</span> monte-cristo-tome1.txt
-<span class="token comment"># puis -w puis -c</span>
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">curl</span> https://www.gutenberg.org/files/17989/17989-0.txt</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">curl</span> https://www.gutenberg.org/files/17989/17989-0.txt <span class="token operator">></span> monte-cristo-tome1.txt</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">wc</span> <span class="token parameter variable">-l</span> monte-cristo-tome1.txt
+<span class="token comment"># puis -w puis -c</span></code></pre>
 <p>→ 17067 lignes</p>
 <p>→ 121931 mots</p>
 <p>→ 784212 caractères !</p>
@@ -144,8 +141,7 @@ function turnExportOn() {
 </li>
 <li>
 <p>Pour avoir cette information à la manière Ops :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">grep</span> <span class="token string">"Le 24 février 1815"</span> monte-cristo-tome1.txt <span class="token parameter variable">-n</span>
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">grep</span> <span class="token string">"Le 24 février 1815"</span> monte-cristo-tome1.txt <span class="token parameter variable">-n</span></code></pre>
 <p>L’option -n affiche le numéro de ligne :</p>
 <p><code>82:Le 24 février 1815, la vigie de Notre-Dame de la Garde signala le</code></p>
 </li>
@@ -154,23 +150,19 @@ function turnExportOn() {
 </li>
 <li>
 <p>Voilà donc la commande à exécuter.</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">grep</span> <span class="token string">"START OF THE PROJECT GUTENBERG"</span> monte-cristo-tome1.txt <span class="token parameter variable">-n</span>
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">grep</span> <span class="token string">"START OF THE PROJECT GUTENBERG"</span> monte-cristo-tome1.txt <span class="token parameter variable">-n</span></code></pre>
 <p>Il s’agit donc de la ligne 24.</p>
 </li>
 <li>
 <p>En ajoutant ceci à la commande précédente, on obtient 24 en sortie :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token operator">|</span> <span class="token function">cut</span> <span class="token parameter variable">-f</span> <span class="token number">1</span> <span class="token parameter variable">-d</span> <span class="token builtin class-name">:</span>
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token operator">|</span> <span class="token function">cut</span> <span class="token parameter variable">-f</span> <span class="token number">1</span> <span class="token parameter variable">-d</span> <span class="token builtin class-name">:</span></code></pre>
 <p>Il faut lire le manuel de cut pour avoir les options <code>-d</code> indiquant le délimiteur et <code>-f</code> qui indique le nombre de sections à garder.</p>
 </li>
 <li>
 <p>Avec le numéro 24 ainsi retourné, on peut donner en paramètre à tail avec un + devant la valeur 24. On ajoute ensuite 1 au résultat avec la syntaxe bash $(( . + 1)), qui donne finalement la commande :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">tail</span> <span class="token parameter variable">-n</span> +<span class="token variable"><span class="token variable">$((</span>$<span class="token punctuation">(</span>grep "START OF THE PROJECT GUTENBERG" monte<span class="token operator">-</span>cristo<span class="token operator">-</span>tome1.txt <span class="token operator">-</span>n <span class="token operator">|</span> cut <span class="token operator">-</span>f <span class="token number">1</span> <span class="token operator">-</span>d <span class="token operator">:</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token variable">))</span></span> monte-cristo-tome1.txt
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">tail</span> <span class="token parameter variable">-n</span> +<span class="token variable"><span class="token variable">$((</span>$<span class="token punctuation">(</span>grep "START OF THE PROJECT GUTENBERG" monte<span class="token operator">-</span>cristo<span class="token operator">-</span>tome1.txt <span class="token operator">-</span>n <span class="token operator">|</span> cut <span class="token operator">-</span>f <span class="token number">1</span> <span class="token operator">-</span>d <span class="token operator">:</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token variable">))</span></span> monte-cristo-tome1.txt</code></pre>
 <p>On met ce résultat dans un fichier avec <code>&gt; roman_brut.txt</code>. On donne alors cette sortie à <code>wc</code> comme au début :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">wc</span> <span class="token parameter variable">-l</span> roman_brut.txt
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">wc</span> <span class="token parameter variable">-l</span> roman_brut.txt</code></pre>
 <p>Et donc :</p>
 <ul>
 <li>17043 lignes</li>
@@ -181,10 +173,9 @@ function turnExportOn() {
 </ol>
 <p>Le man de grep nous indique que l’option <code>-E</code> permet d’insérer des expressions régulières à la place d’une simple chaine de caractère.</p>
 <p>Ainsi, la commande suivante nous donne le nombre de mentions à “Marseille” ou “Marseillais” qui est de <strong>85</strong> :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">grep</span> <span class="token parameter variable">-E</span> <span class="token string">"Marseille|Marseillais"</span> roman_brut.txt <span class="token operator">|</span> <span class="token function">wc</span> <span class="token parameter variable">-l</span>
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">grep</span> <span class="token parameter variable">-E</span> <span class="token string">"Marseille|Marseillais"</span> roman_brut.txt <span class="token operator">|</span> <span class="token function">wc</span> <span class="token parameter variable">-l</span></code></pre>
 <p>Et voici un joli script qui télécharge les 4 tomes, retire l’en-tête (et le pied de page !), puis concatène chacun des tomes dans un seul fichier.</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token assign-left variable">array</span><span class="token operator">=</span><span class="token punctuation">(</span>https://www.gutenberg.org/files/17989/17989-0.txt https://www.gutenberg.org/files/17990/17990-0.txt https://www.gutenberg.org/files/17991/17991-0.txt https://www.gutenberg.org/files/17992/17992-0.txt<span class="token punctuation">)</span>
+<pre class="language-bash"><code class="language-bash"><span class="token assign-left variable">array</span><span class="token operator">=</span><span class="token punctuation">(</span>https://www.gutenberg.org/files/17989/17989-0.txt https://www.gutenberg.org/files/17990/17990-0.txt https://www.gutenberg.org/files/17991/17991-0.txt https://www.gutenberg.org/files/17992/17992-0.txt<span class="token punctuation">)</span>
 
 <span class="token builtin class-name">echo</span> <span class="token string">""</span> <span class="token operator">></span> monte-cristo-full.txt
 
@@ -201,14 +192,12 @@ function turnExportOn() {
 
 <span class="token keyword">done</span>
 
-<span class="token function">rm</span> <span class="token parameter variable">-rf</span> monte-cristo-reading.txt monte-cristo-reading2.txt
-</code></pre>
+<span class="token function">rm</span> <span class="token parameter variable">-rf</span> monte-cristo-reading.txt monte-cristo-reading2.txt</code></pre>
 <p>On a donc 68 994 lignes dans les 4 tomes et 2 966 509 caractères. Soit 42,9 en moyenne au total. Notons que je n’exclue pas ici les lignes blanches qui font baisser cette moyenne.</p>
 <p>Sans que je n’explique pourquoi, la commande suivante ne fonctionne pas (sur zsh, du moins) :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token builtin class-name">echo</span> <span class="token variable"><span class="token variable">$((</span>$<span class="token punctuation">(</span>wc <span class="token operator">-</span>l monte<span class="token operator">-</span>cristo<span class="token operator">-</span>full.txt<span class="token punctuation">)</span> <span class="token operator">/</span> $<span class="token punctuation">(</span>wc <span class="token operator">-</span>l monte<span class="token operator">-</span>cristo<span class="token operator">-</span>full.txt<span class="token variable">))</span></span><span class="token punctuation">)</span>
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">echo</span> <span class="token variable"><span class="token variable">$((</span>$<span class="token punctuation">(</span>wc <span class="token operator">-</span>l monte<span class="token operator">-</span>cristo<span class="token operator">-</span>full.txt<span class="token punctuation">)</span> <span class="token operator">/</span> $<span class="token punctuation">(</span>wc <span class="token operator">-</span>l monte<span class="token operator">-</span>cristo<span class="token operator">-</span>full.txt<span class="token variable">))</span></span><span class="token punctuation">)</span></code></pre>
 <p>Avec <code>script.sh</code> le script défini plus haut, voilà le code à exécuter :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token parameter variable">-e</span> <span class="token string">"comte-monte-cristo.txt"</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+<pre class="language-bash"><code class="language-bash"><span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token parameter variable">-e</span> <span class="token string">"comte-monte-cristo.txt"</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
     <span class="token builtin class-name">echo</span> <span class="token string">"Le fichier existe déjà."</span> <span class="token operator">></span><span class="token file-descriptor important">&amp;2</span>
     <span class="token builtin class-name">exit</span> <span class="token number">1</span>
 <span class="token keyword">else</span>
@@ -216,21 +205,18 @@ function turnExportOn() {
     <span class="token function">wc</span> <span class="token parameter variable">-l</span> comte-monte-cristo.txt <span class="token operator">|</span> <span class="token function">cut</span> <span class="token parameter variable">-f</span> <span class="token number">4</span> <span class="token parameter variable">-d</span> <span class="token string">' '</span> <span class="token operator">></span><span class="token file-descriptor important">&amp;2</span>
 <span class="token keyword">fi</span>
 
-<span class="token builtin class-name">exit</span> <span class="token number">0</span>
-</code></pre>
+<span class="token builtin class-name">exit</span> <span class="token number">0</span></code></pre>
 <h2>Poubelle</h2>
 <p>D’abord, changeons le PATH pour y ajouter ~/.local/bin</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token environment constant">$HOME</span>/.local/bin:<span class="token environment constant">$PATH</span>
-<span class="token function">mkdir</span> ~/.local/bin
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token environment constant">$HOME</span>/.local/bin:<span class="token environment constant">$PATH</span>
+<span class="token function">mkdir</span> ~/.local/bin</code></pre>
 <p>Le script ayant été crée dans un dossier à part, cela explique la dernière commande.</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token builtin class-name">cd</span> ~/dm
+<pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">cd</span> ~/dm
 <span class="token function">touch</span> poubelle.sh
 <span class="token function">chmod</span> +x ./poubelle.sh
-<span class="token function">cp</span> ./poubelle.sh ~/.local/bin/poubelle
-</code></pre>
+<span class="token function">cp</span> ./poubelle.sh ~/.local/bin/poubelle</code></pre>
 <p>De cette façon, nous pouvons exécuter le script <code>poubelle</code> que voici :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+<pre class="language-bash"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span>
 
 <span class="token assign-left variable">SHORT</span><span class="token operator">=</span>f,r:,l,h
 <span class="token assign-left variable">LONG</span><span class="token operator">=</span>force,recover:,list,help
@@ -302,8 +288,7 @@ function turnExportOn() {
 <span class="token keyword">else</span>
     <span class="token builtin class-name">echo</span> <span class="token string">'Deplacement du fichier a la poubelle...'</span>
     <span class="token function">mv</span> <span class="token variable">$fichier</span> <span class="token variable">$POUBELLE</span>
-<span class="token keyword">fi</span>
-</code></pre>
+<span class="token keyword">fi</span></code></pre>
 <p>Ainsi, plusieurs possibilités sont envisagées :</p>
 <p><code>poubelle fichier</code> envoie le fichier dans la poubelle si fichier existe et qu’il n’y a pas de fichier appelé de la sorte dans la poubelle.</p>
 <p>Sinon, on peut forcer cette démarche en tapant <code>poubelle fichier -f</code>.</p>

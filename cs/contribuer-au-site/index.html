@@ -155,7 +155,7 @@
 <li>le ou les auteurs (il suffit d'ajouter une ligne)</li>
 <li>les tags du site. Doit au minimum contenir <code class="fichier">cs</code> si vous faite un cs, <code class="fichier">pok</code> si vous faites un pok et <code class="fichier">mon</code> si vous faites un mon.</li>
 </ul>
-<pre class="language-text " style="counter-reset: linenumber 0"><code class="language-text">---
+<pre class="language-text"><code class="language-text">---
 layout: layout/post.njk
 
 title: "Contribuer au site"
@@ -165,8 +165,7 @@ résumé: "Comment contribuer au site Do_It."
 
 tags:
   - 'cs'
----
-</code></pre>
+---</code></pre>
 <h3>Résumé</h3>
 <p>Dans l'entête.</p>
 <h3>corps du texte</h3>
@@ -174,11 +173,9 @@ tags:
 <h3>les ressources</h3>
 <p>Placez les ressources dans le même dossier que votre post. Vos liens auront alors l'une des deux formes suivantes</p>
 <h4>Ressources à télécharger</h4>
-<pre class="language-text " style="counter-reset: linenumber 0"><code class="language-text">[ressource à télécharger](./sources.zip)`{.fichier}
-</code></pre>
+<pre class="language-text"><code class="language-text">[ressource à télécharger](./sources.zip)`{.fichier}</code></pre>
 <h4>Images</h4>
-<pre class="language-text " style="counter-reset: linenumber 0"><code class="language-text">![image à voir](./mon-image.png)`{.fichier}
-</code></pre>
+<pre class="language-text"><code class="language-text">![image à voir](./mon-image.png)`{.fichier}</code></pre>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
@@ -225,14 +222,13 @@ tags:
 </ul>
 <h3>Shortcodes</h3>
 <p>Les <em>shortcodes</em> sont des aides markdown. Elles permettent de mettre en valeur un paragraphe. elles sont toutes de la même forme :</p>
-<pre class="language-text " style="counter-reset: linenumber 0"><code class="language-text"><div>
+<pre class="language-text"><code class="language-text"><div>
 &#123;% nom_shortcode "titre de la shortcode" %}
 
 le contenu de la shortcode.
 
 &#123;% endnom_shortcode %}
-</div>
-</code></pre>
+</div></code></pre>
 <div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -251,12 +247,11 @@ le contenu de la shortcode.
 <p>Une <em>grosse</em> mise en garde.</p>
 </div></div>
 <p>Code :</p>
-<pre class="language-text " style="counter-reset: linenumber 0"><code class="language-text"><div>
+<pre class="language-text"><code class="language-text"><div>
 &#123;% attention "**faisez** attention" %}
 Une *grosse* mise en garde.
 &#123;% endattention %}
-</div>
-</code></pre>
+</div></code></pre>
 <h4>Shortcode <code>note</code></h4>
 <p>Nom de la shortcode : <code>note</code></p>
 <div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
@@ -267,12 +262,11 @@ Une *grosse* mise en garde.
 <p>Une note à retenir.</p>
 </div></div>
 <p>Code :</p>
-<pre class="language-text " style="counter-reset: linenumber 0"><code class="language-text"><div>
+<pre class="language-text"><code class="language-text"><div>
 &#123;% note %}
 Une note à retenir.
 &#123;% endnote %}
-</div>
-</code></pre>
+</div></code></pre>
 <h4>Shortcode <code>info</code></h4>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -282,12 +276,11 @@ Une note à retenir.
 <p>Un truc marrant ou une information utile, mais pas indispensable.</p>
 </div></div>
 <p>Code :</p>
-<pre class="language-text " style="counter-reset: linenumber 0"><code class="language-text"><div>
+<pre class="language-text"><code class="language-text"><div>
 &#123;% info %}
 Un truc marrant ou une information utile, mais pas indispensable.
 &#123;% endinfo %}
-</div>
-</code></pre>
+</div></code></pre>
 <h4>Shortcode <code>faire</code></h4>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-yellow-500 bg-yellow-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -298,12 +291,11 @@ Un truc marrant ou une information utile, mais pas indispensable.
 <p>Quelque-chose à faire.</p>
 </div></div>
 <p>Code :</p>
-<pre class="language-text " style="counter-reset: linenumber 0"><code class="language-text"><div>
+<pre class="language-text"><code class="language-text"><div>
 &#123;% faire %}
 Quelque-chose à faire.
 &#123;% endfaire %}
-</div>
-</code></pre>
+</div></code></pre>
 <h4>Shortcode <code>details</code></h4>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
 <details class="group">
@@ -328,12 +320,11 @@ Quelque-chose à faire.
 </div>
 <p>Le titre de la shortcode est automatiquement mis en gras.</p>
 <p>Code :</p>
-<pre class="language-text " style="counter-reset: linenumber 0"><code class="language-text"><div>
+<pre class="language-text"><code class="language-text"><div>
 &#123;% details "titre de la shortcode" %}
 Quelque chose de caché. Que l'on peut *écrire* en `Markdown`
 &#123;% enddetails %}
-</div>
-</code></pre>
+</div></code></pre>
 <h4>Shortcode <code>exercice</code></h4>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-orange-500 bg-orange-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -368,15 +359,14 @@ Quelque chose de caché. Que l'on peut *écrire* en `Markdown`
 </details>     
 </div>
 <p>Code :</p>
-<pre class="language-text " style="counter-reset: linenumber 0"><code class="language-text"><div>
+<pre class="language-text"><code class="language-text"><div>
 &#123;% exercice %}
 Sujet de l'exercice
 &#123;% endexercice %}
 &#123;% details "corrigé" %}
 Le corrigé de l'exercice.
 &#123;% enddetails %}
-</div>
-</code></pre>
+</div></code></pre>
 <h4>Shortcode <code>chemin</code></h4>
 <p>Pour emmener vers un autre cours par exemple :</p>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-purple-500 bg-purple-100">
@@ -387,12 +377,11 @@ Le corrigé de l'exercice.
 <p><a href="https://francoisbrucker.github.io/cours_informatique/enseignements/ecm/3A/do-it/">Cours do-it de FB</a></p>
 </div></div>
 <p>Code :</p>
-<pre class="language-text " style="counter-reset: linenumber 0"><code class="language-text"><div>
+<pre class="language-text"><code class="language-text"><div>
 &#123;% chemin %}
 [Cours do-it de FB](https://francoisbrucker.github.io/cours_informatique/enseignements/ecm/3A/do-it/)
 &#123;% endchemin %}
-</div>
-</code></pre>
+</div></code></pre>
 <h4><span id="prerequis"></span>Shortcode <code>prerequis</code></h4>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -405,7 +394,7 @@ Le corrigé de l'exercice.
 </ul>
 </div></div>
 <p>Code :</p>
-<pre class="language-text " style="counter-reset: linenumber 0"><code class="language-text"><div>
+<pre class="language-text"><code class="language-text"><div>
 &#123;% prerequis %}
 
 - un pré-requis à lire
@@ -413,8 +402,7 @@ Le corrigé de l'exercice.
 
 &#123;% endprerequis %}
 
-</div>
-</code></pre>
+</div></code></pre>
 <h4><span id="lien"></span> Shortcode <code>lien</code></h4>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -428,7 +416,7 @@ Le corrigé de l'exercice.
 </div></div>
 
 <p>Code :</p>
-<pre class="language-text " style="counter-reset: linenumber 0"><code class="language-text"><div>
+<pre class="language-text"><code class="language-text"><div>
 &#123;% lien %}
 
 - [un MON utile](/promos/2023-2024/Lucie-Le-Boursicaud/mon/temps-2.2/)
@@ -436,8 +424,57 @@ Le corrigé de l'exercice.
 
 &#123;% endlien %}
 
-</div>
-</code></pre>
+</div></code></pre>
+<h3>Écrire du code</h3>
+<p>Pour écrire du code, le thème <a href="https://prismjs.com/">prismjs</a> se chargera de la coloration syntaxique.</p>
+<p>Par exemple :</p>
+<pre class="language-html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>icon<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>assets/favicon.png<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+        ...
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>language-none<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>header</span> <span class="token attr-name">data-plugin-header</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>line-numbers<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>header</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>section</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>language-markup<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>How to use<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+      ...
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+<p>Peut s'écrire avec le markdown suivant :</p>
+<pre>
+    <code>
+```html
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+    &lt;head>
+        &lt;meta charset="utf-8" />
+        &lt;link rel="icon" href="assets/favicon.png" />
+        ...
+    &lt;/head>
+    &lt;body class="language-none">
+    &lt;header data-plugin-header="line-numbers">
+    &lt;section class="language-markup">
+      &lt;h1>How to use
+      ...
+    &lt;/body>
+&lt;/html>
+```
+    </code>
+</pre>
+<p>Également, il est possible d'ajouter les numéros de ligne comme ceci :</p>
+<pre class="language-python"><code class="language-python"><span class="highlight-line"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token number">42</span><span class="token punctuation">)</span></span>
+<span class="highlight-line"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token number">43</span><span class="token punctuation">)</span></span></code></pre>
+<p>Avec le code :</p>
+<pre>
+    <code>
+```python/
+print(42)
+print(43)
+```
+    </code>
+</pre>
 <h3>Tables</h3>
 <p>On utilise les possibilités de <a href="https://fletcher.github.io/MultiMarkdown-6/syntax/tables.html">multimarkdown</a></p>
 <h4>Table avec titre</h4>
@@ -460,11 +497,10 @@ Le corrigé de l'exercice.
 </tbody>
 </table>
 <p>Code :</p>
-<pre class="language-text " style="counter-reset: linenumber 0"><code class="language-text">| titre colonne 1  | titre colonne 2 |
+<pre class="language-text"><code class="language-text">| titre colonne 1  | titre colonne 2 |
 | ---------------- | --------------- |
 | Content Cell     | Content Cell    |
-| Content Cell     | Content Cell    |
-</code></pre>
+| Content Cell     | Content Cell    |</code></pre>
 <h4>Tables sans titre</h4>
 <table>
 <tbody>
@@ -479,10 +515,9 @@ Le corrigé de l'exercice.
 </tbody>
 </table>
 <p>Code :</p>
-<pre class="language-text " style="counter-reset: linenumber 0"><code class="language-text">| ------------- | ------------- |
+<pre class="language-text"><code class="language-text">| ------------- | ------------- |
 | Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
-</code></pre>
+| Content Cell  | Content Cell  |</code></pre>
 <h4>Tables multi-colonnes</h4>
 <table>
 <tbody>
@@ -496,10 +531,9 @@ Le corrigé de l'exercice.
 </tbody>
 </table>
 <p>Code :</p>
-<pre class="language-markdown " style="counter-reset: linenumber 0"><code class="language-markdown">| ------------- | ------------- |
+<pre class="language-markdown"><code class="language-markdown">| ------------- | ------------- |
 | Je prends 2 colonnes ||
-| Content Cell | Content Cell |
-</code></pre>
+| Content Cell | Content Cell |</code></pre>
 <h4>Tables multi-lignes</h4>
 <table>
 <tbody>
@@ -517,11 +551,10 @@ Le corrigé de l'exercice.
 </tbody>
 </table>
 <p>Code :</p>
-<pre class="language-markdown " style="counter-reset: linenumber 0"><code class="language-markdown">| ------------- | ------------- |
+<pre class="language-markdown"><code class="language-markdown">| ------------- | ------------- |
 | Je prends 2 lignes |Content Cell |
 | ^^ |Content Cell |
-| Content Cell | Content Cell |
-</code></pre>
+| Content Cell | Content Cell |</code></pre>
 <h4>plusieurs ligne dans une cellule</h4>
 <table>
 <tbody>
@@ -546,11 +579,10 @@ Le corrigé de l'exercice.
 </tbody>
 </table>
 <p>Code :</p>
-<pre class="language-markdown " style="counter-reset: linenumber 0"><code class="language-markdown">| ------------- | ------------- |
+<pre class="language-markdown"><code class="language-markdown">| ------------- | ------------- |
 | 1. ligne colonne 1 | 1. ligne colonne 2 | \
 | 1. ligne colonne 1 | 2. ligne colonne 2 |
-| Content Cell | Content Cell |
-</code></pre>
+| Content Cell | Content Cell |</code></pre>
 <h4>Alignement horizontal</h4>
 <table>
 <tbody>
@@ -572,11 +604,10 @@ Le corrigé de l'exercice.
 </tbody>
 </table>
 <p>Code :</p>
-<pre class="language-markdown " style="counter-reset: linenumber 0"><code class="language-markdown">| :- | :-: | -: |
+<pre class="language-markdown"><code class="language-markdown">| :- | :-: | -: |
 | Content Cell | Content Cell | Content Cell |
 | Content Cell | Content Cell |Content Cell |
-| Content Cell | Content Cell |Content Cell |
-</code></pre>
+| Content Cell | Content Cell |Content Cell |</code></pre>
 <h4>Alignement vertical</h4>
 <p>On ajoute un style, mais il ne faut pas que ce soit la dernière colonne. Exemple sur une colonne multi-ligne :</p>
 <table>
@@ -595,11 +626,10 @@ Le corrigé de l'exercice.
 </tbody>
 </table>
 <p>Code :</p>
-<pre class="language-markdown " style="counter-reset: linenumber 0"><code class="language-markdown">| ------------- | ------------- |
+<pre class="language-markdown"><code class="language-markdown">| ------------- | ------------- |
 | Content Cell {style="vertical-align:middle"}| Content Cell |
 | ^^| Content Cell |
-| Content Cell | Content Cell |
-</code></pre>
+| Content Cell | Content Cell |</code></pre>
 <p>Si l'on veut avoir un alignement vertical de la dernière colonne, il faut ajouter une colonne vide (je ne sais pas trop pourquoi) :</p>
 <table>
 <tbody>
@@ -620,11 +650,10 @@ Le corrigé de l'exercice.
 </tbody>
 </table>
 <p>Code :</p>
-<pre class="language-markdown " style="counter-reset: linenumber 0"><code class="language-markdown">| ------------- | ------------- | - |
+<pre class="language-markdown"><code class="language-markdown">| ------------- | ------------- | - |
 | Content Cell | Content Cell {style="vertical-align:middle"}| |
 | Content Cell | ^^ | |
-| Content Cell | Content Cell | |
-</code></pre>
+| Content Cell | Content Cell | |</code></pre>
 <h2>tbd</h2>
 <blockquote>
 <p>TBD</p>

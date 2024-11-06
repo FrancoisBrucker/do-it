@@ -371,10 +371,9 @@ En cherchant plus globalement sur internet, j'ai trouvé <a href="https://www.ka
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">contientElement</span><span class="token punctuation">(</span><span class="token parameter">array<span class="token punctuation">,</span> element</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">contientElement</span><span class="token punctuation">(</span><span class="token parameter">array<span class="token punctuation">,</span> element</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> array<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>element<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Retourne true si l'élément est trouvé dans le tableau</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 </div>
 </details>     
 </div>
@@ -398,7 +397,7 @@ En cherchant plus globalement sur internet, j'ai trouvé <a href="https://www.ka
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">getRecipe</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">getRecipe</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token comment">//Definition des paramètres des pages </span>
   <span class="token keyword">let</span> mainSheet <span class="token operator">=</span> SpreadsheetApp<span class="token punctuation">.</span><span class="token function">getActiveSpreadsheet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getSheetByName</span><span class="token punctuation">(</span><span class="token string">'CHOIX'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">let</span> mainLastRow <span class="token operator">=</span> mainSheet<span class="token punctuation">.</span><span class="token function">getLastRow</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -451,8 +450,7 @@ En cherchant plus globalement sur internet, j'ai trouvé <a href="https://www.ka
     <span class="token keyword">var</span> message <span class="token operator">=</span> <span class="token string">"Vous pouvez réaliser un(e) "</span><span class="token operator">+</span>recetteRetenue <span class="token operator">+</span> <span class="token string">"\n\n Il vous faudra tous ces ingrédients:\n -"</span> <span class="token operator">+</span> recetteIngredients<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">'\n-'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
   ui<span class="token punctuation">.</span><span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'Voici une recette possible'</span><span class="token punctuation">,</span> message<span class="token punctuation">,</span> ui<span class="token punctuation">.</span>ButtonSet<span class="token punctuation">.</span><span class="token constant">OK</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 </div>
 </details>     
 </div>
@@ -791,8 +789,7 @@ Ex : un <strong>enfant (de moins de 6 ans)</strong> c'est aussi un <strong>enfan
 <li>on définit d'abord les variables qui vont contenir les données de l'utilisateur récupérées : <strong>prénom</strong> (pour personnaliser le mail) et <strong>e-mail</strong> (pour envoyer le message).</li>
 <li>on vient créer un template pour construire le code <strong>html</strong></li>
 </ul>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">var</span> htmlTemplate <span class="token operator">=</span> HtmlService<span class="token punctuation">.</span><span class="token function">createTemplateFromFile</span><span class="token punctuation">(</span><span class="token string">'email'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">var</span> htmlTemplate <span class="token operator">=</span> HtmlService<span class="token punctuation">.</span><span class="token function">createTemplateFromFile</span><span class="token punctuation">(</span><span class="token string">'email'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>A partir de cette ligne, on appelle le fichier <strong>email.html</strong> créé qui contient le corps du message</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
 <details class="group">
@@ -811,7 +808,7 @@ Ex : un <strong>enfant (de moins de 6 ans)</strong> c'est aussi un <strong>enfan
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<pre class="language-html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>base</span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_top<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -833,8 +830,7 @@ Ex : un <strong>enfant (de moins de 6 ans)</strong> c'est aussi un <strong>enfan
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span><span class="token value css language-css"><span class="token property">font-size</span><span class="token punctuation">:</span>15px<span class="token punctuation">;</span><span class="token property">font-family</span><span class="token punctuation">:</span><span class="token string">"Segoe UI Emoji"</span><span class="token punctuation">,</span>sans-serif<span class="token punctuation">;</span></span><span class="token punctuation">'</span></span></span><span class="token punctuation">></span></span>⚠️<span class="token entity named-entity" title="&nbsp;">&amp;nbsp;</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span>226<span class="token punctuation">,</span> 80<span class="token punctuation">,</span> 65<span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">></span></span>ATTENTION<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span><span class="token value css language-css"><span class="token property">font-size</span><span class="token punctuation">:</span>15px<span class="token punctuation">;</span><span class="token property">font-family</span><span class="token punctuation">:</span><span class="token string">"Segoe UI Emoji"</span><span class="token punctuation">,</span>sans-serif<span class="token punctuation">;</span></span><span class="token punctuation">'</span></span></span><span class="token punctuation">></span></span>⚠️<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span>226<span class="token punctuation">,</span> 80<span class="token punctuation">,</span> 65<span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>D<span class="token entity named-entity" title="&apos;">&amp;apos;</span>apr<span class="token entity named-entity" title="&egrave;">&amp;egrave;</span>s les recommandations du m<span class="token entity named-entity" title="&eacute;">&amp;eacute;</span>dicament : <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">></span></span> <span class="token prolog">&lt;?= attention ?></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">></span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
-</code></pre>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
 </div>
 </details>     
 </div>
@@ -842,18 +838,16 @@ Ex : un <strong>enfant (de moins de 6 ans)</strong> c'est aussi un <strong>enfan
 <li>on définit toutes les <strong>variables</strong> qui sont appelées dans le code html</li>
 <li>on <strong>évalue</strong> le modèle HTML <em>(ie on remplace les variables et expressions dans le modèle par leurs valeurs correspondantes)</em> et on renvoie le résultat</li>
 </ul>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">var</span> htmlForEmail <span class="token operator">=</span> htmlTemplate<span class="token punctuation">.</span><span class="token function">evaluate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getContent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">var</span> htmlForEmail <span class="token operator">=</span> htmlTemplate<span class="token punctuation">.</span><span class="token function">evaluate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getContent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <ul>
 <li>on envoie le mail au <strong>destinataire</strong>, en renseignant <strong>l'objet du mail</strong></li>
 </ul>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript">GmailApp<span class="token punctuation">.</span><span class="token function">sendEmail</span><span class="token punctuation">(</span>
+<pre class="language-javascript"><code class="language-javascript">GmailApp<span class="token punctuation">.</span><span class="token function">sendEmail</span><span class="token punctuation">(</span>
     emailRecipient<span class="token punctuation">,</span>
     <span class="token string">'My Google Health Assistant: Ton résultat de sélection de complément alimentaire personnalisé'</span><span class="token punctuation">,</span>
     <span class="token string">"This email contains html"</span><span class="token punctuation">,</span>
     <span class="token punctuation">{</span><span class="token literal-property property">htmlBody</span><span class="token operator">:</span> htmlForEmail<span class="token punctuation">}</span>
-  <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <h4 id="tests"> Fonctions annexes tests </h4>
 <p>Ces fonctions regroupent des tests qui devaient être réalisés à plusieurs reprises. On y retrouve notamment :</p>
 <ul>
@@ -878,15 +872,14 @@ Ex : un <strong>enfant (de moins de 6 ans)</strong> c'est aussi un <strong>enfan
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">testPresence</span><span class="token punctuation">(</span><span class="token parameter">valeurCellule<span class="token punctuation">,</span> chaineRecherche</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">testPresence</span><span class="token punctuation">(</span><span class="token parameter">valeurCellule<span class="token punctuation">,</span> chaineRecherche</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token comment">// Vérifie si la chaîne de caractères est présente dans la valeur de la cellule</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span>valeurCellule<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>chaineRecherche<span class="token punctuation">)</span> <span class="token operator">!==</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span> <span class="token comment">// La cellule contient la chaîne de caractères</span>
   <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span> <span class="token comment">// La cellule ne contient pas la chaîne de caractères</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 </div>
 </details>     
 </div>
@@ -910,7 +903,7 @@ Ex : un <strong>enfant (de moins de 6 ans)</strong> c'est aussi un <strong>enfan
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">getArray</span><span class="token punctuation">(</span><span class="token parameter">array<span class="token punctuation">,</span> cell</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">getArray</span><span class="token punctuation">(</span><span class="token parameter">array<span class="token punctuation">,</span> cell</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token comment">//on regarde s'il y a plusieurs items sélectionnés, en comptant le nombre virgules</span>
   <span class="token comment">//(recherche toutes les apparitions du motif /,/ (ie virgules) de manière "globale" et les ajoute dans un array )</span>
   <span class="token comment">// par défaut, si ne trouve rien, renvoie un tableau vide </span>
@@ -926,8 +919,7 @@ Ex : un <strong>enfant (de moins de 6 ans)</strong> c'est aussi un <strong>enfan
   <span class="token keyword">return</span> element<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// utilisation de trim() pour enlever les espaces avant et après la chaîne</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> arraySansEspace<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 </div>
 </details>     
 </div>
@@ -951,14 +943,13 @@ Ex : un <strong>enfant (de moins de 6 ans)</strong> c'est aussi un <strong>enfan
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">removeNonValid</span> <span class="token punctuation">(</span><span class="token parameter">value<span class="token punctuation">,</span>array<span class="token punctuation">,</span>item</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">removeNonValid</span> <span class="token punctuation">(</span><span class="token parameter">value<span class="token punctuation">,</span>array<span class="token punctuation">,</span>item</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
   <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>array<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">)</span><span class="token punctuation">{</span>
       <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">testPresence</span><span class="token punctuation">(</span>value<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
         array<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
       <span class="token punctuation">}</span>
     <span class="token punctuation">}</span> 
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 </div>
 </details>     
 </div>

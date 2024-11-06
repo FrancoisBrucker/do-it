@@ -171,11 +171,10 @@
 <p>Mais il existe un nombre limité de fonctions, Google Apps Script permet de créer la fonction qui répond à nos besoins.</p>
 <p><strong>Comment faire ?</strong></p>
 <p>On créer une fonction :</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">MaFonction</span><span class="token punctuation">(</span><span class="token parameter">mesParametres</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">MaFonction</span><span class="token punctuation">(</span><span class="token parameter">mesParametres</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
   <span class="token comment">// Mes calculs</span>
   <span class="token keyword">return</span> resultat
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>et dans la case où on veut appliquer la fonction, on applique le calcul : <strong>=MaFonction(A1)</strong></p>
 <h3 id="h2-2">Automatiser plusieurs cases</h3>
 <p>Les fonctions de Google Apps Script <strong>n'offrent pas seulement</strong> la possibilité de modifier une unique case (une formule retourne une unique valeur qui est stockée dans une seule cellule).
@@ -284,7 +283,7 @@ Google Apps Script offre aussi la possibilité de gérer un grand nombre de case
 <h4 id="h2-3-1">Temporellement</h4>
 <p>Il est possible de déclencher une fonction de manière temporelle.</p>
 <p>Voici un exemple, issue de la documentation de Google <a href="#liens">liens</a></p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">createTimeDrivenTriggers</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">createTimeDrivenTriggers</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token comment">// Trigger every 6 hours.</span>
   ScriptApp<span class="token punctuation">.</span><span class="token function">newTrigger</span><span class="token punctuation">(</span><span class="token string">'myFunction'</span><span class="token punctuation">)</span>
       <span class="token punctuation">.</span><span class="token function">timeBased</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
@@ -296,8 +295,7 @@ Google Apps Script offre aussi la possibilité de gérer un grand nombre de case
       <span class="token punctuation">.</span><span class="token function">onWeekDay</span><span class="token punctuation">(</span>ScriptApp<span class="token punctuation">.</span>WeekDay<span class="token punctuation">.</span><span class="token constant">MONDAY</span><span class="token punctuation">)</span>
       <span class="token punctuation">.</span><span class="token function">atHour</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span>
       <span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>J'ai pas cependant eu l'occasion d'aller en profondeur dans cette fonctionnalité, le laisse cette possibilité à quelqu'un d'autre pour un autre MON 😉</p>
 <h4 id="h2-3-1">Listener</h4>
 <p>En créant une fonction ayant des noms spécifiques, il est possible de déclencher un script lors qu'un action se produit.</p>
@@ -307,12 +305,11 @@ Google Apps Script offre aussi la possibilité de gérer un grand nombre de case
 <li>onOpen : executée à chaque fois qu'un utlisateur (ayant des droits de modification) se connecte sur le google sheet.</li>
 </ul>
 <p>exemple :</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">onEdit</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">onEdit</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
   <span class="token comment">//supprime le contenu de toute les cases modifiées (⊙ˍ⊙)</span>
   <span class="token keyword">const</span> range <span class="token operator">=</span> e<span class="token punctuation">.</span>range<span class="token punctuation">;</span>
   range<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Il existe quelques autres fonctions, comme d'habitude le détail dans les <a href="#liens">liens</a>👇</p>
 <h2 id="h3"> Exemple - Création d'un Tricount </h2>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
@@ -323,13 +320,12 @@ Google Apps Script offre aussi la possibilité de gérer un grand nombre de case
 <p>L'objectif est de créer un Tricount, permettant de gérer les comptes à plusieurs. Très utilisé dans les colocs centraliennes notamment. Chacun ajoute les dépenses faites pour le groupe et l'application comptabilise combien d'argent chacun doit à qui.</p>
 </div></div>
 <p>Le projet est composé de paramtères modifiables, pour permettre de personnaliser le Google Sheet</p>
-<pre class="language-javascript " style="counter-reset: linenumber 0"><code class="language-javascript"><span class="token keyword">const</span> tricountSettings <span class="token operator">=</span> <span class="token punctuation">{</span>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> tricountSettings <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token literal-property property">sourceSheet</span><span class="token operator">:</span> <span class="token string">'Ajout_achat'</span><span class="token punctuation">,</span>
   <span class="token literal-property property">targetSheet</span><span class="token operator">:</span> <span class="token string">'Historique'</span><span class="token punctuation">,</span>
   <span class="token literal-property property">statSheet</span><span class="token operator">:</span> <span class="token string">'Statistiques'</span><span class="token punctuation">,</span>
   <span class="token literal-property property">people</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token string">"Personne 1"</span><span class="token punctuation">,</span><span class="token string">"Personne 2"</span><span class="token punctuation">,</span> <span class="token string">"Personne 3"</span><span class="token punctuation">]</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Et de 4 fonctions :</p>
 <ul>
 <li><strong>tricountAddToHistory</strong>, dont le but est de transférer les données d'ajout d'achat dans la partie historique (fonction inspirée du <a href="https://support.google.com/docs/thread/41717054">travail de --Hyde</a>)</li>

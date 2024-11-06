@@ -496,8 +496,7 @@ On met en place dans accountService toutes les fonctions qui concernent la créa
 <p>Il nous faut alors une base de données, elle est hébergée dans un conteneur Docker et est lancé grâce à un fichier docker-compose.yml .</p>
 <p>Ensuite, nous mettons en place dans <a href="https://github.com/TuncayBilgi/cybersecenv/blob/main/cyberenv-back/src/routes.ts">route.ts</a> et <a href="https://github.com/TuncayBilgi/cybersecenv/blob/main/cyberenv-back/src/controller/AccountController.ts">accountController.ts</a> les différentes routes qui peuvent être appelées par le front.
 Ainsi, si un navigateur envoie à l'adresse <a href="http://localhost:3000/account/create">http://localhost:3000/account/create</a> (qui est une adresse locale) une requête POST avec le body suivant :</p>
-<pre class="language-json " style="counter-reset: linenumber 0"><code class="language-json"><span class="token punctuation">{</span><span class="token property">"login"</span> <span class="token operator">:</span> <span class="token string">"test"</span><span class="token punctuation">,</span> <span class="token property">"password"</span> <span class="token operator">:</span> <span class="token string">"motdepasse"</span><span class="token punctuation">}</span>
-</code></pre>
+<pre class="language-json"><code class="language-json"><span class="token punctuation">{</span><span class="token property">"login"</span> <span class="token operator">:</span> <span class="token string">"test"</span><span class="token punctuation">,</span> <span class="token property">"password"</span> <span class="token operator">:</span> <span class="token string">"motdepasse"</span><span class="token punctuation">}</span></code></pre>
 <p>Le contrôleur va récupérer ce body, le transformer en account grâce au dto, et l'envoyer dans le service des accounts pour lancer une procédure de création de compte.</p>
 <p>Envoyons des requêtes au serveur grâce au logiciel Insominia et observons les réponses :</p>
 <p>On voit que si on envoie notre requête GET, le backend répond :</p>
@@ -517,7 +516,7 @@ Pour cela, nous utilisons un formulaire. L'utilisateur rempli le formulaire et l
 </div>
 <h3>Lancer le projet :</h3>
 <p>Pour lancer le projet, il faut executer</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token comment">// dans le répertoire du backend</span>
+<pre class="language-js"><code class="language-js"><span class="token comment">// dans le répertoire du backend</span>
 npm install
 docker<span class="token operator">-</span>compose up <span class="token operator">-</span>d
 npm start 
@@ -525,7 +524,6 @@ npm start
 <span class="token comment">// dans le répertoire du frontend et dans un autre terminal</span>
 npm install
 npm run dev
-
 </code></pre>
 <h2>Pour aller plus loin :</h2>
 <p>Ce site va servir de base pour un prochain projet ou je testerai des principes de cyber-sécurités.

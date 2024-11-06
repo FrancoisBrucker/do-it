@@ -165,7 +165,7 @@
 <p>Je souhaitais dès le début de l'année savoir comment créer un site web, et cela passe par l'apprentissage de l'HTML et du CSS. Suivant les recommandations des <a href="https://francoisbrucker.github.io/do-it/mon/2023-2024/">MONs précédents</a>, j'ai choisi de suivre la formation de 15 heures disponible sur OpenClassrooms. Nous sommes amené tout au long de la formation à mettre nos connaissances en pratique à travers la construction d'un site web fictif de Robbie Lens.</p>
 <h2>Structure de la page</h2>
 <p>La structure sommaire d'une page web est la suivante :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span> 
+<pre class="language-html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span> 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fr<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>  <span class="token comment">&lt;!--Balise principale : elle nous dit que la langue de la page est en français --></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>        <span class="token comment">&lt;!--Balise d'en tête : contient les informations de la page, comme le nom ou le type de caractère utilisé--></span>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -174,12 +174,11 @@
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span> <span class="token comment">&lt;!-- Corps de la page : Contient tous les éléments visibles pour l'utilisateur--></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
-
 </code></pre>
 <p>Les différents éléments de la page sont définis par des balises (par exemple : <code>&lt;head&gt;</code> et <code>&lt;/head&gt;</code>) qui ouvrent et ferment le bloc.
 Pour plus de détails, je vous recommande de consulter le <a href="https://francoisbrucker.github.io/do-it/promos/2023-2024/Vladimir-Jeantroux/mon/temps-1-1/">MON de Vladimir</a> qui détaille l'ensemble des balises standards.</p>
 <p>On y rajoute des paragraphes avec <code>&lt;p&gt;</code> et des sections avec <code>&lt;div&gt;</code>.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span> 
+<pre class="language-html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span> 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fr<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>  
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>        
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -198,7 +197,6 @@ Pour plus de détails, je vous recommande de consulter le <a href="https://franc
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>header</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
-
 </code></pre>
 <p>Cependant, nous n'avons ici écrit que la structure du site que le navigateur interprètera.
 Il est aussi important de s'attarder sur la forme et la mise en page.</p>
@@ -207,16 +205,14 @@ Il est aussi important de s'attarder sur la forme et la mise en page.</p>
 <p>Personnellement, je retiens les points suivants pour mon futur site Web.</p>
 <h4>Les Grid</h4>
 <p>Les Grid permettent de créer un tableau sur la page qui facilite la mise en page. On déclare le composant que l'on souhaite transformer en grid en HTML, puis on le paramètre en CSS. Voici un exemple de syntaxe :</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css"><span class="token selector">.composant</span> <span class="token punctuation">{</span>
+<pre class="language-css"><code class="language-css"><span class="token selector">.composant</span> <span class="token punctuation">{</span>
     <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>
     <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 200px 200px 200px<span class="token punctuation">;</span>
     <span class="token property">grid-template-rows</span><span class="token punctuation">:</span> 400px 150px 200px<span class="token punctuation">;</span>
     <span class="token property">gap</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Je conseille d'utiliser les unités relatives <em>fr</em> (fraction units) pour s'adapter à toutes les tailles d'écrans. Cela permet une meilleure accessibilité sur tous les appareils. On peut par exemple écrire ceci :</p>
-<pre class="language-css " style="counter-reset: linenumber 0"><code class="language-css">    <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 1fr 2fr<span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-css"><code class="language-css">    <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 1fr 2fr<span class="token punctuation">;</span></code></pre>
 <p>Une deuxième manière de structurer la page web en CSS repose sur les Flexbox.</p>
 <h4>Flexbox</h4>
 <p>C'est pour ma part la syntaxe que j'ai préféré utiliser par rapport aux Grids. Je la trouve plus intuitive et maniable dans son comportement. La philosophie de Flexbox repose en mon sens sur la géométrie, ce qui est assez naturel. On oriente en CSS un axe primaire pour indiquer au navigateur dans quel sens doivent naviguer les boxes. Naturellement, l'axe secondaire correspond à sa rotation de 90°. On peut ainsi effectuer toutes les opérations auxquelles l'on pourrait penser en indiquant à CSS l'axe concerné.</p>

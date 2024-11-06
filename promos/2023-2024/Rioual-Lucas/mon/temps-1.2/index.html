@@ -183,10 +183,9 @@ Voici le lien de <a href="https://github.com/LucasRioual/Back">mon repo Github</
 <p>Une route est une déclaration qui associe une URL spécifique à un ensemble d'instructions qui doivent être exécutées lorsque cette URL est accédée par un client.</p>
 </div></div>
 <p>Voici un exemple de configuration de route avec express :</p>
-<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx">app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token string">'/api/stuff'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<pre class="language-jsx"><code class="language-jsx">app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token string">'/api/stuff'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">message</span><span class="token operator">:</span> <span class="token string">'Votre requête a bien été reçue !'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>Ici, lorsqu’une requête HTTP est envoyé à la route  <strong><a href="http://localhost:8000/api/stuff">http://localhost:8000/api/stuff</a></strong>, le serveur envoie une réponse au format JSON qui est : “Votre requête a bien été reçue !”.</p>
 <h2>Construire son backend avec Node.js et Express</h2>
 <p>Pour apprendre concrètement comment mettre en place un serveur avec <a href="https://nodejs.org/fr">Node.js</a>. J'ai suivi le <a href="https://openclassrooms.com/fr/courses/6390246-passez-au-full-stack-avec-node-js-express-et-mongodb">tuto d'OpenClassRoom</a>. Si comme moi, vous n'avez aucune connaissance en backend, je ne vous conseille pas de suivre ce tuto. On ne comprend pas bien comment le frontend interagit avec le backend et je trouve que certaines notions ne sont pas claires pour les débutants.</p>
@@ -203,19 +202,17 @@ Voici le lien de <a href="https://github.com/LucasRioual/Back">mon repo Github</
 <p>L’installation de ces outils est bien expliquer dans cette <a href="https://openclassrooms.com/fr/courses/6390246-passez-au-full-stack-avec-node-js-express-et-mongodb/6466206-configurez-votre-environnement-de-developpement">partie</a>.</p>
 <p>Cependant, j’ai eu un problème lors de l’installation de nodemon (outil qui redémarre automatiquement notre serveur lorsqu’il détecte un changement).</p>
 <p>Si vous avez cette erreur :</p>
-<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token literal-property property">nodemon</span> <span class="token operator">:</span> Impossible de charger le fichier <span class="token constant">C</span><span class="token operator">:</span>\Users\utilisateur\AppData\Roaming\npm\nodemon<span class="token punctuation">.</span>ps1<span class="token punctuation">,</span> car l’exécution de scripts est désactivée sur ce système<span class="token punctuation">.</span> Pour plus 
+<pre class="language-jsx"><code class="language-jsx"><span class="token literal-property property">nodemon</span> <span class="token operator">:</span> Impossible de charger le fichier <span class="token constant">C</span><span class="token operator">:</span>\Users\utilisateur\AppData\Roaming\npm\nodemon<span class="token punctuation">.</span>ps1<span class="token punctuation">,</span> car l’exécution de scripts est désactivée sur ce système<span class="token punctuation">.</span> Pour plus 
 d’informations<span class="token punctuation">,</span> consultez about_Execution_Policies à l’adresse https<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>go<span class="token punctuation">.</span>microsoft<span class="token punctuation">.</span>com<span class="token operator">/</span>fwlink<span class="token operator">/</span><span class="token operator">?</span>LinkID<span class="token operator">=</span><span class="token number">135170.</span>
 Au caractère Ligne<span class="token operator">:</span><span class="token number">1</span> <span class="token operator">:</span> <span class="token number">1</span>
 <span class="token operator">+</span> nodemon server
 <span class="token operator">+</span> <span class="token operator">~</span><span class="token operator">~</span><span class="token operator">~</span><span class="token operator">~</span><span class="token operator">~</span><span class="token operator">~</span><span class="token operator">~</span>
     <span class="token operator">+</span> CategoryInfo          <span class="token operator">:</span> Erreur de sécurité <span class="token operator">:</span> <span class="token punctuation">(</span><span class="token operator">:</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> PSSecurityException
-    <span class="token operator">+</span> FullyQualifiedErrorId <span class="token operator">:</span> UnauthorizedAccess
-</code></pre>
+    <span class="token operator">+</span> FullyQualifiedErrorId <span class="token operator">:</span> UnauthorizedAccess</code></pre>
 <p>sur Windows, il faut ouvrir le powershell en admin et écrire :</p>
-<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx">Set<span class="token operator">-</span>ExecutionPolicy RemoteSigned
-</code></pre>
+<pre class="language-jsx"><code class="language-jsx">Set<span class="token operator">-</span>ExecutionPolicy RemoteSigned</code></pre>
 <p>Ensuite le tuto explique bien la notion de middleware et comment gérer les routes avec Express. Il explique aussi comment bien organiser son backend pour en faciliter la compréhension et la gestion. On sépare notre code en différentes couches.</p>
-<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx">
+<pre class="language-jsx"><code class="language-jsx">
 │   app<span class="token punctuation">.</span>js
 │   <span class="token keyword">package</span><span class="token operator">-</span>lock<span class="token punctuation">.</span>json
 │   <span class="token keyword">package</span><span class="token punctuation">.</span>json
@@ -229,12 +226,11 @@ Au caractère Ligne<span class="token operator">:</span><span class="token numbe
 │       user<span class="token punctuation">.</span>js
 └───routes
         stuff<span class="token punctuation">.</span>js
-        user<span class="token punctuation">.</span>js
-</code></pre>
+        user<span class="token punctuation">.</span>js</code></pre>
 <ul>
 <li><strong>Models</strong> : pour définir les schémas de base de données (ici on utilise MongoDB)</li>
 </ul>
-<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token comment">//models/thing.js</span>
+<pre class="language-jsx"><code class="language-jsx"><span class="token comment">//models/thing.js</span>
 <span class="token keyword">const</span> mongoose <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mongoose'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> thingSchema <span class="token operator">=</span> mongoose<span class="token punctuation">.</span><span class="token function">Schema</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
@@ -245,13 +241,12 @@ Au caractère Ligne<span class="token operator">:</span><span class="token numbe
   <span class="token literal-property property">price</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">type</span><span class="token operator">:</span> Number<span class="token punctuation">,</span> <span class="token literal-property property">required</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-module<span class="token punctuation">.</span>exports <span class="token operator">=</span> mongoose<span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span><span class="token string">'Thing'</span><span class="token punctuation">,</span> thingSchema<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> mongoose<span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span><span class="token string">'Thing'</span><span class="token punctuation">,</span> thingSchema<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>Ici on créer un schéma de donnée qui représente un objet quelconque à vendre</p>
 <ul>
 <li><strong>Routes</strong> : pour définir les routes de l'application</li>
 </ul>
-<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token comment">//routes/stuff.js</span>
+<pre class="language-jsx"><code class="language-jsx"><span class="token comment">//routes/stuff.js</span>
 <span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> router <span class="token operator">=</span> express<span class="token punctuation">.</span><span class="token function">Router</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
@@ -263,17 +258,15 @@ router<span class="token punctuation">.</span><span class="token function">get</
 router<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">'/:id'</span><span class="token punctuation">,</span> stuffCtrl<span class="token punctuation">.</span>modifyThing<span class="token punctuation">)</span><span class="token punctuation">;</span>
 router<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span><span class="token string">'/:id'</span><span class="token punctuation">,</span> stuffCtrl<span class="token punctuation">.</span>deleteThing<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-module<span class="token punctuation">.</span>exports <span class="token operator">=</span> router<span class="token punctuation">;</span>
-</code></pre>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> router<span class="token punctuation">;</span></code></pre>
 <p>Ici, on s’occupe des différentes routes ayant pour racine <strong>/api/stuff</strong>(définis dans le fichier app.js)</p>
-<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token comment">//app.js</span>
+<pre class="language-jsx"><code class="language-jsx"><span class="token comment">//app.js</span>
 <span class="token keyword">const</span> stuffRoutes <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./routes/stuff'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token string">'/api/stuff'</span><span class="token punctuation">,</span> stuffRoutes<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token string">'/api/stuff'</span><span class="token punctuation">,</span> stuffRoutes<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <ul>
 <li><strong>Controllers</strong> : pour gérer la logique métier</li>
 </ul>
-<pre class="language-jsx " style="counter-reset: linenumber 0"><code class="language-jsx"><span class="token keyword">const</span> Thing <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../models/thing'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-jsx"><code class="language-jsx"><span class="token keyword">const</span> Thing <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../models/thing'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 exports<span class="token punctuation">.</span><span class="token function-variable function">createThing</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> thing <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Thing</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
@@ -296,8 +289,7 @@ exports<span class="token punctuation">.</span><span class="token function-varia
       <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
 <p>Ici on développe les fonctions associées à chaque <strong>route</strong>. J’ai affiché que la fonction qui permet de créer un nouvel élément dans la base de donnée.</p>
 <p>Enfin, il y a quelque chose que je n’avais pas compris dans ce tuto.</p>
 <p>La partie frontend s’exécute sur un serveur local en tapant (<strong>npm run start</strong>) qui est différent du serveur Node que nous créons.</p>

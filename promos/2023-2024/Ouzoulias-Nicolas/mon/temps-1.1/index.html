@@ -169,7 +169,7 @@
 <p>Cette <em>encapsulation</em> du code peut permettre de sécuriser l'accès aux données ainsi que de limiter les modifications accidentelles lors de l'écriture de celui-ci.</p>
 <h4>Différences de syntaxe avec Python :</h4>
 <p><em><strong>Java :</strong></em></p>
-<pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+<pre class="language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">max</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">if</span> <span class="token punctuation">(</span>a <span class="token operator">></span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token keyword">return</span> a<span class="token punctuation">;</span>
@@ -184,10 +184,9 @@
         <span class="token keyword">int</span> resultat <span class="token operator">=</span> <span class="token function">max</span><span class="token punctuation">(</span>num1<span class="token punctuation">,</span> num2<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Le plus grand nombre est : "</span> <span class="token operator">+</span> resultat<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p><em><strong>Python :</strong></em></p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">max</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">max</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">if</span> a <span class="token operator">></span> b<span class="token punctuation">:</span>
         <span class="token keyword">return</span> a
     <span class="token keyword">else</span><span class="token punctuation">:</span>
@@ -196,15 +195,14 @@
 num1 <span class="token operator">=</span> <span class="token number">10</span>
 num2 <span class="token operator">=</span> <span class="token number">20</span>
 resultat <span class="token operator">=</span> <span class="token builtin">max</span><span class="token punctuation">(</span>num1<span class="token punctuation">,</span> num2<span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Le plus grand nombre est :"</span><span class="token punctuation">,</span> resultat<span class="token punctuation">)</span>
-</code></pre>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Le plus grand nombre est :"</span><span class="token punctuation">,</span> resultat<span class="token punctuation">)</span></code></pre>
 <p>Pour une même fonction très simple qui renvoie le maximum entre deux nombres on observe facilement les différences de syntaxe entre les 2 langages et pourquoi Python peut être considéré comme plus simple à prendre en main, il y a moins de lignes et de caractères tout en semblant plus procédurale.</p>
 <h2>III. La Programmation Orientée Objet (POO)</h2>
 <p>Une grande partie de la formation se concentrait sur la POO et comment bien l'utiliser en Java. N'ayant que très peu pratiquer ce type de programmation j'ai pu découvrir les bases de celles-ci tout en mettant en pratique ce que je venais d'apprendre en Java.</p>
 <p><img src="https://www.data-transitionnumerique.com/wp-content/uploads/2021/03/classe.webp" alt="descriptionPOO"></p>
 <p><em>Schéma provenant du site : <a href="https://www.data-transitionnumerique.com/apprendre-programmation-objet/">https://www.data-transitionnumerique.com/apprendre-programmation-objet/</a></em></p>
 <p>La POO est une manière de programmer en se basant sur le concept d'<em>objets</em> possédant des <em>attributs</em> et des <em>méthodes</em>.</p>
-<pre class="language-java " style="counter-reset: linenumber 0"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TestObjet</span><span class="token punctuation">{</span>
+<pre class="language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TestObjet</span><span class="token punctuation">{</span>
 	
 	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>	
 		<span class="token class-name">Voiture</span> voiture <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Voiture</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -234,8 +232,7 @@ resultat <span class="token operator">=</span> <span class="token builtin">max</
 
 <span class="token keyword">class</span> <span class="token class-name">Bateau</span> <span class="token keyword">extends</span> <span class="token class-name">Vehicule</span><span class="token punctuation">{</span>
 	
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Comme sur l'exemple précédent des classes filles peuvent <strong>hériter</strong> d'une classe mère mais également utiliser différemment les méthodes mères sans les modifier directement, c'est le <strong>polymorphisme</strong>.</p>
 <p>Ici les classes <code>Voiture</code> et <code>Bateau</code> descendent de la classe <code>Vehicule</code> et possèdent donc la méthode <code>.start()</code>, cependant cette dernière est différente pour les voitures.</p>
 <h4>Avantages de la POO :</h4>

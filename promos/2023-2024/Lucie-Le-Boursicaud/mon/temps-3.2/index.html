@@ -526,15 +526,14 @@ Le test a été ajusté pour utiliser l'opérateur <code>+</code> à la place de
 </ul>
 <p>Cette étape nous a permis d'ajouter la fonctionnalité d'addition pour une unique devise, ce qui constitue un progrès dans la réalisation des opérations monétaires de base.</p>
 <p>Voici le test que j'ai ajouté :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">def test_addition():
+<pre class="language-html"><code class="language-html">def test_addition():
     cinq = monnaie.dollar(5)
     deux = monnaie.dollar(2)
     sept = monnaie.dollar(7)
     assert cinq.plus(deux) == sept
-
 </code></pre>
 <p>Et voici mon code :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">class Monnaie:
+<pre class="language-html"><code class="language-html">class Monnaie:
     def __init__(self, montant, devise):
         self.montant = montant
         self.devise = devise
@@ -549,13 +548,11 @@ Le test a été ajusté pour utiliser l'opérateur <code>+</code> à la place de
         return Monnaie(self.montant * multiplicateur, self.devise)
     
     def plus(self, other):
-        return Monnaie(self.montant + other.montant, self.devise)
-</code></pre>
+        return Monnaie(self.montant + other.montant, self.devise)</code></pre>
 <p>Et mes tests passent.
 Après vérification ma fonction <strong> plus </strong> est similaire à la correction et mon test peut-être simplifié de cette façon mais l'idée est la même :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">def test_plus():
-    assert monnaie.dollar(7) == monnaie.dollar(5).plus(monnaie.dollar(2))
-</code></pre>
+<pre class="language-html"><code class="language-html">def test_plus():
+    assert monnaie.dollar(7) == monnaie.dollar(5).plus(monnaie.dollar(2))</code></pre>
 <h3>13. Addition</h3>
 <p>Avant de traiter l'addition de deux monnaies différentes, il est nécessaire de commencer par traiter le cas de l'addition de montants d'une même monnaie.</p>
 <ul>
@@ -746,58 +743,51 @@ Implémentez la méthode <code>__mul__</code> pour permettre la multiplication d
 </div>
 <p>La première chose c'est donc de remplir notre <strong>todo</strong>.
 Le plus instinctif ça serait d'écrire ça :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">## MY TODO 1
+<pre class="language-html"><code class="language-html">## MY TODO 1
 - [] Pouvoir ajouter deux nombres
 - [] Pouvoir soustraire deux nombres
 - [] Pouvoir multiplier deux nombres
-- [] Pouvoir diviser deux nombres
-</code></pre>
+- [] Pouvoir diviser deux nombres</code></pre>
 <p>Commençons par <strong>l'addition</strong>.
 On écrit un test simple :</p>
 <p><strong>test_calculatrice.py</strong></p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">from calculatrice import Calculatrice
+<pre class="language-html"><code class="language-html">from calculatrice import Calculatrice
 
 def test_addition():
-    assert Calculatrice.add(1,2)==3
-</code></pre>
+    assert Calculatrice.add(1,2)==3</code></pre>
 <p>Je lance mon test :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">python -m pytest test_calculatrice.py
-</code></pre>
+<pre class="language-html"><code class="language-html">python -m pytest test_calculatrice.py</code></pre>
 <p>Et évidemment ça échoue, il n'existe pas de class <strong>Calculatrice</strong>. On en crée donc une mais qui ne fait rien :</p>
 <p><strong>calculatrice.py</strong></p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">class Calculatrice():
-    pass
-</code></pre>
+<pre class="language-html"><code class="language-html">class Calculatrice():
+    pass</code></pre>
 <p>Maintenant l'erreur vient du fais que la class <strong>Calculatrice</strong> n'a pas de méthode <strong>add</strong>. On va donc la coder :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">class Calculatrice():
+<pre class="language-html"><code class="language-html">class Calculatrice():
     def add(self, other) :
-        return self + other
-</code></pre>
+        return self + other</code></pre>
 <p>Et le test passe !
 Maintenant on va s'ocupper de la <strong>soustraction</strong>.
 J'écris un nouveau test :</p>
 <p><strong>test_calculatrice.py</strong></p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">from calculatrice import Calculatrice
+<pre class="language-html"><code class="language-html">from calculatrice import Calculatrice
 
 def test_addition():
     assert Calculatrice.add(1,2)==3
 
 def test_soustraction():
-    assert Calculatrice.sub(5,3)==2
-</code></pre>
+    assert Calculatrice.sub(5,3)==2</code></pre>
 <p>Evidemment le test échoue car on a pas créé de méthode <strong>sub.
 On s'occupe de le faire :</strong></p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">class Calculatrice():
+<pre class="language-html"><code class="language-html">class Calculatrice():
     def add(self, other) :
         return self + other
     
     def sub(self, other) :
-        return self - other
-</code></pre>
+        return self - other</code></pre>
 <p>Super les tests passent !</p>
 <p>On va faire la <strong>multiplication</strong>.</p>
 <p><strong>test_calculatrice.py</strong></p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">from calculatrice import Calculatrice
+<pre class="language-html"><code class="language-html">from calculatrice import Calculatrice
 
 def test_addition():
     assert Calculatrice.add(1,2)==3
@@ -806,10 +796,9 @@ def test_soustraction():
     assert Calculatrice.sub(5,3)==2
 
 def test_multiplication():
-    assert Calculatrice.mul(4,5)==20
-</code></pre>
+    assert Calculatrice.mul(4,5)==20</code></pre>
 <p><strong>calculatrice.py</strong></p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">class Calculatrice():
+<pre class="language-html"><code class="language-html">class Calculatrice():
     def add(self, other) :
         return self + other
     
@@ -817,12 +806,11 @@ def test_multiplication():
         return self - other
     
     def mul(self, other) : 
-        return self*other
-</code></pre>
+        return self*other</code></pre>
 <p>Et les 3 tests passent bien.</p>
 <p>La <strong>division</strong> pour finir :</p>
 <p><strong>test_calculatrice.py</strong></p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">from calculatrice import Calculatrice
+<pre class="language-html"><code class="language-html">from calculatrice import Calculatrice
 
 def test_addition():
     assert Calculatrice.add(1,2)==3
@@ -834,10 +822,9 @@ def test_multiplication():
     assert Calculatrice.mul(4,5)==20
 
 def test_division():
-    assert Calculatrice.div(36,3)==12
-</code></pre>
+    assert Calculatrice.div(36,3)==12</code></pre>
 <p><strong>calculatrice.py</strong></p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">class Calculatrice():
+<pre class="language-html"><code class="language-html">class Calculatrice():
     def add(self, other) :
         return self + other
     
@@ -848,8 +835,7 @@ def test_division():
         return self*other
     
     def div(self, other):
-        return self/other
-</code></pre>
+        return self/other</code></pre>
 <p>Et nos tests passent bien.</p>
 <p>Bon cet exercice est assez simple parce qu'on manipule des nombres, même si je peux complexifier le code j'ai envie d'aller vers autre chose de moins intuitif.</p>
 <h3>Gestion d'une bibliothèque</h3>
@@ -858,26 +844,24 @@ def test_division():
 <div><img src="ExoBibliothèque.png"></div>
 </div>
 <p>Je crée mes différents fichiers et je rempli ma <strong>todo</strong>.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">## MY TODO
+<pre class="language-html"><code class="language-html">## MY TODO
 - [] Pouvoir ajouter un livre avec titre auteur année de publication et statut
 - [] Rechercher un livre par titre ou par auteur
 - [] Emprunter un livre disponible
-- [] Retourné un livre emprunté
-</code></pre>
+- [] Retourné un livre emprunté</code></pre>
 <p>On va commencer par <strong>ajouter un livre</strong> car sans ça on ne peut pas faire les autes.</p>
 <h4>Ajouter un livre</h4>
 <p>Je ne savais pas trop quoi mettre comme test pour vérifier que l'ajout a bien fonctionné. J'ai fait ça sans être trop sûre de moi :</p>
 <p><strong>test_bibliotheque.py</strong></p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">from bibliotheque import Bibliotheque
+<pre class="language-html"><code class="language-html">from bibliotheque import Bibliotheque
 
 def test_ajout_livre():
     bibliotheque= Bibliotheque()
     bibliotheque.add_book("L'Ecume des jours","Boris Vian",1947)
-    assert bibliotheque.livre_existe("L'Ecume des jours")
-</code></pre>
+    assert bibliotheque.livre_existe("L'Ecume des jours")</code></pre>
 <p>Evidemment le test échoue, il n'existe pas de class <strong>Bibliotheque</strong> et encore moins de méthode <strong>add_book</strong> ou <strong>livre_existe</strong>.</p>
 <p>Je commence mon code dans <strong>bibliotheque.py</strong>. Evidemment ça a pas été évident du premier coup, j'ai un peu eu du mal au début (surtout que je code pas souvent en orienté objet...) mais au final j'ai réussi à m'en sortir ! Voici le code :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">class Bibliotheque() : 
+<pre class="language-html"><code class="language-html">class Bibliotheque() : 
     def __init__(self):
         self.livres = []
 
@@ -889,22 +873,20 @@ def test_ajout_livre():
         for livre in self.livres : 
             if livre["titre"] == titre:
                 return livre["disponible"]
-        return False
-</code></pre>
+        return False</code></pre>
 <p>Et ça passe !
 On peut mettre à jour la <strong>Todo</strong>.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">## MY TODO
+<pre class="language-html"><code class="language-html">## MY TODO
 - [x] Pouvoir ajouter un livre avec titre auteur année de publication et statut
 - [-] Rechercher un livre par titre et obtenir ses infos
 - [ ] Rechercher un livre par auteur et avoir la liste de ses livres
 - [] Emprunter un livre disponible
-- [] Retourné un livre emprunté
-</code></pre>
+- [] Retourné un livre emprunté</code></pre>
 <p>On va s'occuper de la recherche d'un livre maintenant, mais comme on a déjà codé le fait qu'il existe on va dire que cette fois on veut savoir ses informations et surtout sa disponibilité.</p>
 <h3>Recherche d'un livre par titre</h3>
 <p>On commence par écrire le test associé à la fonctionnalité :</p>
 <p><strong>test_bibliotheque.py</strong></p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">from bibliotheque import Bibliotheque
+<pre class="language-html"><code class="language-html">from bibliotheque import Bibliotheque
 
 def test_ajout_livre():
     bibliotheque= Bibliotheque()
@@ -914,10 +896,9 @@ def test_ajout_livre():
 def test_recherche_livre():
     bibliotheque= Bibliotheque()
     bibliotheque.add_book("L'Ecume des jours","Boris Vian",1947)
-    assert bibliotheque.recherche_livre("L'Ecume des jours")==["L'Ecume des jours","Boris Vian",1947,True]
-</code></pre>
+    assert bibliotheque.recherche_livre("L'Ecume des jours")==["L'Ecume des jours","Boris Vian",1947,True]</code></pre>
 <p>Le test échoue, on va rajouter une nouvelle méthode <strong>recherche_livre</strong>.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">class Bibliotheque() : 
+<pre class="language-html"><code class="language-html">class Bibliotheque() : 
     def __init__(self):
         self.livres = []
 
@@ -934,21 +915,19 @@ def test_recherche_livre():
     def recherche_livre(self, titre):
         for livre in self.livres :
             if livre["titre"] == titre:
-                return [livre["titre"],livre["auteur"],livre["année"],livre["disponible"]]
-</code></pre>
+                return [livre["titre"],livre["auteur"],livre["année"],livre["disponible"]]</code></pre>
 <p>Et ça passe du premier coup !
 On peut mettre à jour la <strong>Todo</strong>.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">## MY TODO
+<pre class="language-html"><code class="language-html">## MY TODO
 - [x] Pouvoir ajouter un livre avec titre auteur année de publication et statut
 - [x] Rechercher un livre par titre et obtenir ses infos 
 - [-] Rechercher un livre par auteur et obtenir la liste de ses livres 
 - [] Emprunter un livre disponible
-- [] Retourné un livre emprunté
-</code></pre>
+- [] Retourné un livre emprunté</code></pre>
 <h3>Recherche d'un livre par auteur</h3>
 <p>On commence par écrire le test associé à la fonctionnalité :</p>
 <p><strong>test_bibliotheque.py</strong></p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">from bibliotheque import Bibliotheque
+<pre class="language-html"><code class="language-html">from bibliotheque import Bibliotheque
 
 def test_ajout_livre():
     bibliotheque= Bibliotheque()
@@ -966,11 +945,10 @@ def test_recherche_livres_par_auteur():
     bibliotheque.add_book("L'Arrache-coeur","Boris Vian",1953)
     bibliotheque.add_book("Les Misérables","Victor Hugo",1862)
     assert bibliotheque.recherche_livres_par_auteur("Boris Vian")==["L'Ecume des jours","L'Arrache-coeur"]
-    assert bibliotheque.recherche_livres_par_auteur("Victor Hugo")==["Les Misérables"]
-</code></pre>
+    assert bibliotheque.recherche_livres_par_auteur("Victor Hugo")==["Les Misérables"]</code></pre>
 <p>Je commence donc à coder une fonction pour faire passer le test :
 <strong>bibliotheque.py</strong></p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">class Bibliotheque() : 
+<pre class="language-html"><code class="language-html">class Bibliotheque() : 
     def __init__(self):
         self.livres = []
 
@@ -994,17 +972,15 @@ def test_recherche_livres_par_auteur():
         for livre in self.livres : 
             if livre["auteur"]==auteur:
                 listes_des_livres.append(livre["titre"])
-        return listes_des_livres
-</code></pre>
+        return listes_des_livres</code></pre>
 <p>Ca passe aussi !
 On peut mettre à jour la <strong>Todo</strong>.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">## MY TODO
+<pre class="language-html"><code class="language-html">## MY TODO
 - [x] Pouvoir ajouter un livre avec titre auteur année de publication et statut
 - [x] Rechercher un livre par titre et obtenir ses infos 
 - [x] Rechercher un livre par auteur et obtenir la liste de ses livres 
 - [-] Emprunter un livre disponible
-- [] Retourné un livre emprunté
-</code></pre>
+- [] Retourné un livre emprunté</code></pre>
 <h3>Emprunter un livre</h3>
 <p>On va s'occuper maintenant de l'emprunt d'un livre si il est disponible.</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
@@ -1025,7 +1001,7 @@ On peut mettre à jour la <strong>Todo</strong>.</p>
 </summary>
 <div class="mx-8 pb-2">
 <p><strong>bibliotheque.py</strong></p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">from bibliotheque import Bibliotheque
+<pre class="language-html"><code class="language-html">from bibliotheque import Bibliotheque
 
 def test_ajout_livre():
     bibliotheque= Bibliotheque()
@@ -1052,8 +1028,7 @@ def test_emprunt_livre():
     bibliotheque.add_book("Les Misérables","Victor Hugo",1862)
     assert bibliotheque.emprunt_livre("L'Arrache-coeur")==True
     assert bibliotheque.emprunt_livre("L'Arrache-coeur")==False
-    assert bibliotheque.emprunt_livre("L'Ecume des jours")==True
-</code></pre>
+    assert bibliotheque.emprunt_livre("L'Ecume des jours")==True</code></pre>
 </div>
 </details>     
 </div>
@@ -1075,7 +1050,7 @@ def test_emprunt_livre():
 </summary>
 <div class="mx-8 pb-2">
 <p><strong>bibliotheque.py</strong></p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">class Bibliotheque() : 
+<pre class="language-html"><code class="language-html">class Bibliotheque() : 
     def __init__(self):
         self.livres = []
 
@@ -1106,19 +1081,17 @@ def test_emprunt_livre():
             if livre["titre"] == titre and livre["disponible"]:
                 livre["disponible"]=False
                 return True
-        return False
-</code></pre>
+        return False</code></pre>
 </div>
 </details>     
 </div>
 <p>On peut mettre à jour la <strong>Todo</strong>.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">## MY TODO
+<pre class="language-html"><code class="language-html">## MY TODO
 - [x] Pouvoir ajouter un livre avec titre auteur année de publication et statut
 - [x] Rechercher un livre par titre et obtenir ses infos 
 - [x] Rechercher un livre par auteur et obtenir la liste de ses livres 
 - [x] Emprunter un livre disponible
-- [-] Retourné un livre emprunté
-</code></pre>
+- [-] Retourné un livre emprunté</code></pre>
 <h3>Retourner un livre</h3>
 <p>On va s'occuper maintenant de retourner un livre emprunté.</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
@@ -1139,7 +1112,7 @@ def test_emprunt_livre():
 </summary>
 <div class="mx-8 pb-2">
 <p><strong>bibliotheque.py</strong></p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">from bibliotheque import Bibliotheque
+<pre class="language-html"><code class="language-html">from bibliotheque import Bibliotheque
 
 def test_ajout_livre():
     bibliotheque= Bibliotheque()
@@ -1177,8 +1150,7 @@ def test_retour_livre():
     bibliotheque.emprunt_livre("L'Ecume des jours")
     bibliotheque.retour_livre("L'Arrache-coeur")
     assert bibliotheque.livre_disponible("L'Arrache-coeur")==True
-    assert bibliotheque.livre_disponible("L'Ecume des jours")==False
-</code></pre>
+    assert bibliotheque.livre_disponible("L'Ecume des jours")==False</code></pre>
 </div>
 </details>     
 </div>
@@ -1200,7 +1172,7 @@ def test_retour_livre():
 </summary>
 <div class="mx-8 pb-2">
 <p><strong>bibliotheque.py</strong></p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">class Bibliotheque() : 
+<pre class="language-html"><code class="language-html">class Bibliotheque() : 
     def __init__(self):
         self.livres = []
 
@@ -1243,19 +1215,17 @@ def test_retour_livre():
         for livre in self.livres :
             if livre["titre"] == titre: 
                 return livre["disponible"]
-        return False
-</code></pre>
+        return False</code></pre>
 </div>
 </details>     
 </div>
 <p>On peut mettre à jour la <strong>Todo</strong>.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">## MY TODO
+<pre class="language-html"><code class="language-html">## MY TODO
 - [x] Pouvoir ajouter un livre avec titre auteur année de publication et statut
 - [x] Rechercher un livre par titre et obtenir ses infos 
 - [x] Rechercher un livre par auteur et obtenir la liste de ses livres 
 - [x] Emprunter un livre disponible
-- [x] Retourné un livre emprunté
-</code></pre>
+- [x] Retourné un livre emprunté</code></pre>
 <p>On a fini notre gestionaire de bibliothèque !</p>
 <h3>Sytème de réservation de vol</h3>
 <p>Je redemande à ChatGPT un nouvel exo mais encore plus dur :</p>
@@ -1263,26 +1233,24 @@ def test_retour_livre():
 <div><img src="ExoVol.png"></div>
 </div>
 <p>Je crée mes différents fichiers et je rempli ma <strong>todo</strong>.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">## MY TODO
+<pre class="language-html"><code class="language-html">## MY TODO
 - [] Pouvoir ajouter un nouveau vol en précisant la compagnie, la ville de départ, la ville d'arrivée, l'heure de départ, l'heure d'arrivée, la date du vol et le numéro de vol
 - [] Rechercher des vols disponibles en précisant une ville de départ, une ville d'arrivée et la date du voyage
 - [] Pouvoir réserver un vol et obtenir un numéro de réservation
 - [] Pouvoir réserver un siège sur le vol à l'aide du numéro de réservation
-- [] Pouvoir annuler une réservation à l'aide de son numéro
-</code></pre>
+- [] Pouvoir annuler une réservation à l'aide de son numéro</code></pre>
 <h4>Ajouter un nouveau vol</h4>
 <p><strong>test_vol.py</strong></p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">from vol import VolSysteme
+<pre class="language-html"><code class="language-html">from vol import VolSysteme
 
 def test_ajouter_vol():
     volsysteme=VolSysteme()
     volsysteme.ajouter_vol("Rayanair","Marseille","Lisbonne","16:00","17:20","12/03/2024","RYA2598")
     volsysteme.ajouter_vol("EasyJet","Marseille","Lisbonne","15:10","16:35","12/03/2024","EZS081")
-    assert volsysteme.recherche_vol("Marseille","Lisbonne","12/03/2024")==["RYA2598","EZS081"]
-</code></pre>
+    assert volsysteme.recherche_vol("Marseille","Lisbonne","12/03/2024")==["RYA2598","EZS081"]</code></pre>
 <p>Evidemment le test échoue, il n'existe pas de class <strong>VolSysteme</strong> et encore moins de méthode <strong>ajouter_vol</strong> ou <strong>recherche_vol</strong>.</p>
 <p>Je commence mon code dans <strong>vol.py</strong>.</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">class VolSysteme():
+<pre class="language-html"><code class="language-html">class VolSysteme():
     def __init__(self):
         self.vols = []
 
@@ -1296,19 +1264,17 @@ def test_ajouter_vol():
             print(vol)
             if(vol["arrivee"] == arrivee and vol["depart"] == depart and vol["date"] == date):
                 vols_possibles.append(vol["numero"])
-        return vols_possibles
-</code></pre>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">## MY TODO
+        return vols_possibles</code></pre>
+<pre class="language-html"><code class="language-html">## MY TODO
 - [x] Pouvoir ajouter un nouveau vol en précisant la compagnie, la ville de départ, la ville d'arrivée, l'heure de départ, l'heure d'arrivée, la date du vol et le numéro de vol
 - [x] Rechercher des vols disponibles en précisant une ville de départ, une ville d'arrivée et la date du voyage
 - [] Pouvoir réserver un vol et obtenir un numéro de réservation
 - [] Pouvoir réserver un siège sur le vol à l'aide du numéro de réservation
-- [] Pouvoir annuler une réservation à l'aide de son numéro
-</code></pre>
+- [] Pouvoir annuler une réservation à l'aide de son numéro</code></pre>
 <h4>Suite de l'exercice</h4>
 <p>J'ai continué l'exercice de la même manière. Voici mes deux fichiers finaux :</p>
 <p><strong>test_vol.py</strong></p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">from vol import VolSysteme
+<pre class="language-html"><code class="language-html">from vol import VolSysteme
 
 def test_ajouter_vol():
     volsysteme=VolSysteme()
@@ -1329,10 +1295,9 @@ def test_annuler_réservation():
     volsysteme.ajouter_vol("EasyJet","Marseille","Lisbonne","15:10","16:35","12/03/2024","EZS081")
     assert volsysteme.réserver_siège("RYA2598", "A1")==True
     assert volsysteme.annuler_réservation("RYA2598", "A1")==True
-    assert ("A1" not in volsysteme.vols[0]["sieges"]) == True
-</code></pre>
+    assert ("A1" not in volsysteme.vols[0]["sieges"]) == True</code></pre>
 <p><strong>vol.py</strong></p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">class VolSysteme():
+<pre class="language-html"><code class="language-html">class VolSysteme():
     def __init__(self):
         self.vols = []
 
@@ -1362,8 +1327,7 @@ def test_annuler_réservation():
             if vol["numero"] == numéro_vol and "sieges" in vol and siège in vol["sieges"]:
                 vol["sieges"].remove(siège)
                 return True
-        return False
-</code></pre>
+        return False</code></pre>
 <p>Maintenant je me dis qu'on peut ajouter une gestion des passagers et de les tarifs.
 Je fais donc une nouvelle <strong>Todo</strong>, créer mes tests et ajuster le code en conséquence.</p>
 <p><a href="tdd.zip">Ici</a>, vous trouverez mes différents fichiers sur lesquels j'ai travaillé.</p>

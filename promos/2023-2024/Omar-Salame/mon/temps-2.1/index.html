@@ -144,20 +144,17 @@
 <p>J'ai choisis de développer des compétences en React.js à travers le cours <a href="https://www.youtube.com/watch?v=bMknfKXIFA8&amp;t=11817s">React Course - Beginner's Tutorial for React JavaScript Library [2022]</a>.</p>
 <h2>Les bases de React.js <a id="section-2"></a></h2>
 <p>Pour s'initier a React ce cours utilise plusieurs tuto, organisés selon une progression graduée en termes de complexité et de fonctionnalités. Commencant par explorer les composants qui représentent des éléments autonomes d'une interface utilisateur, permettant de décomposer une application en morceaux modulaires. Puis comprendre le JSX (JavaScript XML) une syntaxe étroitement liée à XML/HTML, pour décrire la structure des composants de manière déclarative.</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token comment">// Exemple de JSX</span>
-<span class="token keyword">const</span> element <span class="token operator">=</span> <span class="token operator">&lt;</span>h1<span class="token operator">></span>Bonjour<span class="token punctuation">,</span> React <span class="token operator">!</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span><span class="token punctuation">;</span>
-</code></pre>
+<pre class="language-js"><code class="language-js"><span class="token comment">// Exemple de JSX</span>
+<span class="token keyword">const</span> element <span class="token operator">=</span> <span class="token operator">&lt;</span>h1<span class="token operator">></span>Bonjour<span class="token punctuation">,</span> React <span class="token operator">!</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span><span class="token punctuation">;</span></code></pre>
 <p>On commence par créer une page simple avec deux composants Header et Main. qui intègre deux composants, à savoir Header et Main. Le composant Header englobe une barre de navigation, et le composant Main comporte un titre accompagné d'une liste non ordonnée.
 <img src="tuto1.png" width="500" height="550"></p>
 <p>Maintenant que je me suis familiarisé avec ces notions basiques de React, il est temps de mettre en place une application React. Pour cela il faut executer cette commande dans le terminal pour créer et ce déplacer dans le répertoire créé:</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">npx create-react-app nom-du-projet
-<span class="token builtin class-name">cd</span> nom-du-projet
-</code></pre>
+<pre class="language-bash"><code class="language-bash">npx create-react-app nom-du-projet
+<span class="token builtin class-name">cd</span> nom-du-projet</code></pre>
 <p>Et puis pour lancer l'application il faut exécuter:</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">npm</span> start
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">npm</span> start</code></pre>
 <p>Une fois le projet React est créé, on trouve une structure de base qui ressemble à ceci:</p>
-<pre class="language-lua " style="counter-reset: linenumber 0"><code class="language-lua">nom<span class="token operator">-</span>du<span class="token operator">-</span>projet<span class="token operator">/</span>
+<pre class="language-lua"><code class="language-lua">nom<span class="token operator">-</span>du<span class="token operator">-</span>projet<span class="token operator">/</span>
 <span class="token operator">|</span><span class="token comment">-- src/</span>
 <span class="token operator">|</span>   <span class="token operator">|</span><span class="token comment">-- index.js</span>
 <span class="token operator">|</span>   <span class="token operator">|</span><span class="token comment">-- App.js</span>
@@ -166,8 +163,7 @@
 <span class="token operator">|</span>   <span class="token operator">|</span><span class="token comment">-- index.html</span>
 <span class="token operator">|</span>   <span class="token operator">|</span><span class="token comment">-- ...</span>
 <span class="token operator">|</span><span class="token comment">-- package.json</span>
-<span class="token operator">|</span><span class="token comment">-- ...</span>
-</code></pre>
+<span class="token operator">|</span><span class="token comment">-- ...</span></code></pre>
 <ul>
 <li>
 <p><em>'src/'</em> : Contient les fichiers source de ton application React, y compris le fichier principal <em>'index.js'</em> et le composant principal <em>'App.js'</em>.</p>
@@ -185,7 +181,7 @@
 <img src="tuto2.png" width="200" height="550"></p>
 <h2>Résultats <a id="section-4"></a></h2>
 <p>J'ai consacré du temps à explorer cette fonctionnalité, car elle m'a offert une certaine souplesse dans le processus de développement, évitant ainsi la nécessité de coder en dur chaque élément de la page. Je peux simplement créer une fonction telle que celle-ci :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> Star <span class="token keyword">from</span> <span class="token string">"../images/star.png"</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> Euro <span class="token keyword">from</span> <span class="token string">"../images/euro.png"</span><span class="token punctuation">;</span>
 
@@ -204,8 +200,7 @@
             <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
         <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>      
     <span class="token punctuation">)</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Et en integrant les données je peux avoir ce résultat:
 <img src="tuto3.png" width="600" height="550"></p>
 

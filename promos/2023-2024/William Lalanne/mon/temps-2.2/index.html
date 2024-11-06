@@ -150,7 +150,7 @@
 <p>En React, un composant est comme une boîte autonome qui contient une partie spécifique de ce que l'on voit à l'écran. C'est comme si le code étaut constituée de plusieurs briques différentes, et chaque brique est un composant. Un composant peut être aussi bien un petit bouton ou quelque chose de plus complexe comme une barre de navigation, un form...
 C'est très pratique pour réutiliser un élément d'un code à un autre, ou même plusieurs fois dans le même code.</p>
 <p>Exemple de Component très simple, voici un bouton &quot;S'inscrire&quot; placé dans un div :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token string">'./Button.css'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">Button</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
@@ -161,12 +161,11 @@ C'est très pratique pour réutiliser un élément d'un code à un autre, ou mê
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> Button<span class="token punctuation">;</span>
-</code></pre>
+<span class="token keyword">export</span> <span class="token keyword">default</span> Button<span class="token punctuation">;</span></code></pre>
 <h2>2. Props</h2>
 <p>les composants peuvent recevoir des &quot;props&quot;, qui sont comme des instructions ou des données que le composant parent transmet à ses composants enfants. Les &quot;props&quot; permettent de personnaliser le comportement d'un composant et de le rendre adaptable et réutilisable dans différentes parties de l'application.</p>
 <p>Par exemple, je peux mettre un props à mon component Button créé au dessus :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token string">'./Button.css'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">Button</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> text <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
@@ -177,10 +176,9 @@ C'est très pratique pour réutiliser un élément d'un code à un autre, ou mê
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> Button<span class="token punctuation">;</span>
-</code></pre>
+<span class="token keyword">export</span> <span class="token keyword">default</span> Button<span class="token punctuation">;</span></code></pre>
 <p>Je peux maintenant créer plusieurs boutons différents :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token string">'./App.css'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> Button <span class="token keyword">from</span> <span class="token string">'./components/Button'</span><span class="token punctuation">;</span>
 
@@ -194,8 +192,7 @@ C'est très pratique pour réutiliser un élément d'un code à un autre, ou mê
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
-</code></pre>
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span></code></pre>
 <h2>3. States</h2>
 <p>En plus des props, React propose le concept d'état (state) pour gérer les données qui changent au fil du temps à l'intérieur d'un composant.</p>
 <h2>4. React pour mon site</h2>
@@ -203,7 +200,7 @@ C'est très pratique pour réutiliser un élément d'un code à un autre, ou mê
 <ul>
 <li>Header :</li>
 </ul>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> Button <span class="token keyword">from</span> <span class="token string">'./Button'</span><span class="token punctuation">;</span> <span class="token comment">// Assurez-vous d'avoir ce composant et le CSS associé</span>
 <span class="token keyword">import</span> <span class="token string">'./Header.css'</span><span class="token punctuation">;</span>
 
@@ -218,12 +215,11 @@ C'est très pratique pour réutiliser un élément d'un code à un autre, ou mê
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> Header<span class="token punctuation">;</span>
-</code></pre>
+<span class="token keyword">export</span> <span class="token keyword">default</span> Header<span class="token punctuation">;</span></code></pre>
 <ul>
 <li>Button :</li>
 </ul>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token string">'./Button.css'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">Button</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> text<span class="token punctuation">,</span> onClick <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
@@ -234,12 +230,11 @@ C'est très pratique pour réutiliser un élément d'un code à un autre, ou mê
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> Button<span class="token punctuation">;</span>
-</code></pre>
+<span class="token keyword">export</span> <span class="token keyword">default</span> Button<span class="token punctuation">;</span></code></pre>
 <ul>
 <li>LoginForm :</li>
 </ul>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token string">'./LoginForm.css'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">LoginForm</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
@@ -295,12 +290,11 @@ C'est très pratique pour réutiliser un élément d'un code à un autre, ou mê
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> LoginForm<span class="token punctuation">;</span>
-</code></pre>
+<span class="token keyword">export</span> <span class="token keyword">default</span> LoginForm<span class="token punctuation">;</span></code></pre>
 <ul>
 <li>Container :</li>
 </ul>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> ThemeSelection <span class="token keyword">from</span> <span class="token string">'./ThemeSelection'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PlayerSelection <span class="token keyword">from</span> <span class="token string">'./PlayerSelection'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> GridSelection <span class="token keyword">from</span> <span class="token string">'./GridSelection'</span><span class="token punctuation">;</span>
@@ -318,12 +312,11 @@ C'est très pratique pour réutiliser un élément d'un code à un autre, ou mê
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> Container<span class="token punctuation">;</span>
-</code></pre>
+<span class="token keyword">export</span> <span class="token keyword">default</span> Container<span class="token punctuation">;</span></code></pre>
 <ul>
 <li>ThemeSelection :</li>
 </ul>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> RadioSection <span class="token keyword">from</span> <span class="token string">'./RadioSection.jsx'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token string">'./ThemeSelection.css'</span><span class="token punctuation">;</span>
 
@@ -336,12 +329,11 @@ C'est très pratique pour réutiliser un élément d'un code à un autre, ou mê
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> ThemeSelection<span class="token punctuation">;</span>
-</code></pre>
+<span class="token keyword">export</span> <span class="token keyword">default</span> ThemeSelection<span class="token punctuation">;</span></code></pre>
 <ul>
 <li>PlayerSelection :</li>
 </ul>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> RadioSection <span class="token keyword">from</span> <span class="token string">'./RadioSection.jsx'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token string">'./GridSelection.css'</span><span class="token punctuation">;</span>
 
@@ -354,12 +346,11 @@ C'est très pratique pour réutiliser un élément d'un code à un autre, ou mê
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> GridSelection<span class="token punctuation">;</span>
-</code></pre>
+<span class="token keyword">export</span> <span class="token keyword">default</span> GridSelection<span class="token punctuation">;</span></code></pre>
 <ul>
 <li>StartButton :</li>
 </ul>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token string">'./StartButton.css'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">StartButton</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
@@ -370,12 +361,11 @@ C'est très pratique pour réutiliser un élément d'un code à un autre, ou mê
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> StartButton<span class="token punctuation">;</span>
-</code></pre>
+<span class="token keyword">export</span> <span class="token keyword">default</span> StartButton<span class="token punctuation">;</span></code></pre>
 <ul>
 <li>RadioSection :</li>
 </ul>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">RadioSection</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> className<span class="token punctuation">,</span> options <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> <span class="token punctuation">(</span>
@@ -390,10 +380,9 @@ C'est très pratique pour réutiliser un élément d'un code à un autre, ou mê
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> RadioSection<span class="token punctuation">;</span>
-</code></pre>
+<span class="token keyword">export</span> <span class="token keyword">default</span> RadioSection<span class="token punctuation">;</span></code></pre>
 <p>Certains de ces components s'imbriquent dans d'autres et tous sont utilisées dans le fichier App.jsx suivant :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> Header <span class="token keyword">from</span> <span class="token string">'./components/Header'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> Container <span class="token keyword">from</span> <span class="token string">'./components/Container'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> Button <span class="token keyword">from</span> <span class="token string">'./components/Button'</span><span class="token punctuation">;</span>
@@ -419,8 +408,7 @@ C'est très pratique pour réutiliser un élément d'un code à un autre, ou mê
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
-</code></pre>
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span></code></pre>
 <p><img src="Page_Accueil.png" alt="Page React"></p>
 <h2>Conclusion</h2>
 <p>Grâce à ce MON j'ai pu apprendre les bases de React, notamment comment créer des components et les modifier avec les states ou les personnaliser avec des props.</p>

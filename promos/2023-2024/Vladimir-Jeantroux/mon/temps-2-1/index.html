@@ -147,7 +147,7 @@
 <h2>La syntaxe de React Native</h2>
 <p>La syntaxe de React Native repose principalement sur l'utilisation de composants, écrits en JavaScript ou TypeScript, qui représentent des éléments d'interface utilisateur. Ces composants sont créés en utilisant la bibliothèque React et sont structurés de manière modulaire et réutilisable.</p>
 <p>Par exemple, disons que je veux coder une page comportant simplement le texte &quot;Bonjour, ça va ?&quot;.</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> View<span class="token punctuation">,</span> Text<span class="token punctuation">,</span><span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-native'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">Page</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
@@ -158,12 +158,11 @@
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> Page
-</code></pre>
+<span class="token keyword">export</span> <span class="token keyword">default</span> Page</code></pre>
 <p>Ce qu'on a fait, dans l'ordre : on commence tout d'abord par importer les composants dont on a besoin, ici 'React' pour créer les composants, ainsi que les composants 'View', qui est un conteneur de base et 'Text', permettant d'afficher du texte. On crée ensuite le composant &quot;Page&quot; qui ne prend aucun argument, et à l'intérieur on crée un espace d'affichage contenant un élément textuel qui affiche &quot;Bonjour, ça va ?&quot; La dernière ligne permet d'exporter le composant &quot;Page&quot;, et signifie qu'il pourra être réutilisé ailleurs.</p>
 <h2>Une application simple</h2>
 <p>Ajoutons maintenant un composant plus complexe : une boîte où l'utilisateur peut taper, ainsi qu'un bouton.</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> View<span class="token punctuation">,</span> Text<span class="token punctuation">,</span> Button<span class="token punctuation">,</span> TextInput<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-native'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
@@ -190,8 +189,7 @@
       <span class="token operator">&lt;</span>Button title<span class="token operator">=</span><span class="token string">"Effacer"</span> onPress<span class="token operator">=</span><span class="token punctuation">{</span>clearInput<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
     <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
 <p>On commence par importer 'useState' qui est un hook qui permet de gérer l'état dans les composants fonctionnels. On initialise ainsi une variable 'userInput' pour stocker le texte saisi par l'utilisateur. 'setUserInput' est une fonction qui permet de mettre à jour cette variable d'état.</p>
 <p>On définit une fonction 'handleInputChange' qui prend le texte entré par l'utilisateur en paramètre et met à jour l'état 'userInput' en utilisant 'setUserInput'.</p>
 <p>Dans 'View', on ajoute l'objet 'TextInput', et les changements de texte seront gérés par la fonction 'handleInputChange', et le texte de l'utilisateur sera même réaffiché en bas de la boîte de texte. On a aussi créé un bouton qui lorsqu'il est pressé, efface le texte écrit grâce à la fonction 'clearInput', définie au préalable.
@@ -208,7 +206,7 @@ Cet exemple permet de montrer que React Native permet de gérer des éléments v
 <pre><code>npx expo start
 </code></pre>
 <p>On va commencer par créer une manière d'ajouter des entrées à la base de données.</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> <span class="token function-variable function">addName</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token function-variable function">addName</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   db<span class="token punctuation">.</span><span class="token function">transaction</span><span class="token punctuation">(</span><span class="token parameter">tx</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
     tx<span class="token punctuation">.</span><span class="token function">executeSql</span><span class="token punctuation">(</span><span class="token string">'INSERT INTO names (name) values (?)'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>currentName<span class="token punctuation">]</span><span class="token punctuation">,</span>
       <span class="token punctuation">(</span><span class="token parameter">txObj<span class="token punctuation">,</span> resultSet</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
@@ -220,10 +218,9 @@ Cet exemple permet de montrer que React Native permet de gérer des éléments v
       <span class="token punctuation">(</span><span class="token parameter">txObj<span class="token punctuation">,</span> error</span><span class="token punctuation">)</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Cette fonction sera liée à un espace où l'utilisateur peut taper du texte. La fonction va exécuter une requête SQL pour insérer le nom que l'utilisateur a tapé dans la base de données. Le '?' est remplacé par le nom entré par l'utilisateur. En cas de succès de la requête, une fonction reçoit l'objet de la transaction avec la base de données (le nom de l'objet), et le résultat de la requête, et va ajouter un nouvel objet au tableau des noms.</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> <span class="token function-variable function">deleteName</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">id</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token function-variable function">deleteName</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">id</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   db<span class="token punctuation">.</span><span class="token function">transaction</span><span class="token punctuation">(</span><span class="token parameter">tx</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
     tx<span class="token punctuation">.</span><span class="token function">executeSql</span><span class="token punctuation">(</span><span class="token string">'DELETE FROM names WHERE id = ?'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>id<span class="token punctuation">]</span><span class="token punctuation">,</span>
       <span class="token punctuation">(</span><span class="token parameter">txObj<span class="token punctuation">,</span> resultSet</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
@@ -246,18 +243,16 @@ Cet exemple permet de montrer que React Native permet de gérer des éléments v
     <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
 <p>On ajoute aussi les fonctions pour supprimer une entrée, ainsi que pour afficher les entrées existantes.</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">return</span> <span class="token punctuation">(</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">return</span> <span class="token punctuation">(</span>
     <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>container<span class="token punctuation">}</span><span class="token operator">></span>
       <span class="token operator">&lt;</span>TextInput value<span class="token operator">=</span><span class="token punctuation">{</span>currentName<span class="token punctuation">}</span> placeholder<span class="token operator">=</span><span class="token string">'name'</span> onChangeText<span class="token operator">=</span><span class="token punctuation">{</span>setCurrentName<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
       <span class="token operator">&lt;</span>Button title<span class="token operator">=</span><span class="token string">"Add Name"</span> onPress<span class="token operator">=</span><span class="token punctuation">{</span>addName<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
       <span class="token punctuation">{</span><span class="token function">showNames</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
       <span class="token operator">&lt;</span>StatusBar style<span class="token operator">=</span><span class="token string">"auto"</span> <span class="token operator">/</span><span class="token operator">></span>
     <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
-  <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>Ce dernier bloc de code permet de tout afficher : un espace d'entrée du texte, un bouton pour ajouter le nom, ainsi que la liste des noms 'showNames'. Ces éléments permettent de retourner une base de données basique.</p>
 <p>Le source code complet peut être trouvé <a href="https://github.com/chelseafarley/expo-sqlite-tutorial">ici</a>. Il comporte des fonctions plus avancées comme l'importation et l'exportation de bases de données, mais je ne me sens pas assez à l'aise en React pour pouvoir l'expliquer dans ce MON.</p>
 <h2>Bibliographie</h2>

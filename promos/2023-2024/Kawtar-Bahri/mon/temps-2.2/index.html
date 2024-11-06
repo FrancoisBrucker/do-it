@@ -151,7 +151,7 @@
 •	<em><strong>Installer Mongoose</strong></em> par la commande‘npm install mongoose’</p>
 <h2>Création d'un serveur</h2>
 <p>Pour créer un serveur, on va se mettre dans le dossier configuré dans la partie précédente. On y crée un fichier serveur.js contenant :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> port <span class="token operator">=</span> <span class="token number">3000</span><span class="token punctuation">;</span> 
 
@@ -162,10 +162,9 @@ app<span class="token punctuation">.</span><span class="token function">get</spa
 app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span>port<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Serveur en cours d'exécution sur http://localhost:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>port<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
 </code></pre>
 <p>Les routes dans Node.js avec Express sont un moyen de définir comment l'application doit répondre à une demande client pour une ressource spécifique. Vous pouvez définir des routes pour différentes méthodes HTTP (GET, POST, etc.) selon la sutructure suivante :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token comment">// Route pour la page d'accueil</span>
+<pre class="language-js"><code class="language-js"><span class="token comment">// Route pour la page d'accueil</span>
 app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">'Bienvenue sur la page d\'accueil !'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -178,8 +177,7 @@ app<span class="token punctuation">.</span><span class="token function">get</spa
 <span class="token comment">// Route avec des paramètres</span>
 app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/utilisateur/:id'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Informations sur l'utilisateur avec l'ID : </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>req<span class="token punctuation">.</span>params<span class="token punctuation">.</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>Executer le serveur par la commande ‘node app.js’.</p>
 <h2>Création d’une base de données</h2>
 <h3>MongoDb Atlas</h3>
@@ -190,7 +188,7 @@ app<span class="token punctuation">.</span><span class="token function">get</spa
 <p>Commande d'installation : ‘npm install mongoose’</p>
 <h3>Schéma d’une base de données</h3>
 <p>Avant de définir le schéma de la base de données, on doit une connexion à la base de données avec Mongoose.</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> mongoose <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mongoose'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> mongoose <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mongoose'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> uri <span class="token operator">=</span> <span class="token string">'la_chaine_de_connexion'</span><span class="token punctuation">;</span> 
 mongoose<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span>uri<span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">useNewUrlParser</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token literal-property property">useUnifiedTopology</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
@@ -199,11 +197,10 @@ db<span class="token punctuation">.</span><span class="token function">on</span>
 db<span class="token punctuation">.</span><span class="token function">once</span><span class="token punctuation">(</span><span class="token string">'open'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Connecté à la base de données MongoDB'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>Le schéma d'une base de données est une représentation structurée des différentes entités (tables), des champs (colonnes), et des relations entre ces entités dans une base de données. Dans le contexte d'une base de données NoSQL, telles que les bases de données de type document (comme MongoDB), sont souvent caractérisées par leur approche flexible du stockage de données, ce qui conduit à une gestion de schéma moins rigide.
 Voici un exemple de code qui définit le schéma d'une base de données :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> mongoose <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mongoose'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> mongoose <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mongoose'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> utilisateurSchema <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">mongoose<span class="token punctuation">.</span>Schema</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   <span class="token literal-property property">nom</span><span class="token operator">:</span> String<span class="token punctuation">,</span>
@@ -212,7 +209,6 @@ Voici un exemple de code qui définit le schéma d'une base de données :</p>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> Utilisateur <span class="token operator">=</span> mongoose<span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span><span class="token string">'Utilisateur'</span><span class="token punctuation">,</span> utilisateurSchema<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
 </code></pre>
 
 

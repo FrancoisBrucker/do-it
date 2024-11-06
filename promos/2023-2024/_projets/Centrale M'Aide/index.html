@@ -412,7 +412,7 @@ Ce fichier permet de centraliser l'information, et modifier l'apparence du heade
 Interessons nous aux fonctionnalités que nous avons développé et comment elles interagissent avec chacune des tables.</p>
 <h3>Connexion et inscription</h3>
 <p>Lorsque l'utilisateur s'inscrit, il entre des informations dans des input. Ces informations sont transmises au serveur qui va effectuer des requêtes à la base de données. Pour l'inscription, le serveur fait une requête POST qui ajoute à la table une ligne de données avec toutes les informations sur l'utilisateur. Voilà ce que ça donne au niveau du code :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">app<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/inscription'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<pre class="language-js"><code class="language-js">app<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/inscription'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
     
     <span class="token keyword">const</span> saltRounds <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
     <span class="token keyword">const</span> <span class="token punctuation">{</span> email<span class="token punctuation">,</span> prenom<span class="token punctuation">,</span> nom<span class="token punctuation">,</span> facebook<span class="token punctuation">,</span> adresse<span class="token punctuation">,</span> mot_de_passe<span class="token punctuation">,</span> mdpConfirmation<span class="token punctuation">,</span> imagePath <span class="token punctuation">}</span> <span class="token operator">=</span> req<span class="token punctuation">.</span>body<span class="token punctuation">;</span>
@@ -433,11 +433,10 @@ Interessons nous aux fonctionnalités que nous avons développé et comment elle
             <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>Donc les informations entrées dans la table seront l'email, le prenom, le nom, l'adresse, le mot de passe, l'image de profil et le lien du profil facebook.</p>
 <p>Pour ce qui est de la connexion on a une requête POST également qui est la suivante :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">app<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/connexion'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<pre class="language-js"><code class="language-js">app<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/connexion'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
     <span class="token keyword">const</span> <span class="token punctuation">{</span> email<span class="token punctuation">,</span> mot_de_passe <span class="token punctuation">}</span> <span class="token operator">=</span> req<span class="token punctuation">.</span>body<span class="token punctuation">;</span>
     <span class="token keyword">const</span> sql <span class="token operator">=</span> <span class="token string">'SELECT * FROM utilisateurs WHERE email = ?'</span><span class="token punctuation">;</span>
 
@@ -468,12 +467,11 @@ Interessons nous aux fonctionnalités que nous avons développé et comment elle
             <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>La logique est assez simple, l'utilisateur rentre son adresse mail et son mot de passe qui sont récupérés. Ensuite une requête est faite à la table qui regarde si l'adresse mail existe puis si le mot de passe qui lui est associé est le même que celui rentré par l'utilisateur.</p>
 <h3>Profil</h3>
 <p>Dans l'onglet mon profil, il est possible de visualiser les informations de l'utilisateur. Cela est rendu possible grâce à une requête GET faite à la table des utilisateurs. Voici à quoi elle ressemble :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/users'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<pre class="language-js"><code class="language-js">app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/users'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
 
     <span class="token keyword">const</span> email <span class="token operator">=</span> req<span class="token punctuation">.</span>query<span class="token punctuation">.</span>email<span class="token punctuation">;</span>
 
@@ -491,13 +489,12 @@ Interessons nous aux fonctionnalités que nous avons développé et comment elle
             <span class="token keyword">return</span> res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token literal-property property">message</span><span class="token operator">:</span> <span class="token string">'Utilisateur non trouvé'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>On prend l'email de l'utilisateur et on sélectionne la ligne dans laquelle figure cette adresse dans la table, chaque élément de cette ligne sera récupéré puis affiché sur la page.</p>
 <p>Pour que l'utilisateur puisse modifier son profil, il y aussi une requête faite à la table des utilisateurs. Il s'agit d'une requête PATCH qui permet cette fois-ci non pas d'ajouter mais de modifier une des lignes de la table.</p>
 <h3>Annonces</h3>
 <p>Lorsque l'utilisateur veut déposer une annonce, il rentre les informations nécessaires et elles sont ensuite envoyés au serveur. Il y a alors une route GET qui permet d'ajouter des données qui est faite à la table &quot;annonces&quot; :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/annonces'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<pre class="language-js"><code class="language-js">app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/annonces'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
     <span class="token keyword">const</span> sql <span class="token operator">=</span> <span class="token string">"SELECT * FROM Annonces;"</span><span class="token punctuation">;</span>
     connection2<span class="token punctuation">.</span><span class="token function">query</span><span class="token punctuation">(</span>sql<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> results</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
         <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -508,11 +505,10 @@ Interessons nous aux fonctionnalités que nous avons développé et comment elle
             res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token literal-property property">annonces</span><span class="token operator">:</span> results<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>La route est assez simple car on sélectionne toutes les lignes présentent dans la table pour les afficher sur la page.</p>
 <p>D'autres routes ont été créées pour modifer ou supprimer une annonce, voici celle qui permet de supprimer une annonce à partir de son id :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">app<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span><span class="token string">"/annonce"</span><span class="token punctuation">,</span> verifyToken<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<pre class="language-js"><code class="language-js">app<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span><span class="token string">"/annonce"</span><span class="token punctuation">,</span> verifyToken<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
     <span class="token keyword">const</span> annonceId <span class="token operator">=</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>annonceId<span class="token punctuation">;</span>
     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>annonceId<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">const</span> sql <span class="token operator">=</span> <span class="token string">"DELETE FROM Annonces WHERE id = ?"</span><span class="token punctuation">;</span>
@@ -525,8 +521,7 @@ Interessons nous aux fonctionnalités que nous avons développé et comment elle
             res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token literal-property property">message</span><span class="token operator">:</span> <span class="token string">"Annonce supprimée"</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <h3>Autres routes</h3>
 <p>Il y a encore beaucoup d'autres routes mais nous n'allons pas tout détailler. Vous pouvez les consulter sur le lien github.</p>
 <h2>Perspectives d'avenir du site</h2>

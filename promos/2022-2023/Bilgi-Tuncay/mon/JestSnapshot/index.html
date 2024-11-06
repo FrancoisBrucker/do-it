@@ -156,13 +156,12 @@
 <h3>Installations</h3>
 <p>On commence par installer les dépendances nécessaires et par initialiser notre projet.
 On commence un projet next.js, auquel on installe jest et les types typescript :</p>
-<pre class="language-sh " style="counter-reset: linenumber 0"><code class="language-sh">npx create-next-app@latest
-<span class="token function">npm</span> i <span class="token parameter variable">-D</span> jest ts-jest @types/jest
-</code></pre>
+<pre class="language-sh"><code class="language-sh">npx create-next-app@latest
+<span class="token function">npm</span> i <span class="token parameter variable">-D</span> jest ts-jest @types/jest</code></pre>
 <h3>Fichiers importants</h3>
 <p>Ensuite, on ajoute à la racine du projet un fichier de configuration qui va permettre à jest de travailler avec Next.js .</p>
 <p>/jest.config.js :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">  <span class="token keyword">const</span> nextJest <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"next/jest"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-js"><code class="language-js">  <span class="token keyword">const</span> nextJest <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"next/jest"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">const</span> createJestConfig <span class="token operator">=</span> <span class="token function">nextJest</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
    <span class="token literal-property property">dir</span><span class="token operator">:</span> <span class="token string">"./"</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -171,8 +170,7 @@ On commence un projet next.js, auquel on installe jest et les types typescript :
   <span class="token literal-property property">testEnvironment</span><span class="token operator">:</span> <span class="token string">"jest-environment-jsdom"</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-  module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token function">createJestConfig</span><span class="token punctuation">(</span>customJestConfig<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+  module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token function">createJestConfig</span><span class="token punctuation">(</span>customJestConfig<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>On peut voir qu'on y précise un environnement de test, cette ligne est cruciale pour plus tard, puisque c'est cet environnement qui va simuler notre application.</p>
 <p>On créer aussi un dossier <em>test</em> qui va accueillir tous les fichiers tests qui seront exécutés en tapant la commande <code>npx jest</code> .</p>
 <h3>De la matière à tester :</h3>
@@ -184,7 +182,7 @@ On commence un projet next.js, auquel on installe jest et les types typescript :
 <p>Pour ça il nous faut une fonction qui appelle une base de donnée et un component à tester.</p>
 <h4>Le component :</h4>
 <p>Le component à tester sera un header :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">    <span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span>useState<span class="token punctuation">,</span> useEffect<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<pre class="language-js"><code class="language-js">    <span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span>useState<span class="token punctuation">,</span> useEffect<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
     <span class="token keyword">import</span> <span class="token punctuation">{</span> getCategories <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../services'</span><span class="token punctuation">;</span>
     <span class="token keyword">import</span> Link <span class="token keyword">from</span> <span class="token string">'next/link'</span><span class="token punctuation">;</span>
 
@@ -221,13 +219,12 @@ On commence un projet next.js, auquel on installe jest et les types typescript :
     <span class="token punctuation">}</span>
 
     <span class="token keyword">export</span> <span class="token keyword">default</span> Header
-
 </code></pre>
 <p>On peut voir que c'est simplement un header qui affiche un titre et des liens qu'il récupère dans une base de données avec la fonction getCategories().</p>
 <p>Ce component apparaît dans toutes les pages du site et est donc utiliser au seins de contextes différents, les tests devront se passer de ces contextes, et ils devront aussi se passer de l'appel à la base de données car il ne faut pas que la résolution du tests dépendent de la disponibilité de la base de données ou même des informations qui y sont contenues.</p>
 <h4>La requête à la base de donnée :</h4>
 <p>Nous créons une fonction getCategories() qui va demander à une base de donnée quels catégories existent. Ca n'est pas un simple fetch puisque c'est une requête graphQL, mais cela ne changerait rien si c'était le cas.</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">getCategories</span> <span class="token operator">=</span> <span class="token keyword">async</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">getCategories</span> <span class="token operator">=</span> <span class="token keyword">async</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
         <span class="token keyword">const</span> query <span class="token operator">=</span> gql<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
         query GetCategories {
           categories  {
@@ -240,8 +237,7 @@ On commence un projet next.js, auquel on installe jest et les types typescript :
 
         <span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">request</span><span class="token punctuation">(</span>graphqlAPI<span class="token punctuation">,</span> query<span class="token punctuation">)</span>
         <span class="token keyword">return</span> result<span class="token punctuation">.</span>categories
-      <span class="token punctuation">}</span>
-</code></pre>
+      <span class="token punctuation">}</span></code></pre>
 <h3>Les tests:</h3>
 <h4>Backend :</h4>
 <p>On commence par le plus important :  les tests backend.</p>
@@ -256,25 +252,23 @@ On commence un projet next.js, auquel on installe jest et les types typescript :
 <p>Par défaut Jest utilise la syntaxe <code>const a = require('./module')</code> qui n'est pas compatible avec le reste du projet qui lui est en ES6 et donc utilise la syntaxe suivante <code>import {a} from module</code>. Le fichier de configuration d'avant permet la compatibilité avec ce changement d'import.</p>
 </div></div>
 <p>Voici le test :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> getCategories<span class="token punctuation">,</span>getPostsByCat <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"../services"</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> getCategories<span class="token punctuation">,</span>getPostsByCat <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"../services"</span>
 
 <span class="token function">test</span><span class="token punctuation">(</span>
     <span class="token string">'CategoriesProps are fetched'</span><span class="token punctuation">,</span> <span class="token keyword">async</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span><span class="token punctuation">{</span>
         <span class="token keyword">const</span> categories <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">getCategories</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token function">expect</span><span class="token punctuation">(</span>categories<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toContainEqual</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token literal-property property">name</span> <span class="token operator">:</span><span class="token string">'Sculpture'</span><span class="token punctuation">,</span><span class="token literal-property property">slug</span><span class="token operator">:</span><span class="token string">'sculpture'</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">)</span>
-</code></pre>
+<span class="token punctuation">)</span></code></pre>
 <p>On lance <code>npx jest</code>, le résultat nous montre que le test est effectué :</p>
-<pre class="language-sh " style="counter-reset: linenumber 0"><code class="language-sh"> PASS  __tests__/test_header.tsx   
+<pre class="language-sh"><code class="language-sh"> PASS  __tests__/test_header.tsx   
  PASS  __tests__/test_categories.ts
 
 Test Suites: <span class="token number">2</span> passed, <span class="token number">2</span> total
 Tests:       <span class="token number">3</span> passed, <span class="token number">3</span> total
 Snapshots:   <span class="token number">1</span> passed, <span class="token number">1</span> total
 Time:        <span class="token number">2.84</span> s
-Ran all <span class="token builtin class-name">test</span> suites.
-</code></pre>
+Ran all <span class="token builtin class-name">test</span> suites.</code></pre>
 <h4>Frontend :</h4>
 <p>Les tests frontend sont délicats, déjà car ils ne sont pas forcément recommandés. Le frontend dépend de pleins de choses :</p>
 <ul>
@@ -287,7 +281,7 @@ Ran all <span class="token builtin class-name">test</span> suites.
 Les snapshot sont une &quot;photographie&quot; de votre frontend à un instant donné. En lançant un test, le code va simuler le frontend puis regarder si il y a des différences avec la snapshot.
 Cette snapshot n'est pas stocké en tant qu'image, c'est enfaîte plus ou moins le fichier html qui est récupéré puis comparé.</p>
 <p>Voici une implémentation naïve :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> renderer <span class="token keyword">from</span> <span class="token string">'react-test-renderer'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> Header <span class="token keyword">from</span> <span class="token string">'../components/Header'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> getCategories <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../services'</span><span class="token punctuation">;</span>
@@ -298,26 +292,24 @@ Cette snapshot n'est pas stocké en tant qu'image, c'est enfaîte plus ou moins 
       <span class="token keyword">const</span> element <span class="token operator">=</span> renderer<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>Header<span class="token operator">/</span><span class="token operator">></span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toJSON</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
       <span class="token function">expect</span><span class="token punctuation">(</span>element<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toMatchSnapshot</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>Ici, on récupère notre component, puis on le &quot;render&quot; et on le compare à la dernière snapshot avec 'toMatchSnapshot'. Si il n'y a pas de snapshot, jest valide le test et créer une snapshot qui sera utilisée les prochaines fois.</p>
 <p>Cette implémentation à deux problème, elle n'est pas asynchrone, et elle lance le component header tel quel. Si la fonction n'est pas asynchrone, on n'attend pas que le component se met à jour avec les données qu'il récupère avant d'enregistrer la <a href="http://snapshot.De">snapshot.De</a> plus, lancer le component est un problème car ce component appel la base de données. Si il y a un problème coté BDD, il pourrait se répercuté coté frontend et ça pourrai invalider notre snapshot alors qu'il n'y a pas de soucis coté frontend.</p>
 <p>Pour contourner ces problèmes, on utilise des fonctions asynchrones qui attendent la complétion du component et aussi, on utilise des mocks.
 Les mocks sont un moyen de jest de dire au component : 'Au lieu d'utiliser ta fonction pour faire ta requête, tu vas utiliser la mienne pour les tests'.
 En pratique : on code une copie de fonction qui renvoie ce que renvoie la fonction qui appel la base de donné quand tout ce passe bien, et on appel cette fonction au lieu d’appeler l'originale.</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">jest<span class="token punctuation">.</span><span class="token function">mock</span><span class="token punctuation">(</span><span class="token string">'../services'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+<pre class="language-js"><code class="language-js">jest<span class="token punctuation">.</span><span class="token function">mock</span><span class="token punctuation">(</span><span class="token string">'../services'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
   <span class="token literal-property property">getCategories</span><span class="token operator">:</span> jest<span class="token punctuation">.</span><span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token function">beforeEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
     <span class="token punctuation">(</span>getCategories <span class="token keyword">as</span> jest<span class="token punctuation">.</span>Mock<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">mockResolvedValue</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'category'</span><span class="token punctuation">,</span> <span class="token literal-property property">slug</span><span class="token operator">:</span> <span class="token string">'slug'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'category2'</span><span class="token punctuation">,</span> <span class="token literal-property property">slug</span><span class="token operator">:</span> <span class="token string">'slug2'</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
 </code></pre>
 <p>Ici, on mock le module '../service' qui contient getCategories, et on lui dit de justement remplacer le getCategories par notre fausse fonction initialisée par jest.fn() .</p>
 <p>Ensuite, avant chaque test, on dit a getCategories de renvoyer une réponse à une requête avec du contenu, exactement le même format de contenu que ce que doit renvoyer la fonction d'origine mais avec des valeurs de tests.</p>
 <p>On lance 'npx jest' et jest nous génère notre snapshot :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">// Jest Snapshot v1, https://goo.gl/fbAQLP
+<pre class="language-html"><code class="language-html">// Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header renders correctly 1`] = `
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span>
@@ -349,7 +341,6 @@ exports[`Header renders correctly 1`] = `
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 `;
-
 </code></pre>
 <p>On peut retrouver toute l'arborescence de mon Header ... ou presque.</p>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">

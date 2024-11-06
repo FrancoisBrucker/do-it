@@ -176,50 +176,44 @@ Il existe d'autres types d'API, comme SOAP (Simple Object Access Protocol), qui 
 <h3>Utilisation de l'API CountryLayer avec Python</h3>
 <h4>Définition des variables globales</h4>
 <p>Nous définissons d'abord les variables globales nécessaires pour faire des requêtes à l'API CountryLayer. Cela inclut la clé d'API et l'URL de base de l'API.</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">import</span> requests
+<pre class="language-python"><code class="language-python"><span class="token keyword">import</span> requests
 
 <span class="token comment"># Définition des variables globales</span>
 countrylayer_TOKEN <span class="token operator">=</span> <span class="token string">"5db9c34ca3979a85d30ce91cef09a02b"</span>
-countrylayer_URL <span class="token operator">=</span> <span class="token string">"https://api.countrylayer.com/v2"</span>
-</code></pre>
+countrylayer_URL <span class="token operator">=</span> <span class="token string">"https://api.countrylayer.com/v2"</span></code></pre>
 <p>Ensuite, en parcourant la documentation de countrylayer on peut regarder toutes les requêtes possbles avec les paramètres requis pour faire la requête.</p>
 <h4>Fonction pour obtenir des pays par capitale</h4>
 <p>La fonction <code>get_country_by_capital</code> permet de récupérer des informations sur les pays en utilisant le nom de leur capitale. Elle construit l'URL pour la requête et inclut la clé d'API dans les paramètres.</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># Fonction pour obtenir des pays par capitale</span>
+<pre class="language-python"><code class="language-python"><span class="token comment"># Fonction pour obtenir des pays par capitale</span>
 <span class="token keyword">def</span> <span class="token function">get_country_by_capital</span><span class="token punctuation">(</span>capital<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     url <span class="token operator">=</span> <span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>countrylayer_URL<span class="token punctuation">}</span></span><span class="token string">/capital/</span><span class="token interpolation"><span class="token punctuation">{</span>capital<span class="token punctuation">}</span></span><span class="token string">"</span></span>
     params <span class="token operator">=</span> <span class="token punctuation">{</span>
         <span class="token string">"access_key"</span><span class="token punctuation">:</span> countrylayer_TOKEN
     <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">,</span> params<span class="token operator">=</span>params<span class="token punctuation">)</span>
-</code></pre>
+    <span class="token keyword">return</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">,</span> params<span class="token operator">=</span>params<span class="token punctuation">)</span></code></pre>
 <h4>Fonction pour obtenir des pays par devise</h4>
 <p>La fonction <code>get_country_by_currency</code> permet de rechercher des pays en fonction de leur devise. Elle utilise l'URL spécifique à cette recherche et inclut la clé d'API en paramètre.</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token comment"># Fonction pour obtenir des pays par devise</span>
+<pre class="language-python"><code class="language-python"><span class="token comment"># Fonction pour obtenir des pays par devise</span>
 <span class="token keyword">def</span> <span class="token function">get_country_by_currency</span><span class="token punctuation">(</span>currency<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     url <span class="token operator">=</span> <span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>countrylayer_URL<span class="token punctuation">}</span></span><span class="token string">/currency/</span><span class="token interpolation"><span class="token punctuation">{</span>currency<span class="token punctuation">}</span></span><span class="token string">"</span></span>
     params <span class="token operator">=</span> <span class="token punctuation">{</span>
         <span class="token string">"access_key"</span><span class="token punctuation">:</span> countrylayer_TOKEN
     <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">,</span> params<span class="token operator">=</span>params<span class="token punctuation">)</span>
-</code></pre>
+    <span class="token keyword">return</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">,</span> params<span class="token operator">=</span>params<span class="token punctuation">)</span></code></pre>
 <h4>Execution</h4>
 <p>On peut maintenant éxecuter les requêtes</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">get_country_by_capital<span class="token punctuation">(</span><span class="token string">"paris"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>json<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
-<pre class="language-json " style="counter-reset: linenumber 0"><code class="language-json"><span class="token punctuation">[</span><span class="token punctuation">{</span>'name'<span class="token operator">:</span> 'France'<span class="token punctuation">,</span>
+<pre class="language-python"><code class="language-python">get_country_by_capital<span class="token punctuation">(</span><span class="token string">"paris"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>json<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<pre class="language-json"><code class="language-json"><span class="token punctuation">[</span><span class="token punctuation">{</span>'name'<span class="token operator">:</span> 'France'<span class="token punctuation">,</span>
   'topLevelDomain'<span class="token operator">:</span> <span class="token punctuation">[</span>'.fr'<span class="token punctuation">]</span><span class="token punctuation">,</span>
   'alpha2Code'<span class="token operator">:</span> 'FR'<span class="token punctuation">,</span>
   'alpha3Code'<span class="token operator">:</span> 'FRA'<span class="token punctuation">,</span>
   'callingCodes'<span class="token operator">:</span> <span class="token punctuation">[</span>'<span class="token number">33</span>'<span class="token punctuation">]</span><span class="token punctuation">,</span>
   'capital'<span class="token operator">:</span> 'Paris'<span class="token punctuation">,</span>
   'altSpellings'<span class="token operator">:</span> <span class="token punctuation">[</span>'FR'<span class="token punctuation">,</span> 'French Republic'<span class="token punctuation">,</span> 'République française'<span class="token punctuation">]</span><span class="token punctuation">,</span>
-  'region'<span class="token operator">:</span> 'Europe'<span class="token punctuation">}</span><span class="token punctuation">]</span>
-</code></pre>
+  'region'<span class="token operator">:</span> 'Europe'<span class="token punctuation">}</span><span class="token punctuation">]</span></code></pre>
 <p>On obtient bien la réponse <em>France</em> avec différents paramètres sur le pays.</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">get_country_by_currency<span class="token punctuation">(</span><span class="token string">"usd"</span><span class="token punctuation">)</span>
-</code></pre>
-<pre class="language-json " style="counter-reset: linenumber 0"><code class="language-json"><span class="token punctuation">[</span><span class="token punctuation">{</span>'name'<span class="token operator">:</span> 'American Samoa'<span class="token punctuation">,</span>
+<pre class="language-python"><code class="language-python">get_country_by_currency<span class="token punctuation">(</span><span class="token string">"usd"</span><span class="token punctuation">)</span></code></pre>
+<pre class="language-json"><code class="language-json"><span class="token punctuation">[</span><span class="token punctuation">{</span>'name'<span class="token operator">:</span> 'American Samoa'<span class="token punctuation">,</span>
   'topLevelDomain'<span class="token operator">:</span> <span class="token punctuation">[</span>'.as'<span class="token punctuation">]</span><span class="token punctuation">,</span>
   'alpha2Code'<span class="token operator">:</span> 'AS'<span class="token punctuation">,</span>
   'alpha3Code'<span class="token operator">:</span> 'ASM'<span class="token punctuation">,</span>
@@ -393,13 +387,11 @@ countrylayer_URL <span class="token operator">=</span> <span class="token string
   'callingCodes'<span class="token operator">:</span> <span class="token punctuation">[</span>'<span class="token number">263</span>'<span class="token punctuation">]</span><span class="token punctuation">,</span>
   'capital'<span class="token operator">:</span> 'Harare'<span class="token punctuation">,</span>
   'altSpellings'<span class="token operator">:</span> <span class="token punctuation">[</span>'ZW'<span class="token punctuation">,</span> 'Republic of Zimbabwe'<span class="token punctuation">]</span><span class="token punctuation">,</span>
-  'region'<span class="token operator">:</span> 'Africa'<span class="token punctuation">}</span><span class="token punctuation">]</span>
-</code></pre>
+  'region'<span class="token operator">:</span> 'Africa'<span class="token punctuation">}</span><span class="token punctuation">]</span></code></pre>
 <p>Ici, on obtient la liste des pays ayant le dollar comme monnaie mais ce résultat est pollué par tous les paramètres, on va chercher à obtenir la liste de ces pays :</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">dollar <span class="token operator">=</span> get_country_by_currency<span class="token punctuation">(</span><span class="token string">"usd"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>json<span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">[</span>dollar<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span> <span class="token keyword">for</span> k <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>dollar<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
-</code></pre>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token punctuation">[</span><span class="token string">'American Samoa'</span><span class="token punctuation">,</span>
+<pre class="language-python"><code class="language-python">dollar <span class="token operator">=</span> get_country_by_currency<span class="token punctuation">(</span><span class="token string">"usd"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>json<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">[</span>dollar<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span> <span class="token keyword">for</span> k <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>dollar<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span></code></pre>
+<pre class="language-python"><code class="language-python"><span class="token punctuation">[</span><span class="token string">'American Samoa'</span><span class="token punctuation">,</span>
 <span class="token string">'Bonaire, Sint Eustatius and Saba'</span><span class="token punctuation">,</span>
 <span class="token string">'British Indian Ocean Territory'</span><span class="token punctuation">,</span>
 <span class="token string">'United States Minor Outlying Islands'</span><span class="token punctuation">,</span>
@@ -418,8 +410,7 @@ countrylayer_URL <span class="token operator">=</span> <span class="token string
 <span class="token string">'Timor-Leste'</span><span class="token punctuation">,</span>
 <span class="token string">'Turks and Caicos Islands'</span><span class="token punctuation">,</span>
 <span class="token string">'United States of America'</span><span class="token punctuation">,</span>
-<span class="token string">'Zimbabwe'</span><span class="token punctuation">]</span>
-</code></pre>
+<span class="token string">'Zimbabwe'</span><span class="token punctuation">]</span></code></pre>
 <p>Cette application n'était qu'un exemple illustrant l'intégration d'une API REST dans un script Python. Selon les besoins spécifiques d'un projet, des recherches ainsi que le parcours des documentations peuvent aider à trouver une API adaptée.</p>
 <h2>Conclusion</h2>
 <p>Au cours de ce MON j'ai pu apprendre les fondamentaux des API REST ainsi que leur utilisation à travers l'API CountryLayer et des exemples pratiques en Python. L'intégration d'API REST simplifie la récupération et l'analyse des données facilitant ainsi leurs utilisations. Pour le sprint 2 de mon POK, je prévois d'intégrer une API REST en VBA dans Excel afin d'en explorer les manipulations avec ce langage.</p>

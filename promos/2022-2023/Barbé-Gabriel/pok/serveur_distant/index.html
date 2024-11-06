@@ -141,7 +141,7 @@ Concernant la base de données et le langage associée à utiliser, j'ai longtem
 Mon code est disponible sur [Mon Github].(<a href="https://github.com/gabrielbarbe00/POK/tree/main/POK_2/express-PFCback">https://github.com/gabrielbarbe00/POK/tree/main/POK_2/express-PFCback</a>)</p>
 <h3>Création de la base de données</h3>
 <p>Afin de compléter mon premier site, j'ai eu pour idée d'ajouter une option permettant de sélectionner un champion et un pays : ainsi J1 sera désigné par le champion Zidane ou le pays Brésil. Le but est donc de créer une base de données avec 5 champions et 5 pays. J'ai repris en grande partie le code visible sur <a href="../../../mon/GB/Mons/coteweb">mon MON</a> que j'ai personnalisé afin d'y mettre mes exigences. Le champion devra donc avoir les caractéristiques &quot;nom&quot;, &quot;prénom&quot; et &quot;numéro&quot; ; le pays, lui, sera associé aux caractéristiques &quot;nom&quot; et &quot;couleur&quot;. Ci-dessous le code concernant le champion :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">const mongoose <span class="token operator">=</span> require<span class="token punctuation">(</span><span class="token string">"mongoose"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-bash"><code class="language-bash">const mongoose <span class="token operator">=</span> require<span class="token punctuation">(</span><span class="token string">"mongoose"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 const Schema <span class="token operator">=</span> mongoose.Schema<span class="token punctuation">;</span>
 
@@ -169,9 +169,8 @@ JoueurSchema.virtual<span class="token punctuation">(</span><span class="token s
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 // Export model
-module.exports <span class="token operator">=</span> mongoose.model<span class="token punctuation">(</span><span class="token string">"Joueur"</span>, JoueurSchema<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token keyword">function</span> JoueurCreate<span class="token punctuation">(</span>first_name, family_name, number, cb<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+module.exports <span class="token operator">=</span> mongoose.model<span class="token punctuation">(</span><span class="token string">"Joueur"</span>, JoueurSchema<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token keyword">function</span> JoueurCreate<span class="token punctuation">(</span>first_name, family_name, number, cb<span class="token punctuation">)</span> <span class="token punctuation">{</span>
   joueurdetail <span class="token operator">=</span> <span class="token punctuation">{</span>first_name:first_name , family_name: family_name, number:number<span class="token punctuation">}</span>
   
   var joueur <span class="token operator">=</span> new Joueur<span class="token punctuation">(</span>joueurdetail<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -185,8 +184,7 @@ module.exports <span class="token operator">=</span> mongoose.model<span class="
     joueurs.push<span class="token punctuation">(</span>joueur<span class="token punctuation">)</span>
     cb<span class="token punctuation">(</span>null, joueur<span class="token punctuation">)</span>
   <span class="token punctuation">}</span>  <span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <h3>Routes</h3>
 <p>Nous en arrivons ici à la partie création des routes pour notre site sur le serveur. En premier lieu, nous crééons un dossier &quot;controllers&quot; où l'on mettra,  pour chaque fichier de notre base de donées, les requêtes de création, d'affichages, de supression etc. Ensuite, nous crééons un fichier javascript &quot;catalog.js&quot; où l'on définit les routes de notre site à proprement parlé. J'obtients donc les routes suivantes :</p>
 <ul>
@@ -217,7 +215,7 @@ Dans les dossiers créés lors de l'utilisation d'express, nous avons un dossier
 <p>Commme évoqué précedemment j'ai finalement opté pour un changement de base afin d'établir un historique des coups joués. Dans un premier temps, je me contente de rentrer moi-même les coups afin d'avoir une page propre avec des données puis dans un second temps, je les actualiserai avec les données issues de mon site. <br>.
 J'ai donc commencé par recréer des routes notamment la route (/historique).
 J'ai ensuite modifié tous mes fichiers afin de créer la nouvelle base de donnée avec les donnnées intéressantes : le dit coup et la date à laquelle il a été effectué. Je crée donc un nouveau schéma dans un fichier &quot;coup.js&quot;, dans le dossier &quot;models&quot;, où j'insère mon schéma :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">const mongoose <span class="token operator">=</span> require<span class="token punctuation">(</span><span class="token string">"mongoose"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-bash"><code class="language-bash">const mongoose <span class="token operator">=</span> require<span class="token punctuation">(</span><span class="token string">"mongoose"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 const Schema <span class="token operator">=</span> mongoose.Schema<span class="token punctuation">;</span>
 
@@ -231,10 +229,9 @@ CoupSchema.virtual<span class="token punctuation">(</span><span class="token str
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 // Export model
-module.exports <span class="token operator">=</span> mongoose.model<span class="token punctuation">(</span><span class="token string">"Coup"</span>, CoupSchema<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+module.exports <span class="token operator">=</span> mongoose.model<span class="token punctuation">(</span><span class="token string">"Coup"</span>, CoupSchema<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>Je crée ensuite un nouveau fichier historiqueController.js afin de rentrer les fonctions en lien avec ma base de donnée</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">const <span class="token punctuation">{</span> body, validationResult <span class="token punctuation">}</span> <span class="token operator">=</span> require<span class="token punctuation">(</span><span class="token string">"express-validator"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-bash"><code class="language-bash">const <span class="token punctuation">{</span> body, validationResult <span class="token punctuation">}</span> <span class="token operator">=</span> require<span class="token punctuation">(</span><span class="token string">"express-validator"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 const Coup <span class="token operator">=</span> require<span class="token punctuation">(</span><span class="token string">"../models/coup"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 const async <span class="token operator">=</span> require<span class="token punctuation">(</span><span class="token string">"async"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -250,10 +247,9 @@ exports.coup_list <span class="token operator">=</span> <span class="token keywo
         //Successful, so render
         res.render<span class="token punctuation">(</span><span class="token string">"coup_list"</span>, <span class="token punctuation">{</span> title: <span class="token string">"Historique de coup"</span>, coup_list: list_coups <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
       <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code></pre>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
 <p>Cette fonction sert simplement à implémenter la liste de coup sur mon site, il ne reste plus qu'à créer un fichier .pug où je fais le front. Je débute par un fichier très rudimentaire :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">extends layout
+<pre class="language-bash"><code class="language-bash">extends layout
 
 block content
   <span class="token assign-left variable">h1</span><span class="token operator">=</span> title
@@ -265,38 +261,33 @@ block content
       <span class="token operator">|</span> <span class="token comment">#{coup.date}</span>
 
   <span class="token keyword">else</span>
-    li There are no authors.
-</code></pre>
+    li There are no authors.</code></pre>
 <p>Ma page historique ressemble alors à cela : <img src="../Images/Historique.png" alt="routes">
 En y appliquant le design de mon site et quelques touches de CSS en plus, on obtient : <img src="../Images/Data.png" alt="routes"></p>
 <h3>Mise à jour de la base de données</h3>
 <p>Il me reste maintenant à actualiser l'historique à chaque coup jouer, c'est une manipulation qui me prend beaucoup de temps et que je n'ai toujours pas réussi à l'heure actuelle. En effet, le problème est que mon script utilise la fonction &quot;appenchild&quot; pour faire apparaitre la liste de coups et que mes variables &quot;pierre&quot;, &quot;feuille&quot; et &quot;ciseaux&quot; ne semblent pas être déclarées. Ainsi, lorsque je veux mettre ma base de données à jour avec une fonction dans le fichier &quot;coup.js&quot;, le terminal me renvoi que la variable &quot;pierre&quot; n'est pas déclarée :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">pierre.addEventListener<span class="token punctuation">(</span><span class="token string">'click'</span>, <span class="token function-name function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+<pre class="language-bash"><code class="language-bash">pierre.addEventListener<span class="token punctuation">(</span><span class="token string">'click'</span>, <span class="token function-name function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
   mongoose.model<span class="token punctuation">(</span><span class="token string">"Coup"</span>, CoupSchema<span class="token punctuation">)</span>.findOneAndUpdate<span class="token punctuation">(</span><span class="token punctuation">{</span>name:<span class="token string">'Pierre'</span><span class="token punctuation">}</span>, <span class="token punctuation">{</span>date<span class="token punctuation">}</span>, function<span class="token punctuation">(</span>err, utilisateur<span class="token punctuation">)</span>
   <span class="token punctuation">{</span>
     <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token builtin class-name">return</span> handleError<span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>J'avoue avoir beaucoup de mal à passer cette étape, j'ai même fini par demander à ChatGPT si il savait comment faire et il m'a donné un code présentant exactement le même problème de variable. Il utilisait pourtant aussi la fonction &quot;appenchild()&quot; pour faire apparaitre sa variable.
 <br>
 J'ai aussi essayé de rentrer cette fonction directement dans mon fichier script comme ça j'évite ce problème.</p>
 <h3>Mise du site sur l'ovh</h3>
 <p>J'ai suivi en grande partie le <a href="https://francoisbrucker.github.io/do-it/pok/un-site-chez-moi/TBi/ServeurDistant/">POK de Tuncay</a> qui fournit un très bon tutoriel pour cette partie. Néanmoins, mon camarade a déployé son site en utilisant node et j'ai utilisé express pour le faire, ce qui mène à quelques différences.
 Pour commencer on se connecte via ssh à l'ovh. On y clone ensuite le répo github du projet dans le dossier &quot;node&quot; :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">git</span> clone https://github.com/gabrielbarbe00/POK.git
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">git</span> clone https://github.com/gabrielbarbe00/POK.git</code></pre>
 <p>Il faut ensuite indiquer au programme qu'il doit se lancer sur le port que l'on m'a assigné. Cet objectif est réalisé d'une manière très spécifique à express, il suffit d'ajouter deux lignes dans le fichier &quot;app.js&quot; :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash">const port <span class="token operator">=</span> <span class="token number">10408</span>
+<pre class="language-bash"><code class="language-bash">const port <span class="token operator">=</span> <span class="token number">10408</span>
 
 app.listen<span class="token punctuation">(</span>port, <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
   console.log<span class="token punctuation">(</span><span class="token variable"><span class="token variable">`</span>Example app listening on port $<span class="token punctuation">{</span>port<span class="token punctuation">}</span><span class="token variable">`</span></span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
 <p>Ainsi, l'application se lance désormais sur le bon port et tourne sur l'ovh, objectif accompli ! Il ne nous reste plus qu'à ouvrir un terminal virtuel tournant en continu afin que notre serveur ne se ferme pas dès que nous quittons le ssh.
 On rentre donc la commande suivante :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">screen</span> <span class="token parameter variable">-S</span> PFC
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">screen</span> <span class="token parameter variable">-S</span> PFC</code></pre>
 <p>On lance l'application puis nous quittons le terminal avec la commande CTRL A + D.
 Le site est disponible à <a href="http://node.coriandre.ovh1.ec-m.fr">cette adresse</a></p>
 <h2>Feedback</h2>

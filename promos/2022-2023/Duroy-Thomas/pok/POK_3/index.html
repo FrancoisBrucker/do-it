@@ -229,11 +229,9 @@
 </ul>
 <h2>Travail réalisé</h2>
 <p>Tout d'abord, il m'a été nécessaire d'installer les librairies suivantes :</p>
-<pre class="language-sh " style="counter-reset: linenumber 0"><code class="language-sh">pip <span class="token function">install</span> transformers pandas nltk sklearn
-</code></pre>
+<pre class="language-sh"><code class="language-sh">pip <span class="token function">install</span> transformers pandas nltk sklearn</code></pre>
 <p>Et pour cuda, l'installation s'est faite avec la commande suivante:</p>
-<pre class="language-sh " style="counter-reset: linenumber 0"><code class="language-sh">pip3 <span class="token function">install</span> torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu117
-</code></pre>
+<pre class="language-sh"><code class="language-sh">pip3 <span class="token function">install</span> torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu117</code></pre>
 <p>J'ai basé mon projet sur une base de données de 50k reviews IMDB, labellées &quot;positive&quot; ou &quot;negative&quot;, obtenue sur <a href="https://www.kaggle.com/code/lakshmi25npathi/sentiment-analysis-of-imdb-movie-reviews">Kaggle</a></p>
 <p>Au final, essayer de scraper des données sur le web, et surtout les labeler, aurait pris un temps monstrueux que je n'avais pas.</p>
 <p>Le dataset était utilisable quasisement immédiatement et après un peud de data cleaning et de pre-processing, à savoir la tokenization. Je suis passé à l'entraînement de mes réseaux de neurone.</p>

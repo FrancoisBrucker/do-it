@@ -159,26 +159,22 @@ Une API permet donc à un utilisateur de récupérer et d'intégrer à son appli
 <p><em>On considère que Node.js est déjà installé sur la machine utilisée. Node est un environnement d'exécution qui permet d'écrire en JavaScript toutes les tâches nécessaires côté serveur.</em></p>
 <p>Pour commencer, il est important de séparer le front et le back dans deux dossiers bien distincts à l'intérieur du projet.
 Puis on se place dans le dossier back et on exécute la commande suivante :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">npm</span> init
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">npm</span> init</code></pre>
 <p>Cela initialise le projet, et crée un fichier &quot;package.json&quot; dans lequel on remplit plusieurs paramètres initiaux (ou bien on laisse les paramètres par défaut), et qui contiendra toutes les informations liées aux packages utilisés dans le projets.</p>
 <p>On peut ensuite exécuter</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">git</span> init
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">git</span> init</code></pre>
 <p>afin de créer le repository GitHub du projet, et ajouter un fichier &quot;.gitignore&quot; dans lequel on mettra tout ce que l'on ne veut pas charger sur le repo GitHub.
 Enfin, on crée un fichier &quot;index.js&quot;, qui contiendra le code de notre projet.</p>
 <p>On peut donc reprendre notre code, et dans le fichier &quot;index.js&quot;, il faut commencer par créer le serveur et son fonctionnement de base. Le code commenté ci-dessous explique cette étape :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> http <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'http'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//importe le package qui permet de créer le serveur</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> http <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'http'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//importe le package qui permet de créer le serveur</span>
 
 <span class="token keyword">const</span> server <span class="token operator">=</span> http<span class="token punctuation">.</span><span class="token function">createServer</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
     res<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token string">'Réponse du serveur'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//crée un serveur qui prend en argument la fonction à appeler en cas de requête au serveur, ici une fonction qui reçoit la requête (req) et la réponse (res) et renvoie 'Réponse au serveur'</span>
 
-server<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">PORT</span> <span class="token operator">||</span> <span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//écoute les requêtes émises par le port par défaut s'il existe ou par le port 3000</span>
-</code></pre>
+server<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">PORT</span> <span class="token operator">||</span> <span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//écoute les requêtes émises par le port par défaut s'il existe ou par le port 3000</span></code></pre>
 <p>On démarre alors le serveur en exécutant :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">node</span> server
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">node</span> server</code></pre>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
@@ -190,30 +186,27 @@ Pour éviter cela, il est très utile d'installer le package <strong>nodemon</st
 <h2>4. Express : installation et utilisation</h2>
 <p>Express est un framework pour Node, qui rend beaucoup plus simple l'analyse des requêtes et évite le travail très fastidieux que demanderait la même tâche à réaliser uniquement avec Node (ce qui est malgré tout possible).
 Pour l'utiliser, nous allons donc commencer par l'installer, en exécutant dans le dossier backend :</p>
-<pre class="language-bash " style="counter-reset: linenumber 0"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> express
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> express</code></pre>
 <p>On crée ensuite un fichier &quot;app.js&quot;, qui contiendra l'application Express, dans lequel on écrit :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//importe Express</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//importe Express</span>
 
 <span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//crée l'application (vide pour l'instant)</span>
 
-module<span class="token punctuation">.</span>exports <span class="token operator">=</span> app<span class="token punctuation">;</span> <span class="token comment">//exporte l'application pour pouvoir y accéder depuis les autres fichiers du projet, notamment depuis le serveur Node</span>
-</code></pre>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> app<span class="token punctuation">;</span> <span class="token comment">//exporte l'application pour pouvoir y accéder depuis les autres fichiers du projet, notamment depuis le serveur Node</span></code></pre>
 <p>Pour pouvoir utiliser Express, il faut ensuite l'importer depuis le serveur Node. On modifie donc le code de &quot;index.js&quot; présenté précédemment comme suit :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> http <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'http'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> http <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'http'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./app'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//importe l'application</span>
 
 app<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">'port'</span><span class="token punctuation">,</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">PORT</span> <span class="token operator">||</span> <span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//donne le port de lancement de l'application</span>
 <span class="token keyword">const</span> server <span class="token operator">=</span> http<span class="token punctuation">.</span><span class="token function">createServer</span><span class="token punctuation">(</span>app<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//indique au serveur d'utiliser l'application pour répondre aux requêtes</span>
 
-server<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">PORT</span> <span class="token operator">||</span> <span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+server<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">PORT</span> <span class="token operator">||</span> <span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>On a alors configuré Express comme l'application à utiliser pour répondre aux requêtes reçues par le serveur. Il faut maintenant comprendre comment personnaliser les fonctionnalités d'Express pour répondre aux besoins du projet. Pour cela, plusieurs notions sont importantes :</p>
 <ul>
 <li><strong>Les middlewares</strong></li>
 </ul>
 <p>Dans ce contexte, un middleware est une fonction qui prend en entrée un objet <em>request</em> et un objet <em>response</em> et qui peut les lire, les analyser et les manipuler si besoin. Pour faire simple, Express est une suite de middlewares. Chaque middleware reçoit également une méthode appelée <em>next</em>, qui lui permet de passer à l'exécution du middleware suivant lorsqu'il est terminé. Voici un exemple expliqué d'application Express :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 
@@ -243,8 +236,7 @@ app<span class="token punctuation">.</span><span class="token function">use</spa
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Réponse envoyée avec succès !'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-module<span class="token punctuation">.</span>exports <span class="token operator">=</span> app<span class="token punctuation">;</span>
-</code></pre>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> app<span class="token punctuation">;</span></code></pre>
 <p>Ici, les réponses aux requêtes sont très simples et ne dépendent pas de la requête reçue (<em>app.use</em> s'applique à toutes les requêtes), mais cela permet de comprendre le concept.</p>
 <ul>
 <li><strong>Les routes</strong></li>
@@ -255,7 +247,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 -&gt; On modifie une donnée grâce à la méthode PUT
 -&gt; On supprime une donnée grâce à la méthode DELETE</p>
 <p>Voici un exemple de requête GET commentée :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">x <span class="token operator">=</span> <span class="token number">7</span> 
+<pre class="language-js"><code class="language-js">x <span class="token operator">=</span> <span class="token number">7</span> 
 
 app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span> <span class="token comment">//le '/' indique l'emplacement</span>
     res<span class="token punctuation">.</span>statusCode <span class="token operator">=</span> <span class="token number">200</span><span class="token punctuation">;</span> <span class="token comment">//200 est un code d'état classique pour indiquer une requête réussie</span>
@@ -263,19 +255,17 @@ app<span class="token punctuation">.</span><span class="token function">get</spa
 
     res<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span>donnée<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//renvoie la réponse</span>
 
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
 <p>De même pour une requête POST :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">app<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<pre class="language-js"><code class="language-js">app<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
 
     donnée <span class="token operator">=</span> req<span class="token punctuation">.</span>query<span class="token punctuation">.</span>valeur <span class="token comment">//attribue à la variable "donnée" la valeur de "valeur" </span>
     res<span class="token punctuation">.</span><span class="token function">redirect</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span> <span class="token comment">//ajoute une méthode GET pour éviter de renvoyer une donnée au rafraîchissement du navigateur</span>
 
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
 <p>En général, pour tester les méthodes au fur et à mesure du développement, on utilise une application externe comme <a href="https://www.postman.com/">Postman</a>. Elle permet de simuler des requêtes de différents types afin d'observer ce que renvoie le serveur.</p>
 <p>Dans le cadre de la formation OpenClassrooms suivie, le projet qui sert de fil conducteur aux exercices de mise en pratique est la création d'un site de revente d'objets, dont le front est déjà existant. Voici donc, pour donner un exemple un peu plus contextuel, ce que pourrait donner le fichier &quot;app.js&quot; dans ce cas :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token string">'/api/stuff'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span> <span class="token comment">// '/api/test' correspond à la route/l'URL où est enregistré le code (aussi appelée endpoint)</span>
+<pre class="language-js"><code class="language-js">app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token string">'/api/stuff'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span> <span class="token comment">// '/api/test' correspond à la route/l'URL où est enregistré le code (aussi appelée endpoint)</span>
   <span class="token keyword">const</span> stuff <span class="token operator">=</span> <span class="token punctuation">[</span> <span class="token comment">//création des articles sous la forme requise par le front du projet</span>
     <span class="token punctuation">{</span>
       <span class="token literal-property property">_id</span><span class="token operator">:</span> <span class="token string">'objet1'</span><span class="token punctuation">,</span>
@@ -295,8 +285,7 @@ app<span class="token punctuation">.</span><span class="token function">get</spa
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token punctuation">]</span><span class="token punctuation">;</span>
   res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span>stuff<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//retourne les articles et le code d'état de requête réussie</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>On effectue ensuite une requête GET sur Postman, et on obtient comme prévu le résultat suivant :
 <img src="requete_GET_postman.png"></p>
 <ul>
@@ -305,13 +294,12 @@ app<span class="token punctuation">.</span><span class="token function">get</spa
 <p>Comme mentionné précédemment, le front du projet de ce cours est déjà crée et s'exécute donc en local, mais sur un port différent du back. On observe ci-dessus que lorsque l'on lance le back et qu'on le teste sur Postman, on reçoit bien les informations voulues du serveur, cependant elles ne s'affichent pas sur le front. Les deux parties ne communiquent pas. C'est dû à ce que l'on appelle une <strong>erreur CORS</strong>.</p>
 <p>CORS signifie Cross Origin Resource Sharing. C'est un système qui définit comment les serveurs et les navigateurs interagissent, et notamment quelles ressources peuvent être acceptées ou non. Par mesure de sécurité, celui-ci empêche par défaut les requêtes HTTP entre des serveurs différents, et donc ici l'application n'a pas accès à l'API. Pour pouvoir faire communiquer les deux ports distincts entre eux, il va falloir ajouter des headers (ou en-tête en français).</p>
 <p>On ajoute au fichier &quot;app.js&quot; le morceau de code suivant (toujours expliqué en commentaires), et celui-ci ce place bien sûr AVANT la commande qui crée les articles, car les middlewares sont lu dans l'ordre dans lequel ils sont écrit :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span> <span class="token comment">//il n'y a pas d'URL spécifié donc le code s'applique à toutes les routes</span>
+<pre class="language-js"><code class="language-js">app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span> <span class="token comment">//il n'y a pas d'URL spécifié donc le code s'applique à toutes les routes</span>
   res<span class="token punctuation">.</span><span class="token function">setHeader</span><span class="token punctuation">(</span><span class="token string">'Access-Control-Allow-Origin'</span><span class="token punctuation">,</span> <span class="token string">'*'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//cette ligne autorise toutes les origines (d'où le '*') à accéder à l'API</span>
   res<span class="token punctuation">.</span><span class="token function">setHeader</span><span class="token punctuation">(</span><span class="token string">'Access-Control-Allow-Headers'</span><span class="token punctuation">,</span> <span class="token string">'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//cette ligne autorise l'ajout aux requêtes des headers mentionnés</span>
   res<span class="token punctuation">.</span><span class="token function">setHeader</span><span class="token punctuation">(</span><span class="token string">'Access-Control-Allow-Methods'</span><span class="token punctuation">,</span> <span class="token string">'GET, POST, PUT, DELETE, PATCH, OPTIONS'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//cette ligne autorise l'envoi de requêtes avec les méthodes mentionnées</span>
   <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//fonction next à ne pas oublier pour passer au middleware suivant </span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>Retenons au moins que pour permettre des requêtes de différentes origines (Cross Origin), il faut ajouter des headers spécifiques de contrôle d'accès aux objets de réponse.</p>
 <h2>5. Conclusion</h2>
 <p>Finalement, ce MON m'a beaucoup aidé à éclaircir la notion de back-end, même si j'ai eu besoin de nombreuses recherches pour assimiler certains concepts qui ne me sont pas très intuitifs. Cela me permettra de mieux cerner le fonctionnement global de futurs projets et notamment du projet 3A.</p>

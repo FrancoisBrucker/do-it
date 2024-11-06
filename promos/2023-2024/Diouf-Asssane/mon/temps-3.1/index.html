@@ -134,7 +134,7 @@ Je compte me baser sur la documentation officielle ainsi que sur le livre que m'
 <h2>Découverte d'Actix-Web</h2>
 <p>Actix Web est un framework Rust pour faire du back. On peut lancer un serveur HTTP et définir des controlleurs et les routes auxquelles il répondent.
 Voici un exemple tiré du site du framework :</p>
-<pre class="language-rust " style="counter-reset: linenumber 0"><code class="language-rust"><span class="token attribute attr-name">#[actix_web::main]</span>
+<pre class="language-rust"><code class="language-rust"><span class="token attribute attr-name">#[actix_web::main]</span>
 <span class="token keyword">async</span> <span class="token keyword">fn</span> <span class="token function-definition function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">-></span> <span class="token namespace">std<span class="token punctuation">::</span>io<span class="token punctuation">::</span></span><span class="token class-name">Result</span><span class="token operator">&lt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">></span> <span class="token punctuation">{</span>
     <span class="token class-name">HttpServer</span><span class="token punctuation">::</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token closure-params"><span class="token closure-punctuation punctuation">|</span><span class="token closure-punctuation punctuation">|</span></span> <span class="token punctuation">{</span>
         <span class="token class-name">App</span><span class="token punctuation">::</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
@@ -159,8 +159,7 @@ Voici un exemple tiré du site du framework :</p>
 
 <span class="token keyword">async</span> <span class="token keyword">fn</span> <span class="token function-definition function">manual_hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">-></span> <span class="token keyword">impl</span> <span class="token class-name">Responder</span> <span class="token punctuation">{</span>
     <span class="token class-name">HttpResponse</span><span class="token punctuation">::</span><span class="token class-name">Ok</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">body</span><span class="token punctuation">(</span><span class="token string">"Hey there!"</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <h2>Gérer une base de données</h2>
 <p>En Rust, différentes options sont possibles pour travailler avec une base de données. On peut décider décider de travailler avec un ORM, ou sans, d'avoir un crate qui gère les requêtes en async ou non et ainsi de suite. Dans &quot;Zero to production in Rust&quot;, on utilise sqlx qui permet de créer une base de données et d'effectuer les migrations.</p>
 <h2>L'importance des tests</h2>

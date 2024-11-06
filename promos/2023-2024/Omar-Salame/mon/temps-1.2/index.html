@@ -175,7 +175,7 @@
 <h2>Node.js &amp; Express <a id="section-2"></a></h2>
 <h3><strong>Node.js</strong> <a id="subsection-1"></a></h3>
 <p>On Commence par créer un modèle pour notre application en utilisant la commande <code>npm init</code>. Vous devrez répondre aux questions posées par l'utilitaire, et le résultat sera la création automatique d'un fichier <em>package.json</em> à la racine du projet, qui contient des informations sur le projet.</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token punctuation">{</span>
+<pre class="language-js"><code class="language-js"><span class="token punctuation">{</span>
   <span class="token string-property property">"name"</span><span class="token operator">:</span> <span class="token string">"backend"</span><span class="token punctuation">,</span>
   <span class="token string-property property">"version"</span><span class="token operator">:</span> <span class="token string">"1.0.0"</span><span class="token punctuation">,</span>
   <span class="token string-property property">"description"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
@@ -186,11 +186,10 @@
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token string-property property">"author"</span><span class="token operator">:</span> <span class="token string">"Omar Salame"</span><span class="token punctuation">,</span>
   <span class="token string-property property">"license"</span><span class="token operator">:</span> <span class="token string">"ISC"</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Nous pouvons ensuite exécuter le programme sur <em>index.js</em> directement avec Node à partir de la ligne de commande <code>node index.js</code>, ou <code>npm start</code></p>
 <p>Pour commencer, on transforme l'application en serveur web en modifiant les fichiers index.js comme suit :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> http <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'http'</span><span class="token punctuation">)</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> http <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'http'</span><span class="token punctuation">)</span>
 
 <span class="token keyword">const</span> app <span class="token operator">=</span> http<span class="token punctuation">.</span><span class="token function">createServer</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">request<span class="token punctuation">,</span> response</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   response<span class="token punctuation">.</span><span class="token function">writeHead</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token string-property property">'Content-Type'</span><span class="token operator">:</span> <span class="token string">'text/plain'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
@@ -199,10 +198,9 @@
 
 <span class="token keyword">const</span> <span class="token constant">PORT</span> <span class="token operator">=</span> <span class="token number">3001</span>
 app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token constant">PORT</span><span class="token punctuation">)</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Server running on port </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token constant">PORT</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
-</code></pre>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Server running on port </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token constant">PORT</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span></code></pre>
 <p>Dans la première ligne, l'application importe le module serveur web intégré de Node. Le code utilise la méthode createServer du module http pour créer un nouveau serveur web. Un gestionnaire d'événements est enregistré sur le serveur, qui est appelé à chaque fois qu'une requête HTTP est effectuée à l'adresse du serveur <a href="http://localhost:3001">http://localhost:3001</a>. La réponse est renvoyée avec le code d'état 200, l'en-tête Content-Type est défini sur text/plain, et le contenu du site à renvoyer est défini sur Hello World. Le but principal du serveur back-end dans ce cours est de fournir des données brutes au format JSON au front-end.</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">let</span> notes <span class="token operator">=</span> <span class="token punctuation">[</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">let</span> notes <span class="token operator">=</span> <span class="token punctuation">[</span>
   <span class="token punctuation">{</span>
     <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
     <span class="token literal-property property">content</span><span class="token operator">:</span> <span class="token string">"HTML is easy"</span><span class="token punctuation">,</span>
@@ -222,15 +220,14 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <span class="token keyword">const</span> app <span class="token operator">=</span> http<span class="token punctuation">.</span><span class="token function">createServer</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">request<span class="token punctuation">,</span> response</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   response<span class="token punctuation">.</span><span class="token function">writeHead</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token string-property property">'Content-Type'</span><span class="token operator">:</span> <span class="token string">'application/json'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
   response<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>notes<span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
 <p>La valeur application/json dans l'en-tête Content-Type informe le destinataire que les données sont au format JSON. Le tableau de notes est transformé en JSON à l'aide de la méthode JSON.stringify(notes).
 <img src="js1.png" width="700" height="550"></p>
 <h3><strong>Express</strong> <a id="subsection-2"></a></h3>
 <p>Il est possible de mettre en œuvre notre code serveur directement avec le serveur web http intégré de Node. Cependant, cela devient fastidieux, en particulier lorsque l'application prend de l'ampleur. C'est la raison pour laquelle de nombreuses bibliothèques ont vu le jour pour faciliter le développement côté serveur avec Node. Une de ces bibliothèques est <strong>Express</strong>
 Utilisons express en le définissant comme une dépendance du projet avec la commande : <code>npm install express</code>
 La syntaxe de notre application est differente pour utiliser Express:</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span>
 <span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
 <span class="token keyword">let</span> notes <span class="token operator">=</span> <span class="token punctuation">[</span>
@@ -248,13 +245,12 @@ app<span class="token punctuation">.</span><span class="token function">get</spa
 <span class="token keyword">const</span> <span class="token constant">PORT</span> <span class="token operator">=</span> <span class="token number">3001</span>
 app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token constant">PORT</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Server running on port </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token constant">PORT</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
 <p>Afin que le navigateur se recharge automatiquement après avoir apporté des modifications, on peut utiliser
 <em>nodemon</em></p>
 <h3><strong>Rest</strong> <a id="subsection-3"></a></h3>
 <p>Nous allons étendre notre application pour qu'elle fournisse la même API HTTP RESTful que json-server. REST, acronyme de Representational State Transfer, a été introduit en 2000 dans la thèse de Roy Fielding. REST est un style architectural conçu pour construire des applications web évolutives. Dans cette section, nous nous concentrons sur la compréhension typique des API RESTful dans les applications web, en se basant sur l'idée que des entités uniques, comme les notes dans notre application, sont appelées des ressources. Chaque ressource a une URL associée qui constitue son adresse unique. Une convention courante pour créer des adresses uniques consiste à combiner le nom du type de ressource avec l'identifiant unique de la ressource. Par exemple, si le type de ressource est défini comme &quot;notes&quot; et que l'identifiant de la note est 10, alors l'adresse unique de cette note est '<a href="http://www.example.com/api/notes/10">www.example.com/api/notes/10</a>'. L'URL pour l'ensemble de la collection de toutes les ressources note est '<a href="http://www.example.com/api/notes.">www.example.com/api/notes.</a>'</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/api/notes/:id'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">request<span class="token punctuation">,</span> response</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<pre class="language-js"><code class="language-js">app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/api/notes/:id'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">request<span class="token punctuation">,</span> response</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> id <span class="token operator">=</span> <span class="token function">Number</span><span class="token punctuation">(</span>request<span class="token punctuation">.</span>params<span class="token punctuation">.</span>id<span class="token punctuation">)</span>
   <span class="token keyword">const</span> note <span class="token operator">=</span> notes<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token parameter">note</span> <span class="token operator">=></span> note<span class="token punctuation">.</span>id <span class="token operator">===</span> id<span class="token punctuation">)</span>
   
@@ -264,15 +260,14 @@ app<span class="token punctuation">.</span><span class="token function">listen</
   <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
     response<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">404</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
 <p>Dans cette section du cours, nous étendons notre application pour fournir une interface REST permettant d'opérer sur des notes individuelles. Nous commençons par créer une route pour récupérer une ressource unique, où l'adresse unique d'une note individuelle suit le format &quot;notes/10&quot; avec un numéro faisant référence à l'identifiant unique de la note. Nous utilisons la méthode app.get('/api/notes/:id', ...) pour gérer les requêtes HTTP GET de la forme &quot;/api/notes/QUELQUECHOSE,&quot; où &quot;QUELQUECHOSE&quot; est une chaîne arbitraire.</p>
 <p>En cas de succès, nous configurons le statut de la réponse avec la méthode status et renvoyons la réponse sans données grâce à la méthode end, car les API REST sont principalement destinées à un usage programmatique.</p>
 <p>Si aucune note n'est trouvée, notre application renvoie un code d'erreur, mais ne renvoie rien à afficher dans le navigateur, conformément au fonctionnement des API REST. Cependant, il est possible de personnaliser le message d'erreur 404 pour fournir des indications sur la raison de l'erreur.</p>
 <h3><strong>Communiquer des données</strong></h3>
 <p>On peut ensuite permettre l'ajout de nouvelles notes au serveur. Pour ajouter une note, il suffit de faire une requête HTTP POST à l'adresse <a href="http://localhost:3001/api/notes">http://localhost:3001/api/notes</a>, en envoyant toutes les informations de la nouvelle note dans le corps de la requête au format JSON.
 On modifie index.js:</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span>
 <span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
 
@@ -285,13 +280,12 @@ app<span class="token punctuation">.</span><span class="token function">post</sp
   <span class="token keyword">const</span> note <span class="token operator">=</span> request<span class="token punctuation">.</span>body
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>note<span class="token punctuation">)</span>
   response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span>note<span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
 <p>Ensuite, la requête POST peut être envoyée à l'aide du client REST</p>
 <h2>MongoDB <a id="section-3"></a></h2>
 <p>Pour stocker nos notes enregistrées indéfiniment, nous avons besoin d'une base de données. La raison de choisir MongoDB comme base de données réside dans sa moindre complexité par rapport à une base de données relationnelle. Vous pouvez installer et exécuter <a href="https://www.mongodb.com/atlas/database">MongoDB</a> sur votre ordinateur.</p>
 <p>On peut faire une première connexion à la base de donnée MongoDB avec le script suivant:</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> mongoose <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mongoose'</span><span class="token punctuation">)</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> mongoose <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mongoose'</span><span class="token punctuation">)</span>
 
 <span class="token keyword">if</span> <span class="token punctuation">(</span>process<span class="token punctuation">.</span>argv<span class="token punctuation">.</span>length<span class="token operator">&lt;</span><span class="token number">3</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'give password as argument'</span><span class="token punctuation">)</span>
@@ -321,23 +315,21 @@ mongoose<span class="token punctuation">.</span><span class="token function">con
 note<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">result</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'note saved!'</span><span class="token punctuation">)</span>
   mongoose<span class="token punctuation">.</span>connection<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
 <p>Nous pouvons voir l'état actuel de la base de données de l'Atlas MongoDB à partir de Parcourir les collections, dans l'onglet Base de données.
 <img src="mongo.png" width="700" height="550"></p>
 <h3><strong>Schema</strong> <a id="subsection-4"></a></h3>
 <p>Un schéma est un objet JSON qui définit la structure et le contenu de vos données.
 Après avoir établi la connexion avec la base de données, nous définissons le schéma d'une note et le modèle correspondant :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> noteSchema <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">mongoose<span class="token punctuation">.</span>Schema</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> noteSchema <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">mongoose<span class="token punctuation">.</span>Schema</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   <span class="token literal-property property">content</span><span class="token operator">:</span> String<span class="token punctuation">,</span>
   <span class="token literal-property property">important</span><span class="token operator">:</span> Boolean<span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-<span class="token keyword">const</span> Note <span class="token operator">=</span> mongoose<span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span><span class="token string">'Note'</span><span class="token punctuation">,</span> noteSchema<span class="token punctuation">)</span>
-</code></pre>
+<span class="token keyword">const</span> Note <span class="token operator">=</span> mongoose<span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span><span class="token string">'Note'</span><span class="token punctuation">,</span> noteSchema<span class="token punctuation">)</span></code></pre>
 <p>Ensuite, on peut créer un nouvel objet note à l'aide du modèle Note. Étant donné que les objets sont créés à l'aide de la fonction constructrice du modèle, ils possèdent toutes les propriétés du modèle, y compris des méthodes pour enregistrer l'objet dans la base de données.</p>
 <p>L'enregistrement de l'objet dans la base de données se fait grâce à la méthode save, qui peut être accompagnée d'un gestionnaire d'événements à l'aide de la méthode <em>then</em>:</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">const</span> note <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Note</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> note <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Note</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   <span class="token literal-property property">content</span><span class="token operator">:</span> <span class="token string">'HTML is Easy'</span><span class="token punctuation">,</span>
   <span class="token literal-property property">important</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
@@ -345,16 +337,14 @@ Après avoir établi la connexion avec la base de données, nous définissons le
 note<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">result</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'note saved!'</span><span class="token punctuation">)</span>
   mongoose<span class="token punctuation">.</span>connection<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
 <p>De la même façon nous pouvons récupérer des objets dans la base de données:</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js">Note<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">result</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<pre class="language-js"><code class="language-js">Note<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">result</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   result<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">note</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>note<span class="token punctuation">)</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span>
   mongoose<span class="token punctuation">.</span>connection<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-</code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
 
 
 </article>

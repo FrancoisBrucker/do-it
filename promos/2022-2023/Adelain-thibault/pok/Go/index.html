@@ -154,7 +154,7 @@
 <p>Le développement web avec Gin ressemble beaucoup à Flask. C'est un framework minimal qui laisse beaucoup de liberté au développeur. Il est donc très facile et rapide de développer une API basique avec gin, mais lorsque le projet grandi, cela demande une certaine méthode/expérience pour organiser le projet pour qu'il reste maintenable.</p>
 <p><em>Note: pour un ORM avec Go : voir <a href="https://github.com/go-gorm/gorm">GORM</a>.</em></p>
 <p>Exemple :</p>
-<pre class="language-go " style="counter-reset: linenumber 0"><code class="language-go"><span class="token keyword">package</span> main
+<pre class="language-go"><code class="language-go"><span class="token keyword">package</span> main
 
 <span class="token keyword">import</span> <span class="token punctuation">(</span>
  <span class="token string">"github.com/gin-gonic/gin"</span>
@@ -213,8 +213,7 @@
   <span class="token punctuation">}</span>
  <span class="token punctuation">}</span>
  c<span class="token punctuation">.</span><span class="token function">IndentedJSON</span><span class="token punctuation">(</span>http<span class="token punctuation">.</span>StatusNotFound<span class="token punctuation">,</span> gin<span class="token punctuation">.</span>H<span class="token punctuation">{</span><span class="token string">"message"</span><span class="token punctuation">:</span> <span class="token string">"User not found"</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Comme vous pouvez le voir, créer une application web basique se fait en quelques lignes de code.</p>
 <h4>Test avec Fuzzing</h4>
 <p><a href="https://go.dev/doc/tutorial/fuzz">Tuto</a></p>
@@ -226,7 +225,7 @@
 <p>Go et C++ sont deux langages de programmation avec des approches différentes en matière de programmation orientée objet.</p>
 <p>La programmation orientée objet en Go est basée sur la définition et l'utilisation de types structurés et d'interfaces. Contrairement à d'autres langages de programmation orientée objet, Go n'a pas de notion de classes.</p>
 <p>Un exemple pour comprendre :</p>
-<pre class="language-go " style="counter-reset: linenumber 0"><code class="language-go"><span class="token keyword">package</span> main
+<pre class="language-go"><code class="language-go"><span class="token keyword">package</span> main
 
 <span class="token keyword">import</span> <span class="token string">"fmt"</span>
 
@@ -264,15 +263,14 @@
 
  <span class="token function">isScared</span><span class="token punctuation">(</span>catty<span class="token punctuation">)</span> <span class="token comment">// interface Animal</span>
  <span class="token function">isScared</span><span class="token punctuation">(</span>doggy<span class="token punctuation">)</span> <span class="token comment">// interface Animal</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Jusque là, rien de bien différent de la programmation objet classique, à part que l'on définit des types au lieu de classes. Chaque type à une méthode isScared.</p>
 <p>Maintenant, voyons le concept d'interface. Les interfaces sont définies comme une collection de méthodes, où chaque méthode spécifie le nom de la fonction et le type de retour attendu.</p>
 <p>Dans l'exemple ci-dessus, on a définit une fonction isScared sur l'interface animal pour savoir si l'animal est peureux ou non.</p>
 <p><em>Note : Lorsqu'un type implémente toutes les méthodes définies dans une interface, il est considéré comme implémentant cette interface. Cela signifie que le type peut être utilisé de manière interchangeable dans le code qui utilise cette interface. Cette approche permet de créer du code générique qui peut être utilisé avec n'importe quel type qui implémente l'interface.</em></p>
 <p>Autre exemple :</p>
 <p>Supposons que nous avons une interface Shape qui définit une méthode Area() et une méthode Perimeter() pour calculer l'aire et le périmètre d'une forme. Supossons également que nous avons deux types Rectangle et Circle qui implémentent l'interface Shape.</p>
-<pre class="language-go " style="counter-reset: linenumber 0"><code class="language-go"><span class="token keyword">package</span> main
+<pre class="language-go"><code class="language-go"><span class="token keyword">package</span> main
 
 <span class="token keyword">import</span> <span class="token punctuation">(</span>
  <span class="token string">"fmt"</span>
@@ -317,8 +315,7 @@
     s <span class="token operator">=</span> Circle<span class="token punctuation">{</span>radius<span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">}</span>
     fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"Circle Area:"</span><span class="token punctuation">,</span> s<span class="token punctuation">.</span><span class="token function">Area</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
     fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"Circle Perimeter:"</span><span class="token punctuation">,</span> s<span class="token punctuation">.</span><span class="token function">Perimeter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>Dans cet exemple, nous utilisons une variable de type Shape qui peut stocker des instances des types Rectangle ou Circle. Nous pouvons  appeler les méthodes Area() et Perimeter() sur ces instances.</p>
 <p>Aussi, Go ne supporte pas l'overloading. Je vous renvoie à la <a href="https://go.dev/doc/faq#overloading">faq</a> pour savoir pourquoi.</p>
 <p>C'est un peu perturbant, mais je suis sûr que l'on peut vite s'y faire.</p>

@@ -191,37 +191,31 @@ En 2003, TransAlta Corp, une entreprise d'électricité canadienne, a subi une p
 </div></div>
 <p>MsgBox :
 Utilisée pour afficher des boîtes de dialogue avec des messages pour l'utilisateur.</p>
-<pre class="language-vb " style="counter-reset: linenumber 0"><code class="language-vb">MsgBox <span class="token string">"Hello, World!"</span>
-</code></pre>
+<pre class="language-vb"><code class="language-vb">MsgBox <span class="token string">"Hello, World!"</span></code></pre>
 <p>InputBox :
 Permet de demander à l'utilisateur d'entrer des données.</p>
-<pre class="language-vb " style="counter-reset: linenumber 0"><code class="language-vb"><span class="token keyword">Dim</span> userInput <span class="token keyword">As</span> <span class="token keyword">String</span>
-userInput <span class="token operator">=</span> InputBox<span class="token punctuation">(</span><span class="token string">"Entrez quelque chose :"</span><span class="token punctuation">)</span>
-</code></pre>
+<pre class="language-vb"><code class="language-vb"><span class="token keyword">Dim</span> userInput <span class="token keyword">As</span> <span class="token keyword">String</span>
+userInput <span class="token operator">=</span> InputBox<span class="token punctuation">(</span><span class="token string">"Entrez quelque chose :"</span><span class="token punctuation">)</span></code></pre>
 <p>Variables :
 Pour stocker et manipuler des données.</p>
-<pre class="language-vb " style="counter-reset: linenumber 0"><code class="language-vb"><span class="token keyword">Dim</span> myNumber <span class="token keyword">As</span> <span class="token keyword">Integer</span>
-myNumber <span class="token operator">=</span> <span class="token number">10</span>
-</code></pre>
+<pre class="language-vb"><code class="language-vb"><span class="token keyword">Dim</span> myNumber <span class="token keyword">As</span> <span class="token keyword">Integer</span>
+myNumber <span class="token operator">=</span> <span class="token number">10</span></code></pre>
 <p>Conditions (If...Then...Else) :
 Utilisées pour exécuter des instructions en fonction d'une condition.</p>
-<pre class="language-vb " style="counter-reset: linenumber 0"><code class="language-vb"><span class="token keyword">If</span> myNumber <span class="token operator">></span> <span class="token number">5</span> <span class="token keyword">Then</span>
+<pre class="language-vb"><code class="language-vb"><span class="token keyword">If</span> myNumber <span class="token operator">></span> <span class="token number">5</span> <span class="token keyword">Then</span>
     MsgBox <span class="token string">"La variable est supérieure à 5."</span>
 <span class="token keyword">Else</span>
     MsgBox <span class="token string">"La variable est inférieure ou égale à 5."</span>
-<span class="token keyword">End</span> <span class="token keyword">If</span>
-</code></pre>
+<span class="token keyword">End</span> <span class="token keyword">If</span></code></pre>
 <p>Boucles (For...Next, Do...Loop) :
 Permettent d'exécuter des instructions de manière répétée.</p>
-<pre class="language-vb " style="counter-reset: linenumber 0"><code class="language-vb"><span class="token keyword">For</span> i <span class="token operator">=</span> <span class="token number">1</span> <span class="token keyword">To</span> <span class="token number">5</span>
+<pre class="language-vb"><code class="language-vb"><span class="token keyword">For</span> i <span class="token operator">=</span> <span class="token number">1</span> <span class="token keyword">To</span> <span class="token number">5</span>
     MsgBox <span class="token string">"Ceci est la itération "</span> <span class="token operator">&amp;</span> i
-<span class="token keyword">Next</span> i
-</code></pre>
+<span class="token keyword">Next</span> i</code></pre>
 <p>Fonctions intégrées :
 Excel VBA offre également un large éventail de fonctions intégrées, similaires à celles d'Excel.</p>
-<pre class="language-vb " style="counter-reset: linenumber 0"><code class="language-vb"><span class="token keyword">Dim</span> result <span class="token keyword">As</span> <span class="token keyword">Double</span>
-result <span class="token operator">=</span> WorksheetFunction<span class="token punctuation">.</span>Sum<span class="token punctuation">(</span>Range<span class="token punctuation">(</span><span class="token string">"A1:A10"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-</code></pre>
+<pre class="language-vb"><code class="language-vb"><span class="token keyword">Dim</span> result <span class="token keyword">As</span> <span class="token keyword">Double</span>
+result <span class="token operator">=</span> WorksheetFunction<span class="token punctuation">.</span>Sum<span class="token punctuation">(</span>Range<span class="token punctuation">(</span><span class="token string">"A1:A10"</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
 <p><strong>D'autre possibilités</strong></p>
 <ul>
 <li>La fonction  Dir  permet de lister les différents fichiers dans un dossier.</li>

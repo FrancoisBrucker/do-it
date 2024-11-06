@@ -208,7 +208,7 @@
 <p>Github propose d'<strong>héberger gratuitement un site static</strong> (comportant seulement des pages HTML, avec CSS et JS, mais sans serveur), c'est ce qui permet notamment d'héberger le <strong>site de Do_It</strong>. Pour cela, Github a besoin d'une branche sur laquelle est toute l'infrastructure statique du site.</p>
 <p>Pour éviter d'avoir à chaque fois à mettre le site static sur une branche, on peut utiliser les <a href="https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions#:~:text=GitHub%20Actions%20is%20a%20continuous,merged%20pull%20requests%20to%20production.">Github Actions</a> qui est une routine, exécutée sur une machine de Github.</p>
 <p>Voici l'action github que j'ai mis en place, avec en dessous les informations sur les différentes fonctionnalités :</p>
-<pre class="language-text " style="counter-reset: linenumber 0"><code class="language-text">name: Build
+<pre class="language-text"><code class="language-text">name: Build
 on:
   push:
     branches:
@@ -223,8 +223,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           publish_dir: ./static
-          github_token: ${{ secrets.DEPLOY_KEY }}
-</code></pre>
+          github_token: ${{ secrets.DEPLOY_KEY }}</code></pre>
 <ul>
 <li><strong>Name</strong> permet de facilement retrouver l'action si on en a plusieurs</li>
 <li><strong>on</strong> est l'élément déclencheur de l'action, ici l'action est effectuée quand des commits sont push sur la branche <em>main</em></li>
@@ -250,8 +249,7 @@ Donner une date d'expiration de la clé et supprimer les clés inutiles.</p>
 <h2 id="h3">Présentation de Phaser</h2>
 <p>Phaser est un moteur de jeu open source, dont le code source se trouve <a href="https://github.com/photonstorm/phaser/tree/v3.55.2">ici</a>.</p>
 <p>Pour installer Phaser, il faut mettre, dans un fichier html, la balise :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>//cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
-</code></pre>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>//cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
 <p>Le reste du code sera dans un fichier js, ou dans une autre balise <em>script</em>.</p>
 <p>Phaser a une énorme bibliothèque d'exemples, pour voir une mise en application de chaque fonctionnalités, et un fichier API complet. Il est important de s'y référer pour voir comment implémenter une des fonctionnalités.</p>
 <p><a href="https://labs.phaser.io/index.html?dir=&amp;q=">exemples</a></p>

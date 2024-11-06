@@ -171,14 +171,13 @@
 <p>Dans la suite de cette section, nous nous appuierons sur deux documents PDF, enregistrés sous les noms de <em>PDF test 1.pdf</em> et <em>PDF test 2.pdf</em>. Ces documents sont des travaux que j'ai effectué lors de ma deuxième année.</p>
 <p>Pour ouvrir les documents PDF et les associer à des objets de la classe <strong>PdfFileReader</strong>, il faut d'abord les ouvrir avec la fonction <em>open</em>, en précisant en argument le paramètre <em>rb</em>, qui permet de lire en binaire le fichier. Ensuite, on créé l'objet en appellant la classe <strong>PdfFileReader</strong> du module <strong>PyPDF2</strong>.
 Une fois que l'on a cet objet, on peut récupérer ses attributs et utiliser les méthodes associées.</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">pdfFile <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'PDF test 2.pdf'</span><span class="token punctuation">,</span> <span class="token string">'rb'</span><span class="token punctuation">)</span>
+<pre class="language-python"><code class="language-python">pdfFile <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'PDF test 2.pdf'</span><span class="token punctuation">,</span> <span class="token string">'rb'</span><span class="token punctuation">)</span>
 pdfReader <span class="token operator">=</span> PyPDF2<span class="token punctuation">.</span>PdfFileReader<span class="token punctuation">(</span>pdfFile<span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>pdfReader<span class="token punctuation">.</span>numPages<span class="token punctuation">)</span>
-<span class="token operator">>></span><span class="token operator">></span> <span class="token number">6</span>
-</code></pre>
+<span class="token operator">>></span><span class="token operator">></span> <span class="token number">6</span></code></pre>
 <p>Dans l'exemple ci-dessus, on ouvre le fichier test numéro 2 et on récupère son nombre de pages.</p>
 <p>L'autre classe à connaître est la classe <strong>PageObject</strong>. Les objets de cette classe représentent les différentes pages du document, ainsi que leurs contenu. On récupère ces objets à partir d'un objet de la classe <strong>PdfFileReader</strong> grâce à la méthode <em>getPage</em>. En spécifiant le numéro de page que l'on veut récupérer (indexation commençant à 0), on peut récupérer un objet de la classe <strong>PageObject</strong>. Encore une fois, ces objets ont différents attributs et méthodes pour les manipuler, telle que par exemple la méthode <em>extractText()</em> qui permet d'extraire du texte de la page. Notons également la méthode <em>rotateClockwise</em>, qui prend en argument un des entiers 90, 180 ou 270, et qui permet d'effectuer une rotation de la page.</p>
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python">page <span class="token operator">=</span> pdfReader<span class="token punctuation">.</span>getPage<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+<pre class="language-python"><code class="language-python">page <span class="token operator">=</span> pdfReader<span class="token punctuation">.</span>getPage<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>page<span class="token punctuation">.</span>extractText<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span class="token operator">>></span><span class="token operator">></span> Compte<span class="token operator">-</span>renduTPPollution
 MIE<span class="token punctuation">:</span>Approchevariationnelleet
@@ -187,8 +186,7 @@ Elements
 Cours<span class="token punctuation">:</span>GuillaumeChiavassa
 Auteur<span class="token punctuation">:</span>DucDANGVU
 CentraleMarseille
-<span class="token number">2022</span><span class="token operator">-</span><span class="token number">2023</span>
-</code></pre>
+<span class="token number">2022</span><span class="token operator">-</span><span class="token number">2023</span></code></pre>
 <p>Notons que le texte renvoyé est loin d'être parfait. On remarque que certains élément manquent à l'appel. Cependant, ce texte est globalement conforme à ce qui est présent réellement dans le PDF.</p>
 <p>Enfin, la dernière classe importante de ce module est la classe <strong>PdfFileWriter</strong>. Les objets de cette classe permettent de créer des nouveaux fichiers PDF, à partir des classes précédemment présentées. Les méthodes importantes de cette classe sont les suivantes:</p>
 <ul>
@@ -217,7 +215,7 @@ CentraleMarseille
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">PDF_Tools</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">PDF_Tools</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
   <span class="token keyword">def</span> <span class="token function">combine_pdf</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> list_pdf<span class="token punctuation">:</span> <span class="token builtin">list</span><span class="token punctuation">,</span> name_merged_file<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     pdf_writer <span class="token operator">=</span> PyPDF2<span class="token punctuation">.</span>PdfFileWriter<span class="token punctuation">(</span><span class="token punctuation">)</span>
     list_pdf_objects <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
@@ -230,8 +228,7 @@ CentraleMarseille
         pdf_writer<span class="token punctuation">.</span>addPage<span class="token punctuation">(</span>page_object<span class="token punctuation">)</span>
     new_pdf <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>name_merged_file<span class="token punctuation">,</span> <span class="token string">'wb'</span><span class="token punctuation">)</span>
     pdf_writer<span class="token punctuation">.</span>write<span class="token punctuation">(</span>new_pdf<span class="token punctuation">)</span>
-    new_pdf<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
+    new_pdf<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>
@@ -254,7 +251,7 @@ CentraleMarseille
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">rotate_pages</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> pdf_name<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> list_num_pages<span class="token punctuation">:</span> <span class="token builtin">list</span><span class="token punctuation">,</span> rotation<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> name_new_file<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">rotate_pages</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> pdf_name<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> list_num_pages<span class="token punctuation">:</span> <span class="token builtin">list</span><span class="token punctuation">,</span> rotation<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> name_new_file<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
       pdf_file <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>pdf_name<span class="token punctuation">,</span> <span class="token string">'rb'</span><span class="token punctuation">)</span>
       pdf_reader <span class="token operator">=</span> PyPDF2<span class="token punctuation">.</span>PdfFileReader<span class="token punctuation">(</span>pdf_file<span class="token punctuation">)</span>
       pdf_writer <span class="token operator">=</span> PyPDF2<span class="token punctuation">.</span>PdfFileWriter<span class="token punctuation">(</span><span class="token punctuation">)</span>
@@ -265,8 +262,7 @@ CentraleMarseille
         pdf_writer<span class="token punctuation">.</span>addPage<span class="token punctuation">(</span>page_object<span class="token punctuation">)</span>
       new_pdf <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>name_new_file<span class="token punctuation">,</span> <span class="token string">'wb'</span><span class="token punctuation">)</span>
       pdf_writer<span class="token punctuation">.</span>write<span class="token punctuation">(</span>new_pdf<span class="token punctuation">)</span>
-      new_pdf<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
+      new_pdf<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>
@@ -293,7 +289,7 @@ CentraleMarseille
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">overlay_pages</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> pdf_name<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> pdf_name_overlay<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> list_num_pages<span class="token punctuation">:</span> <span class="token builtin">list</span><span class="token punctuation">,</span> name_new_file<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">overlay_pages</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> pdf_name<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> pdf_name_overlay<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> list_num_pages<span class="token punctuation">:</span> <span class="token builtin">list</span><span class="token punctuation">,</span> name_new_file<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
   pdf_file <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>pdf_name<span class="token punctuation">,</span> <span class="token string">'rb'</span><span class="token punctuation">)</span>
   pdf_reader <span class="token operator">=</span> PyPDF2<span class="token punctuation">.</span>PdfFileReader<span class="token punctuation">(</span>pdf_file<span class="token punctuation">)</span>
   pdf_writer <span class="token operator">=</span> PyPDF2<span class="token punctuation">.</span>PdfFileWriter<span class="token punctuation">(</span><span class="token punctuation">)</span>
@@ -310,8 +306,7 @@ CentraleMarseille
       pdf_writer<span class="token punctuation">.</span>addPage<span class="token punctuation">(</span>page_overlay<span class="token punctuation">)</span>
   new_pdf <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>name_new_file<span class="token punctuation">,</span> <span class="token string">'wb'</span><span class="token punctuation">)</span>
   pdf_writer<span class="token punctuation">.</span>write<span class="token punctuation">(</span>new_pdf<span class="token punctuation">)</span>
-  new_pdf<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
+  new_pdf<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>
@@ -338,7 +333,7 @@ CentraleMarseille
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">encrypt</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> pdf_name<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> password<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> name_encrypted_file<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">encrypt</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> pdf_name<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> password<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> name_encrypted_file<span class="token punctuation">)</span><span class="token punctuation">:</span>
     pdf_file <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>pdf_name<span class="token punctuation">,</span> <span class="token string">'rb'</span><span class="token punctuation">)</span>
     pdf_reader <span class="token operator">=</span> PyPDF2<span class="token punctuation">.</span>PdfFileReader<span class="token punctuation">(</span>pdf_file<span class="token punctuation">)</span>
     pdf_writer <span class="token operator">=</span> PyPDF2<span class="token punctuation">.</span>PdfFileWriter<span class="token punctuation">(</span><span class="token punctuation">)</span>
@@ -348,8 +343,7 @@ CentraleMarseille
     pdf_writer<span class="token punctuation">.</span>encrypt<span class="token punctuation">(</span>password<span class="token punctuation">)</span>
     new_pdf <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>name_encrypted_file<span class="token punctuation">,</span> <span class="token string">'wb'</span><span class="token punctuation">)</span>
     pdf_writer<span class="token punctuation">.</span>write<span class="token punctuation">(</span>new_pdf<span class="token punctuation">)</span>
-    new_pdf<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
+    new_pdf<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>
@@ -372,7 +366,7 @@ CentraleMarseille
 </svg>
 </summary>
 <div class="mx-8 pb-2">
-<pre class="language-python " style="counter-reset: linenumber 0"><code class="language-python"><span class="token keyword">def</span> <span class="token function">reorder</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> pdf_name<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> list_new_order<span class="token punctuation">:</span> <span class="token builtin">list</span><span class="token punctuation">,</span> name_reordered_file<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">reorder</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> pdf_name<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> list_new_order<span class="token punctuation">:</span> <span class="token builtin">list</span><span class="token punctuation">,</span> name_reordered_file<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     pdf_file <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>pdf_name<span class="token punctuation">,</span> <span class="token string">'rb'</span><span class="token punctuation">)</span>
     pdf_reader <span class="token operator">=</span> PyPDF2<span class="token punctuation">.</span>PdfFileReader<span class="token punctuation">(</span>pdf_file<span class="token punctuation">)</span>
     pdf_writer <span class="token operator">=</span> PyPDF2<span class="token punctuation">.</span>PdfFileWriter<span class="token punctuation">(</span><span class="token punctuation">)</span>
@@ -381,8 +375,7 @@ CentraleMarseille
       pdf_writer<span class="token punctuation">.</span>addPage<span class="token punctuation">(</span>page_object<span class="token punctuation">)</span>
     new_pdf <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>name_reordered_file<span class="token punctuation">,</span> <span class="token string">'wb'</span><span class="token punctuation">)</span>
     pdf_writer<span class="token punctuation">.</span>write<span class="token punctuation">(</span>new_pdf<span class="token punctuation">)</span>
-    new_pdf<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
+    new_pdf<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 </div>
 </details>     
 </div>

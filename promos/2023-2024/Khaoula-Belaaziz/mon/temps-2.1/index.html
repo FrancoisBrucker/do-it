@@ -133,7 +133,7 @@
 Un projet React Native typique a une structure de dossiers contenant des fichiers JavaScript pour les composants, ainsi que des dossiers pour les ressources et les tests.</p>
 <h2>Exemples de Code de Base</h2>
 <p>React Native utilise des composants pour construire l'interface utilisateur. Par exemple, un composant simple peut être un bouton ou une vue texte. La navigation entre les écrans se fait à l'aide de bibliothèques comme React Navigation. Les états et les props sont utilisés pour gérer les données et rendre les composants réactifs. Voici un exemple de composant simple :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<pre class="language-js"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> View<span class="token punctuation">,</span> Text<span class="token punctuation">,</span> Button <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-native'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">MonComposant</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
@@ -145,26 +145,23 @@ Un projet React Native typique a une structure de dossiers contenant des fichier
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> MonComposant<span class="token punctuation">;</span>
-</code></pre>
+<span class="token keyword">export</span> <span class="token keyword">default</span> MonComposant<span class="token punctuation">;</span></code></pre>
 <h2>Construire une Application Simple</h2>
 <p>On peut maintenant voir comment construire une application simple. Je vais créer une application de liste de tâches. Le but est de se familiariser avec la création de composants, l'utilisation de l'état, et la manipulation des données.</p>
 <h3>Création du Projet</h3>
 <p>Ouvrez votre terminal et exécutez la commande suivante pour créer un nouveau projet React Native :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">npx react-native init MaListeDeTaches
-
+<pre class="language-html"><code class="language-html">npx react-native init MaListeDeTaches
 </code></pre>
 <h3>Structure de Base</h3>
 <p>En naviguant dans le dossier du projet et en l'ouvrant dans l'éditeur de code,on va trouver plusieurs dossiers et fichiers.On va principalement travailler dans le fichier <strong>App.js</strong></p>
 <h3>Développement de l'Interface Utilisateur</h3>
 <p>Dans App.js, on commence par importer les composants nécessaires de React Native :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token comment">// Importer les composants nécessaires de React et React Native</span>
+<pre class="language-js"><code class="language-js"><span class="token comment">// Importer les composants nécessaires de React et React Native</span>
 <span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> View<span class="token punctuation">,</span> Text<span class="token punctuation">,</span> TextInput<span class="token punctuation">,</span> Button<span class="token punctuation">,</span> FlatList <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-native'</span><span class="token punctuation">;</span>
-
 </code></pre>
 <p>Ensuite, on crée un composant fonctionnel <strong>App</strong> :</p>
-<pre class="language-js " style="counter-reset: linenumber 0"><code class="language-js"><span class="token comment">// Créer le composant principal App</span>
+<pre class="language-js"><code class="language-js"><span class="token comment">// Créer le composant principal App</span>
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token comment">// Utiliser le Hook d'état pour gérer les tâches et la liste des tâches</span>
   <span class="token keyword">const</span> <span class="token punctuation">[</span>tache<span class="token punctuation">,</span> setTache<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Pour la tâche actuellement saisie</span>
@@ -197,7 +194,6 @@ Un projet React Native typique a une structure de dossiers contenant des fichier
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span> <span class="token comment">// Exporter le composant pour utilisation dans l'application</span>
-
 </code></pre>
 <p>Dans ce code, on a:</p>
 <p>Un <em>TextInput</em> pour saisir les tâches.
@@ -205,8 +201,7 @@ Un <em>bouton Ajouter</em> pour ajouter des tâches à la liste.
 Un <em>composant FlatList</em> pour afficher les tâches.</p>
 <h3>Exécution de l'Application</h3>
 <p>Pour exécuter l'application, dans le terminal, on navigue vers le dossier de votre projet et on exécute :</p>
-<pre class="language-html " style="counter-reset: linenumber 0"><code class="language-html">npx react-native run-android
-
+<pre class="language-html"><code class="language-html">npx react-native run-android
 </code></pre>
 <h2>Exemples d'application :</h2>
 <p>Projet 3A : <strong>KILLER</strong></p>
