@@ -1,5 +1,5 @@
 ---
-layout: layout/mon-index.md
+layout: layout/mon-index.njk
 
 title: "MON parcours d'autoformation (bis)"
 authors:

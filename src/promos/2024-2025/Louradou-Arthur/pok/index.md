@@ -1,5 +1,5 @@
 ---
-layout: layout/pok-index.md
+layout: layout/pok-index.njk
 
 title: "POKs"
 authors:
