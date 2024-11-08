@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Refonte du site de Do_It : Eleventy</title>
+
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [
+                [
+                '$', '$'
+                ],
+                [
+                '\\(', '\\)'
+                ]
+            ]
+            },
+            svg: {
+            fontCache: 'global'
+            }
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
+
+        <header class="border-b-2 border-gray-200 mb-4">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="min-h-[50px] flex justify-between items-center">
+                <a class="mx-2" href="/do-it/">Home</a>
+                <div class="flex items-center gap-4 sm:gap-6 ">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                        </svg>
+                    </a>
+                    <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
+                        <svg class="h-5 aspect-square" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
+            
+<article class="relative">
+<h1 class="mb-1">Refonte du site de Do_It : Eleventy</h1>
+<div class="mb-4">
+    
+        <div class="px-4 flex flex-wrap items-center">
+            
+                <div class="font-bold">Tags : </div>
+            
+            <ul class="flex flex-wrap overflow-auto not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">POK</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">2024-2025</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 1</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">pok</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">web</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">statique</li>
+                
+
+            </ul>
+            
+            
+            <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        <span data-pagefind-filter="Type">POK</span>
+                    
+                
+                    
+                
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="px-4 flex flex-wrap items-center">
+            <div class="font-bold">Auteurs : </div>
+            <ul class="flex flex-wrap not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Arthur Louradou</li>
+                
+            </ul>
+        </div>
+    
+
+    
+</div>
+
+        <p class="mb-4 text-lg">
+
+                Ce POK consistera en la refonte du site de Do_It avec les dernières technologies web statiques et en analysant le besoin des utilisateurs.
+
+        </p>
+
+
+
+    
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-purple-500 bg-purple-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>
+</svg>
+<div class="pl-8 mr-8">
+
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Louradou-Arthur/">Arthur Louradou</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Louradou-Arthur/pok/">POKs</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Louradou-Arthur/pok/temps-1bis/">Refonte du site de Do_It : Eleventy</a>
+
+</div></div>
+
+
+
+
+<h2>Mise à jour du site de Do_It</h2>
+<h3>Besoin, problématique</h3>
+<ul>
+<li>A priori, problèmes de lenteur liés à pagesearch (le menu de recherche) ou au style (css et postcss)</li>
+<li>Design améliorable sur certains aspects</li>
+<li>Manque de centralisation d’informations (Drive + Site pas forcément pratique)</li>
+<li>Séparation des années</li>
+</ul>
+<h3>Solutions envisagées</h3>
+<ol>
+<li>Mise à jour majeure de 11ty (3.0 sortis le 2 octobre - voir le changelog)</li>
+<li>Rechercher les concurrents à 11ty</li>
+<li>Fix de performance sur pagesearch et sur la compilation des styles</li>
+<li>Faire des sous repos indépendants chaque année, mais qui peuvent se combiner (chercher comment)</li>
+<li>Séparer data et statique</li>
+</ol>
+<h3>Alternatives</h3>
+<p>Une analyse de l’existant nous permettra de faire des choix techniques. On comparera la popularité des différents projets concurrents à 11ty (utilisé actuellement) à l’aide du nombre de personnes suivant le projet sur GitHub et représenté avec des étoiles ⭐.</p>
+<p><a href="https://jekyllrb.com/">https://jekyllrb.com</a> (JS) 49000 ⭐ <a href="https://github.com/jekyll/jekyll">GitHub</a></p>
+<p><a href="https://www.11ty.dev/">https://www.11ty.dev</a> (JS) 17000 ⭐ <a href="https://github.com/11ty/eleventy/">GitHub</a></p>
+<p><a href="https://gohugo.io/">https://gohugo.io</a> (Go) 75000 ⭐ <a href="https://github.com/gohugoio/hugo">GitHub</a></p>
+<p><a href="https://getpelican.com/">https://getpelican.com</a> (Python) 12500 ⭐ <a href="https://github.com/getpelican/pelican">GitHub</a></p>
+<p><a href="https://www.getzola.org/">https://www.getzola.org</a> (JS) 13600 ⭐ <a href="https://github.com/getzola/zola">GitHub</a></p>
+<p>Comparaison des alternatives :
+<a href="https://www.abdullahyahya.com/2022/06/generate-a-static-website-with-11ty-eleventy/">https://www.abdullahyahya.com/2022/06/generate-a-static-website-with-11ty-eleventy/</a></p>
+<h3>Migration</h3>
+<p>Pour poursuivre ce travail, j’ai essayé de compiler le site actuel avec GoHugo, l’outil qui semblait le plus prometteur pour construire un site statique. Malheureusement, les fichiers de templating de Eleventy rendent l’opération plus compliquée que de copier un répertoire.</p>
+<p>Un inconvénient majeur de GoHugo réside dans le langage de programmation utilisé (Go), qui implique de faire changer à tous les utilisateurs leur environnement d’exécution.</p>
+<p>On laissera donc GoHugo de côté pour le moment.</p>
+<h3>Réunion avec F. Brucker</h3>
+<p>Pour continuer, nous avons pu nous entretenir brièvement pour cibler le besoin précis. À l’issue de cette réunion, je note quelques points importants :</p>
+<ul>
+<li>Fork le projet actuel en 11ty 3.0 (Un fork est une branche du projet git que je peux utiliser avec toutes les permissions sur mon propre repository. Voir le MON à suivre sur l’Open Source pour en savoir plus.)</li>
+<li>Deux sites : un pour les ressources communes (CS, contribuer au site, etc.) contenant en plus les archives des autres années et un autre pour la promo courante</li>
+<li>Ou bien un site générique et un petit site par promo, séparés en projets distincts</li>
+<li>Étudier la question des permaliens pour que les redirections ne se brisent pas lors de cette migration</li>
+</ul>
+<h2>Améliorer les performances</h2>
+<h3>Correction du site actuel</h3>
+<p>Nous l’avons exprimé au départ, deux modules sont suspectés de provoquer des lenteurs dans la compilation du site actuel : soit <strong>pagesearch</strong>, soit le <strong>style</strong>. Pour isoler les causes, nous allons mener des tests de performances en désactivant ces paramètres dans le fichier de configuration <code>.eleventy.js</code>. Après la désactivation des modules, on constate que pagesearch a finalement un impact mineur. Nous allons donc enquêter du côté des styles, et un détail retient mon attention : le compilateur postcss copie énormément de fichiers en amont. Changeons la configuration de tailwind pour remédier à ce problème :</p>
+<pre class="language-jsx"><code class="language-jsx">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">content</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">"./src/assets/stylesheets/*.{html,js,njk}"</span><span class="token punctuation">,</span>
+        <span class="token string">"./src/*.{html,js,njk}"</span><span class="token punctuation">,</span>
+        <span class="token string">"./src/_includes/**/*.{html,js,njk}"</span><span class="token punctuation">,</span>
+        <span class="token string">"./src/cs/**/*.{html,js,njk}"</span><span class="token punctuation">,</span>
+        <span class="token string">"./src/mon/**/*.{html,js,njk}"</span><span class="token punctuation">,</span>
+        <span class="token string">"./src/pok/**/*.{html,js,njk}"</span><span class="token punctuation">,</span>
+        <span class="token string">"./config/markdown/shortcodes/quotes/!(index).js"</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">theme</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">extend</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">plugins</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@tailwindcss/typography'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    
+  <span class="token punctuation">}</span></code></pre>
+<p>En réduisant ainsi la quantité de fichiers à compiler avec tailwind, on essaye de limiter les chargements en mémoire impliqués par la compilation.</p>
+<h4>Tests de performance</h4>
+<p><a href="https://v2.11ty.dev/docs/debugging/">https://v2.11ty.dev/docs/debugging/</a></p>
+<p><a href="https://v2.11ty.dev/docs/debug-performance/">https://v2.11ty.dev/docs/debug-performance/</a></p>
+<p>Avec le site actuel, en tapant ces commande :</p>
+<pre class="language-bash"><code class="language-bash">$ <span class="token assign-left variable">DEBUG</span><span class="token operator">=</span>Eleventy:Benchmark* npx @11ty/eleventy
+$ <span class="token function">grep</span> <span class="token parameter variable">-v</span> <span class="token string">" 0%"</span> benchmark_1.log</code></pre>
+<pre><code>Eleventy:Benchmark Benchmark  14306ms  25%   704× (Configuration) &quot;eleventyNavigationBreadcrumb&quot; Nunjucks Filter +0ms
+Eleventy:Benchmark Benchmark  54014ms  95%     3× (Aggregate) Searching the file system (passthrough) +0ms
+Eleventy:Benchmark Benchmark    313ms   1%  3668× (Aggregate) Template Compile +0ms
+Eleventy:Benchmark Benchmark  38261ms  68%  3664× (Aggregate) Render +0ms
+Eleventy:Benchmark Benchmark  54328ms  96%  2776× (Aggregate) Passthrough Copy File +0ms
+Eleventy:Benchmark Benchmark  38082ms  67%     1× (Aggregate) &gt; Render &gt; ./src/assets/stylesheets/main.css +0ms
+Eleventy:Benchmark Benchmark  14448ms  26%   778× (Aggregate) Template Write +0ms
+[11ty] Copied 2776 files / Wrote 778 files in 56.69 seconds (72.9ms each, v2.0.1)
+</code></pre>
+<p>En appliquant la correction sur <code>tailwind.config.js</code> :</p>
+<pre><code>Eleventy:Benchmark Benchmark  14581ms  74%   704× (Configuration) &quot;eleventyNavigationBreadcrumb&quot; Nunjucks Filter +0ms
+Eleventy:Benchmark Benchmark  16633ms  84%     3× (Aggregate) Searching the file system (passthrough) +1ms
+Eleventy:Benchmark Benchmark    116ms   1%   787× (Aggregate) Template Read +0ms
+Eleventy:Benchmark Benchmark    411ms   2%  3668× (Aggregate) Template Compile +0ms
+Eleventy:Benchmark Benchmark    395ms   2%  3664× (Aggregate) Render +0ms
+Eleventy:Benchmark Benchmark    209ms   1%     1× (Aggregate) &gt; Compile &gt; ./src/assets/stylesheets/main.css +0ms
+Eleventy:Benchmark Benchmark    209ms   1%     1× (Aggregate) Engine (css) Init +0ms
+Eleventy:Benchmark Benchmark  16866ms  85%  2776× (Aggregate) Passthrough Copy File +0ms
+Eleventy:Benchmark Benchmark    228ms   1%     1× (Aggregate) &gt; Render &gt; ./src/assets/stylesheets/main.css +0ms
+Eleventy:Benchmark Benchmark  14710ms  74%   778× (Aggregate) Template Write +0ms
+[11ty] Copied 2776 files / Wrote 778 files in 19.85 seconds (25.5ms each, v2.0.1)
+</code></pre>
+<p>Réduction de 54 à 17 secondes sur le passe plat de fichiers et la compilation tailwind.</p>
+<p>Avec la désactivation de pagesearch :</p>
+<pre><code>Eleventy:Benchmark Benchmark  14681ms  85%   704× (Configuration) &quot;eleventyNavigationBreadcrumb&quot; Nunjucks Filter +0ms
+Eleventy:Benchmark Benchmark  16626ms  96%     3× (Aggregate) Searching the file system (passthrough) +0ms
+Eleventy:Benchmark Benchmark    110ms   1%   787× (Aggregate) Template Read +0ms
+Eleventy:Benchmark Benchmark    379ms   2%  3668× (Aggregate) Template Compile +0ms
+Eleventy:Benchmark Benchmark    346ms   2%  3664× (Aggregate) Render +0ms
+Eleventy:Benchmark Benchmark    183ms   1%     1× (Aggregate) &gt; Compile &gt; ./src/assets/stylesheets/main.css +0ms
+Eleventy:Benchmark Benchmark    183ms   1%     1× (Aggregate) Engine (css) Init +0ms
+Eleventy:Benchmark Benchmark  16740ms  97%  2776× (Aggregate) Passthrough Copy File +0ms
+Eleventy:Benchmark Benchmark    204ms   1%     1× (Aggregate) &gt; Render &gt; ./src/assets/stylesheets/main.css +0ms
+Eleventy:Benchmark Benchmark  14810ms  85%   778× (Aggregate) Template Write +0ms
+[11ty] Copied 2776 files / Wrote 778 files in 17.38 seconds (22.3ms each, v2.0.1)
+</code></pre>
+<p>Pas de gain significatif pour cette modification. Laissons pagesearch de côté comme prévu.</p>
+<h2>Mise à jour majeure vers Eleventy 3.0</h2>
+<h2>Réalisation</h2>
+<p>La mise à jour vers la version 3.0 de Eleventy (sortie le 02/10/2024) implique la remise à zéro de <strong>tous les fichiers de configuration</strong>. Cela inclus le fichier  <code>.eleventy.js</code> mais aussi ses diverses dépendances pour les rendre compatibles avec une version plus moderne de javascript : ESM scripts. Les plugins utilisés par le site ont donc été désactivés dans un premier temps pour compiler le tout étape par étape.</p>
+<p>❓ <strong>ESM Script</strong>, par opposition à CommonJS, est un ensemble de méthodes récentes sur JavaScript améliorant la façon dont sont gérés les modules. Concrètement, cela impacte la manière dont on importe les fichiers : pour organiser et réutiliser du code via <code>import</code> et <code>export</code>.</p>
+<h3>Le style : Tailwind</h3>
+<p>La plus grosse difficulté résida dans la mise à jour de Tailwindcss, une bibliothèque CSS permettant de styliser rapidement et efficacement les éléments HTML. La mise à jour vers la version 3.0 d'Eleventy a nécessité une reconfiguration complète de l'intégration de Tailwind dans le projet. Cela a impliqué la modification des fichiers de configuration de Tailwind et l'ajustement des imports dans les fichiers de style principaux.</p>
+<h2>La suite…</h2>
+<ul>
+<li>Corriger les bugs qui surviennent notamment avec les balises de résumés dans les projets</li>
+<li>Initialiser un nouveau git avec des sous modules</li>
+<li>Voir si on peut rendre autonome en local un sous projet qui ne comprend pas le site complet, mais qui compile avec un projet “hôte”</li>
+</ul>
+
+
+</article>
+
+        </main>
+
+
+        <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div class="min-h-[50px] flex justify-center items-center">
+                    <p class="text-center">
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développent et Organisation en IT
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        MathJax
+            .startup
+            .document
+            .getMathItemsWithin(document.body);
+        </script>
+
+    </body>
+</html>
