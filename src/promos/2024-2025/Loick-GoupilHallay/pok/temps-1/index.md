@@ -49,7 +49,7 @@ résumé: Déploiement automatisé d'un environnement de développement sécuris
   }
 </style>
 
-{% prerequis %}
+{% prerequis 'POK avancé'%}
 - Conteneurisation
 - Golang
 - [MON sur l'environnement de développement idéal](../../mon/temps-1.1/)

@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "k9s any% unrestricted wg+ WR"
+title: "k9s speedrun any% unrestricted wg+ WR"
 authors:
   - Loïck Goupil-Hallay
 
@@ -14,7 +14,7 @@ tags:
   - 'k9s'
 ---
 
-{%prerequis 'MON avancé'%}
+{%prerequis 'MON facile'%}
 - [Kubernetes](https://kubernetes.io/)
 - [Helm](https://helm.sh/)
 {%endprerequis%}
