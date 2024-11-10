@@ -20,6 +20,7 @@ résumé: Développement d'une extension permettant de débloquer des succès en
 {% endprerequis %}
 
 {% lien %}
+- [Achievements sur GitHub](https://github.com/boxboxjason/achievements)
 - [API VSCode](https://code.visualstudio.com/api)
 - [Développer son extension VSCode](https://code.visualstudio.com/api/get-started/your-first-extension)
 {% endlien %}
