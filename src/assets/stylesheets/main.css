@@ -72,3 +72,22 @@ table.no-border tr {
 details p {
     @apply mb-0;
 }
+
+/* Show line numbers on code */
+/* Source issue: https://github.com/11ty/eleventy-plugin-syntaxhighlight/issues/10 */
+pre {
+  counter-reset: lineNumber;
+}
+code .highlight-line:before {
+  -webkit-user-select: none;
+  border-right: 1px solid #404040;
+  color: #858585;
+  content: counter(lineNumber);
+  counter-increment: lineNumber;
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+  margin-right: 1.2em;
+  padding-right: 1.2em;
+  text-align: right;
+  width: 2.4em;
+}

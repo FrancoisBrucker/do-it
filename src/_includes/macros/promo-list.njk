@@ -1,0 +1,14 @@
+
+{% macro promoList(index, type="") %}
+    <ul class="flex flex-wrap not-prose list-none my-1 mx-0 px-1 gap-1 md:gap-2 lg:gap-3">
+            {%- for entry in index | sort | reverse %}
+                <li{% if entry.url == page.url %} class="my-active-class group bg-purple-200 rounded-full hover:cursor-pointer"
+                    {% else %} class="group bg-purple-200 rounded-full hover:cursor-pointer"{% endif %}>
+                    <a class="inline-block w-full underline decoration-2 decoration-purple-500 p-2 md:px-4 group-hover:decoration-purple-700 group-hover:text-purple-700"
+                       href="{% if type == "projet" %}{{ entry.url }}_projets
+                             {% else %}{{ entry.fileSlug }}
+                             {% endif %}">{{ entry.data.title | default(promo.fileSlug) }}</a>
+                </li>
+            {%- endfor %}
+        </ul>
+{% endmacro %}

@@ -24,9 +24,8 @@ jobs:
       - name: Install dependencies & build
         run: |
           npm ci
-          npm run build-github
           npm run node-modules-front
-          npm run build-tailwind
+          npm run build-github
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

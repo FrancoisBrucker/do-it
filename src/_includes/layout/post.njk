@@ -55,7 +55,7 @@ eleventyComputed:
             <div class="absolute top-0 right-0">
                 <span class="bg-purple-200 rounded-full px-3 py-1 mt-2 mr-2" data-pagefind-filter="Année">
                     {{ year }}
-                <span>
+                </span>
             </div>
         {% endif %}
     {% endif%}
@@ -68,7 +68,7 @@ eleventyComputed:
         </p>
 {% endif %}
 
-{% if eleventyNavigation and eleventyNavigation.key %}
+{% if navigation and eleventyNavigation and eleventyNavigation.key %}
     {% chemin %}
     {%- for page in collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key, { includeSelf: true, allowMissing: false  }) -%}
 
@@ -80,6 +80,22 @@ eleventyComputed:
             <a href="{{ page.url  }}">{{page.title}}</a>
         {%- endif -%}
     {%- endfor -%}
+    {% endchemin %}
+{% elif not navigation and eleventyNavigation and eleventyNavigation.key %}
+    {% chemin %}
+        <span class="px-1">
+            <i>Navigation disponible uniquement en production</i>
+            <a class="relative group cursor-help" target="_blank" href="https://www.11ty.dev/docs/environment-vars/">
+                <svg class="inline-block h-[1.2em] w-[1em] pb-[3px]" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 32 32"><path d="M 16 3 C 8.832031 3 3 8.832031 3 16 C 3 23.167969 8.832031 29 16 29 C 23.167969 29 29 23.167969 29 16 C 29 8.832031 23.167969 3 16 3 Z M 16 5 C 22.085938 5 27 9.914063 27 16 C 27 22.085938 22.085938 27 16 27 C 9.914063 27 5 22.085938 5 16 C 5 9.914063 9.914063 5 16 5 Z M 15 10 L 15 12 L 17 12 L 17 10 Z M 15 14 L 15 22 L 17 22 L 17 14 Z"></path></svg>
+                <span id="i-tooltip" class="absolute left-0 bottom-full mb-2 w-max bg-purple-500 text-white text-sm rounded p-1 hidden group-hover:block transition-opacity duration-200">
+                    En local, définir la variable d'environnement `NAV=true` <i>(cliquer pour ouvir la doc)</i>
+                </span>
+            </a>
+        </span>
+        <script>
+            let tooltip = document.getElementById('i-tooltip');
+            tooltip.preventDefault();
+        </script>
     {% endchemin %}
 {% endif %}
 

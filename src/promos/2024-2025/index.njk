@@ -16,14 +16,8 @@ eleventyNavigation:
         <div class="text-3xl mb-3">
             Élèves de la promotion
         </div>
-        <ul class="flex flex-wrap not-prose list-none my-1 mx-0 px-1 gap-1">
-            {%- for entry in collections.all | eleventyNavigation(eleventyNavigation.key) | reverse %}
-                <li{% if entry.url == page.url %} class="my-active-class relative rounded-full border-blue-200 border-2 py-2 px-4 m-1  flex items-center"
-                    {% else %} class="relative rounded-full border-blue-200 border-2 py-2 px-4 m-1  flex items-center"{% endif %}>
-                <svg class="h-4 mr-3 fill-blue-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"/></svg>
-                <a href="{{ entry.url }}" class="underline decoration-2 decoration-blue-500 hover:decoration-blue-700 hover:text-blue-700">{{ entry.title }}</a>
-                </li>
-            {%- endfor %}
-        </ul>
+
+        {% from 'macros/student-list.njk' import studentList %}
+        {{ studentList(collections.all | eleventyNavigation(eleventyNavigation.key) | reverse, type="promo") }}
     </div>
 </article>

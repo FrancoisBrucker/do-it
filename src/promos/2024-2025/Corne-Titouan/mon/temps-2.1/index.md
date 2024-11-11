@@ -1,33 +1,35 @@
 ---
 layout: layout/mon.njk
 
-title: "React - Front-End"
+title: "React (dev Front-End) - découverte et prise ne main"
 authors:
   - Titouan Corne
 
-date: 1970-11-01
+date: 2024-11-04
 tags: 
   - "temps 2"
+  - "vert"
+  - "dev"
+  - "front"
+  - "web"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Ce MON est consacré à la découverte et à la prise en main de React (une bibliothèque JavaScript)"
 ---
 
 {% prerequis %}
 
-Liste des prérequis du POK ET/OU MON
+Connaissances du web :
+
+- HTML
+- JavaScript (ou encore mieux TypeScript)
+- CSS
 
 {% endprerequis %}
 {% lien %}
 
-Les lien utiles pour la compréhension de celui-ci.
+- [Site officiel](https://react.dev/)
+- [GitHub : application pour tester et prendre en main les différents concepts](mettre lien ici)
 
 {% endlien %}
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :
 
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
-
-## Contenu
-
-Le contenu du MON.
