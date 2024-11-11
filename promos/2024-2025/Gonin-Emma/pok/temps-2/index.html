@@ -135,9 +135,9 @@
 <p>But final.</p>
 <h4>Sprint 1</h4>
 <ul>
-<li>[ ] Améliorer la page portefolio</li>
+<li>[x] Améliorer la page portefolio</li>
 <li>[ ] Changer le système de mail si possible</li>
-<li>[ ] Modifier la galerie pour pouvoir visualiser le titre de la peinture lorsqu'on passe la souris dessus</li>
+<li>[x] Modifier la galerie pour pouvoir visualiser le titre de la peinture lorsqu'on passe la souris dessus</li>
 <li>[ ] Ajouter la navigation clavier pour le portefolio et le scroll</li>
 <li>[ ] Voir où stocker mes peintures : au lieu d'un json créer une collection sur MongoDB et faire une API avec FastAPI ou SQLite</li>
 </ul>
@@ -158,15 +158,44 @@
 </thead>
 <tbody>
 <tr>
-<td>Mardi 27/08</td>
-<td>1H</td>
-<td>Travail sur la trame du site</td>
+<td>Lundi 11/11</td>
+<td>4H</td>
+<td>Amélioration de la page portefolio, rajout de deux peintures à la bdd, rajout de la fonctionnalité &quot;hovering&quot; dans la galerie photo</td>
 </tr>
 </tbody>
 </table>
 <h2>Contenu</h2>
 <p>Le contenu du POK.</p>
 <h3>Premier Sprint</h3>
+<p>J'ai amélioré le carousel avec le chargement des images, ce qui m'ennuyait avec la version précédente du carousel c'était le chargement lent des images. Pour améliorer ceci, j'ai d'abord essayé de refaire le carousel de manière plus simple en faisant des tests mais je préférais le visuel que j'avais déjà, donc je suis repartie du code que j'avais à la fin du POK 1 et j'ai rajouté ces lignes de code qui charges les images de manière asynchrone :</p>
+<pre><code>useEffect(() =&gt; {
+    const preloadImages = async () =&gt; {
+      const visibleItemIndices = [currentIndex, (currentIndex + 1) % items.length];
+      
+      const preloadPromises = visibleItemIndices.map(index =&gt; 
+        loadImage(items[index])
+      );
+
+      await Promise.all(preloadPromises);
+
+      setIsLoading(false);
+      setVisibleItems(visibleItemIndices.map(index =&gt; items[index]));
+    };
+
+    preloadImages();
+  }, [currentIndex]);
+
+  const loadImage = async (item) =&gt; {
+    return new Promise((resolve, reject) =&gt; {
+      const img = new Image();
+      img.onload = () =&gt; resolve(img);
+      img.onerror = () =&gt; reject(new Error(`Failed to load image: ${item.img_url}`));
+      img.src = item.img_url;
+    });
+  };
+</code></pre>
+<p>Une fois que j'étais satisfaite du résultat, j'ai rajouté deux peintures/dessins récents dans ma base de données. J'ai ensuite rajouté une fonctionnalité dans ma galerie photo qui est que lorsque l'utilisateur passe la souris sur une des images, s'affiche alors le titre et la description de l'image. Pour se faire, j'ai rajouté un state <code>hoveredItem</code> et une Box noire transparente qui se superpose à l'image.</p>
+<p><img src="image.png" alt="Hovering"></p>
 <h3>Second Sprint</h3>
 <h3>Ressources</h3>
 <ul>
