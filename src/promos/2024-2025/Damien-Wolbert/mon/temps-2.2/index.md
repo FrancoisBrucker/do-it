@@ -9,7 +9,7 @@ date: 2024-10-16
 tags: 
   - "temps 2"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: Reprise des cours de première année, recherche des bonnes pratique et application simple.
 ---
 
 {% prerequis %}
