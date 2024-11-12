@@ -9,7 +9,7 @@ date: 1970-11-01
 tags: 
   - "temps 2"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Explorer l'hypersensibilité avec un regard critique, en distinguant ce qui apporte réellement de la valeur de ce qui relève davantage du marketing et du business du coaching."
 ---
 
 {% prerequis %}
