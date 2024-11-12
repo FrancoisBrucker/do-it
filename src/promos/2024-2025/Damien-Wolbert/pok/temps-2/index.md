@@ -7,7 +7,7 @@ authors:
 
 date: 1971-01-01
 
-tags: 
+tags:
   - "temps 2"
 
 résumé: Afin de pouvoir modéliser facilement un parc solaire avec un logiciel connu et utilisé par tous (Excel), ce POK me permettra de mettre en pratique mes connaissances en VBA et de mettre en place un outil permettant l'estimation des quantitatifs de câbles nécessaire la construction d'un parc solaire.
@@ -34,11 +34,9 @@ Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de 
 
 ### Objectifs principaux
 
-1. Identifier les enjeux du monitoring des compétences.
-2. Identifier les fonctionnalités indispensables à l'implémentation d'un tel outil.
-3. Identifier un format et une interface adaptés au plus grand nombre d'utilisateurs, en utilisant des fonctionnalités simples de la suite Google.
-4. Identifier une architecture robuste sur Google Drive permettant d'ajouter des foncitonnalités au fur et à mesure.
-5. Livrer une maquette fonctionnelle et testée à la fin des 20 heures allouées au POK.
+1. Réussir à modéliser de manière graphique et visuelle un parc photovoltaïque.
+2. Mettre en place un parcours utilisateur simple et agréable.
+3. Ajuster le niveau de précision des estimations et outils au temps alloué au projet.
 
 ### Monitoring du projet
 
