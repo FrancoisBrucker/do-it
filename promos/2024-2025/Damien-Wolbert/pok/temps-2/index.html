@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Réaliser un outil de dimensionnement de câbles basse tension avec python</title>
+        <title>Modélisation d&#39;un parc solaire sur Excel</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">Réaliser un outil de dimensionnement de câbles basse tension avec python</h1>
+<h1 class="mb-1">Modélisation d&#39;un parc solaire sur Excel</h1>
 <div class="mb-4">
     
         <div class="px-4 flex flex-wrap items-center">
@@ -105,7 +105,7 @@
 
         <p class="mb-4 text-lg">
 
-                Un POK traitant d'un sujet.
+                Afin de pouvoir modéliser facilement un parc solaire avec un logiciel connu et utilisé par tous (Excel), ce POK me permettra de mettre en pratique mes connaissances en VBA et de mettre en place un outil permettant l'estimation des quantitatifs de câbles nécessaire la construction d'un parc solaire.
 
         </p>
 
@@ -118,7 +118,7 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Damien-Wolbert/">Damien WOLBERT</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Damien-Wolbert/pok/">POK de Damien WOLBERT</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Damien-Wolbert/pok/temps-2/">Réaliser un outil de dimensionnement de câbles basse tension avec python</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Damien-Wolbert/">Damien WOLBERT</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Damien-Wolbert/pok/">POK de Damien WOLBERT</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Damien-Wolbert/pok/temps-2/">Modélisation d&#39;un parc solaire sur Excel</a>
 
 </div></div>
 
@@ -130,7 +130,10 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Liste des prérequis du POK ET/OU MON</p>
+<ul>
+<li>Programmation en VBA.</li>
+<li>Connaissance de la structure générale d'un parc solaire.</li>
+</ul>
 </div></div>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -145,43 +148,71 @@
 <li>le niveau et les prérequis nécessaires en utilisant la balise <a href="/do-it/cs/contribuer-au-site/#prerequis"><code>prerequis</code></a></li>
 <li>les autres POK &amp; MON en rapport en utilisant la balise <a href="/do-it/cs/contribuer-au-site/#lien"><code>lien</code></a></li>
 </ul>
-<h2>Tâches</h2>
-<h3>Sprints</h3>
-<p>But final.</p>
-<h4>Sprint 1</h4>
-<p>Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.</p>
+<h2>Cadrage</h2>
+<h3>Objectifs principaux</h3>
+<ol>
+<li>Identifier les enjeux du monitoring des compétences.</li>
+<li>Identifier les fonctionnalités indispensables à l'implémentation d'un tel outil.</li>
+<li>Identifier un format et une interface adaptés au plus grand nombre d'utilisateurs, en utilisant des fonctionnalités simples de la suite Google.</li>
+<li>Identifier une architecture robuste sur Google Drive permettant d'ajouter des foncitonnalités au fur et à mesure.</li>
+<li>Livrer une maquette fonctionnelle et testée à la fin des 20 heures allouées au POK.</li>
+</ol>
+<h3>Monitoring du projet</h3>
+<p>Le suivi du projet a été réalisé sur un outil personnel développé spécialement pour le suivi des POK et MON. Le contenu est reporté ci-dessous.</p>
+<h4>Back-log</h4>
+<h5>Sprint 1</h5>
 <ul>
-<li>[ ] Une tâche non réalisée</li>
-<li>[x] Une tâche réalisée</li>
+<li>[ ] Réaliser le cadrage du projet</li>
+<li>[ ] Sprint backlog 1</li>
+<li>[ ] Brainstorming général</li>
+<li>[ ] Lister les fonctionnalités principales du système</li>
+<li>[ ] Parcours utilisateur rapide</li>
+<li>[ ] Définir les interfaces entre le système et l'utilisateur</li>
+<li>[ ] Lister les données d'entrées</li>
+<li>[ ] Trame des templates de chacune des interfaces</li>
+<li>[ ] Trame du template des données de sortie</li>
+<li>[ ] Mise au propre des templates des données d'entrée</li>
+<li>[ ] Mise au propre des templates des données de sortie</li>
+<li>[ ] Lister les fonctions informatiques a priori nécessaires</li>
+<li>[ ] Rédaction des fonctions permettant la création des templates d'inputs</li>
+<li>[ ] Rédaction des fonctions informatiques permettant le calcul des distances sur la grille</li>
+<li>[ ] Rédiger le sprintbacklog 1 sur le site do-it</li>
+<li>[ ] Rédiger le CR du sprint 1 sur le site Do-it</li>
 </ul>
-<h4>Sprint 2</h4>
-<ul>
-<li>[ ] Une tâche non réalisée</li>
-<li>[x] Une tâche réalisée</li>
-</ul>
-<p>Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.</p>
-<h3>Horodatage</h3>
-<p>Toutes les séances et le nombre d'heure que l'on y a passé.</p>
 <table>
 <thead>
 <tr>
 <th>Date</th>
 <th>Heures passées</th>
 <th>Indications</th>
+<th>Niveau d'efficacité</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td>Mardi 27/08</td>
-<td>1H</td>
-<td>Travail sur la trame du site</td>
-</tr>
-</tbody>
 </table>
-<h2>Contenu</h2>
-<p>Le contenu du POK.</p>
-<h3>Premier Sprint</h3>
-<h3>Second Sprint</h3>
+<p><em><strong>Total du sprint :</strong></em></p>
+<h5>Sprint 2</h5>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Heures passées</th>
+<th>Indications</th>
+<th>Niveau d'efficacité</th>
+</tr>
+</thead>
+</table>
+<p><em><strong>Total du sprint 2 :</strong></em></p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-yellow-500 bg-yellow-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p><strong>TOTAL POK 2 :</strong></p>
+</div></div>
+<h2>Rendu</h2>
+<h2>Sprint 1</h2>
+<h2>Sprint 2</h2>
 
 
 </article>
