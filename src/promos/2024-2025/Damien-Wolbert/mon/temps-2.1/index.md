@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Bibliothèque de fonctions pratiques en VBA pour s'entrainer"
+title: "Maitriser Excel avec : SQL, les opérations sur les strings et les listes déroulantes."
 authors:
   - Damien WOLBERT
 
@@ -9,7 +9,7 @@ date: 1970-11-01
 tags: 
   - "temps 2"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: Etudier les différentes les différentes possibilités d'Excel permettant de répondre aux trois questions suivantes. Peut-on utiliser SQL sur Excel ? Comment réaliser des opérations sur les chaines de caractères en VBA ? Peut-on créer des listes déroulantes dépendantes facilement ? 
 ---
 
 {% prerequis %}
