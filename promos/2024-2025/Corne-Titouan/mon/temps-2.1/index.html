@@ -164,6 +164,128 @@
 </ul>
 </div></div>
 
+<h2>Table des matières</h2>
+<ul>
+<li><a href="#table-des-mati%C3%A8res">Table des matières</a></li>
+<li><a href="#1-react--quest-ce-que-cest--">1. React : qu'est ce que c'est ? </a></li>
+<li><a href="#2-synth%C3%A8se-de-balisage-jsx-">2. Synthèse de balisage <em>JSX</em> </a></li>
+<li><a href="#3-mise-en-place-de-lenvironnement-de-travail-">3. Mise en place de l'environnement de travail </a></li>
+<li><a href="#4-variables-d%C3%A9tat-">4. Variables d'état </a></li>
+<li><a href="#5-mise-en-pratique-">5. Mise en pratique </a></li>
+<li><a href="#sources-utiles">Sources utiles</a></li>
+</ul>
+<h2>1. React : qu'est ce que c'est ? <a id="section1"></a></h2>
+<p>React est une bibliothèque JavaScript open source utilisée pour créer des interfaces utilisateurs. Cette bibliothèque a vu le jour en 2013. Elle est actuellement maintenue par Meta. React est donc utilisé en développement web, côté front.</p>
+<p>Parmis les applications connues développées en utilisant React, on retrouve notamment Netflix et Airbnb.</p>
+<p><img src="img/interface-netflix.png" alt="Interface-Netflix"></p>
+<p><img src="img/interface-airbnb.png" alt="Interface-Airbnb"></p>
+<h2>2. Synthèse de balisage <em>JSX</em> <a id="section2"></a></h2>
+<p>La synthèse de balisage <em>JSX</em> (JavaScript XML) n'est pas obligatoire, mais elle est très courante dans les projets React pour des raisons de confort.</p>
+<p>JSX permet de produire des 'éléments' dans React. À la place de séparer les éléments visuels et la logique en différents fichiers, JSX utilise des <strong>components</strong> (bouts de code réutilisables qui représentent une partie de l’interface utilisateur) qui contiennent à la fois la partie visuelle (HTML) et la logique (fonction JavaScript par exemple).</p>
+<p>Pour montrer un exemple de code en JSX :</p>
+<pre class="language-JavaScript"><code class="language-JavaScript">function formatName(user) {
+  return user.firstName + ' ' + user.lastName;
+}
+
+const user = {
+  firstName: 'Harper',
+  lastName: 'Perez'
+};
+
+const element = (
+  <h1>
+    Hello, {formatName(user)}!
+  </h1>
+);</code></pre>
+<p>On remarque dans l'exemple précédent que le JSX permet d'insérer du balisage dans du JavaScript.</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Plus d'informations sur <em>JSX</em> : <a href="https://legacy.reactjs.org/docs/introducing-jsx.html">documentation proposée par Meta</a></p>
+</div></div>
+<h2>3. Mise en place de l'environnement de travail <a id="section3"></a></h2>
+<p>Pour créer un nouveau projet en utilisant <em>Node.js</em>, il suffit d'exécuter la commande <code>npx create-react-app nom-du-projet</code>.</p>
+<p>Une fois le projet créé, on peut lancer l'application avec la commande <code>npm start</code></p>
+<p>Le projet créé a l'architecture suivante :</p>
+<p><img src="img/organisation-fichiers-react.png" alt="organisation-fichiers-react">
+<em>Capture d'écran personnelle (2024)</em></p>
+<h2>4. Variables d'état <a id="section4"></a></h2>
+<p>Les variables d'état (<strong>state</strong>), sont des données qui permettent de gérer et de suivre les informations dynamiques d'un composant. Elles sont essentielles car elles permettent de rendre les composants interactifs et réactifs aux changements.</p>
+<p>On utilise le hook (fonction spéciale dont le nom commence par use) <strong>useState</strong> pour créer et gérer l’état.</p>
+<p>Exemple illustratif :</p>
+<pre class="language-JavaScript"><code class="language-JavaScript">import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0); // count est la variable d'état, setCount est la fonction pour mettre à jour l'état
+
+  return (
+    <div>
+      <p>Le compteur est à : {count}</p>
+      <button onClick="{()" ==""> setCount(count + 1)}>Incrémenter</button>
+    </div>
+  );
+}</code></pre>
+<p>Il est important de comprendre où placer l'état... Parfois des composants partagent le même état, dans ce cas, il faut déplacer cet état depuis les composants &quot;vers le haut&quot;, c'est-à-dire vers le composant parent qui les contient tous. Cette notion est bien expliquée sur le site officiel de React, dans la partie <em>Démarrage rapide (<a href="https://fr.react.dev/learn">Partager des données entre composants</a>)</em>.</p>
+<p>Voici une capture d'écran qui permet de comprendre la hiérarchie entre les différents composants :</p>
+<p><img src="img/hierarchie-components.png" alt="Hierarchie des composants">
+<em>Exemple repris du site officiel de <a href="https://fr.react.dev/learn/thinking-in-react">React</a> (2024)</em></p>
+<p>Lorsqu'on développe une application il est donc important de savoir comment structurer l'état au sein de cette application. Il faut alors considérer l'état comme étant le jeu minimum de données susceptibles de changer dont l'application doit se souvenir. Il est important de ne pas se perdre avec un trop grand nombre d'états, c'est pourquoi on utilise le principe DRY (<em>Don't Repeat Yourself</em>). Pour déterminer si une donnée constitue de l'état, il faut se poser les bonnes questions :</p>
+<ul>
+<li>Est-ce que la donnée reste inchangée au fil du temps ? Si oui, ce n’est pas de l’état.</li>
+<li>Est-ce que la donnée est passée depuis un parent via les props ? Si oui, ce n’est pas de l’état.</li>
+<li>Peut-on déterminer/calculer la donnée sur base d’états ou props existants de votre composant ? Si oui, ce n’est pas de l’état.</li>
+</ul>
+<p>Ensuite, une autre étape clé est de déterminer où l'état devrait vivre.</p>
+<p>On a vu que React utilise un flux de données unidirectionnel (les données descendent le long de la hiérarchie des composants, des parents vers les enfants). Voici les étapes à réaliser pour chaque élément d’état de votre application (étapes tirées du <a href="https://fr.react.dev/learn/thinking-in-react">site officiel de React</a>) :</p>
+<ol>
+<li>Identifiez chaque composant qui affiche quelque chose sur base de cet état.</li>
+<li>Trouvez leur plus proche ancêtre commun : un composant qui est au-dessus d’eux tous dans l’aborescence.</li>
+<li>Décidez où l’état devrait vivre :</li>
+</ol>
+<ul>
+<li>Le plus souvent, vous pourrez mettre l’état directement dans leur ancêtre commun.</li>
+<li>Vous pouvez aussi le mettre dans un composant au-dessus de leur ancêtre commun.</li>
+<li>Si vous ne trouvez aucun composant dans lequel il semble logique de placer l’état, créez un nouveau composant spécifiquement pour contenir l’état, et insérez-le dans l’arborescence juste au-dessus de leur ancêtre commun.</li>
+</ul>
+<h2>5. Mise en pratique <a id="section5"></a></h2>
+<p>Pour une mise en pratique des points étudiés jusqu'à présent, j'ai décidé de développer une interface web assez simple. Cette interface web permet de lister des courses (running) à venir et d'en sélectionner quelques unes en tant que favoris. Voici la maquette du site auquel j'aimerais aboutir :</p>
+<p><img src="img/maquette-site.png" alt="maquette site"><em>Maquette personnelle réalisée sur Figma (2024)</em></p>
+<p>Pour ce qui concerne les données, j'ai voulu faire au plus simple en créant un tableau d'objet JavaScript regroupant toutes les informations nécessaires. Voici à quoi ressemble le tableau :</p>
+<pre class="language-Javascript"><code class="language-Javascript">const COURSES = [
+  { name: "Marathon des Géants", place: "Toulouse", date: "10 novembre 2024", price: "50€", img: "./img/marathondesgeants", commitment: true},
+  { name: "Semi Lourdes-Tarbes", place: "Lourdes", date: "17 novembre 2024", price: "20€", img: "./img/semilourdestarbes", commitment: false },
+  { name: "Tout Rennes Court !", place: "Rennes", date: "13 janvier 2025", price: "25€", img: "./img/toutrennescourt", commitment: false }
+];</code></pre>
+<p>Ensuite, j'ai identifié le nombre de composants et leur hierarchie :</p>
+<p><img src="img/mes-composants.png" alt="mes composants"><em>Capture d'écran personnelle (2024)</em></p>
+<p>Ensuite, j'ai construit une première version statique, c'est-à-dire que la logique de l'application n'est pas présente dans cette première version (impossibilité d'ajouter des éléments dans sa liste de courses).</p>
+<p>Voici le rendu visuel de cette première version :</p>
+<p><img src="img/version-statique.png" alt="version statique"><em>Capture d'écran personnelle (2024)</em></p>
+<p>Le style du site est adapté à ma maquette pour que ce soit plus facile de comprendre où se trouve chaque composant. Le design final viendra en fin de projet, lorsque la logique de l'interface sera implémentée.</p>
+<p>Le code du site en statique est disponible sur mon GitHub, le commit s'appelle <a href="https://github.com/TitouanCorne/ReactCoursesRunning/commit/36c58423cac59e687a7e0869c2ae683489612ccf"><em>&quot;Première version statique, avec un peu de CSS&quot;</em></a></p>
+<p>La prochaine étape consiste à intégrer la logique de l'application.</p>
+<div style="display: flex; justify-content: center; align-items: center; height: 480;">
+  <video style="max-width: 100%; height: auto;" controls="">
+    <source src="video/site-avec-logique.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+<p><em>Vidéo personnelle (2024)</em></p>
+<p>Le code écrit jusqu'à ce stade est disponible sur mon GitHub, le commit s'appelle <a href="https://github.com/TitouanCorne/ReactCoursesRunning/commit/d4e8005855fa53e2cdc53b07dd7bb7561de7e00f"><em>&quot;Deuxième version, intégration de la logique&quot;</em></a></p>
+<h2>Sources utiles</h2>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
+</svg>
+<div class="pl-8 mr-8">
+<ul>
+<li><a href="https://fr.react.dev/learn">Documentation officielle React. Source : React (2024)</a></li>
+<li><a href="https://legacy.reactjs.org/docs/introducing-jsx.html">Documentation sur le JSX. Source : Meta Platforms, Inc. (2024)</a></li>
+</ul>
+</div></div>
+
 
 
 </article>
