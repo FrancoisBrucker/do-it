@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Les différentes façons de faire une interface graphique avec python"
+title: "Bibliothèque de fonctions pratiques en VBA pour s'entrainer"
 authors:
   - Damien WOLBERT
 
@@ -31,3 +31,16 @@ Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de 
 ## Contenu
 
 Le contenu du MON.
+
+Brainsto : 
+- Créer des listes dépendantes
+- Chercher une donnée dans un tableau
+- Gérer les formules
+- Créer un horodateur pour do-it apt de mon horodateur excel
+- Créer une todo de do_it à partir de mes back-log
+
+Retour sur pok et mon
+objectifs :
+- apprendre
+- transmettre
+- pouvoir être évalué
