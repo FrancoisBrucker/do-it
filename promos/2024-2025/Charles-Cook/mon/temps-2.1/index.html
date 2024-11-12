@@ -105,7 +105,7 @@
 
         <p class="mb-4 text-lg">
 
-                Un MON traitant d'un sujet.
+                Ce MON a pour objectif de se familiariser avec les bases des langages html, css et js, afin de pouvoir créer un site web fonctionnel
 
         </p>
 
@@ -130,23 +130,512 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Liste des prérequis du POK ET/OU MON</p>
+<p>Aucun prérequis</p>
 </div></div>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
   <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Les lien utiles pour la compréhension de celui-ci.</p>
+<ul>
+<li><a href="https://www.w3schools.com/html/default.asp">w3schools HTML</a></li>
+<li><a href="https://www.w3schools.com/js/default.asp">w3schools JavaScript</a></li>
+</ul>
 </div></div>
 
-<p>Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :</p>
+<h2>Introduction</h2>
+<p>L’objectif de ce MON est de me former aux langages HTML/CSS, dans l’optique de développer l’interface de notre site MusiCoach, objectif final de notre projet 3A. Nous envisageons de faire le front web en React, et n’ayant aucune base en HTML ou CSS, ce MON a pour but de me familiariser avec ce langage.</p>
+<p>Pour le support de formation, je me suis penché sur les MON précédent, et ai décidé d’utiliser le site W3School qui a également été utilisé par Thomas MERLE dans un de ses MON du Temps 1. L’avantage de ce site est qu’il possède un éditeur en ligne permettant de réaliser directement des tests tout au long de l’apprentissage.</p>
+<h2>HTML</h2>
+<h3>Introduction</h3>
+<p>HTML signifie Hyper Text Markup Language. Il est utilisé afin de coder la structure d’une page web.
+Le langage HTML fonctionne avec un balisage. Ainsi, chaque élément est déclaré avec une balise de départ (&quot;start tag&quot;), et une balise de fin (&quot;end tag&quot;). Cela se présente sous la forme suivante :</p>
+<pre><code>&lt;tagname&gt;Le contenu de cette partie&lt;/tagname&gt;
+</code></pre>
+<h3>Structure</h3>
+<p>Un certain nombe d'éléments sont obligatoires afin de créer une page web fonctionnelle. On retrouve ceux-ci dans le court code suivant :</p>
+<pre><code>&lt;!DOCTYPE html&gt; &lt;!--Donne le type de document--&gt;       
+&lt;html&gt;  &lt;!--Marque le début du document html--&gt;
+&lt;body&gt;  &lt;!--Introduit le contenu du corps de la page web--&gt;
+
+&lt;h1&gt;Premier titre de la page.&lt;/h1&gt;
+&lt;p&gt;Premier paragraphe.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>NB: Les balises <code>&lt;!--</code>et <code>--&gt;</code> encadrent un commentaire. Le contenu entre ces deux balises n'est pris en compte dans la création de la page web.</p>
+<p>On note la présence de balises structurelles :</p>
+<table>
+<thead>
+<tr>
+<th>Tags</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;!DOCTYPE html&gt;</code></td>
+<td>Déclare le type du document</td>
+</tr>
+<tr>
+<td><code>&lt;html&gt;</code></td>
+<td>Marque le début du document HTML</td>
+</tr>
+<tr>
+<td><code>&lt;head&gt;</code></td>
+<td>contient la metadata (data à propos de la data), il se place entre le <code>&lt;html&gt;</code> et le <code>&lt;body&gt;</code></td>
+</tr>
+<tr>
+<td><code>&lt;body&gt;</code></td>
+<td>Contient les éléments relatifs au titre de la page (<code>&lt;title&gt;</code>), au style (<code>&lt;style&gt;</code>), aux liens de fichiers externes (<code>&lt;link&gt;</code>), ou encore à la description de la page et ses mots clés permettant aux moteurs de recherche de référencer la page (<code>&lt;meta&gt;</code>) par exemple</td>
+</tr>
+</tbody>
+</table>
+<h3>Elements et attributs</h3>
+<p>Un element est un &quot;bloc&quot; qui apparaît dans la page web. Il peut être de plusieurs type : titre, paragraphe, lien, image,...
+Un attribut est une précision que l'on apporte afin de modifier l'identité visuelle d'un élément. Afin de ne pas simplement énumérer une liste d'éléments et d'attribus, je vais présenter quelques éléments et attributs dans le cadre de la création d'une page web.</p>
+<h4>Titre &amp; paragraphe</h4>
+<pre><code>&lt;h1 style=&quot;color:#3a3a3a;text-align:center&quot;&gt;Level up&lt;/h1&gt;
+&lt;p style=&quot;text-align:center&quot;&gt;&lt;strong&gt;Progresse en jouant tes premiers morceaux&lt;/strong&gt;&lt;/p&gt;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;h1&gt;</code> à <code>&lt;h6&gt;</code></td>
+<td>Déclarent un titre en fonction de son importance</td>
+</tr>
+<tr>
+<td><code>&lt;p&gt;</code></td>
+<td>Déclare un paragraphe</td>
+</tr>
+<tr>
+<td><code>&lt;strong&gt;</code></td>
+<td>Met en évidence un texte, qui a une importance particulière. Visuellement, ce texte est affiché en gras.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td>Attribut</td>
+<td>Explication</td>
+</tr>
+<tr>
+<td>-------------</td>
+<td>----------------</td>
+</tr>
+<tr>
+<td><code>color</code></td>
+<td>Couleur du texte d'un élément HTML</td>
+</tr>
+<tr>
+<td><code>texte-align</code></td>
+<td>Alignement du texte d'un élément HTML</td>
+</tr>
+</tbody>
+</table>
+<p>Ainsi, le code précédent permet d'obtenir ceci :
+<img src="Images/Titre.png" alt="Titre"></p>
+<h4>Liens</h4>
+<pre><code> &lt;div class=&quot;theme-btn&quot;&gt;
+            &lt;a href=&quot;#C1&quot; class=&quot;link-theme&quot;&gt;Bases&lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;a&gt;</code></td>
+<td>Lien hypertexte</td>
+</tr>
+<tr>
+<td><code>&lt;div&gt;</code></td>
+<td>Définit une division ou une section dans le document HTML (block-level)</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td>Attribut</td>
+<td>Explication</td>
+</tr>
+<tr>
+<td>-------------</td>
+<td>----------------</td>
+</tr>
+<tr>
+<td><code>href</code></td>
+<td>Destination du lien</td>
+</tr>
+<tr>
+<td><code>class</code></td>
+<td>Renvoie à une classe créée eu préalable, permettant de donner l'identité visuelle à l'élément</td>
+</tr>
+</tbody>
+</table>
+<p>Ainsi, le code précédent permet de créer le lien &quot;Bases&quot; suivant :
+<img src="Images/Liens.png" alt="Liens"></p>
+<h4>Images</h4>
+<pre><code>&lt;img src=&quot;Portée cliquable.png&quot; alt=&quot;Portée&quot; usemap=&quot;#workmap&quot;&gt;
+    &lt;map name=&quot;workmap&quot;&gt;
+        &lt;area shape=&quot;cercle&quot; coords=&quot;433, 124, 20&quot; href=&quot;Clé de sol.png&quot;&gt;
+        &lt;area shape=&quot;cercle&quot; coords=&quot;696, 229, 20&quot; href=&quot;Clé de fa.png&quot;&gt;
+        &lt;area shape=&quot;cercle&quot; coords=&quot;1047, 177, 20&quot; href=&quot;Clé de ut.png&quot;&gt;
+    &lt;/map&gt;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;img&gt;</code></td>
+<td>Image</td>
+</tr>
+<tr>
+<td><code>&lt;map&gt;</code></td>
+<td>Image avec des zones cliquables</td>
+</tr>
+<tr>
+<td><code>&lt;area&gt;</code></td>
+<td>Zones cliquable d’une image de type « map »</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td>Attribut</td>
+<td>Explication</td>
+</tr>
+<tr>
+<td>-------------</td>
+<td>----------------</td>
+</tr>
+<tr>
+<td><code>src</code></td>
+<td>Fichier source de l'image</td>
+</tr>
+<tr>
+<td><code>alt</code></td>
+<td>Texte alternatif si erreur dans l'affichage de l'image</td>
+</tr>
+<tr>
+<td><code>usemap</code></td>
+<td>Définit l'image comme étant une &quot;map&quot;</td>
+</tr>
+<tr>
+<td><code>shape</code></td>
+<td>Définit la forme des zones cliquables de la map</td>
+</tr>
+<tr>
+<td><code>coords</code></td>
+<td>Définit les coordonnées de la zone cliquable</td>
+</tr>
+<tr>
+<td><code>width</code></td>
+<td>Largeur de l'image</td>
+</tr>
+<tr>
+<td><code>height</code></td>
+<td>Hauteur de l'image</td>
+</tr>
+</tbody>
+</table>
+<p>Ainsi, le code précédent renvoie cette image, dans laquelle chaque note est cliquable :
+<img src="Images/Port%C3%A9e%20cliquable.png" alt="Map"></p>
+<h4>Autres éléments</h4>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;br&gt;</code></td>
+<td>Fin de ligne</td>
+</tr>
+<tr>
+<td><code>&lt;hr&gt;</code></td>
+<td>Séparateur de paragraphe</td>
+</tr>
+<tr>
+<td><code>&lt;pre&gt;</code></td>
+<td>Conserve les retours et sauts à la ligne du code brut</td>
+</tr>
+<tr>
+<td><code>&lt;b&gt;</code></td>
+<td>Texte en gras</td>
+</tr>
+<tr>
+<td><code>&lt;i&gt;</code></td>
+<td>Texte en italique</td>
+</tr>
+<tr>
+<td><code>&lt;small&gt;</code></td>
+<td>Texte plus petit</td>
+</tr>
+<tr>
+<td><code>&lt;mark&gt;</code></td>
+<td>Texte à accentuer, surligner</td>
+</tr>
+<tr>
+<td><code>&lt;del&gt;</code></td>
+<td>Texte barré, qui a été supprimé d'un document</td>
+</tr>
+<tr>
+<td><code>&lt;ins&gt;</code></td>
+<td>Texte qui a été inséré à un document</td>
+</tr>
+<tr>
+<td><code>&lt;sub&gt;</code></td>
+<td>Sous texte (texte légèrement en dessous et plus petit)</td>
+</tr>
+<tr>
+<td><code>&lt;sup&gt;</code></td>
+<td>Texte en indice</td>
+</tr>
+<tr>
+<td><code>&lt;blockquote&gt;</code></td>
+<td>Citation d’une autre source</td>
+</tr>
+<tr>
+<td><code>&lt;title&gt;</code></td>
+<td>Ajoute un titre à la page</td>
+</tr>
+<tr>
+<td><code>&lt;table&gt;</code></td>
+<td>Tableau</td>
+</tr>
+<tr>
+<td><code>&lt;td&gt;</code></td>
+<td>Cellule d’un tableau</td>
+</tr>
+<tr>
+<td><code>&lt;tr&gt;</code></td>
+<td>Ligne d’un tableau</td>
+</tr>
+<tr>
+<td><code>&lt;th&gt;</code></td>
+<td>Titre d’une colonne d’un tableau</td>
+</tr>
+<tr>
+<td><code>&lt;ul&gt;</code></td>
+<td>Liste non ordonnée</td>
+</tr>
+<tr>
+<td><code>&lt;ol&gt;</code></td>
+<td>Liste ordonnée</td>
+</tr>
+<tr>
+<td><code>&lt;li&gt;</code></td>
+<td>Element d’une liste</td>
+</tr>
+</tbody>
+</table>
+<h4>Autres attributs</h4>
+<table>
+<thead>
+<tr>
+<th>Attribut</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>style</code></td>
+<td>Précise le style d’écriture (couleur, police, taille,…)</td>
+</tr>
+<tr>
+<td><code>lang</code></td>
+<td>Langue de la page web</td>
+</tr>
+<tr>
+<td><code>title</code></td>
+<td>Affiche des informations supplémentaires lorsque la souris passe dessus</td>
+</tr>
+<tr>
+<td><code>target</code></td>
+<td>Comment ouvrir le lien (dans la même fenêtre, une nouvelle fenêtre, …)</td>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td>Crée un identifiant unique pour un élément HTML</td>
+</tr>
+</tbody>
+</table>
+<p>Conseil : Une bonne pratique est de toujours mettre les attributs entre guillemets.</p>
+<h2>CSS</h2>
+<h3>Introduction</h3>
+<p>CSS signifie Cascading Style Sheets. Ce langage permet de définir le style de la page web. On peut définir le style de la page web de trois manière différentes :</p>
 <ul>
-<li>le niveau et les prérequis nécessaires en utilisant la balise <a href="/do-it/cs/contribuer-au-site/#prerequis"><code>prerequis</code></a></li>
-<li>les autres POK &amp; MON en rapport en utilisant la balise <a href="/do-it/cs/contribuer-au-site/#lien"><code>lien</code></a></li>
+<li>Inline : on précise le style à l'intérieur des éléments HTML</li>
+<li>Internal : on précise le style en utilisant l'élement <code>&lt;style&gt;</code>dans la section <code>&lt;head&gt;</code></li>
+<li>External : on précise le style de la page web en utilisant un lien vers un fichier css externe au fichier html. Cette dernière méthode est la plus judicieuse car cela permet de modifier le style de toute une page web en ne modifiant qu'un seul fichier.</li>
 </ul>
-<h2>Contenu</h2>
-<p>Le contenu du MON.</p>
+<h3>Attributs</h3>
+<p>Le langage CSS possède également des attributs, qui permettent de donner une identité visuelle aux éléments HTML :</p>
+<table>
+<thead>
+<tr>
+<th>Attribut</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>background-color</code></td>
+<td>Définie la couleur du fond d’un éléments HTML</td>
+</tr>
+<tr>
+<td><code>background-image</code></td>
+<td>Définir une image en tant que fond</td>
+</tr>
+<tr>
+<td><code>color</code></td>
+<td>Couleur du texte d’un élément HTML</td>
+</tr>
+<tr>
+<td><code>font-family</code></td>
+<td>Police du texte d’un élément HTML</td>
+</tr>
+<tr>
+<td><code>font-size</code></td>
+<td>Taille du texte d’un élément HTML</td>
+</tr>
+<tr>
+<td><code>text-align</code></td>
+<td>Alignement du texte d’une élément HTML</td>
+</tr>
+<tr>
+<td><code>padding</code></td>
+<td>Espace à l’intérieur d’une bordure</td>
+</tr>
+<tr>
+<td><code>margin</code></td>
+<td>Espace à l’extérieur d’une bordure</td>
+</tr>
+<tr>
+<td><code>border-radius</code></td>
+<td>Arrondi les angles d’une bordure</td>
+</tr>
+</tbody>
+</table>
+<h3>Classes</h3>
+<pre><code>.link-theme {
+            color : #D89500 ;
+            text-decoration:None ;
+            font-weight: bold;
+            font-size: x-large;
+        }
+</code></pre>
+<p>Le notion de classe a été évoqué précédemment dans la section <em>Liens</em>. En effet, nous avons vu que le style des liens étaient définis par la classe <em>link-theme</em>. Nous voyons ci-dessus que la classe <em>link-theme</em> contient des informations à propos de :</p>
+<ul>
+<li>La couleur du texte (code D89500 correspondant à du jaune)</li>
+<li>La décoration du texte (les liens sont automatiquement soulignés mais ceci a été supprimé ici en ajoutant <em>None</em>)</li>
+<li>Le style du texte (cela a été précisé que le texte doit apparaître en gras)</li>
+<li>La taille du texte (x-large)</li>
+</ul>
+<p>Ainsi, n'importe quel éléments faisant appel à la classe <em>link-theme</em> aura la même identité visuelle.</p>
+<p>On remarque dans le code complet visible au lien suivant, que dans la section <code>&lt;style&gt;</code>, plusieurs classes sont défini afin de les définir une fois uniquement et d'obtenir une homogénéité dans la page web. Nous aurions également pu utiliser un fichier externe et faire appel à celui-ci afin de définir l'identité visuelle de la page au travers d'un lien.</p>
+<h2>Bases de JavaScript</h2>
+<h3>Introduction</h3>
+<p>Afin de rendre une page web plus dynamique, je souhaite, sur le temps de MON restant, apprendre quelques bases de JavaScript, qui pourront m’être utile plus tard pour la réalisation d’un site web. Dans notre exemple, l'objectif est ainsi de créer un bouton permettant de faire apparaître la barre latérale du menu sur lagauche afin de ne pas la faire figurer sur la page web au moment de son ouverture mais seulement si l'utilisateur a besoin de naviguer sur d'autres pages.</p>
+<p>Comme vu juste précédemment, le JavaScript permet de modifier du contenu HTML, ou alors le style du contenu. Le code JavaScript, tout comme le code CSS, peut être inclu au sein du fichier HTML (dans ce cas, il est compris entre les brones : <code>&lt;script&gt;Code HTML&lt;/script&gt;</code>), mais il peut également provenir d'une source externe (.js) permettant de tenir à jour la partie JavaScript plus aisément.</p>
+<h3>Output</h3>
+<p>Plusieurs moyens de faire apparaître la donnée existent en JavaScript, regroupés dans le tableau ci-après :</p>
+<table>
+<thead>
+<tr>
+<th>Output</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>innerHTML</code></td>
+<td>Modifie le contenu d'un élément HTML</td>
+</tr>
+<tr>
+<td><code>document.write()</code></td>
+<td>Permet d’écrire directement du contenu HTML ou du texte dans le document web pendant son chargement. <strong>Attention</strong> : si la fonction document.write() est appelée après le chargement du document, cela remplace tout le contenu de la page, ce qui n’est pas forcément voulu.</td>
+</tr>
+<tr>
+<td><code>widow.alert()</code></td>
+<td>Affiche la donnée dans une boîte de dialogue.</td>
+</tr>
+<tr>
+<td><code>widow.print()</code></td>
+<td>Imprime le contenu de la page actuelle</td>
+</tr>
+</tbody>
+</table>
+<h3>Evènements</h3>
+<p>Un évènement peut-être quelque chose que le browser fait, ou alors que l’utilisateur fait.
+Il existe plusieurs types d’évènements, dont les principaux sont :</p>
+<table>
+<thead>
+<tr>
+<th>Output</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>onchange</code></td>
+<td>Un élément HTML a été modifié</td>
+</tr>
+<tr>
+<td><code>onclick</code></td>
+<td>L’utilisateur clique sur un élément HTML</td>
+</tr>
+<tr>
+<td><code>onmouseover</code></td>
+<td>L’utilisateur place sa souris sur un élément HTML</td>
+</tr>
+<tr>
+<td><code>onmouseout</code></td>
+<td>L’utilisateur éloigne sa souris d’un élément HTML</td>
+</tr>
+<tr>
+<td><code>onkeydown</code></td>
+<td>L’utilisateur clique sur une touche particulière du clavier</td>
+</tr>
+<tr>
+<td><code>onload</code></td>
+<td>La page a terminé de charger</td>
+</tr>
+</tbody>
+</table>
+<h3>Apparition de la barre latérale du menu</h3>
+<p>Dans notre cas, nous souhaitons qu'au chargement de la page, la barre latérale ne soit pas visible. Pour cela, nous devons assigner un identifiant unique à l'ensemble des éléments constituant la barre latérale (<code>id=barre_latérale</code>) et modifier la visibilité de ceux-ci au moment du chargement de la page :</p>
+<pre><code>&lt;div id=&quot;barre_latérale&quot; style=&quot;display:none&quot; class=&quot;side-barre&quot;&gt;
+</code></pre>
+<p>Nous créons ensuite un éléments <em>bouton</em> qui au clique de la souris, fait apparître les éléments constituants la barre latérale :</p>
+<pre><code> &lt;button type=&quot;button&quot; onclick=&quot;document.getElementById('barre_latérale').style.display='block'&quot;&gt;Menu&lt;/button&gt;
+</code></pre>
+<p>Ainsi, au moment du chargement de la page, celle-ci ressemble à ceci :</p>
+<p><img src="Images/Page%20accueil%20initiale.png" alt="Page_chargement">
+<em>La page est un scroll, permattant d'accéder aux autres sections de cours en dessous, qui sont également accessibles en cliquant sur les boutons jaunes en haut de page</em></p>
+<p>Une fois que l'on clique sur le bouton <em>Menu</em> en haut à gauche, la barre latérale apparaît alors :</p>
+<p><img src="Images/Page%20Menu.png" alt="Page_Menu">
+<em>Lorsque l'on scroll, la barre latérale reste en place afin d'y avoir accès tout au long de la page</em></p>
+<h2>Code complet</h2>
+<p>Le code complet de la page que nous avons construit tout au long de ce MON se trouve au lien <a href="https://github.com/CharlesCook1/MON2_1">suivant</a>.</p>
+<h2>Conclusion</h2>
+<p>Au travers de ce MON, je me suis familiariser avec les bases du codage HTML/CSS/JavaScript afin de créer une page web fonctionnelle. J'ai également vu quelques bases permettant de rendre cette page plus interactive. Tous ces éléments me seront utiles afin de me familiariser plus rapidement au React à l'aide du MON de Sophia CAPDEVIELLE, afin de pouvoir créer le front de notre projet 3A.</p>
 
 
 </article>
