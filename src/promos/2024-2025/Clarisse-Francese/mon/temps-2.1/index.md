@@ -147,20 +147,21 @@ Groupe 2: bleu: 3 - vert: 3 - saumon: 3
 Groupe 3: bleu: 2 - vert: 2 - saumon: 3
 ```
 
-On a donc bien répondu à l'objectif ! J'étais assez impressionnée de la facilité avec laquelle on peut coder des petites fonctions grâce à ChatGPT maintenant. Honnêtement, ça me conforte dans l'idée que je veux juste réviser assez pour comprendre le langage informatique, avoir des bons réflexes et une vision claire de la structure à adopter pour résoudre un problème. Pour autant, je ne vais pas m'acharner à trop réviser vu la facilité avec laquelle une IA peut faire un très bon travail qui sera suffisant pour mes humbles projets d'informatique.
+On a donc bien répondu à l'objectif ! J'étais assez i**mpressionnée de la facilité avec laquelle on peut coder des petites fonctions grâce à ChatGPT** maintenant.
+En retravaillant sur ce MON plus tard, j'ai réalisé que la fonction créé ne répondait en réalité pas pleinement à l'objectif car les 3 groupes ne sont pas équilibrés en nombre (9, 9 et 7 élèves au lieu de 9, 8 et 8 élèves). J'ai donc tenté de corriger avec l'aide de ChatGPT ce problème mais impossible d'y arriver. Soit il répartit bien en nombre, soit il répartit bien en couleur mais je n'arrive pas à créer une fonction qui prenne en compte les 2 critères. Ainsi, **j'ai vu les limites de ChatGPT**.
 
 <h2 id=ccl> 👍Conclusion</h2>
 
-Blabla
+Ce MON m'a bien permis de **dépoussiérer mes connaissances sur Python** pour être plus à l'aise dans mon projet de groupe donc **l'objetif est atteint**.
 
 ## ⌛Horodatage
 
 | Date | Heures passées | Indications |
 | -------- | -------- |-------- |
-| Jeudi 17/10 | 1h30 | création Github perso, relecture de mes cours de prépa et rédaction de fiche Rappels Python|
-| Jeudi 17/10 | 1h30 | ex 1 à 9 réalisés (voir Github perso) |
+| Jeudi 17/10 | 2h | création Github perso, relecture de mes cours de prépa et rédaction de fiche Rappels Python|
+| Jeudi 17/10 | 2h | ex 1 à 9 réalisés (voir Github perso) |
 | Vendredi 18/10 | 1h30 | ex 10 et 11 réalisés avec les bibliothèques numpy et random (voir Github perso) |
-| Mercredi 23/10 | 1h | ex 12 et 13 (voir Github perso) |
+| Mercredi 23/10 | 1h15 | ex 12 et 13 (voir Github perso) |
 | Mercredi 23/10 | 2h | ex inventé groupes aléatoires en Do_It et rédaction du MON sur Github |
-
-Il me reste 2h30
+| Mardi 12/10 | 0h30 | ex inventé groupes aléatoires en Do_It : tentative de correction du code |
+| Mardi 12/10 | 0h45 | ex 14 (voir Github perso|
