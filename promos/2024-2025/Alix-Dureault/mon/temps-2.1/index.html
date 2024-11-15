@@ -75,11 +75,19 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">info</li>
                 
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">React</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">JS</li>
+                
 
             </ul>
             
             
             <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
                 
                     
                 
@@ -134,19 +142,303 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Liste des prérequis du POK ET/OU MON</p>
+<p>Aucun prérequis, ce MON est fait pour débuter en JS et React.</p>
 </div></div>
-<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
-<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
-</svg>
-<div class="pl-8 mr-8">
-<p>Les lien utiles pour la compréhension de celui-ci.</p>
-</div></div>
+<p>Le but de ce MON est de me former à l'utilisation de React afin que je puisse derrière l'utiliser pour la deuxième partie de mon POK et pour mon projet 3A.</p>
+<p>React est un framework front-end qui permet d’avoir accès à des librairies de composants et de simplifier le code du front-end de nos apps. A l'intérieur de ce framework, les composants sont codés en Javascript. Ainsi, ce MON est divisé en 2 parties, une sur les bases de JavaScript et une sur les bases de React.</p>
+<h2>Javascript</h2>
+<p>Pour apprendre les bases de JS, j'ai suivi le parcours de formation proposé sur le site suivant : <a href="https://roadmap.sh/javascript">JavaScript Roadmap</a>.</p>
+<p>Le langage JavaScript est une des bases d’Internet avec HTML et CSS. Souvent abréviée en JS. C’est un langage de programmation compilé qui fonctionne avec des fonctions de premier ordre.</p>
+<p>Il permet d’ajouter de l’intéractivité aux pages (sliders, allertes, boutons en interactions, popups,…). Il est aussi utilisé pour d’autres raisons come sur Node.js, React, Apache CouchDB, Adobe Acrobat ou Electron.</p>
+<h3>Histoire sur JavaScript</h3>
+<p>Pour résumer rapidement, le langage a été crée par Brendan Eich of NetScape en 1995. Il a été crée dans le but de rendre les sites web dynamiques. Au début, il avait été nommé Mocha, puis LiveScript. En 1996, il a été renommé JavaScript dans le but de capitaliser sur la communauté de Java. En 1997, le langage a été standardisé pour la première fois.</p>
+<p>Les sources suivantes sont intéressantes pour en apprendre plus sur le sujet :</p>
+<ul>
+<li><a href="https://roadmap.sh/guides/history-of-javascript">Historique des différentes versions du langage</a></li>
+<li><a href="https://dev.to/codediodeio/the-weird-history-of-javascript-2bnb">Histoire du langage et des stratégies mises en place pour son développement</a></li>
+<li><a href="https://www.educative.io/blog/javascript-versions-history">Historique des versions et de leurs apports</a></li>
+</ul>
+<h3>Fichier JS</h3>
+<p>Pour en apprendre plus sur le sujet, j'ai lu les pages :</p>
+<ul>
+<li><a href="https://www.w3schools.com/js/js_whereto.asp">Où placer le code JS</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-add-javascript-to-html">Lier JS au code HTML</a></li>
+</ul>
+<p>On peut placer le code JS dans le code HTML, entre les balises <code>&lt;script&gt;&lt;/script&gt;</code>.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"demo"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token string">"My First JavaScript"</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+<p>On peut placer autant de fonctions JS que l’on veut dans le code. A l’intérieur des balises <code>&lt;head&gt;</code> ou <code>&lt;body&gt;</code>.  On le place dans le body généralement quand on modifie un élément du body et head quand l’action est extérieure au corps du texte, par exemple pour un pop up.</p>
+<p>Le script peut aussi être placé dans un fichier .js séparé.</p>
+<p>Si on l’utilise, il faut ajouté la référence dans le code html, soit dans le <code>&lt;head&gt;</code> ou alors dans le <code>&lt;body&gt;</code>.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>myScript.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+<p>On peut ajouter plusieurs script sur une seule page en écrivant plusieurs fois cette même ligne avec les différents fichiers .js. La <code>src</code> peut être un URL, un chemin de fichier ou n’importe quel chemin d’accès.</p>
+<p>Avantages d’un code externe :</p>
+<ul>
+<li>Le même code peut être utilisé sur plusieurs pages web différentes.</li>
+<li>Le HTML et le JS sont séparés.</li>
+<li>Plus lisible et plus facile à maintenir.</li>
+<li>Peut améliorer la rapidité de chargement des pages.</li>
+</ul>
+<h3>Variables</h3>
+<p>Sur le sujet j'ai lu les sources suivantes :</p>
+<ul>
+<li><a href="https://javascript.info/variables">Introduction sur les variables</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables">Plus de détails et quelques exercices</a></li>
+<li><a href="https://www.codeguage.com/courses/js/variables">Aller un peu plus loin</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Glossary/Hoisting">Notion de hoisting</a></li>
+<li><a href="https://www.w3schools.com/js/js_scope.asp">Notion de scope</a></li>
+</ul>
+<p>Un script js a besoin de travailler avec des informations. On utilise des variables dans le but de les stocker. Elles sont très utiles pour paramétrer différentes actions sur le site.</p>
+<p><strong>Déclarer une variable :</strong></p>
+<pre class="language-JS"><code class="language-JS">let message;</code></pre>
+<p>En utilisant l’opérateur “=”, on peut en modifier sa valeur.</p>
+<pre class="language-JS"><code class="language-JS">sage = 'Hello'; // store the string 'Hello' in the variable named message</code></pre>
+<p>On peut condenser les deux action ensemble :</p>
+<pre class="language-JS"><code class="language-JS">let message = 'Hello!';
 
-<p>Dans ce MON, je me formerais aux bases du langage de Javascript et son utilisation pour React.</p>
-<h2>Contenu</h2>
-<p>Le contenu du MON.</p>
+let user = 'John', 
+	age = 25, 
+	message = 'Hello';</code></pre>
+<p>On peut changer la valeur en réutilisant l’opérateur “=”. On peut aussi copier la valeur d’une variable dans une autre. Mais par contre, on ne peut pas déclarer deux fois la même variable.</p>
+<p>Il y a quelques règles pour nommer une variable :</p>
+<ul>
+<li>Le nom ne peut être composé que de lettres, chiffres et les symboles $ ou _</li>
+<li>Le premier caractère ne peut pas être un chiffre</li>
+<li>Si le nom est composé de plusieurs mots, l’écrire dans la structure camelCase</li>
+<li>Les majuscules sont importantes</li>
+<li>Les lettres d’autres alphabet que le latin sont autorisées</li>
+<li>La convention est d’utiliser l’anglais pour nommer les variables</li>
+<li>Les mots “let”, “class”, “return”, “function”, “this” sont interdits</li>
+<li>Le nom ne doit pas contenir d’espace</li>
+</ul>
+<p>Une variable peut contenir du texte, des nombres (entier ou décimaux), des fonctions, des données complexes. Il n’y a pas besoin de déclarer le type de la variable.</p>
+<p>On peut aussi déclarer des variables constantes. Ce sont des variables dont on ne peut pas changer la valeur. Il faut leur assigner leur valeurs au moment de la déclaration.</p>
+<pre class="language-JS"><code class="language-JS">const myBirthday = '18.04.1982';</code></pre>
+<p>Ces constantes sont souvent utilisées pour les valeurs difficiles à retenir  ou prônes à des fautes d’orthographes ET connues avant l’exécution comme les codes hexagonales des couleurs. La convention pour les nommer est de les écrire en utilisant des majuscules et des “_”.</p>
+<p>L’hoisting fait référence au process utilisé par l’interpréteur qui consiste à bouger toutes les déclarations de fonctions, variables, classes et imports avant le reste du code. Cela permet de :</p>
+<ul>
+<li>Utiliser la valeur d’une variable déclarée avant sa déclaration</li>
+<li>Référencer une variable avant de la déclarer</li>
+<li>La déclaration de la variable provoque des changements de comportement dans sa portée avant la ligne dans laquelle elle est déclarée.</li>
+<li>Les effets secondaires d’une déclaration sont produits avant d’évaluer le reste du code qui la contient.</li>
+</ul>
+<p>Ces effets ne sont pas valables pour tous les outils de déclaration. <code>var</code>, <code>let</code> et <code>class</code> sont considérés comme non hoisting.</p>
+<p>Cela correspond à la visibilité de la variable ou de comment elle peut être utilisé après avoir été déclarée. Ce scope dépend de comment la variable a été déclarée. Il en existe 3 types :</p>
+<ul>
+<li>Global Scope : variables déclarées en dehors de fonctions ou de <code>{ }</code>. Elles sont accessibles dans l’ensemble du code. <code>var</code>, <code>let</code> et <code>const</code> donnent ce type de scope</li>
+<li>Function Scope : variables déclarées dans une fonction et ne peuvent être utilisées que dans celle-ci. <code>var</code>, <code>let</code> et <code>const</code> donnent ce type de scope</li>
+<li>Block Scope : Un block est une partie du code entourée de <code>{ }</code>. variables déclarées dans un block et ne peuvent être utilisées hors de celui-ci. <code>let</code> et <code>const</code> donnent ce type de scope</li>
+</ul>
+<h3>Datatypes</h3>
+<p>Mes sources pour cette partie sont les suivantes :</p>
+<ul>
+<li><a href="https://www.codeguage.com/courses/js/data-types">Primitives et Objects</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures">Types et structures</a></li>
+<li><a href="https://www.w3schools.com/js/js_datatypes.asp">Data types</a></li>
+<li><a href="https://javascript.info/object">Objects</a></li>
+<li><a href="https://www.w3schools.com/js/js_object_definition.asp">Définition des Objects</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_objects">Travailler avec les objects</a></li>
+</ul>
+<p>Cela fait référence au type de donnée que peut contenir une variable. Il décrit un ensemble de valeurs et les opérations possibles sur ces valeurs.</p>
+<p>JS est un langage dynamique. Une variable n’est pas assigné à un certain type et on peut donc lui assigner n’importe quel type de données.</p>
+<p>JS sépare les données en deux grandes catégories : <strong>primitives</strong> et <strong>objects</strong>.</p>
+<h4>Primitive</h4>
+<p>Un primitive regroupe les formes simples de données. Il existe 7 types associés à cette catégorie : undefined, null, numbers, strings, Booleans, Symbols and BigInt. Ils n’ont aucune propriété ou méthode qui leurs sont attachées.</p>
+<ul>
+<li><strong>Number :</strong> nombre, utilisé dans les calculs, les algorithmes,… Ils peuvent être entiers ou décimaux.</li>
+<li><strong>Strings :</strong> chaînes de caractères. Elle peut être délimité par des apostrophes : “ “ ou ‘ ‘ ou <code> </code>.</li>
+<li><strong>Booleans :</strong> valeur true ou false. Utilisé avec des opérateurs conditionnels.</li>
+<li><strong>Null :</strong> 1 seule valeur, la valeur <strong>null</strong>.</li>
+<li><strong>Undefined</strong> : 1 seule valeur, la valeur <strong>undefined</strong>. Cela indique l’absence de valeur.</li>
+<li><strong>BigInt :</strong> type numérique qui peut représenter les valeurs de valeurs arbitraires. Permet de faire des opérations avec les grands entiers.</li>
+<li><strong>Symbol :</strong> valeur unique et immuable. Peut être usée comme une clé pour une propriété d’objet.</li>
+</ul>
+<h4>Object</h4>
+<p>Un object, ou reference, est l’opposé d’un primitive : une valeur composé de primitives. Donc tous ce qui n’est pas primitive est un object.</p>
+<p>Ils sont écrits à l’intérieur de <code>{ }</code> et composés de valeurs. Leur valeurs sont accessibles à l’aide de la notation avec un point. Les valeurs peuvent être de n’importe quel type.</p>
+<p>Une valeur peut être une fonction et dans ce cas là, elle est appelée méthode de l’objet.</p>
+<p>On peut créer une fonction constructrice d’objet de même structure quand on a plein d’objets qui vont tous avoir la même structure.</p>
+<h3>Fonctions</h3>
+<p>Sur le sujet, j'ai lu les ressources :</p>
+<ul>
+<li>(Bases sur les fonctions)[<a href="https://www.codeguage.com/courses/js/functions-basics">https://www.codeguage.com/courses/js/functions-basics</a>]</li>
+<li>(Fonctions)[<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions</a>]</li>
+</ul>
+<p>Les fonctions sont des blocs de codes qui sont utilisables plusieurs fois quand on les appellent. Elles sont codées pour exécuter une tâche particulière.</p>
+<p>Il existe plusieurs moyens de déclarer une fonction en JS.</p>
+<pre class="language-JS"><code class="language-JS">function square(number) {
+  return number * number;
+}
+
+const square = function (number) {
+  return number * number;
+};
+
+const factorial = function fac(n) {
+  return n < 2 ? 1 : n * fac(n - 1);
+};
+
+var utils = [
+   function(a, b) { return a + b; },
+   function(a, b) { return a - b; }
+];</code></pre>
+<p>Seule la première façon de déclarer une fonction permet d’appeler une fonction avant de l’avoir déclarer.</p>
+<p>La deuxième façon à d'autres avantages :</p>
+<ul>
+<li>avoir des fonctions anonymes ou non</li>
+<li>référer à la fonction à l’intérieur d’elle même</li>
+<li>utiliser la fonction comme paramètre d’une autre fonction</li>
+<li>définir plusieurs fonctions en une seule</li>
+</ul>
+<p>Les fonctions ne peuvent être appeler que dans le scope (fonction, code entier,…) de là où elles ont été déclarées. Les arguments d’une fonction peuvent être des chaînes de caractères, des nombres, des objets et autres.</p>
+<p>En JS, on peut utiliser la récursivité de 3 manières différentes :</p>
+<ol>
+<li>par son nom</li>
+<li>avec “arguments.callee”</li>
+<li>une variable définie localement qui fait référence à cette fonction</li>
+</ol>
+<p>On peut aussi déclarer une fonction à l’intérieur de la déclaration d’une autre. En faisant cela, la fonction ébergé n’est appelable seulement à l’intérieur de sa fonction parente.</p>
+<p>D'autres propriété à regarder dans les sources fournies sont :</p>
+<ul>
+<li>Les rest parameters</li>
+<li>la mise en place de valeur par défaut aux paramètres</li>
+<li>les IIFE</li>
+</ul>
+<h2>React</h2>
+<p>Mes sources principales pour cette partie du MON ont été :</p>
+<ul>
+<li><a href="https://react.dev/learn">Documentation React</a></li>
+<li><a href="https://roadmap.sh/react">Roadmap sur React</a></li>
+</ul>
+<h3>Créer un nouveau projet React</h3>
+<p>Pour cela le MON de Thomas Duroy <a href="/do-it/src/promos/2022-2023/Duroy-Thomas/mon/MON_3.1/index.md">Débuter avec React.js</a> explique bien comment créer un projet.</p>
+<h3>Contenu d'une application React</h3>
+<p>Une app REACT est constituée de composants. Un composants fait partie de l’UI et chacun à sa propre logique et apparence. Un composant peut aller d’un bouton à une page entière. Les composants React sont des fonctions JavaScript qui rendent du markup, comme par exemple, cette fonction qui donne un bouton :</p>
+<pre><code>function MyButton() {
+  return (
+    &lt;button&gt;I'm a button&lt;/button&gt;
+  );
+}
+</code></pre>
+<p>Une fois qu’on a déclaré un composant, on peut l’appeler dans un autre composant :</p>
+<pre><code>export default function MyApp() {
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;Welcome to my app&lt;/h1&gt;
+      &lt;MyButton /&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<p>Les noms de composants React doivent toujours commencés par une majuscule. Les tags en HTML doivent toujours être en minuscules.</p>
+<p>La partie <code>export default</code> indique quel est le composant principale dans le fichier.</p>
+<p>Le mot clé <code>export</code> permet de rendre cette fonction accessible à l’extérieur du fichier.</p>
+<p>React utilise la syntaxe markup JSX (optionnelle) qui est plus rigoureuse que HTML. Attention, un composant ne peut pas renvoyer plusieurs balises JSX ou HTML. On doit les envelopper dans une balise parent qui englobe toutes les autres de type <code>&lt;div&gt;…&lt;/div&gt;</code> ou <code>&lt;&gt;…&lt;/&gt;</code>.</p>
+<h3>Ajouter du style avec CSS</h3>
+<p>En React, on sépcifie une classe CSS avec la propriété <code>className</code>. Elle fonctionne comme l’attribut <code>class</code> en HTML.</p>
+<pre><code>&lt;img className=&quot;avatar&quot; /&gt;
+</code></pre>
+<p>Ensuite, dans un fichier css séparé, on écrit le style en css qui correspond.</p>
+<pre class="language-CSS"><code class="language-CSS">/* Dans le code CSS */
+.avatar {
+  border-radius: 50\%;
+}</code></pre>
+<p>Pour lier le fichier de style et le fichier on ajoute un tag de type <code>&lt;link&gt;</code> dans le code html.</p>
+<h3>Intégrer le JS dans le markup</h3>
+<p>JSX permet d’intégrer du markup dans le code JavaScript. Grâce aux délimitateurs <code>{ }</code>, on peut retourner dans le JS. Ainsi, cela peut nous permettre de coder des variables dans le code et les afficher dans l’app ou encore d’utiliser des paramètres comme valeurs pour une balise JSX ou l’utiliser dans le style ou encore concatener la donnée avec du texte. Comme par exemple :</p>
+<pre><code>return (
+  &lt;&gt;
+    &lt;h1&gt;{user.name}&lt;/h1&gt;
+    &lt;img
+      className=&quot;avatar&quot;
+      src={user.imageUrl}
+      alt={'Photo of ' + user.name}
+      style={{
+        width: user.imageSize,
+        height: user.imageSize
+      }}
+    /&gt;
+  &lt;/&gt;
+);
+</code></pre>
+<p>Pour intégrer des variables JS dans le css pour le style, il faut utiliser l’attribut “style” comme dans l’exemple ci-dessus, avec la syntaxe : <code>style = </code>.</p>
+<h3>Afficher sous condition</h3>
+<p>Il n’y a pas de syntaxe particulière dans React pour cela. Ainsi, on utilise la syntaxes JS pour cela. Voici plusieurs exemples :</p>
+<pre><code>let content;
+if (isLoggedIn) {
+  content = &lt;AdminPanel /&gt;;
+} else {
+  content = &lt;LoginForm /&gt;;
+}
+return (
+  &lt;div&gt;
+    {content}
+  &lt;/div&gt;
+);
+
+&lt;div&gt;
+  {isLoggedIn ? (
+    &lt;AdminPanel /&gt;
+  ) : (
+    &lt;LoginForm /&gt;
+  )}
+&lt;/div&gt;
+
+&lt;div&gt;
+  {isLoggedIn &amp;&amp; &lt;AdminPanel /&gt;}
+&lt;/div&gt;
+</code></pre>
+<h3>Intégrer des évènements</h3>
+<p>Pour répondre à des évènements sur l’app, on déclare des fonctions “event handler” à l’intérieur des composants comme la fonction <code>handleClick</code> dans l’exemple suivant.</p>
+<pre><code>function MyButton() {
+  function handleClick() {
+    alert('You clicked me!');
+  }
+
+  return (
+    &lt;button onClick={handleClick}&gt;
+      Click me
+    &lt;/button&gt;
+  );
+}
+</code></pre>
+<p>Attention, on n’appelle pas la fonction qui gère l’évènement. On la donne seulement au composant. React l’appellera lorsque l’évènement sera déclenché.</p>
+<h3>Utilisation de la notion d'état</h3>
+<p>Parfois, on veut qu’un composant enregistre et showcase une certaine information lié à l’interaction avec l’utilisateur, comme par exemple, le nombre de fois qu’un bouton est cliqué. Pour cela, on ajoute la propriété <code>state</code> à notre composant.</p>
+<pre><code>import { useState } from 'react';
+
+function MyButton() {
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    setCount(count + 1);
+  }
+
+  return (
+    &lt;button onClick={handleClick}&gt;
+      Clicked {count} times
+    &lt;/button&gt;
+  );
+}
+</code></pre>
+<p>La fonction <code>useState</code> renvoie l’état actuel et la fonction utilisée pour updater l’information. Ici : <code>count</code> et <code>setCount</code>. Le 0 dans les parenthèse est l’initialisation de l’état actuel.</p>
+<p>Si on utilise ce composant plusieurs fois dans la même page, chacun d’entre eux aura son propre état actuel.</p>
+<h3>Méthode de création d'une app React</h3>
+<p>Pour cette partie, j'ai utilisé ces deux sources :</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=Rh3tobg7hEo">Premier projet sur React</a></li>
+<li><a href="https://fr.react.dev/learn/thinking-in-react">Penser en React</a></li>
+</ul>
+<p>La première chose à faire lorsque l’on commence un projet React est de penser à l’UI directement, à quoi va ressembler l’application finale, quels sont ses composants, … Dans un code JS habituel, le programme se compose en plusieurs étapes qui sont exécutés les unes après les autres. En React, la logique se décompose plutôt en “je veux tel rendu visuel”.</p>
+<p>Voici un petit résumé des étapes de la construction d’une app React en partant de la maquette :</p>
+<ol>
+<li><strong>Décomposer l’UI en une hiérarchie de composants :</strong> Délimiter les composants, sous-composants, les nommer et déterminer leur hiérarchie.</li>
+<li><strong>Construire une version statique en React :</strong> Construire une version qui affiche l’UI à partir du modèle de données sans en gérer l’interactivité.</li>
+<li><strong>Trouver une représentation minimale suffisante de l’état de l’UI :</strong> Déterminer la plus petite représentation possible de l’état dont l’application a besoin.</li>
+<li><strong>Identifier où l’état devrait vivre :</strong> Déterminer quel composant est responsable de faire évoluer cet état en identifiant les composants évoluant en fonction de cet état, trouvant leur plus proche ancêtre commun et en décidant où placer l’état.</li>
+<li><strong>Ajouter un flux de données inverse :</strong> Permettre aux composants de modifier les états en fonction de l’interaction avec l’utilisateur.</li>
+</ol>
 
 
 </article>
