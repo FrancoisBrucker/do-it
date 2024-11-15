@@ -45,4 +45,4 @@ Cours suivis :
 
 ## Projet 3A
 
-[Notre Projet : Direct Live Radio](../../../projets/2024-2025/Direct_Live_Radio)
+[Notre Projet : Direct Live Radio](../_projets/Direct_Live_Radio)

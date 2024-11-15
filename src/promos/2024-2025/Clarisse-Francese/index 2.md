@@ -16,4 +16,4 @@ Objectif : je sais pas encore que ce que je veux faire mais ce serait plutôt da
 
 ## Projet
 
-[Notre Projet](../../../projets/20XX-20YY/notre-projet)
+[Notre Projet](../../20XX-20YY/_projets/notre-projet)

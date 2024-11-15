@@ -21,4 +21,4 @@ authors:
 
 ## Projet
 
-[Direct Live Radio](../../../projets/2024-2025/Direct_Live_Radio)
+[Direct Live Radio](../_projets/Direct_Live_Radio)

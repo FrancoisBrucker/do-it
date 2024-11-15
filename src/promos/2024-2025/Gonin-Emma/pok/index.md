@@ -8,6 +8,6 @@ authors:
 
 Ensemble des POK réalisés par Emma Gonin.
 
-- [POK 1](./temps-1)
-- [POK 2](./temps-2)
+- [POK 1 - Portfolio web de mes peintures](./temps-1)
+- [POK 2 - Mise en production de mon portfolio web d'art](./temps-2)
 - [POK 3](./temps-3)

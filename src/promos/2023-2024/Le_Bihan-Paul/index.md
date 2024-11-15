@@ -15,4 +15,4 @@ authors:
 
 ## Projet
 
-[Mobilite](../../../projets/2023-2024/Mobilite)
+[Mobilite](../_projets/Mobilite)

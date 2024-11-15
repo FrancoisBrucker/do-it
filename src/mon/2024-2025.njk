@@ -11,27 +11,9 @@ tags: ['index']
     <div class="text-3xl mb-3">
         Par auteurs
     </div>
-    <ul>
-        {% set types = [promo] %}
-        {% set types = (types.push('MON'), types) %}
 
-        {% for cours in collections.index | sort | reverse %}
-            {% set c = 0 %}
-            {% for tag in cours.data.tags %}
-                {% for type in types %}
-                    {% if tag == type %}
-                        {% set c = c + 1 %}
-                    {% endif %}
-                {% endfor %}
-            {% endfor %}
-            {% if c == types.length %}
-                <li>
-                    <a href="{{ cours.url  }}">{{cours.data.authors}}</a>
-                </li>
-
-            {% endif %}
-        {% endfor %}
-    </ul>
+    {% from 'macros/student-list.njk' import studentList %}
+    {{ studentList(collections.index, "MON", promo) }}
 </div>
 
 {% for temps in[1, 2, 3] %}
@@ -39,26 +21,14 @@ tags: ['index']
         <div class="text-3xl mb-3">
         Temps {{ temps }}
         </div>
-        <ul>
-            {% set types = [promo] %}
-            {% set types = (types.push('temps ' + temps), types) %}
 
-            {% for cours in collections.MON | sort %}
-                {% set c = 0 %}
-                {% for tag in cours.data.tags %}
-                    {% for type in types %}
-                        {% if tag == type %}
-                            {% set c = c + 1 %}
-                        {% endif %}
-                    {% endfor %}
-                {% endfor %}
-                {% if c == types.length %}
-                    <li>
-                        <a href="{{ cours.url  }}">{{cours.data.title}}</a> ({{cours.data.authors}})
-                        </li>
+        {# TODO: BETA DISCLAIMER  #}
+        <span class="absolute top-0 right-0 m-2 italic">
+            <span class="max-sm:hidden">Interface en version beta :</span>
+            <a class="rounded-full bg-yellow-200 p-2" target="_blank" href="https://forms.gle/WB6ozLmFAXgxki7EA">Vos remarques</a>
+        </span>
 
-                {% endif %}
-            {% endfor %}
-        </ul>
+        {% from 'macros/pok-mon-list.njk' import listPokMon %}
+        {{ listPokMon(collections.MON, "MON", promo, temps) }}
     </div>
 {% endfor %}

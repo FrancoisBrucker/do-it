@@ -15,4 +15,4 @@ Apprenti ingénieur travaux chez [Eurovia PACA](https://www.eurovia.fr/), filial
 
 ## Projet
 
-[Mobilite](../../../projets/2023-2024/Mobilite)
+[Mobilite](../_projets/Mobilite)

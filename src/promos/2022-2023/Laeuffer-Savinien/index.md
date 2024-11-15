@@ -16,4 +16,4 @@ eleventyNavigation:
 
 ## Projet
 
-[Loc'out](../../../projets/2022-2023/Locout)
+[Loc'out](../_projets/Locout)

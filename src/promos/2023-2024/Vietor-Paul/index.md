@@ -21,4 +21,4 @@ Bonjour !
 
 ## Projet
 
-[OpenDwarfMap](../../../projets/2023-2024/OpenDwarfMap)
+[OpenDwarfMap](../_projets/OpenDwarfMap)

@@ -1,15 +1,15 @@
 ---
 layout: layout/mon.njk
 
-title: "La bibliothèque pandas dans python"
+title: "Comment construire des bases de données bien pensées ?"
 authors:
   - Damien WOLBERT
 
-date: 1971-01-01
+date: 2024-10-16
 tags: 
   - "temps 2"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: Reprise des cours de première année, recherche des bonnes pratique et application simple.
 ---
 
 {% prerequis %}

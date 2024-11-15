@@ -14,4 +14,4 @@ authors:
 
 ## Projet
 
-[Notre Projet](../../../projets/20XX-20YY/notre-projet)
+[Notre Projet](../../20XX-20YY/_projets/notre-projet)

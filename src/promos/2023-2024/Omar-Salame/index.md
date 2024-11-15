@@ -15,4 +15,4 @@ Voici une révision initiale pour la modification du site.
 
 ## Projet
 
-[Killer](../../../projets/2023-2024/Killer)
+[Killer](../_projets/Killer)

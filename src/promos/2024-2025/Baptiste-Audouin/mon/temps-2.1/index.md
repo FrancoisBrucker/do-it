@@ -1,33 +1,30 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du premier MON du temps 2"
+title: "Automatisation de montage vidéo avec Python"
 authors:
   - Baptiste Audouin
 
-date: 1970-11-01
+date: 2024-11-06
 tags: 
   - "temps 2"
+  - "Python"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: Dans ce MON je souhaite découvrir comment manipuler des fichier vidéos/audio avec python notamment avec la bibliothèque python moviepy.
 ---
 
 {% prerequis %}
 
-Liste des prérequis du POK ET/OU MON
+- Bases en Python
 
 {% endprerequis %}
+
 {% lien %}
 
-Les lien utiles pour la compréhension de celui-ci.
+ - [Documentation moviepy](https://pypi.org/project/moviepy/)
 
 {% endlien %}
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :
-
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
+Dans ce MON je souhaite découvrir comment manipuler des fichier vidéos/audio avec python notamment avec la bibliothèque python **moviepy**.
 
 ## Contenu
-
-Le contenu du MON.

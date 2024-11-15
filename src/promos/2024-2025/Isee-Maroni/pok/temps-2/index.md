@@ -10,7 +10,7 @@ date: 1971-01-01
 tags: 
   - "temps 2"
 
-résumé: Un POK traitant d'un sujet.
+résumé: Exploiter les Open Data mises à disposition par la Métropole Aix-Marseille.
 ---
 
 {% prerequis %}

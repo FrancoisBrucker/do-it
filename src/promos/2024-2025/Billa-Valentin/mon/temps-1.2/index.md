@@ -13,7 +13,7 @@ tags:
   - 'débutant'
   - 'lexique'
 
-résumé: "Dictionnaire `vert` vers français"
+résumé: Dictionnaire `vert` vers français
 ---
 
 ## Concepts
