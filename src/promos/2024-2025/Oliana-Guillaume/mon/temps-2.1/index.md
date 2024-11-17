@@ -278,11 +278,24 @@ npm install firebase
 ```
 
 
-<div style = "display : flex; flex-direction: column; align-items : center; margin: 20px">
-  <a href= "https://www.youtube.com/watch?v=_Xczf06n6x0&t=79s">
-    <img src = "https://img.youtube.com/vi/Xczf06n6x0/hqdefault.jpg">
-
+<div style="display: flex; flex-direction: column; align-items: center; margin: 20px;">
+  <a href="https://www.youtube.com/watch?v=_Xczf06n6x0&t=79s" target="_blank">
+    <img src="https://img.youtube.com/vi/_Xczf06n6x0/hqdefault.jpg" alt="Miniature de la vidéo">
   </a>
   <h2>Tutoriel Youtube pour réaliser l'application simple avec authentification</h2>
 </div>
 
+
+
+```js
+
+ apiKey: "AIzaSyDptMsBobEywN9M4xiwR_ymgj5g7oRq4_E",
+  authDomain: "mon-firebase-383b2.firebaseapp.com",
+  projectId: "mon-firebase-383b2",
+  storageBucket: "mon-firebase-383b2.firebasestorage.app",
+  messagingSenderId: "391346329108",
+  appId: "1:391346329108:web:f9f75211b473ea43d1b901",
+  measurementId: "G-HQTDVRH3NZ"
+
+
+  ```

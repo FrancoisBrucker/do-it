@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Prise en main de React"
+title: "Introduction à Javascript"
 authors:
   - OLIANA Guillaume
 
