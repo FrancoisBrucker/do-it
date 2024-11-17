@@ -269,6 +269,8 @@ On va maintenant utiliser Firebase pour créer une mini-application où les util
 ## 2.2 Développer une mini-app d'authentification
 
 ### Étape 1 : Installez Vite
+
+Pour lancer notre projet rapidement, on utilise **Vite** 
 Vite est un outil qui permet de démarrer rapidement un projet JavaScript. Pour l’installer :
 ```bash
 npm create vite@latest mon-firebase-app --template vanilla
@@ -277,28 +279,210 @@ npm install firebase
 
 ```
 
+On a donc directement la structure de projet suivante : 
 
-<div style="display: flex; flex-direction: column; align-items: center; margin: 20px;">
-  <a href="https://www.youtube.com/watch?v=_Xczf06n6x0&t=79s" target="_blank">
-    <img src="https://img.youtube.com/vi/_Xczf06n6x0/hqdefault.jpg" alt="Miniature de la vidéo">
-  </a>
-  <h2>Tutoriel Youtube pour réaliser l'application simple avec authentification</h2>
+<div style = "display : flex; flex-direction: column; align-items : center; margin : 20px">
+  <img src= "/home/guillaumeoliana/Pictures/Screenshots/Screenshot from 2024-11-17 18-11-42.png"></img>
+  <h2>Structure du folder créé par Vite</h2>
 </div>
 
-Dans notre cas, notre API a la configuration suivante : 
+On va ensuite effectuer deux commandes que Vite nous demande d'éxecuter, à savoir : 
+
+```bash
+npm install
+npm run dev
+```
+
+On peut ainsi voir les modifications que l'on effectue dans le code s'appliquer directement dans la fenetre de notre navigateur en suivant le lien donné.
+
+On peut alors commencer à configurer notre projet.
+
+Pour cela j'ai créé un **dossier firebase.js** dans lequel je stock toutes les informations relatives à mon API.
 
 ```js
+import { initializeApp } from 'firebase/app';
+import { getAuth } from 'firebase/auth';
 
- apiKey: "AIzaSyDptMsBobEywN9M4xiwR_ymgj5g7oRq4_E",
+const firebaseConfig = {
+  apiKey: "AIzaSyDptMsBobEywN9M4xiwR_ymgj5g7oRq4_E",
   authDomain: "mon-firebase-383b2.firebaseapp.com",
   projectId: "mon-firebase-383b2",
   storageBucket: "mon-firebase-383b2.firebasestorage.app",
   messagingSenderId: "391346329108",
   appId: "1:391346329108:web:f9f75211b473ea43d1b901",
   measurementId: "G-HQTDVRH3NZ"
+};
+
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
+```
+
+Je viens ensuite créer mon fichier html **index.html** : 
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Firebase Auth</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div id="app">
+      <div id="auth-container">
+        <h1>Authentication</h1>
+        <form id="auth-form">
+          <input type="email" id="email" placeholder="Email" required>
+          <input type="password" id="password" placeholder="Password" required>
+          <button type="submit" id="signup">Sign Up</button>
+          <button type="button" id="signin">Sign In</button>
+        </form>
+      </div>
+      <div id="welcome-container" style="display: none;">
+        <h1>Welcome <span id="user-name"></span>!</h1>
+        <button id="logout">Logout</button>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
+```
 
 
-  ```
+Ensuite, nous allons écrire la logique de notre "application" dans le dossier **main.js** : 
+
+```js
+
+import { 
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged
+} from 'firebase/auth';
+import { auth } from './firebase.js';
+
+const authForm = document.getElementById('auth-form');
+const authContainer = document.getElementById('auth-container');
+const welcomeContainer = document.getElementById('welcome-container');
+const userNameSpan = document.getElementById('user-name');
+const signupButton = document.getElementById('signup');
+const signinButton = document.getElementById('signin');
+const logoutButton = document.getElementById('logout');
+
+const handleAuth = async (e, isSignUp) => {
+  e.preventDefault();
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+
+  try {
+    if (isSignUp) {
+      await createUserWithEmailAndPassword(auth, email, password);
+    } else {
+      await signInWithEmailAndPassword(auth, email, password);
+    }
+  } catch (error) {
+    alert(error.message);
+  }
+};
+
+signupButton.addEventListener('click', (e) => handleAuth(e, true));
+signinButton.addEventListener('click', (e) => handleAuth(e, false));
+logoutButton.addEventListener('click', () => signOut(auth));
+
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    authContainer.style.display = 'none';
+    welcomeContainer.style.display = 'block';
+    userNameSpan.textContent = user.email.split('@')[0];
+  } else {
+    authContainer.style.display = 'block';
+    welcomeContainer.style.display = 'none';
+    authForm.reset();
+  }
+});
+```
+
+Dans le détail, on va venir récupérer les informations dans les input que l'on a défini dans notre fichier **index.html**, et tout simplement utiliser les recettes magiques de firebase pour créer un utilisateur ou se connecter si l'utilisateur existe déjà.
+
+Reste encore le fichier **css** et la page d'authentification sera prête : 
+
+```css
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+}
+
+#app {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+h1 {
+  text-align: center;
+  color: #1a73e8;
+  margin-bottom: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #1a73e8;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #1557b0;
+}
+
+#welcome-container {
+  text-align: center;
+}
+
+#logout {
+  background-color: #dc3545;
+}
+
+#logout:hover {
+  background-color: #bb2d3b;
+}
+```
+
+
+Une fois sign up, on voit ensuite l'utilisateur apparaitre dans notre **database firestore** sur la page de notre projet **firebase**. 
+
+C'est très facile à mettre en place et permet de gagner beaucoup de temps pour la création d'une maquette fonctionnelle pour un projet (comme le projet 3A au hasard).
+
+On a ici explorer qu'une infime partie des possibilités offertes par firebase utilisé comme backend, mais en restant seulement sur le sujet de l'authentification, on peut également parametrer l'authentification et l'inscription par des service tiers comme google, facebook, etc, et ce toujours de façon rapide et simple. 
+
+
 
   <div style = "display:flex; flex-direction : column; align-items: center; margin : 20px">
     <img src = /home/guillaumeoliana/Documents/GitHub/do-it/src/promos/2024-2025/Oliana-Guillaume/mon/temps-2.1/image.png></img>
@@ -308,9 +492,13 @@ Dans notre cas, notre API a la configuration suivante :
 
   <div style = "display:flex; flex-direction : column; align-items: center; margin : 20px">
     <img src = /home/guillaumeoliana/Documents/GitHub/do-it/src/promos/2024-2025/Oliana-Guillaume/mon/temps-2.1/image-1.png></img>
-    <h2>When logged in, it displays the user name</h2>
+    <h2>When logged in, it displays the user name from the email adress</h2>
   </div>
 
+
+# Conclusion
+---
+On a ainsi découvert firebase, ses possibilités, et créé rapidement un systeme d'authentification et de gestion de la base de données des utilisateurs sans se soucier une seule fois d'un quelconque serveur. 
 
 
  
