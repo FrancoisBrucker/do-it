@@ -285,7 +285,7 @@ npm install firebase
   <h2>Tutoriel Youtube pour réaliser l'application simple avec authentification</h2>
 </div>
 
-
+Dans notre cas, notre API a la configuration suivante : 
 
 ```js
 
@@ -299,3 +299,18 @@ npm install firebase
 
 
   ```
+
+  <div style = "display:flex; flex-direction : column; align-items: center; margin : 20px">
+    <img src = /home/guillaumeoliana/Documents/GitHub/do-it/src/promos/2024-2025/Oliana-Guillaume/mon/temps-2.1/image.png></img>
+    <h2>Sign up/ Sign in page</h2>
+  </div>
+
+
+  <div style = "display:flex; flex-direction : column; align-items: center; margin : 20px">
+    <img src = /home/guillaumeoliana/Documents/GitHub/do-it/src/promos/2024-2025/Oliana-Guillaume/mon/temps-2.1/image-1.png></img>
+    <h2>When logged in, it displays the user name</h2>
+  </div>
+
+
+
+ 
