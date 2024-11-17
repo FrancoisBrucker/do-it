@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>React et comparaison avec Vue.js</title>
+        <title>Apprendre React</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">React et comparaison avec Vue.js</h1>
+<h1 class="mb-1">Apprendre React</h1>
 <div class="mb-4">
     
         <div class="px-4 flex flex-wrap items-center">
@@ -105,7 +105,7 @@
 
         <p class="mb-4 text-lg">
 
-                Ce MON a pour objectif de découvrir React, d'apprendre les bases et de comparer avec Vue.js que j'ai pu découvrir au temps 1
+                Ce MON a pour objectif de découvrir React, d'apprendre les bases
 
         </p>
 
@@ -118,7 +118,7 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Sophia-Capdevielle/">Sophia Capdevielle</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Sophia-Capdevielle/mon/">MON de Sophia Capdevielle</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Sophia-Capdevielle/mon/temps-2.1/">React et comparaison avec Vue.js</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Sophia-Capdevielle/">Sophia Capdevielle</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Sophia-Capdevielle/mon/">MON de Sophia Capdevielle</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Sophia-Capdevielle/mon/temps-2.1/">Apprendre React</a>
 
 </div></div>
 
@@ -130,16 +130,96 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Liste des prérequis du POK ET/OU MON</p>
+<p>Bases du front-end: HTML, CSS, Js</p>
 </div></div>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
   <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Les lien utiles pour la compréhension de celui-ci.</p>
+<p><a href="https://react.dev/learn">Documentation React</a></p>
 </div></div>
 
+<p>Pour ce MON, je me suis en majorité appuyée sur la documentation React qui est très bien faite, je recommande. J'ai suivi la partie &quot;démarrage rapide&quot; ainsi que le tutoriel tic-tac-toe quipermet de comprendre les notions abordées. J'ai ensuite lu la partie sur &quot;penser en React&quot; qui permet de voir les différentes étapes de création d'une UI avec React.</p>
+<h1>Qu'est-ce-que React?</h1>
+<p>React est une bibliothèque Javascript créée par Facebook (maintenant Meta) en 2013 permettant de créer des interfaces utilisateurs pour des applications web. Cela permet notamment de rendre les pages web dynamiques en mettant à jour automatiquement l'affichage des données lorsqu'elles sont modifiées React utilise des composants - morceaux de codes réutilisables représentant une partie de l'interface - et un DOM (Document Object Model) virtuel. React utilise JSX (JavaScript XML), une extension de Js avec une syntaxe semblable au HTML.</p>
+<h1>Composants</h1>
+<p>Les <strong>composants</strong> React sont des fonctions JavaScript. On les nomme toujours en commençant par une majuscule.</p>
+<ul>
+<li>'''export default''' devant function Myapp () siginifie que c'est le composant principal.</li>
+<li>Un composant ne peut pas renvoyer plusieurs balises JSX. Il faut les enrober dans un parent commun, tel qu’un <div>...</div> ou un fragment &lt;&gt;...&lt;/&gt; vide.</li>
+</ul>
+<p>Pour mettre à jour l'affichage, on aura besoin de l'<strong>état</strong> du composant, pour cela on utilise:
+'''import { useState } from 'react';'''
+Cela renvoie deux choses : l’état courant, et une fonction pour le mettre à jour; souvent[something, setSomething].
+<em>Exemple, dans un composant: '''const [count, setCount] = useState(0);'''</em></p>
+<ul>
+<li>L’état est comme la mémoire du composant. Il permet au composant de garder trace de certaines informations et de les modifier en réaction à des interactions. Par exemple, un Button pourrait vouloir garder trace de son état isHovered.</li>
+</ul>
+<p>Les fonctions dont le nom commence par use sont appelées <strong>Hooks</strong>, par exemple '''useState''' fourni directement par React. Il est seulement possible d'appeler les Hooks au début du code des composants (ou d’autres Hooks).</p>
+<p>Les <strong>props</strong> sont un moyen de passer des données du parent aux enfants. Les props sont comme des arguments que vous passez à une fonction. Elles permettent au composant parent de passer des données à un composant enfant. Par exemple, un Form pourrait passer une prop color à un Button.
+Dans React, la convention de nommage consiste à utiliser onSomething pour les props qui représentent des événements et handleSomething pour les fonctions qui gèrent ces événements.</p>
+<p><strong>immutabilité</strong> --&gt; Il y a deux approches générales pour faire évoluer des données. La première approche consiste à modifier en place les données en changeant directement les valeurs. La seconde approche consiste à remplacer les données avec une nouvelle copie, dotée des modifications souhaitées. En évitant de modifier les données directement, il devient aisé de conserver leurs versions précédentes intactes pour les réutiliser ultérieurement.</p>
+<h1>Étapes d'implémentation d'une UI en React:</h1>
+<ol>
+<li><strong>Décomposer l’UI en composants et les hierarchiser</strong>
+<ul>
+<li>un composant ne doit idéalement faire qu'une seule chose</li>
+<li>faire une arborescence des composants: les composants qui apparaissent au sein d’un autre composant dans la maquette devraient apparaître comme enfants dans cette arborescence.</li>
+</ul>
+</li>
+<li><strong>Faire une version statique en React</strong>
+<ul>
+<li>dans des contextes simples, il est généralement plus facile de procéder de haut en bas dans l'arborescence des composants, et sur les projets plus complexes, il est plus simple de procéder de bas en haut.</li>
+</ul>
+</li>
+<li><strong>Trouver une représentation minimale suffisante de l’état de l’UI</strong>
+<ul>
+<li>/!\ ne pas confondre props et état</li>
+</ul>
+</li>
+<li><strong>Identifier où l’état devrait vivre</strong>
+<ul>
+<li>identifier chaque composant qui affiche quelque chose sur base de cet état.</li>
+<li>trouver leur plus proche ancêtre commun : un composant qui est au-dessus d’eux tous dans l’aborescence.</li>
+<li>décider où l’état devrait vivre : le plus souvent, vous pourrez mettre l’état directement dans leur ancêtre commun.</li>
+</ul>
+</li>
+<li><strong>Ajouter un flux de données inverse</strong>
+<ul>
+<li>faire en sorte que les interactions modifient l'affichage des données</li>
+</ul>
+</li>
+</ol>
+<h1>Installation</h1>
+<p>Lorsque l'on souhaite créer une nouvelle appli avec React, il est recommandé d'utiliser un framework React pour gérer les problématiques courantes que sont la découpe de code, la gestion des routes, le chargement de données,... En voici des exemples:</p>
+<ul>
+<li>Next.js: framework React fullstack</li>
+<li>Remix: framework React fullstack avec une gestion de routes imbriquées</li>
+<li>Gatsby: framework React pour des sites webs rapides à base de CMS</li>
+<li>Expo: framework React pour créer des applis Android, iOS et web avec des interfaces utilisateur natives</li>
+</ul>
+<h1>Premier projet: To do list</h1>
+<p>Pour être originale, on fait un Todo list pour s'entraîner !!</p>
+<p>On part d'une maquette (réalisée sur Figma):</p>
+<p><img src="Todo-Maquette.png" alt="Maquette to do list"></p>
+<p>On identifie les composants suivants:</p>
+<p><img src="Todo-Composants.png" alt="Maquette to do list avec composants"></p>
+<ol>
+<li>ToDoTable: contient l'appli entière</li>
+<li>TacheTable: affiche et filtre la liste en fonction de la saisie utilisateur</li>
+<li>Tache: affiche une ligne pour chaque tâche</li>
+<li>AddTache: reçoit les saisies utilisateur, permet d'ajouter une tâche</li>
+<li>Filter: reçoit les saisies utilisateur, permet de masquer ou d'afficher les tâches déjà réalisées</li>
+</ol>
+<p>Arborescence des composants:
+<img src="Todo-Arborescence.jpg" alt="Arborescence composants to do list"></p>
+<p>On code, lien vers repo github: <a href="https://github.com/sophia-capdevielle/to-do-mon2">https://github.com/sophia-capdevielle/to-do-mon2</a></p>
+<p>Résultat final:</p>
+<video width="600" controls="">
+  <source src="video-todolist.mp4" type="video/mp4">
+</video>
+<p>PS: ça suit exactement la trame du cours de dev web jour 2 sur le front-end; mais c'est même pas fait exprès.</p>
 
 
 </article>
