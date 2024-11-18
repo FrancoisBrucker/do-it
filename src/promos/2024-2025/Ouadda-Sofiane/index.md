@@ -14,5 +14,3 @@ Bonjour !
 
 * [POK](./pok)
 * [MON](./mon)
-
-## Projet
