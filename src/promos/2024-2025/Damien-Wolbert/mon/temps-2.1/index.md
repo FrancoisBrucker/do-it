@@ -85,7 +85,7 @@ Elle pourrait être généralisée à des listes dépendantes à plus de deux ni
 
 ### Objectif
 Identifier la structure d'une chaine de caractère peut se révéler puissant pour analyser et/ou traiter des données. Demandons-nous comment peut-on traiter les chaines de caractère sur Excel : lecture, extraction, segmentation et expressions régulières.
-{details "Exemple de cas d'utilisation" %}
+{% details "Exemple de cas d'utilisation" %}
 Lister, hiérarchiser et trier une base de donnée contenant les références et présentation de différentes normes de constructions industrilles de l'Afnor. Chaque norme possède un identifiant d'une forme particulière. La manipulation de cette base de données nécessite donc la décomposition et comparaison des chaines de caractères des identifiants de normes.
 {% enddetails %}
 
