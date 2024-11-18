@@ -80,3 +80,17 @@ Pour mes objectifs du sprint 1, j'ai rempli en partie toutes les tâches car il 
 <img src="./image2/sept.png" width="50%">
 
 ### Second Sprint
+
+## Bibliographie
+
+- [**Designers Éthiques**. *Concevoir sans dark patterns* - Introduction.](https://beta.designersethiques.org/fr/thematique-design-persuasif/concevoir-sans-dark-patterns/1-introduction#Enjeu-attentionnel)
+
+- [**UX Republic**. *Maximiser l'impact du design UX avec les persuasive design patterns*.](https://www.ux-republic.com/maximiser-limpact-du-design-ux-avec-les-persuasive-design-patterns/)
+
+- [**La Grande Ourse Design**. *Les dark patterns et le nudge en UX*.](https://lagrandeourse.design/blog/les-dark-patterns-et-le-nudge-en-ux/)
+
+- [**Atipik**. *Définition des dark patterns en design UX*.](https://www.atipik.ch/fr/blog/definition-dark-patterns-design-ux)
+
+- [**Novaway**. *Dark Pattern et expérience utilisateur : définition et exemples*.](https://www.novaway.fr/blog/ui-ux-design/dark-pattern-experience-utilisateur)
+
+- [**YouTube**. *Les Dark Patterns : comprendre leur fonctionnement et leurs enjeux* [Vidéo].](https://www.youtube.com/watch?v=fx5VZFdkuf4)
