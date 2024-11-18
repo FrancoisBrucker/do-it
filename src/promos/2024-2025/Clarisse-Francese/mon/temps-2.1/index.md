@@ -152,7 +152,7 @@ En retravaillant sur ce MON plus tard, j'ai réalisé que la fonction créé ne 
 
 <h2 id=ccl> 👍Conclusion</h2>
 
-Ce MON m'a bien permis de **dépoussiérer mes connaissances sur Python** pour être plus à l'aise dans mon projet de groupe donc **l'objetif est atteint**.
+Ce MON m'a bien permis de **dépoussiérer mes connaissances sur Python** pour être plus à l'aise dans mon projet de groupe donc **l'objetif est atteint**. Je pense avoir plutôt bien organisé mon temps et ma manière d'apprendre car si c'était à refaire je ne changerai rien à mon organisationce pendant ce MON.
 
 ## ⌛Horodatage
 
