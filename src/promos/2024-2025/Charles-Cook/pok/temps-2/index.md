@@ -485,7 +485,7 @@ Le résultat obtenu, trié par Pays et par Année, est ci-dessous.
 {%enddetails%}
 
 Le résultat obtenu est le suivant :
-![Classement par années](<Images/Classement des médailles:année.png>)
+![Classement par année](<Images/Classement des médailles par année.png>)
 
 ###### Question 4 : Sur l'ensemble des éditions entre 1924 et 2010, quel pays est le meilleur dans chaque discipline ?
 
