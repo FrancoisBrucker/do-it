@@ -1,66 +1,43 @@
 ---
 layout: layout/pok.njk
 
-title: "Titre du POK du temps 2"
+title: "Jeu Snake en JavaScript"
 authors:
   - Baptiste Audouin
 
-date: 1971-01-01
+date: 2024-11-18
 
 tags: 
   - "temps 2"
+  - "JavaScript"
+  - "html"
+  - "css"
 
-résumé: Un POK traitant d'un sujet.
+résumé: Un POK traitant de la création d'un jeu avec JavaScript.
 ---
 
 {% prerequis %}
 
-Liste des prérequis du POK ET/OU MON
-
 {% endprerequis %}
 {% lien %}
-
-Les lien utiles pour la compréhension de celui-ci.
-
+ - [Site Do_it](https://francoisbrucker.github.io/do-it/)
+ - [Cours DevWeb](https://francoisbrucker.github.io/cours_informatique/enseignements/ecm/2A/option-web/)
 {% endlien %}
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce POK. On oubliera pas de donner :
+Dans ce POK je compte découvrir JavaScript et me repolonger dans les cours de DevWeb de deuxième année. Pour ce faireje prévois de coder le jeu populaire Snake.
 
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
 
 ## Tâches
 
-### Sprints
+| Tâches | Heures prévues |
+| --------|-------- |
+| **Sprint 1**|
+| Recherche docu  sur les jeux déjà réalisé en do_it | 1h |
+| Revoir les bases html css | 3h |
+| Définir et Réaliser un premier visuel | 3h |
+| Découvrir JavaScript | 3h |
+| **Sprint 2**|
+| Implémentation du jeu | 6h |
+| Amélioration du visuel | 2h (en fonction de la durée de la partie précédente) |
+| Restitution et publication du jeu | 2h |
 
-But final.
-
-#### Sprint 1
-
-Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
-
-- [ ] Une tâche non réalisée
-- [x] Une tâche réalisée
-
-#### Sprint 2
-
-- [ ] Une tâche non réalisée
-- [x] Une tâche réalisée
-
-Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
-
-### Horodatage
-
-Toutes les séances et le nombre d'heure que l'on y a passé.
-
-| Date | Heures passées | Indications |
-| -------- | -------- |-------- |
-| Mardi 27/08  | 1H  | Travail sur la trame du site |
-
-## Contenu
-
-Le contenu du POK.
-
-### Premier Sprint
-
-### Second Sprint
