@@ -1,15 +1,15 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du premier MON du temps 2"
+title: "Apprendre NestJS"
 authors:
   - Serigne Mbaye Sy AMAR
 
-date: 2024-12-09
+date: 2024-10-18
 tags: 
   - "temps 2"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Le but de ce MON est de faire une étude sur NestJS"
 ---
 
 {% prerequis %}

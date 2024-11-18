@@ -22,8 +22,7 @@ Aucun prérequis
 - [Xerfi Canal. (2022, 2 mars). Le business model au cœur de la réflexion stratégique [Pierre-Jean Benghozi]](https://www.youtube.com/watch?v=1EAUicMXZo4)
 - [Xerfi Canal. (2019, 8 avril). Comment rafraîchir ou réinventer son business model ? [Hélène Chanut-Musikas]](https://www.youtube.com/watch?v=equSKAmMnrs)
 - [La servicisation des entreprises industrielles, Un changement majeur de business model, Par Sophie Peillon](https://shs.cairn.info/revue-des-sciences-de-gestion-2016-2-page-131?lang=fr)
-- [Transformation d’un modèle d’affaires dans un contexte de mondialisation :
-le cas d’une entreprise de vêtements, Par Naoufel Remili](https://shs.cairn.info/revue-des-sciences-de-gestion-2016-2-page-157?lang=fr#s1n5)
+- [Transformation d’un modèle d’affaires dans un contexte de mondialisation :le cas d’une entreprise de vêtements, Par Naoufel Remili](https://shs.cairn.info/revue-des-sciences-de-gestion-2016-2-page-157?lang=fr#s1n5)
 - [Robert, I., & Herbert, M. (s. d.). Un business model qui encouragerait à consommer moins de vêtements est-il possible ?  The Conversation.](https://theconversation.com/un-business-model-qui-encouragerait-a-consommer-moins-de-vetements-est-il-possible-220053)
 
 {% endlien %}
@@ -77,6 +76,7 @@ B. DEMIL et X. LECOCQ définissent un modèle économique au travers d’une vis
 - Proposition de valeur (V)
 
 ![Modele_RCOV](Images/Modele_RCOV.jpg)
+*[europeanbusinessreview.com](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.europeanbusinessreview.com%2Fwhat-if-your-business-model-was-to-blame-for-your-lack-of-innovativeness%2F&psig=AOvVaw2S942NzTp_Sg6qV_WL2yA0&ust=1727872998038000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPDchtaa7YgDFQAAAAAdAAAAABAQ)*
 
 Ainsi, à partir des ressources et compétences qu’une organisation contrôle, l’entreprise définit donc une ou plusieurs propositions de valeur pour ses clients qui vont lui permettre de générer des revenus. Ces ressources et compétences peuvent être internes, développées par l’entreprise, mais également d’origine extérieure (dans ce cas, les ressources et compétences sont acquises sur le marché). 
 
@@ -162,6 +162,7 @@ Il a donc développé une vision stratégique externe et une vision stratégique
 
 On peut donc comparer les deux modèles économiques de l’entreprise grâce au tableau suivant : 
 ![Tableau_1](Images/Tableau_1.png)
+*[Transformation d’un modèle d’affaires dans un contexte de mondialisation :le cas d’une entreprise de vêtements, Par Naoufel Remili](https://shs.cairn.info/revue-des-sciences-de-gestion-2016-2-page-157?lang=fr#s1n5)*
 
 Ce tableau illustre bien l’évolution du business model de Keystone, d’un modèle économique manufacturier où l’entreprise est au service d’autres entreprises en qualité de fournisseur, et est donc fortement dépendantes de l’évolution du marché et de la demande, à un modèle économique de designer-importateur dans lequel l’entreprise est maîtresse de son destin et peut contrôler ses propres compétences, ressources et activités. 
 Ainsi, il y a eu une période de transition entre les deux modèles économiques, que l’on peut illustrer par exemple avec l’activité de l’usine chargée de la production locale de Keystone. En effet l’activité de l’usine a diminué sa production à partir des années 1990 jusqu’à son arrêt total en 2005. Dans le même temps, les quantités d’importations n’ont fait qu’augmenter. 
@@ -176,6 +177,7 @@ Comme nous l’avons évoqué plus haut, dans la description du modèle RCOV, un
 
 Ainsi, au cours de l’évolution du modèle économique de Keystone, des changements ont été opéré sur chacun des 4 composantes citées ci-dessus, faisant également évoluer les relations entre chacune des composantes. Les quatre composantes du nouveau modèle Keystone sont résumées ci-dessous : 
 ![Tableau_2](Images/Tableau_2.png)
+*[Transformation d’un modèle d’affaires dans un contexte de mondialisation :le cas d’une entreprise de vêtements, Par Naoufel Remili](https://shs.cairn.info/revue-des-sciences-de-gestion-2016-2-page-157?lang=fr#s1n5)*
 
 Ainsi, de par les modifications de ces composantes, nous pouvons qualifier l’évolution dans les activités de Keystone de transformation de business model. 
 
@@ -203,8 +205,7 @@ Ainsi, il était important au travers de ces 4 exemples de montrer qu’il exist
 
 ## Conclusion
 
-L’étude menée sur le business model et ses applications à l’entreprise Keystone met en lumière l’importance cruciale d’une bonne compréhension de ce concept dans le cadre de la gestion d’une organisation. Le business model, en tant que représentation systémique des mécanismes par lesquels une entreprise crée, capture et délivre de la valeur, est un levier stratégique essentiel pour assurer la viabilité et la compétitivité dans un marché en constante évolution.
-En approfondissant l’analyse à travers le modèle RCOV (Ressources, Compétences, Organisation et Valeur), nous avons démontré comment les différents composants de ce modèle interagissent pour structurer l’activité économique de Keystone. Les ressources tangibles et intangibles de l’entreprise, ses compétences uniques, son organisation interne ainsi que son approche de la création de valeur sont des piliers fondamentaux de son modèle d'affaires. En identifiant ces éléments, le modèle RCOV permet de formaliser la manière dont Keystone s’adapte aux besoins de ses clients tout en capitalisant sur ses forces internes.
-La notion de servicisation, également abordée dans cette étude, fait référence à la transformation progressive des offres de produits en offres de services, un phénomène devenu clé dans de nombreux secteurs, y compris celui de la mode. Keystone, en cherchant à se distinguer dans un environnement compétitif, a progressivement intégré des services à valeur ajoutée dans son offre, comme le conseil personnalisé ou des services en ligne, renforçant ainsi son modèle d’affaires et enrichissant l’expérience client.
-Enfin, l’analyse de Keystone, en tant qu’étude de cas, a permis d’illustrer concrètement l’application de ces concepts : Keystone a réussi à pérenniser son activité dans le secteur de la mode féminine, en exploitant de manière optimale ses ressources et en adoptant des stratégies qui favorisent l’innovation et la satisfaction des attentes des consommatrices.
-Ainsi, cette étude montre que la compréhension et l’application des principes du business model, du modèle RCOV, et de la servicisation sont des facteurs clés de succès pour les entreprises cherchant à s’adapter et à prospérer dans un marché dynamique et changeant.
+L’étude menée sur le business model et ses applications à l’entreprise Keystone met en lumière l’importance cruciale d’une bonne compréhension de ce concept dans le cadre de la gestion d’une organisation, dans un environnement toujours plus compétitif et changeant. Le business model génère et délivre de la valeur, est un levier stratégique essentiel pour assurer la viabilité et la compétitivité dans un marché en constante évolution.
+Au travers du modèle RCOV (Ressources, Compétences, Organisation et Valeur), nous avons vu comment les différents composants de ce modèle interagissent pour structurer l’activité économique d'une organisation. Les ressources tangibles et intangibles de l’entreprise, ses compétences uniques, son organisation interne ainsi que son approche de la création de valeur sont des piliers fondamentaux de son modèle d'affaires. En identifiant ces éléments, le modèle RCOV nous a permis de voir comment l'entreprise Keystone a su modifier chacun des piliers afin de renouveler son business model.
+La notion de servicisation fait référence à la transformation progressive des offres de produits en offres de services, un phénomène devenu clé dans de nombreux secteurs. Ainsi, nous avons vu au travers d'exemple comme Michelin par exemple, que l'ajout de services à l'offre proposée permet d'améliorer l'expérience client.
+Ainsi, ce MON montre que la compréhension et l’application des principes du business model, du modèle RCOV, et de la servicisation sont des facteurs clés de succès pour les entreprises cherchant à s’adapter et à prospérer dans un marché dynamique et changeant.

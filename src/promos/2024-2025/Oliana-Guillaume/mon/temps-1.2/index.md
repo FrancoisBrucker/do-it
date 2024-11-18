@@ -35,7 +35,7 @@ Les liens utiles pour la compréhension de ce projet.
 
 ---
 
-# Sommaire : Optimisation de Portefeuille et Stratégie de Trading
+# Sommaire : Optimisation de Portefeuille
 
 ## 1. Optimisation de portefeuille
 - **1.1 Concepts de base** : Explication du rendement, du risque, du ratio de Sharpe et de la frontière efficiente.

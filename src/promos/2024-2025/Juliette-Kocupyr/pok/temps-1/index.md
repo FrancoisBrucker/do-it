@@ -248,7 +248,6 @@ Dans son siège de Stockholm, des **squads** autogérées de six à douze person
 
 <img src="./image1/planspotify.png" width="50%">
 
-
 1. **Les squads, l'unité de base du modèle Spotify**
 
     Une squad est une équipe d'une dizaine de personnes indépendante et qui n'a qu'une seule mission à long terme touchant à un seul bloc fonctionnel. Semblables à une équipe Scrum, les Squads sont autonomes et se concentrent sur un domaine de fonctionnalité gérer par un product owner. Les membres de l'équipe s'assoient ensemble et disposent de toutes les compétences et de tous les outils nécessaires pour concevoir, développer, tester et mettre en production. Les équipes s'organisent elles-mêmes et décident de leur propre méthode de travai comme les sprints Scrum ou Kanban. Elles sont encouragées à utiliser les méthodes de Lean Startup pour développer de nouvelles fonctionnalités : Minimum Viable Product (MVP), validated learning et A/B testing font partie des pratiques prônées chez Spotify.

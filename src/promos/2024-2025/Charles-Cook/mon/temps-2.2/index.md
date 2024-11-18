@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 2"
+title: "Management et collaboration à distance"
 authors:
   - Charles Cook
 

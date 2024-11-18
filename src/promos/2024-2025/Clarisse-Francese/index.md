@@ -13,7 +13,11 @@ authors:
 
 ## Projet
 
-[Projet Avat'Art](../../../projets/2024-2025/Avat'Art/)
+[Projet Avat'Art](../_projets/Avat'Art/)
+
+## Mon Github
+
+[Mon Github perso](https://github.com/Clarisse-Francese/GithubClarisse.git)
 
 ## Qui suis-je ?
 

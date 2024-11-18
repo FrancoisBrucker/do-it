@@ -23,6 +23,7 @@ savoir utiliser l'HTML et le CSS
 [Mon MON 1](../../mon/temps-1.1/index.md)
 [Jeu pour apprendre les Flexbox](http://flexboxfroggy.com/#fr)
 [Jeu pour apprendre les Grid](https://codepip.com/games/grid-garden/#fr)
+[Git Hub](https://github.com/jeanne-mngr/POK-1)
 {% endlien %}
 
 Je souhaite pour mon premier POK, coder un site internet à l'aide des connaissances apprises lors de mon premier MON, c'est à dire à l'aide du HTML et du CSS. Comme sujet de site, j'ai choisi mes voyages effectués lors de ma césure.

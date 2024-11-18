@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 2"
+title: "Introduction à Javascript"
 authors:
   - OLIANA Guillaume
 
@@ -9,7 +9,7 @@ date: 1971-01-01
 tags: 
   - "temps 2"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Un MON autour de React."
 ---
 
 {% prerequis %}

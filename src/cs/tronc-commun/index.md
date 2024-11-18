@@ -5,7 +5,7 @@ title: "Tronc commun"
 authors:
   - François Brucker
 
-tags: ['ct']
+tags: ['cs']
 ---
 
 

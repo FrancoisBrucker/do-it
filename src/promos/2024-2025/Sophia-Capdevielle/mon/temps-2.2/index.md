@@ -1,15 +1,15 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 2"
+title: "Peut-on exister sans hiérarchie?"
 authors:
-  - Gordon Zola
+  - Sophia Capdevielle
 
-date: 1971-01-01
+date: 2024-01-01
 tags: 
   - "temps 2"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Ce MON a pour objectif d'explorer la possibilité de vivre dans une société sans hiérarchie, ni pouvoir vertical. L'objectif est en suite de déplacer cette réflexion sur les entreprises et les modes de management liés."
 ---
 
 {% prerequis %}
@@ -22,12 +22,3 @@ Liste des prérequis du POK ET/OU MON
 Les lien utiles pour la compréhension de celui-ci.
 
 {% endlien %}
-
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :
-
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
-
-## Contenu
-
-Le contenu du MON.

@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du premier MON du temps 2"
+title: "Etude du marché de l'audiophile et du Hifi"
 authors:
   - Victor Pawlaczyk
 
@@ -9,7 +9,7 @@ date: 2024-09-05
 tags: 
   - "temps 2"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Ce MON a pour but d'étudier les leader du marché de l'audiophile et du Hifi en Europe, et d'identifier leur stratégie de compétitivité, les forces et faiblesses de chacun."
 ---
 
 {% prerequis %}

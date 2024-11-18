@@ -1,15 +1,15 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 2"
+title: "API REST"
 authors:
   - Serigne Mbaye Sy AMAR
 
-date: 2024-12-09
+date: 2024-10-18
 tags: 
   - "temps 2"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Ce MON traite les APIs REST, Une API REST permet la communication entre systèmes via HTTP."
 ---
 
 {% prerequis %}

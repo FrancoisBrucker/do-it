@@ -12,8 +12,8 @@ tags:
   - "temps 1"
   - "Decathlon"
   - "Stratégie entreprise"
-  - "Mangement entreprise"
-  - "Devloppement durable"
+  - "Management entreprise"
+  - "Développement durable"
 
 résumé: "Etude de cas : Décathlon, une entreprise dynamique et innovante. L'objectif est d'analyser ce qui leur permet de se distinguer aujourd'hui et d'attirer, en particulier les jeunes, en examinant leur stratégie, leur modèle de gestion et leur approche de la transition vers le développement durable."
 ---
@@ -274,7 +274,7 @@ Les 2 principaux impacts de Decathlon sur la biodiversité sont :
 
 - Magasins : Avec une surface de vente totale de 14 millions de m², les magasins de Decathlon contribuent à l'artificialisation des terres, ce qui a des conséquences néfastes sur les écosystèmes locaux.
 
-![Impact_ecosystemes](./Impacts_ecosytèmes_Decathlon.png)
+![Impact_ecosystemes](./Impact_ecosystemes_Decathlon.png)
 
 Le calcul de l'empreinte sur la biodiversité avec l'outil [GBS®](https://www.cdc-biodiversite.fr/le-global-biodiversity-score/) permet de distinguer l'impact cumulé, qui tient compte des activités passées de l'entreprise, de l'impact annuel, qui se rapporte aux actions de DECATHLON sur l'année précédente. Cet outil se concentre sur les écosystèmes terrestres et d'eau douce (car les écosystèmes marins ne sont pas encore inclus). Il couvre toutes les activités de DECATHLON sur les scopes 1, 2 et 3, ainsi que sur la Marketplace depuis 2023.
 
@@ -300,7 +300,7 @@ Enfin, 2 ruches ont été installées. 🐝 Elles sont un bon indicateur de la n
 Des aménagements similaires ont été menés sur le site de Lorient et 14 dossiers sont en cours de déploiement selon cette même démarche L’objectif est d’obtenir le label ["Signature Biodiversité"](https://signature-biodiversite.com/dpe/), certification environnementale, pour 100 % des futurs aménagements fonciers neufs en France. Les efforts de l’entreprise se poursuivent pour atteindre l’ambition de 10 % du parc immobilier français intégrant la démarche de renaturation ["Signature Biodiversité"](https://signature-biodiversite.com/dpe/).
 
 
-![Signature_Biodiversite](./Signature-biodivesité-infographie-DPE.png)
+![Signature_Biodiversite](./Signature-biodivesite-infographie-DPE.png)
 
 
 #### Réduire l'impact des matières premières
@@ -330,8 +330,8 @@ En outre, la gamme "Minimal editions local", produite en Europe à partir de mat
 
 
 {% lien %}
-https://engagements.decathlon.fr/la-biodiversite-et-decathlon\
-https://www.la-croix.com/economie/developpement-durable-decathlon-se-reve-en-champion-de-l-economie-circulaire-20241008\
+https://engagements.decathlon.fr/la-biodiversite-et-decathlon \
+https://www.la-croix.com/economie/developpement-durable-decathlon-se-reve-en-champion-de-l-economie-circulaire-20241008 \
 https://engagements.decathlon.fr/quel-plan-daction-pour-une-baisse-des-emissions-absolues-de-co2-eq \
 https://www.novethic.fr/actualite/environnement/economie-circulaire/isr-rse/comment-decathlon-veut-atteindre-100-de-produits-ecoconcus-en-2026-151436.html
 {% endlien %}
@@ -348,7 +348,7 @@ https://www.cdc-biodiversite.fr/le-global-biodiversity-score/ \
 https://www.decathlon.fr/p/mp/909/veste-upcyclee-impermeable-et-coupe-vent-softshell-graphite-homme/_/R-p-5acf8dc7-b2d3-4106-a847-c42e2f4b2894 \
 https://www.909-upcycling.com/blogs/communique-de-presse/les-tentes-devenues-vestes \
 https://www.decathlon.media/Static/dossier-presse/2024/new-identity/v1.7.1/--livrables--/pdf/Decathlon-Media_La-Nouvelle-ambition-de-Decathlon_DP-FR.pdf \
-https://fr.wikipedia.org/wiki/Decathlon_(entreprise)\
+https://fr.wikipedia.org/wiki/Decathlon_(entreprise) \
 https://www.la-croix.com/economie/developpement-durable-decathlon-se-reve-en-champion-de-l-economie-circulaire-20241008 \
 https://www.planetegrandesecoles.com/decathlon-we-play-circular \
 https://engagements.decathlon.fr/la-biodiversite-et-decathlon \

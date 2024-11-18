@@ -23,9 +23,10 @@ Sans prérequis
 {% endprerequis %}
 {% lien %}
 
-Pour coder en lagage Kotlin depuis le web : [Kotlin Playground](https://play.kotlinlang.org/)
-Pour télécharger Android Studio : [Android Studio](https://developer.android.com/studio?hl=fr)
-Pour retrouver mon projet sur Github : [Mon projet sur Github](https://github.com/TitouanCorne/AndroidKotlinFirstApp.git)
+- Pour coder en lagage Kotlin depuis le web : [Kotlin Playground](https://play.kotlinlang.org/)
+- Pour télécharger Android Studio : [Android Studio](https://developer.android.com/studio?hl=fr)
+- Pour retrouver mon projet sur Github : [Mon projet sur Github](https://github.com/TitouanCorne/AndroidKotlinFirstApp.git)
+- Pour récupérer des images libres de droit : [iStock](https://www.istockphoto.com/)
 
 {% endlien %}
 
@@ -68,7 +69,15 @@ Le second sprint me permettra de bien plus mettre en pratique ses bases et d'en 
 
 **Analyse post-mortem (Sprint 2) :**
 
-Le projet initial était trop ambitieux pour un temps réduit (normalement fixé à 20h au total). Je suis tout de même content d'avoir acquis de nouvelles compétences en ce qui concerne le développement mobile. Je compte continuer ce projet de mon côté pour répondre à la feuille de route initiale et à mon cahier des charges.
+Au cours des 10 heures dédiées au sprint 2, je n'ai pas pu réaliser l'ensemble des tâches listées dans la to-do list initiale. J'ai réalisé les trois premiers points (ceux qui sont cochés). Cependant les trois autres n'ont pas été abordés par manque de temps.
+J'en conclus que l'objectif fixé initialement était trop ambitieux pour le temps réduit du POK.
+J'ai rencontré quelques difficultés lors de la phase *"Implémenter l'interface en respectant les wireframes."*. En effet, j'ai fait quelques erreurs qui ont nécessité une prise en charge plus longue. Par exemple, le fait d'avoir laissé des traits d'union (-) dans le nom de mes fonts (ressources) a provoqué certaines erreurs. La résolution d'un problème anodin comme celui-ci peu prendre du temps.
+
+J'en tire plusieurs enseignements :
+
+- être réaliste dans la définition des objectifs d'un projet.
+- essayer de prendre en compte les possibles imprévus (marge de temps pour certaines tâches qui semblent compliquées par exemple).
+- détailler de manière plus explicite la to-do list en décomposant les "grosses" tâches en plusieurs étapes, plus petites.
 
 ### Horodatage
 
@@ -338,8 +347,8 @@ Ce premier POK m'a été utile à la fois sur le plan technique et sur le plan g
 
 {% lien %}
 
-- [Comment rédiger un cahier des charges](https://www.manager-go.com/gestion-de-projet/dossiers-methodes/elaborer-un-cdc)
-- [Vidéo youtube, créer une application mobile sur Android](https://www.youtube.com/watch?v=WlDzTh4WXek&t=2714s)
-- [iStock, pour récupérer des images](https://www.istockphoto.com/)
+- [Cahier des charges, exemple simple à utiliser. Source : site Manager Go!, article rédigé par Laurent GRANGER (16/11/2023)](https://www.manager-go.com/gestion-de-projet/dossiers-methodes/elaborer-un-cdc)
+- [Vidéo youtube : Créer une application mobile sur Android (Formation débutant). Source : Graven - Développement (2021)](https://www.youtube.com/watch?v=WlDzTh4WXek&t=2714s)
+- [Site officiel Android Studio](https://developer.android.com/studio?hl=fr)
   
 {% endlien %}

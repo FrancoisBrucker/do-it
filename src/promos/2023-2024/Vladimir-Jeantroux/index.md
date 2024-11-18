@@ -13,4 +13,4 @@ authors:
 
 ## Projet 
 
-* [Jeu du killer](../../../projets/2023-2024/Killer/)
+* [Jeu du killer](../_projets/Killer/)

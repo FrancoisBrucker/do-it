@@ -8,12 +8,12 @@ authors:
 date: 2024-09-05
 tags: 
   - "temps 1"
-  - "Ux"
+  - "UX"
 
-résumé: "Introduction au Design Thinking et à l'Ux Design."
+résumé: "Introduction au Design Thinking et à l'UX Design."
 ---
 
-Ce MON est une introduction au design thinking et à l'Ux design. Il permet d'appréhender ces notions et d'avoir les bases nécessaires pour comprendre les enjeux de l'expérience utilisateur.
+Ce MON est une introduction au design thinking et à l'UX design. Il permet d'appréhender ces notions et d'avoir les bases nécessaires pour comprendre les enjeux de l'expérience utilisateur.
 
 - Niveau : Débutant
 - Prérequis : Avoir quelques notions de Design Thinking
