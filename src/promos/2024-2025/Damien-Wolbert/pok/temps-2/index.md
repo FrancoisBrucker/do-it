@@ -48,10 +48,10 @@ Le suivi du projet a été réalisé sur un outil personnel développé spécial
 - [x] Réaliser le cadrage du projet
 - [x] Sprint backlog 1
 - [x] Brainstorming général
-- [ ] Lister les fonctionnalités principales du système
-- [ ] Parcours utilisateur rapide
+- [x] Lister les fonctionnalités principales du système
+- [x] Parcours utilisateur rapide
 - [ ] Définir les interfaces entre le système et l'utilisateur
-- [ ] Lister les données d'entrées
+- [x] Lister les données d'entrées
 - [ ] Trame des templates de chacune des interfaces
 - [ ] Trame du template des données de sortie
 - [ ] Mise au propre des templates des données d'entrée
@@ -77,9 +77,12 @@ Le suivi du projet a été réalisé sur un outil personnel développé spécial
 **TOTAL POK 2 :**
 {% endfaire %}
 
-## Sprint 1
+### Analyse post-morterm
 
-### Vocabulaire et fonctionnement d'un parc photovoltaïque
+**Sprint 1:**
+
+
+## Vocabulaire et fonctionnement d'un parc photovoltaïque
 
 Afin de comprendre la suite de cet article, il est nécessaire de s'intier au monde du photovoltaïque ainsi qu'à son vocabulaire souvent anglophone.
 
@@ -88,12 +91,16 @@ Afin de comprendre la suite de cet article, il est nécessaire de s'intier au mo
 {% enddetails %}
 
 
-### Définition du cahier des charges
+## Définition du cahier des charges
 
-La rédaction du cahier des charges a été réalisée sur mon lieu d'apprentissage au côtés d'ingénieurs électriciens et civils.
 {% note %}
-Les limitations de VBA et Excel ont pausé un certain nombre de problèmes, notamment l'impossibilité de répondre à tous les besoins fromulés par les équipes de manière simple.
-{% endnote %}
+Le recueil du besoin a été réalisé sur mon lieu d'alternance et d'après mon expérience personnelle. La liste des fonctionnalités et des cas d'uitlisation produite par cette étude m'a contraint à poser des hypothèses forte pour rester dans le cadre du POK. **Ces hypothèses ont été pensées au fur et à mesure de la définition des templates, du parcours utilisateur et des tests réalisés pendant le sprint 1.**
+{% endnote %} 
+Hypothèses : 
+- Le parc n'utilise qu'une seule technologie d'onfuleur : onduleurs centraux position dans les stations de transformation.
+- Les rangées sont positionnées verticalement.
+- Les rangées sont soit perpendiculaires soit parallèles aux routes d'accès.
+- Les strings sont câblées en entérré si aucune boite de jonction n'est présente dans l'interrangée à sa gauche ou à sa droite.
 
 **Fonctionnalités principales**  
 1. Positionner les éléments principaux du parcs de manière graphique :
@@ -105,9 +112,6 @@ Les limitations de VBA et Excel ont pausé un certain nombre de problèmes, nota
    1. Affecter les strings aux différentes SCB
    2. Méthode de racordement des strings : type de câble (section du conducteur), type de raccordement (aérien ou enterré)
 3. Extraire les données du design créé de manière graphique sous forme d'une base de données exploitable.
-{% note %}
-J'ai préféré réaliser cette étude des fonctonctionnalités lors de moments informels afin d'éviter que les ingénieurs interrogés ne proposent trop de fonctionnalités et sortent du cadre de l'exercice.
-{% endnote %}
 
 **Données d'entrée**  
 *Données dimensionnantes :*
@@ -129,10 +133,22 @@ J'ai préféré réaliser cette étude des fonctonctionnalités lors de moments 
 1. Tableau complet permettant d'extraire les données de dimensionnement.
 2. Carnet de câble.
 
-### Parcours utilisateur
+## Parcours utilisateur
 
 
 
 
 
-## Sprint 2
+## Fonctions à coder
+
+Phase 1 :
+- [] 
+
+Phase 2 :
+- [] Colorer les cellules en vert en fonction des cellules caractérisées comme "stands" en phase 1.
+- [] Colorer les cellules en marron en fonction des cellules caractérisées comme "routes" en phase 1.
+- [] Colorer les cellules en rouge en fonction des cellules caractérisées comme "PTR" en phase 1.
+
+
+
+
