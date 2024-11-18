@@ -163,10 +163,10 @@
 <li>[x] Réaliser le cadrage du projet</li>
 <li>[x] Sprint backlog 1</li>
 <li>[x] Brainstorming général</li>
-<li>[ ] Lister les fonctionnalités principales du système</li>
-<li>[ ] Parcours utilisateur rapide</li>
+<li>[x] Lister les fonctionnalités principales du système</li>
+<li>[x] Parcours utilisateur rapide</li>
 <li>[ ] Définir les interfaces entre le système et l'utilisateur</li>
-<li>[ ] Lister les données d'entrées</li>
+<li>[x] Lister les données d'entrées</li>
 <li>[ ] Trame des templates de chacune des interfaces</li>
 <li>[ ] Trame du template des données de sortie</li>
 <li>[ ] Mise au propre des templates des données d'entrée</li>
@@ -210,8 +210,9 @@
 <div class="pl-8 mr-8">
 <p><strong>TOTAL POK 2 :</strong></p>
 </div></div>
-<h2>Sprint 1</h2>
-<h3>Vocabulaire et fonctionnement d'un parc photovoltaïque</h3>
+<h3>Analyse post-morterm</h3>
+<p><strong>Sprint 1:</strong></p>
+<h2>Vocabulaire et fonctionnement d'un parc photovoltaïque</h2>
 <p>Afin de comprendre la suite de cet article, il est nécessaire de s'intier au monde du photovoltaïque ainsi qu'à son vocabulaire souvent anglophone.</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
 <details class="group">
@@ -233,15 +234,21 @@
 </div>
 </details>     
 </div>
-<h3>Définition du cahier des charges</h3>
-<p>La rédaction du cahier des charges a été réalisée sur mon lieu d'apprentissage au côtés d'ingénieurs électriciens et civils.</p>
+<h2>Définition du cahier des charges</h2>
 <div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Les limitations de VBA et Excel ont pausé un certain nombre de problèmes, notamment l'impossibilité de répondre à tous les besoins fromulés par les équipes de manière simple.</p>
+<p>Le recueil du besoin a été réalisé sur mon lieu d'alternance et d'après mon expérience personnelle. La liste des fonctionnalités et des cas d'uitlisation produite par cette étude m'a contraint à poser des hypothèses forte pour rester dans le cadre du POK. <strong>Ces hypothèses ont été pensées au fur et à mesure de la définition des templates, du parcours utilisateur et des tests réalisés pendant le sprint 1.</strong></p>
 </div></div>
+<p>Hypothèses :</p>
+<ul>
+<li>Le parc n'utilise qu'une seule technologie d'onfuleur : onduleurs centraux position dans les stations de transformation.</li>
+<li>Les rangées sont positionnées verticalement.</li>
+<li>Les rangées sont soit perpendiculaires soit parallèles aux routes d'accès.</li>
+<li>Les strings sont câblées en entérré si aucune boite de jonction n'est présente dans l'interrangée à sa gauche ou à sa droite.</li>
+</ul>
 <p><strong>Fonctionnalités principales</strong></p>
 <ol>
 <li>Positionner les éléments principaux du parcs de manière graphique :
@@ -260,13 +267,6 @@
 </li>
 <li>Extraire les données du design créé de manière graphique sous forme d'une base de données exploitable.</li>
 </ol>
-<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
-<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-</svg>
-<div class="pl-8 mr-8">
-<p>J'ai préféré réaliser cette étude des fonctonctionnalités lors de moments informels afin d'éviter que les ingénieurs interrogés ne proposent trop de fonctionnalités et sortent du cadre de l'exercice.</p>
-</div></div>
 <p><strong>Données d'entrée</strong><br>
 <em>Données dimensionnantes :</em></p>
 <ul>
@@ -290,8 +290,18 @@
 <li>Tableau complet permettant d'extraire les données de dimensionnement.</li>
 <li>Carnet de câble.</li>
 </ol>
-<h3>Parcours utilisateur</h3>
-<h2>Sprint 2</h2>
+<h2>Parcours utilisateur</h2>
+<h2>Fonctions à coder</h2>
+<p>Phase 1 :</p>
+<ul>
+<li>[]</li>
+</ul>
+<p>Phase 2 :</p>
+<ul>
+<li>[] Colorer les cellules en vert en fonction des cellules caractérisées comme &quot;stands&quot; en phase 1.</li>
+<li>[] Colorer les cellules en marron en fonction des cellules caractérisées comme &quot;routes&quot; en phase 1.</li>
+<li>[] Colorer les cellules en rouge en fonction des cellules caractérisées comme &quot;PTR&quot; en phase 1.</li>
+</ul>
 
 
 </article>
