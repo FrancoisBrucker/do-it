@@ -34,18 +34,34 @@ Dans ce MON je souhaite découvrir comment manipuler des fichier vidéos/audio a
 
 Voici le sommaire de ce MON réalisé à l'aide dela bibliothèque **Moviepy** :
 
-<source src="src/promos/2024-2025/Baptiste-Audouin/mon/temps-2.1/videos/intro.mp4" type="video/mp4">
+<div style="display: flex; justify-content: center; align-items: center; height: 480;">
+  <video style="max-width: 100%; height: auto;" controls>
+    <source src="src/promos/2024-2025/Baptiste-Audouin/mon/temps-2.1/videos/intro.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
 
 
 ### Animation et stylisation des textes
 
 Dans un second temps, cette bibliothèque permet d'intégrer de texte et d'en personnaliser les styles et les animations :
 
-<source src="src/promos/2024-2025/Baptiste-Audouin/mon/temps-2.1/videos/text_animation_base.mp4" type="video/mp4">
+<div style="display: flex; justify-content: center; align-items: center; height: 480;">
+  <video style="max-width: 100%; height: auto;" controls>
+    <source src="src/promos/2024-2025/Baptiste-Audouin/mon/temps-2.1/videos/text_animation_base.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
 
 Ensuite, il est possible de décomposer les mots pour animer les lettres. Voici un exemple avec le mot **Lettres** :
 
-<source src="src/promos/2024-2025/Baptiste-Audouin/mon/temps-2.1/videos/text_animation_avance.mp4" type="video/mp4">
+<div style="display: flex; justify-content: center; align-items: center; height: 480;">
+  <video style="max-width: 100%; height: auto;" controls>
+    <source src="src/promos/2024-2025/Baptiste-Audouin/mon/temps-2.1/videos/text_animation_avance.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
 
 ### Animation des vidéos
 
@@ -53,11 +69,21 @@ Maintenant, nous pouvons animer des vidéos entre elles.
 
 Dans la vidéo qui suit, j'ai intégrer à la vidéo du sommaire l'enregistrement d'écran du code correspondant au code qui a permis de générer la vidéo :
 
-<source src="src/promos/2024-2025/Baptiste-Audouin/mon/temps-2.1/videos/double_ecran.mp4" type="video/mp4">
+<div style="display: flex; justify-content: center; align-items: center; height: 480;">
+  <video style="max-width: 100%; height: auto;" controls>
+    <source src="src/promos/2024-2025/Baptiste-Audouin/mon/temps-2.1/videos/double_ecran.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
 
 Il existe énormément d'animations possibles avec cette bibliothèque, en voici quelques unes regroupées en une vidéo :
 
-<source src="src/promos/2024-2025/Baptiste-Audouin/mon/temps-2.1/videos/multiple.mp4" type="video/mp4">
+<div style="display: flex; justify-content: center; align-items: center; height: 480;">
+  <video style="max-width: 100%; height: auto;" controls>
+    <source src="src/promos/2024-2025/Baptiste-Audouin/mon/temps-2.1/videos/multiple.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
 
 ### Conclusion
 
