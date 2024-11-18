@@ -34,13 +34,13 @@ Dans ce MON je souhaite découvrir comment manipuler des fichier vidéos/audio a
 
 Voici le sommaire de ce MON réalisé à l'aide dela bibliothèque **Moviepy** :
 
+
 <div style="display: flex; justify-content: center; align-items: center; height: 480;">
   <video style="max-width: 100%; height: auto;" controls>
-    <source src="src/promos/2024-2025/Baptiste-Audouin/mon/temps-2.1/videos/intro.mp4" type="video/mp4">
+    <source src="./videos/intro.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </div>
-
 
 
 ### Animation et stylisation des textes
@@ -49,7 +49,7 @@ Dans un second temps, cette bibliothèque permet d'intégrer de texte et d'en pe
 
 <div style="display: flex; justify-content: center; align-items: center; height: 480;">
   <video style="max-width: 100%; height: auto;" controls>
-    <source src="src/promos/2024-2025/Baptiste-Audouin/mon/temps-2.1/videos/text_animation_base.mp4" type="video/mp4">
+    <source src="./videos/text_animation_base.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </div>
@@ -58,7 +58,7 @@ Ensuite, il est possible de décomposer les mots pour animer les lettres. Voici 
 
 <div style="display: flex; justify-content: center; align-items: center; height: 480;">
   <video style="max-width: 100%; height: auto;" controls>
-    <source src="src/promos/2024-2025/Baptiste-Audouin/mon/temps-2.1/videos/text_animation_avance.mp4" type="video/mp4">
+    <source src="./videos/animation_text_avance_compatible.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </div>
@@ -71,7 +71,7 @@ Dans la vidéo qui suit, j'ai intégrer à la vidéo du sommaire l'enregistremen
 
 <div style="display: flex; justify-content: center; align-items: center; height: 480;">
   <video style="max-width: 100%; height: auto;" controls>
-    <source src="src/promos/2024-2025/Baptiste-Audouin/mon/temps-2.1/videos/double_ecran.mp4" type="video/mp4">
+    <source src="./videos/double_ecran.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </div>
@@ -80,7 +80,7 @@ Il existe énormément d'animations possibles avec cette bibliothèque, en voici
 
 <div style="display: flex; justify-content: center; align-items: center; height: 480;">
   <video style="max-width: 100%; height: auto;" controls>
-    <source src="src/promos/2024-2025/Baptiste-Audouin/mon/temps-2.1/videos/multiple.mp4" type="video/mp4">
+    <source src="./videos/multiple.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </div>

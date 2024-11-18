@@ -29,9 +29,8 @@ Pas de prérequis pour le moment
 
 {% chemin %}
 <b> POK & MON </b>
-
-- Rien pour le moment
-
+- [MON 2.1 : Introduction à React.js, Omar SALAME](../../../../2023-2024/Omar-Salame/mon/temps-2.1/index.md)
+- [MON 3.1 : Débuter avec React.js, Thomas DUROY](../../../../2022-2023/Duroy-Thomas/mon/MON_3.1/index.md)
 {% endchemin %}
 
 **Liste d'idées:**
@@ -47,6 +46,7 @@ J'ai décidé de faire les tous en me créant une application qui me permettra d
 - Ensuite j'aurai mon retroplanning de mes projets et un agenda regroupant mes tâches et tout ce que je veux mettre dedans (anniversaire, rendez-vous...)
 - J'aurai une page qui sera dédiée à mon activité d'illustrateur avec mes clients, mes finances.
 - La dernière page sera pour la gestion de mes créatures sachant que je mettrai des animations de ces créatures dans les autres pages suivant des actions (scroll de la page, tâche rempli...)
+- Faire une carte regroupement la ou se trouve mes clients, voir le POK de Clarisse. Genre une map avec des points plus grands en fonction du nombre de clients qu'il y a dans la zone géographique.
 
 Pour cela j'ai demandé à chatGPT ce qu'il me recommendait :
 - Frontend : React.js avec des bibliothèques comme React-Three-Fiber (pour la 3D), FullCalendar (pour l’agenda), Chart.js ou Recharts (pour les finances).
@@ -71,17 +71,31 @@ J'avais envie de reprendre React donc vraiment bien et Blender aussi.
 
 ### Horodatage
 
-| Date | Heures passées | Indications |
+<!-- | Date | Heures passées | Indications |
 | -------- | -------- |-------- |
 | **Début Sprint 1** |
-| Samedi 14/09  | 0H  | Exemple |
-| Total | 0H |
-| **Début Sprint 2** |
-| Total | 0H |
+| Mardi 05/11  | 2H45  | Création de la mind map et de la maquette (barre de navigation + couleurs) |
+| Dimanche 10/11 | 1H | Maquette : page Agenda |
+| Jeudi 14/11 | 1H35 | Maquette: inspiration de House of Dreamers + table de ClipArtMag et livre de Pixabay sur Pinterest + idéation des thèmes des pages sur la mind map + Idée des 4 saisons avec le texte qui est par-dessus les paysages, à la fois beaucoup plus simple et plus joli |
+| Vendredi 15/11 | 1H | Importation du modèle blender sur la page web |
+| Vendredi 15/11 | 0H45 | Ajustement de la lumière |
+| Total | 7H05 | -->
+<!-- | **Début Sprint 2** |
+| Total | 0H | -->
+
 
 
 ## Contenu
 
+Mettre les liens avec le nom de la source parce que le lien peut devenir obsolète.
+
 ### Premier Sprint
+
+- [Fichier blender](https://fr.3dexport.com/3dmodel-aerial-grassy-and-rocky-mountain-5-466915.htm) de Mixalisg sur 3DEXPORT
+- [Background summer](https://fr.pinterest.com/pin/16255248649915602/) sur Pinterest
+- [Background spring](https://www.etsy.com/fr/listing/1816504003/24-images-clipart-haute-resolution-de) ou bien (https://fr.pinterest.com/pin/969188782452898341/)
+- [Background ](https://le-petit-fermier.com/products/tableau-peinture-paysage-nature?variant=50060240290118) Tableau, le petit fermier PARADIS 
+- [Background winter](https://fr.freepik.com/images-ia-premium/paysage-hiver-noel_66796941.htm) ou bien (https://fr.pinterest.com/pin/391672498864069106/)
+
 
 ### Second Sprint

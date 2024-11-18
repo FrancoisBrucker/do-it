@@ -1,15 +1,17 @@
 ---
 layout: layout/mon.njk
 
-title: "Découvrir Google Script"
+title: "Découvrir les bases du VBA"
 authors:
   - Esther Henry
 
-date: 1971-01-01
+date: 1970-11-01
 tags: 
   - "temps 2"
+  - “vert”
+  - “VBA”
 
-résumé: "À la suite de mon apprentissage du VBA au MON 2.1, je souhaite explorer Google Script afin d'élargir mes compétences et d'approfondir ma compréhension des scripts, dans l'environnement Google."
+résumé: "Lors de mon précédent stage, afin d’optimiser un outil de travail sur Excel, j’ai dû créer une macro. N'ayant aucune connaissance en VBA, je l’ai réalisée en utilisant l’enregistrement automatique, ce qui complique la modification et la maintenance ultérieures. J’aimerais donc apprendre les bases de VBA pour être capable de créer, par exemple, une macro simple permettant de modifier l’affichage d’une page."
 ---
 
 {% prerequis %}
