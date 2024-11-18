@@ -121,7 +121,7 @@
 
         <p class="mb-4 text-lg">
 
-                Je réalise ce MON pour m'initier au BackEnd et au language Go afin de pouvoir me lancer dans le codage du BackEnd de ma Dark Kitchen, qui fait l'objet de mon POK2. Je vais probablement utiliser un tutoriel en ligne et utiliser la documentation Go.
+                Je réalise ce MON pour m'initier au BackEnd et au language Go afin de pouvoir comprendre le backend de notre projet 3A et de pouvoir y contribuer. Je vais probablement utiliser un tutoriel en ligne et utiliser la documentation Go.
 
         </p>
 
@@ -155,8 +155,7 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p><a href="https://www.w3schools.com/html/default.asp"><code>W3School</code></a>
-<a href="https://francoisbrucker.github.io/do-it/promos/2024-2025/Merle-Thomas/pok/temps-2/"><code>POK2: Asian Fried Rice - BackEnd</code></a></p>
+<p><a href="https://devopssec.fr/article/configurer-environnement-golang#begin-article-section"><code>GoLang Tuto</code></a></p>
 </div></div>
 
 <ul>
@@ -172,16 +171,597 @@
 <ul>
 <li>Découvrir le language Go, ses utilisations et son utilité pour réaliser le BackEnd d'un site web</li>
 <li>Apprendre à utiliser Go</li>
-<li>Faire des exercices d'application pour se familiariser avec Go</li>
-<li>Coder le BackEnd de ma Dark Kitchen : création de la base de données des plats, etc.</li>
+<li>Faire un TP d'application : codage d'un jeu de morpions, tic-tac-toe game.</li>
 </ul>
 </div></div>
 <h2>Table des matières<a name="table-des-matières"></a></h2>
-<ol>
-<li><a href="#?">?</a></li>
-</ol>
+<ul>
+<li><a href="#table-des-mati%C3%A8res">Table des matières</a></li>
+<li><a href="#introduction">Chapitre 1 : Introduction à Go</a></li>
+<li><a href="#bases">Chapitre 2 : Les Bases de la Programmation</a></li>
+<li><a href="#variables-operateurs">Chapitre 3 : Variables et Opérateurs</a></li>
+<li><a href="#conditions">Chapitre 4 : Les Conditions</a></li>
+<li><a href="#boucles">Chapitre 5 : Les Boucles</a></li>
+<li><a href="#fonctions">Chapitre 6 : Les Fonctions</a></li>
+<li><a href="#tableaux">Chapitre 7 : Les Tableaux</a></li>
+<li><a href="#projet">Mini Projet: écriture d'un code de jeu de morpions en Go</a></li>
+</ul>
 <h2>Contenu</h2>
-<h2>1.?<a name="?"></a></h2>
+<h1>Apprentissage de GoLang</h1>
+<p>L'objectif de cet apprentissage est de maîtriser les bases du langage Go afin d'écrire un petit jeu de <strong>morpions</strong> ou <strong>tic-tac-toe</strong>.
+Ce document est une synthèse des 8 chapitres de cours sur Go, incluant des explications théoriques, des exemples de code, et des points clés à retenir.</p>
+<hr>
+<h2>Chapitre 1 : Introduction à Go<a name="introduction"></a></h2>
+<p>Go est un langage de programmation moderne développé par Google. Il se distingue par sa <strong>simplicité</strong>, sa <strong>performance</strong> et sa <strong>concurrence</strong>.</p>
+<h3>Pourquoi choisir Go ?</h3>
+<ul>
+<li><strong>Concis et expressif :</strong> Code lisible et compact.</li>
+<li><strong>Compilé et performant :</strong> Génère des exécutables rapides.</li>
+<li><strong>Concurrence facilitée :</strong> Avec des goroutines et des canaux.</li>
+<li><strong>Communauté active :</strong> De nombreux projets open-source.</li>
+</ul>
+<h3>Applications typiques :</h3>
+<ul>
+<li>Développement web (back-end)</li>
+<li>Infrastructure (Docker, Kubernetes)</li>
+<li>Data science</li>
+<li>Développement de jeux</li>
+</ul>
+<hr>
+<h2>Chapitre 2 : Les Bases de la Programmation<a name="bases"></a></h2>
+<ol>
+<li><strong>Télécharger et installer Go</strong> : instructions officielles sur <a href="https://go.dev/dl/">go.dev</a>.</li>
+</ol>
+<h3>Exemple : Hello, World !</h3>
+<p>Le programme le plus simple pour afficher du texte.</p>
+<pre class="language-go"><code class="language-go"><span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token string">"fmt"</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"Hello, World!"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre>
+<h3>Points clés :</h3>
+<ul>
+<li><strong>Package</strong> : Groupe de fichiers Go.</li>
+<li><strong>Fonction <code>main</code></strong> : Point d'entrée du programme.</li>
+<li><strong><code>fmt.Println</code></strong> : Fonction pour afficher des messages à la console.</li>
+</ul>
+<hr>
+<h2>Chapitre 3 : Variables et Opérateurs<a name="variables-operateurs"></a></h2>
+<h3>Déclaration des variables</h3>
+<ul>
+<li><strong>Syntaxe classique</strong> : <code>var nom_variable type</code></li>
+<li><strong>Avec initialisation</strong> : <code>var nom_variable type = valeur</code></li>
+<li><strong>Inférence de type</strong> : <code>nom_variable := valeur</code></li>
+</ul>
+<h3>Types de base</h3>
+<ul>
+<li><strong>Entiers :</strong> <code>int</code>, <code>uint</code>, etc.</li>
+<li><strong>Flottants :</strong> <code>float32</code>, <code>float64</code></li>
+<li><strong>Chaînes :</strong> <code>string</code></li>
+<li><strong>Booléens :</strong> <code>bool</code></li>
+</ul>
+<h3>Exemple</h3>
+<pre class="language-go"><code class="language-go"><span class="token keyword">var</span> age <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">30</span>
+<span class="token keyword">var</span> name <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">"Alice"</span>
+<span class="token keyword">var</span> isStudent <span class="token builtin">bool</span> <span class="token operator">=</span> <span class="token boolean">true</span></code></pre>
+<h3>Opérateurs</h3>
+<ul>
+<li><strong>Arithmétiques</strong> : <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code></li>
+<li><strong>De comparaison</strong> : <code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&gt;</code></li>
+<li><strong>Logiques</strong> : <code>&amp;&amp;</code>, <code>||</code>, <code>!</code></li>
+</ul>
+<h3>Exemple</h3>
+<pre class="language-go"><code class="language-go"><span class="token comment">// Opérations arithmétiques</span>
+<span class="token keyword">var</span> x<span class="token punctuation">,</span> y <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">5</span>
+<span class="token keyword">var</span> z <span class="token builtin">float64</span> <span class="token operator">=</span> <span class="token number">2.5</span>
+result <span class="token operator">:=</span> x <span class="token operator">+</span> y <span class="token operator">*</span> <span class="token function">int</span><span class="token punctuation">(</span>z<span class="token punctuation">)</span> <span class="token comment">// Conversion de z en int</span>
+
+<span class="token comment">// Conditions</span>
+<span class="token keyword">if</span> age <span class="token operator">>=</span> <span class="token number">18</span> <span class="token punctuation">{</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"Vous êtes majeur"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"Vous êtes mineur"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Boucle for</span>
+<span class="token keyword">for</span> i <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">{</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3>Points clés:</h3>
+<ul>
+<li>Typage fort: Go est un langage à typage statique, ce qui signifie que le type d'une variable doit être déclaré explicitement ou déduit par le compilateur.</li>
+<li>Inférence de type: Le compilateur peut souvent déduire le type d'une variable lors de son initialisation.</li>
+<li>Conversion de type: Il est possible de convertir un type en un autre à l'aide d'une conversion explicite (cast).</li>
+<li>Constante: Une valeur qui ne peut pas être modifiée après sa déclaration. On utilise le mot-clé const.</li>
+<li>Zero value: Si une variable n'est pas initialisée, elle prend une valeur par défaut (0 pour les nombres, &quot;&quot; pour les chaînes, false pour les booléens).</li>
+<li>Approfondissement</li>
+</ul>
+<ol>
+<li>Les pointeurs: Pour manipuler la mémoire de manière plus fine.</li>
+<li>Les structures: Pour regrouper des données de différents types.</li>
+</ol>
+<hr>
+<h2>Chapitre 4 : Les Conditions<a name="conditions"></a></h2>
+<p>Dans ce chapitre, nous abordons les conditions en Go, essentielles pour gérer la logique de contrôle dans vos programmes.</p>
+<h2>1. Les instructions <code>if</code> et <code>else</code></h2>
+<h3>Exemple : Contrôle d'entrée en boîte de nuit</h3>
+<p>Pour automatiser l'entrée des clients selon leur âge, nous utilisons les conditions <code>if</code> et <code>else</code>.</p>
+<pre class="language-go"><code class="language-go"><span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+    <span class="token string">"fmt"</span>
+    <span class="token string">"os"</span>
+    <span class="token string">"strconv"</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Print</span><span class="token punctuation">(</span><span class="token string">"Entrez votre âge : "</span><span class="token punctuation">)</span>
+    <span class="token keyword">var</span> age <span class="token builtin">int</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Scan</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>age<span class="token punctuation">)</span>
+
+    <span class="token keyword">if</span> age <span class="token operator">&lt;</span> <span class="token number">18</span> <span class="token punctuation">{</span>
+        fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"Sortez !"</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"Entrez :)"</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>:checkered_flag: <strong>Résultats :</strong>
+Entrez votre âge : 16 Sortez !
+Entrez votre âge : 25 Entrez :</p>
+<p>Remarque :
+L'instruction <code>else</code> est facultative et sert à exécuter un bloc lorsque la condition <code>if</code> est fausse.</p>
+<h2>2. Les instructions <code>elseif</code></h2>
+<p>L'instruction <code>else if</code> permet de gérer des cas supplémentaires lorsque la première condition <code>if</code> n'est pas remplie. Elle permet de tester plusieurs alternatives de manière structurée.</p>
+<h2>3. Les instructions <code>switch</code> et <code>case</code></h2>
+<p>L'instruction <code>switch</code> simplifie les tests d'égalité multiples, idéale pour des menus ou des choix.</p>
+<h3>Exemple : Menu interactif</h3>
+<p>Ce programme teste différentes valeurs entrées par l'utilisateur et affiche un message approprié :</p>
+<pre class="language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    scanner <span class="token operator">:=</span> bufio<span class="token punctuation">.</span><span class="token function">NewScanner</span><span class="token punctuation">(</span>os<span class="token punctuation">.</span>Stdin<span class="token punctuation">)</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Print</span><span class="token punctuation">(</span><span class="token string">"Votre choix : "</span><span class="token punctuation">)</span>
+    scanner<span class="token punctuation">.</span><span class="token function">Scan</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    choix<span class="token punctuation">,</span> err <span class="token operator">:=</span> strconv<span class="token punctuation">.</span><span class="token function">Atoi</span><span class="token punctuation">(</span>scanner<span class="token punctuation">.</span><span class="token function">Text</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+        fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"Entrez un entier !"</span><span class="token punctuation">)</span>
+        os<span class="token punctuation">.</span><span class="token function">Exit</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">switch</span> choix <span class="token punctuation">{</span>
+    <span class="token keyword">case</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">:</span>
+        fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"George Boole !"</span><span class="token punctuation">)</span>
+    <span class="token keyword">case</span> <span class="token number">7</span><span class="token punctuation">:</span>
+        fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"William Van de Walle !"</span><span class="token punctuation">)</span>
+    <span class="token keyword">case</span> <span class="token number">23</span><span class="token punctuation">:</span>
+        fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"Pour certains, le nombre 23 est source de nombreux mystères."</span><span class="token punctuation">)</span>
+    <span class="token keyword">case</span> <span class="token number">42</span><span class="token punctuation">:</span>
+        fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"La réponse à la question ultime du sens de la vie !"</span><span class="token punctuation">)</span>
+    <span class="token keyword">case</span> <span class="token number">666</span><span class="token punctuation">:</span>
+        fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"Quand le diable veut une âme, le mal devient séduisant."</span><span class="token punctuation">)</span>
+    <span class="token keyword">default</span><span class="token punctuation">:</span>
+        fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"Mauvais choix !"</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> </code></pre>
+<p>:checkered_flag: <strong>Résultats :</strong>
+Votre choix : 666
+Quand le diable veut une âme, le mal devient séduisant
+Votre choix : 7
+William Van de Walle !
+Votre choix : 1
+George Boole !
+Votre choix : 0
+George Boole !</p>
+<h3>Points clés :</h3>
+<ul>
+<li>Utiliser <code>if</code>, <code>else if</code>, et <code>else</code> pour structurer la logique.</li>
+<li><code>switch</code> simplifie les tests d'égalité.</li>
+</ul>
+<hr>
+<h2>Chapitre 5 : Les Boucles<a name="boucles"></a></h2>
+<p>Les boucles permettent d'exécuter un bloc de code de manière répétée. En Go, la seule structure de boucle est le mot-clé <code>for</code>.
+Utilisons une boucle avec une initialisation, une condition et une itération pour les cas où vous savez combien de fois le bloc sera exécuté.</p>
+<h3>1. Boucle avec un nombre d'itérations connu</h3>
+<pre class="language-go"><code class="language-go"><span class="token keyword">for</span> i <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">{</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre>
+<h3>Exemple : Écrire une phrase 100 fois</h3>
+<pre class="language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> compteur <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">;</span> compteur <span class="token operator">&lt;</span> <span class="token number">100</span><span class="token punctuation">;</span> compteur<span class="token operator">++</span> <span class="token punctuation">{</span>
+        fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>compteur<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">") Je ne dois frapper mes camarades de classe"</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>:checkered_flag: <strong>Résultats:</strong></p>
+<ol>
+<li>Je ne dois frapper mes camarades de classe</li>
+<li>Je ne dois frapper mes camarades de classe
+...</li>
+<li>Je ne dois frapper mes camarades de classe</li>
+</ol>
+<h3>2. Boucle avec un nombre d'itérations inconnu</h3>
+<p>Utilisez une boucle avec une condition pour des itérations dont le nombre n’est pas déterminé à l'avance. La boucle s'arrête quand la condition devient fausse.</p>
+<h3>Exemple : Accepter l'entrée en boîte uniquement pour les majeurs :</h3>
+<pre class="language-go"><code class="language-go"><span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+    <span class="token string">"bufio"</span>
+    <span class="token string">"fmt"</span>
+    <span class="token string">"os"</span>
+    <span class="token string">"strconv"</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    scanner <span class="token operator">:=</span> bufio<span class="token punctuation">.</span><span class="token function">NewScanner</span><span class="token punctuation">(</span>os<span class="token punctuation">.</span>Stdin<span class="token punctuation">)</span>
+    <span class="token keyword">var</span> age <span class="token builtin">int</span>
+
+    <span class="token keyword">for</span> age <span class="token operator">&lt;</span> <span class="token number">18</span> <span class="token punctuation">{</span>
+        fmt<span class="token punctuation">.</span><span class="token function">Print</span><span class="token punctuation">(</span><span class="token string">"Entrez votre âge : "</span><span class="token punctuation">)</span>
+        scanner<span class="token punctuation">.</span><span class="token function">Scan</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        age<span class="token punctuation">,</span> <span class="token boolean">_</span> <span class="token operator">=</span> strconv<span class="token punctuation">.</span><span class="token function">Atoi</span><span class="token punctuation">(</span>scanner<span class="token punctuation">.</span><span class="token function">Text</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"Bienvenue en boîte de nuit !"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre>
+<p>:checkered_flag: <strong>Résultats:</strong>
+Entrez votre âge : 17
+Entrez votre âge : 19
+Bienvenue en boîte de nuit !</p>
+<h3>Points clés :</h3>
+<ul>
+<li>Nombre d'itérations connu : Utilisez la syntaxe '<code>for initialisation</code> ; <code>condition</code> ; <code>itération</code>.</li>
+<li>Nombre d'itérations inconnu : Utilisez une condition avec <code>for</code>.</li>
+<li>Gérez toujours les entrées utilisateur pour éviter des boucles infinies.</li>
+</ul>
+<hr>
+<h2>Chapitre 6 : Les Fonctions<a name="fonctions"></a></h2>
+<p>Les fonctions structurent le code en regroupant des instructions pour accomplir des tâches spécifiques. Elles améliorent la lisibilité et permettent de réutiliser le code.</p>
+<h3>Déclaration d'une Fonction</h3>
+<pre class="language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token function">nomDeLaFonction</span><span class="token punctuation">(</span>liste_de_paramètres<span class="token punctuation">)</span> type_de_retour <span class="token punctuation">{</span>
+    <span class="token comment">// Bloc de code</span>
+<span class="token punctuation">}</span></code></pre>
+<ol>
+<li><strong>Fonction sans type de retour ni paramètres</strong>
+Une fonction simple qui n'accepte ni paramètres ni type de retour.</li>
+</ol>
+<h3>Exemple :</h3>
+<pre class="language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token function">affichage</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"#################################"</span><span class="token punctuation">)</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"\tBonjour"</span><span class="token punctuation">)</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"#################################"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">affichage</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre>
+<ol start="2">
+<li><strong>Fonction avec paramètres et type de retour</strong>
+Une fonction peut accepter plusieurs paramètres, quels que soient leurs types.</li>
+</ol>
+<h3>Exemple :</h3>
+<pre class="language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token function">affichage</span><span class="token punctuation">(</span>nom <span class="token builtin">string</span><span class="token punctuation">,</span> age <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"Bonjour"</span><span class="token punctuation">,</span> nom<span class="token punctuation">,</span> <span class="token string">"vous avez"</span><span class="token punctuation">,</span> age<span class="token punctuation">,</span> <span class="token string">"ans"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">affichage</span><span class="token punctuation">(</span><span class="token string">"Hatim"</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">)</span>
+    <span class="token function">affichage</span><span class="token punctuation">(</span><span class="token string">"Alex"</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre>
+<p>:checkered_flag: <strong>Résultat:</strong>
+Bonjour Hatim vous avez 9 ans
+Bonjour Alex vous avez 12 ans</p>
+<ol start="3">
+<li><strong>Fonction avec type de retour</strong>
+Utilisez le mot-clé <code>return</code> pour renvoyer une valeur, qui peut être stockée ou utilisée directement.</li>
+</ol>
+<h3>Exemple :</h3>
+<pre class="language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token function">maxNbr</span><span class="token punctuation">(</span>a <span class="token builtin">int</span><span class="token punctuation">,</span> b <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">int</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> a <span class="token operator">></span> b <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> a
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> b
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    max <span class="token operator">:=</span> <span class="token function">maxNbr</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>max<span class="token punctuation">)</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"Valeur : %d , Type : %T\n"</span><span class="token punctuation">,</span> <span class="token function">maxNbr</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">maxNbr</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre>
+<p>:checkered_flag: <strong>Résultat:</strong>
+30
+Valeur : 50 , Type : int</p>
+<ol start="4">
+<li><strong>Retourner plusieurs valeurs</strong>
+Une fonction peut renvoyer plusieurs valeurs de types différents.</li>
+</ol>
+<h3>Exemple :</h3>
+<pre class="language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token function">additionTrois</span><span class="token punctuation">(</span>a <span class="token builtin">int</span><span class="token punctuation">,</span> b <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> a <span class="token operator">+</span> <span class="token number">3</span><span class="token punctuation">,</span> b <span class="token operator">+</span> <span class="token number">3</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    a<span class="token punctuation">,</span> b <span class="token operator">:=</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">8</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"Avant fonction a ="</span><span class="token punctuation">,</span> a<span class="token punctuation">,</span> <span class="token string">" b ="</span><span class="token punctuation">,</span> b<span class="token punctuation">)</span>
+    a<span class="token punctuation">,</span> b <span class="token operator">=</span> <span class="token function">additionTrois</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"Après fonction a ="</span><span class="token punctuation">,</span> a<span class="token punctuation">,</span> <span class="token string">" b ="</span><span class="token punctuation">,</span> b<span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre>
+<p>:checkered_flag: <strong>Résultat:</strong>
+Avant fonction a = 5  b = 8
+Après fonction a = 8  b = 11</p>
+<hr>
+<h2>Chapitre 7 : Les Tableaux<a name="tableaux"></a></h2>
+<p>Les tableaux permettent de stocker un ensemble de valeurs de même type. Ils peuvent être statiques (taille fixe) ou multidimensionnels.</p>
+<h2>1. Initialisation des Tableaux</h2>
+<h3>Déclaration</h3>
+<pre class="language-go"><code class="language-go"><span class="token keyword">var</span> nomTableau <span class="token punctuation">[</span>taille<span class="token punctuation">]</span><span class="token keyword">type</span></code></pre>
+<h3>Exemple:</h3>
+<pre class="language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> tableauInt <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token builtin">int</span>
+    <span class="token keyword">var</span> tableauFloat <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token builtin">float32</span>
+    <span class="token keyword">var</span> tableauString <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+    <span class="token keyword">var</span> tableauBool <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token builtin">bool</span>
+
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"Valeur par défaut des tableaux :"</span><span class="token punctuation">)</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"Int :"</span><span class="token punctuation">,</span> tableauInt<span class="token punctuation">)</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"Float :"</span><span class="token punctuation">,</span> tableauFloat<span class="token punctuation">)</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"String :"</span><span class="token punctuation">,</span> tableauString<span class="token punctuation">)</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"Bool :"</span><span class="token punctuation">,</span> tableauBool<span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre>
+<p>:checkered_flag: <strong>Résultat :</strong>
+Int : [0 0 0 0 0 0 0 0 0 0]
+Float : [0 0 0 0 0 0 0 0 0 0]
+String : [         ]
+Bool : [false false false false false false false false false false]</p>
+<h2>2. Accès aux éléments</h2>
+<ul>
+<li>Accès par Index</li>
+</ul>
+<pre class="language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> jours <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">{</span><span class="token string">"lundi"</span><span class="token punctuation">,</span> <span class="token string">"mardi"</span><span class="token punctuation">,</span> <span class="token string">"mercredi"</span><span class="token punctuation">,</span> <span class="token string">"jeudi"</span><span class="token punctuation">,</span> <span class="token string">"vendredi"</span><span class="token punctuation">,</span> <span class="token string">"samedi"</span><span class="token punctuation">,</span> <span class="token string">"dimanche"</span><span class="token punctuation">}</span>
+
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"Premier jour :"</span><span class="token punctuation">,</span> jours<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"Dernier jour :"</span><span class="token punctuation">,</span> jours<span class="token punctuation">[</span><span class="token function">len</span><span class="token punctuation">(</span>jours<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre>
+<ul>
+<li>Parcourir avec une Boucle range</li>
+<li></li>
+</ul>
+<pre class="language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> jours <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">{</span><span class="token string">"lundi"</span><span class="token punctuation">,</span> <span class="token string">"mardi"</span><span class="token punctuation">,</span> <span class="token string">"mercredi"</span><span class="token punctuation">,</span> <span class="token string">"jeudi"</span><span class="token punctuation">,</span> <span class="token string">"vendredi"</span><span class="token punctuation">,</span> <span class="token string">"samedi"</span><span class="token punctuation">,</span> <span class="token string">"dimanche"</span><span class="token punctuation">}</span>
+
+    <span class="token keyword">for</span> index<span class="token punctuation">,</span> jour <span class="token operator">:=</span> <span class="token keyword">range</span> jours <span class="token punctuation">{</span>
+        fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>jour<span class="token punctuation">,</span> <span class="token string">"est le jour numéro"</span><span class="token punctuation">,</span> index<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>:checkered_flag: <strong>Résultat:</strong>
+lundi est le jour numéro 1
+mardi est le jour numéro 2
+...
+dimanche est le jour numéro 7</p>
+<h2>3. Modifier des valeurs</h2>
+<pre class="language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> jours <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">{</span><span class="token string">"Hatim"</span><span class="token punctuation">,</span> <span class="token string">"Robert"</span><span class="token punctuation">,</span> <span class="token string">"Inconnu"</span><span class="token punctuation">,</span> <span class="token string">"Ahmed"</span><span class="token punctuation">,</span> <span class="token string">"Inconnu"</span><span class="token punctuation">}</span>
+
+    jours<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"Alex"</span> <span class="token comment">// Remplacer "Hatim" par "Alex"</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>jours<span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre>
+<ul>
+<li>Modifier via une fonction</li>
+</ul>
+<pre class="language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token function">replaceByHatim</span><span class="token punctuation">(</span>jours <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token builtin">string</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> i<span class="token punctuation">,</span> jour <span class="token operator">:=</span> <span class="token keyword">range</span> jours <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> jour <span class="token operator">==</span> <span class="token string">"Inconnu"</span> <span class="token punctuation">{</span>
+            jours<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"Hatim"</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> jours
+<span class="token punctuation">}</span></code></pre>
+<h2>4. Tableaux à Deux Dimensions</h2>
+<pre class="language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">(</span>
+        maxLigne   <span class="token operator">=</span> <span class="token number">3</span>
+        maxColonne <span class="token operator">=</span> <span class="token number">4</span>
+    <span class="token punctuation">)</span>
+    <span class="token keyword">var</span> tableau <span class="token punctuation">[</span>maxLigne<span class="token punctuation">]</span><span class="token punctuation">[</span>maxColonne<span class="token punctuation">]</span><span class="token builtin">int</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>tableau<span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre>
+<p><strong>Modifier une valeur :</strong></p>
+<pre class="language-go"><code class="language-go">tableau<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">42</span> <span class="token comment">// Modifier l'élément de la première ligne, deuxième colonne</span></code></pre>
+<h3>Points Clés:</h3>
+<ul>
+<li>Initialisation : Un tableau a une taille fixe et un type unique pour ses éléments.</li>
+<li>Accès : Utilisez les index pour accéder ou modifier des éléments.</li>
+<li>Boucle : Utilisez range pour parcourir les éléments avec index et valeurs.</li>
+<li>Multidimensionnel : Permet de modéliser des structures comme des grilles.</li>
+</ul>
+<hr>
+<p>:dart: <strong>Prochaine étape :</strong> Utiliser ces concepts pour coder un jeu de morpions ou tic tac toe game en Go !</p>
+<hr>
+<h2>Mini Projet: écriture d'un code de jeu de morpions en Go<a name="projet"></a></h2>
+<h3>Introduction</h3>
+<p>L'objectif de ce projet est de développer un jeu de morpions en ligne de commande avec Go. Les joueurs alternent leurs tours pour placer leur symbole (X ou O) sur un damier 3x3, et le jeu se termine lorsqu'un joueur aligne trois symboles ou qu'il n'y a plus de place.</p>
+<h3>Etape 1 : Initialisation</h3>
+<pre class="language-go"><code class="language-go"><span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+	<span class="token string">"bufio"</span>
+	<span class="token string">"fmt"</span>
+	<span class="token string">"os"</span>
+	<span class="token string">"strconv"</span>
+<span class="token punctuation">)</span>
+
+<span class="token comment">// Taille du damier et symboles des joueurs</span>
+<span class="token keyword">const</span> <span class="token punctuation">(</span>
+	tailleDamier   <span class="token operator">=</span> <span class="token number">3</span>
+	symboleJoueur1 <span class="token operator">=</span> <span class="token string">"X"</span>
+	symboleJoueur2 <span class="token operator">=</span> <span class="token string">"O"</span>
+<span class="token punctuation">)</span>
+
+<span class="token comment">// Damier initial</span>
+<span class="token keyword">var</span> damier <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">{</span>
+	<span class="token punctuation">{</span><span class="token string">"1"</span><span class="token punctuation">,</span> <span class="token string">"2"</span><span class="token punctuation">,</span> <span class="token string">"3"</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+	<span class="token punctuation">{</span><span class="token string">"4"</span><span class="token punctuation">,</span> <span class="token string">"5"</span><span class="token punctuation">,</span> <span class="token string">"6"</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+	<span class="token punctuation">{</span><span class="token string">"7"</span><span class="token punctuation">,</span> <span class="token string">"8"</span><span class="token punctuation">,</span> <span class="token string">"9"</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> joueur1 <span class="token operator">=</span> <span class="token boolean">true</span> <span class="token comment">// Le joueur 1 commence</span></code></pre>
+<p><strong>Explications:</strong></p>
+<ul>
+<li>Constantes globales : Taille du damier et symboles des joueurs pour éviter les erreurs dans le code.</li>
+<li>Damier : Utilisation d'un tableau 2D pour modéliser un damier clair.</li>
+<li>Tour du joueur : La variable joueur1 permet de savoir à qui c’est le tour.</li>
+</ul>
+<p><strong>Difficultés rencontrées:</strong>
+Créer un damier en 2D a été un défi au départ, car cela nécessite d’ajuster les indices lors des placements. J’ai choisi un tableau 2D pour une meilleure lisibilité lors de l’affichage.</p>
+<h3>Étape 2 : Fonction Principale</h3>
+<pre class="language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token function">jouer</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">jouer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">for</span> <span class="token punctuation">{</span>
+		<span class="token function">afficherDamier</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+		numeroCase <span class="token operator">:=</span> <span class="token function">recupererSaisieUtilisateur</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+		<span class="token function">placerSymbole</span><span class="token punctuation">(</span>numeroCase<span class="token punctuation">)</span>
+
+		<span class="token keyword">if</span> <span class="token function">verifierVictoire</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token function">afficherDamier</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+			fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token function">obtenirNomJoueur</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"a gagné !"</span><span class="token punctuation">)</span>
+			<span class="token keyword">break</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token keyword">if</span> <span class="token function">verifierMatchNul</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token function">afficherDamier</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+			fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"Match nul !"</span><span class="token punctuation">)</span>
+			<span class="token keyword">break</span>
+		<span class="token punctuation">}</span>
+
+		joueur1 <span class="token operator">=</span> <span class="token operator">!</span>joueur1 <span class="token comment">// Changement de joueur</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p><strong>Explications:</strong></p>
+<ul>
+<li>Boucle principale : Le jeu continue jusqu'à ce qu’un joueur gagne ou qu’il n’y ait plus de cases disponibles.</li>
+<li>Fonctions clés : <code>recupererSaisieUtilisateur</code>, <code>placerSymbole</code>, <code>verifierVictoire</code> et <code>verifierMatchNul</code>.</li>
+</ul>
+<p><strong>Difficultés rencontrées:</strong>
+La gestion des conditions de victoire dans une structure 2D a nécessité une réflexion sur les indices (lignes, colonnes, diagonales).</p>
+<h3>Étape 3 : Gestion des Entrées Utilisateur</h3>
+<pre class="language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token function">recupererSaisieUtilisateur</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>ligne<span class="token punctuation">,</span> colonne <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	scanner <span class="token operator">:=</span> bufio<span class="token punctuation">.</span><span class="token function">NewScanner</span><span class="token punctuation">(</span>os<span class="token punctuation">.</span>Stdin<span class="token punctuation">)</span>
+	<span class="token keyword">for</span> <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"%s, entrez la ligne et la colonne (ex: 1 2) : "</span><span class="token punctuation">,</span> <span class="token function">obtenirNomJoueur</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+		scanner<span class="token punctuation">.</span><span class="token function">Scan</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+		input <span class="token operator">:=</span> scanner<span class="token punctuation">.</span><span class="token function">Text</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Sscanf</span><span class="token punctuation">(</span>input<span class="token punctuation">,</span> <span class="token string">"%d %d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>ligne<span class="token punctuation">,</span> <span class="token operator">&amp;</span>colonne<span class="token punctuation">)</span>
+
+		<span class="token comment">// Vérification des limites et des cases libres</span>
+		<span class="token keyword">if</span> ligne <span class="token operator">>=</span> <span class="token number">1</span> <span class="token operator">&amp;&amp;</span> ligne <span class="token operator">&lt;=</span> tailleDamier <span class="token operator">&amp;&amp;</span> colonne <span class="token operator">>=</span> <span class="token number">1</span> <span class="token operator">&amp;&amp;</span> colonne <span class="token operator">&lt;=</span> tailleDamier <span class="token operator">&amp;&amp;</span> damier<span class="token punctuation">[</span>ligne<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>colonne<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">!=</span> symboleJoueur1 <span class="token operator">&amp;&amp;</span> damier<span class="token punctuation">[</span>ligne<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>colonne<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">!=</span> symboleJoueur2 <span class="token punctuation">{</span>
+			<span class="token keyword">return</span> ligne <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span> colonne <span class="token operator">-</span> <span class="token number">1</span>
+		<span class="token punctuation">}</span>
+
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"Entrée invalide ou case occupée. Essayez encore."</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p><strong>Explications:</strong>
+Cette fonction <code>recupererSaisieUtilisateur</code> :</p>
+<ul>
+<li>Vérifie que l’entrée est valide (nombres dans les limites, case libre).</li>
+<li>Utilise <code>fmt.Sscanf</code> pour interpréter facilement les coordonnées.</li>
+</ul>
+<p><strong>Difficultés rencontrées:</strong>
+Le parsing des coordonnées a été délicat, mais l'utilisation de fmt.Sscanf a grandement simplifié la lecture des saisies.</p>
+<h3>Étape 4 : Mise à Jour du Damier</h3>
+<pre class="language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token function">placerSymbole</span><span class="token punctuation">(</span>ligne<span class="token punctuation">,</span> colonne <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">if</span> joueur1 <span class="token punctuation">{</span>
+		damier<span class="token punctuation">[</span>ligne<span class="token punctuation">]</span><span class="token punctuation">[</span>colonne<span class="token punctuation">]</span> <span class="token operator">=</span> symboleJoueur1
+	<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+		damier<span class="token punctuation">[</span>ligne<span class="token punctuation">]</span><span class="token punctuation">[</span>colonne<span class="token punctuation">]</span> <span class="token operator">=</span> symboleJoueur2
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">afficherDamier</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token keyword">for</span> <span class="token boolean">_</span><span class="token punctuation">,</span> ligne <span class="token operator">:=</span> <span class="token keyword">range</span> damier <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>ligne<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre>
+<p><strong>Explications:</strong></p>
+<ul>
+<li>La fonction <code>placerSymbole</code> met à jour le damier avec le symbole du joueur.</li>
+<li>La fonction <code>afficherDamier</code> montre l'état actuel du jeu.</li>
+</ul>
+<h3>Étape 5 : Vérification des Conditions</h3>
+<pre class="language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token function">verifierVictoire</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">bool</span> <span class="token punctuation">{</span>
+	<span class="token comment">// Vérifie les lignes, colonnes et diagonales</span>
+	<span class="token keyword">for</span> i <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> tailleDamier<span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">{</span>
+		<span class="token keyword">if</span> damier<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">==</span> damier<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> damier<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">==</span> damier<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token punctuation">{</span>
+			<span class="token keyword">return</span> <span class="token boolean">true</span>
+		<span class="token punctuation">}</span>
+		<span class="token keyword">if</span> damier<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> damier<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> damier<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> damier<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token punctuation">{</span>
+			<span class="token keyword">return</span> <span class="token boolean">true</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+	<span class="token comment">// Vérifie les diagonales</span>
+	<span class="token keyword">return</span> <span class="token punctuation">(</span>damier<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">==</span> damier<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> damier<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">==</span> damier<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">||</span>
+		<span class="token punctuation">(</span>damier<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">==</span> damier<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> damier<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">==</span> damier<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">verifierMatchNul</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">bool</span> <span class="token punctuation">{</span>
+	<span class="token keyword">for</span> <span class="token boolean">_</span><span class="token punctuation">,</span> ligne <span class="token operator">:=</span> <span class="token keyword">range</span> damier <span class="token punctuation">{</span>
+		<span class="token keyword">for</span> <span class="token boolean">_</span><span class="token punctuation">,</span> caseDamier <span class="token operator">:=</span> <span class="token keyword">range</span> ligne <span class="token punctuation">{</span>
+			<span class="token keyword">if</span> caseDamier <span class="token operator">!=</span> symboleJoueur1 <span class="token operator">&amp;&amp;</span> caseDamier <span class="token operator">!=</span> symboleJoueur2 <span class="token punctuation">{</span>
+				<span class="token keyword">return</span> <span class="token boolean">false</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+	<span class="token keyword">return</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span></code></pre>
+<p><strong>Explications:</strong></p>
+<ul>
+<li>La focntion <code>verifierVictoire</code> vérifie les conditions de victoire pour les lignes, colonnes et diagonales.</li>
+<li>La focntion <code>verifierMatchNul</code> vérifie si toutes les cases sont occupées.</li>
+</ul>
+<h3>Synthèse sur le TP</h3>
+<p><strong>Structure choisie :</strong></p>
+<ul>
+<li>Un tableau 2D pour modéliser le damier.</li>
+<li>Des fonctions modulaires pour chaque aspect du jeu : affichage, saisie utilisateur, vérifications et gestion des tours.</li>
+<li>Utilisation de la bibliothèque <code>bufio</code> : Je n’étais pas familier avec son fonctionnement pour les entrées utilisateur, mais des recherches sur les forums Go et l’expérimentation m’ont permis de surmonter ce problème rapidement.</li>
+</ul>
+<p><strong>Difficultés et Résolutions:</strong></p>
+<ul>
+<li>
+<p>Blocage : Gestion des indices dans un tableau 2D
+<em>Problème</em> : L'utilisation d'un tableau 2D au lieu d'un tableau 1D rendait la vérification des conditions de victoire plus complexe, notamment pour les diagonales.
+:bulb: <em>Solution</em> :
+J'ai utilisé des boucles pour parcourir dynamiquement chaque ligne, colonne et diagonale.
+J'ai également vérifié manuellement les indices critiques pour les diagonales, car elles ne peuvent pas être parcourues directement comme une ligne ou une colonne.</p>
+</li>
+<li>
+<p>Blocage : Contrôle des entrées utilisateur
+<em>Problème</em> : Les utilisateurs peuvent entrer des valeurs non valides (par exemple, des lettres, des nombres hors limites ou des cases déjà occupées).
+:bulb: <em>Solution</em> :
+Une boucle <code>for</code> a été mise en place pour redemander une entrée valide tant que la saisie n’était pas correcte.
+J'ai utilisé <code>fmt.Sscanf</code> pour analyser les coordonnées et ajouté des messages explicatifs pour guider les joueurs.</p>
+</li>
+<li>
+<p>Blocage : Gestion des conditions de victoire
+<em>Problème</em> : Vérifier les alignements (lignes, colonnes et diagonales) dans un tableau 2D nécessitait une logique différente pour chaque type d'alignement.
+:bulb: <em>Solution</em> :
+J'ai écrit une fonction générique qui vérifie les alignements de manière conditionnelle.
+En cas de répétitions (par exemple, plusieurs lignes), j'ai optimisé le code en regroupant les vérifications dans une boucle.</p>
+</li>
+<li>
+<p>Blocage : Affichage esthétique du damier
+<em>Problème</em> : Le damier n’était pas lisible au début à cause d’un espacement mal géré.
+:bulb: <em>Solution</em> :
+J’ai ajusté le formatage en ajoutant des espaces et en séparant les lignes par des bordures visuelles pour rendre le jeu plus clair.</p>
+</li>
+</ul>
+<p><strong>Lien vers le Github du projet:</strong>
+<a href="https://github.com/ThomasMerle25/morpions-go" title="Morpions Go">Projet Morpions Go</a></p>
 <h2>Horodateur</h2>
 <p>Toutes les séances et le nombre d'heures que l'on y a passé.</p>
 <table>
@@ -194,9 +774,29 @@
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td></td>
-<td></td>
+<td>05-12/11/2024</td>
+<td>6H</td>
+<td>Tutoriel sur le site web: initilaisation de mon environnement Go et apprentissage des bases</td>
+</tr>
+<tr>
+<td>14/11/2024</td>
+<td>1H</td>
+<td>Initialisation du jeu et fonction principale</td>
+</tr>
+<tr>
+<td>16/11/2024</td>
+<td>1H</td>
+<td>Gestion des entrées utilisateurs</td>
+</tr>
+<tr>
+<td>17/11/2024</td>
+<td>1H</td>
+<td>Mise a jour du damier et vérifications des conditions</td>
+</tr>
+<tr>
+<td>18/11/2024</td>
+<td>2H</td>
+<td>Corrections du code et écritures des tests unitaires</td>
 </tr>
 </tbody>
 </table>
