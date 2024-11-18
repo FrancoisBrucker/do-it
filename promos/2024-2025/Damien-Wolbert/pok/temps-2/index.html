@@ -105,7 +105,7 @@
 
         <p class="mb-4 text-lg">
 
-                Afin de pouvoir modéliser facilement un parc solaire avec un logiciel connu et utilisé par tous (Excel), ce POK me permettra de mettre en pratique mes connaissances en VBA et de mettre en place un outil permettant l'estimation des quantitatifs de câbles nécessaire la construction d'un parc solaire.
+                Afin de pouvoir modéliser facilement un parc solaire avec un logiciel connu et utilisé par tous (Excel), ce POK me permettra de mettre en pratique mes connaissances en VBA et de mettre en place un outil permettant l'estimation des quantitatifs de câbles nécessaires la construction d'un parc solaire.
 
         </p>
 
@@ -140,14 +140,8 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Les lien utiles pour la compréhension de celui-ci.</p>
 </div></div>
 
-<p>Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce POK. On oubliera pas de donner :</p>
-<ul>
-<li>le niveau et les prérequis nécessaires en utilisant la balise <a href="/do-it/cs/contribuer-au-site/#prerequis"><code>prerequis</code></a></li>
-<li>les autres POK &amp; MON en rapport en utilisant la balise <a href="/do-it/cs/contribuer-au-site/#lien"><code>lien</code></a></li>
-</ul>
 <h2>Cadrage</h2>
 <h3>Objectifs principaux</h3>
 <ol>
@@ -155,24 +149,33 @@
 <li>Mettre en place un parcours utilisateur simple et agréable.</li>
 <li>Ajuster le niveau de précision des estimations et outils au temps alloué au projet.</li>
 </ol>
+<h3>Stratégie de résolution</h3>
+<ol>
+<li>Reccueillir le besoin</li>
+<li>Mettre en place l'interface utilisateur</li>
+<li>Mettre en place des &quot;templates&quot; pour le renseignement des données d'entrée et de sortie.</li>
+<li>Coder les fonctions permettant l'entrée des données.</li>
+<li>Coder les fonctions permettant le calcul des distances et des quantités de câble.</li>
+<li>Tester et corriger.</li>
+</ol>
 <h3>Monitoring du projet</h3>
-<p>Le suivi du projet a été réalisé sur un outil personnel développé spécialement pour le suivi des POK et MON. Le contenu est reporté ci-dessous.</p>
 <h4>Back-log</h4>
 <h5>Sprint 1</h5>
 <ul>
 <li>[x] Réaliser le cadrage du projet</li>
 <li>[x] Sprint backlog 1</li>
 <li>[x] Brainstorming général</li>
+<li>[X] Recueillir le besoin</li>
 <li>[x] Lister les fonctionnalités principales du système</li>
 <li>[x] Parcours utilisateur rapide</li>
-<li>[ ] Définir les interfaces entre le système et l'utilisateur</li>
+<li>[x] Définir une première versions des interfaces entre le système et l'utilisateur</li>
 <li>[x] Lister les données d'entrées</li>
-<li>[ ] Trame des templates de chacune des interfaces</li>
-<li>[ ] Trame du template des données de sortie</li>
-<li>[ ] Mise au propre des templates des données d'entrée</li>
-<li>[ ] Mise au propre des templates des données de sortie</li>
+<li>[x] Trame des templates de chacune des interfaces</li>
+<li>[x] Trame du template des données de sortie</li>
+<li>[x] Mise au propre des templates des données d'entrée</li>
+<li>[x] Mise au propre des templates des données de sortie</li>
 <li>[ ] Rédaction des fonctions permettant la création des templates d'inputs</li>
-<li>[ ] Rédiger le sprintbacklog 1 sur le site do-it</li>
+<li>[x] Rédiger le sprintbacklog 1 sur le site do-it</li>
 <li>[ ] Rédiger le CR du sprint 1 sur le site Do-it</li>
 </ul>
 <table>
@@ -211,9 +214,10 @@
 <p><strong>TOTAL POK 2 :</strong></p>
 </div></div>
 <h3>Analyse post-morterm</h3>
-<p><strong>Sprint 1:</strong></p>
+<p><strong>Sprint 1 :</strong></p>
+<p><strong>Sprint 2 :</strong></p>
 <h2>Vocabulaire et fonctionnement d'un parc photovoltaïque</h2>
-<p>Afin de comprendre la suite de cet article, il est nécessaire de s'intier au monde du photovoltaïque ainsi qu'à son vocabulaire souvent anglophone.</p>
+<p>Afin de comprendre la suite de ce POK, il est nécessaire de s'intier au monde du photovoltaïque ainsi qu'à son vocabulaire.</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
 <details class="group">
 <summary class="list-none py-0.5">
@@ -231,10 +235,41 @@
 </svg>
 </summary>
 <div class="mx-8 pb-2">
+<p>Le schema ci-dessous présente la configuration de parc utilisée tout au long du projet (c.f. hypothèses)
+<img src="POK%202%20%20Brainstorming%20g%C3%A9n%C3%A9rale%20P3.png" alt="Parc photovoltaïque simple">
+<strong>Lexique :</strong></p>
+<ul>
+<li><em><strong>String</strong></em> : Ensemble de panneaux connectés en série.</li>
+<li><em><strong>BR</strong></em> : Boite de raccordement - Organe électrique auquel sont branchés des plusieurs strings en parallèle.</li>
+<li><em><strong>PTR</strong></em> : Poste de transformation - Cabinet électrique dans lequel la puissance envoyée par plusieurs BR est convertie par des onduleurs (passage de courant continu à alternatif), puis transformée par un transformateur (augmentation de la tension du signal). Les différents PTR sont connectés en série ou en parallèle au poste de livraison, interface entre le parc et les réseaux d'ENEDIS et/ou de RTE.</li>
+<li><em><strong>Section de câble</strong></em> : Section transversale du conducteur d'un câbles. Les <strong>petites sections</strong> correspondents généralement aux câbles de 4, 6 et 10 mm² ; <strong>les grandes sections</strong> correspondent aux section de 185, 240, 300 et 400 mm².</li>
+</ul>
 </div>
 </details>     
 </div>
-<h2>Définition du cahier des charges</h2>
+<h2>Comment recueillir le besoin ?</h2>
+<table>
+<thead>
+<tr>
+<th>Etapes</th>
+<th>Résultats</th>
+<th>Difficultés rencontrés</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Discussion avec des projeteurs électriciens et ingénieurs électriciens</td>
+<td>Fonctionnalités principales et enjeux</td>
+</tr>
+</tbody>
+</table>
+<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Un projeteur électricien est chargé de la réalisation des plans électriques globaux à partir des exigences des inégnieurs électriciens. Il produit souvent des livrables réalisés sur des logiciels comme AutoCAD.</p>
+</div></div>
 <div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
