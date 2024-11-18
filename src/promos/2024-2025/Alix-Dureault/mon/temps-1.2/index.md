@@ -13,7 +13,7 @@ tags:
 résumé: "Un MON explorant la difficulté de la perte de savoir dans l'entreprise liée au départ d'employés."
 ---
 
-Pendant la vie d'un projet, il arrive que des chefs de projet se succèdent les uns par rapport aux autres. Cette situation peut arriver pour des mutations internes, un départ ou encore par un besoin de changement. Ces situations peuvent mettre en péril le bon déroulement du projet car elles causent souvent une perte d'informations concidérable.
+Pendant la vie d'un projet, il arrive que des chefs de projet se succèdent les uns par rapport aux autres. Cette situation peut arriver pour des mutations internes, un départ ou encore par un besoin de changement. Ces situations peuvent mettre en péril le bon déroulement du projet car elles chausent souvent une perte d'informations concidérable.
 
 Pendant ce MON, je vais donc essayer de comprendre ce qu'est le knowledge management et comment s'assurer de la bonne conservation des informations tout au long de la vie d'un projet.
 

@@ -45,9 +45,9 @@ Le suivi du projet a été réalisé sur un outil personnel développé spécial
 #### Back-log
 ##### Sprint 1
 
-- [ ] Réaliser le cadrage du projet
-- [ ] Sprint backlog 1
-- [ ] Brainstorming général
+- [x] Réaliser le cadrage du projet
+- [x] Sprint backlog 1
+- [x] Brainstorming général
 - [ ] Lister les fonctionnalités principales du système
 - [ ] Parcours utilisateur rapide
 - [ ] Définir les interfaces entre le système et l'utilisateur
@@ -56,18 +56,18 @@ Le suivi du projet a été réalisé sur un outil personnel développé spécial
 - [ ] Trame du template des données de sortie
 - [ ] Mise au propre des templates des données d'entrée
 - [ ] Mise au propre des templates des données de sortie
-- [ ] Lister les fonctions informatiques a priori nécessaires
 - [ ] Rédaction des fonctions permettant la création des templates d'inputs
-- [ ] Rédaction des fonctions informatiques permettant le calcul des distances sur la grille
 - [ ] Rédiger le sprintbacklog 1 sur le site do-it
 - [ ] Rédiger le CR du sprint 1 sur le site Do-it
 
 | Date | Heures passées | Indications | Niveau d'efficacité |
-| -------- | -------- |-------- | -------- |
+| -------- | -------- | -------- | -------- |
 ***Total du sprint :***
 
 ##### Sprint 2
 
+- [ ] Rédaction des fonctions informatiques permettant le calcul des distances sur la grille
+- [ ] Lister les fonctions informatiques a priori nécessaires
 
 | Date | Heures passées | Indications | Niveau d'efficacité |
 | -------- | -------- |-------- | -------- |
@@ -77,9 +77,62 @@ Le suivi du projet a été réalisé sur un outil personnel développé spécial
 **TOTAL POK 2 :**
 {% endfaire %}
 
-## Rendu
-
 ## Sprint 1
+
+### Vocabulaire et fonctionnement d'un parc photovoltaïque
+
+Afin de comprendre la suite de cet article, il est nécessaire de s'intier au monde du photovoltaïque ainsi qu'à son vocabulaire souvent anglophone.
+
+{% details "Constitution générale d'un parc photovoltaïque" %}
+
+{% enddetails %}
+
+
+### Définition du cahier des charges
+
+La rédaction du cahier des charges a été réalisée sur mon lieu d'apprentissage au côtés d'ingénieurs électriciens et civils.
+{% note %}
+Les limitations de VBA et Excel ont pausé un certain nombre de problèmes, notamment l'impossibilité de répondre à tous les besoins fromulés par les équipes de manière simple.
+{% endnote %}
+
+**Fonctionnalités principales**  
+1. Positionner les éléments principaux du parcs de manière graphique :
+   1. Stands
+   2. String combiner boxes (SCB)
+   3. Inverter transformer station (ITS)
+   4. Tranchées par typologie
+2. Positionner et caractériser les différentes strings
+   1. Affecter les strings aux différentes SCB
+   2. Méthode de racordement des strings : type de câble (section du conducteur), type de raccordement (aérien ou enterré)
+3. Extraire les données du design créé de manière graphique sous forme d'une base de données exploitable.
+{% note %}
+J'ai préféré réaliser cette étude des fonctonctionnalités lors de moments informels afin d'éviter que les ingénieurs interrogés ne proposent trop de fonctionnalités et sortent du cadre de l'exercice.
+{% endnote %}
+
+**Données d'entrée**  
+*Données dimensionnantes :*
+- Inter-rangées : espace séparant les rangés sur dans leur longueur.
+- Inter-stand : espace séparant les rangés dans leur largeur.
+- Largeur des voies d'accès.
+- Dimension des tranchées par typologie : tranchées pour câbles DC petite section, tranchées pour câbles DC grosse section.
+- Dimensions des stands.
+- Nombre de strings par stands.
+- Nombre maximum de strings par SCB.
+
+*Données de de designs :*
+- Affectation des strings aux SCB.
+- Positionnement des routes d'accès.
+- Positionnement des tranchées.
+- Positionnement des remontées de câble.
+
+**Livrables fournis par l'outil :**  
+1. Tableau complet permettant d'extraire les données de dimensionnement.
+2. Carnet de câble.
+
+### Parcours utilisateur
+
+
+
 
 
 ## Sprint 2
