@@ -133,15 +133,24 @@
 
 
 
+<head>
+  <link rel="icon" href="https://github.com/BoxBoxJason/achievements/blob/203309903d67090188814ce491a9d418ab71891e/assets/icons/pusheen_holding_trophy.png?raw=true" type="image/x-icon">
+</head>
+<script type="module">
+  // Mermaid configuration
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true });
+</script>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8 mb-2 mr-8">
-<p>POK moyen</p>
+<p><strong>POK avancé</strong></p>
 </div><div class="pl-8 mr-8">
 <ul>
 <li><a href="https://code.visualstudio.com/">VSCode</a></li>
+<li><a href="https://www.typescriptlang.org/">TypeScript</a></li>
 </ul>
 </div></div>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
@@ -149,15 +158,147 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
 </svg>
 <div class="pl-8 mr-8">
+<p><strong>Liens utiles</strong></p>
 <ul>
+<li><a href="https://github.com/boxboxjason/achievements">Repo Achievements sur GitHub</a></li>
 <li><a href="https://code.visualstudio.com/api">API VSCode</a></li>
 <li><a href="https://code.visualstudio.com/api/get-started/your-first-extension">Développer son extension VSCode</a></li>
 </ul>
 </div></div>
 
+<div class="image-title" style="display: flex; justify-content: center; align-items: center; margin-top: 10px;">
+  <img src="https://github.com/BoxBoxJason/achievements/blob/203309903d67090188814ce491a9d418ab71891e/assets/icons/pusheen_holding_trophy.png?raw=true" alt="Achievements logo" width="200px" style="image-rendering: pixelated; border: none; margin: 0">
+  <h1 style="width: fit-content; font-size: 3rem; padding-top: 10px;">Achievements</h1>
+</div>
 <h2>Introduction</h2>
-<p>Après avoir passé des années à coder, on se rend compte qu'on en a passé des heures sur nos lignes de code. Tout collectionneur de succès qui se respecte aimerait pouvoir montrer à ses amis qu'il a passé des heures à coder. Et puis qui n'a jamais rêver de terminer VSCode ? C'est pourquoi j'ai décidé de développer une extension pour VSCode permettant de débloquer des achievements en fonction de l'utilisation de l'éditeur.</p>
+<p>Toujours dans l'optique de créer le <strong>meilleur environnement de développement possible</strong>, je me suis demandé ce qui permet au <strong>développeur</strong> d'<strong>être le plus heureux quand il travaille</strong>. C'est alors que je me suis rappelé que la majorité des développeurs a un passif (ou un présent) de joueur de jeux vidéo. Un système de succès pousse les joueurs à <strong>continuer de jouer</strong> et les <strong>récompense</strong> pour leur temps passé sur le jeu. Cela <strong>booste la motivation</strong> et la <strong>satisfaction</strong> du joueur.</p>
+<p>Et puis <em>Qui n'a jamais rêvé de terminer VSCode</em> ? C'est pourquoi j'ai décidé de développer une extension pour VSCode permettant de débloquer des achievements en fonction de l'utilisation de l'éditeur.</p>
 <p>Il existe déjà deux extensions de ce type sur le marché, mais elles ne sont pas complètes du tout et ne sont plus maintenues. J'ai donc décidé de développer la mienne, qui sera plus complète et plus à jour.</p>
+<h2>Fonctionnement</h2>
+<p>L'extension <code>Achievements</code> fonctionne de manière assez simple. Le but est de ne pas impacter les performances de l'éditeur et de pouvoir fonctionner hors ligne.</p>
+<h3>Workflow</h3>
+<p>Le workflow de l'extension est le suivant:</p>
+<ol>
+<li>L'intégrité de la <strong>base de données</strong> est vérifiée à chaque démarrage de l'extension. S'il y a un problème, elle est patchée comme il faut.</li>
+<li>Des <strong>listeners</strong> sont mis en place pour écouter les événements de l'éditeur (ouverture de fichier, sauvegarde, etc.).</li>
+<li>Chaque listener déclenche l'<strong>augmentation</strong> d'un ou plusieurs critère de <strong>progression</strong>.</li>
+<li>Lorsqu'une progression est augmentée, on vérifie si elle permet de <strong>débloquer un succès</strong>.</li>
+<li>Si un succès est débloqué, on le notifie à l'utilisateur.</li>
+<li>A tout moment, l'utilisateur peut aller consulter la liste des succès débloqués / en cours sur la Webview de l'extension.</li>
+</ol>
+<h3>Webview</h3>
+<p>L'extension dispose d'une <strong>Webview</strong> qui permet à l'utilisateur de consulter la liste des succès débloqués et en cours. Cela permet de garder un historique des succès débloqués et de voir les succès restants à débloquer.
+<img src="webview.png" alt="Webview"></p>
+<h3>Commandes</h3>
+<p>L'extension ajoute tout un tas de commandes à vscode:</p>
+<ul>
+<li><code>achievements.enable</code>: Active / désactive l'extension</li>
+<li><code>achievements.disable</code>: Désactive l'extension</li>
+<li><code>achievements.configuration</code>: Ouvre la configuration de l'extension</li>
+<li><code>achievements.notifications</code>: Active / désactive les notifications</li>
+<li><code>achievements.show</code>: Ouvre la Webview des succès</li>
+</ul>
+<p>Il s'agit de raccourcis pour les actions les plus courantes.</p>
+<h3>Base de données</h3>
+<ul>
+<li>J'utilise une base de données SQLite pour <strong>stocker les succès</strong>, leurs conditions de déblocage, leur état, la date de complétion, et tout un tas de propriétés.</li>
+<li>Je stocke aussi la <strong>progression de chaque critère</strong> pour débloquer les succès. Cela me permet de savoir si un succès est débloqué ou non.</li>
+<li>Il y a de nombreux achievements qui ne peuvent se débloquer que si certains autres sont débloqués. Pour cela, j'utilise une table qui <strong>stocke les dépendances entre les succès</strong>.</li>
+<li>Enfin, je <strong>stocke les versions de la base de données</strong> pour pouvoir mettre à jour les tables en fonction de la version de l'extension. (C'est utile pour les mises à jour qui vont nécessiter des migrations de bases de données).</li>
+</ul>
+<pre class="mermaid">
+%%{init: {'theme': 'forest'}}%%
+classDiagram
+    class schema_version {
+      +INTEGER id
+      +INTEGER version
+      +DATETIME applied_at
+    }
+
+    class achievements {
+      +INTEGER id
+      +TEXT title
+      +TEXT icon
+      +TEXT category
+      +TEXT group
+      +TEXT labels
+      +TEXT criteria
+      +TEXT description
+      +INTEGER tier
+      +INTEGER points
+      +INTEGER hidden
+      +INTEGER repeatable
+      +BOOLEAN achieved
+      +DATETIME achievedAt
+    }
+
+    class achievement_requirements {
+      +INTEGER achievement_id
+      +INTEGER requirement_id
+    }
+    achievement_requirements --> achievements : achievement_id
+    achievement_requirements --> achievements : requirement_id
+
+    class progressions {
+      +INTEGER id
+      +TEXT name
+      +INTEGER value
+    }
+</pre>
+<h2>Développement</h2>
+<p>VSCode fonctionne grâce à Electron, ce qui signifie qu'il fonctionne exactement comme un site web. Le développement des extensions se fait donc en JavaScript / TypeScript.
+J'ai choisi d'utiliser <strong>TypeScript</strong> pour mon extension car il permet de <u>s'assurer que le code est correct</u> avant de l'exécuter. Cela permet de réduire les erreurs et de gagner du temps.</p>
+<h3>Dépendances</h3>
+<p>Pour mon extension, j'ai utilisé les dépendances suivantes :</p>
+<ul>
+<li>Développement
+<ul>
+<li><code>npm</code> pour le management des dépendances</li>
+<li><code>esbuild</code> pour le bundling du code (la compilation de TypeScript)</li>
+<li><code>electron-rebuild</code> pour pouvoir packager mes dépendances avec l'extension</li>
+<li><code>eslint</code> pour l'analyse statique du code</li>
+</ul>
+</li>
+<li>Run
+<ul>
+<li><code>vscode</code> pour l'API de VSCode</li>
+<li><code>better-sqlite3</code> pour la base de données</li>
+<li><code>react</code> pour l'interface utilisateur</li>
+<li><code>fluentUI</code> pour le style des composants UI</li>
+</ul>
+</li>
+</ul>
+<h2>Post-mortem</h2>
+<p>La documentation de l'API de VSCode concernant les webviews est TRES MAUVAISE, contrairement à ce qu'on pourrait croire, il est très difficile de trouver des exemples concrets pour réaliser des actions relativement peu complexes. On dirait que les développeurs de VSCode ont oublié de documenter leur propre API.</p>
+<p>Au niveau de l'extensibilité, qui est un des arguments principaux de VSCode, c'est un peu la déception. Il est très difficile de faire des choses qui sortent de l'ordinaire concernant les webviews. Je suis obligé de passer par de multiples hacks pour arriver à mes fins (afficher des images ?????). La communication extension &lt;-&gt; webview est un véritable calvaire avec 0 documentation mis à par un exemple miteux. Le framework n'est vraiment pas bon pour le développement de vues personnalisées et complexes (ils déconseillent aux utilisateurs de développer des webviews pour des raisons de performances mais ce n'est pas une raison pour ne pas prendre en charge leur ajout).</p>
+<p>Le bundle des vues n'est pas prévu par défaut par VSCode, c'est une catastrophe pour packager ses images / icones / css / js. Il faut tout mettre à la main dans le bundle, ce qui est une perte de temps et d'énergie pour des choses qui devraient être automatisées.</p>
+<h3>Planning</h3>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Heures passées</th>
+<th>Indications</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mercredi 12/11</td>
+<td>3H</td>
+<td>Etablissement du projet, création du premier modèle de base de données</td>
+</tr>
+<tr>
+<td>Jeudi 13/11</td>
+<td>4H</td>
+<td>Création des premiers succès (1099), standardisation de l'attribution des points, des difficultés,...</td>
+</tr>
+<tr>
+<td>Samedi 15/11</td>
+<td>3H</td>
+<td>Création de la webview et communication extension &lt;-&gt; webview</td>
+</tr>
+</tbody>
+</table>
 
 
 </article>
