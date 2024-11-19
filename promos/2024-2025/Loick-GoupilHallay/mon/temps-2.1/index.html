@@ -136,7 +136,7 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8 mb-2 mr-8">
-<p>MON facile</p>
+<p><strong>MON avancé</strong></p>
 </div><div class="pl-8 mr-8">
 <ul>
 <li><a href="https://kubernetes.io/">Kubernetes</a></li>
@@ -148,6 +148,7 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
 </svg>
 <div class="pl-8 mr-8">
+<p><strong>Liens utiles</strong></p>
 <ul>
 <li><a href="https://k9scli.io/">k9s</a></li>
 </ul>
@@ -157,6 +158,144 @@
 <p>Tout DevOps qui se respecte est amené à travailler avec un orchestrateur de conteneurs: <strong>Kubernetes</strong>. Il doit être capable de naviguer dans les ressources de son cluster afin de débugger, déployer, ou simplement observer ce qui s'y passe.
 La CLI <strong>kubectl</strong> est très puissante, mais elle n'est pas forcément la plus ergonomique pour toutes les opérations du quotidien. On y passe beaucoup de temps dès qu'il faut faire quoi que ce soit. Afin de gagner en productivité, il existe un outil formidable d'interface graphique en CLi pour Kubernetes : <strong>k9s</strong>.</p>
 <p>Dans ce MON, nous allons voir comment devenir un maître de <strong>k9s</strong>, afin de ne plus jamais perdre de temps pour nos opérations de tous les jours.</p>
+<p><img src="images/k9s.png" alt="k9s default view"></p>
+<h2>Cas d'usage</h2>
+<p>Nous allons nous baser sur un exemple concret de déploiement de service (<strong>SonarQube</strong>) sur un cluster Kubernetes, en passant par une helm chart. L'idée est de suivre le workflow de déploiement complet afin de s'assurer que le déploiement fonctionne sans encombre. En cas de problème, nous devrons être capables de débugger rapidement et efficacement, uniquement avec <strong>k9s</strong>.</p>
+<p>Nous allons supposer que <u>k9s est déjà installé</u> sur votre machine <u>sans plugins</u>. Si ce n'est pas le cas, vous pouvez suivre les instructions sur le <a href="https://k9scli.io/">site officiel</a>.<br>
+De plus nous allons supposer que vous avez un <u>cluster Kubernetes fonctionnel</u>, et que vous avez les droits pour déployer des ressources dessus. (Si ce n'est pas le cas, vous pouvez suivre le <a href="https://kubernetes.io/docs/setup/">tutoriel d'installation de Kubernetes</a>)</p>
+<p style="background-color: #ffb1a8; border: 2px solid #ba1300; padding: 10px; border-radius: 10px">
+Enfin, nous n'expliquerons ni le fonctionnement de kubernetes et de ses ressources, ni d'une helm chart, ni le flow de déploiement de SonarQube. Si vous avez des questions sur ces sujets, n'hésitez pas à vous renseigner sur internet ou à me contacter.
+</p>
+<h3>Démarrage</h3>
+<p>Nous utiliserons la helm chart classique de bitnami pour déployer SonarQube, pour cela nous sommes obligés de passer par le terminal, k9s ne permettant pas l'intéraction avec la CLI helm. Nous déployons sur le namespace <code>workspace-test</code></p>
+<pre class="language-bash"><code class="language-bash">helm repo <span class="token function">add</span> bitnami https://charts.bitnami.com/bitnami
+helm repo update
+helm <span class="token function">install</span> sonarqube bitnami/sonarqube <span class="token parameter variable">--namespace</span> workspace-test</code></pre>
+<h3>Suivi du déploiement</h3>
+<p>A partir de maintenant, tout se passe sur k9s. Nous allons suivre le déploiement de SonarQube, et nous assurer que tout se passe bien. Pour cela, on doit globalement vérifier que la helm release arrive au statut <code>DEPLOYED</code>, que les pods sont en <code>Running</code>, et que les services sont bien vivants.<br>
+Pour cela, on va suivre 3 ressources principales:</p>
+<ul>
+<li>Les <strong>events</strong> du namespace <code>workspace-test</code></li>
+<li>Les <strong>pods</strong> du namespace <code>workspace-test</code></li>
+<li>La <strong>helm release</strong> de SonarQube</li>
+</ul>
+<p><code>SHIFT + 1</code> pour filtrer sur le namespace <code>workspace-test</code></p>
+<h4>Events au déploiement, tout va bien</h4>
+<p><code>:events</code> pour afficher les évènements du namespace <code>workspace-test</code>
+<img src="images/events_start.png" alt="Events déploiement SonarQube"></p>
+<h4>Pods en cours de démarrage</h4>
+<p><code>:pods</code> pour afficher les pods du namespace <code>workspace-test</code>
+<img src="images/missing_pods.png" alt="Pods démarrage SonarQube"></p>
+<p>On voit une première anomalie (classique), un des pods est prêt, l'autre est en <code>Pending</code>. Cela peut être normal dans le cas où le pod attend quelque chose pour démarrer. Cependant cela ne doit pas durer trop longtemps.</p>
+<h4>Malheureusement, un pod ne démarre pas</h4>
+<p><code>ENTER</code> sur le pod en <code>Pending</code> pour voir les détails
+<img src="images/pods_fail.png" alt="Failing containers"></p>
+<p>Catastrophe, tous nos conteneurs du pod SonarQube sont en erreur ! Il va falloir débugger ça.</p>
+<h4>Logs du pod</h4>
+<p><code>L</code> pour afficher les logs du pod
+<img src="images/pod_logs.png" alt="Logs pod SonarQube"></p>
+<p>Oh misère de misère ! Les logs sont complètement vides ! Que faire capitaine ?</p>
+<h4>Events</h4>
+<p><code>:events</code> pour afficher les évènements du namespace <code>workspace-test</code>
+<img src="images/events_error.png" alt="Events pod SonarQube"></p>
+<p><code>ENTER</code> sur l'évènement pour voir les détails
+<img src="images/error_detail.png" alt="Event pod SonarQube"></p>
+<p>Enfin une information ! Le pod n'arrive pas à démarrer car il n'a pas assez de mémoire sur aucune des nodes à sa disposition. Il va falloir trafiquer notre cluster pour lui donner plus de mémoire. Il s'agit d'un cluster construit rapidement pour le MON à l'aide de Minikube. Il est donc normal que les ressources par défaut soient faibles.</p>
+<pre class="language-bash"><code class="language-bash">minikube stop
+minikube delete
+minikube config <span class="token builtin class-name">set</span> memory <span class="token number">6000</span>
+minikube start <span class="token parameter variable">--memory</span><span class="token operator">=</span><span class="token number">6000</span> <span class="token parameter variable">--cpus</span><span class="token operator">=</span><span class="token number">4</span></code></pre>
+<h4>Problème résolu</h4>
+<p><code>:pods</code> pour afficher les pods du namespace <code>workspace-test</code>
+<img src="images/pods_up.png" alt="Pods up"></p>
+<p>Cette fois-ci, plus de problème, on peut voir que nos pods sont vivants et ont fini de démarrer</p>
+<h4>Accès au service</h4>
+<ol>
+<li><code>:services</code> pour afficher les services du namespace <code>workspace-test</code></li>
+<li><code>SHIFT + F</code> pour effectuer un port forward entre le service et votre machine (pour pouvoir y accéder sur navigateur)
+<img src="images/portforward.png" alt="Port forward"></li>
+</ol>
+<p><code>localhost:9000</code> sur un navigateur quelconque pour accéder à SonarQube
+<img src="images/service_up.png" alt="SonarQube"></p>
+<p>Et voilà, votre SonarQube est accessible sur <code>localhost:9000</code> !</p>
+<h4>Accès à la console</h4>
+<ol>
+<li><code>:pods</code> pour afficher les pods du namespace <code>workspace-test</code></li>
+<li><code>/sonarqube</code> pour filtrer sur les pods de SonarQube</li>
+<li><code>S</code> pour ouvrir un shell dans le pod
+<img src="images/shell_k9s.png" alt="Shell SonarQube"></li>
+</ol>
+<p>Au besoin, vous avez accès à la console du conteneur pour effectuer des opérations de maintenance (en tant qu'administrateur bien sûr)</p>
+<h2>Conclusion</h2>
+<p>Vous avez réussi à déployer SonarQube sur votre cluster Kubernetes, et à le débugger en cas de problème. Vous avez pu voir l'efficacité de k9s pour naviguer dans les ressources de votre cluster, et pour débugger des problèmes en temps réel. Vous avez gagné un temps précieux en évitant de passer par la CLI kubectl pour chaque opération.</p>
+<p>Comparez à votre ancien <code>kubectl get</code>, <code>kubectl describe</code>, <code>kubectl logs</code>... quand vous ne saviez pas où regarder. Vous avez facilement économisé 10 minutes de recherche et de commandes fastidieuses pour chaque problème rencontré.</p>
+<h2>Antisèche Raccourcis clavier</h2>
+<p>k9s étant un outil développé pour favoriser la rapidité utilisateur, il est truffé de raccourcis clavier qui permettent de changer de vue, éditer les composants, filtrer l'affichage, afficher des logs, lister des ressources, etc. Voici une petite liste que j'ai pu composer avec les raccourcis qui me sont les plus utiles.</p>
+<h3>Aide</h3>
+<ul>
+<li><code>?</code>(Help) : Affiche l'aide des raccourcis clavier pour la fenêtre actuelle</li>
+<li><code>CTRL + A</code>(Aliases) : Affiche l'ensemble des alias de kubernetes / k9s</li>
+</ul>
+<h3>Interaction avec les ressources</h3>
+<ul>
+<li><code>CTRL + D</code>(Delete) : Supprimer une ressource</li>
+<li><code>D</code>(Describe) : Affiche les détails d'une ressource et ses évènements / logs liés</li>
+<li><code>E</code>(Edit) : Editer le manifest YAML d'une ressource</li>
+<li><code>Y</code>(YAML) : Affiche le manifest YAML d'une ressource</li>
+<li><code>CTRL + S</code>(Save) : Sauvegarde la ressource (le format dépend de la ressource)</li>
+</ul>
+<h3>Interaction avec les pods</h3>
+<ul>
+<li><code>F</code>(PortForward) : Forward un port d'un pod sur votre machine</li>
+<li><code>S</code>(Shell) : Ouvre un shell dans un pod</li>
+<li><code>CTRL + K</code>(Kill) : Tue un pod (le redémarre s'il est géré par un contrôleur)</li>
+<li><code>T</code>(Transfer) : Transfère un fichier depuis ou vers un pod</li>
+<li><code>L</code>(Logs) : Affiche les logs d'un pod
+<ul>
+<li><code>W</code>(Wrap) : Wrap les logs (ils ne dépassent plus du cadre de k9s)</li>
+<li><code>F</code>(Fullscreen): Affiche les logs en plein écran (fait disparaître le cadre k9s, pratique pour copier/coller)</li>
+<li><code>S</code>(Autoscroll): Active/désactive l'autoscroll des logs</li>
+<li><code>T</code>(Timestamps): Active/désactive l'affichage des timestamps</li>
+</ul>
+</li>
+</ul>
+<h3>Gestion de l'affichage</h3>
+<ul>
+<li><code>CTRL + W</code>(Toggle Wide) : Active/désactive l'affichage large des colonnes</li>
+<li><code>CTRL + E</code>(Toggle Header) : Active/désactive l'affichage de l'entête k9s (avec les versions, les raccourcis...)</li>
+<li><code>:q</code>(Quit) : Quitte k9s</li>
+</ul>
+<h3>Parcours et navigation</h3>
+<h4>Accès</h4>
+<ul>
+<li><code>CTRL + ENTER</code>(View) : Affiche les détails d'une ressource OU rentre dans la ressource (si c'est un namespace par exemple)</li>
+<li><code>ESC</code>(Back) : Retourne à la vue précédente (sort d'une ressource ou d'un namespace)</li>
+<li><code>CTRL + R</code>(Refresh) : Rafraîchit la vue actuelle (utile pour voir les changements en temps réel, mais il y a un auto-refresh)</li>
+</ul>
+<h4>Tri</h4>
+<ul>
+<li><code>SHIFT + A</code>(Sort age) : Trie les ressources par âge</li>
+<li><code>SHIFT + N</code>(Sort name) : Trie les ressources par nom</li>
+<li><code>SHIFT + S</code>(Sort status) : Trie les ressources par status</li>
+</ul>
+<h4>Filtrage</h4>
+<ul>
+<li><code>SHIFT + &lt;numéro namespace&gt;</code>(Namespace) : Filtre les ressources par namespace (ex: <code>SHIFT + 1</code> pour n'afficher que les ressources du namespace <code>workspace-test</code>)</li>
+<li><code>:&lt;resource&gt;</code>(Filter) : Filtre les ressources par type (ex: <code>:pods</code> pour n'afficher que les pods)</li>
+<li><code>/&lt;regex&gt;</code>(Filter) : Filtre les ressources par un regex (ex: <code>/sonar</code> pour n'afficher que les ressources contenant &quot;sonar&quot;)</li>
+<li><code>ESC</code>(Clear) : Efface le filtre</li>
+</ul>
+<h4>Droite, gauche, haut, bas</h4>
+<ul>
+<li><code>SHIFT + G</code>(Goto bottom) : Place le curseur tout en bas de la liste</li>
+<li><code>G</code>(Goto top) : Place le curseur tout en haut de la liste</li>
+<li><code>CTRL + F</code>(Page down) : Place le curseur tout en bas de la partie VISIBLE de la page</li>
+<li><code>CTRL + B</code>(Page up) : Place le curseur tout en haut de la partie VISIBLE de la page</li>
+<li><code>K</code>(Up) : Monte le curseur d'une ligne</li>
+<li><code>J</code>(Down) : Descend le curseur d'une ligne</li>
+<li><code>H</code>(Left) : Déplace le curseur à gauche</li>
+<li><code>L</code>(Right) : Déplace le curseur à droite</li>
+</ul>
 
 
 </article>
