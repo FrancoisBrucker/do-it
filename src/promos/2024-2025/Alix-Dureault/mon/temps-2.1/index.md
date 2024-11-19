@@ -16,7 +16,7 @@ résumé: "Ce MON a pour but de me former en Java Script et en React."
 ---
 
 {% prerequis %}
-Aucun prérequis, ce MON est fait pour débuter en JS et React.
+Ce MON est fait pour débuter en JS et React mais quelques connaissances en HTML et CSS peuvent être utiles.
 {% endprerequis %}
 
 
@@ -32,7 +32,7 @@ Le langage JavaScript est une des bases d’Internet avec HTML et CSS. Souvent a
 
 Il permet d’ajouter de l’intéractivité aux pages (sliders, allertes, boutons en interactions, popups,…). Il est aussi utilisé pour d’autres raisons come sur Node.js, React, Apache CouchDB, Adobe Acrobat ou Electron.
 
-### Histoire sur JavaScript
+### Quel est l'intérêt de ce langage et son histoire ?
 
 Pour résumer rapidement, le langage a été crée par Brendan Eich of NetScape en 1995. Il a été crée dans le but de rendre les sites web dynamiques. Au début, il avait été nommé Mocha, puis LiveScript. En 1996, il a été renommé JavaScript dans le but de capitaliser sur la communauté de Java. En 1997, le langage a été standardisé pour la première fois.
 
@@ -41,11 +41,15 @@ Les sources suivantes sont intéressantes pour en apprendre plus sur le sujet :
 - [Histoire du langage et des stratégies mises en place pour son développement](https://dev.to/codediodeio/the-weird-history-of-javascript-2bnb)
 - [Historique des versions et de leurs apports](https://www.educative.io/blog/javascript-versions-history)
 
-### Fichier JS
+### Comment intégrer le fichier JS dans la structure HTML et CSS ?
 
 Pour en apprendre plus sur le sujet, j'ai lu les pages : 
 - [Où placer le code JS](https://www.w3schools.com/js/js_whereto.asp)
 - [Lier JS au code HTML](https://www.digitalocean.com/community/tutorials/how-to-add-javascript-to-html)
+
+Pour intégrer le JS dans le reste du code pour le front, il y a 2 solutions
+
+#### Placer le JS dans le code HTML
 
 On peut placer le code JS dans le code HTML, entre les balises `<script></script>`. 
 
@@ -57,6 +61,8 @@ document.getElementById("demo").innerHTML = "My First JavaScript";
 
 On peut placer autant de fonctions JS que l’on veut dans le code. A l’intérieur des balises ```<head>``` ou ```<body>```.  On le place dans le body généralement quand on modifie un élément du body et head quand l’action est extérieure au corps du texte, par exemple pour un pop up.
 
+#### Placer le JS dans un fichier séparé
+
 Le script peut aussi être placé dans un fichier .js séparé.
 
 Si on l’utilise, il faut ajouté la référence dans le code html, soit dans le ```<head>``` ou alors dans le ```<body>```.
@@ -67,6 +73,8 @@ Si on l’utilise, il faut ajouté la référence dans le code html, soit dans l
 
 On peut ajouter plusieurs script sur une seule page en écrivant plusieurs fois cette même ligne avec les différents fichiers .js. La ```src``` peut être un URL, un chemin de fichier ou n’importe quel chemin d’accès.
 
+#### Quelle méthode est la plus intéressante ?
+
 Avantages d’un code externe :
 
 - Le même code peut être utilisé sur plusieurs pages web différentes.
@@ -74,7 +82,7 @@ Avantages d’un code externe :
 - Plus lisible et plus facile à maintenir.
 - Peut améliorer la rapidité de chargement des pages.
 
-### Variables
+### Quelles formes prennent les variables en JS ?
 
 Sur le sujet j'ai lu les sources suivantes :
 - [Introduction sur les variables](https://javascript.info/variables)
@@ -121,29 +129,21 @@ Il y a quelques règles pour nommer une variable :
 
 Une variable peut contenir du texte, des nombres (entier ou décimaux), des fonctions, des données complexes. Il n’y a pas besoin de déclarer le type de la variable.
 
-On peut aussi déclarer des variables constantes. Ce sont des variables dont on ne peut pas changer la valeur. Il faut leur assigner leur valeurs au moment de la déclaration.
+On peut aussi déclarer des variables constantes. Ce sont des variables dont on ne peut pas changer la valeur. Il faut leur assigner leur valeurs au moment de la déclaration. Ces constantes sont souvent utilisées pour les valeurs difficiles à retenir  ou prônes à des fautes d’orthographes ET connues avant l’exécution comme les codes hexagonales des couleurs. La convention pour les nommer est de les écrire en utilisant des majuscules et des “_”.
 
 ```JS
 const myBirthday = '18.04.1982';
 ```
 
-Ces constantes sont souvent utilisées pour les valeurs difficiles à retenir  ou prônes à des fautes d’orthographes ET connues avant l’exécution comme les codes hexagonales des couleurs. La convention pour les nommer est de les écrire en utilisant des majuscules et des “_”.
+L’hoisting fait référence au process utilisé par l’interpréteur qui consiste à bouger toutes les déclarations de fonctions, variables, classes et imports avant le reste du code. Ces effets ne sont pas valables pour tous les outils de déclaration. ```var```, ```let``` et ```class``` sont considérés comme non hoisting.
 
-L’hoisting fait référence au process utilisé par l’interpréteur qui consiste à bouger toutes les déclarations de fonctions, variables, classes et imports avant le reste du code. Cela permet de : 
-- Utiliser la valeur d’une variable déclarée avant sa déclaration
-- Référencer une variable avant de la déclarer
-- La déclaration de la variable provoque des changements de comportement dans sa portée avant la ligne dans laquelle elle est déclarée.
-- Les effets secondaires d’une déclaration sont produits avant d’évaluer le reste du code qui la contient.
-
-Ces effets ne sont pas valables pour tous les outils de déclaration. ```var```, ```let``` et ```class``` sont considérés comme non hoisting.
-
-Cela correspond à la visibilité de la variable ou de comment elle peut être utilisé après avoir été déclarée. Ce scope dépend de comment la variable a été déclarée. Il en existe 3 types :
+Le scope d'une variable correspond à la visibilité de la variable ou de comment elle peut être utilisé après avoir été déclarée. Ce scope dépend de comment la variable a été déclarée. Il en existe 3 types :
 
 - Global Scope : variables déclarées en dehors de fonctions ou de ```{ }```. Elles sont accessibles dans l’ensemble du code. ```var```, ```let``` et ```const``` donnent ce type de scope
 - Function Scope : variables déclarées dans une fonction et ne peuvent être utilisées que dans celle-ci. ```var```, ```let``` et ```const``` donnent ce type de scope
 - Block Scope : Un block est une partie du code entourée de ```{ }```. variables déclarées dans un block et ne peuvent être utilisées hors de celui-ci. ```let``` et ```const``` donnent ce type de scope
 
-### Datatypes
+### Quels sont les différents types de variables
 
 Mes sources pour cette partie sont les suivantes :
 - [Primitives et Objects](https://www.codeguage.com/courses/js/data-types)
@@ -181,11 +181,11 @@ Une valeur peut être une fonction et dans ce cas là, elle est appelée méthod
 
 On peut créer une fonction constructrice d’objet de même structure quand on a plein d’objets qui vont tous avoir la même structure.
 
-### Fonctions
+### Quelle forme prend une fonction en JS ?
 
 Sur le sujet, j'ai lu les ressources :
-- (Bases sur les fonctions)[https://www.codeguage.com/courses/js/functions-basics]
-- (Fonctions)[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions]
+- [Bases sur les fonctions](https://www.codeguage.com/courses/js/functions-basics)
+- [Fonctions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
 
 Les fonctions sont des blocs de codes qui sont utilisables plusieurs fois quand on les appellent. Elles sont codées pour exécuter une tâche particulière.
 
@@ -238,11 +238,11 @@ Mes sources principales pour cette partie du MON ont été :
 - [Documentation React](https://react.dev/learn)
 - [Roadmap sur React](https://roadmap.sh/react)
 
-### Créer un nouveau projet React
+### Comment créer un nouveau projet React ?
 
-Pour cela le MON de Thomas Duroy [Débuter avec React.js](/src/promos/2022-2023/Duroy-Thomas/mon/MON_3.1/index.md) explique bien comment créer un projet.
+Pour cela le MON de Thomas Duroy [Débuter avec React.js](https://francoisbrucker.github.io/do-it/promos/2022-2023/Duroy-Thomas/mon/MON_3.1/) explique bien comment créer un projet.
 
-### Contenu d'une application React
+### Que contient le code d'une application React ?
 
 Une app REACT est constituée de composants. Un composants fait partie de l’UI et chacun à sa propre logique et apparence. Un composant peut aller d’un bouton à une page entière. Les composants React sont des fonctions JavaScript qui rendent du markup, comme par exemple, cette fonction qui donne un bouton :
 
@@ -275,7 +275,7 @@ Le mot clé ```export``` permet de rendre cette fonction accessible à l’exté
 
 React utilise la syntaxe markup JSX (optionnelle) qui est plus rigoureuse que HTML. Attention, un composant ne peut pas renvoyer plusieurs balises JSX ou HTML. On doit les envelopper dans une balise parent qui englobe toutes les autres de type ```<div>…</div>``` ou ```<>…</>```.
 
-### Ajouter du style avec CSS
+### Comment ajoute ton le style à la page ?
 
 En React, on sépcifie une classe CSS avec la propriété ```className```. Elle fonctionne comme l’attribut ```class``` en HTML.
 
@@ -294,7 +294,7 @@ Ensuite, dans un fichier css séparé, on écrit le style en css qui correspond.
 
 Pour lier le fichier de style et le fichier on ajoute un tag de type ```<link>``` dans le code html.
 
-### Intégrer le JS dans le markup
+### Quelle est l'utilité du JS dans le framework React ?
 
 JSX permet d’intégrer du markup dans le code JavaScript. Grâce aux délimitateurs ```{ }```, on peut retourner dans le JS. Ainsi, cela peut nous permettre de coder des variables dans le code et les afficher dans l’app ou encore d’utiliser des paramètres comme valeurs pour une balise JSX ou l’utiliser dans le style ou encore concatener la donnée avec du texte. Comme par exemple :
 
@@ -319,7 +319,7 @@ return (
 
 Pour intégrer des variables JS dans le css pour le style, il faut utiliser l’attribut “style” comme dans l’exemple ci-dessus, avec la syntaxe : ```style = {{object}}```.
 
-### Afficher sous condition
+### Peut-on afficher une information sous certaines conditions ?
 
 Il n’y a pas de syntaxe particulière dans React pour cela. Ainsi, on utilise la syntaxes JS pour cela. Voici plusieurs exemples : 
 
@@ -348,7 +348,7 @@ return (
   {isLoggedIn && <AdminPanel />}
 </div>
 ```
-### Intégrer des évènements
+### Comment rendre l'application React interactive a des évènements ?
 
 Pour répondre à des évènements sur l’app, on déclare des fonctions “event handler” à l’intérieur des composants comme la fonction ```handleClick``` dans l’exemple suivant.
 
@@ -368,33 +368,7 @@ function MyButton() {
 
 Attention, on n’appelle pas la fonction qui gère l’évènement. On la donne seulement au composant. React l’appellera lorsque l’évènement sera déclenché.
 
-### Utilisation de la notion d'état
-
-Parfois, on veut qu’un composant enregistre et showcase une certaine information lié à l’interaction avec l’utilisateur, comme par exemple, le nombre de fois qu’un bouton est cliqué. Pour cela, on ajoute la propriété ```state``` à notre composant.
-
-```
-import { useState } from 'react';
-
-function MyButton() {
-  const [count, setCount] = useState(0);
-
-  function handleClick() {
-    setCount(count + 1);
-  }
-
-  return (
-    <button onClick={handleClick}>
-      Clicked {count} times
-    </button>
-  );
-}
-```
-
-La fonction ```useState``` renvoie l’état actuel et la fonction utilisée pour updater l’information. Ici : ```count``` et ```setCount```. Le 0 dans les parenthèse est l’initialisation de l’état actuel.
-
-Si on utilise ce composant plusieurs fois dans la même page, chacun d’entre eux aura son propre état actuel.
-
-### Méthode de création d'une app React
+### Comment bien décomposer sont projet React ?
 
 Pour cette partie, j'ai utilisé ces deux sources :
 - [Premier projet sur React](https://www.youtube.com/watch?v=Rh3tobg7hEo)
