@@ -52,7 +52,7 @@ Ce POK décrit les étapes du développement du site web de notre Dark Kitchen d
 
 ## Objectifs principaux
 
-1. Mise en oeuvre des connaissances acquises durant les **MON** et **MON2**.
+1. Mise en oeuvre des connaissances acquises durant les **MON1** et **MON2**.
 2. Mise en pratique de l'apprentissage des languages **HTML/CSS** et **JavaScript**.
 3. Migrer le site d'une architecture statique vers une structure plus dynamique avec **Vue.js**.
 4. Déployer une interface utilisateur fluide et réactive pour un site web de Dark Kitchen.
