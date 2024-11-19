@@ -73,11 +73,27 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 2</li>
                 
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Novice</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Google Script</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Macros</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Automatisations dans Google</li>
+                
 
             </ul>
             
             
             <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
                 
                     
                 
@@ -125,24 +141,63 @@
 
 
 
-<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
-<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-</svg>
-<div class="pl-8 mr-8">
-<p>Liste des prérequis du POK ET/OU MON</p>
-</div></div>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
   <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Les lien utiles pour la compréhension de celui-ci.</p>
+<p><a href="https://developers.google.com/apps-script/samples/fundamentals-codelabs?hl=fr">Premier pas avec Google App script</a>
+<a href="https://francoisbrucker.github.io/do-it/promos/2022-2023/Abdane-Ossama/mon/mon2.1/">MON de Abdane Ossama</a></p>
 </div></div>
 
-<p>Pour ce mon, je veux me former sur google script afin de pouvoir optimiser tous mes documents avec des macros etc.</p>
-<h2>Contenu</h2>
-<p>Le contenu du MON.</p>
+<p>Pour ce mon, je veux me former sur google script afin de pouvoir optimiser tous mes documents en créant les documents habituels automatiquement ou en faisant des macros.</p>
+<h1>Contenu</h1>
+<h2>Introduction</h2>
+<p>L'objectif premier de ce MON est de monter en compétences sur Google script afin d'optimiser mon utilisation des outils googles. J'utilise énormément les outils google dans le cadre d'un projet de voile auquel je participe en naviguant mais aussi en gérant la logistique de toutes les régates. Ceci me pousse à par exemple créer des documents de présence qu'il faut ensuite faire remplir en envoyant des mails etc. Créer toujours les mêmes documents après chaque régate pour récupérer des retours et préparer le bateau pour la suite...</p>
+<p>En bref, beaucoup de tache répétitive qui me prennent énormément de temps. Mais, la bonne nouvelle et que tous est automatisable ! Je vais donc apprendre à utiliser google script en partant de la documentation que je vais adapter a mon utilisation. Ceci va me permettre de bien prendre en main l'outils.</p>
+<h2>Fondamentals</h2>
+<p>J'ai commencé par voir les principes fondamentals de app script et des macros avec google sheet.</p>
+<h3>Macro</h3>
+<p>Il est possible d'en créer directement par l'app script en écrivant le code puis en l'important dans un sheet. Mais, il est possible aussi d'en faire directement (pour les macros) en enregistrant une série de manipulation que l'on fait souvent. On peut ensuite modifier ces enregistrements dans l'app script si besoin.</p>
+<p>Voici quelques exemple de fonction/Instruction basique afin de comprendre la logique :</p>
+<pre class="language-JavaScript"><code class="language-JavaScript">function Header(){ // Permet de définir une fonction
+  var spreadsheet = SpreadsheetApp.getActive(); // Initialise une variable avec le document actif
+  var sheet = spreadsheet.getActiveSheet();// Initialise une variable avec la feuille actif
+  sheet.getRange(  spreadsheet.getCurrentCell().getRow(),1, 1, 10).activate(); // Selectionne les cases à modifier
+  spreadsheet.getActiveRangeList().setBackground('#4c1130').setFontWeight('bold'); //change la couleur du fond et le texte en gras
+}</code></pre>
+<p>Ainsi, pour une macro, on détermine le document et l'endroit sur lequel on veut travaille puis on utilise les fonctions de la documentation</p>
+<h3>Fonction Sheet</h3>
+<p>Script permet aussi de créer des nouvelles fonctions. Pour faire cela il est recommandé d'utiliser les commentaire de la façon suivante afin d'aider les futurs utilisateurs à utiliser la fonction :</p>
+<pre class="language-JavaScript"><code class="language-JavaScript">/**
+ * Fonction nommmé FONCTION qui fait un calcul
+ *
+ * @param {number} nombre Un nombre utilisé dans le calcul.
+ * @return {number} Je retourne une calcul
+ * @customfunction
+ */</code></pre>
+<p>Le <code>@param</code> permet de définir chacun des paramètre en donnant pour savoir comment remplir la fonction. le <code>@return</code> permet de donner une description de ce que donnera la fonction en enfin le <code>@customfunction</code> permet e dire que c'est une fonction personnalisé.</p>
+<p>On obtiendra alors sur sheet en commençant à tapper la fonction :</p>
+<p>FONCTION(nombre)
+<em>Je retourne un calcul</em></p>
+<h3>Interface utilisateur</h3>
+<p>Il est aussi possible avec app script de modifier l'interface des utilisateurs de notre feuille. On peut par exemple ajouter de nouveau menu :</p>
+<pre class="language-JavaScript"><code class="language-JavaScript">function onOpen() { // fonction qui run dès que le sheet s'ouvre ou est rechargé
+  var ui = SpreadsheetApp.getUi(); // récupère les objets de l'interface utilisateur
+  ui.createMenu('Book-list') // créer un menu
+    .addItem('Load Book-list', 'loadBookList') // Ajoute la fonction loadBookList sous le nom Load Book-list dans le menu
+    .addToUi(); // Ajoute le menu à l'interface
+}</code></pre>
+<p>On peut ainsi se faire par exemple des automatismes de formating de la feuille Excel :</p>
+<p><img src="FormatingSheet.png" alt="Ajustement du format d'une feuille de calcul"> <em>Screen d'une feuille de calcul formaté avec google app script</em></p>
+<h3>Interaction entre plusieurs document</h3>
+<p>Il est possible de récupérer des données d'un document pour faire des actions dans un autre :</p>
+<pre class="language-Javascript"><code class="language-Javascript">var bookSS = SpreadsheetApp.openById(1651); // récupère le sheet grace à l'id
+var bookSheet = bookSS.getSheetByName("feuille1"); // récupère la feuille voulue
+var bookRange = bookSheet.getDataRange(); // récupère la zone voulue
+var bookListValues = bookRange.getValues(); // récupère les valeurs</code></pre>
+<h2>Envoie d'emails de rappel pour remplir un document</h2>
+<h2>Création d'un document, partage des droits et envoie aux utlisateurs</h2>
 
 
 </article>
