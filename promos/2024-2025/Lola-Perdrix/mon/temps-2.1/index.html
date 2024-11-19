@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Bases de données relationnelles, SQL avancé, noSQL</title>
+        <title>SQL Overview</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">Bases de données relationnelles, SQL avancé, noSQL</h1>
+<h1 class="mb-1">SQL Overview</h1>
 <div class="mb-4">
     
         <div class="px-4 flex flex-wrap items-center">
@@ -73,11 +73,19 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 2</li>
                 
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">SQL</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">vert</li>
+                
 
             </ul>
             
             
             <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
                 
                     
                 
@@ -105,7 +113,7 @@
 
         <p class="mb-4 text-lg">
 
-                étude plus approfondie des bases de données relationnelles et de SQL qui fait suite à mon MON 1.2.
+                Étude plus approfondie de tout ce que l'on peut faire avec SQL
 
         </p>
 
@@ -118,7 +126,7 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Lola-Perdrix/">Lola Perdrix</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Lola-Perdrix/mon/">MON de Lola Perdrix</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Lola-Perdrix/mon/temps-2.1/">Bases de données relationnelles, SQL avancé, noSQL</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Lola-Perdrix/">Lola Perdrix</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Lola-Perdrix/mon/">MON de Lola Perdrix</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Lola-Perdrix/mon/temps-2.1/">SQL Overview</a>
 
 </div></div>
 
@@ -130,19 +138,311 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Liste des prérequis du POK ET/OU MON</p>
+<p>Bases de SQL</p>
 </div></div>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
   <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Les lien utiles pour la compréhension de celui-ci.</p>
+<p><a href="https://francoisbrucker.github.io/do-it/promos/2024-2025/Lola-Perdrix/mon/temps-1.2/">Mon précédent MON sur les bases de SQL</a></p>
 </div></div>
 
-<p>L'objectif de ce MON est de continuer le travail débuté pendant mon MON 1.2 sur les bases de SQL, car je n'ai pas fini d'explorer plusieurs concepts qui me seraient utiles. Je souhaite continuer à travailler sur SQL car je considère que les compétences acquises précédemment ne suffisent pas pour affirmer connaître SQL. Je souhaite également me pencher sur le noSQL pour avoir un ensemble de connaissances plus large des différentes solutions.</p>
-<h2>Contenu</h2>
-<p>Le contenu du MON.</p>
+<h2>Introduction</h2>
+<p>L'objectif de ce MON est de continuer le travail débuté pendant mon MON 1.2 sur les bases de SQL. Mon premier MON était plus axé sur la réalisation des requêtes et je me suis perfectionnée dessus, mais je souhaite maintenant pouvoir explorer toutes les autres fonctionnalités de SQL afin d'avoir une vue d'ensemble sur tout ce qu'il est possible de faire, pour comprendre un peu mieux cet outil si répandu lié aux bases de données relationnelles, et savoir que cela existe lorsque j'en aurais besoin (ce qui n'est pas impossible).</p>
+<p>Ce MON me servira également de ressource lorsque je voudrais me rappeler de certaines notions, c'est pourquoi je lui donnerai la forme d'une grande liste représentant les actions possibles.</p>
+<h2>Sources</h2>
+<p>Pour la majeure partie de ce MON, je me base sur le livre <em><strong>SQL : les fondamentaux du langage</strong></em> de Anne-Christine BISSON. Le livre est super clair, aborde des notions théoriques et pratiques avec de nombreux exemples, ainsi que des exercices et des corrigés (je recommende si on veut apprendre la même chose que moi). J'ai repris à peu près les grands chapitres du livre pour structurer mon MON, en mettant les pages correspondantes.</p>
+<h2>Le modèle relationnel</h2>
+<p>J'ai pu revoir dans ce premier chapitre du livre les principes de base sur les modèles relationnels. C'est-à-dire les notions de domaines, de relations, ainsi que l'existence de certaines règles comme <strong>l'unicité</strong>, les <strong>clés primaires</strong> et <strong>secondaires</strong>, l'<strong>intégrité référentielle</strong>, la <strong>contrainte d'identité</strong>, etc.</p>
+<p>J'ai aussi revu quelques bases de l'algèbre relationnelle, qui permet la manipulation des tables, et qui est d'ailleurs à l'origine de la conception de SQL. Elle utilise des opérateurs basés sur la théorie des ensembles qui sont princialement :</p>
+<ul>
+<li>L'union</li>
+<li>L'intersection</li>
+<li>La différence</li>
+<li>La division (on prend le complément à la 2e table)</li>
+<li>La restriction (répondu par un WHERE)</li>
+<li>La projection (répondu par un SELECT)</li>
+<li>Le produit cartésien</li>
+<li>La jointure : restriction sur le produit cartésien</li>
+<li>Calculs élémentaires et calculs d'aggrégats(fonctions statistiques qui requièrent plusieurs lignes)--&gt; COUNT, SUM, AVG, MAX...</li>
+</ul>
+<p>La suite du MON permet de voir comment sont effectuées ces opérations avec SQL.</p>
+<h2>LDD : La définition des données</h2>
+<h3>Types de données (p29-37)</h3>
+<p>Déjà, 3 types de données principalement : numériques, alphanumériques, et temporelles.
+Chaque SGDBR (système de gestion de bases de données relationnelles) peut décliner des types comme il veut pour les adapter à des problématiques de stockage ou de précision etc.</p>
+<ul>
+<li>
+<p><strong>Données numériques :</strong> Il y a les entiers (TINYINT, INT, BIT...), les nombres décimaux (DECIMAL, NUMERIC, NUMBER, MONEY...) ou les nombre à virgule flottante(FLOAT, REAL...). La précision et le stockage sont renseignés pour chaque SGBDR mais je passe cette partie. Il existe des propriétés qui complètent le type de données dans les attributs, par exemple : IDENTITY, AUTO_INCREMENT, ZEROFILL... Mais ça c'est pareil ça existe et varie selon les SGDBR.</p>
+</li>
+<li>
+<p><strong>Caractères :</strong> Il y a CHAR ou VARCHAR si la longueur de la chaîne est variable. Aussi NCHAR ou NVARCHAR si contient des caractères spéciaux (chinois etc.). Idem on peut ajouter des propriétés comme ASCII, UNICODE, et autres.</p>
+</li>
+<li>
+<p><strong>Données temporelles :</strong> DATE (format date), TIME (format heure), et TIMESTAMP (format date et heure) principalement. Idem, attention aux divergences entre SGDBR.</p>
+</li>
+<li>
+<p><strong>Autres :</strong> Il peut exister certains autres types comme les données géographiques, spaciales, ou spécifiques comme les URLs.</p>
+</li>
+</ul>
+<h3>Créer, modifier, ou supprimer des objets (p37-77)</h3>
+<ul>
+<li>
+<p><strong>Créer une table :</strong> <code>CREATE TABLE</code></p>
+<ul>
+<li>Syntaxe : <code>CREATE TABLE &lt;nom table&gt; (col_1  Type_1, col_2 Type_2, ...);</code></li>
+<li>On peut créer des tables temporaires (existe que dans une session)</li>
+<li>On peut ajouter des commentaires sur le contenu des colonnes avec l'ordre <code>COMMENT</code></li>
+<li>On peut créer une table à partir d'une autre existante : <code>CREATE TABLE &lt;table&gt; AS SELECT...FROM...WHERE...</code> ou <code>CREATE ... LIKE</code></li>
+<li><code>CREATE SYNONYM</code> permet de donner un autre nom à une table (fait une copie)</li>
+<li>Pour créer un id unique on peut créer une séquence avec <code>CREATE SEQUENCE</code> ou ajouter l'option <code>AUTO_INCREMENT</code> avec le type de la colonne</li>
+</ul>
+</li>
+<li>
+<p><strong>Créer une vue :</strong> <code>CREATE VIEW &lt;nom vue&gt; AS SELECT...</code></p>
+<ul>
+<li>La vue est une sorte de table &quot;virtuelle&quot; qui résulte d'une requête pour un besoin spécifique et répété. On peut réaliser nos requêtes directement sur les vues</li>
+<li>N'est pas stocké sur un disque mais en mémoire, en permanence mis à jour</li>
+<li>Permet de simplifier les bdd pour les usages métiers</li>
+<li>Permet de cacher des informations par rapport à des problématiques de confidentialité</li>
+</ul>
+</li>
+<li>
+<p><strong>Modifier une table :</strong> <code>ALTER</code></p>
+<ul>
+<li>Syntaxe : <code>ALTER TABLE &lt;nom table&gt; [liste des modifs]</code></li>
+<li>Ajouter colonne : <code>[ADD &lt;nom col&gt; &lt;type col&gt;]</code></li>
+<li>Supprimer une colonne : <code>[DROP COLUMN &lt;nom col&gt;]</code></li>
+<li>Ajouter des contraintes : <code>[ADD CONSTRAINT &lt;nom contrainte&gt;]</code></li>
+<li>Rennomer une table : <code>RENAME</code></li>
+<li>Modifier une propriété : <code>[MODIFY &lt;nom col&gt; &lt;propriété&gt;]</code></li>
+<li>Exemple : ajouter une valeur par défaut si pas renseigné dans la création <code>ALTER TABLE Chambres MODIFY Type DEFAULT 3</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Supprimer une table / une vue :</strong> <code>DROP [TABLE / VIEW] &lt;nom [table / vue]&gt;</code></p>
+<ul>
+<li>Attention car suppression souvent définitive</li>
+</ul>
+</li>
+<li>
+<p><strong>Supprimer le contenu d'une table (la vider) :</strong> <code>TRUNCATE TABLE &lt;nom table&gt;</code></p>
+</li>
+<li>
+<p><strong>Notion d'index :</strong> Il s'agit d'une implémentation physique qui permet d'accélérer les recherche sur une table (et ne pas la parcourir séquentiellement) de manière exponentielle, c'est donc quasiment indispensable. Chaque SGDBR l'implémente comme il le souhaite. Je n'ai pas souhaité rentrer dans le détails des différentes méthodes d'indexation, c'est un peu plus détaillé dans le <a href="https://francoisbrucker.github.io/do-it/promos/2024-2025/Billa-Valentin/mon/temps-1.1/">MON SQL Avancé</a> de Valentin.</p>
+</li>
+<li>
+<p><strong>Contraintes d'intégrité des données :</strong> Il est possible d'indiquer au système des contraintes pour permettre d'assurer a cohérence de la base de données</p>
+<ul>
+<li><code>DEFAULT</code> : une valeur à renseigner par défaut afin d'éviter les valeurs <code>NULL</code> (choix important)</li>
+<li><code>NOT NULL</code> : une colonne qui ne peut pas avoir de valeurs <code>NULL</code></li>
+<li><code>UNIQUE</code> : une colonne qui doit être unique</li>
+<li><code>CHECK</code> : programme un contrôle automatique sur une colonne à chaque màj</li>
+<li><code>PRIMARY KEY</code> : le système vérifiera que les valeurs de la clé sont uniques (Passer par l'ordre <code>CONSTRAINT</code> si plusieurs colonnes)</li>
+<li>Ces contraintes sont à déclarer après les types de colonnes lorsqu'on crée la table</li>
+<li><code>FOREIGN KEY</code> : associe la colonne à une table de référence (<code>CONSTRAINT &lt;nom&gt; FOREIGN KEY (colonne) REFERENCES &lt;table secondaire&gt;</code>)</li>
+</ul>
+</li>
+</ul>
+<h2>LMD : La manipulation des données</h2>
+<p>Souvent, on peut uniquement faire de la sélection de données, la modification, l'insertion, et la supression des données étant plutôt réservée aux administrateurs de la base. Cependant je tenais à explorer toutes ces notions qui peuvent servir.</p>
+<h3>La sélection de données (p81-132)</h3>
+<p>La majorité de cette partie est constituée de notions que j'ai bien approfondies lors de mon MON 1.2. Je ne reviendrais donc pas sur ce qui a déjà été abordée et me pencherais sur les notions complémentaires.</p>
+<ul>
+<li>
+<p><strong>Contrôler les lignes retournées par la requête :</strong></p>
+<ul>
+<li><code>TOP</code> (au début) ou <code>LIMIT</code> (à la fin) : ne sort que les premières lignes de la requête</li>
+<li><code>OFFSET</code> pour décaler les lignes qu'on récupère</li>
+<li><code>ROWNUM</code> avec Oracle par ex pour sélectionner des lignes en particulier</li>
+</ul>
+</li>
+<li>
+<p><strong>Les sous-requêtes</strong> : Peuvent remplacer une variable si ne retourne qu'une ligne. Il existe aussi les <strong>CTE</strong> (common table expression) avec le mot clé <code>WITH</code> que j'ai pu voir dans mon premier MON.</p>
+</li>
+<li>
+<p><strong>Autres types de jointures :</strong></p>
+<ul>
+<li>Jointure naturelle : le système choisit tout seul d'associer les colonnes du même nom (<code>NATURAL JOIN</code>)</li>
+<li>Jointure croisée : le système réalise au plus simple un produit cartésien (<code>CROSS JOIN</code>)</li>
+<li>On peut faire des jointures en utilisant uniquement un WHERE mais moins conseillé</li>
+</ul>
+</li>
+<li>
+<p><strong>Opérateurs ensemblistes :</strong></p>
+<ul>
+<li><code>UNION</code> pour faire l'union de deux tables (avec <code>ALL</code> si on veut aussi les doublons) -&gt; nécessite les mêmes structures</li>
+<li><code>INERSECT</code> pour faire l'intersection (donc les lignes à la fois dans la table 1 et la table 2, en supprimant les doublons par défaut)</li>
+<li><code>EXCEPT</code> pour faire la différence : sélectionne les lignes de la table 1 qui ne sont pas dans la table 2</li>
+</ul>
+</li>
+</ul>
+<h3>Restreindre la sélection</h3>
+<ul>
+<li>
+<p><strong>Instruction de conditions :</strong></p>
+<ul>
+<li>une espce de match de plusieurs possibilités : <code>CASE WHEN...THEN/WHEN...THEN/ELSE...END AS</code></li>
+<li>un if tel que l'on imagine : <code>IIF (&lt;col&gt; &lt;condition&gt; &lt;valeur&gt; &lt;valeur si vrai&gt; &lt;valeur si faux)</code></li>
+</ul>
+</li>
+<li>
+<p>Je passe la liste des opérateurs arithmétiques et de comparaison car il n'y a rien de particulier. Cependant les <strong>opérateurs logiques</strong> peuvent s'avérer intéressants :</p>
+<ul>
+<li><code>LIKE &quot;__%&quot;</code> : commence par __</li>
+<li><code>LIKE &quot;%__&quot;</code> : finit par __</li>
+<li><code>LIKE &quot;%__%&quot;</code> : contient __</li>
+<li><code>LIKE &quot;_ _ s%&quot;</code> : &quot;s&quot; en 3e positionµ</li>
+<li><code>BETWEEN</code> : entre 2 dates par exemple</li>
+<li><code>EXISTS</code> : test d'une sous-requête (sous-requête corrélée)</li>
+<li><code>IN</code> : suivi d'une liste d'éléments ou sous-requête (sous-requête imbriquée)</li>
+<li><code>SOME</code></li>
+<li><code>ANY</code></li>
+<li>Tous ces opérateurs se retrouvent dans les clauses WHERE principalement</li>
+</ul>
+</li>
+</ul>
+<h3>Insérer, modifier ou supprimer (p140-169)</h3>
+<ul>
+<li>
+<p><strong>Insérer des données :</strong> pour rajouter des lignes dans la table</p>
+<ul>
+<li>Souvent ligne par ligne, en respectant l'ordre des colonnes (ou en indiquant les colonnes) : <code>INSERT INTO &lt;table&gt; VALUES (val1, val2, ...);</code></li>
+<li>Il est possible de récupérer des lignes d'une autre table en remplacant les <code>VALUES</code> par un <code>SELECT</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Supprimer des données :</strong> <code>DELETE FROM &lt;table&gt;</code> pour tout supprimer, ou ajouter un <code>WHERE...</code> pour préciser quoi supprimer en particulier</p>
+</li>
+<li>
+<p><strong>Modifier des lignes :</strong> <code>UPDATE &lt;table&gt; SET &lt;col1&gt; = &lt;val1&gt;, &lt;col2 = val2&gt;, ...</code> pour changer toute la colonne, ou ajouter un <code>WHERE...</code> pour sélectionner les lignes à modifier</p>
+</li>
+<li>
+<p>On peut <strong>agir sur les données d'une table à partir d'une autre table</strong> avec <code>MERGE INTO</code> en faisant des <code>WHEN MATCH THEN UPDATE SET...</code> mais je ne suis pas sûre que ce soit très utilisé</p>
+</li>
+</ul>
+<h3>Les fonctions (p171-209)</h3>
+<ul>
+<li><strong>Les fonctions principales :</strong> J'ai pu refaire un tour des fonctions basiques existantes dans SQL qui peuvent être pratiques pour faire des calculs qui arrangent. Par exemple pour les chaînes de caractères : les fonctions <code>CONCAT</code>, <code>LOWER</code>, <code>UPPER</code>, <code>TRIM</code> (pour supprimer les espaces), <code>INSTR</code>, <code>POSITION</code> ou <code>CHARINDEX</code> (pour trouver la position d'une sous-chaîne), <code>SUBSTR</code>, <code>ASCII</code>, <code>CONCAT</code>, etc. Les fonctions <code>CAST</code> ou <code>CONVERT</code> peuvent être utiles pour changer le type d'une colonne. Il existe de multiples fonctions propres à chaque système notamment pour les données de type temporelles, je ne vais pas tout énumérer.</li>
+<li>Il y a aussi <strong>les fonctions de fenêtrage</strong>, qui agissent selon les valeurs d'une &quot;fenêtre&quot;. Il s'agit par exemple des fonctions <code>RANK</code>, <code>LAG</code> et <code>LEAD</code> (ligne préc. et ligne suiv.), <code>NVL</code> ou <code>ISNULL</code> (pour remplacer les valeurs nulles), <code>COALESCE</code>, etc. J'ai eu l'occasion de voir comment les utiliser de manière générale dans mon premier MON sur SQL.</li>
+</ul>
+<h2>DCL : La sécurité des données</h2>
+<p>Cette partie qu'on retrouve à partir de la page 215 du livre permet d'étudier ce qui permet d'attribuer des droits aux utilisateurs sur les tables. C'est donc plutôt reservé aux administrateurs des tables.</p>
+<h3>Pourquoi faire (p215)</h3>
+<p>Cela permet la gestion de différentes typologies d'utilisateurs au sein d'une entreprise dans laquelle on va retrouver une multitude d'usages métiers différents. Tous ne vont pas faire la même chose et chacun doit pouvoir faire son travail sans risquer de gêner celui des autres.</p>
+<h3>Comment faire (p223-241)</h3>
+<p>En général on classe les utilisateurs par fonction et par métier puis on détermine quelle fonction a besoin de quelle table. De quels accès ont-ils besoin ? Peuvent-ils faire des mises à jour ou lire seulement ? Ce travail doit être fait par l'IT conjointement avec des référents métiers.</p>
+<p>Ces infos sont regroupées elles-même dans des tables qui peuvent être mises à jour si besoin (départs / changements de poste...) et qui sont dédiées à les gestion des droits utilisateurs. <strong>Essayer de metre la photo p216</strong>.  On va pouvoir attribuer les droits correspondants aux utilisateurs après cette étude, et aussi créer des rôles pour regrouper des utilisateurs auxquels on va attribuer les mêmes droits.</p>
+<p>Après il y a des commandes qui permettent de :</p>
+<ul>
+<li><strong>Créer un utiisateur</strong> : <code>CREATE USER &lt;user&gt; IDENTIFIED BY &lt;mdp&gt;</code> (plus ou moins selon système)</li>
+<li><strong>Attribuer des droits</strong> avec l'ordre <code>GRANT</code> :
+<ul>
+<li>Syntaxe : <code>GRANT [SELECT/UPDATE/DELETE/INSERT] ON TABLE &lt;table&gt; TO &lt;user1&gt;, &lt;user2&gt;,... (WITH GRANT OPTION)</code></li>
+<li>On peut spécifier des colonnes de la table</li>
+<li>On peut désigner tous les users avec <code>PUBLIC</code></li>
+<li>On peut aussi GRANT sur des commandes du LLD (ex : <code>GRANT CREATE TABLE TO &lt;user&gt;</code>)</li>
+</ul>
+</li>
+<li><strong>Supprimer des droits</strong> avec l'ordre <code>REVOKE</code> :
+<ul>
+<li>Syntaxe : <code>REVOKE [SELECT/UPDATE/DELETE/INSERT] ON TABLE &lt;table&gt; FROM &lt;user&gt;</code></li>
+<li>Mêmes principes que pour GRANT</li>
+</ul>
+</li>
+<li><strong>Interdire des actions</strong> (SQL Server) avec <code>DENY</code></li>
+<li><strong>Créer un rôle :</strong> <code>CREATE ROLE &lt;nom rôle&gt;</code></li>
+<li><strong>Attribuer un rôle :</strong> <code>GRANT &lt;rôle&gt; TO &lt;user&gt;</code></li>
+<li><strong>Supprimer un rôle :</strong> <code>ALTER ROLE &lt;nom rôle&gt; DROP MEMBER &lt;user&gt;</code> ou si plus personne <code>DROP ROLE &lt;nom rôle&gt;</code></li>
+</ul>
+<h2>TCL : Le contrôle des transactions</h2>
+<p>Ce dernier chapitre du livre est un peu plus technique. Elle aborde la problématique des accès simultanés sur une base qui peuvent créer des conflits et comment s'en charger. C'est peut être une partie un peu moins intéressante mais tout de même à connaître dans les grandes lignes.</p>
+<p>On a ce qu'on appelle des phénomènes de <strong>lectures répétitives</strong> ou de <strong>lignes fantômes</strong> lorsque les utilisateurs modifient en même temps les mêmes données. Pour éviter cela on a créé la notion de <strong>transaction</strong>, qui permet de borner le début et la fin d'une action dans la base.</p>
+<p><strong>Maintenant comment éviter les incohérences ?</strong> (p248-252)</p>
+<ul>
+<li>Lancer les transactions en séries (peut créer des temps d'attentes importants)</li>
+<li>Bloquer puis libérer les objets impliqués à chaque programme (pose problème si l'utilisateur oublie de valider ou prend son temps car bloque tout)</li>
+<li>Sauvegarder les données lues en mémoire puis relecture juste avant la validation pour vérifier si toujours les bonnes données, sinon refus de l'update</li>
+<li>Différents types de verrouillage : <code>READ UNCOMMITED</code>, <code>READ COMMITED</code>, <code>REPEATABLE READ</code>, et <code>SERIAZABLE</code> (du plus libre au plus restrictif, et don donc au plus sécurisant). Ensuite on peut paramétrer le niveau de verrouillage que l'on veut avec <code>SET SESSION TRASACTION ISOLATION LEVEL</code></li>
+<li>Enfin on peut &quot;réserver&quot; une table le temps d'une opération pour empêcher la modification de lignes entre temps : <code>SELECT col FROM table FOR UPDATE</code></li>
+</ul>
+<p>J'avoue ne pas avoir tout compris à propos de ces techniques et de leur différences mais je ne suis pas sûre que ce soit très grave à ce niveau.</p>
+<h3>Notion de validation des modifications (p258-260)</h3>
+<p>En SQL il existe aussi la <strong>notion de &quot;commit&quot;</strong> pour la validation de nos modifications, cela permet aussi de libérer les verrous qui ont pu être posés pour notre travail. Il s'agit simplement de l'ordre <code>COMMIT</code>.</p>
+<p>Si on veut <strong>revenir en arrière</strong>, il existe l'ordre <code>ROLLBACK</code> qui invalide la modification et nous ramène au point de sauvegarde précédent.</p>
+<p>On peut définir nous même nos <strong>points de sauvegarde</strong> pour pouvoir faire des retours en arrière, il suffit de définir un <code>SAVEPOINT &lt;nom du savepoint&gt;</code>.</p>
+<h2>Faire des programmes avec SQL</h2>
+<p>Au delà de faire des requêtes, j'ai aussi vu la possibilité de faire du code avec SQL qui peut servir notamment à créer des <strong>fonctions</strong> et <strong>procédures stockées</strong> ou des déclencheurs qui peuvent faire gagner beaucoup de temps selon les usages. On les appelle avec les ordres <code>EXECUTE</code> ou <code>CALL</code>.</p>
+<p>Il existe des langages de programmation dédiés comme <strong>PL/SQL</strong> ou <strong>TransactSQL</strong>.</p>
+<p>J'ai pu explorer un petit peu les méthodes, qui consistent comme en programmation générale en définir des variables, rajouter des requêtes SQL stockées dans des curseurs que l'on peut parcourir avec des boucles, faire des opérations sur des valeurs retournées, et renvoyer des valeurs ou non. Il existe un tas de choses que l'on peut faire et que j'ai un peu parcourues sans rentrer dans le détail car ce n'est pas forcément ce qui était essentiel. Si besoin le <a href="https://francoisbrucker.github.io/do-it/promos/2024-2025/Billa-Valentin/mon/temps-1.1/">MON SQL Avancé</a> de Valentin aborde un peu plus le sujet.</p>
+<h2>Soucis de performance et conseils</h2>
+<p>Faire des requêtes sur des grandes tables de données peut très vite poser des soucis de performance et des temps d'attente importants. Il est important de savoir optimiser nos calculs, j'ai déjà un peu abordé le sujet dans mon premier MON. J'ai regroupé des informations éparpillées dans le livre que j'ai cru bon de rassembler ici.</p>
+<ul>
+<li>
+<p><strong>Mieux comprendre ce avec quoi on travaille</strong></p>
+<ul>
+<li>Obtenir la description du schéma d'une table : <code>DESC &lt;nom table&gt;</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Mieux écrire nos requêtes</strong></p>
+<ul>
+<li>On peut faire des commentaires dans le code (<code>/* */</code> ou <code>#</code> ou encore <code>--</code>)</li>
+<li>Vérifier les syntaxes précises dans les clauses WHERE (source d'erreur fréquente)</li>
+<li>Limiter les jointures</li>
+</ul>
+</li>
+<li>
+<p><strong>Optimiser une requête</strong></p>
+<ul>
+<li>Évaluer d'abord la taille de nos requêtes avec COUNT(*) en premier lieu par exemple</li>
+<li>Privilégier l'utilisation des colonnes indexées</li>
+<li>Utiliser la commande <code>EXPLAIN</code> ou <code>EXPLAIN PLAN</code> pour analyser comment le système parvient à réaliser ce qu'on lui demande (cf <a href="https://francoisbrucker.github.io/do-it/promos/2024-2025/Billa-Valentin/mon/temps-1.1/">MON de Valentin</a>)</li>
+</ul>
+</li>
+</ul>
+<h2>Résumé</h2>
+<p><img src="resume.jpg" alt="image"></p>
+<p><em><strong>Photo : <a href="https://stacklima.com/sql-ddl-dml-tcl-et-dcl/">StackLima.com</a></strong></em></p>
+<p>A la fin du livre on retrouve également le résumé de toutes les syntaxes essentielles.</p>
+<h2>Bonus : notions de NoSQL</h2>
+<p>Après avoir autant été plongée dans l'univers de SQL, j'ai souhaité regarder un petit peu du côté de NoSQL sur mon temps restant pour compléter ces connaissances et prendre du recul (parce qu'il ne faudrait pas que je me dise que SQL règne de partout).</p>
+<p>J'ai regardé sur le site d'<a href="https://www.oracle.com/fr/database/nosql/what-is-nosql/">Oracle</a> quelques défintions et explications.</p>
+<p>Le NoSQL sert donc à traiter les bases de données non relationnelles, sur lesquelles on peut quand même faire des requêtes classiques, c'est pourquoi on les appelle les bases &quot;pas seulement SQL&quot;. Il a été conçu dans l'objectif de pouvoir s'adapter aux évolutions applicatives et pour faire des requêtes efficaces sur un grand volume.</p>
+<p>De ce que j'ai compris :</p>
+<table>
+<thead>
+<tr>
+<th>Avantages</th>
+<th>Inconvénients</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Évolutivité élevée et rapide, s'adapte facilement</td>
+<td>Données pas (souvent) normalisées, donc pas terrible pour des secteurs comme la finance ou la comptabilité</td>
+</tr>
+<tr>
+<td>Haute disponibilité, et haute performance</td>
+<td>Bien pour des requêtes simples sur de gros volumes mais se complexifie rapidement si plusieurs tables et requête plus fine</td>
+</tr>
+<tr>
+<td>Schémas flexibles, stockage non structuré</td>
+<td>Syntaxe différente d'une base à l'autre</td>
+</tr>
+</tbody>
+</table>
+<p>Le NoSQL serait donc largement utilisé pour les applications en temps réél, les grands volumes de données. Il exise 4 types de base NoSQL, cela vaudrait le coup de se pencher un peu plus dessus. Enfin, on peut aussi maintenant avoir des modèles &quot;hybrides&quot; en combinant les bases de données relationnelles et non-relationnelles dans une même entreprise.</p>
+<h2>Conclusion</h2>
+<p>Ce MON m'a vraiment permis de <strong>balayer tous l'univers de SQL</strong>. Je ne suis jamais rentrée dans le détail de chacune de ces notions, c'est pourquoi il y en a beaucoup, mais ce n'était pas le but car je ne suis pas sûre que cela aurait été utile. J'ai désormais une bonne connaissance d'ensemble sur le sujet et je suis globalement très satisfaite de ce MON.</p>
+<p><strong>Reste à faire :</strong> S'entraîner sur ces notions en les pratiquant et en les mettant en oeuvre dans un des systèmes de gestion, sans oublier de regarder un peu du côté du fonctionnement un peu plus poussé du NoSQL.</p>
+<p>D'un point de vue plus technique par rapport à la rédaction du MON, j'aurais du prendre mes notes directement sur mon ordinateur... cela m'aurait épargné un peu de temps de resaisie (je n'ai pas compté le temps de rédaction dans le MON).</p>
+<h2>Bibliographie</h2>
+<ul>
+<li>Le livre <em><strong>SQL : les fondamentaux du langage</strong></em> de Anne-Christine BISSON</li>
+<li>L'article <a href="https://www.oracle.com/fr/database/nosql/what-is-nosql/">What is NoSQL</a> sur le site d'Oracle.</li>
+</ul>
 
 
 </article>
