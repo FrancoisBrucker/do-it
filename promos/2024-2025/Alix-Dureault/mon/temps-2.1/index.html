@@ -142,7 +142,7 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Aucun prérequis, ce MON est fait pour débuter en JS et React.</p>
+<p>Ce MON est fait pour débuter en JS et React mais quelques connaissances en HTML et CSS peuvent être utiles.</p>
 </div></div>
 <p>Le but de ce MON est de me former à l'utilisation de React afin que je puisse derrière l'utiliser pour la deuxième partie de mon POK et pour mon projet 3A.</p>
 <p>React est un framework front-end qui permet d’avoir accès à des librairies de composants et de simplifier le code du front-end de nos apps. A l'intérieur de ce framework, les composants sont codés en Javascript. Ainsi, ce MON est divisé en 2 parties, une sur les bases de JavaScript et une sur les bases de React.</p>
@@ -150,7 +150,7 @@
 <p>Pour apprendre les bases de JS, j'ai suivi le parcours de formation proposé sur le site suivant : <a href="https://roadmap.sh/javascript">JavaScript Roadmap</a>.</p>
 <p>Le langage JavaScript est une des bases d’Internet avec HTML et CSS. Souvent abréviée en JS. C’est un langage de programmation compilé qui fonctionne avec des fonctions de premier ordre.</p>
 <p>Il permet d’ajouter de l’intéractivité aux pages (sliders, allertes, boutons en interactions, popups,…). Il est aussi utilisé pour d’autres raisons come sur Node.js, React, Apache CouchDB, Adobe Acrobat ou Electron.</p>
-<h3>Histoire sur JavaScript</h3>
+<h3>Quel est l'intérêt de ce langage et son histoire ?</h3>
 <p>Pour résumer rapidement, le langage a été crée par Brendan Eich of NetScape en 1995. Il a été crée dans le but de rendre les sites web dynamiques. Au début, il avait été nommé Mocha, puis LiveScript. En 1996, il a été renommé JavaScript dans le but de capitaliser sur la communauté de Java. En 1997, le langage a été standardisé pour la première fois.</p>
 <p>Les sources suivantes sont intéressantes pour en apprendre plus sur le sujet :</p>
 <ul>
@@ -158,21 +158,25 @@
 <li><a href="https://dev.to/codediodeio/the-weird-history-of-javascript-2bnb">Histoire du langage et des stratégies mises en place pour son développement</a></li>
 <li><a href="https://www.educative.io/blog/javascript-versions-history">Historique des versions et de leurs apports</a></li>
 </ul>
-<h3>Fichier JS</h3>
+<h3>Comment intégrer le fichier JS dans la structure HTML et CSS ?</h3>
 <p>Pour en apprendre plus sur le sujet, j'ai lu les pages :</p>
 <ul>
 <li><a href="https://www.w3schools.com/js/js_whereto.asp">Où placer le code JS</a></li>
 <li><a href="https://www.digitalocean.com/community/tutorials/how-to-add-javascript-to-html">Lier JS au code HTML</a></li>
 </ul>
+<p>Pour intégrer le JS dans le reste du code pour le front, il y a 2 solutions</p>
+<h4>Placer le JS dans le code HTML</h4>
 <p>On peut placer le code JS dans le code HTML, entre les balises <code>&lt;script&gt;&lt;/script&gt;</code>.</p>
 <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
 document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"demo"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token string">"My First JavaScript"</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
 <p>On peut placer autant de fonctions JS que l’on veut dans le code. A l’intérieur des balises <code>&lt;head&gt;</code> ou <code>&lt;body&gt;</code>.  On le place dans le body généralement quand on modifie un élément du body et head quand l’action est extérieure au corps du texte, par exemple pour un pop up.</p>
+<h4>Placer le JS dans un fichier séparé</h4>
 <p>Le script peut aussi être placé dans un fichier .js séparé.</p>
 <p>Si on l’utilise, il faut ajouté la référence dans le code html, soit dans le <code>&lt;head&gt;</code> ou alors dans le <code>&lt;body&gt;</code>.</p>
 <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>myScript.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
 <p>On peut ajouter plusieurs script sur une seule page en écrivant plusieurs fois cette même ligne avec les différents fichiers .js. La <code>src</code> peut être un URL, un chemin de fichier ou n’importe quel chemin d’accès.</p>
+<h4>Quelle méthode est la plus intéressante ?</h4>
 <p>Avantages d’un code externe :</p>
 <ul>
 <li>Le même code peut être utilisé sur plusieurs pages web différentes.</li>
@@ -180,7 +184,7 @@ document<span class="token punctuation">.</span><span class="token function">get
 <li>Plus lisible et plus facile à maintenir.</li>
 <li>Peut améliorer la rapidité de chargement des pages.</li>
 </ul>
-<h3>Variables</h3>
+<h3>Quelles formes prennent les variables en JS ?</h3>
 <p>Sur le sujet j'ai lu les sources suivantes :</p>
 <ul>
 <li><a href="https://javascript.info/variables">Introduction sur les variables</a></li>
@@ -213,24 +217,16 @@ let user = 'John',
 <li>Le nom ne doit pas contenir d’espace</li>
 </ul>
 <p>Une variable peut contenir du texte, des nombres (entier ou décimaux), des fonctions, des données complexes. Il n’y a pas besoin de déclarer le type de la variable.</p>
-<p>On peut aussi déclarer des variables constantes. Ce sont des variables dont on ne peut pas changer la valeur. Il faut leur assigner leur valeurs au moment de la déclaration.</p>
+<p>On peut aussi déclarer des variables constantes. Ce sont des variables dont on ne peut pas changer la valeur. Il faut leur assigner leur valeurs au moment de la déclaration. Ces constantes sont souvent utilisées pour les valeurs difficiles à retenir  ou prônes à des fautes d’orthographes ET connues avant l’exécution comme les codes hexagonales des couleurs. La convention pour les nommer est de les écrire en utilisant des majuscules et des “_”.</p>
 <pre class="language-JS"><code class="language-JS">const myBirthday = '18.04.1982';</code></pre>
-<p>Ces constantes sont souvent utilisées pour les valeurs difficiles à retenir  ou prônes à des fautes d’orthographes ET connues avant l’exécution comme les codes hexagonales des couleurs. La convention pour les nommer est de les écrire en utilisant des majuscules et des “_”.</p>
-<p>L’hoisting fait référence au process utilisé par l’interpréteur qui consiste à bouger toutes les déclarations de fonctions, variables, classes et imports avant le reste du code. Cela permet de :</p>
-<ul>
-<li>Utiliser la valeur d’une variable déclarée avant sa déclaration</li>
-<li>Référencer une variable avant de la déclarer</li>
-<li>La déclaration de la variable provoque des changements de comportement dans sa portée avant la ligne dans laquelle elle est déclarée.</li>
-<li>Les effets secondaires d’une déclaration sont produits avant d’évaluer le reste du code qui la contient.</li>
-</ul>
-<p>Ces effets ne sont pas valables pour tous les outils de déclaration. <code>var</code>, <code>let</code> et <code>class</code> sont considérés comme non hoisting.</p>
-<p>Cela correspond à la visibilité de la variable ou de comment elle peut être utilisé après avoir été déclarée. Ce scope dépend de comment la variable a été déclarée. Il en existe 3 types :</p>
+<p>L’hoisting fait référence au process utilisé par l’interpréteur qui consiste à bouger toutes les déclarations de fonctions, variables, classes et imports avant le reste du code. Ces effets ne sont pas valables pour tous les outils de déclaration. <code>var</code>, <code>let</code> et <code>class</code> sont considérés comme non hoisting.</p>
+<p>Le scope d'une variable correspond à la visibilité de la variable ou de comment elle peut être utilisé après avoir été déclarée. Ce scope dépend de comment la variable a été déclarée. Il en existe 3 types :</p>
 <ul>
 <li>Global Scope : variables déclarées en dehors de fonctions ou de <code>{ }</code>. Elles sont accessibles dans l’ensemble du code. <code>var</code>, <code>let</code> et <code>const</code> donnent ce type de scope</li>
 <li>Function Scope : variables déclarées dans une fonction et ne peuvent être utilisées que dans celle-ci. <code>var</code>, <code>let</code> et <code>const</code> donnent ce type de scope</li>
 <li>Block Scope : Un block est une partie du code entourée de <code>{ }</code>. variables déclarées dans un block et ne peuvent être utilisées hors de celui-ci. <code>let</code> et <code>const</code> donnent ce type de scope</li>
 </ul>
-<h3>Datatypes</h3>
+<h3>Quels sont les différents types de variables</h3>
 <p>Mes sources pour cette partie sont les suivantes :</p>
 <ul>
 <li><a href="https://www.codeguage.com/courses/js/data-types">Primitives et Objects</a></li>
@@ -259,11 +255,11 @@ let user = 'John',
 <p>Ils sont écrits à l’intérieur de <code>{ }</code> et composés de valeurs. Leur valeurs sont accessibles à l’aide de la notation avec un point. Les valeurs peuvent être de n’importe quel type.</p>
 <p>Une valeur peut être une fonction et dans ce cas là, elle est appelée méthode de l’objet.</p>
 <p>On peut créer une fonction constructrice d’objet de même structure quand on a plein d’objets qui vont tous avoir la même structure.</p>
-<h3>Fonctions</h3>
+<h3>Quelle forme prend une fonction en JS ?</h3>
 <p>Sur le sujet, j'ai lu les ressources :</p>
 <ul>
-<li>(Bases sur les fonctions)[<a href="https://www.codeguage.com/courses/js/functions-basics">https://www.codeguage.com/courses/js/functions-basics</a>]</li>
-<li>(Fonctions)[<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions</a>]</li>
+<li><a href="https://www.codeguage.com/courses/js/functions-basics">Bases sur les fonctions</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions">Fonctions</a></li>
 </ul>
 <p>Les fonctions sont des blocs de codes qui sont utilisables plusieurs fois quand on les appellent. Elles sont codées pour exécuter une tâche particulière.</p>
 <p>Il existe plusieurs moyens de déclarer une fonction en JS.</p>
@@ -311,9 +307,9 @@ var utils = [
 <li><a href="https://react.dev/learn">Documentation React</a></li>
 <li><a href="https://roadmap.sh/react">Roadmap sur React</a></li>
 </ul>
-<h3>Créer un nouveau projet React</h3>
-<p>Pour cela le MON de Thomas Duroy <a href="/do-it/src/promos/2022-2023/Duroy-Thomas/mon/MON_3.1/index.md">Débuter avec React.js</a> explique bien comment créer un projet.</p>
-<h3>Contenu d'une application React</h3>
+<h3>Comment créer un nouveau projet React ?</h3>
+<p>Pour cela le MON de Thomas Duroy <a href="https://francoisbrucker.github.io/do-it/promos/2022-2023/Duroy-Thomas/mon/MON_3.1/">Débuter avec React.js</a> explique bien comment créer un projet.</p>
+<h3>Que contient le code d'une application React ?</h3>
 <p>Une app REACT est constituée de composants. Un composants fait partie de l’UI et chacun à sa propre logique et apparence. Un composant peut aller d’un bouton à une page entière. Les composants React sont des fonctions JavaScript qui rendent du markup, comme par exemple, cette fonction qui donne un bouton :</p>
 <pre><code>function MyButton() {
   return (
@@ -335,7 +331,7 @@ var utils = [
 <p>La partie <code>export default</code> indique quel est le composant principale dans le fichier.</p>
 <p>Le mot clé <code>export</code> permet de rendre cette fonction accessible à l’extérieur du fichier.</p>
 <p>React utilise la syntaxe markup JSX (optionnelle) qui est plus rigoureuse que HTML. Attention, un composant ne peut pas renvoyer plusieurs balises JSX ou HTML. On doit les envelopper dans une balise parent qui englobe toutes les autres de type <code>&lt;div&gt;…&lt;/div&gt;</code> ou <code>&lt;&gt;…&lt;/&gt;</code>.</p>
-<h3>Ajouter du style avec CSS</h3>
+<h3>Comment ajoute ton le style à la page ?</h3>
 <p>En React, on sépcifie une classe CSS avec la propriété <code>className</code>. Elle fonctionne comme l’attribut <code>class</code> en HTML.</p>
 <pre><code>&lt;img className=&quot;avatar&quot; /&gt;
 </code></pre>
@@ -345,7 +341,7 @@ var utils = [
   border-radius: 50\%;
 }</code></pre>
 <p>Pour lier le fichier de style et le fichier on ajoute un tag de type <code>&lt;link&gt;</code> dans le code html.</p>
-<h3>Intégrer le JS dans le markup</h3>
+<h3>Quelle est l'utilité du JS dans le framework React ?</h3>
 <p>JSX permet d’intégrer du markup dans le code JavaScript. Grâce aux délimitateurs <code>{ }</code>, on peut retourner dans le JS. Ainsi, cela peut nous permettre de coder des variables dans le code et les afficher dans l’app ou encore d’utiliser des paramètres comme valeurs pour une balise JSX ou l’utiliser dans le style ou encore concatener la donnée avec du texte. Comme par exemple :</p>
 <pre><code>return (
   &lt;&gt;
@@ -363,7 +359,7 @@ var utils = [
 );
 </code></pre>
 <p>Pour intégrer des variables JS dans le css pour le style, il faut utiliser l’attribut “style” comme dans l’exemple ci-dessus, avec la syntaxe : <code>style = </code>.</p>
-<h3>Afficher sous condition</h3>
+<h3>Peut-on afficher une information sous certaines conditions ?</h3>
 <p>Il n’y a pas de syntaxe particulière dans React pour cela. Ainsi, on utilise la syntaxes JS pour cela. Voici plusieurs exemples :</p>
 <pre><code>let content;
 if (isLoggedIn) {
@@ -389,7 +385,7 @@ return (
   {isLoggedIn &amp;&amp; &lt;AdminPanel /&gt;}
 &lt;/div&gt;
 </code></pre>
-<h3>Intégrer des évènements</h3>
+<h3>Comment rendre l'application React interactive a des évènements ?</h3>
 <p>Pour répondre à des évènements sur l’app, on déclare des fonctions “event handler” à l’intérieur des composants comme la fonction <code>handleClick</code> dans l’exemple suivant.</p>
 <pre><code>function MyButton() {
   function handleClick() {
@@ -404,27 +400,7 @@ return (
 }
 </code></pre>
 <p>Attention, on n’appelle pas la fonction qui gère l’évènement. On la donne seulement au composant. React l’appellera lorsque l’évènement sera déclenché.</p>
-<h3>Utilisation de la notion d'état</h3>
-<p>Parfois, on veut qu’un composant enregistre et showcase une certaine information lié à l’interaction avec l’utilisateur, comme par exemple, le nombre de fois qu’un bouton est cliqué. Pour cela, on ajoute la propriété <code>state</code> à notre composant.</p>
-<pre><code>import { useState } from 'react';
-
-function MyButton() {
-  const [count, setCount] = useState(0);
-
-  function handleClick() {
-    setCount(count + 1);
-  }
-
-  return (
-    &lt;button onClick={handleClick}&gt;
-      Clicked {count} times
-    &lt;/button&gt;
-  );
-}
-</code></pre>
-<p>La fonction <code>useState</code> renvoie l’état actuel et la fonction utilisée pour updater l’information. Ici : <code>count</code> et <code>setCount</code>. Le 0 dans les parenthèse est l’initialisation de l’état actuel.</p>
-<p>Si on utilise ce composant plusieurs fois dans la même page, chacun d’entre eux aura son propre état actuel.</p>
-<h3>Méthode de création d'une app React</h3>
+<h3>Comment bien décomposer sont projet React ?</h3>
 <p>Pour cette partie, j'ai utilisé ces deux sources :</p>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=Rh3tobg7hEo">Premier projet sur React</a></li>
