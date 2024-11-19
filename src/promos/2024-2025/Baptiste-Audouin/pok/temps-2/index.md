@@ -48,11 +48,11 @@ Ce premier sprint est surtout consacré à des révisions et découvertes des ba
 Dans un premier temps j'ai repris [le cours de deuxième année](https://francoisbrucker.github.io/cours_informatique/enseignements/ecm/2A/option-web/) afin de pouvoir par la suite créer un premier visuel pour jeu. 
 Après ce cours j'ai réaliser une "maquette" afin de définir un prmier visuel simple de ma page web que je prévois de faire évoluer en fonction de mes avancées durant les prochaines étapes.
 
-{% Premier jet
+{% details %}
 
  <div><img src="./images/maquette_snake.jpeg"></div>
 
-%}
+{% enddetails %}
 
 Après cette maquette j'ai commencé à réaliser le visuel, en voici le résultat :
 
