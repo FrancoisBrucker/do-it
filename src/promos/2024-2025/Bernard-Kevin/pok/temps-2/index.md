@@ -83,14 +83,14 @@ Le but de ce POK est de réaliser un site en React pour gérer mes tâches avec 
 | Date | Heures passées | Indications |
 | -------- | -------- |-------- |
 | **Début Sprint 1** |
-| Mardi 05/11  | 2H45  | Création de la mind map et de la maquette (barre de navigation + couleurs) |
+| Mardi 05/11  | 2H45  | Création de la mind map et de la maquette |
 | Dimanche 10/11 | 1H | Maquette : page Agenda |
-| Jeudi 14/11 | 1H35 | Maquette: inspiration de House of Dreamers + table de ClipArtMag et livre de Pixabay sur Pinterest + idéation des thèmes des pages sur la mind map + Idée des 4 saisons avec le texte qui est par-dessus les paysages, à la fois beaucoup plus simple et plus joli |
+| Jeudi 14/11 | 1H35 | Maquette: inspiration de House of Dreamers |
 | Vendredi 15/11 | 1H | Importation du modèle blender sur la page web |
 | Vendredi 15/11 | 0H45 | Ajustement de la lumière |
-| Lundi 18/11 | 0H45 | Rédaction POK |
-| Mardi 19/11 | 0H45 + 1H05 + 1H | Rédaction POK |
-| Total | 10H40 |
+| Lundi 18/11 | 0H45 | Ajustement Caméra, position, taille |
+| Mardi 19/11 | 2H15 | Création des pages et ajout de la navigation |
+| Total | 9H45 |
 
 <!-- | **Début Sprint 2** |
 | Total | 0H | -->
