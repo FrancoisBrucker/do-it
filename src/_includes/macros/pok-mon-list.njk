@@ -16,16 +16,23 @@
             {% if c == types.length %}
                 <li class="m-3 p-3 border-solid border-2 rounded relative flex flex-col">
                     <div class="text-lg mb-3">
-                        <a href="{{ article.url  }}">{{article.data.title}}</a>
+                        <a href="{{ article.url }}">{{article.data.title}}</a>
                     </div>
                     {% if article.data.résumé %}
                         <span class="line-clamp-3">{{ article.data.résumé }}</span>
                     {% else %}
-                        <span class="flex-grow"><i>MON de temps {{ temps }}.</i></span>
+                        <span class="flex-grow"><i>Aucun résumé fourni pour le moment.</i></span>
                     {% endif %}
                     <div class="flex flex-wrap flex-row flex-grow justify-between items-end not-prose list-none mt-3 mb-1 mx-0 px-1 gap-1">
-                        <span class="bg-blue-200 rounded-full px-2">{{article.data.authors}}</span>
-                        <span class="bg-purple-200 rounded-full px-2">{{ article.data.date | dateFormat("dd/MM/yyyy") }}</span>
+                        <div class="flex-1">
+                            <span class="bg-blue-200 rounded-full p-2">{{article.data.authors}}</span>
+                        </div>
+                        <div>
+                            {% if article.url | HalfTimeFromUrl %}
+                                <span class="bg-yellow-200 rounded-full p-2">MON {{ temps }}{{ article.url | HalfTimeFromUrl }}</span>
+                            {% endif %}
+                            <span class="bg-purple-200 rounded-full p-2">{{ article.data.date | dateFormat("dd/MM/yyyy") }}</span>
+                        </div>
                     </div>
                 </li>
             {% endif %}
