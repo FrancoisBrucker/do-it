@@ -32,15 +32,13 @@ Dans ce POK je compte découvrir JavaScript et me repolonger dans les cours de D
 
 | Tâches | Heures prévues |
 | --------|-------- |
-| **Sprint 1**|-------- |
-| Recherche docu  sur les jeux déjà réalisé en do_it | 1h |
-| Revoir les bases html css | 3h |
-| Définir et Réaliser un premier visuel | 3h |
-| Découvrir JavaScript | 3h |
-| **Sprint 2**|-------- |
-| Implémentation du jeu | 6h |
-| Amélioration du visuel | 2h (en fonction de la durée de la partie précédente) |
-| Restitution et publication du jeu | 2h |
+| S1 : Recherche docu  sur les jeux déjà réalisé en do_it | 1h |
+| S1 : Revoir les bases html css | 3h |
+| S1 : Définir et Réaliser un premier visuel | 3h |
+| S1 : Découvrir JavaScript | 3h |
+| S2: Implémentation du jeu | 6h |
+| S2 : Amélioration du visuel | 2h (en fonction de la durée de la partie précédente) |
+| S2 : Restitution et publication du jeu | 2h |
 
 
 ## Premier Sprint
