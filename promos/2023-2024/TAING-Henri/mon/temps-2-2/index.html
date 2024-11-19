@@ -177,7 +177,7 @@ LIMIT nombre
 OFFSET début
 </code></pre>
 <p>Je vous fais part des questions que j'ai trouvé intéressantes dans le sens où elles me serviront comme fiches pour réapprendre quand je réoublierai, car je sais que ça arrivera très vite.</p>
-<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
 <summary class="list-none py-0.5">
 <svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -186,14 +186,14 @@ OFFSET début
 <svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
 </svg>
-<div class="pl-8 font-bold inline-block">
+<div class="pl-8 font-bold inline-block group-open:select-text">
 <p>Q6, Obtenir la liste des 10 plus grands départements, en terme de superficie - Utilise SUM, GROUP, ORDER</p>
 </div>
 <svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
 </svg>
 </summary>
-<div class="mx-8 pb-2">
+<div class="mx-8 pb-2 cursor-auto select-text">
 <pre><code>SELECT ville_departement, SUM(ville_surface) as surfacetotale FROM villes_france_free
 GROUP BY ville_departement
 ORDER BY surfacetotale DESC
@@ -203,7 +203,7 @@ ORDER BY surfacetotale DESC
 </div>
 <p><strong>Résultat sur la table</strong>
 <img src="ex1_Q6.PNG"></p>
-<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
 <summary class="list-none py-0.5">
 <svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -212,14 +212,14 @@ ORDER BY surfacetotale DESC
 <svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
 </svg>
-<div class="pl-8 font-bold inline-block">
+<div class="pl-8 font-bold inline-block group-open:select-text">
 <p>Q7, Compter le nombre de villes dont le nom commence par “Saint” - Utilise COUNT, WHERE, LEFT</p>
 </div>
 <svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
 </svg>
 </summary>
-<div class="mx-8 pb-2">
+<div class="mx-8 pb-2 cursor-auto select-text">
 <pre><code>SELECT COUNT(ville_nom) as nombredevilles FROM villes_france_free
 WHERE LEFT(ville_nom, 5) = &quot;Saint&quot;;
 LEFT(valeur, nombre de lettres en partant de la gauche) = &quot;Ce qu'on cherche&quot; - Sert de condition pour WHERE
@@ -229,7 +229,7 @@ LEFT(valeur, nombre de lettres en partant de la gauche) = &quot;Ce qu'on cherche
 </div>
 <p><strong>Résultat sur la table</strong>
 <img src="ex1_Q7.PNG"></p>
-<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
 <summary class="list-none py-0.5">
 <svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -238,14 +238,14 @@ LEFT(valeur, nombre de lettres en partant de la gauche) = &quot;Ce qu'on cherche
 <svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
 </svg>
-<div class="pl-8 font-bold inline-block">
+<div class="pl-8 font-bold inline-block group-open:select-text">
 <p>Q8, Obtenir la liste des villes qui ont un nom existants plusieurs fois, et trier afin d’obtenir en premier celles dont le nom est le plus souvent utilisé par plusieurs communes” - Utilise HAVING</p>
 </div>
 <svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
 </svg>
 </summary>
-<div class="mx-8 pb-2">
+<div class="mx-8 pb-2 cursor-auto select-text">
 <pre><code>SELECT ville_nom, COUNT(ville_nom) FROM villes_france_free
 GROUP BY ville_nom
 HAVING COUNT(ville_nom) &gt; 1
@@ -256,7 +256,7 @@ ORDER BY COUNT(ville_nom) DESC
 </div>
 <p><strong>Résultat sur la table</strong>
 <img src="ex1_Q8.PNG"></p>
-<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
 <summary class="list-none py-0.5">
 <svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -265,14 +265,14 @@ ORDER BY COUNT(ville_nom) DESC
 <svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
 </svg>
-<div class="pl-8 font-bold inline-block">
+<div class="pl-8 font-bold inline-block group-open:select-text">
 <p>Q11, Remplacez les tirets par un espace vide, pour toutes les villes commençant par “SAINT-” (dans la colonne qui contient les noms en majuscule)” - Utilise HAVING</p>
 </div>
 <svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
 </svg>
 </summary>
-<div class="mx-8 pb-2">
+<div class="mx-8 pb-2 cursor-auto select-text">
 <pre><code>SELECT REPLACE(ville_nom, '-', ' ') FROM villes_france_free
 WHERE LEFT(ville_nom, 5) = 'Saint';
 REPLACE(valeur, 'ce qu'on veut remplacer', 'par quoi on veut le remplacer') - Après SELECT
@@ -301,7 +301,7 @@ Désactivation du safe mode
 SET SQL_SAFE_UPDATES = 1;
 Activation du safe mode
 </code></pre>
-<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
 <summary class="list-none py-0.5">
 <svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -310,14 +310,14 @@ Activation du safe mode
 <svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
 </svg>
-<div class="pl-8 font-bold inline-block">
+<div class="pl-8 font-bold inline-block group-open:select-text">
 <p>Q4, Enregistrer le prix total à l’intérieur de chaque ligne des commandes, en fonction du prix unitaire et de la quantité” - Utilise ALTER, MODIFY, UPDATE, SET</p>
 </div>
 <svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
 </svg>
 </summary>
-<div class="mx-8 pb-2">
+<div class="mx-8 pb-2 cursor-auto select-text">
 <pre><code>ALTER TABLE commande_ligne   // Sélectionne la table à modifier
 MODIFY prix_total DECIMAL(10, 2);   // Pour changer le type
 SET SQL_SAFE_UPDATES = 0; // A remettre à 1 plus tard, permet d’éviter de modifier des tables
@@ -328,7 +328,7 @@ SET prix_total = prix_unitaire * quantite;     // Change la valeur de la colonne
 </details>     
 </div>
 <p>La question 5 résume bien comment joindre plusieurs tables.</p>
-<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
 <summary class="list-none py-0.5">
 <svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -337,14 +337,14 @@ SET prix_total = prix_unitaire * quantite;     // Change la valeur de la colonne
 <svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
 </svg>
-<div class="pl-8 font-bold inline-block">
+<div class="pl-8 font-bold inline-block group-open:select-text">
 <p>Q5, Obtenir le montant total pour chaque commande et y voir facilement la date associée à cette commande ainsi que le prénom et nom du client associé” - Utilise JOIN</p>
 </div>
 <svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
 </svg>
 </summary>
-<div class="mx-8 pb-2">
+<div class="mx-8 pb-2 cursor-auto select-text">
 <pre><code>SELECT client.nom, client.prenom, commande.date_achat, SUM(commande_ligne.prix_total) AS montant_total
 FROM client
 JOIN commande ON client.id = commande.client_id  (Première jointure sur une clé commune)
@@ -357,7 +357,7 @@ GROUP BY client.nom, client.prenom, commande.date_achat (Pour résoudre les prob
 <p><strong>Résultat</strong>
 <img src="ex2_Q5.PNG"></p>
 <p>La question 10 nous apprend à ajouter et modifier une colonne.</p>
-<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
 <summary class="list-none py-0.5">
 <svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -366,14 +366,14 @@ GROUP BY client.nom, client.prenom, commande.date_achat (Pour résoudre les prob
 <svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
 </svg>
-<div class="pl-8 font-bold inline-block">
+<div class="pl-8 font-bold inline-block group-open:select-text">
 <p>Q10, Ajouter une colonne intitulée “category” à la table contenant les commandes. Cette colonne contiendra une valeur numérique” - Utilise ADD</p>
 </div>
 <svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
 </svg>
 </summary>
-<div class="mx-8 pb-2">
+<div class="mx-8 pb-2 cursor-auto select-text">
 <pre><code>ALTER TABLE commande
 ADD category VARCHAR(255)    // Ajoute une colonne de type VARCHAR(255)
 </code></pre>
@@ -381,7 +381,7 @@ ADD category VARCHAR(255)    // Ajoute une colonne de type VARCHAR(255)
 </details>     
 </div>
 <p>La question 11 nous apprend à utiliser IF, on peut également utiliser CASE WHEN.</p>
-<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
 <summary class="list-none py-0.5">
 <svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -390,7 +390,7 @@ ADD category VARCHAR(255)    // Ajoute une colonne de type VARCHAR(255)
 <svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
 </svg>
-<div class="pl-8 font-bold inline-block">
+<div class="pl-8 font-bold inline-block group-open:select-text">
 <p>Q11, Enregistrer la valeur de la catégorie, en suivant les règles suivantes :
 “1” pour les commandes de moins de 200€
 “2” pour les commandes entre 200€ et 500€
@@ -401,7 +401,7 @@ ADD category VARCHAR(255)    // Ajoute une colonne de type VARCHAR(255)
   <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
 </svg>
 </summary>
-<div class="mx-8 pb-2">
+<div class="mx-8 pb-2 cursor-auto select-text">
 <pre><code>UPDATE commande
 JOIN commande_ligne ON commande.id = commande_ligne.commande_id
 SET category =
@@ -415,7 +415,7 @@ SET category =
 </details>     
 </div>
 <p>Les questions 12 et 13 nous apprennent à créer une table et à y insérer des données.</p>
-<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
 <summary class="list-none py-0.5">
 <svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -424,7 +424,7 @@ SET category =
 <svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
 </svg>
-<div class="pl-8 font-bold inline-block">
+<div class="pl-8 font-bold inline-block group-open:select-text">
 <p>Q12 et Q13, Créer une table intitulée “commande_category” qui contiendra le descriptif de ces catégories
 et y insérer les 4 descriptifs de chaque catégorie au sein de la table précédemment créée” - Utilise CREATE TABLE, INSERT INTO</p>
 </div>
@@ -432,7 +432,7 @@ et y insérer les 4 descriptifs de chaque catégorie au sein de la table précé
   <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
 </svg>
 </summary>
-<div class="mx-8 pb-2">
+<div class="mx-8 pb-2 cursor-auto select-text">
 <pre><code>CREATE TABLE commande_category
 (descriptif VARCHAR(255))  //nom de la colonne obligatoire
 

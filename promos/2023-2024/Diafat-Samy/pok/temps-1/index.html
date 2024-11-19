@@ -239,7 +239,7 @@ player_info</code></pre>
 <pre class="language-python"><code class="language-python">player_info<span class="token punctuation">[</span><span class="token string">'id'</span><span class="token punctuation">]</span></code></pre>
 <h3>Faire des calculs à l'aide des données récoltées<a id="subsection-3"></a></h3>
 <p>Par la suite, j'ai créé des fonctions me permettant de faire des requêtes dans plusieurs sources différentes afin de croiser les informations, et de faire des calculs de moyenne par exemple.</p>
-<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
 <summary class="list-none py-0.5">
 <svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -248,14 +248,14 @@ player_info</code></pre>
 <svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
 </svg>
-<div class="pl-8 font-bold inline-block">
+<div class="pl-8 font-bold inline-block group-open:select-text">
 <p>Cliquez pour voir le code</p>
 </div>
 <svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
 </svg>
 </summary>
-<div class="mx-8 pb-2">
+<div class="mx-8 pb-2 cursor-auto select-text">
 <pre class="language-python"><code class="language-python"><span class="token comment"># Cette fonction permet de récupérer le puuid d'un joueur à partir du nom d'invocateur, de la région, et d'une clef api</span>
 <span class="token keyword">def</span> <span class="token function">get_puuid</span><span class="token punctuation">(</span>summoner_name<span class="token punctuation">,</span> region<span class="token punctuation">,</span> api_key<span class="token punctuation">)</span><span class="token punctuation">:</span>
     api_url <span class="token operator">=</span> <span class="token punctuation">(</span>
@@ -372,7 +372,7 @@ data<span class="token punctuation">[</span><span class="token string">'kda'</sp
 <p>Vous pouvez trouver l'ensemble de mes fonctions sur mon github ! lien github</p>
 <h3>Utilisation du framework Flask pour développer une petite application<a id="subsection-4"></a></h3>
 <p>Enfin, voici le code permettant d'utiliser Flask et d'avoir une petite interface graphique</p>
-<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
 <summary class="list-none py-0.5">
 <svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -381,14 +381,14 @@ data<span class="token punctuation">[</span><span class="token string">'kda'</sp
 <svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
 </svg>
-<div class="pl-8 font-bold inline-block">
+<div class="pl-8 font-bold inline-block group-open:select-text">
 <p>Cliquez pour voir le code</p>
 </div>
 <svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
 </svg>
 </summary>
-<div class="mx-8 pb-2">
+<div class="mx-8 pb-2 cursor-auto select-text">
 <pre class="language-python"><code class="language-python"><span class="token keyword">from</span> flask <span class="token keyword">import</span> Flask<span class="token punctuation">,</span> render_template<span class="token punctuation">,</span>request
 app <span class="token operator">=</span> Flask<span class="token punctuation">(</span>__name__<span class="token punctuation">)</span>
 

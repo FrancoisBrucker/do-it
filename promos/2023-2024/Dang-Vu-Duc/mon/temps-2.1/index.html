@@ -205,7 +205,7 @@ image_chaton <span class="token operator">=</span> pygame<span class="token punc
 <p>Il est également possible de dessiner des formes, ou insérer du texte. Pour cette dernière opération, on doit créer une police grâce à la classe <strong>Font</strong> du module <em>font</em>. Ensuite, il faut l'afficher puis le mettre dans une rectangle. Ce rectangle est en fait une surface, et on va pouvoir le placer ou l'on veut dans la fenêtre. Pour ce qui est de dessiner des formes, il faut utiliser le module <em>draw</em>, qui contient plusieurs méthodes pour dessiner des lignes, des rectangles, des cercles...</p>
 <h2>Création d'un jeu de morpion</h2>
 <p>Pour appliquer toutes ces notions, nous allons créer un jeu de morpion. On va donc créer une classe <strong>TicTacToe</strong> qui va définir tout ce qui va se trouver sur la fenêtre de jeu ainsi que les différentes interactions qu'il va y avoir. L'initialisation va simplement initier la fenêtre et les variables telle que le tableau <em>board</em>, qui contiendra les informations de la partie en cours ou encore le booléen <em>playing</em> qui indique si la partie est encore en cours ou non.</p>
-<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
 <summary class="list-none py-0.5">
 <svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -214,14 +214,14 @@ image_chaton <span class="token operator">=</span> pygame<span class="token punc
 <svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
 </svg>
-<div class="pl-8 font-bold inline-block">
+<div class="pl-8 font-bold inline-block group-open:select-text">
 <p>Cliquer pour voir l'initialisation de la classe <strong>TicTacToe</strong></p>
 </div>
 <svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
 </svg>
 </summary>
-<div class="mx-8 pb-2">
+<div class="mx-8 pb-2 cursor-auto select-text">
 <pre class="language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">TicTacToe</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
         pygame<span class="token punctuation">.</span>init<span class="token punctuation">(</span><span class="token punctuation">)</span>
@@ -241,7 +241,7 @@ image_chaton <span class="token operator">=</span> pygame<span class="token punc
 </div>
 <p>Ensuite, on crée la méthode <em>game</em> qui lance la boucle d'évènement. Dans cette boucle, on donne la possibilité à l'utilisateur de fermer la fenêtre, mais surtout on détecte quand l'utilisateur clique sur la fenêtre. Pour cela, on récupère l'évènement <em>MOUSEBUTTONDOWN</em>. Quand on l'utilisateur clique, on exécute la méthode <em>player_click</em>. Cette méthode récupère la position de la souris, et on détermine la zone dans laquelle elle est dans la grille. Suivant cette zone, et sous réserve qu'elle soit vide, on appelle la méthode <em>play</em> qui dessine un cercle bleu ou une croix rouge.
 De plus, dans cette boucle d'évènement, on doit dessiner le plateau le module <em>draw</em>. On utilise la méthode <em>line</em> en indiquant les coordonnées de la ligne ainsi que sa couleur.</p>
-<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
 <summary class="list-none py-0.5">
 <svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -250,14 +250,14 @@ De plus, dans cette boucle d'évènement, on doit dessiner le plateau le module 
 <svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
 </svg>
-<div class="pl-8 font-bold inline-block">
+<div class="pl-8 font-bold inline-block group-open:select-text">
 <p>Cliquer pour voir le code des méthodes <em>game</em>, <em>play</em> et <em>draw_board</em></p>
 </div>
 <svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
 </svg>
 </summary>
-<div class="mx-8 pb-2">
+<div class="mx-8 pb-2 cursor-auto select-text">
 <pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">game</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
   self<span class="token punctuation">.</span>is_player_one_to_play <span class="token operator">=</span> <span class="token boolean">True</span>
   self<span class="token punctuation">.</span>display_who_to_play<span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">)</span>
@@ -357,7 +357,7 @@ De plus, dans cette boucle d'évènement, on doit dessiner le plateau le module 
 </details>     
 </div>
 <p>Il faut également implémenter des méthodes pour afficher le tour du joueur 1 ou 2, le gagnant, ou le match nul.</p>
-<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
 <summary class="list-none py-0.5">
 <svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -366,14 +366,14 @@ De plus, dans cette boucle d'évènement, on doit dessiner le plateau le module 
 <svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
 </svg>
-<div class="pl-8 font-bold inline-block">
+<div class="pl-8 font-bold inline-block group-open:select-text">
 <p>Cliquer pour voir le code des méthodes <em>display_who_to_play</em>, <em>display_winner</em> et <em>display_draw</em></p>
 </div>
 <svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
 </svg>
 </summary>
-<div class="mx-8 pb-2">
+<div class="mx-8 pb-2 cursor-auto select-text">
 <pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">display_who_to_play</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> is_player_one_to_play<span class="token punctuation">)</span><span class="token punctuation">:</span>
   self<span class="token punctuation">.</span>remove_text<span class="token punctuation">(</span><span class="token punctuation">)</span>
   <span class="token keyword">if</span> is_player_one_to_play<span class="token punctuation">:</span>
@@ -410,7 +410,7 @@ De plus, dans cette boucle d'évènement, on doit dessiner le plateau le module 
 </details>     
 </div>
 <p>Enfin, il faut créer une méthode <em>check</em> pour vérifier si un joueur a gagné ou pas. Pour cela, on vérifie au cas par cas les différents possibilité de motifs gagnants. Il faut aussi créer une méthode pour recommencer la partie.</p>
-<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
 <summary class="list-none py-0.5">
 <svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -419,14 +419,14 @@ De plus, dans cette boucle d'évènement, on doit dessiner le plateau le module 
 <svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
 </svg>
-<div class="pl-8 font-bold inline-block">
+<div class="pl-8 font-bold inline-block group-open:select-text">
 <p>Cliquer pour voir le code des méthodes <em>check</em> et <em>restart</em></p>
 </div>
 <svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
 </svg>
 </summary>
-<div class="mx-8 pb-2">
+<div class="mx-8 pb-2 cursor-auto select-text">
 <pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">check</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span>self<span class="token punctuation">.</span>board<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token boolean">None</span> <span class="token keyword">and</span> self<span class="token punctuation">.</span>board<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">and</span> <span class="token punctuation">(</span>self<span class="token punctuation">.</span>board<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token boolean">None</span> <span class="token keyword">and</span> self<span class="token punctuation">.</span>board<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">and</span> <span class="token punctuation">(</span>self<span class="token punctuation">.</span>board<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token boolean">None</span> <span class="token keyword">and</span> self<span class="token punctuation">.</span>board<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
       self<span class="token punctuation">.</span>display_winner<span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">)</span>

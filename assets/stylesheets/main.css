@@ -1216,6 +1216,10 @@ a:not([class]):active, a:not([class]):visited:active {
   margin: 0px;
 }
 
+.m-0\.5 {
+  margin: 0.125rem;
+}
+
 .m-2 {
   margin: 0.5rem;
 }
@@ -1321,6 +1325,10 @@ a:not([class]):active, a:not([class]):visited:active {
   aspect-ratio: 1 / 1;
 }
 
+.h-10 {
+  height: 2.5rem;
+}
+
 .h-3 {
   height: 0.75rem;
 }
@@ -1374,6 +1382,10 @@ a:not([class]):active, a:not([class]):visited:active {
   max-width: 1000px;
 }
 
+.flex-1 {
+  flex: 1 1 0%;
+}
+
 .flex-none {
   flex: none;
 }
@@ -1386,8 +1398,28 @@ a:not([class]):active, a:not([class]):visited:active {
   flex-grow: 1;
 }
 
+.cursor-auto {
+  cursor: auto;
+}
+
 .cursor-help {
   cursor: help;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.select-none {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.select-text {
+  -webkit-user-select: text;
+     -moz-user-select: text;
+          user-select: text;
 }
 
 .list-none {
@@ -1870,6 +1902,12 @@ details p {
   margin-bottom: 0px;
 }
 
+/* For Safari details render */
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
 /* Show line numbers on code */
 
 /* Source issue: https://github.com/11ty/eleventy-plugin-syntaxhighlight/issues/10 */
@@ -1900,8 +1938,18 @@ code .highlight-line:before {
   display: block;
 }
 
+.group[open] .group-open\:inline-block {
+  display: inline-block;
+}
+
 .group[open] .group-open\:hidden {
   display: none;
+}
+
+.group[open] .group-open\:select-text {
+  -webkit-user-select: text;
+     -moz-user-select: text;
+          user-select: text;
 }
 
 .group:hover .group-hover\:block {

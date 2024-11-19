@@ -184,7 +184,7 @@ Tout les codes présentés sont disponibles dans le dossier Git du POK2: <a href
 <li><em>promote</em>: correspond au cas particulier de la promotion, qui sera expliquée plus en détail plus tard.</li>
 </ul>
 <p>Ces cases vont être incluses dans la liste représentant le plateau d'échecs.</p>
-<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
 <summary class="list-none py-0.5">
 <svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -193,14 +193,14 @@ Tout les codes présentés sont disponibles dans le dossier Git du POK2: <a href
 <svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
 </svg>
-<div class="pl-8 font-bold inline-block">
+<div class="pl-8 font-bold inline-block group-open:select-text">
 <p>Cliquer pour voir le code de la classe <strong>Cell</strong></p>
 </div>
 <svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
 </svg>
 </summary>
-<div class="mx-8 pb-2">
+<div class="mx-8 pb-2 cursor-auto select-text">
 <pre class="language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Cell</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> row<span class="token punctuation">,</span> column<span class="token punctuation">,</span> promote <span class="token operator">=</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
         self<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token builtin">chr</span><span class="token punctuation">(</span>column <span class="token operator">+</span> <span class="token number">97</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>row<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">}</span></span><span class="token string">"</span></span>
@@ -219,7 +219,7 @@ Tout les codes présentés sont disponibles dans le dossier Git du POK2: <a href
 <li><em>value</em>: entier correspondant à la valeur de la pièce (1 pour un Pion, 3 pour un Cavalier et un Fou, 5 pour une Tour, 9 pour une Dame et 1000 pour un Roi).</li>
 <li><em>letter</em>: chaîne de caractère correspondant à la lettre de la pièce (en notation anglaise). Cette lettre sera en majuscule si la pièce est blanche et en minuscule si la pièce est noire.</li>
 </ul>
-<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
 <summary class="list-none py-0.5">
 <svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -228,14 +228,14 @@ Tout les codes présentés sont disponibles dans le dossier Git du POK2: <a href
 <svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
 </svg>
-<div class="pl-8 font-bold inline-block">
+<div class="pl-8 font-bold inline-block group-open:select-text">
 <p>Cliquer pour voir le code de la classe <strong>Piece</strong></p>
 </div>
 <svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
 </svg>
 </summary>
-<div class="mx-8 pb-2">
+<div class="mx-8 pb-2 cursor-auto select-text">
 <pre class="language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Piece</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> IsWhite<span class="token punctuation">,</span> value<span class="token punctuation">,</span> letter<span class="token punctuation">,</span> current_cell<span class="token punctuation">)</span><span class="token punctuation">:</span>
         self<span class="token punctuation">.</span>possible_moves <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
@@ -252,7 +252,7 @@ Tout les codes présentés sont disponibles dans le dossier Git du POK2: <a href
 <li>Pour le Cavalier et le Roi, on génère les 8 coordonnées que ces pièces peuvent attendre (déplacement en &quot;L&quot; pour le Cavalier). Si une coordonnée sort du plateau, on ne l'inclut pas. Si une pièce se trouve sur la case et que sa couleur est opposée, on inclut cette case (c'est une prise!)</li>
 <li>Pour le Pion, on doit vérifier si la case en face (ou en dessous, suivant la couleur) est vide. Si c'est le cas, on inclut cette case. Si le pion se trouve sur la deuxième ligne (ou la septième ligne, suivant la couleur), on ajoute une case supplémentaire si possible. On vérifie aussi les deux cases en diagonale, ainsi que la couleur de l'éventuelle pièce qui s'y trouve. Si cette pièce est une pièce de l'adversaire, on inclut cette case (c'est une prise!).</li>
 </ul>
-<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
 <summary class="list-none py-0.5">
 <svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -261,14 +261,14 @@ Tout les codes présentés sont disponibles dans le dossier Git du POK2: <a href
 <svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
 </svg>
-<div class="pl-8 font-bold inline-block">
+<div class="pl-8 font-bold inline-block group-open:select-text">
 <p>Cliquer pour voir le code des 6 classes correspondantes au pièces du jeu</p>
 </div>
 <svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
 </svg>
 </summary>
-<div class="mx-8 pb-2">
+<div class="mx-8 pb-2 cursor-auto select-text">
 <pre class="language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">King</span><span class="token punctuation">(</span>Piece<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> IsWhite<span class="token punctuation">,</span> current_cell<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token keyword">if</span> IsWhite<span class="token punctuation">:</span>
@@ -536,7 +536,7 @@ Tout les codes présentés sont disponibles dans le dossier Git du POK2: <a href
 </div>
 <h3>Implémentation de la classe Chessboard</h3>
 <p>Il faut maintenant implémenter une classe qui va permettre de représenter et manipuler un plateau d'échecs. Ce plateau sera un attribut de cette classe, et sera un tableau de 8 lignes et 8 colonnes. Chaque élément de ce tableau sera une liste contenant un objet de la classe <strong>Cell</strong>, correspondant à la case de l'échiquier, et une objet de la classe <strong>Piece</strong>, qui sera le contenu de cette case. Si la case est vide, il y aura un objet <em>None</em>.</p>
-<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
 <summary class="list-none py-0.5">
 <svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -545,14 +545,14 @@ Tout les codes présentés sont disponibles dans le dossier Git du POK2: <a href
 <svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
 </svg>
-<div class="pl-8 font-bold inline-block">
+<div class="pl-8 font-bold inline-block group-open:select-text">
 <p>Cliquer pour voir l'initialisation de la classe <strong>Chessboard</strong></p>
 </div>
 <svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
 </svg>
 </summary>
-<div class="mx-8 pb-2">
+<div class="mx-8 pb-2 cursor-auto select-text">
 <pre class="language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Chessboard</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
         self<span class="token punctuation">.</span>board <span class="token operator">=</span> <span class="token punctuation">[</span> <span class="token punctuation">[</span><span class="token boolean">None</span> <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span> <span class="token punctuation">]</span>
@@ -564,7 +564,7 @@ Tout les codes présentés sont disponibles dans le dossier Git du POK2: <a href
 </div>
 <h4>Récupérer une position quelconque</h4>
 <p>Implémentons à présent une méthode qui permettra de récupérer n'importe quelle position d'échecs. Pour cela, on va utiliser une notation appelée la <a href="https://fr.wikipedia.org/wiki/Notation_Forsyth-Edwards">Notation de Forsyth-Edwards</a>. Cette notation est celle utilisée dans le monde des échecs pour représenter une position. Pour faire court, chaque rangée de l'échiquier est décrite de haut en bas, et chaque pièce est représentée par sa lettre. En lisant les lettres une par une, il n'est pas difficile de représenter la position dans notre code.</p>
-<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
 <summary class="list-none py-0.5">
 <svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -573,14 +573,14 @@ Tout les codes présentés sont disponibles dans le dossier Git du POK2: <a href
 <svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
 </svg>
-<div class="pl-8 font-bold inline-block">
+<div class="pl-8 font-bold inline-block group-open:select-text">
 <p>Cliquer pour voir le code de la méthode <em>get_position_from_fen</em></p>
 </div>
 <svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
 </svg>
 </summary>
-<div class="mx-8 pb-2">
+<div class="mx-8 pb-2 cursor-auto select-text">
 <pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">get_position_from_fen</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> fen_position<span class="token punctuation">)</span><span class="token punctuation">:</span>
         new_board <span class="token operator">=</span> <span class="token punctuation">[</span> <span class="token punctuation">[</span><span class="token boolean">None</span> <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span> <span class="token punctuation">]</span>
         <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -631,7 +631,7 @@ Tout les codes présentés sont disponibles dans le dossier Git du POK2: <a href
 </div>
 <h4>Effectuer un mouvement sur l'échiquier</h4>
 <p>La méthode <em>move</em> prend en argument une case de départ et une case d'arrivée, et modifie l'échiquier en conséquence. Pour cela, on récupère la pièce sur la case de départ et on vérifie si elle peut aller dans sa case d'arrivée grâce à l'attribut <em>possible_moves</em>. Ensuite, on supprime la pièce de la case de départ et on la place sur la case d'arrivée. Enfin, on actualise les attributs <em>possible_moves</em> de chaque pièce en utilisant les méthodes <em>get_possible_moves</em>.</p>
-<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
 <summary class="list-none py-0.5">
 <svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -640,14 +640,14 @@ Tout les codes présentés sont disponibles dans le dossier Git du POK2: <a href
 <svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
 </svg>
-<div class="pl-8 font-bold inline-block">
+<div class="pl-8 font-bold inline-block group-open:select-text">
 <p>Cliquer pour voir les codes des méthodes <em>move</em> et <em>update_possible_moves</em></p>
 </div>
 <svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
 </svg>
 </summary>
-<div class="mx-8 pb-2">
+<div class="mx-8 pb-2 cursor-auto select-text">
 <pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">move</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> current_cell<span class="token punctuation">,</span> final_cell<span class="token punctuation">)</span><span class="token punctuation">:</span>
     piece <span class="token operator">=</span> self<span class="token punctuation">.</span>board<span class="token punctuation">[</span>current_cell<span class="token punctuation">.</span>row<span class="token punctuation">]</span><span class="token punctuation">[</span>current_cell<span class="token punctuation">.</span>column<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
     <span class="token keyword">if</span> piece <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
@@ -707,7 +707,7 @@ Tout les codes présentés sont disponibles dans le dossier Git du POK2: <a href
 <p>Le cas de la promotion sera expliqué plus tard, car c'est un cas qui a été traité en dernier lors de ce sprint.</p>
 <h4>Déterminer si une pièce peut être capturée par ou pas</h4>
 <p>Cette méthode est très importante, car elle est utilisée dans beaucoup de méthodes ci-après. Pour cela, on récupère tout les mouvements possibles du plateau, et on vérifie si les coordonnées de la pièce en question est dans cette liste.</p>
-<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
 <summary class="list-none py-0.5">
 <svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -716,14 +716,14 @@ Tout les codes présentés sont disponibles dans le dossier Git du POK2: <a href
 <svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
 </svg>
-<div class="pl-8 font-bold inline-block">
+<div class="pl-8 font-bold inline-block group-open:select-text">
 <p>Cliquer pour voir le code de la méthode <em>CanBeCaptured</em></p>
 </div>
 <svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
 </svg>
 </summary>
-<div class="mx-8 pb-2">
+<div class="mx-8 pb-2 cursor-auto select-text">
 <pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">CanBeCaptured</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> piece<span class="token punctuation">)</span><span class="token punctuation">:</span>
     captured_by <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
     opponent_moves <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>cell<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> cell<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token keyword">for</span> cell <span class="token keyword">in</span> self<span class="token punctuation">.</span>get_all_possible_moves2<span class="token punctuation">(</span><span class="token keyword">not</span> piece<span class="token punctuation">.</span>IsWhite<span class="token punctuation">)</span><span class="token punctuation">]</span>
@@ -742,7 +742,7 @@ Tout les codes présentés sont disponibles dans le dossier Git du POK2: <a href
 </div>
 <h4>Récupérer tout les mouvements possibles d'une position</h4>
 <p>Il faut ensuite récupérer tout les coups possibles d'une position. Pour cela, on parcourt le plateau et quand on rencontre une pièce, on rajoute dans une liste la case de départ et les cases d'arrivée. Une chose importante à faire est de trier cette liste finale. On place en premier les mouvements qui résultent en un échec. Ceci est important car ces mouvements sont plus susceptibles de résoudre le problème, et cela va considérablement réduire le temps d'exécution de l'algorithme.</p>
-<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
 <summary class="list-none py-0.5">
 <svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -751,14 +751,14 @@ Tout les codes présentés sont disponibles dans le dossier Git du POK2: <a href
 <svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
 </svg>
-<div class="pl-8 font-bold inline-block">
+<div class="pl-8 font-bold inline-block group-open:select-text">
 <p>Cliquer pour voir le code de la méthode <em>get_all_possible_moves</em></p>
 </div>
 <svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
 </svg>
 </summary>
-<div class="mx-8 pb-2">
+<div class="mx-8 pb-2 cursor-auto select-text">
 <pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">get_all_possible_moves</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> IsWhiteToPlay<span class="token punctuation">)</span><span class="token punctuation">:</span>
     all_possible_moves <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
     initial_board <span class="token operator">=</span> copy<span class="token punctuation">.</span>deepcopy<span class="token punctuation">(</span>self<span class="token punctuation">.</span>board<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
@@ -803,7 +803,7 @@ Tout les codes présentés sont disponibles dans le dossier Git du POK2: <a href
 </ul>
 <p>La méthode <em>IsCheckmate</em> gère ces cas un par un, et renvoie un booléen qui indique s'il y a uun échec et mat ou pas.
 Il est inutile d'expliquer en détail comment cette fonction gère ces cas, mais il est intéressant de noter que cette méthode utilise la plupart des méthodes ci-avant.</p>
-<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
 <summary class="list-none py-0.5">
 <svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -812,14 +812,14 @@ Il est inutile d'expliquer en détail comment cette fonction gère ces cas, mais
 <svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
 </svg>
-<div class="pl-8 font-bold inline-block">
+<div class="pl-8 font-bold inline-block group-open:select-text">
 <p>Cliquer pour voir le code de la méthode <em>IsCheckmate</em></p>
 </div>
 <svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
 </svg>
 </summary>
-<div class="mx-8 pb-2">
+<div class="mx-8 pb-2 cursor-auto select-text">
 <pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">IsCheckmate</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> IsWhiteToPlay<span class="token punctuation">)</span><span class="token punctuation">:</span>
     initial_board <span class="token operator">=</span> copy<span class="token punctuation">.</span>deepcopy<span class="token punctuation">(</span>self<span class="token punctuation">.</span>board<span class="token punctuation">)</span>
     count <span class="token operator">=</span> <span class="token number">0</span>
@@ -949,7 +949,7 @@ Il est inutile d'expliquer en détail comment cette fonction gère ces cas, mais
 </div>
 <h4>Fonction d'évaluation</h4>
 <p>Il faut maintenant une méthode qui évalue la position d'une position donnée. Nous allons faire très simple, étant donné que l'objectif est simplement de résoudre des échecs et mat en quelques coups: l'évaluation d'une position sera donc la somme des valeurs des pièces présentes dans le plateau. S'il y a un échec et mat, on renvoie un score de 1000000.</p>
-<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
 <summary class="list-none py-0.5">
 <svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -958,14 +958,14 @@ Il est inutile d'expliquer en détail comment cette fonction gère ces cas, mais
 <svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
 </svg>
-<div class="pl-8 font-bold inline-block">
+<div class="pl-8 font-bold inline-block group-open:select-text">
 <p>Cliquer pour voir le code de la méthode <em>evaluate</em></p>
 </div>
 <svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
 </svg>
 </summary>
-<div class="mx-8 pb-2">
+<div class="mx-8 pb-2 cursor-auto select-text">
 <pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">evaluation</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token builtin">eval</span> <span class="token operator">=</span> <span class="token number">0</span>
     <span class="token keyword">if</span> self<span class="token punctuation">.</span>IsCheckmate<span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -990,7 +990,7 @@ Il est inutile d'expliquer en détail comment cette fonction gère ces cas, mais
 <h4>L'algorithme de résolution</h4>
 <p>Nous arrivons enfin à l'algorithme de résolution. Cet algorithme va utiliser toutes les méthodes précédemment présentées pour trouver un échec et mat en quelques coups. Cette méthode prend en entrée une position en notation FEN, un nombre de coups à explorer (qui est la profondeur de calcul) et renvoie une liste de coups qui correspond à l'échec et mat trouvé.
 Cet algorithme, bien connu dans la théorie des jeux, s'appelle <a href="https://fr.wikipedia.org/wiki/Algorithme_minimax">l'algorithme Minimax</a>. Il est inutiles d'expliquer comment fonctionne cet algorithme en détail car beaucoup de documentation est disponible sur ce sujet, mais le principe général repose sur le fait que l'algorithme trouve les mouvements qui permet de minimiser le score pour un joueur et maximiser ce même score pour l'autre joueur. Ce score est trouvé grâce à la méthode <em>evaluate</em>. Notons également que j'ai également implémenter <a href="https://fr.wikipedia.org/wiki/%C3%89lagage_alpha-b%C3%AAta">l'élagage &quot;Alpha-Beta&quot;</a> qui permet de réduire considérablement le temps d'exécution, en coupant les branches de l'arbre qui sont inutiles à explorer.</p>
-<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
 <summary class="list-none py-0.5">
 <svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -999,14 +999,14 @@ Cet algorithme, bien connu dans la théorie des jeux, s'appelle <a href="https:/
 <svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
 </svg>
-<div class="pl-8 font-bold inline-block">
+<div class="pl-8 font-bold inline-block group-open:select-text">
 <p>Cliquer pour voir le code de la méthode <em>solve</em></p>
 </div>
 <svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
 </svg>
 </summary>
-<div class="mx-8 pb-2">
+<div class="mx-8 pb-2 cursor-auto select-text">
 <pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">solve</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> fen_position<span class="token punctuation">,</span> IsWhiteToPlay<span class="token punctuation">,</span> depth<span class="token punctuation">)</span><span class="token punctuation">:</span>
     self<span class="token punctuation">.</span>c <span class="token operator">=</span> <span class="token number">0</span> 
     self<span class="token punctuation">.</span>tot <span class="token operator">=</span> <span class="token number">0</span>
@@ -1172,7 +1172,7 @@ Pour finir, voici l'exemple de résolution d'un mat en 4 sur la position suivant
 <li>Des listes qui contiendront les pièces prises par les Blancs et par les Noirs.</li>
 <li>Les différents sons que l'on pourra entendre pendant le jeu.</li>
 </ul>
-<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
 <summary class="list-none py-0.5">
 <svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -1181,14 +1181,14 @@ Pour finir, voici l'exemple de résolution d'un mat en 4 sur la position suivant
 <svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
 </svg>
-<div class="pl-8 font-bold inline-block">
+<div class="pl-8 font-bold inline-block group-open:select-text">
 <p>Cliquer pour voir le code de l'initialisation de la classe <strong>Chess_game</strong></p>
 </div>
 <svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
 </svg>
 </summary>
-<div class="mx-8 pb-2">
+<div class="mx-8 pb-2 cursor-auto select-text">
 <pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
     pygame<span class="token punctuation">.</span>init<span class="token punctuation">(</span><span class="token punctuation">)</span>
     <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
@@ -1295,7 +1295,7 @@ Pour finir, voici l'exemple de résolution d'un mat en 4 sur la position suivant
 <li>Affichage de l'historique des coups de la partie. Cette méthode doit également gérer le scroll de la liste, si jamais la le nombre de coups est trop élevé pour pouvoir rentrer dans la fenêtre. L'utilisateur pourra utiliser les flèches de son clavier ou la mollette de sa souris pour défiler la liste à sa guise.</li>
 </ul>
 <p>Certaines de ces méthodes d'affichage utilisent une autre méthode <em>draw_rect</em> qui permettent de colorer une case d'une certaine couleur.</p>
-<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
 <summary class="list-none py-0.5">
 <svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -1304,14 +1304,14 @@ Pour finir, voici l'exemple de résolution d'un mat en 4 sur la position suivant
 <svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
 </svg>
-<div class="pl-8 font-bold inline-block">
+<div class="pl-8 font-bold inline-block group-open:select-text">
 <p>Cliquer pour voir les méthodes dédiées à l'affichage</p>
 </div>
 <svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
 </svg>
 </summary>
-<div class="mx-8 pb-2">
+<div class="mx-8 pb-2 cursor-auto select-text">
 <pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">display_position</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">if</span> self<span class="token punctuation">.</span>state <span class="token operator">==</span> <span class="token string">"piece_selected"</span><span class="token punctuation">:</span>
         nb_row<span class="token punctuation">,</span> nb_column <span class="token operator">=</span> self<span class="token punctuation">.</span>coord_piece_selected
@@ -1542,7 +1542,7 @@ Pour finir, voici l'exemple de résolution d'un mat en 4 sur la position suivant
 </div>
 <h3>Affichage des mouvements possibles</h3>
 <p>Il faut à présent créer une méthode qui permet d'afficher les cases où la pièce sélectionnée peut aller. Il faut d'abord déterminer quelle case a été sélectionnée par l'utilisateur. Pour cela, on utilise la méthode <em>get_row_column</em> qui renvoie le numéro de ligne et colonne de la case sélectionnée par le joueur.</p>
-<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
 <summary class="list-none py-0.5">
 <svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -1551,14 +1551,14 @@ Pour finir, voici l'exemple de résolution d'un mat en 4 sur la position suivant
 <svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
 </svg>
-<div class="pl-8 font-bold inline-block">
+<div class="pl-8 font-bold inline-block group-open:select-text">
 <p>Cliquer pour voir la méthode <em>get_row_column</em></p>
 </div>
 <svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
 </svg>
 </summary>
-<div class="mx-8 pb-2">
+<div class="mx-8 pb-2 cursor-auto select-text">
 <pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">get_row_column</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
     pos <span class="token operator">=</span> pygame<span class="token punctuation">.</span>mouse<span class="token punctuation">.</span>get_pos<span class="token punctuation">(</span><span class="token punctuation">)</span>
     pos_x <span class="token operator">=</span> pos<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">-</span> self<span class="token punctuation">.</span>delta_x
@@ -1573,7 +1573,7 @@ Pour finir, voici l'exemple de résolution d'un mat en 4 sur la position suivant
 </details>     
 </div>
 <p>Ensuite, il faut récupérer l'attribut <em>possible_moves</em> qui est a été défini plus tôt, et qui contient toutes les cases possibles sur lesquelles chaque pièce peut aller. On peut ainsi récupérer les numéros de lignes et colonnes de chaque cases, et ainsi les colorer de la bonne couleur. Notons que c'est dans cette méthode que l'on gère la prise en passant.</p>
-<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100">
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
 <summary class="list-none py-0.5">
 <svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -1582,14 +1582,14 @@ Pour finir, voici l'exemple de résolution d'un mat en 4 sur la position suivant
 <svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
 </svg>
-<div class="pl-8 font-bold inline-block">
+<div class="pl-8 font-bold inline-block group-open:select-text">
 <p>Cliquer pour voir le code de la méthode <em>update_cells_selected</em></p>
 </div>
 <svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
 </svg>
 </summary>
-<div class="mx-8 pb-2">
+<div class="mx-8 pb-2 cursor-auto select-text">
 <pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">update_cells_selected</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> piece<span class="token punctuation">)</span><span class="token punctuation">:</span>
     valid_moves <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
     current_cell <span class="token operator">=</span> copy<span class="token punctuation">.</span>deepcopy<span class="token punctuation">(</span>piece<span class="token punctuation">.</span>current_cell<span class="token punctuation">)</span>
