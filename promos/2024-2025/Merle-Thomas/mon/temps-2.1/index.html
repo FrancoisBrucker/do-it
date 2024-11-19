@@ -188,8 +188,7 @@
 </ul>
 <h2>Contenu</h2>
 <h1>Apprentissage de GoLang</h1>
-<p>L'objectif de cet apprentissage est de maîtriser les bases du langage Go afin d'écrire un petit jeu de <strong>morpions</strong> ou <strong>tic-tac-toe</strong>.
-Ce document est une synthèse des 8 chapitres de cours sur Go, incluant des explications théoriques, des exemples de code, et des points clés à retenir.</p>
+<p>L'objectif de cet apprentissage est de maîtriser les bases du langage Go afin d'écrire un petit jeu de <strong>morpions</strong> ou <strong>tic-tac-toe</strong>.</p>
 <hr>
 <h2>Chapitre 1 : Introduction à Go<a name="introduction"></a></h2>
 <p>Go est un langage de programmation moderne développé par Google. Il se distingue par sa <strong>simplicité</strong>, sa <strong>performance</strong> et sa <strong>concurrence</strong>.</p>
@@ -272,17 +271,12 @@ result <span class="token operator">:=</span> x <span class="token operator">+</
 </code></pre>
 <h3>Points clés:</h3>
 <ul>
-<li>Typage fort: Go est un langage à typage statique, ce qui signifie que le type d'une variable doit être déclaré explicitement ou déduit par le compilateur.</li>
-<li>Inférence de type: Le compilateur peut souvent déduire le type d'une variable lors de son initialisation.</li>
-<li>Conversion de type: Il est possible de convertir un type en un autre à l'aide d'une conversion explicite (cast).</li>
-<li>Constante: Une valeur qui ne peut pas être modifiée après sa déclaration. On utilise le mot-clé const.</li>
-<li>Zero value: Si une variable n'est pas initialisée, elle prend une valeur par défaut (0 pour les nombres, &quot;&quot; pour les chaînes, false pour les booléens).</li>
-<li>Approfondissement</li>
+<li>*<strong>Typage fort</strong>: Go est un langage à typage statique, ce qui signifie que le type d'une variable doit être déclaré explicitement ou déduit par le compilateur.</li>
+<li><strong>Inférence de type</strong>: Le compilateur peut souvent déduire le type d'une variable lors de son initialisation.</li>
+<li><strong>Conversion de type</strong>: Il est possible de convertir un type en un autre à l'aide d'une conversion explicite (cast).</li>
+<li><strong>Constante</strong>: Une valeur qui ne peut pas être modifiée après sa déclaration. On utilise le mot-clé const.</li>
+<li><strong>Zero value</strong>: Si une variable n'est pas initialisée, elle prend une valeur par défaut (0 pour les nombres, &quot;&quot; pour les chaînes, false pour les booléens).</li>
 </ul>
-<ol>
-<li>Les pointeurs: Pour manipuler la mémoire de manière plus fine.</li>
-<li>Les structures: Pour regrouper des données de différents types.</li>
-</ol>
 <hr>
 <h2>Chapitre 4 : Les Conditions<a name="conditions"></a></h2>
 <p>Dans ce chapitre, nous abordons les conditions en Go, essentielles pour gérer la logique de contrôle dans vos programmes.</p>
@@ -308,11 +302,9 @@ result <span class="token operator">:=</span> x <span class="token operator">+</
         fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"Entrez :)"</span><span class="token punctuation">)</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
-<p>:checkered_flag: <strong>Résultats :</strong>
+<p>🏁 <strong>Résultats :</strong>
 Entrez votre âge : 16 Sortez !
 Entrez votre âge : 25 Entrez :</p>
-<p>Remarque :
-L'instruction <code>else</code> est facultative et sert à exécuter un bloc lorsque la condition <code>if</code> est fausse.</p>
 <h2>2. Les instructions <code>elseif</code></h2>
 <p>L'instruction <code>else if</code> permet de gérer des cas supplémentaires lorsque la première condition <code>if</code> n'est pas remplie. Elle permet de tester plusieurs alternatives de manière structurée.</p>
 <h2>3. Les instructions <code>switch</code> et <code>case</code></h2>
@@ -344,7 +336,7 @@ L'instruction <code>else</code> est facultative et sert à exécuter un bloc lor
         fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"Mauvais choix !"</span><span class="token punctuation">)</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span> </code></pre>
-<p>:checkered_flag: <strong>Résultats :</strong>
+<p>🏁 <strong>Résultats :</strong>
 Votre choix : 666
 Quand le diable veut une âme, le mal devient séduisant
 Votre choix : 7
@@ -372,7 +364,7 @@ Utilisons une boucle avec une initialisation, une condition et une itération po
         fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>compteur<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">") Je ne dois frapper mes camarades de classe"</span><span class="token punctuation">)</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
-<p>:checkered_flag: <strong>Résultats:</strong></p>
+<p>🏁 <strong>Résultats:</strong></p>
 <ol>
 <li>Je ne dois frapper mes camarades de classe</li>
 <li>Je ne dois frapper mes camarades de classe
@@ -403,7 +395,7 @@ Utilisons une boucle avec une initialisation, une condition et une itération po
 
     fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"Bienvenue en boîte de nuit !"</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span></code></pre>
-<p>:checkered_flag: <strong>Résultats:</strong>
+<p>🏁 <strong>Résultats:</strong>
 Entrez votre âge : 17
 Entrez votre âge : 19
 Bienvenue en boîte de nuit !</p>
@@ -447,7 +439,7 @@ Une fonction peut accepter plusieurs paramètres, quels que soient leurs types.<
     <span class="token function">affichage</span><span class="token punctuation">(</span><span class="token string">"Hatim"</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">)</span>
     <span class="token function">affichage</span><span class="token punctuation">(</span><span class="token string">"Alex"</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span></code></pre>
-<p>:checkered_flag: <strong>Résultat:</strong>
+<p>🏁 <strong>Résultat:</strong>
 Bonjour Hatim vous avez 9 ans
 Bonjour Alex vous avez 12 ans</p>
 <ol start="3">
@@ -467,7 +459,7 @@ Utilisez le mot-clé <code>return</code> pour renvoyer une valeur, qui peut êtr
     fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>max<span class="token punctuation">)</span>
     fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"Valeur : %d , Type : %T\n"</span><span class="token punctuation">,</span> <span class="token function">maxNbr</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">maxNbr</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span></code></pre>
-<p>:checkered_flag: <strong>Résultat:</strong>
+<p>🏁 <strong>Résultat:</strong>
 30
 Valeur : 50 , Type : int</p>
 <ol start="4">
@@ -485,7 +477,7 @@ Une fonction peut renvoyer plusieurs valeurs de types différents.</li>
     a<span class="token punctuation">,</span> b <span class="token operator">=</span> <span class="token function">additionTrois</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span>
     fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"Après fonction a ="</span><span class="token punctuation">,</span> a<span class="token punctuation">,</span> <span class="token string">" b ="</span><span class="token punctuation">,</span> b<span class="token punctuation">)</span>
 <span class="token punctuation">}</span></code></pre>
-<p>:checkered_flag: <strong>Résultat:</strong>
+<p>🏁 <strong>Résultat:</strong>
 Avant fonction a = 5  b = 8
 Après fonction a = 8  b = 11</p>
 <hr>
@@ -507,7 +499,7 @@ Après fonction a = 8  b = 11</p>
     fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"String :"</span><span class="token punctuation">,</span> tableauString<span class="token punctuation">)</span>
     fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"Bool :"</span><span class="token punctuation">,</span> tableauBool<span class="token punctuation">)</span>
 <span class="token punctuation">}</span></code></pre>
-<p>:checkered_flag: <strong>Résultat :</strong>
+<p>🏁 <strong>Résultat :</strong>
 Int : [0 0 0 0 0 0 0 0 0 0]
 Float : [0 0 0 0 0 0 0 0 0 0]
 String : [         ]
@@ -533,7 +525,7 @@ Bool : [false false false false false false false false false false]</p>
         fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>jour<span class="token punctuation">,</span> <span class="token string">"est le jour numéro"</span><span class="token punctuation">,</span> index<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
-<p>:checkered_flag: <strong>Résultat:</strong>
+<p>🏁 <strong>Résultat:</strong>
 lundi est le jour numéro 1
 mardi est le jour numéro 2
 ...
@@ -569,13 +561,13 @@ dimanche est le jour numéro 7</p>
 <pre class="language-go"><code class="language-go">tableau<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">42</span> <span class="token comment">// Modifier l'élément de la première ligne, deuxième colonne</span></code></pre>
 <h3>Points Clés:</h3>
 <ul>
-<li>Initialisation : Un tableau a une taille fixe et un type unique pour ses éléments.</li>
-<li>Accès : Utilisez les index pour accéder ou modifier des éléments.</li>
-<li>Boucle : Utilisez range pour parcourir les éléments avec index et valeurs.</li>
-<li>Multidimensionnel : Permet de modéliser des structures comme des grilles.</li>
+<li><strong>Initialisation</strong> : Un tableau a une taille fixe et un type unique pour ses éléments.</li>
+<li><strong>Accès</strong> : Utilisez les index pour accéder ou modifier des éléments.</li>
+<li><strong>Boucle</strong> : Utilisez range pour parcourir les éléments avec index et valeurs.</li>
+<li><strong>Multidimensionnel</strong> : Permet de modéliser des structures comme des grilles.</li>
 </ul>
 <hr>
-<p>:dart: <strong>Prochaine étape :</strong> Utiliser ces concepts pour coder un jeu de morpions ou tic tac toe game en Go !</p>
+<p>🎯 <strong>Prochaine étape :</strong> Utiliser ces concepts pour coder un jeu de morpions ou tic tac toe game en Go !</p>
 <hr>
 <h2>Mini Projet: écriture d'un code de jeu de morpions en Go<a name="projet"></a></h2>
 <h3>Introduction</h3>
@@ -731,37 +723,40 @@ Le parsing des coordonnées a été délicat, mais l'utilisation de fmt.Sscanf a
 <li>Utilisation de la bibliothèque <code>bufio</code> : Je n’étais pas familier avec son fonctionnement pour les entrées utilisateur, mais des recherches sur les forums Go et l’expérimentation m’ont permis de surmonter ce problème rapidement.</li>
 </ul>
 <p><strong>Difficultés et Résolutions:</strong></p>
-<ul>
-<li>
-<p>Blocage : Gestion des indices dans un tableau 2D
-<em>Problème</em> : L'utilisation d'un tableau 2D au lieu d'un tableau 1D rendait la vérification des conditions de victoire plus complexe, notamment pour les diagonales.
-:bulb: <em>Solution</em> :
+<h4>Blocage : Gestion des indices dans un tableau 2D</h4>
+<p><strong>Problème</strong> : L'utilisation d'un tableau 2D au lieu d'un tableau 1D rendait la vérification des conditions de victoire plus complexe, notamment pour les diagonales.
+💡 <em>Solution</em> :
 J'ai utilisé des boucles pour parcourir dynamiquement chaque ligne, colonne et diagonale.
 J'ai également vérifié manuellement les indices critiques pour les diagonales, car elles ne peuvent pas être parcourues directement comme une ligne ou une colonne.</p>
-</li>
-<li>
-<p>Blocage : Contrôle des entrées utilisateur
-<em>Problème</em> : Les utilisateurs peuvent entrer des valeurs non valides (par exemple, des lettres, des nombres hors limites ou des cases déjà occupées).
-:bulb: <em>Solution</em> :
+<h4>Blocage : Contrôle des entrées utilisateur</h4>
+<p><strong>Problème</strong> : Les utilisateurs peuvent entrer des valeurs non valides (par exemple, des lettres, des nombres hors limites ou des cases déjà occupées).
+💡 <em>Solution</em> :
 Une boucle <code>for</code> a été mise en place pour redemander une entrée valide tant que la saisie n’était pas correcte.
 J'ai utilisé <code>fmt.Sscanf</code> pour analyser les coordonnées et ajouté des messages explicatifs pour guider les joueurs.</p>
-</li>
-<li>
-<p>Blocage : Gestion des conditions de victoire
-<em>Problème</em> : Vérifier les alignements (lignes, colonnes et diagonales) dans un tableau 2D nécessitait une logique différente pour chaque type d'alignement.
-:bulb: <em>Solution</em> :
+<h4>Blocage : Gestion des conditions de victoire</h4>
+<p><strong>Problème</strong> : Vérifier les alignements (lignes, colonnes et diagonales) dans un tableau 2D nécessitait une logique différente pour chaque type d'alignement.
+💡 <em>Solution</em> :
 J'ai écrit une fonction générique qui vérifie les alignements de manière conditionnelle.
 En cas de répétitions (par exemple, plusieurs lignes), j'ai optimisé le code en regroupant les vérifications dans une boucle.</p>
-</li>
-<li>
-<p>Blocage : Affichage esthétique du damier
-<em>Problème</em> : Le damier n’était pas lisible au début à cause d’un espacement mal géré.
-:bulb: <em>Solution</em> :
+<h4>Blocage : Affichage esthétique du damier</h4>
+<p><strong>Problème</strong> : Le damier n’était pas lisible au début à cause d’un espacement mal géré.
+💡 <em>Solution</em> :
 J’ai ajusté le formatage en ajoutant des espaces et en séparant les lignes par des bordures visuelles pour rendre le jeu plus clair.</p>
-</li>
-</ul>
+<p><strong>Démo du jeu  via le terminal:</strong></p>
+<video width="600" controls="">
+  <source src="demo_morpions.mov" type="video/quicktime">
+</video>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
+</svg>
+<div class="pl-8 mr-8">
 <p><strong>Lien vers le Github du projet:</strong>
 <a href="https://github.com/ThomasMerle25/morpions-go" title="Morpions Go">Projet Morpions Go</a></p>
+<p><strong>Lien Tutoriel suivi:</strong>
+<a href="https://devopssec.fr/article/configurer-environnement-golang#begin-article-section"><code>GoLang Tuto</code></a></p>
+</div></div>
+
 <h2>Horodateur</h2>
 <p>Toutes les séances et le nombre d'heures que l'on y a passé.</p>
 <table>
