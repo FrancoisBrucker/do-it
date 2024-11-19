@@ -5,12 +5,12 @@ title: "Titre du POK du temps 2"
 authors:
   - Matthieu Dufort
 
-date: 1971-01-01
+date: 2024-11-20
 
 tags: 
   - "temps 2"
   - "Novice"
-  - "Ruby"
+  - "C"
 
 résumé: Un POK ayant pour objectif d'apprendre le langage C.
 ---
@@ -24,8 +24,8 @@ Pas de prérequis particulier son nécessaire mais il peut être intéressant de
 
 - [Documentation C](https://openclassrooms.com/fr/courses/19980-apprenez-a-programmer-en-c)
 - [MON de Cassandra Ledins](https://francoisbrucker.github.io/do-it/promos/2023-2024/Ledins-Cassandra/mon/temps-1.2/)
+- [Code créé au cours de l'apprentissage](CodeSprint1.zip)
 
-- [Code créer au cours de l'apprentissage]( .zip)
 {% endlien %}
 
 Pour ce POK, j'ai décidé d'apprendre un nouveau langage afin d'élargir mes compétences en développement avec un langage un peu moins intuitif que python. Je vais me former sur l'utilisation du langage C. Pour cela je vais partir de la documentation et construire ensuite dans un second temps un petit projet (probablement un morpion ou un mini jeu de ce genre) afin de le prendre un peu plus en main.
