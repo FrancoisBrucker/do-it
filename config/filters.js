@@ -29,6 +29,15 @@ export default async function(eleventyConfig) {
         return str.split(new RegExp(separator))[value];
     });
 
+    eleventyConfig.addFilter("HalfTimeFromUrl", (url) => {
+        if (url.endsWith(`.1/`)) {
+            return `.1`;
+        } else if (url.endsWith(`.2/`)) {
+            return `.2`;
+        }
+        else return undefined
+    });
+
     eleventyConfig.addFilter("dateFormat", (dateObj, format = "dd/MM/yyyy") => {
         return DateTime.fromJSDate(dateObj).toFormat(format);
     });
