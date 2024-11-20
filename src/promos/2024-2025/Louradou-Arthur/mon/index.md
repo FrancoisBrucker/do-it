@@ -2,7 +2,6 @@
 layout: layout/mon-index.njk
 
 title: "MON parcours d'autoformation (bis)"
-eleventyExcludeFromCollections: true
 authors:
     - Arthur Louradou
 ---

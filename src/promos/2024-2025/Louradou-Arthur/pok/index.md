@@ -2,7 +2,6 @@
 layout: layout/pok-index.njk
 
 title: "POKs"
-eleventyExcludeFromCollections: true
 authors:
   - Arthur Louradou
 ---
