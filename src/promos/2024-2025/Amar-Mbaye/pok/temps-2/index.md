@@ -85,7 +85,7 @@ Créer un forum de discussion où je vais:
 
 | Sprint      | Étapes                          | Temps Alloué | Description                                                                 |
 |-------------|-------------------------------------|--------------|-----------------------------------------------------------------------------|
-| **Sprint 1** | Création de la maquette (UX/UI)    | **3h**       | Conception des maquettes du forum pour garantir une interface intuitive.    |
+| **Sprint 1** | Création de la maquette (UX/UI)    | **3h**       | Conception de la maquette du forum                       |
 |             | Développement du frontend          | **5h**      | Développement des composants React.js pour afficher et gérer les données.   |
 |             | Test et ajustements frontend       | **2h**       | Débogage et amélioration de l'expérience utilisateur.                       |
 | **Sprint 2** | Configuration du backend avec NestJS | **4h**      | Création des modules, services, et contrôleurs pour gérer les données.      |
