@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Modélisation d&#39;un parc solaire sur Excel</title>
+        <title>Modélisation d&#39;un parc photvoltaïque sur Excel</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">Modélisation d&#39;un parc solaire sur Excel</h1>
+<h1 class="mb-1">Modélisation d&#39;un parc photvoltaïque sur Excel</h1>
 <div class="mb-4">
     
         <div class="px-4 flex flex-wrap items-center">
@@ -105,7 +105,7 @@
 
         <p class="mb-4 text-lg">
 
-                Afin de pouvoir modéliser facilement un parc solaire avec un logiciel connu et utilisé par tous (Excel), ce POK me permettra de mettre en pratique mes connaissances en VBA et de mettre en place un outil permettant l'estimation des quantitatifs de câbles nécessaires la construction d'un parc solaire.
+                Afin de pouvoir modéliser facilement un parc photovoltaïque avec un logiciel connu et utilisé par tous (Excel), ce POK me permettra de mettre en pratique mes connaissances en VBA et de mettre en place un outil permettant l'estimation des quantitatifs de câbles nécessaires la construction d'un parc solaire.
 
         </p>
 
@@ -118,7 +118,7 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Damien-Wolbert/">Damien WOLBERT</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Damien-Wolbert/pok/">POK de Damien WOLBERT</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Damien-Wolbert/pok/temps-2/">Modélisation d&#39;un parc solaire sur Excel</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Damien-Wolbert/">Damien WOLBERT</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Damien-Wolbert/pok/">POK de Damien WOLBERT</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Damien-Wolbert/pok/temps-2/">Modélisation d&#39;un parc photvoltaïque sur Excel</a>
 
 </div></div>
 
@@ -140,6 +140,7 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
 </svg>
 <div class="pl-8 mr-8">
+<p>Github du projet : <a href="https://github.com/DamienWolbert/POK-2-Mod-lisation-de-parc-PV">Github</a></p>
 </div></div>
 
 <h2>Cadrage</h2>
@@ -148,15 +149,6 @@
 <li>Réussir à modéliser de manière graphique et visuelle un parc photovoltaïque.</li>
 <li>Mettre en place un parcours utilisateur simple et agréable.</li>
 <li>Ajuster le niveau de précision des estimations et outils au temps alloué au projet.</li>
-</ol>
-<h3>Stratégie de résolution</h3>
-<ol>
-<li>Reccueillir le besoin</li>
-<li>Mettre en place l'interface utilisateur</li>
-<li>Mettre en place des &quot;templates&quot; pour le renseignement des données d'entrée et de sortie.</li>
-<li>Coder les fonctions permettant l'entrée des données.</li>
-<li>Coder les fonctions permettant le calcul des distances et des quantités de câble.</li>
-<li>Tester et corriger.</li>
 </ol>
 <h3>Monitoring du projet</h3>
 <h4>Back-log</h4>
@@ -174,9 +166,9 @@
 <li>[x] Trame du template des données de sortie</li>
 <li>[x] Mise au propre des templates des données d'entrée</li>
 <li>[x] Mise au propre des templates des données de sortie</li>
-<li>[ ] Rédaction des fonctions permettant la création des templates d'inputs</li>
+<li>[x] Rédaction des fonctions permettant la création des templates de grille.</li>
 <li>[x] Rédiger le sprintbacklog 1 sur le site do-it</li>
-<li>[ ] Rédiger le CR du sprint 1 sur le site Do-it</li>
+<li>[x] Rédiger le CR du sprint 1 sur le site Do-it</li>
 </ul>
 <table>
 <thead>
@@ -192,7 +184,7 @@
 <h5>Sprint 2</h5>
 <ul>
 <li>[ ] Rédaction des fonctions informatiques permettant le calcul des distances sur la grille</li>
-<li>[ ] Lister les fonctions informatiques a priori nécessaires</li>
+<li>[x] Lister les fonctions informatiques a priori nécessaires</li>
 </ul>
 <table>
 <thead>
@@ -200,9 +192,49 @@
 <th>Date</th>
 <th>Heures passées</th>
 <th>Indications</th>
-<th>Niveau d'efficacité</th>
 </tr>
 </thead>
+<tbody>
+<tr>
+<td>04/11/2024</td>
+<td>0.5h</td>
+<td>Cadrage projet</td>
+</tr>
+<tr>
+<td>05/11/2024</td>
+<td>0.5h</td>
+<td>Recueil du besoin auprès d'ingénieurs et projeteurs électriciens</td>
+</tr>
+<tr>
+<td>06/11/2024</td>
+<td>0.5h</td>
+<td>Recadrage du projet et rédaction des premières hypothèses fortes.</td>
+</tr>
+<tr>
+<td>12/11/2024</td>
+<td>0.25h</td>
+<td>Mise à jour du sprint back-log 1</td>
+</tr>
+<tr>
+<td>12/11/2024</td>
+<td>3.5h</td>
+<td>Interface utilateur et essais</td>
+</tr>
+<tr>
+<td>14/11/2024</td>
+<td>2.5h</td>
+<td>Interface utilisateur et essais</td>
+</tr>
+<tr>
+<td>18/11/2024</td>
+<td>`1.5h | Interface utilisateur et essais |</td>
+</tr>
+<tr>
+<td>18/11/2024</td>
+<td>2h</td>
+<td>Rédaction sur le site Do-it en tenant compte des nouvelles consignes.</td>
+</tr>
+</tbody>
 </table>
 <p><em><strong>Total du sprint 2 :</strong></em></p>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-yellow-500 bg-yellow-100">
@@ -215,6 +247,9 @@
 </div></div>
 <h3>Analyse post-morterm</h3>
 <p><strong>Sprint 1 :</strong></p>
+<p><strong>GESTION GENERALE DU TEMPS :</strong> Bonne estimation de la quantité de tâche pour la srpint 1. Il aurait fallu commencer directement une démarche de conception de l'interface utilisateur par l'essai telle que définie plus bas. Cela aurait permis un gain de temps permettant d'anticiper de potentielle difficultés de programmation durant le sprint 2.<br>
+<strong>DIMENSIONNEMENT DU PROJET :</strong> Projet a priori bien dimensionné. La démarche du sprint 1 va permettre une plus grande efficacité pour le sprint 2 : raisonnement à partir de connaissance détenues et pas des objectifs idéaux à atteindre.<br>
+<strong>DIMENSIONNEMENT DES TACHES :</strong> Division exagérée des tâches entrainant une trop grande rigidité lors de la rédaction (à l'inverse du POK1). A la fin du sprint, toutes les tâches fixées on été réalisées, toutefois ni l'ordre ni la séparation des activités n'a été réellement suivi. Il faudra pour le prochain</p>
 <p><strong>Sprint 2 :</strong></p>
 <h2>Vocabulaire et fonctionnement d'un parc photovoltaïque</h2>
 <p>Afin de comprendre la suite de ce POK, il est nécessaire de s'intier au monde du photovoltaïque ainsi qu'à son vocabulaire.</p>
@@ -236,13 +271,15 @@
 </summary>
 <div class="mx-8 pb-2 cursor-auto select-text">
 <p>Le schema ci-dessous présente la configuration de parc utilisée tout au long du projet (c.f. hypothèses)
-<img src="POK%202%20%20Brainstorming%20g%C3%A9n%C3%A9rale%20P3.png" alt="Parc photovoltaïque simple">
-<strong>Lexique :</strong></p>
+<img src="POK%202%20%20Brainstorming%20g%C3%A9n%C3%A9rale%20P3.png" alt="Parc photovoltaïque simple"></p>
+<p><img src="Schemas.png" alt="Illustration d'un parc photovoltaïque">
+« «Folie» ou projet «d’intérêt général»? Un parc solaire XXL à l’étude en France ». <a href="http://parismatch.com">parismatch.com</a>, 8 février 2022, <a href="https://www.parismatch.com/Actu/Environnement/Folie-ou-projet-d-interet-general-Dans-le-sud-ouest-de-la-France-un-parc-solaire-XXL-a-l-etude-1786628">https://www.parismatch.com/Actu/Environnement/Folie-ou-projet-d-interet-general-Dans-le-sud-ouest-de-la-France-un-parc-solaire-XXL-a-l-etude-1786628</a>.</p>
 <ul>
 <li><em><strong>String</strong></em> : Ensemble de panneaux connectés en série.</li>
 <li><em><strong>BR</strong></em> : Boite de raccordement - Organe électrique auquel sont branchés des plusieurs strings en parallèle.</li>
 <li><em><strong>PTR</strong></em> : Poste de transformation - Cabinet électrique dans lequel la puissance envoyée par plusieurs BR est convertie par des onduleurs (passage de courant continu à alternatif), puis transformée par un transformateur (augmentation de la tension du signal). Les différents PTR sont connectés en série ou en parallèle au poste de livraison, interface entre le parc et les réseaux d'ENEDIS et/ou de RTE.</li>
 <li><em><strong>Section de câble</strong></em> : Section transversale du conducteur d'un câbles. Les <strong>petites sections</strong> correspondents généralement aux câbles de 4, 6 et 10 mm² ; <strong>les grandes sections</strong> correspondent aux section de 185, 240, 300 et 400 mm².</li>
+<li><em><strong>Stand</strong></em> : Structure soutenant les panneaux photovoltaïques. Un stand peut supporter plusieurs strings.</li>
 </ul>
 </div>
 </details>     
@@ -253,13 +290,18 @@
 <tr>
 <th>Etapes</th>
 <th>Résultats</th>
-<th>Difficultés rencontrés</th>
+<th>Difficultés rencontrées</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Discussion avec des projeteurs électriciens et ingénieurs électriciens</td>
-<td>Fonctionnalités principales et enjeux</td>
+<td>Fonctionnalités principales et enjeux du dimenssionnement d'un parc</td>
+<td>Les ingénieurs et projeteurs avaient tendance à continuellement sur-enchérir en voyant les potentialité de l'outil. Il était difficile de rester dans le cadre d'un projet de 10h. <em>Remarque : J'ai chosisi de recueillir ce besoin lors d'un moment informel afin de limiter au plus ce comportement. Cela c'est en effet révélé efficace.</em></td>
+</tr>
+<tr>
+<td>Tests et essais</td>
+<td>Tout en appliquant les exigences recuillies précédemment, j'ai pû me rendre compte des difficultés techniques imposées par Excel et ainsi rédiger des hypothèses permettant d'ajuster le projet au cadre du POK.</td>
 </tr>
 </tbody>
 </table>
@@ -270,73 +312,110 @@
 <div class="pl-8 mr-8">
 <p>Un projeteur électricien est chargé de la réalisation des plans électriques globaux à partir des exigences des inégnieurs électriciens. Il produit souvent des livrables réalisés sur des logiciels comme AutoCAD.</p>
 </div></div>
-<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
-<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-</svg>
-<div class="pl-8 mr-8">
-<p>Le recueil du besoin a été réalisé sur mon lieu d'alternance et d'après mon expérience personnelle. La liste des fonctionnalités et des cas d'uitlisation produite par cette étude m'a contraint à poser des hypothèses forte pour rester dans le cadre du POK. <strong>Ces hypothèses ont été pensées au fur et à mesure de la définition des templates, du parcours utilisateur et des tests réalisés pendant le sprint 1.</strong></p>
-</div></div>
-<p>Hypothèses :</p>
+<p><strong>Hypothèses :</strong></p>
 <ul>
-<li>Le parc n'utilise qu'une seule technologie d'onfuleur : onduleurs centraux position dans les stations de transformation.</li>
+<li>Le parc n'utilise qu'une seule technologie d'onduleur : onduleurs centraux, positionnés dans les stations de transformation.</li>
 <li>Les rangées sont positionnées verticalement.</li>
 <li>Les rangées sont soit perpendiculaires soit parallèles aux routes d'accès.</li>
 <li>Les strings sont câblées en entérré si aucune boite de jonction n'est présente dans l'interrangée à sa gauche ou à sa droite.</li>
+<li>Chaque stande ne contient qu'une seule string.</li>
+<li>Les tranchées solaires (tranchées pour les câbles de petite section) sont perpendiculaires aux stands et passent au niveau des inter-stands.</li>
 </ul>
 <p><strong>Fonctionnalités principales</strong></p>
 <ol>
 <li>Positionner les éléments principaux du parcs de manière graphique :
 <ol>
 <li>Stands</li>
-<li>String combiner boxes (SCB)</li>
-<li>Inverter transformer station (ITS)</li>
-<li>Tranchées par typologie</li>
+<li>Boites de raccordement (BR)</li>
+<li>Poste de transformation (PTR)</li>
+<li>Routes d'accès</li>
 </ol>
 </li>
 <li>Positionner et caractériser les différentes strings
 <ol>
 <li>Affecter les strings aux différentes SCB</li>
-<li>Méthode de racordement des strings : type de câble (section du conducteur), type de raccordement (aérien ou enterré)</li>
+<li>Section de câble utilisée pour le raccordement des strings aux boites de raccordement.</li>
 </ol>
 </li>
-<li>Extraire les données du design créé de manière graphique sous forme d'une base de données exploitable.</li>
-</ol>
-<p><strong>Données d'entrée</strong><br>
-<em>Données dimensionnantes :</em></p>
-<ul>
-<li>Inter-rangées : espace séparant les rangés sur dans leur longueur.</li>
-<li>Inter-stand : espace séparant les rangés dans leur largeur.</li>
-<li>Largeur des voies d'accès.</li>
-<li>Dimension des tranchées par typologie : tranchées pour câbles DC petite section, tranchées pour câbles DC grosse section.</li>
-<li>Dimensions des stands.</li>
-<li>Nombre de strings par stands.</li>
-<li>Nombre maximum de strings par SCB.</li>
-</ul>
-<p><em>Données de de designs :</em></p>
-<ul>
-<li>Affectation des strings aux SCB.</li>
-<li>Positionnement des routes d'accès.</li>
-<li>Positionnement des tranchées.</li>
-<li>Positionnement des remontées de câble.</li>
-</ul>
-<p><strong>Livrables fournis par l'outil :</strong></p>
+<li>Déterminer les caractéristiques de design :
 <ol>
-<li>Tableau complet permettant d'extraire les données de dimensionnement.</li>
-<li>Carnet de câble.</li>
+<li>Méthodologie de câblage de chaque string : câblage enterrée ou aérien.</li>
+<li>Numérotation des éléments.</li>
 </ol>
-<h2>Parcours utilisateur</h2>
-<h2>Fonctions à coder</h2>
-<p>Phase 1 :</p>
+</li>
+<li>Extraire les données du design dans un tableau :
+<ol>
+<li>Caractéristiques de raccordement de chaque string.</li>
+<li>Quantités et longueurs totales de</li>
+</ol>
+</li>
+</ol>
+<h2>Comment déterminer le format de l'outil et le raisonement de calcul ?</h2>
+<h3>Démarche</h3>
+<p>Le format de l'outil doit répondre à deux critères principaux : facilité d'utilisation et rapidité de développement.</p>
 <ul>
-<li>[]</li>
+<li><strong>Pour garantir une facilité d'utilisation</strong> : Déterminer le parcours utilisateur en simulant la conception d'un parc photovoltaïque et en testant différentes possibilités. Ce parcours définira par la suite la stratégie de programmation.</li>
+<li><strong>Pour la rapidité de développement</strong> : Créer des templates permettant de systématiser la méthode et d'accélérer la rédaction du code et tester au fur et à mesure les solutions techniques pouvant à la fois répondre à l'exigence utilisateur et être développée le plus rapidement possible.</li>
 </ul>
-<p>Phase 2 :</p>
+<h3>Résultats</h3>
+<p>Cette démarche a permis de déterminer le parcours utilisteurs, la stratégie de programmation, les templates nécessaires et fonctionnels ainsi qu'une liste non exhaustive des fonctions à coder.</p>
+<p><strong>Parcours utilisateur :</strong> Segmentation en phases permettant l'utilisations de grilles &quot;simples&quot; et donc copiées depuis des templates.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>Phase</strong></th>
+<th style="text-align:center"><strong>Action utilisateur</strong></th>
+<th style="text-align:center"><strong>Interface utilisateur</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>Phase 0</strong></td>
+<td style="text-align:center">Ouverture de l'outil et appuie sur le bouton &quot;Créer un nouveau design&quot; sur la page d'accueil</td>
+<td style="text-align:center">Page d'acceuil</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Phase 1</strong></td>
+<td style="text-align:center">Positionnement des stands, des routes et du PTR en indiquant</td>
+<td style="text-align:center">Grille template n°1</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Phase 2</strong></td>
+<td style="text-align:center">Positionnement des boites de raccordement sur le modèle défini en phase 1</td>
+<td style="text-align:center">Grille template n°2</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Phase 3</strong></td>
+<td style="text-align:center">Allocation des strings aux différentes BR sur le modèle défini en phase 2</td>
+<td style="text-align:center">Grille template n°3</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Phase 4</strong></td>
+<td style="text-align:center">Allocation d'une section de câble de raccordement pour chaque string sur le modèle défini en phase 3</td>
+<td style="text-align:center">Grilles template n°4.1 et 4.2</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Phase 5</strong></td>
+<td style="text-align:center">Lancement du calcul par un bouton de l apage d'acceuil</td>
+<td style="text-align:center">Page d'accueil</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Fonctions et éléments à coder :</strong></p>
 <ul>
-<li>[] Colorer les cellules en vert en fonction des cellules caractérisées comme &quot;stands&quot; en phase 1.</li>
-<li>[] Colorer les cellules en marron en fonction des cellules caractérisées comme &quot;routes&quot; en phase 1.</li>
-<li>[] Colorer les cellules en rouge en fonction des cellules caractérisées comme &quot;PTR&quot; en phase 1.</li>
+<li>Colorer des cellules en rouge, vert, marron et violet.</li>
+<li>Repérer l'ampleur du parc (dernière ligne et dernière colonne utilisée).</li>
+<li>Créer une grille de phase 2 à partir des informations la grille phase 1.</li>
+<li>Créer une grille de phase 3 à partir des informations la grille phase 2.</li>
+<li>Créer des grilles de phase 4.1 et 4.2 à partir des informations la grille phase 3.</li>
+<li>Parcourir une grille.</li>
+<li>Déterminer la méthode de raccordement d'une string en fonction de la position de la BR à laquelle elle est allouée (aérien ou enterré).</li>
+<li>Numéroter toutes les BR.</li>
+<li>Numéroter toutes les strings.</li>
+<li>Extraire les données de chaque string dans le tableau de sortie (lui-même réalisé à partir d'un modèle).</li>
+<li>Calculer une distance entre deux cellules à partir des données d'entrée (dimension des stands etc...)</li>
 </ul>
+<p>Templates et modèles : les templates et modèles sont visibles dans le document <em>Sprint 1</em> accessible dans le github du projet.</p>
 
 
 </article>

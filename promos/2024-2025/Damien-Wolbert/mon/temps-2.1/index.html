@@ -105,7 +105,7 @@
 
         <p class="mb-4 text-lg">
 
-                L'objectif de ce MON est d'étudier les possibilités apportées par les requêtes relationnelles, les opérations sur les strings et les listes déroulantes, pour la maitrise d'Excel. Ces possibilités seront étudier par le prisme de leur accessibilité.
+                L'objectif de ce MON est d'étudier les possibilités apportées par les requêtes relationnelles, les opérations sur les strings et les listes déroulantes, pour la maitrise d'Excel. Ces possibilités seront étudiées par le prisme de leur accessibilité.
 
         </p>
 
@@ -143,6 +143,7 @@
 <ul>
 <li>Mathier, Sébastien. « Cours VBA gratuit ». Excel-Pratique, <a href="https://excel-pratique.com/fr/vba">https://excel-pratique.com/fr/vba</a>.</li>
 <li>Qu’est-ce que Power Query ? - Power Query. 24 janvier 2024, <a href="https://learn.microsoft.com/fr-fr/power-query/power-query-what-is-power-query">https://learn.microsoft.com/fr-fr/power-query/power-query-what-is-power-query</a>.</li>
+<li><em>Power Query : C'est Quoi et Pourquoi l'utiliser ?!</em>, YouTube. <a href="https://www.youtube.com/watch?v=NknyPRzER4k">https://www.youtube.com/watch?v=NknyPRzER4k</a></li>
 <li>KathleenDollard. Fonctions de chaîne - Visual Basic. 2 juin 2023, <a href="https://learn.microsoft.com/fr-fr/dotnet/visual-basic/language-reference/functions/string-functions">https://learn.microsoft.com/fr-fr/dotnet/visual-basic/language-reference/functions/string-functions</a>.</li>
 <li>« VBA Regex ». Automate Excel, <a href="https://www.automateexcel.com/vba/regex/">https://www.automateexcel.com/vba/regex/</a>.</li>
 </ul>
@@ -150,14 +151,27 @@
 
 <h2>Les requêtes relationnelles sur Excel</h2>
 <h3>Objectif</h3>
-<p>Excel pouvant être utilisé pour stocker et/ou utiliser des bases de données, il intéressant de se demander s'il est possible d'utiliser facilement des requêtes relationnelles de type SQL. L'objectif de cette réflexion n'est pas de plonger dans chacune des solutions mais fair eun état des lieu de leur accessibilité.</p>
+<p>Excel pouvant être utilisé pour stocker et/ou exploiter des bases de données, il intéressant de se demander s'il est possible d'utiliser facilement des requêtes relationnelles de type SQL. L'objectif de cette réflexion n'est pas de plonger dans chacune des solutions mais de faire un état des lieux de leur accessibilité.</p>
 <h3>Des possibilités...</h3>
-<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
-<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+<p>Afin de lister les différentes possibilités, j'ai utilisé <strong>ChatGPT</strong> pour initier mes recherches. Après plusieurs essais non satisfaisants, j'ai aboutit à des résultats suffisamment diversifiés et précis grâce à la requête suivante : <em><strong>Liste moi les différentes possibilités pour réaliser des requêtes relationnelles en excel en séparant les solutions passant par VBA et celles sans VBA. Sois exhaustif.</strong></em></p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
 </svg>
-<div class="pl-8 mr-8">
-<p>Afin de lister les différentes possibilités, j'ai utilisé ChatGPT pour initier mes recherches.</p>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block group-open:select-text">
+<p>Aide à l'utilisation de ChatGPT</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2 cursor-auto select-text">
+<p>Trouver un requête permettant d'obtenir un point de vue à la fois large et détaillé a nécessité des ajustements.</p>
 <table>
 <thead>
 <tr>
@@ -180,61 +194,77 @@
 </tr>
 <tr>
 <td>Liste moi les différentes possibilités pour réaliser des requêtes relationnelles en excel en séparant les solutions passant par VBA et celles sans VBA. Sois exhaustif.</td>
-<td>Meilleure requête réalisée : permet d'aborder un large pannel de solution avec suffisemment d'informations pour réaliser des recherches par la suite</td>
+<td>Meilleure requête réalisée : permet d'aborder un large pannel de solutions avec suffisamment d'informations pour réaliser des recherches par la suite.</td>
 </tr>
 </tbody>
 </table>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Afin que ChatGPT donne le panorama d'un sujet il faut éviter de fermer le spectre en imposant certaines méthodes, tout en demandant clairement d'expliciter un grand nombre de possibilités (<em>Ex : Sois exhuastif</em>).</p>
 </div></div>
+</div>
+</details>     
+</div>
+<p><strong>Deux approches de test des solutions :</strong></p>
+<ol>
+<li>Tests à partir de la base de donnée <em>Base carbone® V23.4</em>, disponible sur le site de l'Ademe : <a href="https://www.data.gouv.fr/fr/datasets/base-carbone-r-2/">Base carbone</a>.</li>
+<li>Rechercher des vidéos ou programmes existants afin d'obtenir des exemples : YouTube et documentation Microsoft appuyée de ChatGPT pour maximiser la compréhension.</li>
+</ol>
 <table>
 <thead>
 <tr>
 <th>Possibilités</th>
 <th>Type</th>
 <th>Description</th>
+<th>Tests</th>
 <th>Avis</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Power Query</td>
-<td>Manuel et Programmation</td>
+<td><strong>Power Query</strong></td>
+<td>Manuel</td>
 <td>Power Query permet de mettre en forme les données en créant et en automatisant des requêtes. Dans ce cas, chaque requeête correspond à une nouvelle feuille Excel.</td>
-<td>Power Query n'est pas forcément rapide de prise en main. Il est nécessaire de se plonger dans sa découverte pour obtenir des résultats satisfaisants.</td>
+<td>Cette <a href="https://www.youtube.com/watch?v=NknyPRzER4k">video</a> permet de comprendre la vraie utilité de Power Query, ajoutée <a href="https://learn.microsoft.com/fr-fr/power-query/power-query-what-is-power-query">la documentation Microsoft</a></td>
+<td><strong>Power Query n'est pas forcément rapide de prise en main. Il est nécessaire de se plonger dans sa découverte pour obtenir des résultats satisfaisants.</strong></td>
 </tr>
 <tr>
-<td>VBA</td>
-<td>Programmation</td>
-<td>Coder des fonctions VBA permettant de filtrer les données de plusieurs tableaux en fonction de critères définis.</td>
-<td>Solution rapide et efficace dès lors que le VBA est d'ores et déjà maitrisé ou connu.</td>
+<td><strong>Power Query + VBA</strong></td>
+<td>Manuel et programmation</td>
+<td>Il est possible de d'actualiser et d'affiner les requêtes avec VBA Power Query.</td>
+<td>Documentation</td>
+<td><strong>D'après <a href="https://datascientest.com/vba-et-power-query-tout-savoir">cette ressource</a>, on comprend que cette solution est limitée à des requêtes simples. Ce qui peut être fait directement en VBA.</strong></td>
 </tr>
 <tr>
-<td>Tableaux dynamiques</td>
+<td><strong>Tableaux dynamiques</strong></td>
 <td>Manuel et Programmation</td>
 <td>Utiliser les outils de tableaux dynamiques d'Excel. Accessible également depuis VBA.</td>
-<td>Méthode pouvant être limité pour certaines requêtes, notamment celles ne faisant pas intervenir d'opération particlières. Très utiles pour les requêtes de type &quot;JOIN&quot; pour calculer des sommes, moyennes, extrema etcs.. : les commandes sont alors très intuitives.</td>
+<td>Avec la <em>Base carbone® V23.4</em></td>
+<td><strong>Méthode pouvant être limitée pour certaines requêtes, notamment celles ne faisant pas intervenir d'opération particlières. Très utiles pour les requêtes de type <code>JOIN</code> pour calculer des sommes, moyennes, extrema etcs.. : les commandes sont alors très intuitives.</strong></td>
 </tr>
 <tr>
-<td>Filtres</td>
+<td><strong>Filtres</strong></td>
 <td>Manuel et Programmation</td>
 <td>Utiliser les fonctions &quot;Filtrer&quot;, également accessible en VBA</td>
-<td>Bon intermédiaire entre le VBA et les tableaux dynamiques. Demande une attention particulière concernant l'ordre d'application des filtres ainsi que la supression des filtres à chaque opération.</td>
+<td>Avec la <em>Base carbone® V23.4</em></td>
+<td><strong>Bon intermédiaire entre le VBA et les tableaux dynamiques. Demande une attention particulière concernant l'ordre d'application des filtres ainsi que la supression des filtres à chaque opération.</strong></td>
 </tr>
 <tr>
-<td>VBA + SQL : Microsoft ActiveX Data Objects Library (ADO)</td>
+<td><strong>VBA + SQL : Microsoft ActiveX Data Objects Library (ADO)</strong></td>
 <td>Programmation</td>
 <td>Utiliser les fonctionnalités de &quot;ADO&quot; pour pouvoir rédiger des requêtes SQL directement depuis VBA</td>
-<td>La mise en place de ce type de méthodes est n'est pas facile. La rédaction de fonctions VBA &quot;classiques&quot; est plus accessible pour des codes de longueurs comparables.</td>
+<td>Demande d'exemples à ChatGPT</td>
+<td><strong>La mise en place de ce type de méthodes n'est pas facile. La rédaction de fonctions VBA &quot;classiques&quot; est plus accessible tout demandant la rédaction de codes de longueurs comparables.</strong></td>
 </tr>
 </tbody>
 </table>
 <h3>Conclusion</h3>
-<p>Différentes solutions permettent de réaliser des requêtes relationnelles via des lignes de code (avec ou sans VBA) ou en no/low-code (tableaux dynamiques, Power Query). Toutefois, les solutions de type &quot;code&quot; semblent pertientes sur Excel dès lors qu'elles peuvent être intégrées à des Macros VBA. Or, ces dernières solutions n'apportent pas de plus-value particulière comparativement à l'écriture de Macros classiques.<br>
+<p>Différentes solutions permettent de réaliser des requêtes relationnelles via des lignes de code (avec ou sans VBA) ou en no/low-code (tableaux dynamiques, Power Query). Toutefois, les solutions de type &quot;code&quot; semblent pertinentes sur Excel dès lors qu'elles peuvent être intégrées à des Macros VBA. Or, ces dernières solutions n'apportent pas de plus-value particulière comparativement à l'écriture de Macros classiques.<br>
 <strong>Il semble plus judicieux de dépenser de l'énergie à l'installation et l'utilisation de logiciels adaptés aux requêtes relationnelles.</strong><br>
-<em>Exemples :</em></p>
-<ul>
-<li><em>SQLite pour utiliser SQL</em></li>
-<li>Librairie pandas de python.</li>
-</ul>
+<em>Exemples :</em> <em>SQLite pour utiliser SQL</em>, <em>Librairie pandas de python.</em></p>
 <h2>Les listes déroulantes dépendantes</h2>
 <h3>Objectif</h3>
 <p>L'utilisation et la réalisation de documents complexes ou documents de suivi sur Excel engendre souvent le recours à des listes déroulantes. Afin d'affiner leur utilisation, il est intéressant de se demander comment réaliser des listes déroulantes dépendantes.</p>
@@ -255,7 +285,7 @@
 </svg>
 </summary>
 <div class="mx-8 pb-2 cursor-auto select-text">
-<p>Des listes déroulantes dépendantes sont des listes déroulantes dont les choix possibles dépendent d'une autre cellule comme le montre l'image suivante.
+<p>Des listes déroulantes dépendantes sont des listes déroulantes dont les choix possibles dépendent d'une autre cellule comme le montre l'image suivante. On le considère ici basée sur un tableau de donnée source.
 <img src="Exemple%20listes.png" alt="Exemple listes"></p>
 </div>
 </details>     
@@ -273,26 +303,26 @@
 </thead>
 <tbody>
 <tr>
-<td>Réaliser des filtres dans des zones non visibles du tableurs</td>
+<td>Réaliser des filtres dans des zones non visibles du tableur</td>
 <td>Filtrer le tableau des données d'entrée et ce dans des cellules non utilisées (exemple : colonne GZ, soit la colonne numéro 208).</td>
 <td>Peut altérer l'utilisation d'une feuille de calcul en monopolisant des plages de données.</td>
-<td>Méthode dynamique permettant de changer les plages de données d'entrée sans modifier les cellules contenant les listes déroulantes.</td>
+<td>Méthode dynamique permettant de changer le tableau source en intégrant automatiqument les modification dans les menus déroulants sans modifier les cellules contenant ces derniers.</td>
 </tr>
 <tr>
 <td>Utiliser une feuille &quot;Back-end&quot;</td>
 <td>Utiliser une feuille intermédiaire sur laquelle il serait possible de filtrer le tableau de données pour chacune des cellules intégrant une liste déroulante.</td>
-<td>Création d'une page supplémentaire.</td>
-<td>Méthode dynamique permettant de changer les plages de données sans modifier les cellules contenant les listes déroulantes.</td>
+<td>Création d'une nouvelle page</td>
+<td>Idem</td>
 </tr>
 <tr>
 <td>Définir des plages de données</td>
-<td>Segmenter les différentes parties des données d'entrée en plages nommées afin de définir les listes déroulantes à partir de ces plages.</td>
+<td>Segmenter les différentes parties du tableau source afin de définir les listes déroulantes à partir de ces plages.</td>
 <td>Méthode non dynamique : il est nécessaire de lancer une modification des plages nommées à chaque ajout de données d'entrée.</td>
 <td>N'ajoute pas de données ou de tableaux supplémentaires (pas de feuilles de calcul supplémentiares).</td>
 </tr>
 </tbody>
 </table>
-<p>La solution qui a été retenue est la solution numéro 2 : la complexité de sa programmation étant limitée et les inconvénients des autres solutions trop contraigants.</p>
+<p>La solution qui a été retenue est la <em>solution n°2</em> : la complexité de sa programmation étant limitée et les inconvénients des autres solutions trop contraigants.</p>
 <div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -300,8 +330,56 @@
 <div class="pl-8 mr-8">
 <p>Il a finalement été possible de masquer cette page. Le back-end augmente donc le nombre de feuilles et la taille du fichier mais ne pollue pas l'espace de travail de l'utilisateur.</p>
 </div></div>
+<h3>Méthode de programmation</h3>
+<p>L'élément clef de cette méthode est le recours à un back-end : Si deux cellules, <strong>A1</strong> et <strong>B1</strong> doivent acceuillir des listes déroulantes et que la liste de B1 dépend de la valeur de A1, alors il faut positionner dans le back-end une version filtrée du tableau source en fonction de A1. Supposons que la plage sur laquelle se positionne ce dernier est appelée <strong>&quot;Tableau_source&quot;</strong> et que la plage de la première colonne est nommée <strong>&quot;Categorie&quot;</strong>. Ainsi, dans <strong>une cellule judicieusement choisie du back-end</strong> on tape la commande suivante :</p>
+<pre><code>=FILTRE(Tableau_source;Categorie=A1)
+</code></pre>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Afin de pouvoir réaliser ces tâches automatiquement il faut savoir définir la formule d'une cellule et prendre garde aux correspondances entre formules anglosaxones et française. Pour cela, la formule doit être entrée en utilisant :</p>
+<ul>
+<li><code>.Formula2</code> au lieu de <code>.Formula</code></li>
+<li>Le séparateur <code>,</code> et pas <code>;</code></li>
+</ul>
+</div></div>
+<pre><code>ligne = 2
+colonne = 3
+Worksheets(&quot;Back-end&quot;).Cells(ligne, colonne).Formula2 = FILTER(Tableau_source,Categorie=A1) 
+</code></pre>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block group-open:select-text">
+<p>Cellule judicieusement choisie ?</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2 cursor-auto select-text">
+<p>Pour bien utiliser le back-end :</p>
+<ul>
+<li>Choisir une cellule de numérotation en en-tête (<em>ex : A1</em>) : Permet de positionner les nouvelles itérations du programme.</li>
+<li>La numérotation doit permettre de choisir une nouvelle colonne à chaque itération (incrémentation de 2 à chaque itération) :
+<ul>
+<li><em>La fonction <code>FILTRE()</code> s'étend à la verticale sur un nombre incertain de lignes en fonction des données d'entrée.</em></li>
+</ul>
+</li>
+</ul>
+</div>
+</details>     
+</div>
 <h3>Conclusion</h3>
-<p>La méthode a été mise en place avec succès comme visible dans le document suivant : <img src="Listes%20d%C3%A9roulantes%20d%C3%A9pendantes.xlsm" alt="Fichier excel de test à télécharger">
+<p>La méthode a été mise en place avec succès comme visible dans le document suivant : <a href="Listes%20d%C3%A9roulantes%20d%C3%A9pendantes.zip">Fichier excel de test à télécharger</a>.
 Elle pourrait être généralisée à des listes dépendantes à plus de deux niveaux en procédant par récurence d'un niveau à l'autre.</p>
 <h2>Opérations sur les chaines de caractère en VBA</h2>
 <h3>Objectif</h3>
@@ -323,33 +401,64 @@ Elle pourrait être généralisée à des listes dépendantes à plus de deux ni
 </svg>
 </summary>
 <div class="mx-8 pb-2 cursor-auto select-text">
-<p>Lister, hiérarchiser et trier une base de donnée contenant les références et présentation de différentes normes de constructions industrilles de l'Afnor. Chaque norme possède un identifiant d'une forme particulière. La manipulation de cette base de données nécessite donc la décomposition et comparaison des chaines de caractères des identifiants de normes.</p>
+<p>Lister, hiérarchiser et trier une base de donnée contenant les références et descriptions de différentes normes de constructions industrilles de l'Afnor. Chaque norme possède un identifiant d'une forme particulière. La manipulation de cette base de données nécessite donc la décomposition et comparaison des chaines de caractères des identifiants de normes.</p>
 </div>
 </details>     
 </div>
 <h3>Les opérations de base</h3>
-<p>Un certain nombre de méthodes et fonctions permettent de manipuler les chaines de carcatère en VBA. Les principales sont présentées et illustrés sur la page suivante : <a href="https://learn.microsoft.com/fr-fr/dotnet/visual-basic/language-reference/functions/string-functions">Lien utile</a></p>
-<p>Parmis elles, voici un liste d'opérations intéressantes pouvant êtres réalisées :
-| Fonction | Utilisation |
-| Format | Permet de mettre en forme une chaine de caractère. Ex : Fomats de date, Format de nombres (séparateur des milliers, nombre de décimales...)|
-| InStr | Permet d'obtenir la position de la première occurence d'une chaine dans une autre. |
-| Mid | Permet d'extraire une partie de chaine en utilisant une position de début et de fin. |
-| Trim | Permet d'avoir une copie de chaine de caractère sans espace de début et de fin. Fonction utile pour éviter des erreurs lors de tests et comparaisons. |</p>
+<p>Un certain nombre de méthodes et fonctions permettent de manipuler les chaines de carcatère en VBA. Les principales sont présentées et illustrées sur la page suivante : <a href="https://learn.microsoft.com/fr-fr/dotnet/visual-basic/language-reference/functions/string-functions">Lien utile</a></p>
+<p>Parmis elles, voici un liste d'opérations intéressantes pouvant êtres réalisées :</p>
+<table>
+<thead>
+<tr>
+<th>Fonction</th>
+<th>Utilisation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Format</td>
+<td>Permet de mettre en forme une chaine de caractère. <em>Ex : Fomats de date, Format de nombres (séparateur des milliers, nombre de décimales...)</em></td>
+</tr>
+<tr>
+<td>InStr</td>
+<td>Permet d'obtenir la position de la première occurence d'une chaine dans une autre.</td>
+</tr>
+<tr>
+<td>Mid</td>
+<td>Permet d'extraire une partie de chaine en utilisant une position de début et de fin.</td>
+</tr>
+<tr>
+<td>Trim</td>
+<td>Permet d'avoir une copie de chaine de caractère sans espace de début et de fin. <em>Fonction utile pour éviter des erreurs lors de tests et comparaisons.</em></td>
+</tr>
+</tbody>
+</table>
 <h3>Pour aller plus loin : les expressions régulières</h3>
-<p>Les expressions régulières permettent d'automatiser la reconnaissance de chaines de caractères et de leurs composants. Il est possible de les utiliser en VBA via l'objet RegExp. Les trois méthodes principales de cette objetf sont : Test (recherche de correspondance de motif : True ou False), Replace (rempacement de motifs), Execute (renvoie les correspondances du motifs).</p>
-<p>Le lien suivant permet de comprendre les différentes façons d'utiliser les expressions régulières en VBA : <a href="https://www.automateexcel.com/vba/regex/">Lien utile</a>
-Il permet de :</p>
+<ul>
+<li><strong>Plus-value :</strong> Industrialiser et sécuriser les opérations sur les chaines de caractère.</li>
+<li><strong>En VBA ? :</strong> Utiliser l'objet <strong>RegExp</strong> et ses trois méthodes principales : <em>Test</em> (recherche de correspondance de motif : True ou False), <em>Replace</em> (rempacement de motifs), <em>Execute</em> (renvoie les correspondances du motifs).</li>
+</ul>
+<p>Le site suivant détaille de façon synthétique le fonctionnement de RegExp : <a href="https://www.automateexcel.com/vba/regex/">Lien utile</a>. Il permet de :</p>
 <ul>
 <li>Se familiariser avec la syntaxe des expressions régulières.</li>
 <li>Configurer l'éditeur VBA pour utiliser RegExp.</li>
 <li>Se familiariser aux différentes méthodes de RegExp au travers d'exemples.</li>
 </ul>
 <h3>Conclusion</h3>
-<p>VBA inclue un grand nombre de fonctions et méthodes permettant de réaliser rapidement de nombreuses opérations sur les chaines. Toutefois, dans un objectif d'automatisation et d'industrialisation de certaines opérations, le recours aux expressions régulière semble fournir une plus grande robustesse. <em>Exemple : Un programme peut ne pas reconnaître une chaine si certaines lettres sont en majuscule alors que cela n'était pas prévu. Bien que la méthode UCase permettent de convertir une chaine en majuscule, le recours systématique aux expressions régulière semble plus facile d'automatisation.</em></p>
-<h2>Conclusion</h2>
+<p>VBA inclue un grand nombre de fonctions et méthodes permettant de réaliser rapidement de nombreuses opérations sur les chaines. Toutefois, dans un objectif *<em>d'automatisation et d'industrialisation</em> de certaines opérations, le recours aux expressions régulière semble fournir une plus grande <em>robustesse</em>.</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-yellow-500 bg-yellow-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p><strong>Exemple :</strong> <em>Un programme peut ne pas reconnaître une chaine si certaines lettres sont en majuscule alors que cela n'était pas prévu. Bien que la méthode <code>UCase</code> permette de convertir une chaine en majuscule, le recours systématique aux expressions régulière semble plus facile d'automatisation.</em></p>
+</div></div>
+<h2>Conclusions</h2>
 <ol>
 <li>La mise en place de requêtes relationnelles sur Excel est possible mais nécessite du temps. Sans contrainte particulière, il semble plus judicieux de se concentrer sur d'autres logiciels ou outils pour cela.</li>
-<li>La mise en place de listes déroulantes dépendante et facile et rapide. Le programme réalisé dans ce MON est reproductible et peut être copié d'un document à l'autre.</li>
+<li>La mise en place de listes déroulantes dépendantes est facile et rapide. Le programme réalisé dans ce MON est reproductible et peut être copié d'un document à l'autre.</li>
 <li>Les chaines de caractère peuvent êtres manipulées rapidement en VBA. En outre, l'utilisation des expressions régulières peut permettre une plus grande robustesse des Macros réalisées.</li>
 </ol>
 
