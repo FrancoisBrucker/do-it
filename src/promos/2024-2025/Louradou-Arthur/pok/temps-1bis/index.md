@@ -18,12 +18,23 @@ résumé: Ce POK consistera en la refonte du site de Do_It avec les dernières t
 
 ## Mise à jour du site de Do_It
 
+{% info %}
+
+Je renvoie bien entendu vers **le MON de Nicolas** : [Modification du site de Do-It](../../../../2022-2023/Bert-Nicolas/mon/modif-site-do-it)
+
+… qui mentionne des requêtes esthétiques ! 
+> _je ne suis pas designer donc ça sera pour quelqu'un d'autre_
+
+On y est peut-être avec ce POK.
+
+{% endinfo %}
+
 ### Besoin, problématique
 
-- A priori, problèmes de lenteur liés à pagesearch (le menu de recherche) ou au style (css et postcss)
-- Design améliorable sur certains aspects
-- Manque de centralisation d’informations (Drive + Site pas forcément pratique)
-- Séparation des années
+- A priori, problèmes de **lenteur** liés à pagesearch (le menu de recherche) ou au style (css et postcss)
+- **Design** améliorable sur certains aspects
+- Manque de **centralisation d’informations** (Drive + Site pas forcément pratique)
+- **Séparation des années**
 
 ### Solutions envisagées
 
@@ -205,6 +216,8 @@ Dernière étape pour réduire le temps de compilation : supprimer le **système
 
 ...mais on tombe à **7 secondes** de compilation du site en ne recalculant pas tous les chemins récursivement pour chaque fichier. 🎉
 
+<img src="./assets/eleventy-compilation.png" alt="eleventy-compilation" class="h-[100px]">
+
 {% info %}
 
 Pour activer tout de même le système de navigation comme avant, le plus simple est d'exécuter `npm run serve-nav`
@@ -217,7 +230,7 @@ En production, la compilation se déroule de la même façon que dans la version
 
 ## Mise à jour majeure vers Eleventy 3.0
 
-## Réalisation
+### Réalisation
 
 La mise à jour vers la **version 3.0 de Eleventy** (sortie le 02/10/2024) implique la remise à zéro de **tous les fichiers de configuration**. Cela inclus le fichier  `.eleventy.js` mais aussi ses diverses dépendances pour les rendre compatibles avec une version plus moderne de javascript : ESM scripts. Les plugins utilisés par le site ont donc été désactivés dans un premier temps pour compiler le tout étape par étape.
 
