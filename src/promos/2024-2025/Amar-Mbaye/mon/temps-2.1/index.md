@@ -221,7 +221,7 @@ Voici un résumé de ce que j'ai compris sur NestJS :
 {% enddetails %}
 
 ### **Horodatage**
-Voici a peu pret (pas exactement car des fois ca depasse de quelque minutes) comment organiser mon temps d'etude.
+Voici à peu près (pas exactement, car parfois cela dépasse de quelques minutes) comment j’organise mon temps d’étude.
 
 | **Étape**                              | **Durée**   |
 |----------------------------------------|-------------|
