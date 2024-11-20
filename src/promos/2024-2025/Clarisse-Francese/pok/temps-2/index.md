@@ -60,7 +60,7 @@ Objectif général : **apprendre l'art de la data visualisation** et plus préci
 - [ ] réfléchir aux indicateurs que je veux pour le tableau de bord de mes voyages : 1h
 - [ ] créer une base de données adéquate de mes voyages sur Excel : 2h
 - [ ] utiliser Power BI pour créer le tableau de bord souhaité : 3h
-- [ ] trouver un autre petit projet à réaliser et le faire : 4h
+- [ ] trouver un autre petit projet à réaliser et le faire (concert artiste?): 4h
 
 **Total d'heures sprint 2 : ?h**   
 **Etude post mortem** :
