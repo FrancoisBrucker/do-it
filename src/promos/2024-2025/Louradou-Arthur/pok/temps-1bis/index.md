@@ -5,7 +5,7 @@ title: "Refonte du site de Do_It : Eleventy"
 authors:
   - "Arthur Louradou"
 
-date: 2024-10-16
+date: 2024-11-20
 
 tags: 
   - "temps 1"
@@ -73,6 +73,8 @@ Pour continuer, nous avons pu nous entretenir brièvement pour cibler le besoin 
 
 Nous l’avons exprimé au départ, deux modules sont suspectés de provoquer des lenteurs dans la compilation du site actuel : soit **pagesearch**, soit le **style**. Pour isoler les causes, nous allons mener des tests de performances en désactivant ces paramètres dans le fichier de configuration `.eleventy.js`. Après la désactivation des modules, on constate que pagesearch a finalement un impact mineur. Nous allons donc enquêter du côté des styles, et un détail retient mon attention : le compilateur postcss copie énormément de fichiers en amont. Changeons la configuration de tailwind pour remédier à ce problème : 
 
+{% details "Configuration Tailwind `./tailwind.config.js`" %}
+
 ```jsx
 module.exports = {
     content: [
@@ -94,21 +96,29 @@ module.exports = {
   }
 ```
 
+{% enddetails %}
+
 En réduisant ainsi la quantité de fichiers à compiler avec tailwind, on essaye de limiter les chargements en mémoire impliqués par la compilation.
 
 #### Tests de performance
+
+
+{% lien %}
 
 https://v2.11ty.dev/docs/debugging/
 
 https://v2.11ty.dev/docs/debug-performance/
 
-Avec le site actuel, en tapant ces commande :
+{% endlien %}
+
+{% details "Résultats des tests de performance" %}
+
+Avec le site actuel, en tapant ces commandes :
 
 ```bash
 $ DEBUG=Eleventy:Benchmark* npx @11ty/eleventy
 $ grep -v " 0%" benchmark_1.log
 ```
-
 ```
 Eleventy:Benchmark Benchmark  14306ms  25%   704× (Configuration) "eleventyNavigationBreadcrumb" Nunjucks Filter +0ms
 Eleventy:Benchmark Benchmark  54014ms  95%     3× (Aggregate) Searching the file system (passthrough) +0ms
@@ -136,8 +146,6 @@ Eleventy:Benchmark Benchmark  14710ms  74%   778× (Aggregate) Template Write +0
 [11ty] Copied 2776 files / Wrote 778 files in 19.85 seconds (25.5ms each, v2.0.1)
 ```
 
-Réduction de 54 à 17 secondes sur le passe plat de fichiers et la compilation tailwind.
-
 Avec la désactivation de pagesearch :
 
 ```
@@ -156,20 +164,146 @@ Eleventy:Benchmark Benchmark  14810ms  85%   778× (Aggregate) Template Write +0
 
 Pas de gain significatif pour cette modification. Laissons pagesearch de côté comme prévu.
 
+{% enddetails %}
+
+Réduction de **54** à **17 secondes** sur le passe plat de fichiers et la compilation tailwind.
+
+Dernière étape pour réduire le temps de compilation : supprimer le **système de navigation** lors du développement (n'affectant pas la GitHub Action).
+
+> Ainsi :
+> 
+> <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-purple-500 bg-purple-100">
+> <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+>  <path stroke-linecap="round" stroke-linejoin="round" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>
+> </svg>
+> <div class="pl-8 mr-8">
+> <a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Louradou-Arthur/">Arthur Louradou</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Louradou-Arthur/pok/">POKs</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Louradou-Arthur/pok/temps-1bis/">Refonte du site de Do_It : Eleventy</a>
+> </div></div>
+> 
+> Devient :
+> 
+> <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-purple-500 bg-purple-100">
+> <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+>   <path stroke-linecap="round" stroke-linejoin="round" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>
+> </svg>
+> <div class="pl-8 mr-8">
+>         <span class="px-1">
+>             <i>Navigation disponible uniquement en production</i>
+>             <a class="relative group cursor-help" target="_blank" href="https://www.11ty.dev/docs/environment-vars/">
+>                 <svg class="inline-block h-[1.2em] w-[1em] pb-[3px]" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 32 32"><path d="M 16 3 C 8.832031 3 3 8.832031 3 16 C 3 23.167969 8.832031 29 16 29 C 23.167969 29 29 23.167969 29 16 C 29 8.832031 23.167969 3 16 3 Z M 16 5 C 22.085938 5 27 9.914063 27 16 C 27 22.085938 22.085938 27 16 27 C 9.914063 27 5 22.085938 5 16 C 5 9.914063 9.914063 5 16 5 Z M 15 10 L 15 12 L 17 12 L 17 10 Z M 15 14 L 15 22 L 17 22 L 17 14 Z"></path></svg>
+>                 <span id="i-tooltip" class="absolute left-0 bottom-full mb-2 w-max bg-purple-500 text-white text-sm rounded p-1 hidden group-hover:block transition-opacity duration-200">
+>                     En local, définir la variable d'environnement `NAV=true` <i>(cliquer pour ouvir la doc)</i>
+>                 </span>
+>             </a>
+>         </span>
+>         <script>
+>             let tooltip = document.getElementById('i-tooltip');
+>             tooltip.preventDefault();
+>         </script>
+> </div></div>
+> 
+
+...mais on tombe à **7 secondes** de compilation du site en ne recalculant pas tous les chemins récursivement pour chaque fichier. 🎉
+
+{% info %}
+
+Pour activer tout de même le système de navigation comme avant, le plus simple est d'exécuter `npm run serve-nav`
+(sur Linux et Mac), qui défini la variable d'environnement `NAV=true`.
+
+En production, la compilation se déroule de la même façon que dans la version précédente.
+
+{% endinfo %}
+
+
 ## Mise à jour majeure vers Eleventy 3.0
 
 ## Réalisation
 
-La mise à jour vers la version 3.0 de Eleventy (sortie le 02/10/2024) implique la remise à zéro de **tous les fichiers de configuration**. Cela inclus le fichier  `.eleventy.js` mais aussi ses diverses dépendances pour les rendre compatibles avec une version plus moderne de javascript : ESM scripts. Les plugins utilisés par le site ont donc été désactivés dans un premier temps pour compiler le tout étape par étape.
+La mise à jour vers la **version 3.0 de Eleventy** (sortie le 02/10/2024) implique la remise à zéro de **tous les fichiers de configuration**. Cela inclus le fichier  `.eleventy.js` mais aussi ses diverses dépendances pour les rendre compatibles avec une version plus moderne de javascript : ESM scripts. Les plugins utilisés par le site ont donc été désactivés dans un premier temps pour compiler le tout étape par étape.
 
-❓ **ESM Script**, par opposition à CommonJS, est un ensemble de méthodes récentes sur JavaScript améliorant la façon dont sont gérés les modules. Concrètement, cela impacte la manière dont on importe les fichiers : pour organiser et réutiliser du code via `import` et `export`.
+{% info %}
+**ESM Script**, par opposition à CommonJS, est un ensemble de méthodes récentes sur JavaScript améliorant la façon dont sont gérés les modules. Concrètement, cela impacte la manière dont on importe les fichiers : pour organiser et réutiliser du code via `import` et `export`.
+{% endinfo %}
 
 ### Le style : Tailwind
 
 La plus grosse difficulté résida dans la mise à jour de Tailwindcss, une bibliothèque CSS permettant de styliser rapidement et efficacement les éléments HTML. La mise à jour vers la version 3.0 d'Eleventy a nécessité une reconfiguration complète de l'intégration de Tailwind dans le projet. Cela a impliqué la modification des fichiers de configuration de Tailwind et l'ajustement des imports dans les fichiers de style principaux.
 
-## La suite…
+## La suite… Sprint 2
 
 - Corriger les bugs qui surviennent notamment avec les balises de résumés dans les projets
 - Initialiser un nouveau git avec des sous modules
 - Voir si on peut rendre autonome en local un sous projet qui ne comprend pas le site complet, mais qui compile avec un projet “hôte”
+
+
+## Formattage du git
+
+{% faire %}
+Une étape clé pour ce projet est la faculté pour les utilisateurs de **cloner un projet plus petit** et ne concernant que la **promotion courante**. Nous allons par la même occasion **optimiser** les différentes arborescences des promotions diplômées pour supprimer les fichiers volumineux et inutilisés en particulier.
+{% endfaire %}
+
+[Création de sous repos git](./creation_sous_repo_git)
+
+Pour l’utilisateur, il faut retenir le contenu de ce mémo pour cloner uniquement la promo 2024-2025, par exemple :
+
+```bash
+git clone --no-recurse-submodules https://github.com/alouradou/do-it.git
+cd do-it
+git submodule init src/promos/2024-2025
+git submodule update src/promos/2024-2025
+```
+
+Il peut ensuite à loisir lancer le projet dont l’arborescence n’a pas changé. Il sera juste plus léger !
+
+## Style
+
+Une partie importante de ce projet concernait la refonte du style, notamment pour la partie POK & MON sur laquelle j’ai remarqué quelques axes d’amélioration.
+
+1. La liste des utilisateurs
+2. La liste des POK & MON par temps
+
+Dans l’ensemble, l’affichage des listes de données se complexifie avec le temps, obligeant parfois à faire un `Ctrl + F` pour parvenir à trouver ce que l’on cherche.
+
+{% info %}
+
+Je propose une résolution de cette manière :
+
+{% endinfo %}
+
+|                                              Avant                                               |                                             Après                                             |
+|:------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------:|
+| ![](./assets/style-before-1.png)![](./assets/style-before-2.png)![](./assets/style-before-3.png) | ![](./assets/style-after-1.png)![](./assets/style-after-2.png)![](./assets/style-after-3.png) |
+
+De nombreuses modifications mineures ont été adopées itérativement, notamment dans la structure du projet Eleventy, en profitant des connaissances acquises durant sa migration.
+
+## Conclusions et perspectives
+
+{% lien %}
+
+J’ai laissé [un formulaire](https://forms.gle/WB6ozLmFAXgxki7EA) pour toute modification solicitée par les élèves ou les professeurs en ce qui concerne l’expérience et l’interface utilisateur ainsi adoptée.
+
+{% endlien %}
+
+Ainsi, conformément à l’étude des besoins, ce POK a été l’occasion de résoudre des problèmes majeurs qui freinaient les élèves dans leur utilisation du site Do_It.
+
+J'en retire personnellement une maitrise approfondie d'une technologie pratique : Eleventy.
+Je pense utiliser celle-ci pour des petits projets de site statiques à l'avenir, tant l'expérience en JavaScript est devenu fluide.
+
+Finalement, il reste à **migrer le repository git** vers une structure modulaire, 
+mais nous avons pris la décision de reporter cette opération à la fin de l’année pour ne pas perturber le fonctionnement de la promotion actuelle. 
+À l’issue de l’année, il faudra reprendre les notes sur la [création de sous repos git](./creation_sous_repo_git)
+pour migrer le site actuel vers cette nouvelle structure.
+
+{% details "Horodatage du projet" %}
+
+| Temps | Tâche                                        |
+|-------|----------------------------------------------|
+| 2h    | Étude des solutions concurrentes à Eleventy  |
+| 1h    | Tentative de migration sur GoHugo            |
+| 3h    | Tests de performances                        |
+| 3h    | Migration Eleventy 3.0                       |
+| 5h    | Étude de la taille du projet git             |
+| 1h    | Comprendre Tailwind                          |
+| 5h    | Adoption du style par itérations successives |
+
+{% enddetails %}
