@@ -73,11 +73,15 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 2</li>
                 
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">NestJs</li>
+                
 
             </ul>
             
             
             <div class="hidden" data-pagefind-meta="Type">
+                
+                    
                 
                     
                 
@@ -105,7 +109,7 @@
 
         <p class="mb-4 text-lg">
 
-                Le but de ce MON est de faire une étude sur NestJS
+                Le but de ce MON est de faire une étude sur NestJS. NestJS est un framework de développement web Node.js qui permet de créer des applications web. Il est basé sur TypeScript et utilise les concepts de modèles de conception de l'architecture de l'application. 
 
         </p>
 
@@ -130,23 +134,430 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Liste des prérequis du POK ET/OU MON</p>
+<ul>
+<li>Connaissance en JavaScript  et TypeScript.</li>
+</ul>
 </div></div>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
   <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Les lien utiles pour la compréhension de celui-ci.</p>
+<p>Le lien utile pour la compréhension de NestJS:
+<a href="https://docs.nestjs.com">Documentation officielle de NestJS</a></p>
 </div></div>
 
-<p>Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :</p>
+<h2>Table des matières</h2>
 <ul>
-<li>le niveau et les prérequis nécessaires en utilisant la balise <a href="/do-it/cs/contribuer-au-site/#prerequis"><code>prerequis</code></a></li>
-<li>les autres POK &amp; MON en rapport en utilisant la balise <a href="/do-it/cs/contribuer-au-site/#lien"><code>lien</code></a></li>
+<li><a href="#table-des-mati%C3%A8res">Table des matières</a></li>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#1-les-modules"><strong>1. Les Modules</strong></a>
+<ul>
+<li><a href="#quest-ce-quun-module-dans-nestjs-"><strong>Qu'est-ce qu'un Module dans NestJS ?</strong></a></li>
 </ul>
-<h2>Contenu</h2>
-<p>Le contenu du MON.</p>
+</li>
+<li><a href="#2-les-contr%C3%B4leurs"><strong>2. Les Contrôleurs</strong></a>
+<ul>
+<li><a href="#quest-ce-quun-contr%C3%B4leur-dans-nestjs-"><strong>Qu'est-ce qu'un Contrôleur dans NestJS ?</strong></a></li>
+</ul>
+</li>
+<li><a href="#3-les-services"><strong>3. Les Services</strong></a>
+<ul>
+<li><a href="#quest-ce-quun-service-dans-nestjs-"><strong>Qu'est-ce qu'un Service dans NestJS ?</strong></a></li>
+</ul>
+</li>
+<li><a href="#4-les-dtos-data-transfer-objects"><strong>4. Les DTOs (Data Transfer Objects)</strong></a>
+<ul>
+<li><a href="#quest-ce-quun-dto-dans-nestjs-"><strong>Qu'est-ce qu'un DTO dans NestJS ?</strong></a></li>
+</ul>
+</li>
+<li><a href="#5-mod%C3%A8les"><strong>5. Modèles</strong></a>
+<ul>
+<li><a href="#quest-ce-quun-mod%C3%A8le-dans-nestjs-"><strong>Qu'est-ce qu'un Modèle dans NestJS ?</strong></a></li>
+</ul>
+</li>
+<li><a href="#6-les-filtres-pipes-et-guards"><strong>6. Les Filtres, Pipes et Guards</strong></a>
+<ul>
+<li><a href="#filtres-dexception"><strong>Filtres d'Exception</strong></a></li>
+<li><a href="#pipes"><strong>Pipes</strong></a></li>
+<li><a href="#guards"><strong>Guards</strong></a></li>
+</ul>
+</li>
+<li><a href="#7-le-point-dentr%C3%A9e-maints"><strong>7. Le Point d’Entrée (<code>main.ts</code>)</strong></a>
+<ul>
+<li><a href="#quest-ce-que-le-point-dentr%C3%A9e-dans-nestjs-"><strong>Qu'est-ce que le Point d’Entrée dans NestJS ?</strong></a></li>
+<li><a href="#horodatage"><strong>Horodatage</strong></a></li>
+</ul>
+</li>
+<li><a href="#sources-">Sources :</a></li>
+</ul>
+<h2>Introduction</h2>
+<p>J'apprends NestJs dans le but de me familiariser avec un langage backend autre que Laravel. Pour tout ce qui est en rapport avec l'installation et les autres étapes, je vous invite à consulter ce site web <a href="https://docs.nestjs.com/first-steps">1ère étape NestJs</a>. Pour voir également une application concrète de NestJs, veuillez consulter mon POK du temps 2 <a href="https://francoisbrucker.github.io/do-it/promos/2024-2025/Amar-Mbaye/pok/temps-2/">POK Temps 2</a>. J'ai commencé par visiter le site <strong>Créer un CRUD avec NestJs</strong>, dont le lien est au niveau de mes références, ce qui m'a permis de connaître les éléments les plus importants en NestJs. Je vais procéder ainsi par question, et tous mes exemples ont été basés sur mon forum de discussion.</p>
+<h2><strong>1. Les Modules</strong></h2>
+<h4><strong>Qu'est-ce qu'un Module dans NestJS ?</strong></h4>
+<p>Un <strong>module</strong> est une unité de base dans NestJS. Il regroupe des <strong>contrôleurs</strong>, des <strong>services</strong> et d'autres éléments liés à une fonctionnalité spécifique. Par exemple, si tu construis un forum, tu pourrais avoir un module <code>PostsModule</code> pour gérer les posts, un <code>UsersModule</code> pour gérer les utilisateurs, etc. J'ai été aidé par la vidéo <strong>NestJs 7 Les modules NestJs, création de module et module global</strong> mentionnée dans mes sources pour comprendre cette partie.</p>
+<p>Chaque application NestJS a un module principal (généralement <code>AppModule</code>) qui importe tous les autres modules.</p>
+<p><img src="image2.png" alt="image"><br>
+Image explicite trouvée sur le site de la documentation de NestJs.</p>
+<hr>
+<h2><strong>2. Les Contrôleurs</strong></h2>
+<h4><strong>Qu'est-ce qu'un Contrôleur dans NestJS ?</strong></h4>
+<p>Les <strong>contrôleurs</strong> sont responsables de gérer les <strong>requêtes HTTP</strong>. Ils définissent les endpoints (routes) de l’API et mappent chaque requête à une méthode spécifique.</p>
+<p>Ils ont comme responsabilité de :</p>
+<ul>
+<li>Recevoir les requêtes HTTP (GET, POST, PUT, DELETE, etc.).</li>
+<li>Extraire les paramètres ou le corps de la requête.</li>
+<li>Appeler les services pour effectuer la logique métier.</li>
+<li>Retourner une réponse au client.</li>
+</ul>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block group-open:select-text">
+<p>Exemple dans un projet de forum</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2 cursor-auto select-text">
+<ul>
+<li>Un contrôleur <code>PostsController</code> gère les routes liées aux posts.
+<ul>
+<li><strong>GET <code>/posts</code></strong> : Récupérer tous les posts.</li>
+<li><strong>POST <code>/posts</code></strong> : Créer un nouveau post.</li>
+<li><strong>DELETE <code>/posts/:id</code></strong> : Supprimer un post par ID.</li>
+</ul>
+</li>
+</ul>
+</div>
+</details>     
+</div>
+<p><img src="image1.png" alt="image">
+Image explicite trouvée sur le site de la documentation de NestJs.</p>
+<blockquote>
+<p><strong>Rôle important :</strong> Le contrôleur ne contient pas de logique complexe. Il délègue les opérations au <strong>service</strong>.</p>
+</blockquote>
+<p>Le point n°4, expliqué par <strong>Webeleon</strong> sur le site <strong><a href="http://dev.to">dev.to</a></strong>, m'a aidé à comprendre les contrôleurs. Le lien se trouve dans la partie sources.</p>
+<hr>
+<h2><strong>3. Les Services</strong></h2>
+<h4><strong>Qu'est-ce qu'un Service dans NestJS ?</strong></h4>
+<p>Les <strong>services</strong> contiennent la <strong>logique métier</strong> de l'application. Ce sont des classes où tu définis tout ce qui doit être fait pour manipuler ou traiter les données.</p>
+<p>Ils ont comme responsabilité de :</p>
+<ul>
+<li>Interagir avec la base de données (via un modèle comme Mongoose pour MongoDB).</li>
+<li>Effectuer des calculs ou des validations complexes.</li>
+<li>Fournir des données au contrôleur.</li>
+</ul>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block group-open:select-text">
+<p>Exemple dans un projet de forum</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2 cursor-auto select-text">
+<ul>
+<li>Un service <code>PostsService</code> inclut des méthodes comme :
+<ul>
+<li><code>findAll</code> : Récupérer tous les posts depuis la base de données.</li>
+<li><code>create</code> : Ajouter un nouveau post à la base.</li>
+<li><code>delete</code> : Supprimer un post par ID.</li>
+</ul>
+</li>
+</ul>
+</div>
+</details>     
+</div>
+<blockquote>
+<p><strong>Rôle important :</strong> Les services permettent de garder les contrôleurs simples et centrés sur la gestion des requêtes.</p>
+</blockquote>
+<p>L'explication de la partie service de <strong>Créer un CRUD avec NestJs</strong> était explicite pour moi. Le lien se trouve dans la partie sources.</p>
+<hr>
+<h2><strong>4. Les DTOs (Data Transfer Objects)</strong></h2>
+<h4><strong>Qu'est-ce qu'un DTO dans NestJS ?</strong></h4>
+<p>Les <strong>DTOs</strong> définissent la structure des données qui transitent entre le client et le serveur. Ils sont utilisés pour valider les données envoyées dans les requêtes HTTP.</p>
+<p>Ils ont comme responsabilité de :</p>
+<ul>
+<li>Assurer que les données reçues ou envoyées respectent un format spécifique.</li>
+<li>Faciliter la validation des données avec des outils comme <code>class-validator</code>.</li>
+</ul>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block group-open:select-text">
+<p>Exemple dans un projet de forum</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2 cursor-auto select-text">
+<ul>
+<li>Un DTO <code>CreatePostDto</code> pourrait spécifier que chaque post doit avoir un <code>title</code> et un <code>content</code>.</li>
+<li>Si le client oublie de fournir un champ obligatoire, le serveur retourne une erreur claire.</li>
+</ul>
+</div>
+</details>     
+</div>
+<blockquote>
+<p><strong>Rôle important :</strong> Les DTOs aident à sécuriser et structurer les interactions entre le client et le serveur.</p>
+</blockquote>
+<p>Pour cette partie, j'ai consulté l'explication de <strong>David Ekete</strong> sur <strong><a href="http://dev.to">dev.to</a></strong>, ainsi que le site web <strong>GeeksforGeeks</strong>. Les liens se trouvent dans la partie sources.</p>
+<hr>
+<h2><strong>5. Modèles</strong></h2>
+<h4><strong>Qu'est-ce qu'un Modèle dans NestJS ?</strong></h4>
+<p>Un <strong>modèle</strong> représente la structure des données dans la base de données. Avec MongoDB, les modèles sont définis à l'aide de <strong>Mongoose</strong>.</p>
+<ul>
+<li>Ils ont comme responsabilité de :
+<ul>
+<li>Définir les champs d'un document (par exemple : titre, contenu, date de création).</li>
+<li>Définir les règles de validation pour la base de données (par exemple : <code>title</code> est obligatoire).</li>
+</ul>
+</li>
+</ul>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block group-open:select-text">
+<p>Exemple dans un projet de forum</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2 cursor-auto select-text">
+<ul>
+<li>Un modèle <code>Post</code> pourrait inclure les champs :
+<ul>
+<li><code>title</code> (chaîne obligatoire).</li>
+<li><code>content</code> (chaîne obligatoire).</li>
+<li><code>author</code> (référence à un utilisateur).</li>
+</ul>
+</li>
+</ul>
+</div>
+</details>     
+</div>
+<blockquote>
+<p><strong>Rôle important :</strong> Les modèles servent d’interface entre l’application et la base de données.</p>
+</blockquote>
+<p>L'article de <strong>SFEIR</strong> sur <strong><a href="http://dev.to">dev.to</a></strong> m'a permis de comprendre cette partie. Le lien se trouve dans la partie sources.</p>
+<hr>
+<h2><strong>6. Les Filtres, Pipes et Guards</strong></h2>
+<h4><strong>Filtres d'Exception</strong></h4>
+<ul>
+<li><strong>Qu'est-ce que c'est ?</strong> : Les filtres interceptent les erreurs dans l'application.</li>
+<li><strong>Utilité</strong> : Fournir des messages d'erreur personnalisés au client.</li>
+<li><strong>Exemple</strong> : Si un ID de post est invalide, retourner un message <code>Post not found</code>.</li>
+</ul>
+<h4><strong>Pipes</strong></h4>
+<ul>
+<li><strong>Qu'est-ce que c'est ?</strong> : Les pipes transforment ou valident les données avant qu'elles n'atteignent un contrôleur ou un service.</li>
+<li><strong>Utilité</strong> : Valider les données reçues dans une requête (par exemple, vérifier qu'un champ <code>title</code> n'est pas vide).</li>
+</ul>
+<p><img src="image4.png" alt="image">
+Image explicite trouvée sur le site de la documentation de NestJs.</p>
+<h4><strong>Guards</strong></h4>
+<ul>
+<li><strong>Qu'est-ce que c'est ?</strong> : Les guards protègent les routes en contrôlant l'accès.</li>
+<li><strong>Utilité</strong> : Implémenter l'authentification (JWT) ou des permissions.</li>
+</ul>
+<p><img src="image3.png" alt="image">
+Image explicite trouvée sur le site de la documentation de NestJs.</p>
+<p>L'article de <strong>SFEIR</strong> sur <strong><a href="http://dev.to">dev.to</a></strong> m'a permis de comprendre cette partie. Le lien se trouve dans la partie sources.</p>
+<hr>
+<h2><strong>7. Le Point d’Entrée (<code>main.ts</code>)</strong></h2>
+<h4><strong>Qu'est-ce que le Point d’Entrée dans NestJS ?</strong></h4>
+<p>Le fichier <code>main.ts</code> initialise l'application NestJS et configure son comportement global.</p>
+<ul>
+<li>Il a comme responsabilité de :
+<ul>
+<li>Lancer le serveur.</li>
+<li>Configurer les middlewares globaux (par exemple : activer CORS).</li>
+<li>Intégrer des outils comme Swagger pour la documentation.</li>
+</ul>
+</li>
+</ul>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block group-open:select-text">
+<p>Exemple dans un projet de forum</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2 cursor-auto select-text">
+<ul>
+<li>Activer le middleware pour la documentation des API avec Swagger.</li>
+<li>Activer <code>enableCors()</code> pour autoriser les requêtes depuis le frontend React.</li>
+</ul>
+</div>
+</details>     
+</div>
+<p>L'article <strong>Construire un serveur backend robuste avec NestJS</strong> sur la partie initiation est la seule source explicite que j'ai trouvée pour cette partie. Le lien se trouve dans la partie sources.</p>
+<hr>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block group-open:select-text">
+<p>Ce que j'ai appris</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2 cursor-auto select-text">
+<p>Voici un résumé de ce que j'ai compris sur NestJS :</p>
+<table>
+<thead>
+<tr>
+<th><strong>Composant</strong></th>
+<th><strong>Rôle</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Module</strong></td>
+<td>Organise les contrôleurs, services et autres composants liés à une fonctionnalité.</td>
+</tr>
+<tr>
+<td><strong>Contrôleur</strong></td>
+<td>Gère les requêtes HTTP et délègue les tâches au service.</td>
+</tr>
+<tr>
+<td><strong>Service</strong></td>
+<td>Contient la logique métier et interagit avec la base de données.</td>
+</tr>
+<tr>
+<td><strong>DTO</strong></td>
+<td>Définit la structure et valide les données échangées entre le client et le serveur.</td>
+</tr>
+<tr>
+<td><strong>Modèle</strong></td>
+<td>Définit la structure des données dans la base de données.</td>
+</tr>
+<tr>
+<td><strong>Filtre</strong></td>
+<td>Intercepte les erreurs et personnalise les réponses d'erreur.</td>
+</tr>
+<tr>
+<td><strong>Pipe</strong></td>
+<td>Transforme ou valide les données avant qu'elles n'atteignent le contrôleur.</td>
+</tr>
+<tr>
+<td><strong>Guard</strong></td>
+<td>Protège les routes en contrôlant l'accès (authentification, permissions).</td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>     
+</div>
+<h3><strong>Horodatage</strong></h3>
+<p>Voici a peu pret (pas exactement car des fois ca depasse de quelque minutes) comment organiser mon temps d'etude.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Étape</strong></th>
+<th><strong>Durée</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Introduction à NestJS</td>
+<td>1h</td>
+</tr>
+<tr>
+<td>Installation de NestJS et Configuration</td>
+<td>1h30</td>
+</tr>
+<tr>
+<td>Comprendre les Modules</td>
+<td>1h30</td>
+</tr>
+<tr>
+<td>Travailler avec les Contrôleurs</td>
+<td>1h30</td>
+</tr>
+<tr>
+<td>Comprendre les Services</td>
+<td>1h30</td>
+</tr>
+<tr>
+<td>Introduction aux DTOs</td>
+<td>1h</td>
+</tr>
+<tr>
+<td>Modèles et Schémas avec Mongoose</td>
+<td>1h30</td>
+</tr>
+<tr>
+<td>Filtres, Pipes et Guards</td>
+<td>1h</td>
+</tr>
+</tbody>
+</table>
+<h2>Sources :</h2>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
+</svg>
+<div class="pl-8 mr-8">
+<ul>
+<li><a href="https://www.next-decision.fr/wiki/creer-une-crud-avec-nestjs">Créer une CRUD avec NestJs</a></li>
+<li><a href="https://www.youtube.com/watch?v=awl-TE0tpkU&amp;t=22s">NestJs 7 Les modules NestJs, création de module et module global</a></li>
+<li><a href="https://dev.to/webeleon/cursus-nestjs-les-controllers-4bm0">Webeleon</a></li>
+<li><a href="https://dev.to/davidekete/understanding-data-transfer-objects-dto-and-data-validation-in-typescript-nestjs-1j2b">David Ekete</a></li>
+<li><a href="https://www.geeksforgeeks.org/why-do-we-need-dtos-and-interfaces-both-in-nest-js/">geeksforgeeks</a></li>
+<li><a href="https://dev.to/sfeircode/nestjs-un-framework-nodejs-complet--428">SFEIR</a></li>
+<li><a href="https://docs.nestjs.com/guards">Guards</a></li>
+<li><a href="https://docs.nestjs.com/pipes">Pipes</a></li>
+<li><a href="https://dmnchzl.medium.com/construire-un-serveur-backend-robuste-avec-nestjs-9e08bc855b4b">Construire Un Serveur Backend Robuste Avec NestJS</a></li>
+</ul>
+</div></div>
+
 
 
 </article>
