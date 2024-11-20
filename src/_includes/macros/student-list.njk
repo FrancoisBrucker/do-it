@@ -7,7 +7,7 @@
         {% endif %}
         {% set types = (types.push(type), types) %}
 
-        {% for student in index | sort | reverse %}
+        {% for student in index | sort(attribute='data.authors') %}
             {% set c = 0 %}
             {% for tag in student.data.tags %}
                 {% for type in types %}

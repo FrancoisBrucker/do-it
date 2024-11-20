@@ -20,7 +20,8 @@ résumé: ""
 ---
 
 {% prerequis %}
-📶 React : 1/3
+- React : 1/3 📶
+- 3D en Web : 0/3 📶
 {% endprerequis %}
 
 {% lien %}
@@ -28,7 +29,8 @@ résumé: ""
 - [Documentation Three.js](https://threejs.org/docs)
 - [Documentation R3F](https://r3f.docs.pmnd.rs)
 - [Vidéo Youtube de Codeur de Nuit, Tuto THREE.JS](https://www.youtube.com/watch?v=vhK6o26OV4Q)
-- [Vidéo Youtube de Graven, ThreeJS expliqué en 3 minutes (Javascript 3D✨)](https://www.youtube.com/watch?v=4IvhajhllFo) (https://www.youtube.com/watch?v=vhK6o26OV4Q)
+- [Vidéo Youtube de Codeur de Nuit, Tuto THREE.JS [Javascript]](https://www.youtube.com/watch?v=vhK6o26OV4Q)
+- [Vidéo Youtube de Graven, ThreeJS expliqué en 3 minutes (Javascript 3D✨)](https://www.youtube.com/watch?v=4IvhajhllFo) 
 - [Vidéo Youtube de rithmic, React Three Fiber (R3F) - The Basics](https://www.youtube.com/watch?v=vTfMjI4rVSI)
 -  [Site FreeCodeCamp, How to Implement a Blender Model in a React.js Application using Three.js](https://www.freecodecamp.org/news/blender-three-js-react-js/)
 -  [Vidéo Youtube de The Khronos Group, What is glTF?](https://www.youtube.com/watch?v=tonSNnEj-ow)
@@ -48,7 +50,7 @@ résumé: ""
 J'ai réalisé ce MON pour incorporer des créatures blenders sur un site que j'ai commencé à réaliser pour mon POK 2.
 Sachant que je voulais coder en react, je me suis intéressé à l'intégration de modèle 3D pour du react. Je me suis donc posé comme question :
 
-**Comment ajouter de l'animation 3D (blender) à React ?**
+<center><b>Comment ajouter de l'animation 3D (blender) à React ?</b></center>
 
 Ce MON a pour but d'expliquer comment cela marche, le principe, la théorie plutôt que de donner des explications de code. Il existe plein de tutoriel bien mieux que ce que je pourrais faire si je voulais expliquer du code dont les documentations de Three.js et R3F que je vous conseille vivement d'aller consulter.
 
@@ -116,7 +118,8 @@ Les contrôles sont les interactions entre l'utilisateur et la page web. En effe
 On peut mettre déclencher des actions quand l'utilisateur clique, hover, scroll, tape au clavier...
 
 {% lien %}
-[Vidéo Youtube de Graven, ThreeJS expliqué en 3 minutes (Javascript 3D✨)](https://www.youtube.com/watch?v=4IvhajhllFo) (https://www.youtube.com/watch?v=vhK6o26OV4Q)
+- [Vidéo Youtube de Codeur de Nuit, Tuto THREE.JS [Javascript]](https://www.youtube.com/watch?v=vhK6o26OV4Q)
+- [Vidéo Youtube de Graven, ThreeJS expliqué en 3 minutes (Javascript 3D✨)](https://www.youtube.com/watch?v=4IvhajhllFo) 
 {% endlien %}
 
 ---

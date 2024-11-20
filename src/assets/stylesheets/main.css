@@ -73,6 +73,11 @@ details p {
     @apply mb-0;
 }
 
+/* For Safari details render */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
 /* Show line numbers on code */
 /* Source issue: https://github.com/11ty/eleventy-plugin-syntaxhighlight/issues/10 */
 pre {

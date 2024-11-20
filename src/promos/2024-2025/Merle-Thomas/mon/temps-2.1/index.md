@@ -55,7 +55,6 @@ Objectifs :
 # Apprentissage de GoLang
 
 L'objectif de cet apprentissage est de maîtriser les bases du langage Go afin d'écrire un petit jeu de **morpions** ou **tic-tac-toe**. 
-Ce document est une synthèse des 8 chapitres de cours sur Go, incluant des explications théoriques, des exemples de code, et des points clés à retenir.
 
 ---
 
@@ -148,14 +147,12 @@ for i := 0; i < 10; i++ {
 ```
 
 ### Points clés:
-* Typage fort: Go est un langage à typage statique, ce qui signifie que le type d'une variable doit être déclaré explicitement ou déduit par le compilateur.
-* Inférence de type: Le compilateur peut souvent déduire le type d'une variable lors de son initialisation.
-* Conversion de type: Il est possible de convertir un type en un autre à l'aide d'une conversion explicite (cast).
-* Constante: Une valeur qui ne peut pas être modifiée après sa déclaration. On utilise le mot-clé const.
-* Zero value: Si une variable n'est pas initialisée, elle prend une valeur par défaut (0 pour les nombres, "" pour les chaînes, false pour les booléens).
-* Approfondissement
-1. Les pointeurs: Pour manipuler la mémoire de manière plus fine.
-2. Les structures: Pour regrouper des données de différents types.
+* ***Typage fort**: Go est un langage à typage statique, ce qui signifie que le type d'une variable doit être déclaré explicitement ou déduit par le compilateur.
+* **Inférence de type**: Le compilateur peut souvent déduire le type d'une variable lors de son initialisation.
+* **Conversion de type**: Il est possible de convertir un type en un autre à l'aide d'une conversion explicite (cast).
+* **Constante**: Une valeur qui ne peut pas être modifiée après sa déclaration. On utilise le mot-clé const.
+* **Zero value**: Si une variable n'est pas initialisée, elle prend une valeur par défaut (0 pour les nombres, "" pour les chaînes, false pour les booléens).
+
 ---
 
 ## Chapitre 4 : Les Conditions<a name="conditions"></a>
@@ -187,12 +184,9 @@ func main() {
 }
 ```
 
-:checkered_flag: **Résultats :**
+🏁 **Résultats :**
 Entrez votre âge : 16 Sortez ! 
 Entrez votre âge : 25 Entrez :
-
-Remarque :
-L'instruction `else` est facultative et sert à exécuter un bloc lorsque la condition `if` est fausse.
 
 ## 2. Les instructions `elseif`
 L'instruction `else if` permet de gérer des cas supplémentaires lorsque la première condition `if` n'est pas remplie. Elle permet de tester plusieurs alternatives de manière structurée.
@@ -231,7 +225,7 @@ func main() {
 } 
 ```
 
-:checkered_flag: **Résultats :**
+🏁 **Résultats :**
 Votre choix : 666
 Quand le diable veut une âme, le mal devient séduisant
 Votre choix : 7
@@ -267,7 +261,7 @@ func main() {
 }
 ```
 
-:checkered_flag: **Résultats:** 
+🏁 **Résultats:** 
 1. Je ne dois frapper mes camarades de classe
 2. Je ne dois frapper mes camarades de classe
 ...
@@ -302,7 +296,7 @@ func main() {
 }
 ```
 
-:checkered_flag: **Résultats:** 
+🏁 **Résultats:** 
 Entrez votre âge : 17
 Entrez votre âge : 19
 Bienvenue en boîte de nuit !
@@ -356,7 +350,7 @@ func main() {
 }
 ```
 
-:checkered_flag: **Résultat:**
+🏁 **Résultat:**
 Bonjour Hatim vous avez 9 ans
 Bonjour Alex vous avez 12 ans
 
@@ -379,7 +373,7 @@ func main() {
 }
 ```
 
-:checkered_flag: **Résultat:**
+🏁 **Résultat:**
 30
 Valeur : 50 , Type : int
 
@@ -400,7 +394,7 @@ func main() {
 }
 ```
 
-:checkered_flag: **Résultat:**
+🏁 **Résultat:**
 Avant fonction a = 5  b = 8
 Après fonction a = 8  b = 11
 
@@ -432,7 +426,7 @@ func main() {
 }
 ```
 
-:checkered_flag: **Résultat :**
+🏁 **Résultat :**
 Int : [0 0 0 0 0 0 0 0 0 0]
 Float : [0 0 0 0 0 0 0 0 0 0]
 String : [         ]
@@ -463,7 +457,7 @@ func main() {
 }
 ```
 
-:checkered_flag: **Résultat:**
+🏁 **Résultat:**
 lundi est le jour numéro 1
 mardi est le jour numéro 2
 ...
@@ -512,13 +506,13 @@ tableau[0][1] = 42 // Modifier l'élément de la première ligne, deuxième colo
 ```
 
 ### Points Clés:
-* Initialisation : Un tableau a une taille fixe et un type unique pour ses éléments.
-* Accès : Utilisez les index pour accéder ou modifier des éléments.
-* Boucle : Utilisez range pour parcourir les éléments avec index et valeurs.
-* Multidimensionnel : Permet de modéliser des structures comme des grilles.
+* **Initialisation** : Un tableau a une taille fixe et un type unique pour ses éléments.
+* **Accès** : Utilisez les index pour accéder ou modifier des éléments.
+* **Boucle** : Utilisez range pour parcourir les éléments avec index et valeurs.
+* **Multidimensionnel** : Permet de modéliser des structures comme des grilles.
 ---
 
-:dart: **Prochaine étape :** Utiliser ces concepts pour coder un jeu de morpions ou tic tac toe game en Go !
+🎯 **Prochaine étape :** Utiliser ces concepts pour coder un jeu de morpions ou tic tac toe game en Go !
 
 ---
 
@@ -698,31 +692,42 @@ func verifierMatchNul() bool {
 * Utilisation de la bibliothèque `bufio` : Je n’étais pas familier avec son fonctionnement pour les entrées utilisateur, mais des recherches sur les forums Go et l’expérimentation m’ont permis de surmonter ce problème rapidement.
 
 **Difficultés et Résolutions:**
-* Blocage : Gestion des indices dans un tableau 2D
-*Problème* : L'utilisation d'un tableau 2D au lieu d'un tableau 1D rendait la vérification des conditions de victoire plus complexe, notamment pour les diagonales.
-:bulb: *Solution* : 
+#### Blocage : Gestion des indices dans un tableau 2D
+**Problème** : L'utilisation d'un tableau 2D au lieu d'un tableau 1D rendait la vérification des conditions de victoire plus complexe, notamment pour les diagonales.
+💡 *Solution* : 
 J'ai utilisé des boucles pour parcourir dynamiquement chaque ligne, colonne et diagonale.
 J'ai également vérifié manuellement les indices critiques pour les diagonales, car elles ne peuvent pas être parcourues directement comme une ligne ou une colonne.
 
-* Blocage : Contrôle des entrées utilisateur
-*Problème* : Les utilisateurs peuvent entrer des valeurs non valides (par exemple, des lettres, des nombres hors limites ou des cases déjà occupées).
-:bulb: *Solution* :
+#### Blocage : Contrôle des entrées utilisateur
+**Problème** : Les utilisateurs peuvent entrer des valeurs non valides (par exemple, des lettres, des nombres hors limites ou des cases déjà occupées).
+💡 *Solution* :
 Une boucle `for` a été mise en place pour redemander une entrée valide tant que la saisie n’était pas correcte.
 J'ai utilisé `fmt.Sscanf` pour analyser les coordonnées et ajouté des messages explicatifs pour guider les joueurs.
 
-* Blocage : Gestion des conditions de victoire
-*Problème* : Vérifier les alignements (lignes, colonnes et diagonales) dans un tableau 2D nécessitait une logique différente pour chaque type d'alignement.
-:bulb: *Solution* :
+#### Blocage : Gestion des conditions de victoire
+**Problème** : Vérifier les alignements (lignes, colonnes et diagonales) dans un tableau 2D nécessitait une logique différente pour chaque type d'alignement.
+💡 *Solution* :
 J'ai écrit une fonction générique qui vérifie les alignements de manière conditionnelle.
 En cas de répétitions (par exemple, plusieurs lignes), j'ai optimisé le code en regroupant les vérifications dans une boucle.
 
-* Blocage : Affichage esthétique du damier
-*Problème* : Le damier n’était pas lisible au début à cause d’un espacement mal géré.
-:bulb: *Solution* :
+#### Blocage : Affichage esthétique du damier
+**Problème** : Le damier n’était pas lisible au début à cause d’un espacement mal géré.
+💡 *Solution* :
 J’ai ajusté le formatage en ajoutant des espaces et en séparant les lignes par des bordures visuelles pour rendre le jeu plus clair.
 
+**Démo du jeu  via le terminal:**
+
+<video width="600" controls>
+  <source src="demo_morpions.mov" type="video/quicktime">
+</video>
+
+{% lien %}
 **Lien vers le Github du projet:**
 [Projet Morpions Go](https://github.com/ThomasMerle25/morpions-go "Morpions Go")
+
+**Lien Tutoriel suivi:**
+[`GoLang Tuto`](https://devopssec.fr/article/configurer-environnement-golang#begin-article-section)
+{% endlien %}
 
 ## Horodateur
 

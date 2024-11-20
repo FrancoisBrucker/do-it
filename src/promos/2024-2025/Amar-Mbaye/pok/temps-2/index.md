@@ -6,61 +6,180 @@ authors:
   - Serigne Mbaye Sy AMAR
 
 date: 2024-10-18
-
 tags: 
   - "temps 2"
+  - "NestJs"
+  - "React"
+  - "API Rest"
+  - Forum
 
-résumé: Le but de ce POK est de mettre en évidence mes connaissances acquises en créant un forum de discussion avec React comme front-end et NestJS comme back-end.
+résumé: Le but de ce POK est de mettre en évidence les connaissances que j’ai acquises durant l’ensemble de mes MONs, en créant un forum de discussion avec React comme front-end et NestJS comme back-end, en utilisant bien évidemment les API Rest pour la connexion entre les deux.
 ---
 
 {% prerequis %}
 
-Liste des prérequis du POK ET/OU MON
-
+- Une base en NestJs 
+- Une Base en React 
+- Une base solide aux apis Rest 
 {% endprerequis %}
 {% lien %}
 
-Les lien utiles pour la compréhension de celui-ci.
+Les lien utiles pour la compréhension de celui-ci:
+- [Mon Mon 1.1](https://francoisbrucker.github.io/do-it/promos/2024-2025/Amar-Mbaye/mon/temps-1.1/)
+- [Mon Mon 2.1](https://francoisbrucker.github.io/do-it/promos/2024-2025/Amar-Mbaye/mon/temps-2.1/)
+- [Mon MON 2.2](https://francoisbrucker.github.io/do-it/promos/2024-2025/Amar-Mbaye/mon/temps-2.2/)
 
 {% endlien %}
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce POK. On oubliera pas de donner :
+<!-- table des matieres -->
+## Table des matières<a name="table-des-matières"></a>
 
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
+- [Table des matières](#table-des-matières)
+  - [**Présentation du Projet : Forum de Discussion**](#présentation-du-projet--forum-de-discussion)
+  - [**Outils et Méthodes Utilisées**](#outils-et-méthodes-utilisées)
+    - [**1. Méthodologie Agile : Sprint Planning**](#1-méthodologie-agile--sprint-planning)
+    - [**2. Horodatage**](#2-horodatage)
+    - [**3. Étude Post-Mortem**](#3-étude-post-mortem)
+    - [**Sprint 1 : Frontend et Maquette**](#sprint-1--frontend-et-maquette)
+    - [**Sprint 2 : Backend et Intégration**](#sprint-2--backend-et-intégration)
 
-## Tâches
 
-### Sprints
+### **Présentation du Projet : Forum de Discussion**
+Pour ce projet, je vise à développer un forum de discussion où les utilisateurs peuvent partager des idées, poser des questions, et échanger des avis.
 
-But final.
+**Objectif :**  
+Créer un forum de discussion où je vais:  
 
-#### Sprint 1
+- Permettre aux utilisateurs de poster leurs questions ou réflexions.
+- Offrir une fonctionnalité de commentaires pour interagir avec les discussions existantes.
+- Intégrer des fonctionnalités supplémentaires comme les likes et le partage des posts. 
 
-Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
+**Technologies utilisées :**  
+- **Frontend** : React.js  
+- **Backend** : NestJS  
+- **Base de données** : MongoDB  
+- **API REST** : Pour la communication entre le frontend et le backend.  
 
-- [ ] Une tâche non réalisée
-- [x] Une tâche réalisée
+---
 
-#### Sprint 2
+### **Outils et Méthodes Utilisées**
 
-- [ ] Une tâche non réalisée
-- [x] Une tâche réalisée
+#### **1. Méthodologie Agile : Sprint Planning**
 
-Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
 
-### Horodatage
+- **Sprint 1 : Frontend et Maquette**  
+  - [x] Création de la maquette du forum (UX/UI) [(lien vers la maquette)](https://www.figma.com/design/6EleCT87Blb4ecdAUifrFx/forum?t=404V5TOHt19Sr2Qc-1).
 
-Toutes les séances et le nombre d'heure que l'on y a passé.
+  - [x] Développement des composants frontend en React.js.  
+  - [x] Configuration initiale des interactions utilisateur (ajouter un post, afficher des posts).  
 
-| Date | Heures passées | Indications |
-| -------- | -------- |-------- |
-| Mardi 27/08  | 1H  | Travail sur la trame du site |
+- **Sprint 2 : Backend et Intégration**  
+  - [x] Mise en place du backend avec NestJS.  
+  - [ ] Implémentation des endpoints API REST pour gérer les posts, commentaires et likes.  
+  - [ ] Intégration frontend-backend pour synchroniser les fonctionnalités.
 
-## Contenu
+---
 
-Le contenu du POK.
+#### **2. Horodatage**
 
-### Premier Sprint
 
-### Second Sprint
+| Sprint      | Étapes                          | Temps Alloué | Description                                                                 |
+|-------------|-------------------------------------|--------------|-----------------------------------------------------------------------------|
+| **Sprint 1** | Création de la maquette (UX/UI)    | **3h**       | Conception des maquettes du forum pour garantir une interface intuitive.    |
+|             | Développement du frontend          | **5h**      | Développement des composants React.js pour afficher et gérer les données.   |
+|             | Test et ajustements frontend       | **2h**       | Débogage et amélioration de l'expérience utilisateur.                       |
+| **Sprint 2** | Configuration du backend avec NestJS | **4h**      | Création des modules, services, et contrôleurs pour gérer les données.      |
+|             | Connexion avec MongoDB             | **3h**       | Mise en place des modèles Mongoose et validation des données.               |
+|             | Intégration frontend-backend       | **3h**       | Tests de communication via API REST et corrections des bugs rencontrés.     |
+
+**Total :** 20 heures pour les deux sprints.  
+
+
+---
+
+#### **3. Étude Post-Mortem**
+Après chaque sprint, j'ai effectué une **analyse post-mortem** pour évaluer ce qui a fonctionné, ce qui a été difficile et ce qui doit être amélioré.
+
+- **Sprint 1 : Frontend**
+
+
+#### **Sprint 1 : Frontend et Maquette**
+- **Points forts :**
+  - Une interface respectant la maquette initiale.
+  - Modularité des composants React.js, qui facilite les modifications et les ajouts futurs.
+- **Points faibles :**
+  - Difficile d’anticiper les besoins exacts du backend, ce qui a nécessité des ajustements plus tard.
+  - Probléme de PC trop lent
+- **Leçons apprises :**
+  - Mieux coordonner les spécifications entre le frontend et le backend dès le début.
+-  **Améliorations :**
+    - Développer un meilleur système de gestion d’état global (comme Redux ou Context API).
+  
+  {%info%}
+Redux est un gestionnaire d'état global pour les applications React. Il permet de gérer l 'état de l'application de manière centralisée et de réduire la complexité des composants. 
+{%endinfo%}
+
+#### **Sprint 2 : Backend et Intégration**
+<!-- #### **Sprint 2 : Backend et Intégration**
+- **Points forts :**
+  - Les endpoints REST sont bien organisés (CRUD standardisé).
+
+- **Points faibles :**
+  - Gestion des erreurs CORS qui a ralenti l'intégration initiale.
+  - Probléme de PC trop lent
+  - Complexité dans la synchronisation des états entre le frontend et le backend.
+- **Leçons apprises :**
+  - Toujours prévoir du temps pour les tests d’intégration entre les différentes parties du projet.
+
+  - **Améliorations :**
+    - Ajouter des tests automatisés pour éviter les régressions.
+  
+   {% info %}
+Les tests automatisés sont des scripts qui vérifient automatiquement que le code fonctionne comme prévu. Ils permettent de détecter les erreurs et les bugs rapidement et de garantir la qualité du code.
+{% endinfo %}
+ 
+ 
+---
+
+### **Architecture et Fonctionnalités**
+
+#### **1. Fonctionnalités Clés du Forum**
+- **Posts** :
+  - Les utilisateurs peuvent créer, lire, modifier et supprimer des posts (CRUD).
+  - Les posts sont affichés avec leur titre et contenu.
+
+- **Commentaires** :
+  - Chaque post peut recevoir des commentaires.
+  - Les utilisateurs peuvent ajouter .
+
+- **Interactions** :
+  - Les utilisateurs peuvent liker et partager des posts.
+
+#### **2. Architecture du Projet**
+Le projet est divisé en plusieurs couches.
+
+- **Frontend** (React.js) :
+  - Composants principaux :
+    - **MainContent** : Affiche la liste des posts.
+    - **Editor** : Permet à l’utilisateur de créer un post.
+    - **QuestionListItem** : Gère les interactions avec un post (likes, commentaires).
+
+- **Backend** (NestJS) :
+  - Modules :
+    - **PostsModule** : Gère les endpoints pour les posts.
+    - **CommentsModule** : Gère les endpoints pour les commentaires.
+  - Modèles Mongoose :
+    - **Post** : Définit la structure d’un post dans MongoDB (titre, contenu).
+    - **Comment** : Définit la structure d’un commentaire (contenu, post associé).
+
+---
+
+## Résultat (Sous format de video)
+<!-- integrer video .mp4 --> 
+<!-- <video width="100%" controls>
+<source src="./Resultat.mp4" type="video/mp4">
+
+## Sources :
+{% lien %}
+
+{% endlien %}  --> 
