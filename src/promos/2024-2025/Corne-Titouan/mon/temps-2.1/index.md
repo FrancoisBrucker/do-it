@@ -32,25 +32,24 @@ Connaissances du web :
 
 {% endlien %}
 
+
 ## Table des matières
 
-- [Table des matières](#table-des-matières)
-- [1. React : qu'est ce que c'est ? ](#1-react--quest-ce-que-cest--)
-- [2. Synthèse de balisage *JSX* ](#2-synthèse-de-balisage-jsx-)
-- [3. Mise en place de l'environnement de travail ](#3-mise-en-place-de-lenvironnement-de-travail-)
-- [4. Variables d'état ](#4-variables-détat-)
-- [5. Mise en pratique ](#5-mise-en-pratique-)
-- [Sources utiles](#sources-utiles)
+1. [1. React : qu'est ce que c'est ?](#section1)
+2. [2. Synthèse de balisage *JSX*](#section2)
+3. [3. Mise en place de l'environnement de travail](#section3)
+4. [4. Variables d'état](#section4)
+5. [5. Mise en pratique](#section5)
 
 ## 1. React : qu'est ce que c'est ? <a id="section1"></a>
 
 React est une bibliothèque JavaScript open source utilisée pour créer des interfaces utilisateurs. Cette bibliothèque a vu le jour en 2013. Elle est actuellement maintenue par Meta. React est donc utilisé en développement web, côté front.
 
-Parmis les applications connues développées en utilisant React, on retrouve notamment Netflix et Airbnb.
+Parmi les applications connues développées en utilisant React, on retrouve notamment Netflix et Airbnb.
 
-![Interface-Netflix](./img/interface-netflix.png)
+![Interface Netflix](./img/interface-netflix.png) *Capture d'écran (2024)*
 
-![Interface-Airbnb](./img/interface-airbnb.png)
+![Interface Airbnb](./img/interface-airbnb.png) *Capture d'écran (2024)*
 
 ## 2. Synthèse de balisage *JSX* <a id="section2"></a>
 
@@ -125,7 +124,7 @@ Voici une capture d'écran qui permet de comprendre la hiérarchie entre les dif
 ![Hierarchie des composants](./img/hierarchie-components.png)
 *Exemple repris du site officiel de [React](https://fr.react.dev/learn/thinking-in-react) (2024)*
 
-Lorsqu'on développe une application il est donc important de savoir comment structurer l'état au sein de cette application. Il faut alors considérer l'état comme étant le jeu minimum de données susceptibles de changer dont l'application doit se souvenir. Il est important de ne pas se perdre avec un trop grand nombre d'états, c'est pourquoi on utilise le principe DRY (*Don't Repeat Yourself*). Pour déterminer si une donnée constitue de l'état, il faut se poser les bonnes questions :
+Lorsqu'on développe une application il est donc important de savoir comment structurer l'état au sein de cette application. Il faut alors considérer l'état comme étant le jeu minimum de données susceptibles de changer dont l'application doit mémoriser. Il est important de ne pas se perdre avec un trop grand nombre d'états, c'est pourquoi on utilise le principe DRY (*Don't Repeat Yourself*). Pour déterminer si une donnée constitue de l'état, il faut se poser les bonnes questions :
 
 - Est-ce que la donnée reste inchangée au fil du temps ? Si oui, ce n’est pas de l’état.
 - Est-ce que la donnée est passée depuis un parent via les props ? Si oui, ce n’est pas de l’état.
@@ -136,7 +135,7 @@ Ensuite, une autre étape clé est de déterminer où l'état devrait vivre.
 On a vu que React utilise un flux de données unidirectionnel (les données descendent le long de la hiérarchie des composants, des parents vers les enfants). Voici les étapes à réaliser pour chaque élément d’état de votre application (étapes tirées du [site officiel de React](https://fr.react.dev/learn/thinking-in-react)) :
 
 1. Identifiez chaque composant qui affiche quelque chose sur base de cet état.
-2. Trouvez leur plus proche ancêtre commun : un composant qui est au-dessus d’eux tous dans l’aborescence.
+2. Trouvez leur plus proche ancêtre commun : un composant qui est au-dessus d’eux tous dans l’arborescence.
 3. Décidez où l’état devrait vivre :
 
 - Le plus souvent, vous pourrez mettre l’état directement dans leur ancêtre commun.
