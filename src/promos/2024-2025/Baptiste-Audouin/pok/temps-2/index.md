@@ -13,7 +13,7 @@ tags:
   - "html"
   - "css"
 
-résumé: Un POK traitant de la création d'un jeu avec JavaScript.
+résumé: Dans ce POK je compte découvrir JavaScript et me repolonger dans les cours de DevWeb de deuxième année. Pour ce faire je prévois de coder le jeu populaire Snake.
 ---
 
 {% prerequis %}
@@ -25,14 +25,12 @@ Pas de prérequis particuliers.
  - [developer mozilla](https://developer.mozilla.org/en-US/)
 {% endlien %}
 
-Dans ce POK je compte découvrir JavaScript et me repolonger dans les cours de DevWeb de deuxième année. Pour ce faireje prévois de coder le jeu populaire Snake.
-
 
 ## Tâches
 
 | Tâches | Heures prévues |
 | --------|-------- |
-| S1 : Recherche docu  sur les jeux déjà réalisé en do_it | 1h |
+| S1 : Recherche documentaire  sur les jeux déjà réalisé en do_it | 1h |
 | S1 : Revoir les bases html css | 3h |
 | S1 : Définir et Réaliser un premier visuel | 3h |
 | S1 : Découvrir JavaScript | 3h |
@@ -46,11 +44,11 @@ Dans ce POK je compte découvrir JavaScript et me repolonger dans les cours de D
 Ce premier sprint est surtout consacré à des révisions et découvertes des bases des langages dont j'aurais besoin pour ce projet.
 
 Dans un premier temps j'ai repris [le cours de deuxième année](https://francoisbrucker.github.io/cours_informatique/enseignements/ecm/2A/option-web/) afin de pouvoir par la suite créer un premier visuel pour jeu. 
-Après ce cours j'ai réaliser une "maquette" afin de définir un prmier visuel simple de ma page web que je prévois de faire évoluer en fonction de mes avancées durant les prochaines étapes.
+Après ce cours j'ai réaliser une "maquette" afin de définir un premier visuel simple de ma page web que je prévois de faire évoluer en fonction de mes avancées durant les prochaines étapes.
 
-{% details %}
+{% details "Maquette" %}
 
- <div><img src="./images/maquette_snake.jpeg"></div>
+![Maquette](./images/maquette_snake.png)
 
 {% enddetails %}
 
@@ -62,7 +60,7 @@ Pour le reste du temps de ce prmier sprint j'ai regardé les anciens projets sim
 
 Le prochain sprint era consacré au code du jeu en javaScript puis, en fontion du temps passé, j'aimerai ajouter des fonctionnalités supplémentaires comme des niveaux différents en jouant sur la vitesse de déplacement mais aussi un classement des scores réalisées sur ce jeu.
 
-### Horodatage sprint1
+### Horodatage sprint 1
 | Tâches | Heures prévues | Heures passées |
 | --------|-------- |-------- |
 | Recherche docu  sur les jeux déjà réalisé en do_it | 1h | 30min |
