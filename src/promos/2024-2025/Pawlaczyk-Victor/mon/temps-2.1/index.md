@@ -22,7 +22,7 @@ Aucun prérequis
 
 ## Le marché de l'audiophile en Europe
 
-En Europe, le marché des équipements audio est très compétitif. De nombreux acteurs se partagent le marché sans qu'un leader ne se démarque particulièrement. En terme de volumes, ce marché se compte en milliards d'Euros de revenus (presque 10 milliards en 2023 d'après [thebusinessresearchcompany](https://www.thebusinessresearchcompany.com/report/audio-equipment-global-market-report)). Ce chiffre ne prend en compte que la vente directe aux clients, il ne s'agit pas ici des équipements audio embarqués dans les voitures par exemple.
+En Europe, le marché des équipements audio est très compétitif. De nombreux acteurs se partagent le marché sans qu'un leader ne se démarque particulièrement. En terme de volumes, ce marché se compte en milliards d'Euros de revenus (presque 10 milliards en 2023 d'après [The Business Research Company](https://www.thebusinessresearchcompany.com/report/audio-equipment-global-market-report)). Ce chiffre ne prend en compte que la vente directe aux clients, il ne s'agit pas ici des équipements audio embarqués dans les voitures par exemple.
 
 Parmi les acteurs principaux de l'équipement audio en Europe, on retrouve évidemment des marques très connues du grand public comme JBL, Bose ou Sony mais aussi d'autres noms moins répandus comme Bang & Olufsen, Focal ou encore Cabasse qui jouent plutôt dans la cour du premium et des équipements plus luxueux. En parallèle, d'autres entreprises plus spécialisées se font leur place comme Sonons qui se concentre sur les systèmes multiroom.
 
