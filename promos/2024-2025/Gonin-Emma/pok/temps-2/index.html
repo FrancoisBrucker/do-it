@@ -144,7 +144,7 @@
 <h4>Sprint 2 : Déployement !</h4>
 <ul>
 <li>[ ] Déployer le site sur aioli à la main, en créant mon serveur et en utilisant tmux pour survivre à la déconnexion.</li>
-<li>[ ] Tester une seconde manière de déployer, cette fois en dockerisant mon appli</li>
+<li>[ ] Tester une seconde manière de déployer, cette fois en dockerisant mon appli en parallèle de mon MON 2.2 sur Docker.</li>
 <li>[ ] Rajout post-sprint 1 : Trouver comment forcer le rafraichissement du DOM après un clic sur les flèches gauche ou droite pour enfin mettre en place la navigation clavier dans le portfolio.</li>
 </ul>
 <h3>Horodatage</h3>
@@ -188,6 +188,7 @@
 <h2>Contenu</h2>
 <p>Le contenu du POK.</p>
 <h3>Premier Sprint</h3>
+<h3>Amélioration du chargement des images</h3>
 <p>J'ai amélioré le carousel avec le chargement des images, ce qui m'ennuyait avec la version précédente du carousel c'était le chargement lent des images. Pour améliorer ceci, j'ai d'abord essayé de refaire le carousel de manière plus simple en faisant des tests mais je préférais le visuel que j'avais déjà, donc je suis repartie du code que j'avais à la fin du POK 1 et j'ai rajouté ces lignes de code qui chargent les images de manière asynchrone :</p>
 <pre><code>useEffect(() =&gt; {
     const preloadImages = async () =&gt; {
@@ -215,9 +216,13 @@
     });
   };
 </code></pre>
+<h3>Rajout nouvelles peintures / hovering Galerie</h3>
 <p>Une fois que j'étais satisfaite du résultat, j'ai rajouté deux peintures/dessins récents dans ma base de données. J'ai ensuite rajouté une fonctionnalité dans ma galerie photo qui est que lorsque l'utilisateur passe la souris sur une des images, s'affiche alors le titre et la description de l'image. Pour se faire, j'ai rajouté un state <code>hoveredItem</code> et une Box noire transparente qui se superpose à l'image.</p>
 <p><img src="image.png" alt="Hovering"></p>
-<p>Après l'ajout de cette nouvelle fonctionnalité, j'ai voulu séparer le backend du frontend. Avant, je stockais mes peintures et mon fichier data.json directement dans le dossier src de mon app React et j'importais le fichier dans mes composants : ce n'est pas propre ! Mais en faisant cela, je n'avais pas besoin de backend, mes fichiers étaient statiques. Pour mon backend et préparer la migration des données à un autre endroit que directement dans mon application React, j'ai créé une API avec FastAPI afin de récupérer les données de mon fichier data.json qui se trouve dans le dossier backend. Pour déployer mon API sur le port 8000 et mon application React sur le port 3000 j'ai créé un script dans mon package.json dans mon application globale :</p>
+<h3>Séparation backend/frontend</h3>
+<p>Après l'ajout de cette nouvelle fonctionnalité, j'ai voulu séparer le backend du frontend.
+Avant, je stockais mes peintures et mon fichier <code>data.json</code> directement dans le dossier src de mon app React et j'importais le fichier dans mes composants : ce n'est pas propre ! Mais en faisant cela, je n'avais pas besoin de backend, mes fichiers étaient statiques.</p>
+<p>Pour mon backend et préparer la migration des données à un autre endroit que directement dans mon application React, j'ai créé une API avec <strong>FastAPI</strong> afin de récupérer les données de mon fichier <code>data.json</code> qui se trouve dans le dossier backend. Pour déployer mon API sur le port <em>8000</em> et mon application React sur le port <em>3000</em> j'ai créé un script dans mon <code>package.json</code> dans mon application globale :</p>
 <pre><code>&quot;scripts&quot;: {
         &quot;dev&quot;: &quot;concurrently \&quot;npm run react-dev\&quot; \&quot;npm run backend-api\&quot;&quot;,
         &quot;react-dev&quot;: &quot;cd frontend &amp;&amp; npm run start&quot;,
@@ -227,14 +232,20 @@
         &quot;concurrently&quot;: &quot;^9.1.0&quot;
     }
 </code></pre>
-<p>Ainsi, lorsque je lance la commande <code>npm run dev</code>, npm appelle mon script <code>concurrently \&quot;npm run react-dev\&quot; \&quot;npm run backend-api\&quot;</code>. Le script react-dev va permettre de lancer mon application React et le script backend-api va permettre de lancer l'API avec Uvicorn.</p>
+<p>Ainsi, lorsque je lance la commande <code>npm run dev</code>, npm appelle mon script <code>concurrently \&quot;npm run react-dev\&quot; \&quot;npm run backend-api\&quot;</code>. Le script <code>react-dev</code> va permettre de lancer mon application React et le script <code>backend-api</code> va permettre de lancer l'API avec Uvicorn.</p>
 <p><img src="image-1.png" alt="Déployement"></p>
 <p>J'ai créé un nouveau repo Git pour mon portfolio 2.0 avec le backend et le frontend séparés : <a href="https://github.com/egonin/art-portfolio-2.0">https://github.com/egonin/art-portfolio-2.0</a>.</p>
 <h3>Sprint 1 analyse post-mortem</h3>
-<p>Je suis contente de mon travail, je n'ai pas fini toutes mes tâches mais j'ai fait des choses que je n'avais pas envisagé clairement dans ma to-do list. J'ai eu de très bons retours de la part de mes proches sur l'avancée de mon site et j'ai hâte de voir ce que cela peut donner une fois mis en production. Pour déployer le site, j'ai plusieurs idées, si je n'avais pas créer d'API il m'aurait suffit de builder mon application React et de copier le dossier /build/ dans ma machine virtuelle et le serveur Nginx aurait servi à déployer ce build. Maintenant il faut que je me renseigne sur comment faire en ayant l'API qui tourne en arrière-plan.</p>
+<p>Je suis contente de mon travail, je n'ai pas fini toutes mes tâches mais j'ai fait des choses que je n'avais pas envisagé clairement dans ma to-do list. Le dimensionnement de mes tâches est peut-être trop laxiste, pas assez explicite. Pour le sprint 2, j'espère que mes tâches sont raisonnables et la tâche sur l'amélioration du système de mails va passer à la trappe pour l'instant</p>
+<p>Concernant la gestion de mon temps, j'ai fait 10h30, en réalité mon horodatage de ma session du jeudi 14/11 est peut-être erroné car j'ai été prise d'un élan et je n'ai pas vu l'heure passer, sachant également que je me suis interrompue au milieu de ma session de travail. Il y a donc une part d'incertitude sur cette session là, je pense +/- 1 heure.</p>
+<p>J'ai eu de très bons retours de la part de mes proches sur l'avancée de mon site et j'ai hâte de voir ce que cela peut donner une fois mis en production.</p>
+<p>Pour déployer le site, j'ai plusieurs idées, si je n'avais pas créer d'API il m'aurait suffit de builder mon application React et de copier le dossier /build/ dans ma machine virtuelle et le serveur Nginx aurait servi à déployer ce build. Maintenant il faut que je me renseigne sur comment faire en ayant l'API qui tourne en arrière-plan.</p>
 <h3>Second Sprint</h3>
 <h3>Ressources</h3>
 <ul>
+<li>Pour la gestion du backend et du frontend (les faire tourner en parallèle) : Stackoverflow, how to put backend and frontend together - returning react frontend from fastapi backend endpoint, <a href="https://stackoverflow.com/questions/62928450/how-to-put-backend-and-frontend-together-returning-react-frontend-from-fastapi">https://stackoverflow.com/questions/62928450/how-to-put-backend-and-frontend-together-returning-react-frontend-from-fastapi</a></li>
+<li>Pour mes questions spécifiques au code, j'utilise l'extension VSCode de <a href="https://phind.com">https://phind.com</a>
+En prévision du sprint 2 :</li>
 <li><a href="https://stacklima.com/comment-dockeriser-une-application-reactjs/">https://stacklima.com/comment-dockeriser-une-application-reactjs/</a></li>
 <li><a href="https://www.youtube.com/watch?v=4xj8N4a36Zs&amp;ab_channel=chillotech">https://www.youtube.com/watch?v=4xj8N4a36Zs&amp;ab_channel=chillotech</a></li>
 </ul>
