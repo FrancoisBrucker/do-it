@@ -74,6 +74,13 @@ Le dépassement du quota horaire est dû à la modification des consignes ayant 
 
 - [ ] Rédaction des fonctions informatiques permettant le calcul des distances sur la grille
 - [x] Lister les fonctions informatiques a priori nécessaires
+- [ ] Coder les fonctions d'extraction de donnée d'une grille à l'autre.
+- [ ] Coder la fonction déterminant le type de câblage des strings.
+- [ ] Coder la fonction permettant le calcul des quantités de câble.
+- [ ] Sprint back-log 2
+- [ ] Reporting sprint 2 sur site Do-it
+- [ ] Finalisation du POK
+- [ ] Rédaction des slides pour revue finale
 
 | Date | Heures passées | Indications |
 | -----|----------------|-------------|
@@ -81,7 +88,6 @@ Le dépassement du quota horaire est dû à la modification des consignes ayant 
 ***Total du sprint 2 :***
 {% enddetails %}
 {% faire %}
-
 
 **QUOTA HORAIRE TOTAL POK 2 :**
 {% endfaire %}
