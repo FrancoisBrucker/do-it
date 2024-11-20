@@ -1,0 +1,346 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Création de sous repos git</title>
+
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [
+                [
+                '$', '$'
+                ],
+                [
+                '\\(', '\\)'
+                ]
+            ]
+            },
+            svg: {
+            fontCache: 'global'
+            }
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
+
+        <header class="border-b-2 border-gray-200 mb-4">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="min-h-[50px] flex justify-between items-center">
+                <a class="mx-2" href="/do-it/">Home</a>
+                <div class="flex items-center gap-4 sm:gap-6 ">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                        </svg>
+                    </a>
+                    <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
+                        <svg class="h-5 aspect-square" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
+            
+<article class="relative">
+<h1 class="mb-1">Création de sous repos git</h1>
+<div class="mb-4">
+    
+        <div class="px-4 flex flex-wrap items-center">
+            
+                <div class="font-bold">Tags : </div>
+            
+            <ul class="flex flex-wrap overflow-auto not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">MON</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">2024-2025</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">git</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">pok</li>
+                
+
+            </ul>
+            
+            
+            <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        <span data-pagefind-filter="Type">POK</span>
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="px-4 flex flex-wrap items-center">
+            <div class="font-bold">Auteurs : </div>
+            <ul class="flex flex-wrap not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Arthur Louradou</li>
+                
+            </ul>
+        </div>
+    
+
+    
+</div>
+
+
+
+    
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-purple-500 bg-purple-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>
+</svg>
+<div class="pl-8 mr-8">
+
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Louradou-Arthur/">Arthur Louradou</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Louradou-Arthur/pok/">POKs</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Louradou-Arthur/pok/temps-1bis/">Refonte du site de Do_It : Eleventy</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Louradou-Arthur/pok/temps-1bis/creation_sous_repo_git/">Création de sous repos git</a>
+
+</div></div>
+
+
+
+
+<h2>Création de sous repo git</h2>
+<p>Nous rentrons ici dans de la documentation technique qu’il ne faudra sans doute pas reproduire pour le site de Do_It.</p>
+<p>Cependant, si certains sont intéressés par des commandes avancées de git comme <code>submodule</code> ou <code>subtree</code>, cela peut être un bon point d’entrée avec un cas d’application concret.</p>
+<h3>1. Initialisation d’un nouveau repo et de ses submodules</h3>
+<p><strong>Étape 1 : Initialisation du répertoire Git</strong></p>
+<p>Création d'un nouveau répertoire Git avec des sous-modules pour différentes années</p>
+<p>Initialisation de sous-répertoires pour chaque année (ex: 2024-2025, 20XX-20YY)</p>
+<pre class="language-bash"><code class="language-bash"><span class="token comment"># Initialisation du repository principal ('Repo hôte')</span>
+<span class="token comment"># Après avoir créé "do-it.git" sur GitHub</span>
+<span class="token function">git</span> clone git@github.com:username/do-it.git git-new-do-it
+<span class="token builtin class-name">cd</span> git-new-do-it
+
+<span class="token comment"># Création des sous répertoires par année</span>
+<span class="token function">mkdir</span> <span class="token parameter variable">-p</span> src/promos/2024-2025 src/promos/20XX-20YY <span class="token comment"># etc.</span>
+
+<span class="token comment"># Initialisation d'un submodule par année</span>
+<span class="token builtin class-name">cd</span> src/promos/2024-2025
+<span class="token function">git</span> init
+<span class="token builtin class-name">echo</span> <span class="token string">"# Promo 2024-2025"</span> <span class="token operator">></span> README.md
+<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"Initial commit 2024-2025"</span>
+<span class="token comment"># Après avoir créé "repo-2024-2025.git" sur GitHub</span>
+<span class="token function">git</span> remote <span class="token function">add</span> origin git@github.com:username/repo-2024-2025.git
+<span class="token function">git</span> push <span class="token parameter variable">-u</span> origin main
+
+<span class="token builtin class-name">cd</span> <span class="token punctuation">..</span>/20XX-20YY
+<span class="token function">git</span> init
+<span class="token builtin class-name">echo</span> <span class="token string">"# Promo 20XX-20YY - Template"</span> <span class="token operator">></span> README.md
+<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"Initial commit 20XX-20YY - Template"</span>
+<span class="token comment"># Après avoir créé "repo-20XX-20YY.git" sur GitHub</span>
+<span class="token function">git</span> remote <span class="token function">add</span> origin git@github.com:username/repo-20XX-20YY.git
+<span class="token function">git</span> push <span class="token parameter variable">-u</span> origin main
+
+<span class="token comment"># Ajout des submodules au repo hôte</span>
+<span class="token builtin class-name">cd</span> <span class="token punctuation">..</span>/<span class="token punctuation">..</span>/<span class="token punctuation">..</span>
+<span class="token function">git</span> submodule <span class="token function">add</span> git@github.com:username/repo-2024-2025.git src/promos/2024-2025
+<span class="token function">git</span> submodule <span class="token function">add</span> git@github.com:username/repo-20XX-20YY.git src/promos/20XX-20YY
+
+<span class="token comment"># Commit the changes</span>
+<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"Added submodules"</span>
+<span class="token function">git</span> push</code></pre>
+<h3>2. Extraction des git de chaque année</h3>
+<p>L’objectif est de conserver la structure du git do-it actuel</p>
+<pre class="language-bash"><code class="language-bash"><span class="token function">git</span> clone git@github.com:FrancoisBrucker/do-it.git do-it
+<span class="token builtin class-name">cd</span> do-it
+
+<span class="token comment"># Pour ne pas faire de bêtises, nouvelle branche temporaire à partir de main</span>
+<span class="token function">git</span> checkout <span class="token parameter variable">-b</span> extract-2022-2023 
+
+<span class="token comment"># Utilisation de `git subtree split` pour isoler le sous-dossier</span>
+<span class="token function">git</span> subtree <span class="token function">split</span> <span class="token parameter variable">--prefix</span><span class="token operator">=</span>src/promos/2022-2023 <span class="token parameter variable">-b</span> content-2022-2023
+
+<span class="token comment"># Initialisation d'un dossier de repositories pour les sous-modules</span>
+<span class="token function">mkdir</span> <span class="token punctuation">..</span>/temporary-repos/content-2022-2023
+<span class="token builtin class-name">cd</span> <span class="token punctuation">..</span>/temporary-repos/content-2022-2023
+<span class="token function">git</span> init
+
+<span class="token comment"># Pousser l'historique extrait dans le nouveau repo</span>
+<span class="token builtin class-name">cd</span> <span class="token punctuation">..</span>/<span class="token punctuation">..</span>/do-it
+<span class="token function">git</span> checkout content-2022-2023
+<span class="token function">git</span> remote <span class="token function">add</span> new-origin <span class="token punctuation">..</span>/temporary-repos/content-2022-2023
+<span class="token function">git</span> push new-origin content-2022-2023
+
+<span class="token comment"># Retour à l'origine sur le projet do-it</span>
+<span class="token function">git</span> checkout main
+<span class="token function">git</span> branch <span class="token parameter variable">-d</span> extraction-contenu-2022 <span class="token comment"># Optionnel</span>
+<span class="token function">git</span> branch <span class="token parameter variable">-d</span> contenu-2022-branch <span class="token comment"># Optionnel</span></code></pre>
+<p>Maintenant ou après l’étape suivante, on peut remplacer le submodule git par celui-ci</p>
+<h3>3. Clean de l’arbre des modifications</h3>
+<p>Certains fichiers volumineux ajoutés puis supprimés prennent beaucoup de place et ralentissent le processus de clonage. Nous allons nettoyer les branches ainsi extraites.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block group-open:select-text">
+<p>Avant</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2 cursor-auto select-text">
+<p><code>bash     git count-objects -vH     	count: 0     	size: 0 bytes     	in-pack: 9128     	packs: 1     	size-pack: 183.08 MiB     	prune-packable: 0     	garbage: 0     	size-garbage: 0 bytes     </code></p>
+</div>
+</details>     
+</div>
+<p>On va réécrire l’arbre de commits en supprimant les fichiers volumineux avec le package <code>git-filer-repo</code>. On ne touchera pas au dernier commit qui doit conserver tous les éléments du projet.</p>
+<pre class="language-bash"><code class="language-bash"><span class="token comment"># Sur mac, avec brew. Sinon, avec python.</span>
+brew <span class="token function">install</span> git-filter-repo
+<span class="token function">git</span> filter-repo --strip-blobs-bigger-than 5M
+<span class="token function">git</span> reflog expire <span class="token parameter variable">--expire</span><span class="token operator">=</span>now <span class="token parameter variable">--all</span>
+<span class="token function">git</span> gc <span class="token parameter variable">--prune</span><span class="token operator">=</span>now <span class="token parameter variable">--aggressive</span></code></pre>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block group-open:select-text">
+<p>Après</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2 cursor-auto select-text">
+<p><code>bash     git count-objects -vH     	count: 0     	size: 0 bytes     	in-pack: 9114     	packs: 1     	size-pack: 91.76 MiB     	prune-packable: 0     	garbage: 0     	size-garbage: 0 bytes     </code></p>
+</div>
+</details>     
+</div>
+<p>⇒ Diminution de moitié de la taille du repo.</p>
+<h4>Gestion des sous-modules</h4>
+<ol>
+<li>Ajout de sous-modules pour chaque année dans le répertoire principal</li>
+<li>Déplacement des sous-modules dans le dossier src/promos</li>
+</ol>
+<h4>Extraction des données par année</h4>
+<ol>
+<li>Utilisation de git subtree pour extraire le contenu d'une année spécifique (2022-2023)</li>
+<li>Création d'un répertoire temporaire pour stocker le contenu extrait</li>
+<li>Initialisation d'un nouveau dépôt Git pour le contenu extrait et push vers une nouvelle origine</li>
+<li>Coté client, pour cloner uniquement une promo :</li>
+</ol>
+<pre class="language-bash"><code class="language-bash"><span class="token function">git</span> clone --no-recurse-submodules https://github.com/alouradou/do-it.git
+<span class="token builtin class-name">cd</span> do-it
+<span class="token function">git</span> submodule init src/promos/2024-2025
+<span class="token function">git</span> submodule update src/promos/2024-2025</code></pre>
+<h3>4. GitHub Action</h3>
+<p>Un problème (de taille !) survient :</p>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-orange-500 bg-orange-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+<div class="pl-8 mr-8">
+<p>Comment lancer la GitHub Action qui publie automatiquement le site sur le lien “en production” ? En effet, les sous repos n’étant liés au repo parent que par des liens de submodules, le repo <code>do-it</code> ne détecte pas les changements.</p>
+</div></div>
+<p>Nous allons lancer une GitHub Action depuis le git de la dernière promo en cours (<code>do-it-2024-2025</code>).</p>
+<pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">name</span><span class="token punctuation">:</span> Update Parent Repository
+
+<span class="token key atrule">on</span><span class="token punctuation">:</span>
+  <span class="token key atrule">push</span><span class="token punctuation">:</span>
+    <span class="token key atrule">branches</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> main
+
+<span class="token key atrule">jobs</span><span class="token punctuation">:</span>
+  <span class="token key atrule">update-parent</span><span class="token punctuation">:</span>
+    <span class="token key atrule">permissions</span><span class="token punctuation">:</span> write<span class="token punctuation">-</span>all
+    <span class="token key atrule">runs-on</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">-</span>latest
+    <span class="token key atrule">steps</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Trigger parent repository update
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> peter<span class="token punctuation">-</span>evans/repository<span class="token punctuation">-</span>dispatch@v3
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">token</span><span class="token punctuation">:</span> $
+          <span class="token key atrule">repository</span><span class="token punctuation">:</span> user/do<span class="token punctuation">-</span>it
+          <span class="token key atrule">event-type</span><span class="token punctuation">:</span> build<span class="token punctuation">-</span>parent
+          <span class="token key atrule">client-payload</span><span class="token punctuation">:</span> <span class="token string">'{"ref": "$", "sha": "$"}'</span></code></pre>
+<p>Il faut aussi modifier la GitHub Action du git parent (<code>do-it</code>) :</p>
+<pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">name</span><span class="token punctuation">:</span> Build
+
+<span class="token key atrule">on</span><span class="token punctuation">:</span>
+  <span class="token key atrule">push</span><span class="token punctuation">:</span>
+    <span class="token key atrule">branches</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> main
+  <span class="token key atrule">repository_dispatch</span><span class="token punctuation">:</span>
+    <span class="token key atrule">types</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>build<span class="token punctuation">-</span>parent<span class="token punctuation">]</span>
+
+ <span class="token punctuation">...</span></code></pre>
+<p>La partie <code>repository_dispatch</code> sera exécutée par le git enfant à condition que celui-ci ait les droits avec <code>$</code>.</p>
+<p>Ainsi, il faut accéder à <a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a> pour configurer un Personal Access Token qui a les droits suivants sur le compte GitHub hébergeant les repos (durée infinie conseillée dans ce cas) :</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-yellow-500 bg-yellow-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<ul>
+<li>
+<p>Read access to metadata</p>
+</li>
+<li>
+<p>Read and Write access to actions, administration, attestations api, code, codespaces secrets, environments, issues, merge queues, pages, pull requests, repository custom properties, secret scanning alerts, secrets, and workflows</p>
+</li>
+</ul>
+</div></div>
+<p>Ensuite, se rendre dans le projet enfant <code>do-it-2024-2025</code> dans Settings &gt; Secrets and variables &gt; Actions, et ajouter le Repository Secret “PAT” égal au Personal Access Token fraichement créé.</p>
+
+
+</article>
+
+        </main>
+
+
+        <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div class="min-h-[50px] flex justify-center items-center">
+                    <p class="text-center">
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développent et Organisation en IT
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        MathJax
+            .startup
+            .document
+            .getMathItemsWithin(document.body);
+        </script>
+
+    </body>
+</html>
