@@ -13,7 +13,7 @@ tags:
   - "API Rest"
   - Forum
 
-résumé: Le but de ce POK est de mettre en évidence mes connaissances acquises durant l'ensembled emes MON en créant un forum de discussion avec React comme front-end et NestJS comme back-end en utilisant bien evidemanent les api Rest pour la connexion des deux.
+résumé: Le but de ce POK est de mettre en évidence les connaissances que j’ai acquises durant l’ensemble de mes MONs, en créant un forum de discussion avec React comme front-end et NestJS comme back-end, en utilisant bien évidemment les API Rest pour la connexion entre les deux.
 ---
 
 {% prerequis %}
