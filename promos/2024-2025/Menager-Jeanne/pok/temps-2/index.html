@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Développement d&#39;une application mobile</title>
+        <title>Scraping d&#39;une page internet pour faire de la data visualisation</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">Développement d&#39;une application mobile</h1>
+<h1 class="mb-1">Scraping d&#39;une page internet pour faire de la data visualisation</h1>
 <div class="mb-4">
     
         <div class="px-4 flex flex-wrap items-center">
@@ -73,11 +73,23 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 2</li>
                 
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Scraping</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Python</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">BeautifulSoup</li>
+                
 
             </ul>
             
             
             <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
                 
                     
                 
@@ -105,7 +117,7 @@
 
         <p class="mb-4 text-lg">
 
-                Je vais coder une application mobile très simple pour la déployer sur un serveur web après. Le but est de revoir le code en JS et d'utiliser mes connaissances appris grace au MON 2.1
+                Je vais apprendre à faire du scraping et l'utiliser pour récupérer des statistiques de football et en faire de la data visualisation
 
         </p>
 
@@ -118,7 +130,7 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Menager-Jeanne/">Jeanne MENAGER</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Menager-Jeanne/pok/">POK de Jeanne</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Menager-Jeanne/pok/temps-2/">Développement d&#39;une application mobile</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Menager-Jeanne/">Jeanne MENAGER</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Menager-Jeanne/pok/">POK de Jeanne</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Menager-Jeanne/pok/temps-2/">Scraping d&#39;une page internet pour faire de la data visualisation</a>
 
 </div></div>
 
@@ -130,36 +142,50 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Liste des prérequis du POK ET/OU MON</p>
+<p>Avois quelques bases en python</p>
 </div></div>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
   <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Les lien utiles pour la compréhension de celui-ci.</p>
+<p><a href="https://www.youtube.com/watch?v=sOAZpHDEdkg&amp;t=276s">Vidéo pour apprendre le scraping</a> <br>
+<a href="https://www.sofascore.com/fr/">Site de statistiques sportives</a> <br>
+<a href="https://github.com/jeanne-mngr/POK2">GitHub</a></p>
 </div></div>
 
-<p>Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce POK. On oubliera pas de donner :</p>
+<h2>Sprint 1</h2>
+<h3>Tâches</h3>
+<p>[X] Apprendre les bases du scraping <br>
+[X] Faire quelques exercices simples pour essayer de récupérer des infos<br>
+[X] Essayer de récupérer des informations sur sofascore</p>
+<h3>Qu'est-ce que le scraping ?</h3>
+<p>Le scraping consiste à récupérer grace à un programme informatique des données sur un site internet. Cela peut notamment permettre de récupérer beaucoup de données en un temps limité. <br>
+Le scraping est autorisé sous certaines conditions : <br>
+- La quantité de données récupérées doit être raisonnable<br>
+- La données récupérées doit être accessible gratuitement<br>
+- On ne peut pas utiliser la donnée récupérer pour faire des la concurrence au site ciblé (par exemple, le bon coin avait été victime de scraping mal-intentionné de la part d'un autre site qui mettait donc en ligne exactement les mêmes annonces que le bon coin)</p>
+<h3>Trouver des informations sur une page web :</h3>
+<p>Dans la vidéo que j'ai visionné pour apprendre les bases du scraping, j'ai pu apprendre à utiliser <strong>Requests</strong> et <strong>BeautifulSoup</strong>. L'utilisation de ces librairies n'est pas très difficile, il faut cibler les éléments présents dans le html, que l'on peut identifier grâce aux outils de developpement présents dans la plus part des navigateur (attention pas sur safari).<br>
+En ciclant les éléments, on peut accéder aux informations souhaitées, mais il faut faire attention à la façon dont on cible chaque information : par exemple pour récupérer UN lien, il ne faut pas cibler le premier lien trouver sur la page car même si pour l'instant il est unique, ce ne sera pas toujours le cas.</p>
+<h3>Getsion des erreurs</h3>
+<p>Le professeur dans la vidéo expliquait aussi comment gérer les erreurs avec des <code>try ... except ...</code> afin de comprendre pourquoi le script ne fonctionne plus si un jour c'est le cas.</p>
+<h3>Les exercices</h3>
+<p>Le cours s'articulait autour d'un site web fait exprès pour s'entrainer à scrapper, <a href="https://books.toscrape.com/index.html">un site d'une librairie</a>. Avec les différents exemple, j'ai pu m'entrainer puis me corriger grâce à la vidéo.</p>
+<h3>Playwright</h3>
+<p>Enfin, nous avons appris à utiliser <strong>playwright</strong> pour naviguer sur un site web dans nos scripts.
+Néanmoins, j'ai essayé d'utiliser cet outil pour scrapper le site de la SNCF (ainsi que trainline) mais ces deux sites ont mis en place des tests pour verifier que l'utilisateur est humain, tests que mon script ne peut pas passer, n'étant pas humain.</p>
+<p>Ce module me servira tout de même pour mon projet de scraping de statistiques de football pour naviguer sur certaines page.</p>
+<h3>Début du projet</h3>
+<p>Afin de mettre rapidement en pratique ce que j'avais appris, j'ai juste voulu récupérer l'age moyen des joueurs de l'équipe du PSG. <br>
+Je suis donc allée sur la page dédiée à cette équipe : <a href="https://www.sofascore.com/fr/equipe/football/paris-saint-germain/1644">https://www.sofascore.com/fr/equipe/football/paris-saint-germain/1644</a> <br>
+On peut voir grâce à cette url que chercher des informations pour une équipe en particulier ne sera pas très compliqué car chaque équipe a son url qui lui est propre.</p>
+<h2>Sprint 2</h2>
 <ul>
-<li>le niveau et les prérequis nécessaires en utilisant la balise <a href="/do-it/cs/contribuer-au-site/#prerequis"><code>prerequis</code></a></li>
-<li>les autres POK &amp; MON en rapport en utilisant la balise <a href="/do-it/cs/contribuer-au-site/#lien"><code>lien</code></a></li>
+<li>[ ] Définir les données que je souhaite utiliser</li>
+<li>[ ] Comprendre les principes de la datavisualisation</li>
+<li>[ ] Faire une première datavisualistation</li>
 </ul>
-<h2>Tâches</h2>
-<h3>Sprints</h3>
-<p>But final.</p>
-<h4>Sprint 1</h4>
-<p>Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.</p>
-<ul>
-<li>[ ] Une tâche non réalisée</li>
-<li>[x] Une tâche réalisée</li>
-</ul>
-<h4>Sprint 2</h4>
-<ul>
-<li>[ ] Une tâche non réalisée</li>
-<li>[x] Une tâche réalisée</li>
-</ul>
-<p>Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.</p>
 <h3>Horodatage</h3>
 <p>Toutes les séances et le nombre d'heure que l'on y a passé.</p>
 <table>
@@ -172,16 +198,67 @@
 </thead>
 <tbody>
 <tr>
-<td>Mardi 27/08</td>
-<td>1H</td>
-<td>Travail sur la trame du site</td>
+<td>Samedi 02/11</td>
+<td>30 min</td>
+<td>Début de la vidéo pour comprendre ce qu'est le scraping</td>
+</tr>
+<tr>
+<td>Dimanche 03/11</td>
+<td>30 min</td>
+<td>Instalation de requests et beautiful soup et premières requests pour récupérer le code html de pages web</td>
+</tr>
+<tr>
+<td>Vendredi 08/11</td>
+<td>30 min</td>
+<td>Premiers exemples de scraping</td>
+</tr>
+<tr>
+<td>Mardi 12/11</td>
+<td>30 min</td>
+<td>Premiers exercices de scraping pour récupérer toutes les catégories de livre</td>
+</tr>
+<tr>
+<td>Vendredi 15/11</td>
+<td>1 h 30 min</td>
+<td>Exercice pour récuperer les catégories avec moins de X livres</td>
+</tr>
+<tr>
+<td>Vendredi 15/11</td>
+<td>30 min</td>
+<td>Correction de l'exercice pour récuperer les catégories avec moins de X livres</td>
+</tr>
+<tr>
+<td>Samedi 16/11</td>
+<td>1 h</td>
+<td>Exercice sur récupérer les livres avec une note de 1 étoile</td>
+</tr>
+<tr>
+<td>Samedi 16/11</td>
+<td>30 min</td>
+<td>Correction de l'exercice sur récupérer les livres avec une note de 1 étoile</td>
+</tr>
+<tr>
+<td>Samedi 16/11</td>
+<td>2h</td>
+<td>Exercice pour récupérer la valeur de la bibliothèque + correction</td>
+</tr>
+<tr>
+<td>Dimanche 17/11</td>
+<td>1h</td>
+<td>Découverte de playwright</td>
+</tr>
+<tr>
+<td>Lundi 18/11</td>
+<td>1h</td>
+<td>Essai de scraper sncf connect</td>
+</tr>
+<tr>
+<td>Lundi 18/11</td>
+<td>30 min</td>
+<td>Scrapping de sofascore pour avoir l'âge moyen des joueurs du PSG</td>
 </tr>
 </tbody>
 </table>
-<h2>Contenu</h2>
-<p>Le contenu du POK.</p>
-<h3>Premier Sprint</h3>
-<h3>Second Sprint</h3>
 
 
 </article>
