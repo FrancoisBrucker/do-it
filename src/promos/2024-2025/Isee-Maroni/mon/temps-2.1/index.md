@@ -1,11 +1,11 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du premier MON du temps 2"
+title: "L'hypersensibilité, un sujet à la mode"
 authors:
   - Isée Maroni
 
-date: 1970-11-01
+date: 2024-11-19
 tags: 
   - "temps 2"
   - "hypersensibilité"
