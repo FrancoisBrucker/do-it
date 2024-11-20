@@ -216,7 +216,7 @@ Dernière étape pour réduire le temps de compilation : supprimer le **système
 
 ...mais on tombe à **7 secondes** de compilation du site en ne recalculant pas tous les chemins récursivement pour chaque fichier. 🎉
 
-<img src="./assets/eleventy-compilation.png" alt="eleventy-compilation" class="h-[100px]">
+<img src="./assets/eleventy-compilation.png" alt="eleventy-compilation">
 
 {% info %}
 
@@ -255,9 +255,15 @@ La plus grosse difficulté résida dans la mise à jour de Tailwindcss, une bibl
 Une étape clé pour ce projet est la faculté pour les utilisateurs de **cloner un projet plus petit** et ne concernant que la **promotion courante**. Nous allons par la même occasion **optimiser** les différentes arborescences des promotions diplômées pour supprimer les fichiers volumineux et inutilisés en particulier.
 {% endfaire %}
 
+{% lien %}
 [Création de sous repos git](./creation_sous_repo_git)
+{% endlien %}
 
+<br />
+
+{% attention %}
 Pour l’utilisateur, il faut retenir le contenu de ce mémo pour cloner uniquement la promo 2024-2025, par exemple :
+{% endattention %}
 
 ```bash
 git clone --no-recurse-submodules https://github.com/alouradou/do-it.git
