@@ -298,93 +298,100 @@ Il est alors possible de choisir les configurations souhaitées pour le projet.<
 <p><img src="img/creation-component.png" alt="création d'un composant hello"> <em>Capture d'écran personnelle (2024).</em></p>
 <p>Pour définir le comportement d'un composant ou encore ses données, on utilise l'<strong>état</strong> ou <strong>state</strong>. Ce state représente tout ce que le composant &quot;sait&quot; à un moment donné et qui est susceptible de changer au fil du temps, en réponse à des événements utilisateur, des interactions avec des services, ou d'autres actions.
 Voici, un exemple avec les deux propriétés <em>taskTitle</em> et <em>isComplete</em> :</p>
-<pre class="language-TypeScript"><code class="language-TypeScript">@Component({ ... })
+<pre><code>@Component({ ... })
 export class TodoListItem {
   taskTitle = '';
   isComplete = false;
-}</code></pre>
+}
+</code></pre>
 <p>Pour modifier cet état, on peut définir des méthodes à l'intérieur de ce <em>'class component'</em> en veillant à bien utiliser le mot <strong>this</strong> :</p>
-<pre class="language-javascript"><code class="language-javascript">@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">TodoListItem</span> <span class="token punctuation">{</span>
-  taskTitle <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
-  isComplete <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-  <span class="token function">completeTask</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">this</span><span class="token punctuation">.</span>isComplete <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-  <span class="token function">updateTitle</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">newTitle</span><span class="token operator">:</span> string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">this</span><span class="token punctuation">.</span>taskTitle <span class="token operator">=</span> newTitle<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
-<p>Pour afficher du contenu dynamique dans le template (i.e. le rendu html), on utilise des doubles accolades : <code>&lt;p&gt; Title :  &lt;/p&gt;</code>. Ainsi lorsque la valeur de <em>taskTitle</em> changera, Angular modifiera le DOM (Document Object Model) pour que le fichier HTML affiche correctement la nouvelle valeur.</p>
+<pre><code>@Component({ ... })
+export class TodoListItem {
+  taskTitle = '';
+  isComplete = false;
+  completeTask() {
+    this.isComplete = true;
+  }
+  updateTitle(newTitle: string) {
+    this.taskTitle = newTitle;
+  }
+}
+</code></pre>
+<p>Pour afficher du contenu dynamique dans le template (i.e. le rendu html), on utilise des doubles accolades : <code>&lt;p&gt; Title : {{taskTitle}} &lt;/p&gt;</code> . Ainsi lorsque la valeur de <em>taskTitle</em> changera, Angular modifiera le DOM (Document Object Model) pour que le fichier HTML affiche correctement la nouvelle valeur.</p>
 <p>Similairement, on peut définir des propriétés CSS de façon dynamique en utilisant des crochets :</p>
-<pre class="language-javascript"><code class="language-javascript">@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  <span class="token literal-property property">selector</span><span class="token operator">:</span> <span class="token string">'sign-up-form'</span><span class="token punctuation">,</span>
-  <span class="token literal-property property">template</span><span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
-    &lt;button type="submit" [disabled]="formIsInvalid">Submit&lt;/button>
-  </span><span class="token template-punctuation string">`</span></span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">SignUpForm</span> <span class="token punctuation">{</span>
-  formIsInvalid <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
+<pre><code>@Component({
+  selector: 'sign-up-form',
+  template: `
+    &lt;button type=&quot;submit&quot; [disabled]=&quot;formIsInvalid&quot;&gt;Submit&lt;/button&gt;
+  `
+})
+export class SignUpForm {
+  formIsInvalid = true;
+}
+</code></pre>
 <p>Il est également possible d'utiliser des conditions <strong>if</strong>, voici un exemple :</p>
-<pre class="language-javascript"><code class="language-javascript">@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  <span class="token literal-property property">standalone</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-  <span class="token literal-property property">selector</span><span class="token operator">:</span> <span class="token string">'user-controls'</span><span class="token punctuation">,</span>
-  <span class="token literal-property property">template</span><span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+<pre><code>@Component({
+  standalone: true,
+  selector: 'user-controls',
+  template: `
     @if (isAdmin) {
-      &lt;button>Erase database&lt;/button>
+      &lt;button&gt;Erase database&lt;/button&gt;
     } @else {
-      &lt;p>You are not authorized.&lt;/p>
+      &lt;p&gt;You are not authorized.&lt;/p&gt;
     }
-  </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">UserControls</span> <span class="token punctuation">{</span>
-  isAdmin <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
+  `,
+})
+export class UserControls {
+  isAdmin = true;
+}
+</code></pre>
 <p>Il est aussi possible d'utiliser des boucles <strong>for</strong> :</p>
-<pre class="language-javascript"><code class="language-javascript">@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  <span class="token literal-property property">standalone</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-  <span class="token literal-property property">selector</span><span class="token operator">:</span> <span class="token string">'user-controls'</span><span class="token punctuation">,</span>
-  <span class="token literal-property property">template</span><span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
-    &lt;ul>
+<pre><code>@Component({
+  standalone: true,
+  selector: 'user-controls',
+  template: `
+    &lt;ul&gt;
       @for (ingredient of ingredientList; track ingredient.name) {
-        &lt;li> - &lt;/li>
+        &lt;li&gt; {{ ingredient.quantity }} - {{ ingredient.name }}&lt;/li&gt;
       }
-    &lt;/ul>
-  </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">IngredientList</span> <span class="token punctuation">{</span>
-  ingredientList <span class="token operator">=</span> <span class="token punctuation">[</span>
-    <span class="token punctuation">{</span><span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'noodles'</span><span class="token punctuation">,</span> <span class="token literal-property property">quantity</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">{</span><span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'miso broth'</span><span class="token punctuation">,</span> <span class="token literal-property property">quantity</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">{</span><span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'egg'</span><span class="token punctuation">,</span> <span class="token literal-property property">quantity</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
-  <span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
+    &lt;/ul&gt;
+  `,
+})
+export class IngredientList {
+  ingredientList = [
+    {name: 'noodles', quantity: 1},
+    {name: 'miso broth', quantity: 1},
+    {name: 'egg', quantity: 2},
+  ];
+}
+</code></pre>
 <p>On remarque la présence de la propriété <strong>track</strong> qui correspond à un identifiant unique qu'il faut préciser pour qu'Angular traite correctement chaque élément d'une liste. Nous avions vu qu'il y avait cette même propriété en React, présente sous le nom <strong>key</strong> (cf projets de mon <a href="https://francoisbrucker.github.io/do-it/promos/2024-2025/Corne-Titouan/mon/temps-2.1/">MON 2.1</a>).</p>
 <p>J'ai églament appris de nouveaux concepts sur lesquels, je ne vais pas m'attarder :</p>
 <ul>
 <li>les <strong>vues différées</strong> (<strong>deferrable views</strong>) qui permettent d'optimiser le chargement des différents composants en indiquant à certains qu'ils n'ont pas besoin d'être chargés immediatement pour divers raisons. Illustration :</li>
 </ul>
-<pre class="language-javascript"><code class="language-javascript">@<span class="token function">defer</span> <span class="token punctuation">(</span><span class="token parameter">on viewport</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token operator">&lt;</span>comments <span class="token operator">/</span><span class="token operator">></span>
-      <span class="token punctuation">}</span> @placeholder <span class="token punctuation">{</span>
-      <span class="token operator">&lt;</span>p<span class="token operator">></span>Future comments<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
-      <span class="token punctuation">}</span> @<span class="token function">loading</span> <span class="token punctuation">(</span><span class="token parameter">minimum 2s</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token operator">&lt;</span>p<span class="token operator">></span>Loading comments<span class="token operator">...</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
-      <span class="token punctuation">}</span></code></pre>
+<pre><code>@defer (on viewport) {
+      &lt;comments /&gt;
+      } @placeholder {
+      &lt;p&gt;Future comments&lt;/p&gt;
+      } @loading (minimum 2s) {
+      &lt;p&gt;Loading comments...&lt;/p&gt;
+      }
+</code></pre>
 <ul>
 <li>la <strong>communication intercomposants</strong> avec <code>@Input</code> (parent --&gt; enfant) et <code>@Output</code> (enfant --&gt; parent)</li>
 <li>la gestion des événements (<strong>Event Handling</strong>) permettant de répondre aux actions des utilisateurs, comme les pressions sur les boutons, les soumissions de formulaires, etc.</li>
 </ul>
-<pre class="language-javascript"><code class="language-javascript">@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-    <span class="token operator">...</span>
-    <span class="token literal-property property">template</span><span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;button (click)="greet()"></span><span class="token template-punctuation string">`</span></span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token keyword">class</span> <span class="token class-name">AppComponent</span> <span class="token punctuation">{</span>
-    <span class="token function">greet</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Hello !'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<pre><code>@Component({
+    ...
+    template: `&lt;button (click)=&quot;greet()&quot;&gt;`
+})
+class AppComponent {
+    greet() {
+        console.log('Hello !');
+    }
+}
+</code></pre>
 <ul>
 <li>le chargement les images de façon optimisée avec la directive <strong>NgOptimizedImage</strong>. Par exemple, on décidera de charger l'élément LCP (Largest Contentful Paint) en premier.</li>
 <li>le <strong>routage</strong> pour les applications nécessitant plusieurs pages.</li>
@@ -392,22 +399,25 @@ export class TodoListItem {
 <li>la création d'<strong>interfaces</strong> qui permet de générer un nouveau type de données (utiliser la commande <code>ng generate interface &lt;nom-interface&gt;</code>). J'utilise une interface nommée <em>housinglocation</em> dans le projet <em>fristApp</em> disponible sur mon <a href="https://github.com/TitouanCorne/ApprendreAngular/tree/main/firstApp">GitHub</a>.</li>
 <li>la directive <strong>ngFor</strong> qui permet d'afficher dynamiquement les données sur un template Angular (i.e. fichier html). Voici un exemple que l'on peut également retrouver dans le projet <em>fristApp</em> disponible sur mon <a href="https://github.com/TitouanCorne/ApprendreAngular/tree/main/firstApp">GitHub</a>.</li>
 </ul>
-<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>section</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>results<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>app-housing-location</span>
-    <span class="token attr-name">*ngFor</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>let housingLocation of housingLocationList<span class="token punctuation">"</span></span>
-    <span class="token attr-name">[housingLocation]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>housingLocation<span class="token punctuation">"</span></span>
-    <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>app-housing-location</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>section</span><span class="token punctuation">></span></span></code></pre>
+<pre><code>&lt;section class=&quot;results&quot;&gt;
+    &lt;app-housing-location
+    *ngFor=&quot;let housingLocation of housingLocationList&quot;
+    [housingLocation]=&quot;housingLocation&quot;
+    &gt;&lt;/app-housing-location&gt;
+&lt;/section&gt;
+</code></pre>
 <ul>
 <li>la création de classes <strong>services</strong> qui sont utilisées pour transmettre les données à l'application. Les services récupèrent les données depuis un point de terminaison d'API (Application Programming Interface). Les services sont <strong>injectables</strong>  à l'aide du <strong>système d'injection de dépendances (DI) d'Angular</strong> et on peut faire appel à eux depuis différents composants (=&gt; centralisation). Pour générer un nouveau service il faut utiliser la commande <code>ng generate service &lt;nom-service&gt;</code>. Là encore, un exemple (<em>housing.service.ts</em>) est présent dans le projet <em>fristApp</em> disponible sur mon <a href="https://github.com/TitouanCorne/ApprendreAngular/tree/main/firstApp">GitHub</a>.</li>
 <li>l'utilisation de <strong>template reference variables</strong> qui permettent d'accéder à la valeur saisie dans un input. Illustration avec la variable <em>#filter</em> :</li>
 </ul>
-<pre class="language-html"><code class="language-html">  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Filter by city<span class="token punctuation">"</span></span> <span class="token attr-name">#filter</span><span class="token punctuation">/></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>primary<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">(click)</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>filterResults(filter.value)<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Search<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span></code></pre>
+<pre><code>  &lt;form&gt;
+    &lt;input type=&quot;text&quot; placeholder=&quot;Filter by city&quot; #filter/&gt;
+    &lt;button class=&quot;primary&quot; type=&quot;button&quot; (click)=&quot;filterResults(filter.value)&quot;&gt;Search&lt;/button&gt;
+  &lt;/form&gt;
+</code></pre>
 <h3>3. Cahier des charges du site de cuisine <strong>Miam'Miam</strong> <a id="section3"></a></h3>
-<p><img src="." alt="Cahier des charges"></p>
+<p><img src="img/cahier-charges1.png" alt="Cahier des charges - 1">
+<img src="img/cahier-charges2.png" alt="Cahier des charges - 2"></p>
 
 
 </article>

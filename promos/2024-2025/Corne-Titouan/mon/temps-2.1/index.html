@@ -165,13 +165,15 @@
 </div></div>
 
 <h2>Table des matières</h2>
-<ol>
-<li><a href="#section1">1. React : qu'est ce que c'est ?</a></li>
-<li><a href="#section2">2. Synthèse de balisage <em>JSX</em></a></li>
-<li><a href="#section3">3. Mise en place de l'environnement de travail</a></li>
-<li><a href="#section4">4. Variables d'état</a></li>
-<li><a href="#section5">5. Mise en pratique</a></li>
-</ol>
+<ul>
+<li><a href="#table-des-mati%C3%A8res">Table des matières</a></li>
+<li><a href="#1-react--quest-ce-que-cest--">1. React : qu'est ce que c'est ? </a></li>
+<li><a href="#2-synth%C3%A8se-de-balisage-jsx-">2. Synthèse de balisage <em>JSX</em> </a></li>
+<li><a href="#3-mise-en-place-de-lenvironnement-de-travail-">3. Mise en place de l'environnement de travail </a></li>
+<li><a href="#4-variables-d%C3%A9tat-">4. Variables d'état </a></li>
+<li><a href="#5-mise-en-pratique-">5. Mise en pratique </a></li>
+<li><a href="#sources-utiles">Sources utiles</a></li>
+</ul>
 <h2>1. React : qu'est ce que c'est ? <a id="section1"></a></h2>
 <p>React est une bibliothèque JavaScript open source utilisée pour créer des interfaces utilisateurs. Cette bibliothèque a vu le jour en 2013. Elle est actuellement maintenue par Meta. React est donc utilisé en développement web, côté front.</p>
 <p>Parmi les applications connues développées en utilisant React, on retrouve notamment Netflix et Airbnb.</p>
@@ -181,7 +183,7 @@
 <p>La synthèse de balisage <em>JSX</em> (JavaScript XML) n'est pas obligatoire, mais elle est très courante dans les projets React pour des raisons de confort.</p>
 <p>JSX permet de produire des 'éléments' dans React. À la place de séparer les éléments visuels et la logique en différents fichiers, JSX utilise des <strong>components</strong> (bouts de code réutilisables qui représentent une partie de l’interface utilisateur) qui contiennent à la fois la partie visuelle (HTML) et la logique (fonction JavaScript par exemple).</p>
 <p>Pour montrer un exemple de code en JSX :</p>
-<pre class="language-JavaScript"><code class="language-JavaScript">function formatName(user) {
+<pre><code>function formatName(user) {
   return user.firstName + ' ' + user.lastName;
 }
 
@@ -191,10 +193,11 @@ const user = {
 };
 
 const element = (
-  <h1>
+  &lt;h1&gt;
     Hello, {formatName(user)}!
-  </h1>
-);</code></pre>
+  &lt;/h1&gt;
+);
+</code></pre>
 <p>On remarque dans l'exemple précédent que le JSX permet d'insérer du balisage dans du JavaScript.</p>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -213,18 +216,19 @@ const element = (
 <p>Les variables d'état (<strong>state</strong>), sont des données qui permettent de gérer et de suivre les informations dynamiques d'un composant. Elles sont essentielles car elles permettent de rendre les composants interactifs et réactifs aux changements.</p>
 <p>On utilise le hook (fonction spéciale dont le nom commence par use) <strong>useState</strong> pour créer et gérer l’état.</p>
 <p>Exemple illustratif :</p>
-<pre class="language-JavaScript"><code class="language-JavaScript">import React, { useState } from 'react';
+<pre><code>import React, { useState } from 'react';
 
 function Counter() {
   const [count, setCount] = useState(0); // count est la variable d'état, setCount est la fonction pour mettre à jour l'état
 
   return (
-    <div>
-      <p>Le compteur est à : {count}</p>
-      <button onClick="{()" ==""> setCount(count + 1)}>Incrémenter</button>
-    </div>
+    &lt;div&gt;
+      &lt;p&gt;Le compteur est à : {count}&lt;/p&gt;
+      &lt;button onClick={() =&gt; setCount(count + 1)}&gt;Incrémenter&lt;/button&gt;
+    &lt;/div&gt;
   );
-}</code></pre>
+}
+</code></pre>
 <p>Il est important de comprendre où placer l'état... Parfois des composants partagent le même état, dans ce cas, il faut déplacer cet état depuis les composants &quot;vers le haut&quot;, c'est-à-dire vers le composant parent qui les contient tous. Cette notion est bien expliquée sur le site officiel de React, dans la partie <em>Démarrage rapide (<a href="https://fr.react.dev/learn">Partager des données entre composants</a>)</em>.</p>
 <p>Voici une capture d'écran qui permet de comprendre la hiérarchie entre les différents composants :</p>
 <p><img src="img/hierarchie-components.png" alt="Hierarchie des composants">
@@ -251,11 +255,12 @@ function Counter() {
 <p>Pour une mise en pratique des points étudiés jusqu'à présent, j'ai décidé de développer une interface web assez simple. Cette interface web permet de lister des courses (running) à venir et d'en sélectionner quelques unes en tant que favoris. Voici la maquette du site auquel j'aimerais aboutir :</p>
 <p><img src="img/maquette-site.png" alt="maquette site"><em>Maquette personnelle réalisée sur Figma (2024)</em></p>
 <p>Pour ce qui concerne les données, j'ai voulu faire au plus simple en créant un tableau d'objet JavaScript regroupant toutes les informations nécessaires. Voici à quoi ressemble le tableau :</p>
-<pre class="language-Javascript"><code class="language-Javascript">const COURSES = [
-  { name: "Marathon des Géants", place: "Toulouse", date: "10 novembre 2024", price: "50€", img: "./img/marathondesgeants", commitment: true},
-  { name: "Semi Lourdes-Tarbes", place: "Lourdes", date: "17 novembre 2024", price: "20€", img: "./img/semilourdestarbes", commitment: false },
-  { name: "Tout Rennes Court !", place: "Rennes", date: "13 janvier 2025", price: "25€", img: "./img/toutrennescourt", commitment: false }
-];</code></pre>
+<pre><code>const COURSES = [
+  { name: &quot;Marathon des Géants&quot;, place: &quot;Toulouse&quot;, date: &quot;10 novembre 2024&quot;, price: &quot;50€&quot;, img: &quot;./img/marathondesgeants&quot;, commitment: true},
+  { name: &quot;Semi Lourdes-Tarbes&quot;, place: &quot;Lourdes&quot;, date: &quot;17 novembre 2024&quot;, price: &quot;20€&quot;, img: &quot;./img/semilourdestarbes&quot;, commitment: false },
+  { name: &quot;Tout Rennes Court !&quot;, place: &quot;Rennes&quot;, date: &quot;13 janvier 2025&quot;, price: &quot;25€&quot;, img: &quot;./img/toutrennescourt&quot;, commitment: false }
+];
+</code></pre>
 <p>Ensuite, j'ai identifié le nombre de composants et leur hierarchie :</p>
 <p><img src="img/mes-composants.png" alt="mes composants"><em>Capture d'écran personnelle (2024)</em></p>
 <p>Ensuite, j'ai construit une première version statique, c'est-à-dire que la logique de l'application n'est pas présente dans cette première version (impossibilité d'ajouter des éléments dans sa liste de courses).</p>
