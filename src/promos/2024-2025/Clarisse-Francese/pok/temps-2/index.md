@@ -150,13 +150,13 @@ Ainsi, j'ai été plutôt **décue des fonctionnalités sur Looker Studio** et j
 
 Contrairement à Looker Studio proposé par Google, Power BI est un logiciel proposé par Microsoft. Or je ne possède pas la suite Microsoft car elle est payante et Centrale n'a visiblement pas trouvé le budget de nous l'offrir... Ainsi j'ai trouvé un moyen de télécharger une **version de Microsoft beaucoup moins chère que l'abonnement officiel** en commandant une [clé d'activation](https://www.cdiscount.com/informatique/logiciels-a-telecharger/microsoft-office-2019-professionnel-plus-32-64-bit/f-10776-auc2008476306891.html?fbclid=IwZXh0bgNhZW0CMTEAAR1kMKsmY04SzI5WHVCoektfvYZ88ODzqjZxbCL6hY0K_Yf-amKgR3ppcFg_aem_3RXFrb1dbSAftki-XwPRcw). Je peux attester personnellement que ce lien fonctionne, car j'ai enfin Excel, Word et Power Point sur mon ordinateur !
 
-Après quelques recherches, je conclus d'essayer la version gratuite de Power BI pour ce travail. J'ai commencé par visionner cette [vidéo youtube](https://youtu.be/7WACJemR3ck?si=ctCiS3ExZGLa6LLq) que je trouve très claire. Elle résume ce qu'est Power BI et montre les possibilités avec ce logiciel. Ainsi, je vais essayer de recréer le tableau de bord pour le tableau de ma soeur sur Power BI.
+Après quelques recherches, je conclus d'essayer la **version gratuite de Power BI Desktop** pour ce travail. En effet, la version gratuite permet de créer de bons visuels, par contre on ne peut pas les partager avec d'autres utilisateurs comme dans la version pro. J'ai commencé par visionner cette [vidéo youtube](https://youtu.be/7WACJemR3ck?si=ctCiS3ExZGLa6LLq) que je trouve très claire. Elle résume ce qu'est Power BI et montre les possibilités avec ce logiciel. Ainsi, je vais essayer de recréer le tableau de bord pour le tableau de ma soeur sur Power BI. J'ai ainsi transformé le google sheet en Excel sur mon ordinateur.
 
-J'ai d'abord **importé les données**. Je remarque directement que la suite **Power BI propose automatiquement des tableaux pertinents** ("tables sugérés") pour le traitement des données donc il n'y a pas besoin de soi-même refaire autant de mise en forme qu'avec Looker Studio. Dans mon cas, j'ai par exemple choisi le table "MOIS" qui correspondait bien à mon usage.
+J'ai d'abord **importé les données** sur Power BI Desktop en ouvrant l'Excel de ma soeur. Je remarque directement que la suite **Power BI propose automatiquement des tableaux pertinents** ("tables sugérés") pour le traitement des données donc il n'y a pas besoin de soi-même refaire autant de mise en forme qu'avec Looker Studio. Dans mon cas, j'ai par exemple choisi le table "MOIS" qui correspondait bien à mon usage.
 
 <img src="Transfo_donnees.png" width="40%" alt="Image description">
 
-Ensuite, j'ai **nettoyé mes données avec Power Query**. Là encore, le logiciel est bien conçu et il est simple de remplacer la valeur "null" par 0 par exemple.
+Ensuite, j'ai **nettoyé mes données avec Power Query** (rien besoin de télécharger, Power Query est sugéré automatiquement). Là encore, le logiciel est bien conçu et il est simple de remplacer la valeur "null" par 0 par exemple.
 
 <img src="Remplacement_donnees.png" width="60%" alt="Image description">
 
@@ -177,7 +177,7 @@ Il s'agit d'un **tableau de bord interactif** donc on peut cliquer directement s
 
   <img src="Bilan_Client.png" alt="Image 3" style="width: 50%; height: auto;">
 
-Ainsi, je suis largement convaincue par la **supériorité de PowerBI sur Looker Studio** et je ne vais donc utiliser que ce logiciel pour la suite.
+Ainsi, je suis largement convaincue par la **supériorité de PowerBI version gratuite sur Looker Studio quand on veut juste créer des projets pour soi** sans l'intention de les partager à d'autres utilisateur. De plus, **Power Bi est aussi plus souvent utilisé que Looker Studio par les entreprises**, donc je trouve ça plus pertinent de me former à ce logiciel. Ainsi, je ne vais utiliser que Power BI pour le deuxième sprint.
 
 <h2 id=POK2> 2️⃣POK : sprint 2</h2>
 
