@@ -12,8 +12,9 @@ tags:
   - "data visualisation"
   - "looker studio"
   - "power BI"
+  - "power query"
 
-résumé: Je compte apprendre l'art de la data visualisation à travers 2 projets et en utilisant les logiciels Looker Studio et Power BI. Le premier projet sera de créer un visuel avec les statistiques de vente de carte postale pour ma grande soeur illustratrice et notamment une carte de la France avec ses boutiques. Le deuxième projet consistera à créer un visuel avec des statistiques sur mes voyages. Puis je trouverai une autre idée de projet si j'ai le temps.
+résumé: Je compte apprendre l'art de la data visualisation à travers plusieurs projets et en utilisant les logiciels Looker Studio et Power BI. Le projet 1 sera de créer un visuel avec les statistiques de vente de carte postale pour ma grande soeur illustratrice et notamment une carte de la France avec ses boutiques. Le projet 2 consistera à créer un visuel avec des statistiques sur mes voyages en Europe. Le projet 3 sera une carte des préfectures de France déjà visitées.
 ---
 {% prerequis %}
 
@@ -58,9 +59,10 @@ Objectif général : **apprendre l'art de la data visualisation** et plus préci
 #### Sprint 2
 
 - [x] réfléchir aux indicateurs que je veux pour le tableau de bord de mes voyages : 1h (30 min)
-- [x] créer une base de données adéquate de mes voyages sur Excel : 2h (1h30)
-- [x] utiliser Power BI pour créer le tableau de bord souhaité : 3h (1h)
-- [ ] trouver un autre petit projet à réaliser et le faire (concert artiste?): 4h
+- [x] créer une base de données adéquate de mes voyages sur Excel : 2h (1h45)
+- [x] utiliser Power BI pour créer le tableau de bord souhaité et rédiger sur Github : 3h (2h15)
+- [x] trouver un autre petit projet à réaliser (les préfectures) et le faire : 4h (3h30)
+- [ ] progresser en Excel : pas prévu ()
 
 **Total d'heures sprint 2 : ?h**   
 **Etude post mortem** :
@@ -80,7 +82,10 @@ Lundi 18/11 |0h50  | Finalisation rédaction POK |
 
 | **Sprint 2**
 Samedi 23/11  | 3h30  | Réflexion indicateur tableau, création tableau et création rapport Power BI |
-Dimanche 24/11  | ?  | Power BI |
+Dimanche 24/11  | 1h  | Fin Power BI voyages et rédaction Github |
+Dimanche 24/11  | 3h30  | Excel et Power BI préfectures et rédaction Github |
+
+Il me reste 2h
 
 {% enddetails %}
 
@@ -116,7 +121,7 @@ Et d'utiliser Looker Studio pour **transformer ces données en le tableau de bor
     <img src="Tuto tableau apres LS Italy.png" alt="Image 3" style="width: 48%; height: auto;">
 </div>
 
-### 👩‍🎨Création du tableau de bord des ventes de ma soeur artiste
+### 👩‍🎨 Projet 1 : tableau de bord des ventes de ma soeur artiste
 
 Liste des données à faire apparaître dans ce tableau de bord : 
 
@@ -181,41 +186,33 @@ Ainsi, je suis largement convaincue par la **supériorité de PowerBI version gr
 
 <h2 id=POK2> 2️⃣POK : sprint 2</h2>
 
-### 📈 Choix indicateurs voyages
+### 🧳 Projet 2 : tableau de bord de mes voyages en Europe
 
-Avant de créer le tableau Excel de mes voyages à l'étranger, je dois réfléchir à quelles données je veux afficher dans mon tableau de bord pour bien concevoir le tableau.
+#### Choix des indicateurs du tableau de bord
 
-Le tableau de bord comportera 2 pages : 
-
-1. Voyages à l'étranger en Europe
-2. Focus sur le tour du monde en césure
-
-Pour chaque pays lors d'un voyage je vais noter les données suivantes : 
+Avant de créer le tableau Excel de **mes voyages en Europe**, je dois réfléchir à quelles données je veux afficher dans mon tableau de bord pour bien concevoir le tableau. Pour **chaque voyage, je vais noter une ligne par pays** dans un **Excel** avec les données suivantes : 
 
 - dates de début et de fin
-- durée (calculée avec les dates)
+- durée (calculée avec les dates) en jours
 - pays dans une liste déroulante
 - villes marquées en français, séparées par une virgule
-- contexte : famille / papa / amis / scolaire / Erasmus
+- contexte : famille / papa / amis / scolaire / Erasmus (que pour Vienne en Autriche) dans une liste déroulante
 
 Données que je veux dans le tableau de bord :
 
-- Nombre de pays que j'ai visité (au moins 1 nuit sur place)
-- Nombre de villes que j'ai visité (au moins 1/2 journée)
-- Nombre de jour de voyages
-- Diagramme camembert : répartition avec qui j'étais
-- Diagramme bâtons : jour de voyage par année
-- Diagramme : jour de voyage par pays
-- Tableau détail voyage
-- Carte de l'Europe avec les pays visités (et villes ?)
-- Carte du monde avec les pays visités (et villes ?)
+- **Nombre de pays** que j'ai visité (au moins 1 nuit sur place)
+- **Nombre de jour de voyages**
+- Diagramme camembert : **répartition avec qui j'étais**
+- Diagramme bâtons : **jour de voyage par année**
+- Diagramme (jsp encore quelle forme): **jour de voyage par pays**
+- Tableau avec les **détails des voyages**
+- **Carte de l'Europe** avec les pays visités
 
-Interaction entre les éléments pour voir facilement les voyages dans un pays, pendant une année ou le contexte.  
-Il faut que je trouve un moyen pour représenter différement l'Autriche et la Nouvelle-Zélande qui sont des cas différents (j'ai vécu plusieurs semaines ou mois là bas)
+Et je veux que les interaction entre les éléments pour voir facilement les voyages dans un pays, pendant une année ou selon le contexte soient très simple.
 
-### 🖼️ Création de l'Excel
+#### Création de l'Excel et du tableau de bord
 
-J'ai commencé par créer un tableau sur Excel avec les données sur mes voyages :
+J'ai commencé par créer un **tableau sur Excel** avec les données sur mes voyages :
 
 <img src="Excel_voyages.png" width="100%" alt="Image description">
 
@@ -223,7 +220,7 @@ Puis j'ai créé le **tableau de bord** sur Power BI. Le voici sans filtre :
 
 <img src="PowerBI_voyages.png" width="90%" alt="Image description">
 
-Et voici cee tableau de bord en sélectionnant l'**Allemagne** ou les **voyages avec mes amis** : 
+Et voici ce tableau de bord en sélectionnant l'**Allemagne** ou les **voyages avec mes amis** : 
 
 <div style="display: flex; justify-content: space-between;">
     <img src="PowerBI_Allemagne.png" alt="Image 1" style="width: 49%; height: auto;">
@@ -239,4 +236,28 @@ Et voici une **vidéo montrant les interactions directement sur le logiciel Powe
     </video>
 </div>
 
+### 🏙️ Projet 3 : tableau de bord des préfectures visitées en France
+
+J'avais envie de voir visuellement **combien de préfectures en France métropolitaine il me reste à visiter** donc j'ai créé un **tableau Excel** avec la liste des préfectures, la taille de la population et si j'avais déjà visitée la ville ou non.
+
+<img src="Excel_prefecture.png" width="60%" alt="Image description">
+
+Puis j'ai créé ce **tableau de bord** : 
+
+<img src="PowerBI_Prefectures.png" width="90%" alt="Image description">
+
+Et là encore, je peux facilement trier selon le critère de mon choix (ici, les **préfectures visitées**) : 
+
+<img src="PowerBI_prefectures_visitees.png" width="60%" alt="Image description">
+
+On pourrait penser que ce projet a été très rapide, mais en vrai j'ai galéré. Je n'arrivais pas à récupérer le nombre de ville que j'ai visité ou non. J'ai donc utilisé une astuce en **transformant les données du tableau avec PowerQuery** en créant 2 nouvelles colonnes "Pas encore visitées" et "Déjà visités" obtenues en transformant les "oui" et "non" de la colonne "Visitée".
+
+<img src="PowerBI_prefectures_nombres.png" width="90%" alt="Image description">
+
+Puis j'ai **créer 2 nouvelles mesures** à l'aide de l'onglet Modéalisation, **Mesure Rapide** pour calculer les totaux de préfectures visitées et pas encore visitées. Ci-dessous, l'exemple du calcul pour les villes déjà visitées. Il faut bien penser à **convertir les données des colonnes en "nombre entier"** à l'étape précédente pour que le calcul fonctionne.
+
+<img src="PowerBI_Prefectures_MesureRapide.png" width="90%" alt="Image description">
+
 <h2 id=conclusion> 👍 Conclusion de ce POK 2</h2>
+
+Au cours de ces 2 sprints, j'ai bien **compris ce qu'est la data visualisation** et j'ai appris à **maîtriser les logiciels Looker Studio** de Google et **Power BI** de Microsoft. En plus, je me suis bien amusée à créer des statistiques sur mes voyages dans le deuxième sprint. Ainsi, je considère avoir **rempli les objectifs** que je m'étais fixés initialement et je suis **très satisfaite de ce POK** !
