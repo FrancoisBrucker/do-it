@@ -79,11 +79,15 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">power BI</li>
                 
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">power query</li>
+                
 
             </ul>
             
             
             <div class="hidden" data-pagefind-meta="Type">
+                
+                    
                 
                     
                 
@@ -117,7 +121,7 @@
 
         <p class="mb-4 text-lg">
 
-                Je compte apprendre l'art de la data visualisation à travers 2 projets et en utilisant les logiciels Looker Studio et Power BI. Le premier projet sera de créer un visuel avec les statistiques de vente de carte postale pour ma grande soeur illustratrice et notamment une carte de la France avec ses boutiques. Le deuxième projet consistera à créer un visuel avec des statistiques sur mes voyages. Puis je trouverai une autre idée de projet si j'ai le temps.
+                Je compte apprendre l'art de la data visualisation à travers plusieurs projets et en utilisant les logiciels Looker Studio et Power BI. Le projet 1 sera de créer un visuel avec les statistiques de vente de carte postale pour ma grande soeur illustratrice et notamment une carte de la France avec ses boutiques. Le projet 2 consistera à créer un visuel avec des statistiques sur mes voyages en Europe. Le projet 3 sera une carte des préfectures de France déjà visitées.
 
         </p>
 
@@ -198,9 +202,10 @@
 <h4>Sprint 2</h4>
 <ul>
 <li>[x] réfléchir aux indicateurs que je veux pour le tableau de bord de mes voyages : 1h (30 min)</li>
-<li>[x] créer une base de données adéquate de mes voyages sur Excel : 2h (1h30)</li>
-<li>[x] utiliser Power BI pour créer le tableau de bord souhaité : 3h (1h)</li>
-<li>[ ] trouver un autre petit projet à réaliser et le faire (concert artiste?): 4h</li>
+<li>[x] créer une base de données adéquate de mes voyages sur Excel : 2h (1h45)</li>
+<li>[x] utiliser Power BI pour créer le tableau de bord souhaité et rédiger sur Github : 3h (2h15)</li>
+<li>[x] trouver un autre petit projet à réaliser (les préfectures) et le faire : 4h (3h30)</li>
+<li>[ ] progresser en Excel : pas prévu ()</li>
 </ul>
 <p><strong>Total d'heures sprint 2 : ?h</strong><br>
 <strong>Etude post mortem</strong> :</p>
@@ -264,11 +269,17 @@
 </tr>
 <tr>
 <td>Dimanche 24/11</td>
-<td>?</td>
-<td>Power BI</td>
+<td>1h</td>
+<td>Fin Power BI voyages et rédaction Github</td>
+</tr>
+<tr>
+<td>Dimanche 24/11</td>
+<td>3h30</td>
+<td>Excel et Power BI préfectures et rédaction Github</td>
 </tr>
 </tbody>
 </table>
+<p>Il me reste 2h</p>
 </div>
 </details>     
 </div>
@@ -296,7 +307,7 @@
     <img src="Tuto tableau apres LS.png" alt="Image 2" style="width: 48%; height: auto;">
     <img src="Tuto tableau apres LS Italy.png" alt="Image 3" style="width: 48%; height: auto;">
 </div>
-<h3>👩‍🎨Création du tableau de bord des ventes de ma soeur artiste</h3>
+<h3>👩‍🎨 Projet 1 : tableau de bord des ventes de ma soeur artiste</h3>
 <p>Liste des données à faire apparaître dans ce tableau de bord :</p>
 <ul>
 <li>selectionneur de période (mois en cours, année etc)</li>
@@ -343,41 +354,33 @@ J'ai obtenu le <strong>résultat</strong> ci-dessous :</p>
   <img src="Bilan_Client.png" alt="Image 3" style="width: 50%; height: auto;">
 <p>Ainsi, je suis largement convaincue par la <strong>supériorité de PowerBI version gratuite sur Looker Studio quand on veut juste créer des projets pour soi</strong> sans l'intention de les partager à d'autres utilisateur. De plus, <strong>Power Bi est aussi plus souvent utilisé que Looker Studio par les entreprises</strong>, donc je trouve ça plus pertinent de me former à ce logiciel. Ainsi, je ne vais utiliser que Power BI pour le deuxième sprint.</p>
 <h2 id="POK2"> 2️⃣POK : sprint 2</h2>
-<h3>📈 Choix indicateurs voyages</h3>
-<p>Avant de créer le tableau Excel de mes voyages à l'étranger, je dois réfléchir à quelles données je veux afficher dans mon tableau de bord pour bien concevoir le tableau.</p>
-<p>Le tableau de bord comportera 2 pages :</p>
-<ol>
-<li>Voyages à l'étranger en Europe</li>
-<li>Focus sur le tour du monde en césure</li>
-</ol>
-<p>Pour chaque pays lors d'un voyage je vais noter les données suivantes :</p>
+<h3>🧳 Projet 2 : tableau de bord de mes voyages en Europe</h3>
+<h4>Choix des indicateurs du tableau de bord</h4>
+<p>Avant de créer le tableau Excel de <strong>mes voyages en Europe</strong>, je dois réfléchir à quelles données je veux afficher dans mon tableau de bord pour bien concevoir le tableau. Pour <strong>chaque voyage, je vais noter une ligne par pays</strong> dans un <strong>Excel</strong> avec les données suivantes :</p>
 <ul>
 <li>dates de début et de fin</li>
-<li>durée (calculée avec les dates)</li>
+<li>durée (calculée avec les dates) en jours</li>
 <li>pays dans une liste déroulante</li>
 <li>villes marquées en français, séparées par une virgule</li>
-<li>contexte : famille / papa / amis / scolaire / Erasmus</li>
+<li>contexte : famille / papa / amis / scolaire / Erasmus (que pour Vienne en Autriche) dans une liste déroulante</li>
 </ul>
 <p>Données que je veux dans le tableau de bord :</p>
 <ul>
-<li>Nombre de pays que j'ai visité (au moins 1 nuit sur place)</li>
-<li>Nombre de villes que j'ai visité (au moins 1/2 journée)</li>
-<li>Nombre de jour de voyages</li>
-<li>Diagramme camembert : répartition avec qui j'étais</li>
-<li>Diagramme bâtons : jour de voyage par année</li>
-<li>Diagramme : jour de voyage par pays</li>
-<li>Tableau détail voyage</li>
-<li>Carte de l'Europe avec les pays visités (et villes ?)</li>
-<li>Carte du monde avec les pays visités (et villes ?)</li>
+<li><strong>Nombre de pays</strong> que j'ai visité (au moins 1 nuit sur place)</li>
+<li><strong>Nombre de jour de voyages</strong></li>
+<li>Diagramme camembert : <strong>répartition avec qui j'étais</strong></li>
+<li>Diagramme bâtons : <strong>jour de voyage par année</strong></li>
+<li>Diagramme (jsp encore quelle forme): <strong>jour de voyage par pays</strong></li>
+<li>Tableau avec les <strong>détails des voyages</strong></li>
+<li><strong>Carte de l'Europe</strong> avec les pays visités</li>
 </ul>
-<p>Interaction entre les éléments pour voir facilement les voyages dans un pays, pendant une année ou le contexte.<br>
-Il faut que je trouve un moyen pour représenter différement l'Autriche et la Nouvelle-Zélande qui sont des cas différents (j'ai vécu plusieurs semaines ou mois là bas)</p>
-<h3>🖼️ Création de l'Excel</h3>
-<p>J'ai commencé par créer un tableau sur Excel avec les données sur mes voyages :</p>
+<p>Et je veux que les interaction entre les éléments pour voir facilement les voyages dans un pays, pendant une année ou selon le contexte soient très simple.</p>
+<h4>Création de l'Excel et du tableau de bord</h4>
+<p>J'ai commencé par créer un <strong>tableau sur Excel</strong> avec les données sur mes voyages :</p>
 <img src="Excel_voyages.png" width="100%" alt="Image description">
 <p>Puis j'ai créé le <strong>tableau de bord</strong> sur Power BI. Le voici sans filtre :</p>
 <img src="PowerBI_voyages.png" width="90%" alt="Image description">
-<p>Et voici cee tableau de bord en sélectionnant l'<strong>Allemagne</strong> ou les <strong>voyages avec mes amis</strong> :</p>
+<p>Et voici ce tableau de bord en sélectionnant l'<strong>Allemagne</strong> ou les <strong>voyages avec mes amis</strong> :</p>
 <div style="display: flex; justify-content: space-between;">
     <img src="PowerBI_Allemagne.png" alt="Image 1" style="width: 49%; height: auto;">
     <img src="PowerBI_Amis.png" alt="Image 2" style="width: 49%; height: auto;">
@@ -389,7 +392,19 @@ Il faut que je trouve un moyen pour représenter différement l'Autriche et la N
         Votre navigateur ne prend pas en charge la balise vidéo.
     </video>
 </div>
+<h3>🏙️ Projet 3 : tableau de bord des préfectures visitées en France</h3>
+<p>J'avais envie de voir visuellement <strong>combien de préfectures en France métropolitaine il me reste à visiter</strong> donc j'ai créé un <strong>tableau Excel</strong> avec la liste des préfectures, la taille de la population et si j'avais déjà visitée la ville ou non.</p>
+<img src="Excel_prefecture.png" width="60%" alt="Image description">
+<p>Puis j'ai créé ce <strong>tableau de bord</strong> :</p>
+<img src="PowerBI_Prefectures.png" width="90%" alt="Image description">
+<p>Et là encore, je peux facilement trier selon le critère de mon choix (ici, les <strong>préfectures visitées</strong>) :</p>
+<img src="PowerBI_prefectures_visitees.png" width="60%" alt="Image description">
+<p>On pourrait penser que ce projet a été très rapide, mais en vrai j'ai galéré. Je n'arrivais pas à récupérer le nombre de ville que j'ai visité ou non. J'ai donc utilisé une astuce en <strong>transformant les données du tableau avec PowerQuery</strong> en créant 2 nouvelles colonnes &quot;Pas encore visitées&quot; et &quot;Déjà visités&quot; obtenues en transformant les &quot;oui&quot; et &quot;non&quot; de la colonne &quot;Visitée&quot;.</p>
+<img src="PowerBI_prefectures_nombres.png" width="90%" alt="Image description">
+<p>Puis j'ai <strong>créer 2 nouvelles mesures</strong> à l'aide de l'onglet Modéalisation, <strong>Mesure Rapide</strong> pour calculer les totaux de préfectures visitées et pas encore visitées. Ci-dessous, l'exemple du calcul pour les villes déjà visitées. Il faut bien penser à <strong>convertir les données des colonnes en &quot;nombre entier&quot;</strong> à l'étape précédente pour que le calcul fonctionne.</p>
+<img src="PowerBI_Prefectures_MesureRapide.png" width="90%" alt="Image description">
 <h2 id="conclusion"> 👍 Conclusion de ce POK 2</h2>
+<p>Au cours de ces 2 sprints, j'ai bien <strong>compris ce qu'est la data visualisation</strong> et j'ai appris à <strong>maîtriser les logiciels Looker Studio</strong> de Google et <strong>Power BI</strong> de Microsoft. En plus, je me suis bien amusée à créer des statistiques sur mes voyages dans le deuxième sprint. Ainsi, je considère avoir <strong>rempli les objectifs</strong> que je m'étais fixés initialement et je suis <strong>très satisfaite de ce POK</strong> !</p>
 
 
 </article>
