@@ -13,11 +13,11 @@ tags:
   - "looker studio"
   - "power BI"
 
-résumé: Je compte apprendre l'art de la data visualisation à travers 2 projets et en utilisant le logiciel Looker Studio. Le premier projet sera de créer un visuel avec les statistiques de vente de carte postale pour ma grande soeur illustratrice et notamment une carte de la France avec ses boutiques. Le deuxième projet consistera à créer un visuel avec des statistiques sur mes voyages.
+résumé: Je compte apprendre l'art de la data visualisation à travers 2 projets et en utilisant les logiciels Looker Studio et Power BI. Le premier projet sera de créer un visuel avec les statistiques de vente de carte postale pour ma grande soeur illustratrice et notamment une carte de la France avec ses boutiques. Le deuxième projet consistera à créer un visuel avec des statistiques sur mes voyages. Puis je trouverai une autre idée de projet si j'ai le temps.
 ---
 {% prerequis %}
 
-POK débutant : aucun prérequis
+POK débutant : aucun prérequi
 
 {% endprerequis %}
 {% lien %}
@@ -37,7 +37,7 @@ POK débutant : aucun prérequis
 {% details "Sprints et horodatage" %}
 ### 🏃‍➡️Sprints
 
-Objectif général : **apprendre l'art de la data visualisation** et plus précisement maitriser le logiciel **Looker Studio**.
+Objectif général : **apprendre l'art de la data visualisation** et plus précisement maitriser les logiciels **Looker Studio** et **Power BI**.
 
 #### Sprint 1
 
@@ -57,9 +57,9 @@ Objectif général : **apprendre l'art de la data visualisation** et plus préci
 
 #### Sprint 2
 
-- [ ] réfléchir aux indicateurs que je veux pour le tableau de bord de mes voyages : 1h
-- [ ] créer une base de données adéquate de mes voyages sur Excel : 2h
-- [ ] utiliser Power BI pour créer le tableau de bord souhaité : 3h
+- [x] réfléchir aux indicateurs que je veux pour le tableau de bord de mes voyages : 1h (30 min)
+- [x] créer une base de données adéquate de mes voyages sur Excel : 2h (1h30)
+- [x] utiliser Power BI pour créer le tableau de bord souhaité : 3h (1h)
 - [ ] trouver un autre petit projet à réaliser et le faire (concert artiste?): 4h
 
 **Total d'heures sprint 2 : ?h**   
@@ -79,8 +79,8 @@ Lundi 18/11 |2h  | Projet tableau de bord pour ma soeur sur Power BI  |
 Lundi 18/11 |0h50  | Finalisation rédaction POK |
 
 | **Sprint 2**
-x  | xh | x |
-  x  | xh | x |
+Samedi 23/11  | 3h30  | Réflexion indicateur tableau, création tableau et création rapport Power BI |
+Dimanche 24/11  | ?  | Power BI |
 
 {% enddetails %}
 
@@ -180,5 +180,63 @@ Il s'agit d'un **tableau de bord interactif** donc on peut cliquer directement s
 Ainsi, je suis largement convaincue par la **supériorité de PowerBI version gratuite sur Looker Studio quand on veut juste créer des projets pour soi** sans l'intention de les partager à d'autres utilisateur. De plus, **Power Bi est aussi plus souvent utilisé que Looker Studio par les entreprises**, donc je trouve ça plus pertinent de me former à ce logiciel. Ainsi, je ne vais utiliser que Power BI pour le deuxième sprint.
 
 <h2 id=POK2> 2️⃣POK : sprint 2</h2>
+
+### 📈 Choix indicateurs voyages
+
+Avant de créer le tableau Excel de mes voyages à l'étranger, je dois réfléchir à quelles données je veux afficher dans mon tableau de bord pour bien concevoir le tableau.
+
+Le tableau de bord comportera 2 pages : 
+
+1. Voyages à l'étranger en Europe
+2. Focus sur le tour du monde en césure
+
+Pour chaque pays lors d'un voyage je vais noter les données suivantes : 
+
+- dates de début et de fin
+- durée (calculée avec les dates)
+- pays dans une liste déroulante
+- villes marquées en français, séparées par une virgule
+- contexte : famille / papa / amis / scolaire / Erasmus
+
+Données que je veux dans le tableau de bord :
+
+- Nombre de pays que j'ai visité (au moins 1 nuit sur place)
+- Nombre de villes que j'ai visité (au moins 1/2 journée)
+- Nombre de jour de voyages
+- Diagramme camembert : répartition avec qui j'étais
+- Diagramme bâtons : jour de voyage par année
+- Diagramme : jour de voyage par pays
+- Tableau détail voyage
+- Carte de l'Europe avec les pays visités (et villes ?)
+- Carte du monde avec les pays visités (et villes ?)
+
+Interaction entre les éléments pour voir facilement les voyages dans un pays, pendant une année ou le contexte.  
+Il faut que je trouve un moyen pour représenter différement l'Autriche et la Nouvelle-Zélande qui sont des cas différents (j'ai vécu plusieurs semaines ou mois là bas)
+
+### 🖼️ Création de l'Excel
+
+J'ai commencé par créer un tableau sur Excel avec les données sur mes voyages :
+
+<img src="Excel_voyages.png" width="100%" alt="Image description">
+
+Puis j'ai créé le **tableau de bord** sur Power BI. Le voici sans filtre :
+
+<img src="PowerBI_voyages.png" width="90%" alt="Image description">
+
+Et voici cee tableau de bord en sélectionnant l'**Allemagne** ou les **voyages avec mes amis** : 
+
+<div style="display: flex; justify-content: space-between;">
+    <img src="PowerBI_Allemagne.png" alt="Image 1" style="width: 49%; height: auto;">
+    <img src="PowerBI_Amis.png" alt="Image 2" style="width: 49%; height: auto;">
+</div>
+
+Et voici une **vidéo montrant les interactions directement sur le logiciel Power BI** : 
+
+<div style="display: flex; justify-content: center; align-items: center; margin-top: 0; margin-bottom: 0;">
+    <video width="640" height="360" controls>
+        <source src="Demo_Voyages_PowerBI.webm" type="video/webm">
+        Votre navigateur ne prend pas en charge la balise vidéo.
+    </video>
+</div>
 
 <h2 id=conclusion> 👍 Conclusion de ce POK 2</h2>
