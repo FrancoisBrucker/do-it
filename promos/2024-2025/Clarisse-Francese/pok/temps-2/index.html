@@ -117,7 +117,7 @@
 
         <p class="mb-4 text-lg">
 
-                Je compte apprendre l'art de la data visualisation à travers 2 projets et en utilisant le logiciel Looker Studio. Le premier projet sera de créer un visuel avec les statistiques de vente de carte postale pour ma grande soeur illustratrice et notamment une carte de la France avec ses boutiques. Le deuxième projet consistera à créer un visuel avec des statistiques sur mes voyages.
+                Je compte apprendre l'art de la data visualisation à travers 2 projets et en utilisant les logiciels Looker Studio et Power BI. Le premier projet sera de créer un visuel avec les statistiques de vente de carte postale pour ma grande soeur illustratrice et notamment une carte de la France avec ses boutiques. Le deuxième projet consistera à créer un visuel avec des statistiques sur mes voyages. Puis je trouverai une autre idée de projet si j'ai le temps.
 
         </p>
 
@@ -142,7 +142,7 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>POK débutant : aucun prérequis</p>
+<p>POK débutant : aucun prérequi</p>
 </div></div>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -179,7 +179,7 @@
 </summary>
 <div class="mx-8 pb-2 cursor-auto select-text">
 <h3>🏃‍➡️Sprints</h3>
-<p>Objectif général : <strong>apprendre l'art de la data visualisation</strong> et plus précisement maitriser le logiciel <strong>Looker Studio</strong>.</p>
+<p>Objectif général : <strong>apprendre l'art de la data visualisation</strong> et plus précisement maitriser les logiciels <strong>Looker Studio</strong> et <strong>Power BI</strong>.</p>
 <h4>Sprint 1</h4>
 <ul>
 <li>[x] mieux comprendre ce qu'est la data visualisation et les bons principes : 1h30 (1h)</li>
@@ -197,9 +197,9 @@
 <strong>Etude post mortem</strong> : j'ai clairement sous estimé la phase de planification de ce premier sprint car j'ai énormément changé ma to do list en cours de route. Je ne pensais pas que Looker Studio serait aussi peu pratique et donc que j'allais aller aussi vite sur Power BI. Je me suis aussi retrouvé à devoir beaucoup travailler lundi 18/11 et ce n'était pas forcément très efficace d'enchaîner autant d'heures.</p>
 <h4>Sprint 2</h4>
 <ul>
-<li>[ ] réfléchir aux indicateurs que je veux pour le tableau de bord de mes voyages : 1h</li>
-<li>[ ] créer une base de données adéquate de mes voyages sur Excel : 2h</li>
-<li>[ ] utiliser Power BI pour créer le tableau de bord souhaité : 3h</li>
+<li>[x] réfléchir aux indicateurs que je veux pour le tableau de bord de mes voyages : 1h (30 min)</li>
+<li>[x] créer une base de données adéquate de mes voyages sur Excel : 2h (1h30)</li>
+<li>[x] utiliser Power BI pour créer le tableau de bord souhaité : 3h (1h)</li>
 <li>[ ] trouver un autre petit projet à réaliser et le faire (concert artiste?): 4h</li>
 </ul>
 <p><strong>Total d'heures sprint 2 : ?h</strong><br>
@@ -258,14 +258,14 @@
 <td><strong>Sprint 2</strong></td>
 </tr>
 <tr>
-<td>x</td>
-<td>xh</td>
-<td>x</td>
+<td>Samedi 23/11</td>
+<td>3h30</td>
+<td>Réflexion indicateur tableau, création tableau et création rapport Power BI</td>
 </tr>
 <tr>
-<td>x</td>
-<td>xh</td>
-<td>x</td>
+<td>Dimanche 24/11</td>
+<td>?</td>
+<td>Power BI</td>
 </tr>
 </tbody>
 </table>
@@ -343,6 +343,52 @@ J'ai obtenu le <strong>résultat</strong> ci-dessous :</p>
   <img src="Bilan_Client.png" alt="Image 3" style="width: 50%; height: auto;">
 <p>Ainsi, je suis largement convaincue par la <strong>supériorité de PowerBI version gratuite sur Looker Studio quand on veut juste créer des projets pour soi</strong> sans l'intention de les partager à d'autres utilisateur. De plus, <strong>Power Bi est aussi plus souvent utilisé que Looker Studio par les entreprises</strong>, donc je trouve ça plus pertinent de me former à ce logiciel. Ainsi, je ne vais utiliser que Power BI pour le deuxième sprint.</p>
 <h2 id="POK2"> 2️⃣POK : sprint 2</h2>
+<h3>📈 Choix indicateurs voyages</h3>
+<p>Avant de créer le tableau Excel de mes voyages à l'étranger, je dois réfléchir à quelles données je veux afficher dans mon tableau de bord pour bien concevoir le tableau.</p>
+<p>Le tableau de bord comportera 2 pages :</p>
+<ol>
+<li>Voyages à l'étranger en Europe</li>
+<li>Focus sur le tour du monde en césure</li>
+</ol>
+<p>Pour chaque pays lors d'un voyage je vais noter les données suivantes :</p>
+<ul>
+<li>dates de début et de fin</li>
+<li>durée (calculée avec les dates)</li>
+<li>pays dans une liste déroulante</li>
+<li>villes marquées en français, séparées par une virgule</li>
+<li>contexte : famille / papa / amis / scolaire / Erasmus</li>
+</ul>
+<p>Données que je veux dans le tableau de bord :</p>
+<ul>
+<li>Nombre de pays que j'ai visité (au moins 1 nuit sur place)</li>
+<li>Nombre de villes que j'ai visité (au moins 1/2 journée)</li>
+<li>Nombre de jour de voyages</li>
+<li>Diagramme camembert : répartition avec qui j'étais</li>
+<li>Diagramme bâtons : jour de voyage par année</li>
+<li>Diagramme : jour de voyage par pays</li>
+<li>Tableau détail voyage</li>
+<li>Carte de l'Europe avec les pays visités (et villes ?)</li>
+<li>Carte du monde avec les pays visités (et villes ?)</li>
+</ul>
+<p>Interaction entre les éléments pour voir facilement les voyages dans un pays, pendant une année ou le contexte.<br>
+Il faut que je trouve un moyen pour représenter différement l'Autriche et la Nouvelle-Zélande qui sont des cas différents (j'ai vécu plusieurs semaines ou mois là bas)</p>
+<h3>🖼️ Création de l'Excel</h3>
+<p>J'ai commencé par créer un tableau sur Excel avec les données sur mes voyages :</p>
+<img src="Excel_voyages.png" width="100%" alt="Image description">
+<p>Puis j'ai créé le <strong>tableau de bord</strong> sur Power BI. Le voici sans filtre :</p>
+<img src="PowerBI_voyages.png" width="90%" alt="Image description">
+<p>Et voici cee tableau de bord en sélectionnant l'<strong>Allemagne</strong> ou les <strong>voyages avec mes amis</strong> :</p>
+<div style="display: flex; justify-content: space-between;">
+    <img src="PowerBI_Allemagne.png" alt="Image 1" style="width: 49%; height: auto;">
+    <img src="PowerBI_Amis.png" alt="Image 2" style="width: 49%; height: auto;">
+</div>
+<p>Et voici une <strong>vidéo montrant les interactions directement sur le logiciel Power BI</strong> :</p>
+<div style="display: flex; justify-content: center; align-items: center; margin-top: 0; margin-bottom: 0;">
+    <video width="640" height="360" controls="">
+        <source src="Demo_Voyages_PowerBI.webm" type="video/webm">
+        Votre navigateur ne prend pas en charge la balise vidéo.
+    </video>
+</div>
 <h2 id="conclusion"> 👍 Conclusion de ce POK 2</h2>
 
 
