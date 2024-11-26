@@ -366,6 +366,24 @@ Code :
 </div>
 ```
 
+#### Shortcode `lieninterne`
+
+{% lieninterne "/promos/20XX-20YY/Zola-Gordon/pok/temps-1" %}
+
+Code avec un lien absolu :
+
+```text
+&#123;% lieninterne "/promos/20XX-20YY/Zola-Gordon/pok/temps-1" %}
+```
+
+Codes avec des liens relatifs (par exemple dans votre fichier `/promos/20XX-20YY/Zola-Gordon/pok/index.md)` :
+
+```text
+&#123;% lieninterne "./temps-1" %}
+&#123;% lieninterne "./temps-2/" %}
+```
+
+
 ### Écrire du code
 
 Pour écrire du code, le thème [prismjs](https://prismjs.com/) se chargera de la coloration syntaxique.
