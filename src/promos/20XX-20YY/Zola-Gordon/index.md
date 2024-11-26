@@ -10,8 +10,8 @@ authors:
 
 ## POK & MON
 
-- [POK](./pok)
-- [MON](./mon)
+{% lieninterne "./pok" %}
+{% lieninterne "./mon" %}
 
 ## Projet
 

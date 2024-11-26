@@ -21,7 +21,9 @@ export default async function(eleventyConfig) {
         // }
 
         const title = article?.data.title || "Titre indisponible";
-        const résumé = article?.data.résumé || `Résumé non disponible pour le contenu à l'adresse '${url}'`;
+        const résumé = article ?
+            article.data.résumé || "Résumé non disponible"
+            : `Résumé non disponible pour le contenu à l'adresse '${url}'`;
         const authors = article?.data.authors || "Auteur(s) inconnu(s)";
         const date = article ? DateTime.fromJSDate(article?.date).toFormat(dateFormat) : "Date non disponible";
 
