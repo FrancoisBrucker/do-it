@@ -425,6 +425,26 @@ Le corrigé de l'exercice.
 &#123;% endlien %}
 
 </div></code></pre>
+<h4>Shortcode <code>lieninterne</code></h4>
+<p></p><div class="m-3 p-3 border-solid border-2 rounded relative flex flex-col">
+<div class="text-lg mb-3">
+<a href="/do-it/promos/20XX-20YY/Zola-Gordon/pok/temps-1/">Titre du POK du temps 1</a>
+</div>
+<span class="line-clamp-3">Un POK traitant d'un sujet.</span>
+<div class="flex flex-wrap flex-row flex-grow justify-between items-end not-prose list-none mt-3 mb-1 mx-0 px-1 gap-1">
+<div class="flex-1">
+<span class="bg-blue-200 rounded-full p-2">Gordon Zola</span>
+</div>
+<div>
+<span class="bg-purple-200 rounded-full p-2">01/09/1970</span>
+</div>
+</div>
+</div><p></p>
+<p>Code avec un lien absolu :</p>
+<pre class="language-text"><code class="language-text">&#123;% lieninterne "/promos/20XX-20YY/Zola-Gordon/pok/temps-1" %}</code></pre>
+<p>Codes avec des liens relatifs (par exemple dans votre fichier <code>/promos/20XX-20YY/Zola-Gordon/pok/index.md)</code> :</p>
+<pre class="language-text"><code class="language-text">&#123;% lieninterne "./temps-1" %}
+&#123;% lieninterne "./temps-2/" %}</code></pre>
 <h3>Écrire du code</h3>
 <p>Pour écrire du code, le thème <a href="https://prismjs.com/">prismjs</a> se chargera de la coloration syntaxique.</p>
 <p>Par exemple :</p>
