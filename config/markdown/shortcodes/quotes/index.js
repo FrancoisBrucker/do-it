@@ -7,6 +7,7 @@ import exercice from "./exercice.js";
 import chemin from "./chemin.js";
 import prerequis from "./prerequis.js";
 import lien from "./lien.js";
+import lieninterne from "./lieninterne.js";
 
 export default async function(eleventyConfig) {
 
@@ -19,5 +20,6 @@ export default async function(eleventyConfig) {
     chemin(eleventyConfig);
     prerequis(eleventyConfig);
     lien(eleventyConfig);
+    lieninterne(eleventyConfig);
 
 }
