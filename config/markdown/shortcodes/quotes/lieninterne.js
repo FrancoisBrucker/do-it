@@ -4,22 +4,26 @@ export default async function(eleventyConfig) {
 
     eleventyConfig.addShortcode('lieninterne', function (url, dateFormat = "dd/MM/yyyy") {
 
-        const resolvedUrl = url.startsWith("/")
+        let resolvedUrl = url.startsWith("/")
             ? url
             : url.startsWith("./")
                 ? this.page.url + url.substring(2, this.page.url.lastIndexOf("/") + 1)
                 : url;
 
-        const article = this.ctx.collections.all.find(item => item.url.endsWith(resolvedUrl));
-
-        if (!article) {
-            return `<p class="error">Aucun article trouvé pour l'URL : ${resolvedUrl}</p>`;
+        if (!resolvedUrl.endsWith("/")) {
+            resolvedUrl += "/";
         }
 
-        const title = article.data.title || "Titre indisponible";
-        const résumé = article.data.résumé || "Résumé non disponible";
-        const authors = article.data.authors || "Auteur(s) inconnu(s)";
-        const date = DateTime.fromJSDate(article.date).toFormat(dateFormat) || "";
+        const article = this.ctx.collections.all.find(item => item.url.endsWith(resolvedUrl));
+
+        // if (!article) {
+        //     return `<p class="error">Aucun article trouvé pour l'URL : ${resolvedUrl}</p>`;
+        // }
+
+        const title = article?.data.title || "Titre indisponible";
+        const résumé = article?.data.résumé || `Résumé non disponible pour le contenu à l'adresse '${url}'`;
+        const authors = article?.data.authors || "Auteur(s) inconnu(s)";
+        const date = article ? DateTime.fromJSDate(article?.date).toFormat(dateFormat) : "Date non disponible";
 
         return `
             <div class="m-3 p-3 border-solid border-2 rounded relative flex flex-col">
