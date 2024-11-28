@@ -210,6 +210,63 @@ L’exemple de VideoLAN montre la possibilité d’impact mondial avec une colla
 
 Enfin, pour terminer ce MON (ma toute dernière production à Centrale !), j’aimerais vous raconter ma contribution à l’*Open Source*…
 
+## Ma contribution à l’Open Source { #partie-2 }
+
+<figure style="float: right; margin: 0 0 0 1rem; width: 200px;">
+    <img width="200" src="./assets/fig-8.jpg" alt="" />
+    <figcaption class="text-center">Fig 8 - Logo de Tournesol</figcaption>
+</figure>
+
+Pour commencer, je m’intéresse à la plateforme **Tournesol** 🌻 depuis la création de l’association du même nom en 2021 qui 
+faisait suite à la sortie du livre *Le Fabuleux Chantier* [15]. Cet ouvrage, comme d’autres des mêmes auteurs, 
+mentionnent les problématiques d’**alignement des intelligences artificielles** aux **démocraties numériques**. 
+Ces problématiques faisant écho à plusieurs domaines qui me passionnent (intelligence artificielle, démocratie et 
+modes de scrutin), j’ai continué à suivre les productions du chercheur et vidéaste Lê Nguyên Hoang de 
+[la chaîne YouTube Science4All](https://www.youtube.com/@le_science4all).
+
+<br />
+
+{% lien %}
+- [L'application Tournesol](http://tournesol.app/) 🌻
+- [Le GitHub de Tournesol](https://github.com/tournesol-app/tournesol/)
+- [Tutoriel Tournesol - YouTube](https://www.youtube.com/watch?v=xSqqXN0D4fY) (déjà un peu daté)
+- [Le whitepaper](https://doi.org/10.48550/arXiv.2107.07334) (papier de recherche à la génèse du projet)
+{% endlien %}
+
+Ainsi, cette plateforme a pour mission d’assurer la **transparence** et la **robustesse** des votes par le prisme des **algorithmes 
+de recommandation**, omniprésents sur le web. Ce qui a déclenché mon envie d’entrer en action pour ce projet fut la lecture 
+d’un deuxième ouvrage : *La Dictature des Algorithmes* [16]. C’est comme cela que j’ai contacté les membres actifs de la 
+communauté sur l’application Discord.
+
+### Premiers échanges
+
+Après avoir longuement hésité, tâtonné, pour trouver les bons mots et surtout vaincre le syndrome de l’imposteur, 
+j’envoyai un message dans un canal Discord pour me présenter.
+
+Voilà la teneur, enthousiasmée, de la première réponse à ma volonté de participer au projet :
+
+> Salut! 
+Je suis ravi de te rencontrer. D'autant plus que l'UX est un compétence qui nous manque beaucoup dans l'équipe de Tournesol. 
+> On a eu de l'aide au début qui a fait que le site ressemble à quelque chose 😃
+> 
+> 
+> Un but sur notre roadmap cette année serait d'avoir une **page pour que chaque utilisateur** puisse voir quelques **statistiques** 
+> de leur utilisation de Tournesol (par exemple: le **nombre de comparaison**, le **nombre moyen de comparaison par vidéo comparée**, 
+> le **nombre de vidéos recommandées** qu'il ou elle a mis en avant, le nombre de fois qu'elle a été la première contributrice à voter 
+> sur une vidéo qui plus tard a un très bon score)
+> Ça te dirait de proposer un design pour cette nouvelle page et de le développer?
+> On peut en discuter dans [`#dev`](https://discord.com/channels/760540475139817472/826519326131093565)
+> 
+
+### Le futur
+
+Le projet était donc en demande de compétences que je pouvais apporter. 
+Je rencontrai ainsi les membres du projet par un appel et j’allais me lancer dans le design de cette application avec Figma. 
+C’est ainsi que toutes les compétences de cette dernière année et demi de Do_<span style="color: #4a86e8">It</span> allaient se croiser pour interagir avec une communauté active : 
+reste à voir combien de temps s’écoulera avant de voir apparaitre une contribution publique [sur mon GitHub](https://github.com/alouradou). 
+Quoiqu’il en soit, c’est comme cela que se poursuivra mon parcours, en plus du monde professionnel, au service de la vision que j’aspire à partager.
+
+
 ## Bibliographie et documentation { #bibliographie }
 
 {% lien %}
@@ -230,24 +287,26 @@ Enfin, pour terminer ce MON (ma toute dernière production à Centrale !), j’a
 
 [8] [Usage de l’open source : 80% des entreprises françaises utilisent des solutions open source ! - IT-Connect FR](https://www.it-connect.fr/etude-utilisation-open-source-en-france-2023/)
 
-[9] **Why do commercial companies contribute to open source software?**
+[9] [**Why do commercial companies contribute to open source software?**](https://doi.org/10.1016/j.ijinfomgt.2011.10.003)
 
     Morten Andersen-Gott, Gheorghita Ghinea, Bendik Bygstad,
 
-    International Journal of Information Management, Volume 32, Issue 2, 2012, Pages 106-117, ISSN 0268-4012,
-    https://doi.org/10.1016/j.ijinfomgt.2011.10.003.
+    International Journal of Information Management, Volume 32, Issue 2, 2012, Pages 106-117, ISSN 0268-4012
 
 [10] [Why Meta Open Sourced their best LLM but Google didn't - YouTube](https://www.youtube.com/watch?v=NZru7z2r9M8) - [**Devansh**](https://www.youtube.com/@ChocolateMilkCultLeader)
 
 [11] [Llama 2: Meta’s Open-Source Model Shakes Up the AI Industry](https://www.linkedin.com/pulse/llama-2-metas-open-source-model-shakes-up-ai-industry-1f/)
 
-[12] **When does community participation enhance the performance of open source software companies?**
+[12] [**When does community participation enhance the performance of open source software companies?**](https://doi.org/10.1016/j.respol.2009.06.004)
 
-    Wouter Stam, Research Policy, Volume 38, Issue 8, 2009, Pages 1288-1299, ISSN 0048-7333,
-    https://doi.org/10.1016/j.respol.2009.06.004.
+    Wouter Stam, Research Policy, Volume 38, Issue 8, 2009, Pages 1288-1299, ISSN 0048-7333
 
 [13] [VLC, l'histoire extraordinaire du logiciel français le plus téléchargé au monde - Capital](https://www.capital.fr/entreprises-marches/vlc-lhistoire-extraordinaire-du-logiciel-francais-le-plus-telecharge-au-monde-1361858)
 
 [14] [Odoo développe une stratégie Open-Source](https://arkeup.odoo.com/blog/le-blog-arkeup-1/odoo-developpe-une-strategie-open-source-7)
+
+[15] L. N. Hoang et E. M. El Mhamdi, "**Le fabuleux chantier : Rendre l'intelligence artificielle robustement bénéfique**", EDP Sciences, 2020
+
+[16] J. L. Fourquet et L. N. Hoang, "**La Dictature des Algorithmes : Une transition numérique démocratique est possible**", Tallandier, 2024.
 
 {% endlien %}
