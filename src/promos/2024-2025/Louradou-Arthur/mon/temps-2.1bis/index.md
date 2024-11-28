@@ -218,7 +218,7 @@ Enfin, pour terminer ce MON (ma toute dernière production à Centrale !), j’a
 </figure>
 
 Pour commencer, je m’intéresse à la plateforme **Tournesol** 🌻 depuis la création de l’association du même nom en 2021 qui 
-faisait suite à la sortie du livre *Le Fabuleux Chantier* [15]. Cet ouvrage, comme d’autres des mêmes auteurs, 
+faisait suite à la sortie du livre *Le Fabuleux Chantier* [15](#bibliographie). Cet ouvrage, comme d’autres des mêmes auteurs, 
 mentionnent les problématiques d’**alignement des intelligences artificielles** aux **démocraties numériques**. 
 Ces problématiques faisant écho à plusieurs domaines qui me passionnent (intelligence artificielle, démocratie et 
 modes de scrutin), j’ai continué à suivre les productions du chercheur et vidéaste Lê Nguyên Hoang de 
@@ -235,7 +235,7 @@ modes de scrutin), j’ai continué à suivre les productions du chercheur et vi
 
 Ainsi, cette plateforme a pour mission d’assurer la **transparence** et la **robustesse** des votes par le prisme des **algorithmes 
 de recommandation**, omniprésents sur le web. Ce qui a déclenché mon envie d’entrer en action pour ce projet fut la lecture 
-d’un deuxième ouvrage : *La Dictature des Algorithmes* [16]. C’est comme cela que j’ai contacté les membres actifs de la 
+d’un deuxième ouvrage : *La Dictature des Algorithmes* [16](#bibliographie). C’est comme cela que j’ai contacté les membres actifs de la 
 communauté sur l’application Discord.
 
 ### Premiers échanges
@@ -264,8 +264,28 @@ Le projet était donc en demande de compétences que je pouvais apporter.
 Je rencontrai ainsi les membres du projet par un appel et j’allais me lancer dans le design de cette application avec Figma. 
 C’est ainsi que toutes les compétences de cette dernière année et demi de Do_<span style="color: #4a86e8">It</span> allaient se croiser pour interagir avec une communauté active : 
 reste à voir combien de temps s’écoulera avant de voir apparaitre une contribution publique [sur mon GitHub](https://github.com/alouradou). 
-Quoiqu’il en soit, c’est comme cela que se poursuivra mon parcours, en plus du monde professionnel, au service de la vision que j’aspire à partager.
 
+## Conclusion, perspectives, regard critique
+
+En conclusion, nous sommes revenus sur les définitions parfois philosophiques et clivantes du monde du libre dans le secteur du logiciel. 
+Nous avons montré que l'approche *Open Source* a transformé le paysage technologique et économique du secteur tertiaire 
+dans l’histoire. Son impact sur l'innovation se manifeste à travers la collaboration ouverte et le partage des connaissances 
+qui permettent aux entreprises et aux projets libres d'accélérer leur développement en réduisant les coûts. 
+Les différents modèles économiques observés, qu'ils soient portés par des géants technologiques ou des structures plus modestes, 
+démontrent la viabilité de cette approche.
+
+La compétitivité des entreprises est renforcée par une meilleure maîtrise des technologies, 
+une indépendance aux solutions propriétaires du secteur privé et une capacité d'innovation collaborative. 
+Nous n’avons pas eu le temps de se pencher sur le rapport de l’État et de la législation sur le libre, 
+notamment par le prisme de la propriété intellectuelle ou bien de la transparence des services publics numériques, 
+mais cela constituerait un axe intéressant pour aller plus loin.
+
+Pour finir, mon expérience avec le projet Tournesol illustre cette dynamique où l'Open Source devient un catalyseur 
+d'innovation tout en promouvant des valeurs de transparence et de démocratie numérique. 
+Ce MON a été l’occasion de me lancer vers une participation bénévole à un projet que je juge bénéfique. 
+Quoi qu’il en soit, c’est comme cela que se poursuivra mon parcours, au-delà du monde professionnel, 
+au service de la vision que j’aspire à partager. 
+Merci pour votre attention !
 
 ## Bibliographie et documentation { #bibliographie }
 
