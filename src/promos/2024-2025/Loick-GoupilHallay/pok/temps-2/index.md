@@ -30,8 +30,7 @@ résumé: Développement d'une extension permettant de débloquer des succès en
 - [TypeScript](https://www.typescriptlang.org/)
 {% endprerequis %}
 
-{% lien %}
-**Liens utiles**
+{% lien '**Liens utiles**'%}
 - [Repo Achievements sur GitHub](https://github.com/boxboxjason/achievements)
 - [API VSCode](https://code.visualstudio.com/api)
 - [Développer son extension VSCode](https://code.visualstudio.com/api/get-started/your-first-extension)

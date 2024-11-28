@@ -23,8 +23,7 @@ tags:
 - [Helm](https://helm.sh/)
 {%endprerequis%}
 
-{% lien %}
-**Liens utiles**
+{% lien '**Liens utiles**' %}
 - [k9s](https://k9scli.io/)
 {% endlien %}
 
