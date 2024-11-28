@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>JukeBox</title>
+
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [
+                [
+                '$', '$'
+                ],
+                [
+                '\\(', '\\)'
+                ]
+            ]
+            },
+            svg: {
+            fontCache: 'global'
+            }
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
+
+        <header class="border-b-2 border-gray-200 mb-4">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="min-h-[50px] flex justify-between items-center">
+                <a class="mx-2" href="/do-it/">Home</a>
+                <div class="flex items-center gap-4 sm:gap-6 ">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                        </svg>
+                    </a>
+                    <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
+                        <svg class="h-5 aspect-square" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
+            
+<article class="relative">
+<h1 class="mb-1">JukeBox</h1>
+<div class="mb-4">
+    
+        <div class="px-4 flex flex-wrap items-center">
+            
+                <div class="font-bold">Tags : </div>
+            
+            <ul class="flex flex-wrap overflow-auto not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">PROJET</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">2024-2025</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">IA</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">dev</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">web</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">golang</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">musique</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Vue.js</li>
+                
+
+            </ul>
+            
+            
+            <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="px-4 flex flex-wrap items-center">
+            <div class="font-bold">Auteurs : </div>
+            <ul class="flex flex-wrap not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Loïck Goupil-Hallay</li>
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Sofiane Ouadda</li>
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Thomas Merle</li>
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Mathis Adinolfi</li>
+                
+            </ul>
+        </div>
+    
+
+    
+</div>
+
+        <p class="mb-4 text-lg">
+
+                Génération interactive de musique en direct
+
+        </p>
+
+
+
+
+
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8 mb-2 mr-8">
+<p><strong>Projet avancé</strong></p>
+</div><div class="pl-8 mr-8">
+<ul>
+<li><a href="https://golang.org/">Golang</a></li>
+<li><a href="https://vuejs.org/">Vue.js</a></li>
+</ul>
+</div></div>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
+</svg>
+<div class="pl-8 mb-2 mr-8">
+<p><strong>Liens utiles</strong></p>
+</div><div class="pl-8 mr-8">
+<ul>
+<li><a href="https://github.com/boxboxjason/jukebox">Repository GitHub</a></li>
+</ul>
+</div></div>
+
+<h2>Brief</h2>
+<p>L'objectif du projet est de permettre aux utilisateurs de <strong>générer de la musique de manière collaborative</strong>. Cette génération de musique passe par l'intermédiaire d'un <strong>chat en live</strong> qui permet aux utilisateurs de donner des instructions à une <strong>IA</strong> qui modifiera la musique <em>en cours de lecture</em>.</p>
+<h2>Technical</h2>
+<h3>Génération de musique</h3>
+<p>La musique est générée par un modèle d'<strong>intelligence artificielle</strong> nommé <a href="https://forum.ircam.fr/projects/detail/rave-vst/">RAVE</a>.<br>
+Il s'agit d'un <strong>auto-encoder</strong> qui prend en entrée des fichiers audios et les modifie en fonction des instructions données. Ce correspond parfaitement à notre besoin car il permet de <strong>générer de la musique en temps réel</strong>, et les paramètres de la musique peuvent être contrôlés en temps réel.</p>
+<h3>Filtrage et modération du chat</h3>
+<p>Le chat est modéré par un <strong>filtre de grossièretés</strong> (de type regex) et de spam.<br>
+Le chat est également modéré par un <strong>filtre IA</strong> qui détecte les messages à caractère nocif pour l'IA générateur de musique. Ce filtre IA se charge de détecter les messages destinés à la génération de musique, les <strong>reformule si besoin</strong> et les transmet au générateur s'ils sont valides.</p>
+<h3>Frontend</h3>
+<p>Le frontend est développé en <strong>Vue.js</strong>. Il <strong>communique avec le backend</strong> via son API REST pour la plupart des requêtes de fonctionnement. Une communication <strong>websocket</strong> est mise en place pour le chat en live ainsi que pour le streaming de musique.</p>
+<h4>Fonctionnalités</h4>
+<ul>
+<li>Chat en live</li>
+<li>Création de compte utilisateur</li>
+<li>Connexion à un compte utilisateur</li>
+<li>Affichage des paramètres actuels de la musique</li>
+<li>Affichage responsive, adapté à tous les écrans</li>
+</ul>
+<h3>Backend</h3>
+<p>Le backend est développé en <strong>Golang</strong>, il expose une <strong>API REST</strong> pour remplir toutes ses fonctionnalités. Il s'agit d'un <strong>serveur HTTP</strong> qui gère les requêtes utilisateurs et les transmet à l'IA générateur de musique.</p>
+<h4>Fonctionnalités</h4>
+<ul>
+<li>Gestion des utilisateurs (création, stockage, connexion)</li>
+<li>Gestion sécurisée de l'authentification</li>
+<li>Gestion des messages du chat (via websocket et API REST, stockage en base de données)</li>
+<li>Filtrage des messages du chat</li>
+<li>Communication avec l'IA générateur de musique</li>
+<li>Réceptions des requêtes frontend et envoi des réponses</li>
+</ul>
+
+
+</article>
+
+        </main>
+
+
+        <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div class="min-h-[50px] flex justify-center items-center">
+                    <p class="text-center">
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développent et Organisation en IT
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        MathJax
+            .startup
+            .document
+            .getMathItemsWithin(document.body);
+        </script>
+
+    </body>
+</html>
