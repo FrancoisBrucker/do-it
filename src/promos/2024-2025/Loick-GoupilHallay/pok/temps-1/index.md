@@ -49,13 +49,13 @@ résumé: Déploiement automatisé d'un environnement de développement sécuris
   }
 </style>
 
-{% prerequis 'POK avancé'%}
+{% prerequis '**POK avancé**'%}
 - Conteneurisation
 - Golang
 - [MON sur l'environnement de développement idéal](../../mon/temps-1.1/)
 {% endprerequis %}
 
-{% lien %}
+{% lien '**Liens utiles**'%}
 - [GitHub svcadm](https://github.com/boxboxjason/svcadm)
 - [What is a container ?](https://www.redhat.com/en/topics/containers)
 - Services déployés

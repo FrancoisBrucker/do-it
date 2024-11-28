@@ -15,12 +15,12 @@ tags:
 résumé: "Introduction à l'environnement de développement idéal pour une équipe"
 ---
 
-{%prerequis 'MON débutant'%}
+{%prerequis '**MON débutant**'%}
 - Utiliser un navigateur web
 - Travail en équipe
 {%endprerequis%}
 
-{% lien %}
+{% lien '**Liens utiles**'%}
 - [Stack Overflow Developer Survey 2024](https://survey.stackoverflow.co/2024)
 - [POK déploiement automatisé de l'environnement de développement pour une équipe](../../pok/temps-1/)
 - [MON sécurisation de l'environnement de développement](../temps-1.2/)
