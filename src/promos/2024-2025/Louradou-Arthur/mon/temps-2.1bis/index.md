@@ -268,19 +268,19 @@ reste à voir combien de temps s’écoulera avant de voir apparaitre une contri
 ## Conclusion, perspectives, regard critique
 
 En conclusion, nous sommes revenus sur les définitions parfois philosophiques et clivantes du monde du libre dans le secteur du logiciel. 
-Nous avons montré que l'approche *Open Source* a transformé le paysage technologique et économique du secteur tertiaire 
-dans l’histoire. Son impact sur l'innovation se manifeste à travers la collaboration ouverte et le partage des connaissances 
+Nous avons montré que l'approche *Open Source* a **transformé le paysage technologique et économique** du secteur tertiaire 
+dans l’histoire. Son impact sur l'innovation se manifeste à travers la **collaboration ouverte et le partage des connaissances** 
 qui permettent aux entreprises et aux projets libres d'accélérer leur développement en réduisant les coûts. 
-Les différents modèles économiques observés, qu'ils soient portés par des géants technologiques ou des structures plus modestes, 
+Les **différents modèles économiques** observés, qu'ils soient portés par des géants technologiques ou des structures plus modestes, 
 démontrent la viabilité de cette approche.
 
 La compétitivité des entreprises est renforcée par une meilleure maîtrise des technologies, 
-une indépendance aux solutions propriétaires du secteur privé et une capacité d'innovation collaborative. 
-Nous n’avons pas eu le temps de se pencher sur le rapport de l’État et de la législation sur le libre, 
+une **indépendance** aux solutions propriétaires du secteur privé et une capacité d'**innovation collaborative**. 
+Nous n’avons pas eu le temps de se pencher sur **le rapport de l’État et de la législation sur le libre**, 
 notamment par le prisme de la propriété intellectuelle ou bien de la transparence des services publics numériques, 
 mais cela constituerait un axe intéressant pour aller plus loin.
 
-Pour finir, mon expérience avec le projet Tournesol illustre cette dynamique où l'Open Source devient un catalyseur 
+Pour finir, mon expérience avec le projet Tournesol illustre cette dynamique où l'*Open Source* devient un catalyseur 
 d'innovation tout en promouvant des valeurs de transparence et de démocratie numérique. 
 Ce MON a été l’occasion de me lancer vers une participation bénévole à un projet que je juge bénéfique. 
 Quoi qu’il en soit, c’est comme cela que se poursuivra mon parcours, au-delà du monde professionnel, 
