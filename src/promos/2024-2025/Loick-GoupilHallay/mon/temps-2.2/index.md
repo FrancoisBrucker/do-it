@@ -11,6 +11,8 @@ tags:
   - 'temps 2'
   - 'dev'
   - 'vscode'
+
+résumé: "Optimiser les raccourcis et connaître les bonnes commandes pour gagner en productivité sur Visual Studio Code."
 ---
 
 {%prerequis '**MON avancé**'%}

@@ -12,6 +12,8 @@ tags:
   - 'dev'
   - 'kubernetes'
   - 'k9s'
+
+résumé: "Tutoriel pour maîtriser k9s et devenir un ninja de la console Kubernetes"
 ---
 
 <head>
