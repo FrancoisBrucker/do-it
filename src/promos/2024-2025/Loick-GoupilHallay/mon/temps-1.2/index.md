@@ -11,6 +11,8 @@ tags:
   - 'temps 1'
   - 'dev'
   - 'cyber'
+
+résumé: "Guide de bonnes pratiques pour sécuriser l'environnement de développement des développeurs."
 ---
 
 <head>
