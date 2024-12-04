@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Jeu de mémory pokémon en ligne</title>
+        <title>Jeu de mémory pokémon en javascript</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">Jeu de mémory pokémon en ligne</h1>
+<h1 class="mb-1">Jeu de mémory pokémon en javascript</h1>
 <div class="mb-4">
     
         <div class="px-4 flex flex-wrap items-center">
@@ -79,6 +79,8 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">jeu</li>
                 
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">site</li>
+                
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">javascript</li>
                 
 
@@ -86,6 +88,8 @@
             
             
             <div class="hidden" data-pagefind-meta="Type">
+                
+                    
                 
                     
                 
@@ -134,7 +138,7 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Lola-Perdrix/">Lola Perdrix</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Lola-Perdrix/pok/">POK de Lola Perdrix</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Lola-Perdrix/pok/temps-2/">Jeu de mémory pokémon en ligne</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Lola-Perdrix/">Lola Perdrix</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Lola-Perdrix/pok/">POK de Lola Perdrix</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Lola-Perdrix/pok/temps-2/">Jeu de mémory pokémon en javascript</a>
 
 </div></div>
 
@@ -157,6 +161,9 @@
 </div></div>
 
 <p>L'objectif de ce POK est de reprendre le site web que j'avais commencé à développer pendant le cours de dev web de 2A là où il en était resté. Je souhaite améliorer le style tout en refaisant la mécanique du jeu en javascript.</p>
+<p>Il existe un autre POK sur le sujet, <a href="https://francoisbrucker.github.io/do-it/promos/2023-2024/William%20Lalanne/pok/temps-1/">celui de William Lalanne</a>, en revanche je n'ai pas trouvé tant de points communs entre nos deux façons de faire, je ne me suis donc pas vraiment appuyé dessus mais cela peut constituer une ressource complémentaire.</p>
+<h2>Lien vers le code du site</h2>
+<p>Le code est accessible ici : <a href="https://github.com/lolapdx/memory-game/tree/main">memory game repository</a></p>
 <h2>Planning</h2>
 <h3>Sprint 1</h3>
 <p>Reprendre le legacy code, remettre en marche le front.</p>
@@ -179,6 +186,24 @@
 <div class="pl-8 mr-8">
 <p>Mon objectif n'est pas forcément de faire un site magnifique mais fonctionnel pour qu'on puisse y jouer de manière assez plaisante. Ayant déjà la structre du site (pas forcément très complexe cela dit), je souhaite donc ne pas perdre trop de temps sur le style si je vois que cela semble plus chronophage que prévu. Je me concentrerai donc plus sur les fonctionnalités de la page.</p>
 </div></div>
+<h2>Introduction</h2>
+<p>Je suis repartie du projet de groupe réalisé en 2e année avec M. Brucker. J'avais un sentiment d'inachevé et cela me motivait à réapprendre à manipuler le javascript. Cela dit, j'ai perdu la majeure partie du projet et n'ai pu récupérer que la structure du site avec le style (c'est déjà ça de gagné).</p>
+<p>Voici à quoi ressemble ce que j'ai pu récupérer du projet, ce qui constituera mon point de départ :</p>
+<table>
+<thead>
+<tr>
+<th>Page d'accueil</th>
+<th>Page mémory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="html_depart.jpg" alt="site"></td>
+<td><img src="jeu_depart.jpg" alt="site"></td>
+</tr>
+</tbody>
+</table>
+<h2>Premier Sprint</h2>
 <h3>Horodatage</h3>
 <table>
 <thead>
@@ -190,7 +215,7 @@
 </thead>
 <tbody>
 <tr>
-<td>Jeudi 31 novembre</td>
+<td>Jeudi 31 octobre</td>
 <td>10min</td>
 <td>Récupération du projet</td>
 </tr>
@@ -236,24 +261,6 @@
 </tr>
 </tbody>
 </table>
-<h2>Introduction</h2>
-<p>Je suis repartie du projet de groupe réalisé en 2e année avec M. Brucker. J'avais un sentiment d'inachevé et surtout de peux mieux faire, et cela me motivait à réapprendre à manipuler le javascript. Cela dit, j'ai perdu la majeure partie du projet et n'ai pu récupérer que la structure du site avec le style (c'est déjà ça de gagné).</p>
-<p>Voici à quoi ressemble ce que j'ai pu récupérer du projet, ce qui constituera mon point de départ :</p>
-<table>
-<thead>
-<tr>
-<th>Page d'accueil</th>
-<th>Page mémory</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img src="html_depart.jpg" alt="site"></td>
-<td><img src="jeu_depart.jpg" alt="site"></td>
-</tr>
-</tbody>
-</table>
-<h2>Premier Sprint</h2>
 <h3>Style</h3>
 <p>Après m'être remise la tête dans le cours de 2e année pour me rappeler comment html et css marchent, j'ai commencé par changer le style du site pour le mettre à mon goût et surtout pour l'adapter à mon nouveau thème qui sera les pokémon.</p>
 <table>
@@ -271,9 +278,9 @@
 </tbody>
 </table>
 <h3>Grille</h3>
-<p>Ensuite pour ce premer sprint j'ai voulu réaliser l'<strong>affichage de la grille</strong>. J'ai choisi de garder les deux options déjà présentes (grile 4x4 et 6x6) pour garder le choix de la diffculté.</p>
+<p>Ensuite pour ce premer sprint j'ai voulu réaliser l'<strong>affichage de la grille</strong>. J'ai choisi de garder les deux options déjà présentes (grille 4x4 et 6x6) pour garder le choix de la diffculté.</p>
 <p>Je me suis rappelée que la manière utilisée pour cette tâche il y a deux ans était un peu complexe pour pas grand chose, j'ai donc essayé de trouver de meilleures pratiques en cherchant un peu sur le net comment je pourrais faire. J'ai décidé d'en faire un petit mix.</p>
-<p>J'ai procédé avec deux classes de tuiles (pour l'instant) pour adapter leur taille à leur nombre et ai travaillé pas mal de temps sur la disposition de celles-ci pour que ce soit joli dans les deux cas. Combiné ensuite avec un peu de javascript, j'obtiens :</p>
+<p>J'ai procédé avec deux classes de conteneur pour mes tuiles, de type <code>display : grid</code>, en différenciant le <code>grid-template</code> pour adapter le format, la taille des tuiles et leur nombre, et ai travaillé pas mal de temps sur la disposition de celles-ci pour que ce soit joli dans les deux cas. Je l'affiche au click des boutons avec une fonction javascript et j'obtiens :</p>
 <table>
 <thead>
 <tr>
@@ -289,9 +296,16 @@
 </tbody>
 </table>
 <h3>Emplacement des pokémon et affichage des images</h3>
-<p>Pour constituer ensuite mon jeu de mémory, plusieurs options s'offrent à moi, mais à ce stade je ne sais pas encore laquelle sera la meilleure. Pour l'instant je pars donc dans une direction mais je serais peut être amenée à changer tout ça.</p>
-<p>Lors de la création de chacune de mes tuiles, je vais lui attribuer un attribut 'tile-id' qui contiendra alors le numéro du pokémon qu'elle représente. Cela sera forcément utile pour après. J'ai donc fait une fonction qui génère une liste aléatoire de paires de pokémons et les attribue ensuite à mes tuiles.</p>
-<p>Sur la fin du sprint, j'ai également réussi à afficher l'image du pokémon correspondant à l'id de la tuile sur le click de celle-ci. J'ai cru ne pas pouvoir y arriver à cause de quelques soucis de débuggage, mais j'y suis parvenue ! (après avoir lancé le site sur un serveur local, peut-être des soucis de cache).</p>
+<p>Pour constituer ensuite mon jeu de mémory, plusieurs options s'offrent à moi. J'ai décidé de m'appuyer sur les attributs des tuiles pour constituer mon mécanisme. Celui-ci repose sur une fonction qui s'activera au click de chaque tuile.</p>
+<p>Lors de la création de chacune de mes tuiles, je vais lui attribuer un attribut 'tile-id' qui contiendra le numéro du pokémon qu'elle représente. J'ai donc fait une fonction qui génère une liste aléatoire de paires de pokémons et les attribue ensuite à mes tuiles.</p>
+<p>Sur la fin du sprint, j'ai également réussi à afficher l'image du pokémon correspondant à l'id de la tuile sur le click de celle-ci. J'ai cru ne pas pouvoir y arriver à cause de quelques soucis de débuggage, mais j'y suis parvenue !</p>
+<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>J'ai eu des soucis liés à priori au cache de mon ordinateur, problème résolu en passant par un serveur local pour afficher le site (<code>python -m http.server 3000</code>).</p>
+</div></div>
 <p>Voilà où j'en suis donc à la fin du premier sprint :</p>
 <p><img src="affichage_image.jpg" alt="image"></p>
 <h3>Conclusion Sprint 1</h3>
@@ -302,10 +316,155 @@
 <ul>
 <li>[ ] Constituer une base <s>d'images et de</s> questions pour le jeu</li>
 <li>[ ] <s>Faire une partie back</s> <em><strong>Pas besoin</strong></em></li>
-<li>[ ] Réaliser la mécanique du jeu</li>
-<li>[ ] <em><strong>+Effet de retournement des tuiles</strong></em></li>
-<li>[ ] <em><strong>+Ajouter la mécanique de question de vérification</strong></em></li>
-<li>[ ] <em><strong>+Reset / Fin de partie</strong></em></li>
+<li>[x] Réaliser la mécanique du jeu</li>
+<li>[x] <em><strong>+Effet de retournement des tuiles</strong></em></li>
+<li>[x] <em><strong>+Ajouter la mécanique de question de validation</strong></em></li>
+<li>[x] <em><strong>+Reset / Fin de partie</strong></em></li>
+</ul>
+<p>Je n'ai pas eu à réaliser une base de questions car j'ai modifié mon système de validation des paires.</p>
+<h3>Horodatage Sprint 2</h3>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Heures passées</th>
+<th>Indications</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jeudi 21 novembre</td>
+<td>1h</td>
+<td>Reprise du code du sprint 1 pour le rendre plus propre et adopter de meilleures pratiques (travailler avec des éléments etc.)</td>
+</tr>
+<tr>
+<td>Vendredi 22 novembre</td>
+<td>1h</td>
+<td>Effet de retournement des cartes</td>
+</tr>
+<tr>
+<td>Samedi 23 novembre</td>
+<td>1h</td>
+<td>Mécanique du jeu au plus simple</td>
+</tr>
+<tr>
+<td></td>
+<td>1h30</td>
+<td>Ajouts de fonctionalités pour améliorer la mécanique (pas évident)</td>
+</tr>
+<tr>
+<td></td>
+<td>30min</td>
+<td>Gestion de la fin de partie</td>
+</tr>
+<tr>
+<td>Dimanche 24 novembre</td>
+<td>1h</td>
+<td>Ajouts des autres choix de difficulté et style des boutons</td>
+</tr>
+<tr>
+<td></td>
+<td>30min</td>
+<td>Recherches et tests pour créer des inputs</td>
+</tr>
+<tr>
+<td>Mercredi 27 novembre</td>
+<td>3h30</td>
+<td>Mise en place du niveau initiate (pas évident)</td>
+</tr>
+<tr>
+<td>Lundi 02 décembre</td>
+<td>30min</td>
+<td>Dernières modifications, optimisation</td>
+</tr>
+</tbody>
+</table>
+<h3>Retournement des cartes</h3>
+<p>Pour avoir un effet joli et un ressenti de jeu sympathique, je tenais à retourner les cartes d'une manière fluide comme dans si on le faisait en vrai. Pour cela j'ai utilisé les animations CSS. Je me suis aidée de quelques tutos sur internet car j'avais du mal à comprendre le principe au début :</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=OV8MVmtgmoY">CSS Flip Card Effect</a></li>
+<li><a href="https://www.youtube.com/watch?v=Pt--CNYQmaQ">Effet de Flip Card CSS</a> (globalement la même chose en français)</li>
+<li><a href="https://youtu.be/tRT8gJDLXfc?si=GnQsGgAyhydZZL6i">3D Flip Card Effect On Click Using HTML CSS | CSS Flip Card</a></li>
+</ul>
+<p>J'ai repris quelques unes de ces méthodes en les personnalisant à mon site et en essayant de garder les éléments les plus simples.</p>
+<p>Malheureusement je n'ai pas réussi à comprendre comment fonctionnait le retournement de cartes dans l'autre sens (quand deux cartes ne matchent pas). C'est donc une fonctionnalité que j'ai laissé finalement de côté (sinon, j'allais y passer des heures...).</p>
+<h3>Mécanique du jeu</h3>
+<p>Pour réaliser la mécanique du jeu, il fallait surtout que je porte mon attenion sur :</p>
+<ul>
+<li>La sauvegarde de la carte retournée en premier et de celle retournée en deuxième, et leur comparaison.</li>
+<li>Le retournement des mauvaises paires après un délai.</li>
+<li>Les cartes déjà retournées ne peuvent pas servir à constituer d'autres paires.</li>
+<li>On ne peut pas cliquer deux fois de suite sur une même carte.</li>
+<li>On ne peut pas cliquer sur d'autres cartes le temps qu'une mauvaise paire se retourne.
+<ul>
+<li>Ce dernier point m'a pris beaucoup plus de temps que les autres, je cherchais absolument à empêcher le click sur les autres élements de la page sans succès. J'ai du finalement changer de stratégie en passant par une variable qui empêche l'éxecution de la fonction tant qu'elle n'a pas la bonne valeur. Mais j'ai mis du temps à trouver...</li>
+</ul>
+</li>
+</ul>
+<p>Pour réaliser la mécanique, je me suis aussi inspirée de quelques tutos, par exemple :</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=bznJPt4t_4s&amp;t=1006s">Learn the JavaScript DOM With This Project - Memory Game</a>, celui qui m'a le plus servi je pense</li>
+<li><a href="https://youtu.be/M0egyNvsN-Y?feature=shared">How to Create Memory Game in JavaScript</a></li>
+<li><a href="https://youtu.be/dqqxkrKhfS4?feature=shared">Memory Game Javascript Project | HTML, CSS, Javascript</a></li>
+</ul>
+<p>Cela m'a donné les guidelines pour réaliser le jeu et j'ai ensuite essayé au maximum de refaire tout moi-même. C'est pour cela que ça a pris un peu de temps malgré les similitudes.</p>
+<p>J'ai aussi ajouté à la fin de la partie une petite animation pour nous féliciter et nous proposer de rejouer.</p>
+<p><img src="congrats.jpg" alt="image de victoire"></p>
+<h3>Implémentation du niveau initié</h3>
+<p>Mon idée était de réaliser un autre mode de difficulté dans lequel le joueur devrait répondre à une question dès qu'il retourne une paire pour pouvoir la valider. Finalement, à la place des questions, j'ai voulu faire deviner au joueur la génération du pokémon de la paire retournée. Si le joueur devine bien, il valide la paire, sinon la paire est retournée et le joueur doit retenter la paire (s'il se souvient où elle était...).</p>
+<p>Pour implémenter ce système, j'ai rencontré <strong>deux grandes difficultés :</strong></p>
+<ul>
+<li>L'affichage des inputs où l'utilisateur doit rentrer sa réponse.</li>
+<li>Permettre &quot;d'attendre&quot; la réponse de l'utilisateur pour poursuivre la mécanique du jeu.</li>
+</ul>
+<p>Pour le deuxième point j'avais de vagues souvenirs de l'utilisation des <strong>fonctions asynchrones et des systèmes de promesses</strong> que j'ai du creuser un bon moment avant de pouvoir l'utiliser ici. Ces vidéos m'ont aidée :</p>
+<ul>
+<li><a href="https://youtu.be/li7FzDHYZpc?si=lMXmFcFSBecveqW5">Javascript Promises vs Async Await EXPLIQUÉ (en 5 minutes)</a></li>
+<li><a href="https://youtu.be/spvYqO_Kp9Q?si=8G5HON0rrkSJrB2p">Async Await vs. Promises - JavaScript Tutorial for beginners</a></li>
+<li><a href="https://youtu.be/TnhCX0KkPqs?si=F5cc_ZwpgwZura7h">JavaScript Promises -- Tutorial for Beginners</a></li>
+</ul>
+<p>Je n'ai vraiment pas tout regardé en entier, je recherchais surtout des explications du concept et des exemples de codes (en complétant avec d'autres sites et documentations sur javascript jusqu'à trouver ce qu'il me fallait).</p>
+<p><img src="initiate.jpg" alt="niveau initiate"></p>
+<h3>Conclusion Sprint 2</h3>
+<p>Durant ce sprint, j'avais réduit la quantité de travail en décidant de faire un site uniquement statique et me débarrassant de l'élaboration de questions de validation. C'était une bonne décision ! Au terme de ce deuxième sprint, je dispose d'un jeu fonctionnel, sans bugs.</p>
+<p>En revanche, je suis consciente que mon code est probablement loin d'être optimal, et j'ai trouvé ça difficile de savoir se positionner vis-à-vis des pratiques à adopter ou non dans le code en travaillant en autonomie, sans expérience, et avec &quot;peu&quot; de temps. Par exemple, j'ai décidé de ne pas trop me casser la tête avec le CSS, c'est donc peut être un peu fouillis.</p>
+<p>Les plus grosses difficultées que j'ai rencontrées étaient situées au niveau de l'empêchement du click, l'affichage de l'input box, le style des boutons, les animations des cartes, et l'attente de la réponse de l'utilisateur. J'ai mis beaucoup de temps à trouver des solutions utiles à mes problèmes sur internet malgré la quantité d'infos.</p>
+<p>Enfin, il me reste quelques fonctionnalités que j'ai laissées de côté pour pouvoir finir à temps : le chronomètre, et le niveau expert. C'est une petite déception mais je suis quand même contente de tout ce que j'ai réussi à produire.</p>
+<h2>BONUS : mode expert</h2>
+<p>En bonus, c'est-à-dire au delà des 20h du projet, j'ai passé une petite heure en plus pour améliorer le code et surtout pour implémenter le niveau expert que je n'avais pas eu le temps de faire. Pourtant, ce n'était pas si compliqué une fois le niveau initié de fait.</p>
+<p>Le principe de ce mode est de valider la paire en devinant le numéro du pokédex du pokemon retourné. Le public est sans doute plus restreint, sans pour autant être inexistant...</p>
+<p>Enfin, en dernières modifications, les règles du jeu ainsi que le header. Il manque donc juste le chronomètre désormais... Mais mon site me plaît bien comme ça.</p>
+<table>
+<thead>
+<tr>
+<th>Début de la partie</th>
+<th>Version initié</th>
+<th>Version expert</th>
+<th>Jeu gagné !</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="final.jpg" alt="initialisation"></td>
+<td><img src="final_initiate.jpg" alt="niveau initiate"></td>
+<td><img src="final_expert.jpg" alt="niveau expert"></td>
+<td><img src="final_congrats.jpg" alt="final"></td>
+</tr>
+</tbody>
+</table>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://www.w3schools.com/">w3school</a></li>
+<li><a href="https://francoisbrucker.github.io/cours_informatique/cours/web/">Cours de Développement Web</a></li>
+<li><a href="https://www.youtube.com/watch?v=OV8MVmtgmoY">CSS Flip Card Effect</a></li>
+<li><a href="https://www.youtube.com/watch?v=Pt--CNYQmaQ">Effet de Flip Card CSS</a></li>
+<li><a href="https://youtu.be/tRT8gJDLXfc?si=GnQsGgAyhydZZL6i">3D Flip Card Effect On Click Using HTML CSS | CSS Flip Card</a></li>
+<li><a href="https://www.youtube.com/watch?v=bznJPt4t_4s&amp;t=1006s">Learn the JavaScript DOM With This Project - Memory Game</a></li>
+<li><a href="https://youtu.be/M0egyNvsN-Y?feature=shared">How to Create Memory Game in JavaScript</a></li>
+<li><a href="https://youtu.be/dqqxkrKhfS4?feature=shared">Memory Game Javascript Project | HTML, CSS, Javascript</a></li>
+<li><a href="https://youtu.be/li7FzDHYZpc?si=lMXmFcFSBecveqW5">Javascript Promises vs Async Await EXPLIQUÉ (en 5 minutes)</a></li>
+<li><a href="https://youtu.be/spvYqO_Kp9Q?si=8G5HON0rrkSJrB2p">Async Await vs. Promises - JavaScript Tutorial for beginners</a></li>
+<li><a href="https://youtu.be/TnhCX0KkPqs?si=F5cc_ZwpgwZura7h">JavaScript Promises -- Tutorial for Beginners</a></li>
 </ul>
 
 
