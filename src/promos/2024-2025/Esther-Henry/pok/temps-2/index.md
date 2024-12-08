@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "Création d’un outil de sensibilisation aux problématiques de genre dans le domaine des SI"
+title: "Études des stéréotypes de genre dans le domaine des SI"
 authors:
   - Esther Henry
 
