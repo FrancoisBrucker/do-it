@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "Études des stéréotypes de genre dans le domaine des SI"
+title: "Étude des stéréotypes de genre dans le domaine des SI"
 authors:
   - Esther Henry
 
