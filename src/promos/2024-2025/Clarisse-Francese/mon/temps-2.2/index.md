@@ -33,7 +33,7 @@ MON débutant, aucun prérequis
 - [Introduction](#def)
 - [Évolution des modèles d’organisation à travers l’histoire](#ev)
 - [Les pilliers du stade évolutif opale](#op)
-- [Exemples d'entreprises opale](#exemple)
+- [Méthodologie de recherche et exemples d'entreprises opale](#exemple)
 - [Emergence des entreprises opale](#emer)
 - [Critiques du modèle](#cri)
 - [Conclusion](#ccl)
@@ -184,9 +184,29 @@ Plutôt que de se focaliser sur des objectifs rigides comme le profit, ces organ
 | **Projet individuel**           | Recrutement, formation et évaluation servent à vérifier que le projet de l’individu et la mission de l’entreprise sont en phase. | Ce n’est pas à l’entreprise d’aider les salariés à définir ce à quoi ils sont appelés. |
 {% enddetails %}
 
-<h2 id=exemple> 🔎 Exemples d'entreprises opale</h2>
+<h2 id=exemple> 🔎 Méthodologie de recherche et exemples d'entreprises opale</h2>
 
-Blabla
+Pour trouver toutes les caractéristiques du modèle opale, Frédéric Laloux a d’abord sélectionné des organisations correspondant à ses critères (**autogouvernance, plénitude, raison d’être évolutive**), avec une taille minimale de **100 employés** et une expérience Opale d’**au moins 5 ans**. Laloux a également cherché une **diversité sectorielle** (industrie, santé, éducation, etc.) et **géographique**, pour montrer que le modèle Opale transcende les contextes culturels. Enfin, ces entreprises devaient afficher des **performances mesurables**, telles que des résultats financiers solides ou une forte satisfaction des employés et des clients, prouvant que ce modèle peut allier éthique et succès. Il a alors collecté des données variées : **documents internes**, **données publiques** et **entretiens approfondis** avec dirigeants et employés. Il a également **visité certaines entreprises** pour observer leur fonctionnement. En analysant **45 pratiques clés** (**prise de décision**, **gestion RH**, **interactions quotidiennes**), il a identifié des **points communs** et **principes récurrents**, synthétisant ainsi le paradigme Opale comme un modèle **applicable** et **performant** dans divers contextes. Voici 2 entreprises qu'il utilise souvent comme exemple :
+
+### 1. **Buurtzorg (Pays-Bas)**  
+**Secteur** : Soins à domicile  
+1. **Équipes auto-organisées** :  
+   Chaque équipe gère l’ensemble des tâches, de la planification des visites à la gestion budgétaire. Une équipe peut réorganiser ses horaires pour répondre aux besoins changeants des patients, sans demander l’approbation d’un supérieur. 
+2. **Utilisation de la technologie pour simplifier les tâches** :  
+   Buurtzorg utilise une plateforme numérique intuitive qui facilite l’administration et réduit la paperasse, permettant aux infirmiers de passer plus de temps auprès des patients.  
+3. **Soutien par des coachs et non des managers** :  
+   Les équipes reçoivent un accompagnement de coachs externes qui les aident à surmonter les défis organisationnels ou relationnels. Si une équipe rencontre un conflit interne, elle peut faire appel à un coach pour faciliter une résolution collaborative.  
+
+### 2. **Morning Star (États-Unis)**  
+**Secteur** : Agroalimentaire (transformation de tomates)  
+1. **Lettres d'engagement personnel** :  
+   Chaque employé rédige une lettre annuelle définissant ses objectifs et responsabilités en concertation avec ses collègues. Cela remplace les descriptions de poste fixes et rigides. 
+2. **Prise de décision par consentement** :  
+   Les décisions sont prises directement par les employés concernés, souvent en consultation avec les parties prenantes, sans validation hiérarchique. 
+3. **Responsabilité collective dans les investissements** :  
+   Les employés peuvent initier et justifier des dépenses nécessaires pour améliorer les opérations, en se coordonnant avec les équipes impactées. Un opérateur de machine peut décider d'acheter un nouvel équipement après avoir consulté les collègues impactés par ce changement.  
+
+On voit bien à travers ces 2 entreprises qu'elles ont des pratiques similaires caractéristique du modèle opale pour renforcer l’autonomie, l’engagement et la performance collective.
 
 <h2 id=emer> 📈 Emergence des entreprises opale</h2>
 
@@ -227,7 +247,15 @@ de chaque réunion, ou à tout moment de la réunion, un membre de l’équipe p
 
 ### Comment transformer une entreprise d'un autre paradigme en une entreprise Opale ?
 
-Blabla
+Pour illustrer, je vais détailler l'exemple de **FAVI (France)** qui est **passée du stade de la réussite orange au stade opale**. FAVI est une entreprise de fonderie spécialisée dans la fabrication de pièces pour l’automobile. Elle fonctionnait selon un modèle hiérarchique classique, avec des managers supervisant les équipes et prenant des décisions concernant la production, la gestion des clients et les objectifs de l’entreprise. Les ouvriers étaient responsables de l’exécution des tâches mais n’avaient que peu de pouvoir décisionnel. **Jean-François Zobrist** a pris la tête de FAVI et a joué un rôle clé dans sa transformation en entreprise Opale en apportant une vision fondée sur la **confiance** et l’**autonomie**. Convaincu que les employés sont naturellement responsables et motivés, il a introduit des pratiques radicales pour libérer le potentiel de chacun.
+
+L’une de ses premières décisions a été de **supprimer les chefs d’équipe** et de redistribuer leurs responsabilités aux ouvriers eux-mêmes. Il a structuré l’entreprise en petites **équipes autonomes**, chacune responsable de ses propres **clients** et décisions. Cette autonomie s’étendait à des aspects critiques comme la **gestion des commandes**, les ajustements de production et même les négociations avec les clients. Cela a permis une prise de décision rapide et une amélioration de la **satisfaction client**.
+
+Zobrist a également instauré une culture de **collaboration** en valorisant des pratiques innovantes comme le **recrutement collectif**, où les équipes choisissaient leurs nouveaux membres, et le **feedback continu**, où les performances étaient évaluées en groupe. Il a favorisé un environnement où les employés pouvaient organiser leurs horaires de manière **flexible**, tout en assumant collectivement la responsabilité de leurs résultats.
+
+En parallèle, il a aligné l’entreprise sur une **raison d’être** claire et inspirante : servir ses clients avec **excellence** tout en renforçant le **bien-être** des employés. Cette mission guidait toutes les décisions, bien au-delà de la simple quête de **profit**. Zobrist a montré l’exemple en incarnant cette vision : il s’est retiré des décisions opérationnelles, donnant l’espace nécessaire aux équipes pour démontrer leur autonomie.
+
+Face aux **résistances au changement**, notamment de la part des cadres habitués au modèle hiérarchique, Zobrist a fait preuve de **patience** et d’**adaptation**. Il s’appuyait sur les **résultats concrets** obtenus par les équipes pour convaincre les sceptiques, montrant ainsi que son modèle n’était pas qu’une théorie, mais une pratique **viable** et **performante**.
 
 <h2 id=cri> Critiques du modèle</h2>
 
@@ -243,3 +271,4 @@ Blabla
 | -------- | -------- |-------- |
 | Samedi 07/12 | 2h | relecture début livre, Évolution des modèles d’organisation à travers l’histoire |
 | Dimanche 08/12 | 4h | rédaction de présentation du stade évolutif opale et condition d'émergence |
+| Lundi 09/12 | 1h30 | rédaction des exemples d'entreprises opales |
