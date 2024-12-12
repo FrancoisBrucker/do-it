@@ -1,19 +1,19 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du premier MON du temps 3"
+title: "SMQ et ISO 9001 : Quels sont les principes fondamentaux du mnagement de la qualité et de la gestion documentaire ?"
 authors:
   - Damien WOLBERT
 
-date: 1971-02-01
+date: 2024-12-12
 tags: 
   - "temps 3"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "L'objectif de ce MON est d'énoncer les principes fondamentaux de la qualité au sein des entreprises. Cette étude se fera par le prisme de la norme ISO 9001 attestant du niveau du SMQ (système de management de la qualité) d'une entreprise. On abordera également les enjeux de la gestion documentaire et quelques bonnes pratiques à mettre en place."
 ---
 
 {% prerequis %}
-
+ 
 Liste des prérequis du POK ET/OU MON
 
 {% endprerequis %}

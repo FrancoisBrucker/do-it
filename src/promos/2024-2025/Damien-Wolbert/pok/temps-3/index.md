@@ -1,16 +1,16 @@
 ---
 layout: layout/pok.njk
 
-title: "Titre du POK du temps 3"
+title: "GdP : outils, plannings, reportings... Que chosisir en fonction de la typologie de projet pour un ingénieur généraliste?"
 authors:
   - Damien WOLBERT
 
-date: 1971-03-01
+date: 2024-12-12
 
 tags: 
   - "temps 3"
 
-résumé: Un POK traitant d'un sujet.
+résumé: L'objectif de ce POK est de construire un guide d'aide à la décision lors du cadrage de projets divers. Il permettra de choisir le type de documents à mettre en place et/ou à choisir pour réaliser le suivi d'un projet. 
 ---
 
 {% prerequis %}
@@ -29,38 +29,38 @@ Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de 
 - le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
 - les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
 
-## Tâches
+## Brainstorming d'avant cadrage
 
-### Sprints
+### Livrable
+Une page notion, mindmap, processus, google formular ou fichier excel permettant rapidement et graphiquement de choisir les différents outils à mettre en place pour la gestion d'un projet en fonction de ses caractéristiques.
 
-But final.
+### Questionnements à avoir
 
-#### Sprint 1
+- Quels outils questionner ?
+- Qu'apportent ces outils ?
+- Objetifs des projets : livrables ? enjeux ?
+- Les enjeux projet : temps, importance, criticité, parties prenantes... ?
+- Biblio sur le sujet
+- Recueillir l'avis de professionnels : **FORMULAIRE A FAIRE VALIDER ET A REALISER *TRES* RAPIDEMENT**
+  - Catégorisation des projets
+  - Enjeux des projets et du cadrage
+  - Critères de mode de gestion et hiérarchie
+  - Définition des "projet" (certaines tâches ne sont-elles pas des projets habituels ???)
+  - Proposer des exemples à catégoriser
+  - Les projets "d'auto-formation"
+  
+### Remarques
 
-Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
+- Intégrer des enjeux environnementaux ?
+  - Quand prendre en compte l'impact du projet : quand doit-on le calculer ?
+- Intégrer les enjeux de la gestion documentaire ?
+  - Quels documents à garder ou non ?
+  - Typologie de documents ?
+  - Attentes hiérarchiques ?
+  - Pérénité du document.
+- Enjeux des REX :
+  - critères communs aux différents projet ?
+  - Où les garder ?
+  - S'assurer qu'ils soient lus ?
 
-- [ ] Une tâche non réalisée
-- [x] Une tâche réalisée
-
-#### Sprint 2
-
-- [ ] Une tâche non réalisée
-- [x] Une tâche réalisée
-
-Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
-
-### Horodatage
-
-Toutes les séances et le nombre d'heure que l'on y a passé.
-
-| Date | Heures passées | Indications |
-| -------- | -------- |-------- |
-| Mardi 27/08  | 1H  | Travail sur la trame du site |
-
-## Contenu
-
-Le contenu du POK.
-
-### Premier Sprint
-
-### Second Sprint
+### Points d'attention
