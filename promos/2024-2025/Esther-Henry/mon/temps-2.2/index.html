@@ -138,16 +138,8 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Liste des prérequis du POK ET/OU MON</p>
+<p>Aucun prérequis</p>
 </div></div>
-<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
-<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
-</svg>
-<div class="pl-8 mr-8">
-<p>Les lien utiles pour la compréhension de celui-ci.</p>
-</div></div>
-
 <h2>Découvrir VBA</h2>
 <h3>Contexte</h3>
 <p>Lors de mon précédent stage, afin d’optimiser un outil de travail sur Excel, j’ai dû créer une macro. N'ayant aucune connaissance en VBA, je l’ai réalisée en utilisant l’enregistrement automatique, ce qui complique la modification et la maintenance ultérieures.</p>
@@ -160,7 +152,7 @@
 <p>Là où, dans mon MON 2.1, j’avais trouvé le cours d’Excel Pratique parfois un peu superficiel sur certaines notions (du moins à mon niveau), j’ai trouvé que leur cours de VBA est vraiment complet et permet aux débutantes comme moi de bien comprendre les différents concepts et de les manipuler simplement sur de petits exemples.</p>
 <p>Je recommande donc ce cours pour les personnes comme moi, n’étant pas des pros de l’informatique, mais maîtrisant déjà bien les fondamentaux d’Excel.</p>
 <h2>S’entraîner sur un exemple professionnalisant</h2>
-<h3>Contexte</h3>
+<h3>Consignes</h3>
 <p>Mon objectif pour ce MON était à la fois de découvrir les bases du VBA, mais aussi de pouvoir les appliquer à un cas simple auquel j’ai été plusieurs fois confrontée dans le monde professionnel : j’aimerais savoir automatiser des tâches afin de faciliter le traitement de certaines données sur Excel, notamment pour faire passer des données d’un logiciel à un autre.</p>
 <p>Cependant, dans l’optique de pouvoir présenter mon travail sur le site, je ne pouvais pas le faire sur des données réelles de mon entreprise. J’ai alors choisi de demander à ChatGPT de me fournir un exercice pratique via le prompt suivant :</p>
 <p><img src="images/Prompt.png" alt="Prompt"></p>
@@ -209,6 +201,181 @@ Ajoutez une colonne &quot;Catégorie&quot; en récupérant cette information dep
 <li>Fournissez un résumé dans la feuille &quot;Documentation&quot; décrivant le fonctionnement de votre programme.</li>
 </ul>
 </div></div>
+<h3>Résolution</h3>
+<p>J’ai résolu ce problème par étapes :</p>
+<h4>Suppression des colonnes inutiles :</h4>
+<pre class="language-vba"><code class="language-vba"><span class="token keyword">Sub</span> effacer<span class="token punctuation">(</span><span class="token punctuation">)</span>
+ 
+<span class="token comment">'Sélection des colonnes à supprimer</span>
+Columns<span class="token punctuation">(</span><span class="token string">"B"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Clear
+Columns<span class="token punctuation">(</span><span class="token string">"D:F"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Clear
+<span class="token keyword">End</span> <span class="token keyword">Sub</span></code></pre>
+<p>On passe alors de :</p>
+<p><img src="images/image001.png" alt="Image 1"></p>
+<p>À :</p>
+<p><img src="images/image002.png" alt="Image 2"></p>
+<pre class="language-vba"><code class="language-vba"><span class="token keyword">Sub</span> deplacer<span class="token punctuation">(</span><span class="token punctuation">)</span>
+ 
+    <span class="token comment">' Selectioner et deplacer les colonnes restantes pour les rassembler</span>
+    Columns<span class="token punctuation">(</span><span class="token string">"C"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Cut Destination<span class="token punctuation">:</span><span class="token operator">=</span>Columns<span class="token punctuation">(</span><span class="token string">"B"</span><span class="token punctuation">)</span>
+    Columns<span class="token punctuation">(</span><span class="token string">"G"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Cut Destination<span class="token punctuation">:</span><span class="token operator">=</span>Columns<span class="token punctuation">(</span><span class="token string">"C"</span><span class="token punctuation">)</span> 
+<span class="token keyword">End</span> <span class="token keyword">Sub</span></code></pre>
+<p>On passe alors à :</p>
+<p><img src="images/image003.png" alt="Image 3"></p>
+<h4>Validation des données :</h4>
+<p>On commence par effacer le contenu de chacune des lignes n'ayant pas une référence existante dans le référentiel produit :</p>
+<pre class="language-vba"><code class="language-vba"><span class="token keyword">Sub</span> reference<span class="token punctuation">(</span><span class="token punctuation">)</span>
+ 
+    <span class="token comment">'Vérifier que chaque reference produit existe dans le referentiel</span>
+    <span class="token keyword">Dim</span> p <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">,</span> r <span class="token keyword">As</span> <span class="token keyword">Integer</span>
+    <span class="token keyword">Dim</span> nbligne <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">,</span> nbref <span class="token keyword">As</span> <span class="token keyword">Integer</span>
+    <span class="token keyword">Dim</span> exist <span class="token keyword">As</span> <span class="token keyword">Boolean</span>
+    <span class="token keyword">Dim</span> wsBrutes <span class="token keyword">As</span> Worksheet
+    <span class="token keyword">Dim</span> wsProduits <span class="token keyword">As</span> Worksheet
+ 
+    <span class="token comment">' Définir les feuilles</span>
+    <span class="token keyword">Set</span> wsBrutes <span class="token operator">=</span> ThisWorkbook<span class="token punctuation">.</span>Sheets<span class="token punctuation">(</span><span class="token string">"Données Brutes"</span><span class="token punctuation">)</span>
+    <span class="token keyword">Set</span> wsProduits <span class="token operator">=</span> Workbooks<span class="token punctuation">(</span><span class="token string">"Produits_100.xlsx"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Sheets<span class="token punctuation">(</span><span class="token string">"Produits"</span><span class="token punctuation">)</span>
+ 
+    <span class="token comment">' Nombre de lignes</span>
+    nbligne <span class="token operator">=</span> wsBrutes<span class="token punctuation">.</span>Cells<span class="token punctuation">(</span>wsBrutes<span class="token punctuation">.</span>Rows<span class="token punctuation">.</span>Count<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">End</span><span class="token punctuation">(</span>xlUp<span class="token punctuation">)</span><span class="token punctuation">.</span>Row
+    nbref <span class="token operator">=</span> wsProduits<span class="token punctuation">.</span>Cells<span class="token punctuation">(</span>wsProduits<span class="token punctuation">.</span>Rows<span class="token punctuation">.</span>Count<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">End</span><span class="token punctuation">(</span>xlUp<span class="token punctuation">)</span><span class="token punctuation">.</span>Row
+   
+    <span class="token comment">' Boucle sur chaque ligne des données brutes</span>
+    <span class="token keyword">For</span> p <span class="token operator">=</span> <span class="token number">2</span> <span class="token keyword">To</span> nbligne
+    exist <span class="token operator">=</span> <span class="token boolean">False</span>
+        <span class="token comment">' Vérification dans le référentiel</span>
+        <span class="token keyword">For</span> r <span class="token operator">=</span> <span class="token number">2</span> <span class="token keyword">To</span> nbref
+            <span class="token keyword">If</span> wsBrutes<span class="token punctuation">.</span>Cells<span class="token punctuation">(</span>p<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token operator">=</span> wsProduits<span class="token punctuation">.</span>Cells<span class="token punctuation">(</span>r<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token keyword">Then</span>
+                exist <span class="token operator">=</span> <span class="token boolean">True</span>
+            <span class="token keyword">Exit</span> <span class="token keyword">For</span> 
+            <span class="token keyword">End</span> <span class="token keyword">If</span>
+        <span class="token keyword">Next</span> r
+        <span class="token comment">' Si la référence n'existe pas : effacer le contenu de la ligne</span>
+        <span class="token keyword">If</span> <span class="token keyword">Not</span> exist <span class="token keyword">Then</span>
+            wsBrutes<span class="token punctuation">.</span>Rows<span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">.</span>Clear        <span class="token keyword">End</span> <span class="token keyword">If</span>
+    <span class="token keyword">Next</span> p
+   
+    <span class="token comment">' Message de fin</span>
+    MsgBox <span class="token string">"Vérification terminée"</span><span class="token punctuation">,</span> vbInformation
+   
+<span class="token keyword">End</span> <span class="token keyword">Sub</span></code></pre>
+<p>On passe alors à :</p>
+<p><img src="images/image004.png" alt="Image 4"></p>
+<p>Puis on vient supprimer les lignes vides :</p>
+<pre class="language-vba"><code class="language-vba"><span class="token keyword">Sub</span> reorganiser<span class="token punctuation">(</span><span class="token punctuation">)</span>
+ 
+<span class="token comment">'Vérifier que chaque reference produit existe dans le referentiel</span>
+    <span class="token keyword">Dim</span> p <span class="token keyword">As</span> <span class="token keyword">Integer</span>
+    <span class="token keyword">Dim</span> nbligne <span class="token keyword">As</span> <span class="token keyword">Integer</span>
+    <span class="token keyword">Dim</span> wsBrutes <span class="token keyword">As</span> Worksheet
+ 
+    <span class="token comment">' Définir les feuilles</span>
+    <span class="token keyword">Set</span> wsBrutes <span class="token operator">=</span> ThisWorkbook<span class="token punctuation">.</span>Sheets<span class="token punctuation">(</span><span class="token string">"Données Brutes"</span><span class="token punctuation">)</span>
+ 
+    <span class="token comment">' Nombre de lignes</span>
+    nbligne <span class="token operator">=</span> wsBrutes<span class="token punctuation">.</span>Cells<span class="token punctuation">(</span>wsBrutes<span class="token punctuation">.</span>Rows<span class="token punctuation">.</span>Count<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">End</span><span class="token punctuation">(</span>xlUp<span class="token punctuation">)</span><span class="token punctuation">.</span>Row
+ 
+    <span class="token comment">' Parcourir les lignes de bas en haut</span>
+    <span class="token keyword">For</span> p <span class="token operator">=</span> nbligne <span class="token keyword">To</span> <span class="token number">2</span> <span class="token keyword">Step</span> <span class="token operator">-</span><span class="token number">1</span>
+        <span class="token keyword">If</span> wsBrutes<span class="token punctuation">.</span>Cells<span class="token punctuation">(</span>p<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token operator">=</span> <span class="token string">""</span> <span class="token keyword">Then</span>
+            wsBrutes<span class="token punctuation">.</span>Rows<span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">.</span>Delete
+        <span class="token keyword">End</span> <span class="token keyword">If</span>
+    <span class="token keyword">Next</span> p
+   
+    
+<span class="token comment">' Message de fin</span>
+    MsgBox <span class="token string">"Lignes supprimées"</span>
+<span class="token keyword">End</span> <span class="token keyword">Sub</span></code></pre>
+<p>Ce qui donne :</p>
+<p><img src="images/image005.png" alt="Image 5"></p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Ici, pour ne pas créer de décalage en raison de la suppression des lignes, il est essentiel de commencer par la dernière ligne puis de remonter, d'où le “Step -1” dans la boucle For.</p>
+</div></div>
+<h4>Mise en forme des dates :</h4>
+<pre class="language-vba"><code class="language-vba"><span class="token keyword">Sub</span> DateCorrecte<span class="token punctuation">(</span><span class="token punctuation">)</span>
+ 
+<span class="token keyword">Dim</span> p <span class="token keyword">As</span> <span class="token keyword">Integer</span>
+<span class="token keyword">Dim</span> nbligne <span class="token keyword">As</span> <span class="token keyword">Integer</span>
+   
+    <span class="token keyword">Dim</span> wsBrutes <span class="token keyword">As</span> Worksheet
+ 
+    <span class="token comment">' Définir les feuilles</span>
+    <span class="token keyword">Set</span> wsBrutes <span class="token operator">=</span> ThisWorkbook<span class="token punctuation">.</span>Sheets<span class="token punctuation">(</span><span class="token string">"Données Brutes"</span><span class="token punctuation">)</span>
+ 
+    <span class="token comment">' Nombre de lignes</span>
+    nbligne <span class="token operator">=</span> wsBrutes<span class="token punctuation">.</span>Cells<span class="token punctuation">(</span>wsBrutes<span class="token punctuation">.</span>Rows<span class="token punctuation">.</span>Count<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">End</span><span class="token punctuation">(</span>xlUp<span class="token punctuation">)</span><span class="token punctuation">.</span>Row
+   
+    <span class="token comment">'Parcourir la colonne A</span>
+    <span class="token keyword">For</span> p <span class="token operator">=</span> <span class="token number">2</span> <span class="token keyword">To</span> nbligne
+        wsBrutes<span class="token punctuation">.</span>Cells<span class="token punctuation">(</span>p<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token operator">=</span> Format<span class="token punctuation">(</span>wsBrutes<span class="token punctuation">.</span>Cells<span class="token punctuation">(</span>p<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value<span class="token punctuation">,</span> <span class="token string">"dd/mm/yyyy"</span><span class="token punctuation">)</span>
+    <span class="token keyword">Next</span> p
+   
+<span class="token comment">' Message de fin</span>
+    MsgBox <span class="token string">"Date corrigées"</span>
+<span class="token keyword">End</span> <span class="token keyword">Sub</span></code></pre>
+<p>On passe alors à :</p>
+<p><img src="images/image006.png" alt="Image 6"></p>
+<h4>Ajout de colonnes calculées :</h4>
+<pre class="language-vba"><code class="language-vba"><span class="token keyword">Sub</span> AjoutCategories<span class="token punctuation">(</span><span class="token punctuation">)</span>
+ 
+    <span class="token comment">'Vérifier que chaque reference produit existe dans le referentiel</span>
+    <span class="token keyword">Dim</span> p <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">,</span> r <span class="token keyword">As</span> <span class="token keyword">Integer</span>
+    <span class="token keyword">Dim</span> dernierbrut <span class="token keyword">As</span> <span class="token keyword">Long</span><span class="token punctuation">,</span> dernierproduit <span class="token keyword">As</span> <span class="token keyword">Long</span>
+    <span class="token keyword">Dim</span> trouve <span class="token keyword">As</span> <span class="token keyword">Boolean</span>
+    <span class="token keyword">Dim</span> wsBrutes <span class="token keyword">As</span> Worksheet
+    <span class="token keyword">Dim</span> wsProduits <span class="token keyword">As</span> Worksheet
+ 
+    <span class="token comment">' Définir les feuilles</span>
+    <span class="token keyword">Set</span> wsBrutes <span class="token operator">=</span> ThisWorkbook<span class="token punctuation">.</span>Sheets<span class="token punctuation">(</span><span class="token string">"Données Brutes"</span><span class="token punctuation">)</span>
+    <span class="token keyword">Set</span> wsProduits <span class="token operator">=</span> Workbooks<span class="token punctuation">(</span><span class="token string">"Produits_100.xlsx"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Sheets<span class="token punctuation">(</span><span class="token string">"Produits"</span><span class="token punctuation">)</span>
+ 
+   
+    <span class="token comment">' Dernières lignes dans les deux feuilles</span>
+    dernierBrutes <span class="token operator">=</span> wsBrutes<span class="token punctuation">.</span>Cells<span class="token punctuation">(</span>wsBrutes<span class="token punctuation">.</span>Rows<span class="token punctuation">.</span>Count<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">End</span><span class="token punctuation">(</span>xlUp<span class="token punctuation">)</span><span class="token punctuation">.</span>Row
+    dernierProduits <span class="token operator">=</span> wsProduits<span class="token punctuation">.</span>Cells<span class="token punctuation">(</span>wsProduits<span class="token punctuation">.</span>Rows<span class="token punctuation">.</span>Count<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">End</span><span class="token punctuation">(</span>xlUp<span class="token punctuation">)</span><span class="token punctuation">.</span>Row
+ 
+    <span class="token comment">' Ajouter un en-tête Catégorie dans la feuille Données Brutes</span>
+    wsBrutes<span class="token punctuation">.</span>Cells<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token operator">=</span> <span class="token string">"Catégorie"</span>
+ 
+    <span class="token comment">' Parcourir chaque référence produit</span>
+    <span class="token keyword">For</span> i <span class="token operator">=</span> <span class="token number">2</span> <span class="token keyword">To</span> dernierBrutes
+    refProduit <span class="token operator">=</span> wsBrutes<span class="token punctuation">.</span>Cells<span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value
+      categorieTrouvee <span class="token operator">=</span> <span class="token boolean">False</span>
+    <span class="token comment">' Chercher la catégorie correspondante dans "Produits"</span>
+        <span class="token keyword">For</span> j <span class="token operator">=</span> <span class="token number">2</span> <span class="token keyword">To</span> dernierProduits
+           
+            <span class="token keyword">If</span> wsProduits<span class="token punctuation">.</span>Cells<span class="token punctuation">(</span>j<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token operator">=</span> refProduit <span class="token keyword">Then</span>
+                wsBrutes<span class="token punctuation">.</span>Cells<span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token operator">=</span> wsProduits<span class="token punctuation">.</span>Cells<span class="token punctuation">(</span>j<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value
+                categorieTrouvee <span class="token operator">=</span> <span class="token boolean">True</span>
+                <span class="token keyword">Exit</span> <span class="token keyword">For</span>
+            <span class="token keyword">End</span> <span class="token keyword">If</span>
+        <span class="token keyword">Next</span> j
+       
+        <span class="token comment">' Gérer les cas où la catégorie n'existe pas</span>
+        <span class="token keyword">If</span> <span class="token keyword">Not</span> categorieTrouvee <span class="token keyword">Then</span>
+            wsBrutes<span class="token punctuation">.</span>Cells<span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Value <span class="token operator">=</span> <span class="token string">"Inconnue"</span>
+        <span class="token keyword">End</span> <span class="token keyword">If</span>
+    <span class="token keyword">Next</span> i
+<span class="token comment">' Message de confirmation</span>
+MsgBox <span class="token string">"Colonne 'Catégorie' ajoutée avec succès"</span><span class="token punctuation">,</span> vbInformation
+<span class="token keyword">End</span> <span class="token keyword">Sub</span></code></pre>
+<p>On passe alors au résultat final :</p>
+<p><img src="images/image007.png" alt="Image 7"></p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Autant VBA permet d'automatiser pas mal d'opérations, mais je pense qu'ici une rechercheV (qu'on aurait pu enregistrer à la main) aurait sûrement été plus efficace. Le résultat est le même, mais coder en VBA est assez complexe pour une fonction déjà existante sur Excel.</p>
+</div></div>
+<h3>Conclusion</h3>
+<p>Je suis contente d’avoir pu apprendre à coder en VBA et de m’être exercée sur un exemple simple mais assez <strong>concret</strong> et similaire à ce pour quoi VBA pourrait être utile dans ma vie professionnelle.</p>
+<p>J’ai pu balayer les <strong>concepts principaux</strong> et les pratiquer, même si je suis bien consciente qu'il y aurait moyen de rendre cela plus efficace (par exemple, en imbriquant les fonctions pour tout faire en une seule étape). Cependant, je suis maintenant <strong>capable d’écrire quelques lignes de VBA pour automatiser des tâches répétitives</strong> du quotidien et surtout de pouvoir maintenir ces programmes en cas de changement de données.</p>
 <h3>Horodatage</h3>
 <table>
 <thead>
@@ -258,6 +425,16 @@ Ajoutez une colonne &quot;Catégorie&quot; en récupérant cette information dep
 <td>Samedi 30/11</td>
 <td>0h30</td>
 <td>Les événements</td>
+</tr>
+<tr>
+<td>Dimanche 01/12</td>
+<td>2h</td>
+<td>Création exercice &amp; début résolution</td>
+</tr>
+<tr>
+<td>Jeudi  12/12</td>
+<td>2h</td>
+<td>Fin exercice</td>
 </tr>
 </tbody>
 </table>
