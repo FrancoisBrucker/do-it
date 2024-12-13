@@ -113,7 +113,7 @@
 
         <p class="mb-4 text-lg">
 
-                MON sur Docker
+                MON sur Docker, dockerisation d'un projet
 
         </p>
 
@@ -146,15 +146,125 @@
 </svg>
 <div class="pl-8 mr-8">
 <p>Les lien utiles pour la compréhension de celui-ci.
-<a href="https://francoisbrucker.github.io/do-it/promos/2022-2023/Bilgi-Tuncay/mon/Docker/">MON de Tuncay Bilgi</a>
-<a href="https://francoisbrucker.github.io/do-it/promos/2023-2024/Victor-Ory/mon/Docker/">MON de Victor Ory</a>
+<a href="https://francoisbrucker.github.io/do-it/promos/2022-2023/Bilgi-Tuncay/mon/Docker/">MON de Tuncay Bilgi</a>, le
+<a href="https://francoisbrucker.github.io/do-it/promos/2023-2024/Victor-Ory/mon/Docker/">MON de Victor Ory</a> et le
 <a href="https://francoisbrucker.github.io/do-it/promos/2023-2024/Louradou-Arthur/mon/temps-2.1/">MON d'Arthur Louradou</a></p>
 </div></div>
 
-<p>Un MON pour se familiariser avec Docker. J'ai déjà utilisé un peu Docker mais je souhaite approfondir mes connaissances pour monter en compétences DevOps.</p>
+<p>Un MON pour se familiariser avec Docker. J'ai déjà utilisé un peu Docker pendant mon stage mais je souhaite approfondir mes connaissances pour monter en compétences DevOps.</p>
 <h2>Contenu</h2>
-<p>Le contenu du MON.</p>
-<p><a href="https://lightcode.fr/article/introduction-docker-serveur/">https://lightcode.fr/article/introduction-docker-serveur/</a></p>
+<p>Dans un premier temps, j'installe <a href="https://docs.docker.com/desktop/setup/install/windows-install/">Docker Desktop</a> sur mon Windows, ce qui me servira à orchestrer mes conteneurs. Je manque de stockage sur ma machine et j'ai eu des problèmes avec WSL mais j'ai réussi à lancer Docker Desktop pour travailler dessus. J'ai lu le <a href="https://francoisbrucker.github.io/do-it/promos/2022-2023/Bilgi-Tuncay/mon/Docker/">MON de Tuncay</a> pour me familiariser avec Docker puis je me suis lancée le défi de dockeriser mon application web de mon portefolio qui consiste à un frontend React et un backend Fastapi avec un script NodeJs pour orchestrer le tout. Je vais créer seulement deux conteneurs : un pour le frontend et un pour le backend.</p>
+<h4>a. Structure de mon projet</h4>
+<p>Voici la structure de mon projet :</p>
+<pre><code>/portfolio
+    /frontend (ReactJS)
+    /frontend/Dockerfile
+    /backend (FastAPI)
+    /backend/Dockerfile
+  package.json (Scripts Node.js pour démarrer les serveurs)
+  docker-compose.yml
+  .dockerignore
+  Dockerfile
+</code></pre>
+<h4>b. Dockeriser le frontend (ReactJS)</h4>
+<p>Je crée un <code>Dockerfile</code> dans le dossier <code>frontend</code> :</p>
+<pre class="language-dockerfile"><code class="language-dockerfile"><span class="token comment"># Utilisation de l'image Node.js officielle pour construire l'application</span>
+<span class="token instruction"><span class="token keyword">FROM</span> node:18</span>
+
+<span class="token comment"># Définir le répertoire de travail</span>
+<span class="token instruction"><span class="token keyword">WORKDIR</span> /app</span>
+
+<span class="token comment"># Copier les fichiers package.json et package-lock.json</span>
+<span class="token instruction"><span class="token keyword">COPY</span> package.json package-lock.json ./</span>
+
+<span class="token comment"># Installer les dépendances</span>
+<span class="token instruction"><span class="token keyword">RUN</span> npm install</span>
+
+<span class="token comment"># Copier le reste des fichiers de l'application React</span>
+<span class="token instruction"><span class="token keyword">COPY</span> . .</span>
+
+<span class="token comment"># Exposer le port utilisé par le serveur React (généralement 3000)</span>
+<span class="token instruction"><span class="token keyword">EXPOSE</span> 3000</span>
+
+<span class="token comment"># Lancer le serveur de développement React</span>
+<span class="token instruction"><span class="token keyword">CMD</span> [<span class="token string">"npm"</span>, <span class="token string">"start"</span>]</span>
+</code></pre>
+<h4>c. Dockeriser le backend (FastAPI)</h4>
+<p>Je crée un <code>Dockerfile</code> dans le dossier <code>backend</code> :</p>
+<pre class="language-dockerfile"><code class="language-dockerfile"><span class="token instruction"><span class="token keyword">FROM</span> python:3.10-slim</span>
+
+<span class="token comment"># Crée un répertoire pour l'application</span>
+<span class="token instruction"><span class="token keyword">WORKDIR</span> /app</span>
+
+<span class="token comment"># Copie les fichiers de l'application dans le conteneur</span>
+<span class="token instruction"><span class="token keyword">COPY</span> . /app</span>
+
+<span class="token comment"># Installe les dépendances</span>
+<span class="token instruction"><span class="token keyword">RUN</span> pip install --no-cache-dir -r requirements.txt</span>
+
+<span class="token comment"># Expose le port</span>
+<span class="token instruction"><span class="token keyword">EXPOSE</span> 8000</span>
+
+<span class="token comment"># Démarrer Uvicorn en utilisant l'environnement virtuel</span>
+<span class="token instruction"><span class="token keyword">CMD</span> [<span class="token string">"uvicorn"</span>, <span class="token string">"api.main:app"</span>, <span class="token string">"--reload"</span>]</span>
+</code></pre>
+<p>Je n'ai pas besoin de créer de venv car Docker installe directement les dépendances dans le conteneur.</p>
+<h4>d. Créer le fichier <code>.dockerignore</code></h4>
+<p>Dans chaque dossier, je crée un fichier <code>.dockerignore</code> pour éviter de copier des fichiers inutiles dans l'image Docker. Exemple pour <code>frontend/.dockerignore</code> :</p>
+<pre><code>node_modules
+build
+</code></pre>
+<h3>e. Créer le fichier <code>docker-compose.yml</code></h3>
+<p>À la racine du projet, je crée un fichier <code>docker-compose.yml</code> pour orchestrer les conteneurs du projet :</p>
+<pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">'3.8'</span>
+
+<span class="token key atrule">services</span><span class="token punctuation">:</span>
+  <span class="token key atrule">frontend</span><span class="token punctuation">:</span>
+    <span class="token key atrule">build</span><span class="token punctuation">:</span>
+      <span class="token key atrule">context</span><span class="token punctuation">:</span> ./frontend
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">"3000:3000"</span>
+    <span class="token key atrule">networks</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> app<span class="token punctuation">-</span>network
+
+  <span class="token key atrule">backend</span><span class="token punctuation">:</span>
+    <span class="token key atrule">build</span><span class="token punctuation">:</span>
+      <span class="token key atrule">context</span><span class="token punctuation">:</span> ./backend
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">"8000:8000"</span>
+    <span class="token key atrule">networks</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> app<span class="token punctuation">-</span>network
+  <span class="token key atrule">networks</span><span class="token punctuation">:</span>
+    <span class="token key atrule">app-network</span><span class="token punctuation">:</span>
+      <span class="token key atrule">driver</span><span class="token punctuation">:</span> bridge</code></pre>
+<p>J'ai lancé <code>docker-compose build</code> dans mon terminal et dans un premier temps ça prenait beaucoup trop de temps tout simplement car j'ai oublié le .dockerignore donc j'étais en train de créer des images Docker des modules Node... Dans un second temps j'ai donc créé ce fichier là et relancé ma commande.</p>
+<p>Docker va alors construire les images pour chaque service. L'image pour le frontend s'appelle &quot;nom-du-projet-frontend&quot; et est très lourde (3,5 Go), ça doit être parce qu'elle contient tous les modules Node qu'on a installé précédemment.</p>
+<p><img src="image-3.png" alt="alt text"></p>
+<p>Pour démarrer les conteneurs pour ces services, je lance <code>docker-compose up</code>.</p>
+<p><img src="image.png" alt="alt text"></p>
+<p>On voit dans Docker Desktop que 2 conteneurs sont créés : un pour le frontend et un pour le backend. On peut aussi voir les logs en temps réel pour chaque service.</p>
+<p><img src="image-1.png" alt="alt text">
+<img src="image-5.png" alt="alt text"></p>
+<p>J'accède à <code>http://localhost:3000</code> dans mon navigateur pour voir l'application React puis à <code>http://localhost:8000</code> pour tester l'API FastAPI. J'ai eu quelques problèmes avec mon conteneur backend mais le frontend fonctionne.</p>
+<p><img src="image-2.png" alt="alt text"></p>
+<p>J'utilise l'interface de <strong>Docker Desktop</strong> pour :</p>
+<ul>
+<li><strong>Voir les conteneurs</strong> : Sur l'interface Docker Desktop, on peut voir l'état de tous nos conteneurs (en cours d'exécution, arrêtés, etc.).</li>
+<li><strong>Gérer les conteneurs</strong> : on peut démarrer, arrêter ou redémarrer nos conteneurs directement depuis l'interface graphique.</li>
+<li><strong>Consulter les logs</strong> : Docker Desktop permet de visualiser les logs de chaque conteneur. Cela peut être utile pour le débogage.</li>
+<li><strong>Supprimer des conteneurs</strong> : Si on souhaite supprimer les conteneurs ou les images, on peut également le faire via l'interface.</li>
+</ul>
+<p>On peut arrêter vos conteneurs avec :</p>
+<pre><code>docker-compose down
+</code></pre>
+<p>Cela arrêtera les conteneurs et les supprimera, mais gardera les images intactes.</p>
+<h3>Conclusion</h3>
+<p>Docker Desktop est un outil facile à prendre en main, malgré mes soucis avec WSL, tout s'est bien déroulé et j'ai désormais 2 conteneurs pour mon application et je pourrais utiliser cet outil dans ma vie professionnelle.</p>
+<h3>Ressources</h3>
+<ul>
+<li>Documentation Docker : <a href="https://docs.docker.com/">https://docs.docker.com/</a></li>
+<li><a href="https://lightcode.fr/article/introduction-docker-serveur/">https://lightcode.fr/article/introduction-docker-serveur/</a></li>
+</ul>
 
 
 </article>
