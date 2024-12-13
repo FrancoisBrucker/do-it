@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "Dark Kitchen - FrontEnd"
+title: "Dark Kitchen - BackEnd"
 authors:
   - Thomas Merle
 
@@ -31,7 +31,7 @@ résumé: "Codage du BackEnd du site de ma Dark Kitchen avec NodeJS."
 
 - [`MON2.1: Initiation au BackEnd : go to learn Go!`](https://francoisbrucker.github.io/do-it/promos/2024-2025/Merle-Thomas/mon/temps-2.1/)
 - [`GitHub Projet Dark Kitchen v2`](https://github.com/SofianeOuadda/dark-kitchen-v2)
-- [GitHub Backend Dark Kitchen](https://github.com/SofianeOuadda/dark-kitchen-backend)
+- [GitHub Backend Dark Kitchen](https://github.com/SofianeOuadda/dark-kitchen-v2)
 
 
 {% endlien %}
@@ -119,7 +119,7 @@ Ce POK décrit les étapes du développement du site web de notre Dark Kitchen d
 - **Tâches** :
   - [x] [Thomas](#) Création du cluster MongoDB.
   - [x] [Thomas](#) Connexion avec **mongoose**.
-  - [x] [Thomas](#) Création des modèles **Product** et **Order**.
+  - [x] [Thomas](#) Création des modèles **Product**, **Order** et **User**.
   - [] [Thomas](#) Ajout de données de test pour les produits.
 
 ### Sprint 3 : Développement des routes API
@@ -159,7 +159,9 @@ Toutes les séances et le nombre d'heure que l'on y a passé.
 
 | Date       | Heures passées | Indications                                    |
 |------------|----------------|------------------------------------------------|
-| 01/11  | 2H             | Initialisation du projet et configuration Node.js |
-| 01/11  | 4H             | Mise en place de MongoDB et connexion          |
-| 02/11  | 2H             | Création des modèles pour les données         |
-| 03/11  | 2H            | Développement des routes API principales avec Sofiane     |
+| 01/11  | 1H             | Formation à Node.js à l'aide des MONs et de la documentation |
+| 01/11  | 1H             | Initialisation du projet et configuration Node.js à partir du projet frontend|
+| 01/11  | 1H             | Structuration du nouveau projet avec intégration du backend et configuration des servers|
+| 01/11  | 3H             | Mise en place de MongoDB et connexion|
+| 02/11  | 2H             | Création des modèles pour les données : **Product**, ****Order** et **User** |
+| 03/11  | 2H            | Développement des routes API principales avec Sofiane|

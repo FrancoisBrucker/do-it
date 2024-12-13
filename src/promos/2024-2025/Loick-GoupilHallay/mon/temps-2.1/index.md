@@ -12,6 +12,8 @@ tags:
   - 'dev'
   - 'kubernetes'
   - 'k9s'
+
+résumé: "Tutoriel pour maîtriser k9s et devenir un ninja de la console Kubernetes"
 ---
 
 <head>
@@ -23,8 +25,7 @@ tags:
 - [Helm](https://helm.sh/)
 {%endprerequis%}
 
-{% lien %}
-**Liens utiles**
+{% lien '**Liens utiles**' %}
 - [k9s](https://k9scli.io/)
 {% endlien %}
 

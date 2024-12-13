@@ -7,5 +7,5 @@ authors:
 ---
 
 <script type="text/javascript">
-    window.location.href = '../../../2023-2024/Louradou-Arthur/pok';
+    window.location.href = '../../../2023-2024/Louradou-Arthur/mon';
 </script>

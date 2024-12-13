@@ -8,6 +8,11 @@ authors:
 
 Ensemble des POK réalisés par Gordon Zola.
 
-- [POK 1](./temps-1)
-- [POK 2](./temps-2)
-- [POK 3](./temps-3)
+## POK 1
+{% lieninterne "./temps-1" %}
+
+## POK 2
+{% lieninterne "./temps-2" %}
+
+## POK 3
+{% lieninterne "./temps-3" %}

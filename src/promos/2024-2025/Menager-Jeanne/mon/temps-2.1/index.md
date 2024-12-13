@@ -19,7 +19,8 @@ Avoir quelques notions de html et javascript
 {% endprerequis %}
 {% lien %}
 
-[`Projet numérologie`](https://francoisbrucker.github.io/cours_informatique/cours/web/projet-numérologie/)
+[Projet numérologie](https://francoisbrucker.github.io/cours_informatique/cours/web/projet-numérologie/) \
+[GitHub](https://github.com/jeanne-mngr/MON_2.1)
 
 {% endlien %}
 
@@ -39,7 +40,7 @@ Ce projet se décompose en 5 partie :
 
 ### Partie 1 : Le front
   Dans cette partie, nous avons définit l'algorithme qui nous permet d'associer à chaque chaine de caractère un chiffre. 
-  On y apprend nottamment à écrire **des fonctions en JS** et faire des log dans la console grâce à **console.log()**
+  On y apprend notamment à écrire **des fonctions en JS** et faire des log dans la console grâce à **console.log()**
   On crée ensuite une page en **html**, sur laquelle on rajoute du **css**.
   Enfin, on intègre la fonction en JS à la page html pour calculer le chiffre lorsque l'utilisateur clique sur 'entrée'
 
@@ -60,7 +61,7 @@ Ce projet se décompose en 5 partie :
 ### Partie 4 : Rendre le code propre 
 
   Pour savoir comment rendre son **code plus propre et plus facile à maintenir**, il faut s'intéresser à cette partie du projet. 
-  On a nottamment séparer les routes et les modèles et différents fichiers afin de les regrouper par thème.
+  On a notamment séparer les routes et les modèles et différents fichiers afin de les regrouper par thème.
   Ceci permet de ne pas avoir des fichiers trop long dans lesquels il est difficile de trouver l'information que l'on cherche
 
 ### Partie 5 : La maintenace et les tests
@@ -73,4 +74,4 @@ Ce projet se décompose en 5 partie :
 
 ### Remarque
 
-Le projet est un mélange d'anglais et de français, ce qui n'est pas très aggréable, j'ai essayé au fur et à mesure d'enlever les accents des mots mais je me suis retrouvée avec des erreurs car je n'étais pas consistante. Je recommande néanmoins d'essayer de passer le mots français en anglais, nottamment prénom qui par son accent peut poser des problèmes.
+Le projet est un mélange d'anglais et de français, ce qui n'est pas très aggréable, j'ai essayé au fur et à mesure d'enlever les accents des mots mais je me suis retrouvée avec des erreurs car je n'étais pas consistante. Je recommande néanmoins d'essayer de passer le mots français en anglais, notamment prénom qui par son accent peut poser des problèmes.

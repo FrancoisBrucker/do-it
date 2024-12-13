@@ -38,6 +38,9 @@ Les recommandations de séries sur Netflix, les suggestions de produits sur Amaz
 
 Il réside tout de même un enjeu de libre arbitre car cela enferme l'utilisateur dans un univers de contenus spécifique, en rendant invisible certains contenus.
 
+<img src="./image21/un.png" width="50%">
+<img src="./image21/deux.png" width="50%">
+
 ##### 2. Le design inclusif ♿️
 
 Avec la prise de conscience croissante des **enjeux d'accessibilité**, de plus en plus d'entreprises intégrent **l'accessibilité et l'inclusivité** dans leurs produits. Cela exige des designers UX une bonne maîtrise des meilleures pratiques en matière d'accessibilité et la capacité de **concevoir pour un large éventail d'utilisateurs**, y compris les personnes en situation de handicap.
@@ -47,6 +50,9 @@ Le focus sur un design inclusif et accessible se traduit par une satisfaction cl
 **La Directive Européenne sur l’Accessibilité (EAA)** est un ensemble de normes adoptées par tous les États membres de l'UE pour garantir un accès égal à l'information, aux produits et aux services pour les personnes handicapées. Ces standards doivent être appliqués à tous les designs d'ici 2024, même en dehors de l'UE, afin d'améliorer l'utilisabilité et l'accessibilité des produits.
 
 Parmi les bonnes pratiques, on retrouve l'utilisation de **texte alternatif** (ALT) pour les images, les **sous-titres** et les **transcriptions** pour les vidéos, les **options de lecture** d'écran, ainsi que des **typographies lisibles et adaptables** aux différentes tailles d'écrans.
+
+<img src="./image21/trois.png" width="50%">
+<img src="./image21/quatre.png" width="50%">
 
 ##### 3. Green design ♻️
 
@@ -58,6 +64,8 @@ L'éco-conception web passe par **l'optimisation des codes et des images** et **
 
 Les utilisateurs sont de plus en plus à la recherche de produits et de services qui non seulement répondent à leurs besoins mais qui sont aussi en accord avec leurs valeurs environnementales. En intégrant l’éco-responsabilité dans leur UX, les entreprises ne font pas seulement un geste pour la planète, elles construisent également **une relation de confiance et de fidélité** avec leurs clients.
 
+<img src="./image21/cinq.png" width="50%">
+
 ##### 4. Interaction et animation avancées 💈
 
 L'évolution du design en 2024 met l'accent sur **les interactions et animations avancées**, qui sont devenues des éléments cruciaux dans le design d'interface et le design web. Les animations, en particulier, sont devenues un outil essentiel pour la **narration visuelle** et la communication d'idées complexes de manière simple et compréhensible.
@@ -68,11 +76,15 @@ Ces petites touches apportent une dimension plus **chaleureuse** à l’interact
 
 Les animations 3D, les animations de réalité augmentée et virtuelle et les animations interactives sont devenues des tendances majeures. Les technologies comme les animations CSS, les transitions et les animations JavaScript sont des outils courants pour créer des animations web. Ces technologies permettent de créer des expériences utilisateur plus immersives et engageantes.
 
+<img src="./image21/six.png" width="50%">
+
 ##### 5. Des typographies audacieuses 🖋️
 
 Après une grande vague de "**blanding**", quand de nombreuses marques ont choisi de redesigner leur logo de manière plus épuré, la **typographie audacieuse** revient le devant de la scène avec des polices de caractères **colorées** et **imposantes**, ramenant un peu de spontanéité dans les marques.
 
 Loin des subtiles serif et sans-serif, les designers préfèrent opter pour des “bold typography” qui font une déclaration forte, **captant instantanément l’attention** de l’utilisateur. Cette nouvelle orientation de style, souligne l’importance de la hiérarchie visuelle tout en guidant l’utilisateur à travers le contenu, de manière intuitive.
+
+<img src="./image21/sept.png" width="50%">
 
 ##### 6. Les interfaces vocales 🔉
 
@@ -81,6 +93,8 @@ Loin des subtiles serif et sans-serif, les designers préfèrent opter pour des 
 Cette prolifération de dispositifs activés par la voix incite de plus en plus d'entreprises à intégrer des **interfaces vocales (VUI)** dans leurs produits et services. Cela demande aux designers UX de réfléchir à des expériences vocales efficaces et intuitives. Ils doivent trouver des moyens créatifs d'intégrer les VUI dans leurs conceptions pour les rendre plus **efficaces et conviviales**.
 
 Les services leaders dans ce domaine sont Apple Siri, Google et Amazon Alexa, et bien que de nouveaux concurrents n'arriveront peut-être pas immédiatement, les designers peuvent déjà envisager d'intégrer ces services existants de manière appropriée dans leurs produits.
+
+<img src="./image21/huit.png" width="50%">
 
 ##### 7. Le Bento design 🔲
 
@@ -91,6 +105,8 @@ Le concept de segmentation et de clarté visuelle avec une touche de satisfactio
 **Les avantages** sont nombreux comme l'optimisation de l’accessibilité, la simplification de la navigation, l'expérience utilisateur intuitive, ou l'adaptabilité à de nombreux supports.
 
 Ces 7 exemples font partie des tendances les plus présentes en ligne, mais lors de mes recherches j'en ai trouvé de nombreuses autres avec parfois des contradictions comme la tendance du maximalisme et du minimalisme. Ce qui m'amène à penser que ces tendances peuvent être bénéfiques mais il faut garder un esprit critique.
+
+<img src="./image21/neuf.png" width="50%">
 
 #### Suivre les tendances : bonne ou mauvaise idée ?
 
