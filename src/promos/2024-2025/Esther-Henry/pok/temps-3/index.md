@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "Titre du POK du temps 3"
+title: "Mini guide du droit du travail pour jeune ingénieur"
 authors:
   - Esther Henry
 
@@ -10,7 +10,7 @@ date: 1971-03-01
 tags: 
   - "temps 3"
 
-résumé: Un POK traitant d'un sujet.
+résumé: L’objectif de ce MON est de fournir un petit guide pour les jeunes ingénieurs afin qu’ils connaissent leurs droits avant d’entrer dans le monde du travail. Je trouve qu’on nous parle très peu de nos droits et devoirs futurs en tant qu’ingénieurs, et ça me paraît essentiel de les connaître avant de signer son premier contrat de travail.
 ---
 
 {% prerequis %}
@@ -24,30 +24,28 @@ Les lien utiles pour la compréhension de celui-ci.
 
 {% endlien %}
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce POK. On oubliera pas de donner :
+## Plan d’action
 
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
+### Objectifs
 
-## Tâches
+- **Sprint 1** : Identifier les thématiques essentielles pour un jeune ingénieur : ses droits, ses obligations, et les clauses des contrats à connaître
+- **Sprint 2** : Synthétiser les informations en redigeant un guide simple et pratique à destination des élèves en dernière année d’école d’ingénieur
 
-### Sprints
+### Sprint 1
 
-But final.
+| Tâches | Temps estimés | Temps réels |
+| -------- | -------- |-------- |
+| Définir le périmètre et structurer le contenu  | 4h | - |
+| Recherches et collecte d’informations | 6h | - |
 
-#### Sprint 1
 
-Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
+### Sprint 2
 
-- [ ] Une tâche non réalisée
-- [x] Une tâche réalisée
-
-#### Sprint 2
-
-- [ ] Une tâche non réalisée
-- [x] Une tâche réalisée
-
-Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
+| Tâches | Temps estimés | Temps réels |
+| -------- | -------- |-------- |
+| Synthétiser les informations pertinentes  | 2h | - |
+| Rédaction du guide  | 6h | - |
+| Relecture et ajustements  | 2h | - |
 
 ### Horodatage
 
@@ -56,11 +54,3 @@ Toutes les séances et le nombre d'heure que l'on y a passé.
 | Date | Heures passées | Indications |
 | -------- | -------- |-------- |
 | Mardi 27/08  | 1H  | Travail sur la trame du site |
-
-## Contenu
-
-Le contenu du POK.
-
-### Premier Sprint
-
-### Second Sprint

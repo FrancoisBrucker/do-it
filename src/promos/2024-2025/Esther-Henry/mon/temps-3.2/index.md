@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 3"
+title: "PIM, PLM, DAM, MDM, .."
 authors:
   - Esther Henry
 
@@ -9,7 +9,7 @@ date: 1971-03-01
 tags: 
   - "temps 3"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "L’objectif de ce MON est de mieux comprendre l’environnement des outils de gestion de la donnée produit, de type PIM, DAM, PLM, MDM..."
 ---
 
 {% prerequis %}
