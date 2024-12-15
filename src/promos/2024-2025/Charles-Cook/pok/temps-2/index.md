@@ -616,6 +616,212 @@ Le résultat obtenu est la table suivante :
 On remarque à l'aide de cette table que pour la totalité des pays ayant organisé les JO d'hiver (excepté pour la Suisse et l'Allemagne), les performances à domicile sont, au pire, égales à celles à l'extérieur, mais pour la plupart, les performances à domicile sont significativement meilleures (en termes de nombre total de médailles obtenues).
 
 ### Conclusion Sprint 1
-Ce premier sprint nous a permis de comprendre comment créer une base de données relationnelles et comment extraire des tables afin de réaliser les prémices d'une analyse de données en SQL. Cependant, le langage SQL n'est pas le plus adapté pour réaliser l'analyse de données. Nous explorerons plus en profondeur ceci lors du second sprint.
+Ce premier sprint nous a permis de comprendre comment créer une base de données relationnelles et comment extraire des tables afin de réaliser les prémices d'une analyse de données en SQL. Cependant, le langage SQL n'est pas le plus adapté pour réaliser de l'analyse de données. Nous explorerons plus en profondeur ceci lors du second sprint.
 
 ### Second Sprint
+Pour explorer l'analyse de données, nous allons nous appuyer sur les bibliothèques suivantes : 
+- Pandas
+- Matplotlib (afin de tracer des figures)
+- Seabron (une autre bibliothèque permettant de tracer des figures, que j'ai découvert un peu plus tard, mais qui est plus intuitive selon moi)
+
+#### Mise en contexte
+L'objectif de ce second sprint est de manipuler une base de données et de "la faire parler". Pour cela, nous nous placerons dans la peau d'un jeune musicien, qui énormément de talent mais qui peine à trouver de l'inspiration pour créer son premier morceau. Son objectif est de devenir viral très rapidement, avec une musique populaire. Pour cela, nous allons utiliser une base de données contenant plus de 60 000 morceaux recencés, et dont les caractéristiques suivantes sont rensignées : 
+- track_id: Spotify ID pour le morecau.
+- track_name: Nom du morceau.
+- artist_name: Noms des artistes ayant travaillés sur le morceau, séparés par une virgule s'il y en a plusieurs.
+- year: L'année de sortie du morceau.
+- popularity: indice de popularité entre 0 et 100, basé sur le nombre d'écoute et si le morceau et récent ou non.
+- artwork_url: URL du morceau.
+- album_name: L'album dans lequel le morceau apparaît.
+- acousticness: Un indice entre 0.0 et 1.0 montrant à quel point le morceau est acoustique. 
+- danceability: Indice de dansibilité du morceau (0.0 = moins dansable, 1.0 = plus dansable).
+- duration_ms: Longueur du morceau en millisecondes.
+- energy: Un indice entre 0.0 et 1.0 d'énregie. 
+- key: La clé musicale du morceau.
+- liveness: Une mesure indiquant la probabilité qu'un morceau soit enregistré live.
+- loudness: Le nivau sonore du morceau (dB).
+- mode: Indique le mode du morceau (1 = major, 0 = minor).
+- speechiness: Mesure la présence de mot parlé dans le morceau (proche de 1.0 signifie la présence importante de mots parlés).
+- tempo: Le tempo estimé du morceau en bpm.
+- time_signature: Le nombre de battement par minute, de 3 à 7.
+- valence: Un indice de 0.0 à 1.0 mesure la positivité d'un morceau.
+- track_url: L'URL Spotify pour le morceau.
+- language: Langue des paroles du morceau (English, Tamil, Hindi, Telugu, Malayalam, Korean).
+
+#### Analyse
+Nous allons réaliser une analyse sur les thématiques suivantes : langue, positivité (valence), dansabilité, énergie
+
+##### Comment la popularité des morceaux varie-t-elle en fonction des langues ?
+
+Le premier objectif est d'estimer quelle langue permettra d'obtenir la plus grande popularité. Pour cela, nous allons estimer la popularité moyenne par langue. 
+
+{%details "Code" %}
+````
+fig, ax = plt.subplots()
+popularity_by_language = spotify_tracks.groupby("language")["popularity"].mean()
+popularity_by_language.plot.bar(
+    ax=ax,
+    title="Popularité en fonction de la langue",
+    xlabel="Langues",
+    ylabel="Indice de popularité",
+)
+plt.show()
+````
+{%enddetails%}
+
+Le résultat obtenu est le suivant : 
+
+![Popularité moyenne par langue V1](<Images/Capture d’écran 2024-12-12 à 16.33.56.png>)
+
+On remarque que le Coréen est la langue avec le plus grand indice de popularité moyen, suivi par le Hindi. Pourtant, l’anglais étant la langue la plus parlé au monde, il est surprenant de voir ce résultat. Nous allons donc approfondir la recherche afin de s'assurer de la cohérence du résultat.
+
+Penchons nous sur le nombre de morceaux par langue : 
+
+{%details "Code" %}
+```
+fig, ax = plt.subplots()
+repartition_language = spotify_tracks['language'].value_counts()
+repartition_language.plot.bar(
+    ax=ax,
+    title="Nombre de morceaux par langue",
+    xlabel="Langues",
+    ylabel="Nombre de morceaux",
+)
+
+plt.tight_layout() #Afin que tous les titres soient bien visibles
+plt.show()
+```
+{%enddetails%}
+
+On obtient les résultats suivants : 
+
+![Nombre de morceaux par langue](<Images/Capture d’écran 2024-12-12 à 17.16.30.png>)
+
+On observe alors que les morceaux en anglais sont beaucoup plus nombreux que les morceaux en Coréen ou Hindi. Il peut y aoir ainsi une fausseté dans la représentativité des données (la présence que de morceaux coréens populaires par exemple). Analysons ainsi l'écart type pour vérifier cette théorie : 
+
+{%details "Code" %}
+````
+fig, ax = plt.subplots(figsize=(8, 6))
+popularity_by_language = spotify_tracks.groupby('language')['popularity'].agg(['mean', 'std'])
+popularity_by_language['mean'].plot.bar(
+    yerr=popularity_by_language['std'],
+    capsize=4,
+    ax=ax,
+    title="Popularité moyenne par langue et écart type",
+    xlabel="Langues",
+    ylabel="Indice de popularité moyenne",
+)
+
+plt.tight_layout() #Afin que tous les titres soient bien visibles
+plt.show()
+````
+{%enddetails%}
+
+On obtient le graphe suivant : 
+
+![Ecart type popularité langue](<Images/Capture d’écran 2024-12-12 à 17.07.33.png>)
+
+On remarque ainsi au travers de l’écart type des musiques coréennes par exemple que les musiques sélectionnées ont toutes un niveau de popularité assez élevé. Ceci fausse l’analyse. Nous allons donc explorer deux hypothèses afin de minimiser cet effet sur les résultats. 
+
+**Hypothèse 1 :** prendre seulement les morceaux avec un indice de popularité supérieur à 50 :
+
+{%details "Code" %}
+````
+popular_tracks = spotify_tracks[spotify_tracks['popularity'] > 50]
+fig, ax = plt.subplots()
+popularity_by_language = popular_tracks.groupby("language")["popularity"].mean()
+popularity_by_language.plot.bar(
+    ax=ax,
+    title="Popularité en fonction de la langue",
+    xlabel="Langues",
+    ylabel="Indice de popularité",
+)
+
+plt.tight_layout() #Afin que tous les titres soient bien visibles
+plt.show()
+````
+{%enddetails%}
+
+![Hypothèse 1 popularité](<Images/Capture d’écran 2024-12-12 à 17.29.48.png>)
+
+On note alors des résultats différents dans lesquels, parmi les morceaux ayant déjà un indice de popularité assez élevé, les morceaux en anglais sont les plus populaires.
+
+**Hypothèse 2 :** prendre les 2000 musiques les plus populaires par langue :
+
+{%details "Code" %}
+````
+top_2000 = spotify_tracks.groupby('language').apply(lambda x: x.nlargest(2000, 'popularity'))
+top_2000_reset = top_2000.reset_index(drop=True) #Afin d'éliminer l'erreur due à l'ambiguité de 'language' en tant que colonne et indice
+
+fig, ax = plt.subplots()
+popularity_by_language = top_2000_reset.groupby('language')['popularity'].mean()
+popularity_by_language.plot.bar(
+    ax=ax,
+    title="Popularité en fonction de la langue",
+    xlabel="Langues",
+    ylabel="Indice de popularité",
+)
+
+plt.tight_layout() #Afin que tous les titres soient bien visibles
+plt.show()
+````
+{%enddetails%}
+
+![Hypothèse 2 popularité](<Images/Capture d’écran 2024-12-12 à 17.44.12.png>)
+
+Cette seconde hypothèse corrobore les résultats de l'hypothèse 1, en montrant que parmi les musiques les plus populaires par langue, les musiques en anglais ont un indice moyen de popularité plus élevé que les autres langues.
+
+##### Quel est le rapport entre la valence (positivité) et la dansabilité ?
+
+En tant qu'artiste, on souhaite savoir si un morceau dansable est forcément positif. 
+
+Pour cela, nous allons tracer la reggression permettant de mettre en lumière un éventuel lien entre ce deux éléments.
+
+{%details "Code" %}
+````
+sns.regplot(x=spotify_tracks['danceability'], y=spotify_tracks['valence'], line_kws={'color': 'black'})
+
+plt.title("Lien entre la dansabilité et la positivité")
+plt.xlabel("Indice de dansabilité")
+plt.ylabel("Indice de positivité")
+
+plt.xlim(0, 1)
+plt.ylim(0, 1)
+
+plt.tight_layout()
+
+plt.show()
+````
+Ce code est écrit avec Seaborn, car je trouve la rédaction plus intuitive. Dans la suite de la rédaction, nous alternerons entre Seaborn et MatplotLib lorsque l'on ne peut pas utiliser Seaborn.
+{%enddetails%}
+
+Le résultat obtenu est le suivant : 
+
+![Lien entre la positivité et la dansabilité](<Images/Capture d’écran 2024-12-12 à 18.13.00.png>)
+
+On remarque une tendance avec ce graphique : l'indice de positivité semble augmenter avec l'indice de dansabilité. Ainsi, on peut admettre qu'un morceaux positif est de manière générale plus dansant. 
+
+##### Existe-il un rapport entre la dansabilité et la popularité d’un morceau de musique ?
+
+On cherche alors à savoir s'il est plus intéressant de composer un morceau dansant pour devenir populaire. 
+
+{%details "Code" %}
+````
+sns.regplot(y=spotify_tracks['popularity'], x=spotify_tracks['danceability'], line_kws={'color': 'black'})
+
+plt.title("Lien entre la dansabilité et la popularité")
+plt.ylabel("Indice de popularité")
+plt.xlabel("Indice de dansabilité")
+
+
+plt.tight_layout()
+
+plt.show()
+````
+{%enddetails%}
+
+Le résultat obtenu est le suivant :
+
+![Lien entre dansabilité et popularité](<Images/Capture d’écran 2024-12-12 à 18.19.33.png>)
+
+Le graphe précédent ne permet pas de mettre en lumière un lien évident entre l'indice de dansabilité d'un morceau et son indice de popularité. 
