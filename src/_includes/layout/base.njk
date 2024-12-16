@@ -80,8 +80,6 @@ footer: '<span style="font-family: Consolas, sans-serif;">Do_<span style="color:
             .document
             .getMathItemsWithin(document.body);
         </script>
-        {% for language in prismLanguages %}
-            <script src="/assets/node_modules/prismjs/components/prism-{{ language }}.min.js"></script>
-        {% endfor %}
+        <script src="/assets/node_modules/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
     </body>
 </html>
