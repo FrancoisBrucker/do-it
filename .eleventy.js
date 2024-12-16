@@ -1,5 +1,6 @@
 import { EleventyRenderPlugin, EleventyHtmlBasePlugin } from "@11ty/eleventy";
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import setupMarkdown from './config/markdown/index.js';
 import setupShortcodes from "./config/markdown/shortcodes/index.js";
 import assetsConfig from "./config/assets.js";
@@ -14,6 +15,7 @@ export default function(eleventyConfig) {
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.addPlugin(syntaxHighlight);
 
   setupMarkdown(eleventyConfig);
   setupShortcodes(eleventyConfig);
