@@ -1,57 +1,47 @@
 ---
 layout: layout/pok.njk
 
-title: "Titre du POK du temps 3"
+title: "La RGPD "
 authors:
   - Matthieu Dufort
 
-date: 1971-03-01
+date: 2024-12-13
 
 tags: 
   - "temps 3"
+  - "RGPD"
 
-résumé: Un POK traitant d'un sujet.
+résumé: Un POK traitant de la RGPD, de son évolution, et de son application dans le monde du digital.
 ---
 
-{% prerequis %}
-
-Liste des prérequis du POK ET/OU MON
-
-{% endprerequis %}
 {% lien %}
 
 Les lien utiles pour la compréhension de celui-ci.
 
 {% endlien %}
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce POK. On oubliera pas de donner :
-
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
+Ce pok à pour objectif de parcourir les régulations misent en place dans le monde pour protéger les données des utilisateurs. Il va aussi retracer dans un second temps les procès et attaques qui ont eu lieu contre les grandes entreprises du digital. Nous allons aussi essayer de comprendre comment peut-on protéger ses propres données.
 
 ## Tâches
 
 ### Sprints
 
-But final.
+Le but final de ce pok est d'acquérir de vrais connaissances sur la RGPD et de mieux comprendre les procès et enjeux actuelles autour de ceci.
 
 #### Sprint 1
 
-Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
-
-- [ ] Une tâche non réalisée
-- [x] Une tâche réalisée
+- [ ] Retracer les débuts de la RGPD
+- [ ] Suivre l'évolution des régulations
+- [ ] Analyser les grosses différences de régulation dans le monde
+- [ ] Comprendre l'impact de ses différences sur les entreprises
+- [ ] Observer les moyens mis en place pour le contrôle de son application
 
 #### Sprint 2
 
-- [ ] Une tâche non réalisée
-- [x] Une tâche réalisée
-
-Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
+- [ ] Etude de cas du procès de la CNIL à l'encontre de GOOGLE LLC
+- [ ] Etude de cas de la fuite de données récentes chez free
 
 ### Horodatage
-
-Toutes les séances et le nombre d'heure que l'on y a passé.
 
 | Date | Heures passées | Indications |
 | -------- | -------- |-------- |
