@@ -7,9 +7,6 @@
 
         <title>VSCode Extension: Achievements</title>
 
-        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
-        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
-
         <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
     </head>
     <body>
@@ -191,12 +188,11 @@
 <p>L'extension dispose d'une <strong>Webview</strong> qui permet à l'utilisateur de consulter la liste des succès débloqués et en cours. Cela permet de garder un historique des succès débloqués et de voir les succès restants à débloquer.
 <img src="webview.png" alt="Webview"></p>
 <h3>Commandes</h3>
-<p>L'extension ajoute tout un tas de commandes à vscode:</p>
+<p>L'extension ajoute des commandes custom à la palette VSCode à vscode:
+<img src="commands.png" alt="Commandes"></p>
 <ul>
 <li><code>achievements.enable</code>: Active / désactive l'extension</li>
-<li><code>achievements.disable</code>: Désactive l'extension</li>
-<li><code>achievements.configuration</code>: Ouvre la configuration de l'extension</li>
-<li><code>achievements.notifications</code>: Active / désactive les notifications</li>
+<li><code>achievements.settings</code>: Ouvre la configuration de l'extension</li>
 <li><code>achievements.show</code>: Ouvre la Webview des succès</li>
 </ul>
 <p>Il s'agit de raccourcis pour les actions les plus courantes.</p>
@@ -208,56 +204,83 @@
 <li>Enfin, je <strong>stocke les versions de la base de données</strong> pour pouvoir mettre à jour les tables en fonction de la version de l'extension. (C'est utile pour les mises à jour qui vont nécessiter des migrations de bases de données).</li>
 </ul>
 <pre class="mermaid">
-%%{init: {'theme': 'forest'}}%%
-classDiagram
-    class schema_version {
-      +INTEGER id
-      +INTEGER version
-      +DATETIME applied_at
+erDiagram
+    SchemaVersion {
+        int id PK
+        int version
+        datetime applied_at
     }
 
-    class achievements {
-      +INTEGER id
-      +TEXT title
-      +TEXT icon
-      +TEXT category
-      +TEXT group
-      +TEXT labels
-      +TEXT criteria
-      +TEXT description
-      +INTEGER tier
-      +INTEGER points
-      +INTEGER hidden
-      +INTEGER repeatable
-      +BOOLEAN achieved
-      +DATETIME achievedAt
+    Achievement {
+        int id PK
+        string title
+        string icon
+        string category
+        string group
+        string description
+        int tier
+        int exp
+        int hidden
+        int repeatable
+        boolean achieved
+        datetime achievedAt
     }
 
-    class achievement_requirements {
-      +INTEGER achievement_id
-      +INTEGER requirement_id
+    AchievementLabel {
+        int achievement_id FK
+        string label
     }
-    achievement_requirements --> achievements : achievement_id
-    achievement_requirements --> achievements : requirement_id
 
-    class progressions {
-      +INTEGER id
-      +TEXT name
-      +INTEGER value
+    AchievementCriteria {
+        int id PK
+        int achievement_id FK
+        int progression_id FK
+        string required_value
+        string type
+        string comparison_operator
     }
+
+    AchievementRequirement {
+        int achievement_id FK
+        int requirement_id FK
+    }
+
+    Progression {
+        int id PK
+        string name
+        string type
+        string value
+    }
+
+    DailySession {
+        int id PK
+        string date
+        int duration
+    }
+
+    Achievement ||--o{ AchievementLabel : "has"
+    Achievement ||--|{ AchievementCriteria : "has"
+    Achievement ||--o{ AchievementRequirement : "has"
+    AchievementRequirement ||--|| Achievement : "references"
+    AchievementCriteria }|--|{ Progression : "references"
 </pre>
 <h2>Développement</h2>
 <p>VSCode fonctionne grâce à Electron, ce qui signifie qu'il fonctionne exactement comme un site web. Le développement des extensions se fait donc en JavaScript / TypeScript.
-J'ai choisi d'utiliser <strong>TypeScript</strong> pour mon extension car il permet de <u>s'assurer que le code est correct</u> avant de l'exécuter. Cela permet de réduire les erreurs et de gagner du temps.</p>
+J'ai choisi d'utiliser <strong>TypeScript</strong> pour mon extension car il permet de <u>s'assurer que le code est correctement typé</u> avant de l'exécuter. Cela permet de réduire les erreurs et de gagner du temps.</p>
+<p>Le développement se centre sur l'<strong>optimisation des performances</strong> et la réduction de l'impact sur l'éditeur. Cela passe par deux choses essentielles:</p>
+<ul>
+<li>l'<strong>optimisation SQL</strong> pour réduire le nombre de requêtes et traiter les données le plus rapidement possible</li>
+<li>la <strong>gestion des listeners</strong> pour ne pas surcharger l'éditeur avec des événements inutiles ou dupliquer les fonctionnalités déjà existantes</li>
+</ul>
 <h3>Dépendances</h3>
 <p>Pour mon extension, j'ai utilisé les dépendances suivantes :</p>
 <ul>
 <li>Développement
 <ul>
 <li><code>npm</code> pour le management des dépendances</li>
-<li><code>esbuild</code> pour le bundling du code (la compilation de TypeScript)</li>
-<li><code>electron-rebuild</code> pour pouvoir packager mes dépendances avec l'extension</li>
+<li><code>esbuild</code> pour le bundling du code (le lint, la compilation de TypeScript)</li>
 <li><code>eslint</code> pour l'analyse statique du code</li>
+<li><code>typescript</code> pour le typage du code</li>
 </ul>
 </li>
 <li>Run
@@ -265,7 +288,7 @@ J'ai choisi d'utiliser <strong>TypeScript</strong> pour mon extension car il per
 <li><code>vscode</code> pour l'API de VSCode</li>
 <li><code>better-sqlite3</code> pour la base de données</li>
 <li><code>react</code> pour l'interface utilisateur</li>
-<li><code>fluentUI</code> pour le style des composants UI</li>
+<li><code>styled-components</code> pour les styles de l'interface des composants react</li>
 </ul>
 </li>
 </ul>
@@ -291,12 +314,22 @@ J'ai choisi d'utiliser <strong>TypeScript</strong> pour mon extension car il per
 <tr>
 <td>Jeudi 13/11</td>
 <td>4H</td>
-<td>Création des premiers succès (1099), standardisation de l'attribution des points, des difficultés,...</td>
+<td>Création des premiers succès (1200), standardisation de l'attribution des points, des difficultés,...</td>
 </tr>
 <tr>
 <td>Samedi 15/11</td>
 <td>3H</td>
 <td>Création de la webview et communication extension &lt;-&gt; webview</td>
+</tr>
+<tr>
+<td>Samedi 01/12</td>
+<td>6H</td>
+<td>Migration / Optimisation SQL pour minimiser l'impact sur les performances</td>
+</tr>
+<tr>
+<td>Samedi 08/12</td>
+<td>4H</td>
+<td>Création des listeners d'events et tests d'intégration</td>
 </tr>
 </tbody>
 </table>
