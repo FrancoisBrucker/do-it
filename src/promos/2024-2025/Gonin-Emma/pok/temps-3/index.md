@@ -1,16 +1,17 @@
 ---
 layout: layout/pok.njk
 
-title: "Titre du POK du temps 3"
+title: "POK 3 - Data visualisation"
 authors:
   - Emma Gonin
 
-date: 1971-03-01
+date: 2024-16-12
 
 tags: 
   - "temps 3"
+  - "vert"
 
-résumé: Un POK traitant d'un sujet.
+résumé: Un POK sur la création de data art grâce à un logiciel de visualisation de données.
 ---
 
 {% prerequis %}
@@ -20,34 +21,38 @@ Liste des prérequis du POK ET/OU MON
 {% endprerequis %}
 {% lien %}
 
-Les lien utiles pour la compréhension de celui-ci.
+[MON de Sarah Sebastien sur le data art](https://francoisbrucker.github.io/do-it/promos/2023-2024/Sarah-Sebastien/mon/temps-3.1/)
+[Inspirations d'artistes](https://flowingdata.com/category/visualization/artistic-visualization/)
 
 {% endlien %}
-
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce POK. On oubliera pas de donner :
-
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
 
 ## Tâches
 
 ### Sprints
 
-But final.
+Je vais utiliser un des deux logiciels suivants : 
+- soit **Tableau**, outil adapté pour des visualisations de données interactives, des dashboards.
+- soit **Processing** pour des visualisations plus artistiques et expérimentales.
+A la fin de ce POK je souhaite avoir fourni une ou plusieurs visualisations artistiques de données. 
 
 #### Sprint 1
 
-Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
-
-- [ ] Une tâche non réalisée
-- [x] Une tâche réalisée
+- [ ] Choix entre Tableau et Processing
+- [ ] Prendre de l'inspiration sur Flowingdata.com
+- [ ] Définir le thème du projet 
+- [ ] Collecte et nettoyage des données
+- [ ] Conception de la première visualisation
+- [ ] Création d’une visualisation interactive
+- [ ] Ecriture du compte-rendu sur le site do-it
 
 #### Sprint 2
 
-- [ ] Une tâche non réalisée
-- [x] Une tâche réalisée
+- [ ] Amélioration des visualisations
+- [ ] Prototypage d’une visualisation créative (sculpture numérique, oeuvre générative ??)
+- [ ] Ajouter des éléments narratifs ou interactifs avancés 
+- [ ] Finalisation de la présentation visuelle
+- [ ] Ecriture du compte-rendu sur le site do-it
 
-Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
 
 ### Horodatage
 

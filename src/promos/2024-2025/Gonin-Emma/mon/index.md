@@ -15,5 +15,6 @@ Ensemble des MON réalisés par Emma Gonin.
 ### DevOps
 - [MON 2.1 - Environnement jail et unix](./temps-2.1)
 - [MON 2.2 - Docker](./temps-2.2)
-- [MON 3.1](./temps-3.1)
-- [MON 3.2](./temps-3.2)
+### Ethique et réglementation
+- [MON 3.1 - Ethique de l'intelligence artificielle - Responsible AI](./temps-3.1)
+- [MON 3.2 - RGPD spécifique aux données médicales](./temps-3.2)
