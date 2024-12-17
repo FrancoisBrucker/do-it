@@ -92,6 +92,7 @@ Dimanche 15/12  | 2h  | Excel et Microsoft |
 
 - [POK : sprint 1](#POK1)
 - [POK : sprint 2](#POK2)
+- [Comparaison des logiciels](#comp)
 - [Conclusion de ce POK 2](#conclusion)
 
 <h2 id=POK1> 1️⃣POK : sprint 1</h2>
@@ -261,6 +262,13 @@ Puis j'ai **créer 2 nouvelles mesures** à l'aide de l'onglet Modéalisation, *
 ### 👩‍💻 Progression sur Excel et PowerPoint
 
 Il me restait encore 2h pour ce sprint 2 après avoir fini ces 2 projets. Ayant l'impression d'avoir plutôt **bien compris comment utiliser Power BI**, j'ai préféré utiliser ce temps pour **améliorer mes compétences sur Excel et PowerPoint**, 2 logiciels de la suite Microsoft que j'ai téléchargé au cours de ce POK. N'étant pas le sujet principal du POK, je n'ai pas détaillé ici ce que j'ai fait mais pour résumer : j'ai exploré les possibilités qu'offrent ces logiciels et j'ai recopié des modèles trouvés sur Internet.
+
+<h2 id=comp> Comparaisons des logiciels </h2>
+
+J'ai comparé les logiciels sur différents critères résumé dans ce tableau ci-dessous :
+![alt text](image.png)
+
+Ainsi, si on veut des **visualisations simples** et gratuites, **Looker Studio** est un excellent choix. Mais pour des besoins professionnels plus poussés avec des **données complexes**, **Power BI** est quand même préférable (avec des licences payantes pour le partage).
 
 <h2 id=conclusion> 👍 Conclusion de ce POK 2</h2>
 
