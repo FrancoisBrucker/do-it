@@ -233,6 +233,7 @@ Voici à peu près (pas exactement, car parfois cela dépasse de quelques minute
 | Introduction aux DTOs                  | 1h          |
 | Modèles et Schémas avec Mongoose       | 1h30        |
 | Filtres, Pipes et Guards               | 1h          |
+| Rédaction sur le site               | 1h15 min          |
 
 ## Sources :
 {% lien %}

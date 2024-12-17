@@ -42,6 +42,11 @@ Les lien utiles pour la compréhension de celui-ci:
     - [**3. Étude Post-Mortem**](#3-étude-post-mortem)
     - [**Sprint 1 : Frontend et Maquette**](#sprint-1--frontend-et-maquette)
     - [**Sprint 2 : Backend et Intégration**](#sprint-2--backend-et-intégration)
+  - [**Architecture et Fonctionnalités**](#architecture-et-fonctionnalités)
+    - [**1. Fonctionnalités Clés du Forum**](#1-fonctionnalités-clés-du-forum)
+    - [**2. Architecture du Projet**](#2-architecture-du-projet)
+- [Résultat (Sous format de vidéo)](#résultat-sous-format-de-vidéo)
+- [Sources :](#sources-)
 
 
 ### **Présentation du Projet : Forum de Discussion**
@@ -68,15 +73,14 @@ Créer un forum de discussion où je vais:
 
 
 - **Sprint 1 : Frontend et Maquette**  
-  - [x] Création de la maquette du forum (UX/UI) [(lien vers la maquette)](https://www.figma.com/design/6EleCT87Blb4ecdAUifrFx/forum?t=404V5TOHt19Sr2Qc-1).
-
+  - [x] Création de la maquette du forum (UX/UI) [(lien vers la maquette)](https://www.figma.com/design/6EleCT87Blb4ecdAUifrFx/forum?t=404V5TOHt19Sr2Qc-1)
   - [x] Développement des composants frontend en React.js.  
   - [x] Configuration initiale des interactions utilisateur (ajouter un post, afficher des posts).  
 
 - **Sprint 2 : Backend et Intégration**  
   - [x] Mise en place du backend avec NestJS.  
-  - [ ] Implémentation des endpoints API REST pour gérer les posts, commentaires et likes.  
-  - [ ] Intégration frontend-backend pour synchroniser les fonctionnalités.
+  - [x] Implémentation des endpoints API REST pour gérer les posts, commentaires et likes.  
+  - [x] Intégration frontend-backend pour synchroniser les fonctionnalités.
 
 ---
 
@@ -100,9 +104,6 @@ Créer un forum de discussion où je vais:
 #### **3. Étude Post-Mortem**
 Après chaque sprint, j'ai effectué une **analyse post-mortem** pour évaluer ce qui a fonctionné, ce qui a été difficile et ce qui doit être amélioré.
 
-- **Sprint 1 : Frontend**
-
-
 #### **Sprint 1 : Frontend et Maquette**
 - **Points forts :**
   - Une interface respectant la maquette initiale.
@@ -120,7 +121,6 @@ Redux est un gestionnaire d'état global pour les applications React. Il permet 
 {%endinfo%}
 
 #### **Sprint 2 : Backend et Intégration**
-<!-- #### **Sprint 2 : Backend et Intégration**
 - **Points forts :**
   - Les endpoints REST sont bien organisés (CRUD standardisé).
 
@@ -174,12 +174,16 @@ Le projet est divisé en plusieurs couches.
 
 ---
 
-## Résultat (Sous format de video)
+## Résultat (Sous format de vidéo)
 <!-- integrer video .mp4 --> 
-<!-- <video width="100%" controls>
-<source src="./Resultat.mp4" type="video/mp4">
+<video controls>
+ <source src="./Resultat.mp4" type="video/mp4">
+</video>
 
 ## Sources :
 {% lien %}
+- [Mon Mon 1.1](https://francoisbrucker.github.io/do-it/promos/2024-2025/Amar-Mbaye/mon/temps-1.1/)
+- [Mon Mon 2.1](https://francoisbrucker.github.io/do-it/promos/2024-2025/Amar-Mbaye/mon/temps-2.1/)
+- [Mon MON 2.2](https://francoisbrucker.github.io/do-it/promos/2024-2025/Amar-Mbaye/mon/temps-2.2/)
 
-{% endlien %}  --> 
+{% endlien %}  

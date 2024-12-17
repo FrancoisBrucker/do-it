@@ -1,15 +1,15 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du premier MON du temps 3"
+title: "Quel est le role d'un chef de projet face a une vraie situation ?"
 authors:
   - Serigne Mbaye Sy AMAR
 
-date: 2024-12-09
+date: 2024-12-16
 tags: 
   - "temps 3"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Durant ce MON, je vais me mettre à la place d'un chef de projet où je vais établir la planification, déterminer les tâches à accélérer et déterminer les coûts d'accélération, etc."
 ---
 
 {% prerequis %}
