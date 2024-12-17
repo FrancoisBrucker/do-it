@@ -137,11 +137,14 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>-<a href="https://mtes-mct.github.io/parcours_r_socle_introduction/">'Site du MTECT'</a>
--<a href="https://insideairbnb.com/get-the-data/">'Inside Airbnb'</a></p>
+<ul>
+<li><a href="https://mtes-mct.github.io/parcours_r_socle_introduction/">Site du MTECT</a></li>
+<li><a href="https://insideairbnb.com/get-the-data/">Inside Airbnb</a></li>
+<li><a href="https://github.com/baptiste7905/MON.2.2">Mon Github</a></li>
+</ul>
 </div></div>
 
-<p>A travers ce mode j'ai voulu découvrir R qui est un langage de programmation important et connu dans le monde de l'analyse de données et des statistiques. Après m'être documenté sur le Github du ministère j'ai chercher un type de données sur lesquelles je pouvais m'exercer et jh'ai trouvé le site <a href="https://insideairbnb.com/get-the-data/">'Inside Airbnb'</a> qui fournit tous types de données sur les offres postées sur le site <strong>Airbnb</strong>.J'ai donc cécidéde travailler sur les données des offres à Paris et de visualiser des données de prix, de types de logement et de localisation à l'aide de tableaux, graphiques et cartes.</p>
+<p>A travers ce mode j'ai voulu découvrir <strong>R</strong> qui est un langage de programmation important et connu dans le monde de l'analyse de données et des statistiques. Après m'être documenté sur le Github du ministère j'ai chercher un type de données sur lesquelles je pouvais m'exercer et j'ai trouvé le site <a href="https://insideairbnb.com/get-the-data/">Inside Airbnb</a> qui fournit tous types de données sur les offres postées sur le site <strong>Airbnb</strong>.J'ai donc cécidéde travailler sur les données des offres à Paris et de visualiser des données de prix, de types de logement et de localisation à l'aide de tableaux, graphiques et cartes.</p>
 <h2>Sommaire</h2>
 <ol>
 <li><strong>Chargement et nettoyage des données</strong></li>
@@ -178,11 +181,18 @@ Maintenant, avec ce nouveau dataset nettoyé, nous pouvons passer à la suite.</
 <h3>3. Visualisation des données</h3>
 <p>Dans cette  partiej'ai voulu me familiariser avec la librairie <em>ggplot2</em> qui permet de visualiser les données à partir de graphiques.
 Ci-dessous un histogramme des prix des offres à Paris ainsi que la répartition des prix en fonction des types de logement sous deux formes  différentes :</p>
-<div><img src="/do-it/Users/baptisteaudouin/Documents/GitHub/do-it/src/promos/2024-2025/Baptiste-Audouin/mon/temps-2.2/images/histogramme_prix.png"></div>
-<div><img src="/do-it/Users/baptisteaudouin/Documents/GitHub/do-it/src/promos/2024-2025/Baptiste-Audouin/mon/temps-2.2/images/prix_logement.png"></div>
-<div><img src="/do-it/Users/baptisteaudouin/Documents/GitHub/do-it/src/promos/2024-2025/Baptiste-Audouin/mon/temps-2.2/images/prix_logement_violon.png"></div>
-
+<div><img src="images/histogramme_prix.png"></div>
+<div><img src="images/prix_logement.png"></div>
+<div><img src="images/prix_logement_violon.png"></div>
 <h3>4. Création de cartes avec la librairie <em>leaflet</em> and <em>shiny</em></h3>
+<p>Enfin, au cours de mes recherches sur les différentes libraires R j'ai trouvé la librairie <em>leaflet</em> qui permet de visualiser des données géographiques sur des cartes en créant des fichers .html.
+Voici le résultat d'un graphique indiquant toutes les offres disponibles avec en vert les logements les moins chers et en rouge les plus chers :</p>
+<div><img src="images/carte.png"></div>
+<p>Cette carte n'étant pas très visible j'ai voulu en créer une plus complète et interactives avec des filtres sur les prix, types d'offres et quartiers. J'ai alors trouvé la librairie <em>shiny</em> qui permet de créer des interfaces interactives avec des filtres et voici le résultat, par exemple ici, pour les <em>private room</em> du quartiers des Gobelins :</p>
+<div><img src="images/carte_interactive.png"></div>
+<h3>5. Conclusion</h3>
+<p>Ce projet m’a permis de découvrir <strong>R</strong> et ses principales librairies pour manipuler, visualiser et cartographier des données. J’ai exploré les prix moyens par quartiers et types de logements avec des tableaux, graphiques et cartes interactives.</p>
+<p>J’ai aussi essayé d’appliquer des <strong>modèles de machine learning</strong> pour prédire les prix, mais les résultats n’étaient pas très parlants. Des jeux de données plus adaptés seraient nécessaires pour aller plus loin.</p>
 
 
 </article>
