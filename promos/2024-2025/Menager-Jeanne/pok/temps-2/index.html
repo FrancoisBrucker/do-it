@@ -151,6 +151,7 @@
 <div class="pl-8 mr-8">
 <p><a href="https://www.youtube.com/watch?v=sOAZpHDEdkg&amp;t=276s">Vidéo pour apprendre le scraping</a> <br>
 <a href="https://www.sofascore.com/fr/">Site de statistiques sportives</a> <br>
+<a href="https://www.transfermarkt.fr/">Deuxième site de statistiques sportives</a> <br>
 <a href="https://github.com/jeanne-mngr/POK2">GitHub</a></p>
 </div></div>
 
@@ -168,7 +169,7 @@ Le scraping est autorisé sous certaines conditions : <br>
 <h3>Trouver des informations sur une page web :</h3>
 <p>Dans la vidéo que j'ai visionné pour apprendre les bases du scraping, j'ai pu apprendre à utiliser <strong>Requests</strong> et <strong>BeautifulSoup</strong>. L'utilisation de ces librairies n'est pas très difficile, il faut cibler les éléments présents dans le html, que l'on peut identifier grâce aux outils de developpement présents dans la plus part des navigateur (attention pas sur safari).<br>
 En ciclant les éléments, on peut accéder aux informations souhaitées, mais il faut faire attention à la façon dont on cible chaque information : par exemple pour récupérer UN lien, il ne faut pas cibler le premier lien trouver sur la page car même si pour l'instant il est unique, ce ne sera pas toujours le cas.</p>
-<h3>Getsion des erreurs</h3>
+<h3>Gestion des erreurs</h3>
 <p>Le professeur dans la vidéo expliquait aussi comment gérer les erreurs avec des <code>try ... except ...</code> afin de comprendre pourquoi le script ne fonctionne plus si un jour c'est le cas.</p>
 <h3>Les exercices</h3>
 <p>Le cours s'articulait autour d'un site web fait exprès pour s'entrainer à scrapper, <a href="https://books.toscrape.com/index.html">un site d'une librairie</a>. Avec les différents exemple, j'ai pu m'entrainer puis me corriger grâce à la vidéo.</p>
@@ -182,10 +183,33 @@ Je suis donc allée sur la page dédiée à cette équipe : <a href="https://www
 On peut voir grâce à cette url que chercher des informations pour une équipe en particulier ne sera pas très compliqué car chaque équipe a son url qui lui est propre.</p>
 <h2>Sprint 2</h2>
 <ul>
-<li>[ ] Définir les données que je souhaite utiliser</li>
+<li>[x] Définir les données que je souhaite utiliser</li>
 <li>[ ] Comprendre les principes de la datavisualisation</li>
-<li>[ ] Faire une première datavisualistation</li>
+<li>[x] Faire une première datavisualistation</li>
 </ul>
+<h3>Le choix de l'outil pour la datavisualisation</h3>
+<p>Je voualit utiliser PowerBi comme me l'avait recommandé Clarisse lors de la présentation intermédiaire mais j'ai vu que c'était pas fait pour les mac et un peu difficile à utiliser. <br>
+J'ai voulu essayer Tableau mais après avoir essayé de l'utiliser sur des premières données, j'ai voulu modifier les données et je me suis rendue compte qu'il allait falloir que je réimporte les données comme un nouveau fichier et que je refasse le travail de data visualisation.<br>
+Je me suis donc tournée vers LookerStudio qui vient de la suite google et que je peux donc relier à un google Sheet. J'ai donc utilisé Panda pour écrire dans un google Sheet grace à l'Api présente sur Google CLoud Plateform et j'ai relié mon LookerStudio à ce google sheet. Maintenant, lorsque je modifie mes données, je n'ai qu'à cliquer sur 'Actualiser les données' sur looker studio pour avoir les nouvelles valeurs.</p>
+<h3>Datavisualisation pour les équipes de Ligue 1</h3>
+<p>L'objectif était de rassembler des données des club de Ligue 1 afin de faire de la data visualisation.<br>
+J'ai commencé par récuppérer le nombre de joueurs qui jouent en équipe nationale et le nombre d'étrangers par club car on dit souvent que le PSG n'a pas ou peu de francais dans son équipe et j'ai pu ainsi voir que ce n'était pas la pire équipe. Dans la data visualisation, j'ai choisi de representer un nuage de points avec en abscisse le nombre de joueurs dans l'équipe. On peut y voir que Monaco est l'équipe avec le plus d'étrangers, mais c'est à nuancer car ils ont 29 joueurs non monegasque sur 29 joueurs au total. <br>
+J'ai ensuite recupéré le nombre de place dans les différents stade pour les représenter sur une carte avec des cercles plus gros et plus foncé si la capacité du stade est plus élevée. Ceci permet dez voir en un clin d'oeil que le plus gros stade est dans le sud et en passant la souris dessus, on voit que c'est le velodrome.<br>
+Enfin, j'ai voulu mettre le classement de la ligue 1 de la saison en cours.</p>
+<p><img src="ligue1.png" alt="Statistique de la Ligue 1"></p>
+<p>Avec les filtres, on peut choisir de ne voir que certains club :</p>
+<p><img src="ligue1_filtre.png" alt="Statistique du PSG et de l'OM"></p>
+<p>(On y voit que l'OM a plus de joueurs étrangers que Paris)</p>
+<h3>Datavisualisation pour une équipe de Ligue 1</h3>
+<p>Pour ce scraping, j'ai utilisé les données de <a href="https://www.transfermarkt.fr/">transfermarkt</a>. Je me suis d'abord entrainée sur quelques joueurs du PSG et une fois que j'avais réussi à récupérer les données qui m'interréssaient, j'ai rajouté à la main les liens des autres joueurs et je me suis rendue compte que les informations n'étaient pas toujours les mêmes pour tous les joueurs, j'ai donc du adapter mon code qui est maintenant plus performant. <br>
+J'ai utilisé lookerStudio pour créer un visuel pour ces données là.<br>
+Je voulais faire la même chose pour les joueurs des autres équipes et pour cela, il me fallait un dictionnaire avec les noms des joueurs et le lien de leur page transfertMarkt. Cette tache etant fastidueuse et peu interressante, j'ai demandé à chatGPT de me le construire, mais il n'en est pas capable il m'a donc fournit un script pour scraper les lien et construire le dictionnaire. J'ai du modifier ce script car il ne fonctionnait pas.<br>
+Lorsque je fais tourner le script, l'utilisateur peut choisir l'équipe dont il veut voir les statistiques, le script récupère ensuite les données et les écrivent dans le googleSheet, il ne reste qu'à actualiser les données de lookerStudio pour avoir les statistiques voulues.</p>
+<p><img src="psg.png" alt="Statistique du PSG"></p>
+<p>En refaisant tourner le script mais en demandant les statistiques de lille et en actualisant lookerStudio, on obtient :</p>
+<p><img src="lille.png" alt="Statistique du LOSC"></p>
+<p>De même, on peut utiliser les filtres, pour par exemple ne voir que les défenseurs centraux :</p>
+<p><img src="lille_filtre.png" alt="Statistique du LOSC filtrées"></p>
 <h3>Horodatage</h3>
 <p>Toutes les séances et le nombre d'heure que l'on y a passé.</p>
 <table>
@@ -256,6 +280,36 @@ On peut voir grâce à cette url que chercher des informations pour une équipe 
 <td>Lundi 18/11</td>
 <td>30 min</td>
 <td>Scrapping de sofascore pour avoir l'âge moyen des joueurs du PSG</td>
+</tr>
+<tr>
+<td>Jeudi 12/12</td>
+<td>1 h</td>
+<td>Scrapping de sofascore pour avoir quelques données des équipes de LIgue 1</td>
+</tr>
+<tr>
+<td>Jeudi 12/12</td>
+<td>2 h</td>
+<td>Début de la datavisualisation avec Tableau puis lookerstudio</td>
+</tr>
+<tr>
+<td>Vendredi 13/12</td>
+<td>3 h</td>
+<td>Datavisualisation avec lookerstudio</td>
+</tr>
+<tr>
+<td>Vendredi 13/12</td>
+<td>2 h</td>
+<td>Scrapping de transfertmarkt pour avoir les données des joueurs du PSG et datavisualisation</td>
+</tr>
+<tr>
+<td>Samedi 14/12</td>
+<td>3 h</td>
+<td>Scrapping de transfertmarkt pour avoir les données des joueurs du PSG, de l'OM et de lille</td>
+</tr>
+<tr>
+<td>Total</td>
+<td>21 h</td>
+<td>Sans compter la rédaction</td>
 </tr>
 </tbody>
 </table>
