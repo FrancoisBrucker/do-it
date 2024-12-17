@@ -54,11 +54,10 @@ Dans un premier temps j'ai voulu créer  desnouveaux tableaux qui vont nous donn
 Dans cette  partiej'ai voulu me familiariser avec la librairie *ggplot2* qui permet de visualiser les données à partir de graphiques. 
 Ci-dessous un histogramme des prix des offres à Paris ainsi que la répartition des prix en fonction des types de logement sous deux formes  différentes :
 
-<div style="display: flex; justify-content: space-around;">
 
-<img src="/Users/baptisteaudouin/Documents/GitHub/do-it/src/promos/2024-2025/Baptiste-Audouin/mon/temps-2.2/images/histogramme_prix.png" alt="Histogramme" width="200" height="200" />
-<img src="/Users/baptisteaudouin/Documents/GitHub/do-it/src/promos/2024-2025/Baptiste-Audouin/mon/temps-2.2/images/prix_logement.png" alt="Prix par types de logements" width="200" height="200" />
-<img src="/Users/baptisteaudouin/Documents/GitHub/do-it/src/promos/2024-2025/Baptiste-Audouin/mon/temps-2.2/images/prix_logement_violon.png" alt="Prix par types de logements  violon" width="200" height="200" />
+<div><img src="/Users/baptisteaudouin/Documents/GitHub/do-it/src/promos/2024-2025/Baptiste-Audouin/mon/temps-2.2/images/histogramme_prix.png"></div>
+<div><img src="/Users/baptisteaudouin/Documents/GitHub/do-it/src/promos/2024-2025/Baptiste-Audouin/mon/temps-2.2/images/prix_logement.png"></div>
+<div><img src="/Users/baptisteaudouin/Documents/GitHub/do-it/src/promos/2024-2025/Baptiste-Audouin/mon/temps-2.2/images/prix_logement_violon.png"></div>
 
 </div>
 
