@@ -79,6 +79,8 @@ Ce POK décrit les étapes du développement du site web de notre Dark Kitchen d
     - `POST /api/cart` : Ajoute un produit au panier.
     - `POST /api/orders` : Crée une nouvelle commande.
     - `GET /api/orders/:id` : Donne les détails d’une commande.
+    - `api/register`: Permet de se sign In sur le site.
+    - `api/register`: Permet de se LogIn sur le site.
   - Structurer les routes pour qu'elles utilisent les méthodes **CRUD** associées.
 
 ### 4. Refactorisation et modularisation du code
@@ -120,13 +122,14 @@ Ce POK décrit les étapes du développement du site web de notre Dark Kitchen d
   - [x] [Thomas](#) Création du cluster MongoDB.
   - [x] [Thomas](#) Connexion avec **mongoose**.
   - [x] [Thomas](#) Création des modèles **Product**, **Order** et **User**.
-  - [] [Thomas](#) Ajout de données de test pour les produits.
+  - [x] [Thomas](#) Ajout de données de test pour les **Product**.
+  - [x] [Sofiane](#) Connexion à MongoDB pour l'authentification : création des données **Users**.
 
 ### Sprint 3 : Développement des routes API
 - **Objectif :** Implémenter les fonctionnalités principales de l’API.
 - **Tâches** :
-  - [x] [Sofiane](#) Routes pour les produits (`GET`, `POST`, `PUT`, `DELETE`).
-  - [x] [Sofiane](#) Routes pour les commandes (`GET`, `POST`).
+  - [x] [Thomas](#) Création route pour les produits.
+  - [x] [Sofiane](#) Création routes pour l'authentification.
   - [ ] [Sofiane](#)&[Thomas](#) Validation basique des données entrantes.
 
 --
@@ -134,19 +137,21 @@ Ce POK décrit les étapes du développement du site web de notre Dark Kitchen d
 ### Sprint 4 : Refactorisation et modularisation
 - **Objectif :** Organiser le projet pour faciliter la maintenance et les futures évolutions.
 - **Tâches** :
-  - [ ] Séparation des routes, contrôleurs et modèles dans des dossiers dédiés.
-  - [ ] Structuration du code en modules clairs (`routes/`, `controllers/`, `models/`).
+  - [x] [Sofiane](#)&[Thomas](#) Séparation des routes, contrôleurs et modèles dans des dossiers dédiés.
+  - [x] [Sofiane](#)&[Thomas](#) Structuration du code en modules clairs (`routes/`, `controllers/`, `models/`).
 
 ### Sprint 5 : Ajout des données et validation simple
 - **Objectif :** Ajouter des données de test et vérifier le fonctionnement des routes API.
 - **Tâches** :
-  - [ ] Ajout manuel ou via script des produits par défaut.
+  - [ ] [Sofiane](#)&[Thomas](#) Ajout Via script des produits par défaut dans la base de données MongoDB.
   - [ ] Validation des données récupérées avec **Postman**.
 
 ### Sprint 6 : Intégration du Backend avec le Frontend
 - **Objectif :** Assurer la communication entre le frontend **Vue.js** et le backend **Node.js** via des API.
 - **Tâches** :
   - [ ] Implémentation des appels API pour récupérer les produits et gérer le panier.
+  - [x] [Sofiane](#) Implémentation des appels API pour enregistrer des **User**.
+  - [x] [Sofiane](#) Mise à jour du FrontEnd avec les popups **LOGIN** et **SIGNIN**.
   - [ ] Vérification de l'affichage dynamique des produits dans le frontend.
   - [ ] Tester l'ajout de produits au panier depuis le frontend et la mise à jour des informations de commande.
 
@@ -163,5 +168,5 @@ Toutes les séances et le nombre d'heure que l'on y a passé.
 | 01/11  | 1H             | Initialisation du projet et configuration Node.js à partir du projet frontend|
 | 01/11  | 1H             | Structuration du nouveau projet avec intégration du backend et configuration des servers|
 | 01/11  | 3H             | Mise en place de MongoDB et connexion|
-| 02/11  | 2H             | Création des modèles pour les données : **Product**, ****Order** et **User** |
-| 03/11  | 2H            | Développement des routes API principales avec Sofiane|
+| 02/11  | 2H             | Création des modèles pour les données : **Product**, **Order** et **User** |
+| 03/11  | 2H            | Développement des routes API authentification et products avec Sofiane|
