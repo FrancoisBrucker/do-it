@@ -14,7 +14,7 @@ tags:
   - "Web"
   - "Angular"
 
-résumé: Une des missions de mon stage de fin d'études consistera à développer un outil interne en Angular. Ce framework proposé par les équipes de Google permet de faire du développement Front-End. C'est pourquoi, je vais consacrer ce POK au développement Angular en créant un site internet de cuisine appelé **Miam'Miam** (mes recettes, feedback, ...).
+résumé: Une des missions de mon stage de fin d'études consistera à développer une plateforme web en Angular. Ce framework proposé par les équipes de Google permet de faire du développement Front-End. C'est pourquoi, je vais consacrer ce POK au développement Angular en créant un site internet de cuisine appelé Miam'Miam (mes recettes, feedback, ...).
 ---
 {% prerequis %}
 
@@ -39,13 +39,13 @@ Des connaissances en développement web sont nécessaires (HTML, CSS, JavaScript
   - [x] Start coding! - Build your first app locally.
   - [x] Start coding! - Deferrable Views.
 - [x] Créer le cahier des charges du site internet.
-- [] Créer une maquette du site internet.
-- [] Partie développement :
-  - [] Créer les différents composants.
-  - [] Créer un jeu de données de test en local.
-  - [] Créer un service pour récupérer les données (toujours stockées en local pour le moment).
-  - [] Mettre en place le système de routes.
-  - [] Créer un fichier *db.json* qui sera accessible via requêtes HTTP en utilisant JSON Server.
+- [x] Créer une maquette du site internet.
+- [x] Partie développement :
+  - [x] Créer les différents composants.
+  - [x] Créer un jeu de données de test en local.
+  - [x] Créer un service pour récupérer les données (toujours stockées en local pour le moment).
+  - [x] Mettre en place le système de routes.
+  - [x] Créer un fichier *db.json* qui sera accessible via requêtes HTTP en utilisant JSON Server.
 
 ### Sprints
 
@@ -74,15 +74,21 @@ J'ai hâte de commencer à développer mon propre site, place à la créativité
 
 #### Sprint 2
 
-- [] Créer une maquette du site internet.
-- [] Partie développement :
-  - [] Créer les différents composants
-  - [] Créer un jeu de données de test en local
-  - [] Créer un service pour récupérer les données (toujours stockées en local pour le moment)
-  - [] Mettre en place le système de routes
-  - [] Créer un fichier *db.json* qui sera eccessible via requêtes HTTP en utilisant JSON Server
+- [x] Créer une maquette du site internet. (tâche commencée au sprint 1)
+- [x] Partie développement :
+  - [x] Créer les différents composants
+  - [x] Créer un jeu de données de test en local
+  - [x] Créer un service pour récupérer les données (toujours stockées en local pour le moment)
+  - [x] Mettre en place le système de routes
+  - [x] Créer un fichier *db.json* qui sera eccessible via requêtes HTTP en utilisant JSON Server
 
 **Analyse post-mortem (Sprint 2) :**
+
+À la fin de ce second sprint clôturant le POK, je suis globalement satisfait du travail accompli. J'ai réussi à suivre ma to-do list, qui s'est révélée être un outil précieux pour organiser et structurer mes tâches. Elle m'a permis de définir une ligne directrice claire et d'avancer étape par étape.
+
+La tâche 6.3, "Créer les différents composants", a été la plus chronophage. Après quatre heures de travail pour coder les composants, j'ai décidé de m'attaquer aux autres tâches restantes. Bien que mes composants soient fonctionnels, je sais qu'il me serait facile de consacrer encore plusieurs heures à perfectionner leur implémentation, notamment en travaillant davantage sur leur style CSS.
+
+Je peux dire que ce sprint m'a permis de mieux comprendre l'importance de prioriser mes efforts et de trouver un équilibre entre qualité et efficacité pour respecter les délais.
 
 ### Horodatage
 
@@ -94,8 +100,16 @@ J'ai hâte de commencer à développer mon propre site, place à la créativité
 | Samedi 16/11  | 2H00  | Partie [*Start coding! - Build your first app locally*](https://angular.dev/tutorials/first-app) (tâche 3.2) |
 | Dimanche 17/11  | 2H00  | Partie [*Start coding! - Build your first app locally*](https://angular.dev/tutorials/first-app) (tâche 3.2) |
 | Dimanche 17/11  | 0H30  | Partie [*Start coding! - Deferrable Views*](https://angular.dev/tutorials/first-app) (tâche 3.3) |
-| Mardi 19/11  | 0H30  | Partie [*Créer un cahier des charges du site internet*](https://angular.dev/tutorials/first-app) (tâche 4) |
-| Mardi 19/11  | 1H00  | Partie [*Créer une maquette du site internet*](https://angular.dev/tutorials/first-app) (tâche 5) |
+| Mardi 19/11  | 0H30  | Partie *Créer un cahier des charges du site internet* (tâche 4) |
+| Mardi 19/11  | 1H00  | Partie *Créer une maquette du site internet* (tâche 5) |
+| -------- | -------- |-------- |
+| Vendredi 29/11  | 1H00  | Partie *Créer une maquette du site internet* (tâche 5) |
+| Samedi 30/11  | 4H00  | Partie *Créer les différents composants* (tâche 6.1) |
+| Samedi 30/11  | 0H20  | Partie *Créer un jeu de données de test en local* (tâche 6.2) |
+| Samedi 07/11  | 0H20  | Partie *Créer un service pour récupérer les données* (tâche 6.3) |
+| Samedi 07/12  | 1H00  | Partie *Mettre en place le système de routes* (tâche 6.4) |
+| Dimanche 08/12  | 0H20  | Partie *Créer un fichier db.json* (tâche 6.5) |
+| Mercredi 11/12  | 3H00  | Partie *Créer les différents composants* (tâche 6.1) |
 
 ## Contenu
 
@@ -294,3 +308,75 @@ class AppComponent {
 
 ![Cahier des charges - 1](./img/cahier-charges1.png)
 ![Cahier des charges - 2](./img/cahier-charges2.png)
+
+### 4. Choix des différents composants à créer <a id="section4"></a>
+
+Pour choisir quel composants créer, il faut se poser les bonnes questions :
+
+- Est-ce que cette section peut être réutilisée à plusieurs endroits de mon application ?
+  
+  Ceci améliore la modularité et réduit la duplication de code. Exemple qui s'applique à **Miam'Miam** : une carte de recette (affichant une image, le titre de la recette et le propriétaire de la recette) apparaît plusieurs fois au sein du site. En effet, ces cartes de recettes sont listées sur la page regroupant toutes les recettes. Mais elles apparaissent également lorsqu'on consulte son espace personnel avec ses recettes enregistrées. Ainsi, au lieu de coder cette carte de recette dans plusieurs fichiers, il vaut mieux créer un composant unique. Ce composant sera ensuite personnalisé avec des `@Input()` pour afficher différentes données.
+
+- Est-ce que cette section a une logique ou un comportement distinct ?
+  
+  Une partie d'une interface ayant une logique distincte et spécifique mérite d'être déclarée en tant que composant. Cela permet d’isoler cette logique pour la rendre facile à comprendre et à tester.
+
+- Est-ce que diviser cette section en plusieurs sous-sections améliore la lisibilité ?
+  
+  Lorsqu'une section de code est trop longue ou complexe, il est préférable de la scinder en composants plus petits pour une meilleure lisibilité. Par exemple, pour afficher le détail d'une recette, il vaut mieux utiliser plusieurs sous-composants pour les ingrédients, les étapes à réaliser, ...
+
+- Est-ce que cette section pourrait devenir complexe avec le temps ?
+
+  Pour cette dernière question, l'objectif est de prépare le terrain pour des évolutions futures.
+
+### 5. Ne plus utiliser de NgModules <a id="section5"></a>
+
+![Ne plus utiliser de modules](./img/nomorengmodules.png)
+
+Comme le montre la capture d'écran, l'équipe Angular recommande d'utiliser des composants autonomes (standalone components) plutôt que les traditionnels NgModule pour tout nouveau code.
+
+Un **NgModule** permet d'organiser et de structurer le code d'une application en regroupant des composants, des services, des directives et des pipes afin de les rendre disponibles à différents endroits de l'application.
+
+![Exemple NgModule](./img/exemplengmodule.png)
+
+Avant, la bonne pratique était d'utiliser des NgModule pour organiser le code en sections logiques. En général, chaque fonctionnalité de l'application correspondait à un module distinct, par exemple, on avait : un module de gestion des utilisateurs, un module de gestion des produits, etc.
+
+Les NgModule permettaient d'optimiser le chargement de l'application en utilisant le *lazy loading* (on charge uniquement les modules nécessaires à un moment donné).
+
+Depuis Angular 14 (i.e. depuit juin 2022), la bonne pratique change et devient d'utiliser essentiellement  des **standalone components**. Ces composants sont plus autonomes, ils n'ont pas besoin d'être inclus dans un NgModule. Cela simplifie le développement et réduit la complexité des applications Angular, surtout pour les petites applications ou pour des composants réutilisables.
+
+Angular évolue vers une structure plus légère et moderne, dans l’esprit des autres frameworks comme React (cf. mon [MON2.1](https://francoisbrucker.github.io/do-it/promos/2024-2025/Corne-Titouan/mon/temps-2.1/)) ou Vue.
+
+### 6. Visualisation du site **Miam'Miam**  <a id="section6"></a>
+
+<div style="display: flex; justify-content: center; align-items: center; height: 480;">
+  <video style="max-width: 100%; height: auto;" controls>
+    <source src="./video/site.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+ *Vidéo personnelle (2024)*
+
+{% info %}
+
+Le projet est disponible sur mon [GitHub](https://github.com/TitouanCorne/ApprendreAngular/tree/main/CuisineWebSite), à la fin de ce POK, j'ai fait un commit avec le message "Fin POK2".
+  
+{% endinfo %}
+
+## Conclusion du POK
+
+Ce deuxième POK m'a permis d'apprendre à développer en Angular, une compétence qui me sera utile pour mon stage de fin d'études. J'ai particulièrement apprécié découvrir cette nouvelle manière d'organiser le Frontend à travers les **composants**. Cette approche modulaire et structurée me correspond bien, je la trouve efficace.
+
+Je vais continuer à développer **Miam'Miam** pour transformer ces notions de base en véritables compétences et expertises.
+
+### Sources utiles
+
+{% lien %}
+
+- Doc officielle : [Angular](https://angular.dev/overview)
+- Projets Github :
+  - [firstApp](https://github.com/TitouanCorne/ApprendreAngular/tree/main/firstApp) - projet dédié à la prise en main d'Angular via les tutos.
+  - [Miam'Miam](https://github.com/TitouanCorne/ApprendreAngular/tree/main/CuisineWebSite) - projet du site de cuisine.
+  
+{% endlien %}
