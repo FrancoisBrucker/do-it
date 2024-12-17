@@ -229,6 +229,8 @@
 <li><code>POST /api/cart</code> : Ajoute un produit au panier.</li>
 <li><code>POST /api/orders</code> : Crée une nouvelle commande.</li>
 <li><code>GET /api/orders/:id</code> : Donne les détails d’une commande.</li>
+<li><code>api/register</code>: Permet de se sign In sur le site.</li>
+<li><code>api/register</code>: Permet de se LogIn sur le site.</li>
 </ul>
 </li>
 <li>Structurer les routes pour qu'elles utilisent les méthodes <strong>CRUD</strong> associées.</li>
@@ -292,7 +294,8 @@
 <li>[x] <a href="#">Thomas</a> Création du cluster MongoDB.</li>
 <li>[x] <a href="#">Thomas</a> Connexion avec <strong>mongoose</strong>.</li>
 <li>[x] <a href="#">Thomas</a> Création des modèles <strong>Product</strong>, <strong>Order</strong> et <strong>User</strong>.</li>
-<li>[] <a href="#">Thomas</a> Ajout de données de test pour les produits.</li>
+<li>[x] <a href="#">Thomas</a> Ajout de données de test pour les <strong>Product</strong>.</li>
+<li>[x] <a href="#">Sofiane</a> Connexion à MongoDB pour l'authentification : création des données <strong>Users</strong>.</li>
 </ul>
 </li>
 </ul>
@@ -301,8 +304,8 @@
 <li><strong>Objectif :</strong> Implémenter les fonctionnalités principales de l’API.</li>
 <li><strong>Tâches</strong> :
 <ul>
-<li>[x] <a href="#">Sofiane</a> Routes pour les produits (<code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code>).</li>
-<li>[x] <a href="#">Sofiane</a> Routes pour les commandes (<code>GET</code>, <code>POST</code>).</li>
+<li>[x] <a href="#">Thomas</a> Création route pour les produits.</li>
+<li>[x] <a href="#">Sofiane</a> Création routes pour l'authentification.</li>
 <li>[ ] <a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Validation basique des données entrantes.</li>
 </ul>
 </li>
@@ -313,8 +316,8 @@
 <li><strong>Objectif :</strong> Organiser le projet pour faciliter la maintenance et les futures évolutions.</li>
 <li><strong>Tâches</strong> :
 <ul>
-<li>[ ] Séparation des routes, contrôleurs et modèles dans des dossiers dédiés.</li>
-<li>[ ] Structuration du code en modules clairs (<code>routes/</code>, <code>controllers/</code>, <code>models/</code>).</li>
+<li>[x] <a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Séparation des routes, contrôleurs et modèles dans des dossiers dédiés.</li>
+<li>[x] <a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Structuration du code en modules clairs (<code>routes/</code>, <code>controllers/</code>, <code>models/</code>).</li>
 </ul>
 </li>
 </ul>
@@ -323,7 +326,7 @@
 <li><strong>Objectif :</strong> Ajouter des données de test et vérifier le fonctionnement des routes API.</li>
 <li><strong>Tâches</strong> :
 <ul>
-<li>[ ] Ajout manuel ou via script des produits par défaut.</li>
+<li>[ ] <a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Ajout Via script des produits par défaut dans la base de données MongoDB.</li>
 <li>[ ] Validation des données récupérées avec <strong>Postman</strong>.</li>
 </ul>
 </li>
@@ -334,6 +337,8 @@
 <li><strong>Tâches</strong> :
 <ul>
 <li>[ ] Implémentation des appels API pour récupérer les produits et gérer le panier.</li>
+<li>[x] <a href="#">Sofiane</a> Implémentation des appels API pour enregistrer des <strong>User</strong>.</li>
+<li>[x] <a href="#">Sofiane</a> Mise à jour du FrontEnd avec les popups <strong>LOGIN</strong> et <strong>SIGNIN</strong>.</li>
 <li>[ ] Vérification de l'affichage dynamique des produits dans le frontend.</li>
 <li>[ ] Tester l'ajout de produits au panier depuis le frontend et la mise à jour des informations de commande.</li>
 </ul>
@@ -374,12 +379,12 @@
 <tr>
 <td>02/11</td>
 <td>2H</td>
-<td>Création des modèles pour les données : <strong>Product</strong>, **<strong>Order</strong> et <strong>User</strong></td>
+<td>Création des modèles pour les données : <strong>Product</strong>, <strong>Order</strong> et <strong>User</strong></td>
 </tr>
 <tr>
 <td>03/11</td>
 <td>2H</td>
-<td>Développement des routes API principales avec Sofiane</td>
+<td>Développement des routes API authentification et products avec Sofiane</td>
 </tr>
 </tbody>
 </table>
