@@ -21,9 +21,9 @@ Pré-requis : Aucun
 {% endprerequis %}
 
 {% info %}
-**Références** \
-*Hypersensibles*, Elaine N. Aron \
-*Cessez d’être gentil, soyez vrai !*, Thomas D’Ansembourg
+**Références**
+- Aron, Elaine N., et Marie-Luce Constant. *Hypersensibles: mieux se comprendre pour s’accepter.* Marabout, 2017.
+- D’Ansembourg, Thomas, et Guy Corneau. *Cessez d’être gentil, soyez vrai ! être avec les autres en restant soi-même.* Éd. limitée, les Éd. de l’homme [diff. Messageries ADP], 2010.
 {% endinfo %}
 
 ## Contenu
