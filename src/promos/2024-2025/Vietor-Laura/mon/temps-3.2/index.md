@@ -1,13 +1,13 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 2"
+title: "Titre du second MON du temps 3"
 authors:
-  - Gordon Zola
+  - Laura Vietor
 
 date: 1971-01-01
 tags: 
-  - "temps 2"
+  - "temps 3"
 
 résumé: "Un MON traitant d'un sujet."
 ---
