@@ -35,6 +35,8 @@ résumé: Un POK traitant d'un sujet.
 
 Pour ce POK, je souhaite développer une application Rust permettant de suivre ses recherches de pokémon dits chromatiques, qui sont des spécimens particulièrement rares d'une couleur inhabituelle. Elle contiendra dans un premier temps une liste de ses recherches et de ses trouvailles, ainsi que des compteurs pour suivre le nombre de pokémons vus, mais j'aimerais dans le futur y ajouter plus de fonctionnalités.
 
+Le code est disponible [sur Github](https://github.com/lauravietor/SHUtils).
+
 ## Tâches
 
 ### Sprints
