@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Titre du second MON du temps 2</title>
+        <title>Découverte de R</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">Titre du second MON du temps 2</h1>
+<h1 class="mb-1">Découverte de R</h1>
 <div class="mb-4">
     
         <div class="px-4 flex flex-wrap items-center">
@@ -105,7 +105,7 @@
 
         <p class="mb-4 text-lg">
 
-                Un MON traitant d'un sujet.
+                Ce MON traite de la découverte du langage R
 
         </p>
 
@@ -118,7 +118,7 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Baptiste-Audouin/">Baptiste Audouin</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Baptiste-Audouin/mon/">MON de Baptiste Audouin</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Baptiste-Audouin/mon/temps-2.2/">Titre du second MON du temps 2</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Baptiste-Audouin/">Baptiste Audouin</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Baptiste-Audouin/mon/">MON de Baptiste Audouin</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Baptiste-Audouin/mon/temps-2.2/">Découverte de R</a>
 
 </div></div>
 
@@ -130,23 +130,60 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Liste des prérequis du POK ET/OU MON</p>
+<p>Aucun prérequis</p>
 </div></div>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
   <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Les lien utiles pour la compréhension de celui-ci.</p>
+<p>-<a href="https://mtes-mct.github.io/parcours_r_socle_introduction/">'Site du MTECT'</a>
+-<a href="https://insideairbnb.com/get-the-data/">'Inside Airbnb'</a></p>
 </div></div>
 
-<p>Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :</p>
-<ul>
-<li>le niveau et les prérequis nécessaires en utilisant la balise <a href="/do-it/cs/contribuer-au-site/#prerequis"><code>prerequis</code></a></li>
-<li>les autres POK &amp; MON en rapport en utilisant la balise <a href="/do-it/cs/contribuer-au-site/#lien"><code>lien</code></a></li>
-</ul>
-<h2>Contenu</h2>
-<p>Le contenu du MON.</p>
+<p>A travers ce mode j'ai voulu découvrir R qui est un langage de programmation important et connu dans le monde de l'analyse de données et des statistiques. Après m'être documenté sur le Github du ministère j'ai chercher un type de données sur lesquelles je pouvais m'exercer et jh'ai trouvé le site <a href="https://insideairbnb.com/get-the-data/">'Inside Airbnb'</a> qui fournit tous types de données sur les offres postées sur le site <strong>Airbnb</strong>.J'ai donc cécidéde travailler sur les données des offres à Paris et de visualiser des données de prix, de types de logement et de localisation à l'aide de tableaux, graphiques et cartes.</p>
+<h2>Sommaire</h2>
+<ol>
+<li><strong>Chargement et nettoyage des données</strong></li>
+<li><strong>Manipulation des données</strong></li>
+<li><strong>Visualisation des données</strong></li>
+<li><strong>Création de cartes avec la librairie <em>leaflet</em> and <em>shiny</em></strong></li>
+</ol>
+<h3>1. Chargement et nettoyage des données</h3>
+<p>Dans cette première partie j'ai chargé les données <em>.csv</em> des annonces à Paris sur le site <a href="https://insideairbnb.com/get-the-data/">'Inside Airbnb'</a>. Ensuite, à l'aide de la librairie de base de manipulations de données <em>dplyr</em>, j'ai supprimé les colonnes inutile à mon analyse et j'ai convertit certaines données comme les prix et les textes au bon format.
+Maintenant, avec ce nouveau dataset nettoyé, nous pouvons passer à la suite.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block group-open:select-text">
+<p>Head</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2 cursor-auto select-text">
+<p><img src="images/data_head.png" alt="Data_head"></p>
+</div>
+</details>     
+</div>
+<h3>2. Manipulation des données</h3>
+<p>Dans un premier temps j'ai voulu créer  desnouveaux tableaux qui vont nous données des détails sur les données, comme si on faisait des requêtes. J'ai pu générer des tableaux comme les prix moyens par quartiers, les prix par types de logements ou encore les nombre d'annonces et prix moyen par types de chambre et quartier.</p>
+<h3>3. Visualisation des données</h3>
+<p>Dans cette  partiej'ai voulu me familiariser avec la librairie <em>ggplot2</em> qui permet de visualiser les données à partir de graphiques.
+Ci-dessous un histogramme des prix des offres à Paris ainsi que la répartition des prix en fonction des types de logement sous deux formes  différentes :</p>
+<div style="display: flex; justify-content: space-around;">
+<img src="/do-it/Users/baptisteaudouin/Documents/GitHub/do-it/src/promos/2024-2025/Baptiste-Audouin/mon/temps-2.2/images/histogramme_prix.png" alt="Histogramme" width="200" height="200">
+<img src="/do-it/Users/baptisteaudouin/Documents/GitHub/do-it/src/promos/2024-2025/Baptiste-Audouin/mon/temps-2.2/images/prix_logement.png" alt="Prix par types de logements" width="200" height="200">
+<img src="/do-it/Users/baptisteaudouin/Documents/GitHub/do-it/src/promos/2024-2025/Baptiste-Audouin/mon/temps-2.2/images/prix_logement_violon.png" alt="Prix par types de logements  violon" width="200" height="200">
+</div>
+<h3>4. Création de cartes avec la librairie <em>leaflet</em> and <em>shiny</em></h3>
 
 
 </article>
