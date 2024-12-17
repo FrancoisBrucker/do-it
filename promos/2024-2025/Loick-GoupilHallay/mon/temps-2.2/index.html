@@ -126,7 +126,7 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Loick-GoupilHallay/">Bienvenue sur ma page Do_It</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Loick-GoupilHallay/mon/">MONs Loïck Goupil-Hallay</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Loick-GoupilHallay/mon/temps-2.2/">VSCode Speedup</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Loick-GoupilHallay/">Loïck Goupil-Hallay</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Loick-GoupilHallay/mon/">MONs Loïck Goupil-Hallay</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Loick-GoupilHallay/mon/temps-2.2/">VSCode Speedup</a>
 
 </div></div>
 
@@ -138,8 +138,11 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
 </svg>
 <div class="pl-8 mb-2 mr-8">
-<p><strong>MON avancé</strong></p>
+<p><strong>MON facile</strong></p>
 </div><div class="pl-8 mr-8">
+<ul>
+<li><a href="https://code.visualstudio.com/">Visual Studio Code</a></li>
+</ul>
 </div></div>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -148,10 +151,170 @@
 <div class="pl-8 mb-2 mr-8">
 <p><strong>Liens utiles</strong></p>
 </div><div class="pl-8 mr-8">
+<ul>
+<li><a href="https://marketplace.visualstudio.com/vscode">Marketplace VSCode</a></li>
+<li>Raccourcis clavier VSCode <a href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf">Windows</a> , <a href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf">Mac</a> , <a href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf">Linux</a></li>
+<li><a href="https://www.youtube.com/watch?v=ifTF3ags0XI">Video Fireship Productivité VSCode</a></li>
+</ul>
 </div></div>
 
 <h2>Introduction</h2>
-<p>Visual Studio Code est un éditeur de code open-source très populaire, développé par Microsoft. Il est utilisé par de nombreux développeurs pour sa légèreté, sa rapidité et ses nombreuses fonctionnalités. Cependant, il peut arriver que VSCode devienne lent et peu réactif, surtout lorsque l'on travaille sur de gros projets ou que l'on utilise de nombreuses extensions. Dans ce MON, nous allons voir comment optimiser les performances de VSCode pour gagner en réactivité et en productivité.</p>
+<p>Visual Studio Code est un éditeur de code open-source très populaire, développé par Microsoft. Il est utilisé par de nombreux développeurs pour sa légèreté, sa rapidité et ses nombreuses fonctionnalités. Malheureusement, <em>vous n'utilisez que 10% de votre VSCode</em>. Dans ce MON, nous allons voir comment <strong>optimiser</strong> son utilisation de VSCode pour <strong>gagner</strong> en <strong>réactivité</strong> et en <strong>productivité</strong>.</p>
+<h3>Lancer VSCode rapidement</h3>
+<p>Pour lancer VSCode rapidement, vous pouvez simplement utiliser la commande <code>code [/chemin/vers/repertoire (OPTIONNEL)]</code> dans un terminal. Si vous êtes sur Windows, vous pouvez également créer un raccourci sur le bureau ou dans la barre des tâches pour lancer VSCode en un clic.<br>
+Vous ouvrez alors directement VSCode dans le répertoire spécifié, ce qui peut être très pratique pour démarrer rapidement un projet.</p>
+<h2>Raccourcis clavier</h2>
+<p><img src="images/shortcuts_linux.png" alt="Raccourcis clavier"></p>
+<h3>Débuter</h3>
+<p>Je recommande de commencer par apprendre les raccourcis d'édition de texte de base de VSCode (ceux qui restent sur la même page et n'impliquent pas de déplacement dans l'interface):</p>
+<ul>
+<li><code>Ctrl+Z</code> pour annuler (la dernière action)</li>
+<li><strong>Presse-Papier</strong>
+<ul>
+<li><code>Ctrl+C</code> pour copier (dans le presse-papier)</li>
+<li><code>Ctrl+X</code> pour couper (copier dans le presse-papier et supprimer son contenu)</li>
+<li><code>Ctrl+V</code> pour coller (le contenu du presse-papier)</li>
+</ul>
+</li>
+<li><strong>Sélection</strong>
+<ul>
+<li><code>Ctrl+A</code> pour tout sélectionner</li>
+<li><code>Ctrl+L</code> pour sélectionner la ligne actuelle</li>
+<li><code>Shift+Flèche</code> pour étendre la sélection (dans la direction de la flèche)</li>
+<li><code>Alt+clic</code> pour définir plusieurs curseurs (permet d'éditer à plusieurs endroits en même temps)</li>
+</ul>
+</li>
+<li><strong>Commentaires</strong>
+<ul>
+<li><code>Ctrl+/</code> pour commenter/décommenter la/les ligne(s) sélectionnée(s)</li>
+<li><code>Ctrl+K Ctrl+C</code> pour commenter la sélection (PAS LA/LES LIGNE(S) ENTIERE(S))</li>
+<li><code>Ctrl+K Ctrl+U</code> pour décommenter la sélection (PAS LA/LES LIGNE(S) ENTIERE(S))</li>
+</ul>
+</li>
+<li><strong>Recherche</strong>
+<ul>
+<li><code>Ctrl+F</code> pour rechercher dans le fichier</li>
+<li><code>Ctrl+H</code> pour rechercher et remplacer dans le fichier</li>
+<li><code>Ctrl+Shift+F</code> pour rechercher dans tous les fichiers du projet</li>
+<li><code>Ctrl+D</code> pour sélectionner le mot suivant (ou la prochaine occurrence de la sélection actuelle)</li>
+</ul>
+</li>
+<li><strong>Navigation</strong>
+<ul>
+<li><code>Ctrl+P</code> pour ouvrir la palette de commandes</li>
+<li><code>Ctrl+Tab</code> pour naviguer entre les onglets ouverts</li>
+<li><code>Ctrl+Flèche</code> pour se déplacer d'un mot à la fois</li>
+<li><code>Ctrl+G</code> pour se rendre à une ligne spécifique</li>
+</ul>
+</li>
+<li><strong>Insertion</strong>
+<ul>
+<li><code>Ctrl+Enter</code> pour insérer une ligne en dessous</li>
+<li><code>Ctrl+Shift+Enter</code> pour insérer une ligne au-dessus</li>
+<li><code>Alt+Flèche</code> pour déplacer la ligne vers le haut ou le bas</li>
+</ul>
+</li>
+</ul>
+<h3>Extensions de raccourcis</h3>
+<p>Si vous êtes déjà habitué à vos raccourcis d'autres éditeurs de texte (Vim, Sublime Text, Atom, Brackets,...), il existe des extensions VSCode qui réécrivent les configurations de raccourcis pour les rendre compatibles avec celles de ces éditeurs. Vous pouvez les trouver en cherchant &quot;keymap&quot; dans les extensions de VSCode.
+<img src="images/shortcuts_extensions.png" alt="Extensions Keymaps"></p>
+<h2>Palette de commandes</h2>
+<p>La palette de commandes est un outil très pratique de VSCode qui permet d'accéder rapidement à de nombreuses fonctionnalités de l'éditeur. Pour ouvrir la palette de commandes, il suffit d'appuyer sur <code>Ctrl+Shift+P</code> (ou <code>Cmd+Shift+P</code> sur Mac). Vous pouvez ensuite taper le nom de la commande que vous souhaitez exécuter et appuyer sur <code>Entrée</code> pour la sélectionner.<br>
+Il y a une subtile différence entre la palette de commandes (<code>Ctrl+Shift+P</code>) et la recherche (<code>Ctrl+P</code>), qui permet de rechercher un fichier dans le projet. Cette différence est le <code>&gt;</code> pré-inscrit qui permet de filtrer les commandes dans la palette de commandes.</p>
+<p>Une commande est une <strong>fonction</strong> ou une <strong>action</strong> que vous pouvez <strong>exécuter dans VSCode</strong>. Par exemple, vous pouvez ouvrir un fichier, rechercher du texte, ouvrir un terminal, etc. Les commandes sont accessibles via la palette de commandes ou via des raccourcis clavier.</p>
+<h3>Commandes utiles</h3>
+<h4>Format Document</h4>
+<p>La première commande qu'il est important de connaître si l'on veut optimiser sa productivité est <strong>Format Document</strong>. Cette commande s'appuie sur le formatteur de code configuré dans VSCode pour formater le code du document actif. Cela permet de rendre le code plus lisible et de respecter les conventions de style définies dans le projet.</p>
+<p>C'est extrêmement utile pour uniformiser le code, notamment au niveau de l'identation et le rendre plus lisible. Pour exécuter cette commande, il suffit d'ouvrir la palette de commandes (<code>Ctrl+Shift+P</code>) et de taper &quot;&gt;Format Document&quot;, puis d'appuyer sur <code>Entrée</code>.
+<img src="images/format_document.png" alt="Format Document"></p>
+<h4>Ouvrir un fichier</h4>
+<p>Par défaut, la palette de commandes s'ouvre avec le focus sur la barre de recherche. Vous pouvez donc commencer à taper le nom du fichier que vous souhaitez ouvrir et la palette de commandes vous proposera des suggestions en temps réel. Cela permet d'ouvrir rapidement un fichier sans avoir à naviguer dans l'arborescence des fichiers.</p>
+<p>Il suffit de taper <code>Ctrl+P</code> pour ouvrir la palette de commandes et commencer à taper le nom du fichier.
+<img src="images/open_file.png" alt="Ouvrir un fichier"></p>
+<h4>Rechercher dans le fichier</h4>
+<p>Vous pouvez utiliser la palette de commande avec le symbole <code>@</code> pour rechercher des symboles dans le fichier actif. Cela permet de naviguer rapidement dans le fichier en recherchant des fonctions, des classes, des variables, et autres éléments marquans du code.</p>
+<p>De la même façon, vous pouvez utiliser le symbole <code>#</code> pour rechercher des symboles dans l'intégralité du projet (y compris les dépendances comme les node_modules).</p>
+<p>Il suffit de taper <code>Ctrl+P</code> pour ouvrir la palette de commandes et commencer à taper <code>@</code> ou <code>#</code> suivi du nom du symbole que vous recherchez.
+<img src="images/research_file.png" alt="Rechercher dans le fichier">
+<img src="images/research_project.png" alt="Rechercher dans le projet"></p>
+<h2>Tâches</h2>
+<p>Les tâches sont des scripts qui peuvent être exécutés dans VSCode pour automatiser des actions récurrentes. Par exemple, vous pouvez créer une tâche pour lancer un serveur de développement, compiler un projet, ou exécuter des tests. Les tâches sont configurées dans un fichier <code>tasks.json</code> dans le répertoire <code>.vscode</code> de votre projet.</p>
+<p>Une fois que la tâche est configurée, vous pouvez l'exécuter en ouvrant la palette de commandes (<code>Ctrl+Shift+P</code>) et en tapant &quot;&gt;Run Task&quot;. VSCode vous proposera alors une liste des tâches disponibles dans le fichier <code>tasks.json</code> et vous pourrez sélectionner celle que vous souhaitez exécuter.</p>
+<p>Il est aussi possible d'utiliser la touche <code>F5</code> pour exécuter la dernière tâche exécutée. Cela peut être très pratique pour relancer rapidement une tâche que vous exécutez fréquemment.</p>
+<pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+    <span class="token property">"version"</span><span class="token operator">:</span> <span class="token string">"2.0.0"</span><span class="token punctuation">,</span>
+    <span class="token property">"tasks"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"Build"</span><span class="token punctuation">,</span>
+            <span class="token property">"type"</span><span class="token operator">:</span> <span class="token string">"shell"</span><span class="token punctuation">,</span>
+            <span class="token property">"command"</span><span class="token operator">:</span> <span class="token string">"npm run build"</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"Start Server"</span><span class="token punctuation">,</span>
+            <span class="token property">"type"</span><span class="token operator">:</span> <span class="token string">"shell"</span><span class="token punctuation">,</span>
+            <span class="token property">"command"</span><span class="token operator">:</span> <span class="token string">"npm start"</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"Run Tests"</span><span class="token punctuation">,</span>
+            <span class="token property">"type"</span><span class="token operator">:</span> <span class="token string">"shell"</span><span class="token punctuation">,</span>
+            <span class="token property">"command"</span><span class="token operator">:</span> <span class="token string">"npm test"</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span></code></pre>
+<h2>Snippets</h2>
+<p>Les snippets sont des <strong>bouts de code réutilisables</strong> qui peuvent être insérés dans un fichier en tapant un raccourci clavier. VSCode propose de <strong>nombreux snippets par défaut</strong> pour les langages de programmation les plus courants, mais vous pouvez également <strong>créer vos propres snippets</strong> pour automatiser des tâches récurrentes. Les snippets sont configurés dans un fichier <code>snippets.json</code> dans le répertoire <code>.vscode</code> de votre projet.</p>
+<p>Les snippets peuvent <strong>utiliser des variables</strong> pour remplacer des parties du code par des valeurs spécifiques. Par exemple, vous pouvez créer un snippet pour un entête qui prend en entrée la date et le nom de l'auteur et les insère dans le fichier.</p>
+<p>Une fois que le snippet est configuré, vous pouvez l'<strong>insérer dans un fichier</strong> en tapant le préfixe du snippet suivi de la touche <code>Tab</code>. VSCode remplacera alors le préfixe par le contenu du snippet.</p>
+<p>Cela sert énormément si vous utilisez par exemple un entête de fichier standard, des blocs de code récurrents, des fonctions ou des classes que vous utilisez souvent, ou des structures de code spécifiques à votre projet.</p>
+<pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+    <span class="token property">"Write Standard JS Header"</span><span class="token operator">:</span>  <span class="token punctuation">{</span>
+        <span class="token property">"prefix"</span><span class="token operator">:</span> <span class="token string">"header"</span><span class="token punctuation">,</span>
+        <span class="token property">"body"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token string">"/**"</span><span class="token punctuation">,</span>
+            <span class="token string">" * @file $TM_FILENAME"</span><span class="token punctuation">,</span>
+            <span class="token string">" * @author $1"</span><span class="token punctuation">,</span>
+            <span class="token string">" * @date $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE"</span><span class="token punctuation">,</span>
+            <span class="token string">" */"</span><span class="token punctuation">,</span>
+            <span class="token string">""</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Write Standard JS Header"</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h2>Debugger</h2>
+<p>Le debugger de VSCode est un outil tout aussi puissant que craint pour les développeurs. Il permet de <strong>debug</strong> son code en exécutant son code <strong>pas à pas</strong>, avec des <strong>points d'arrêt</strong>. Il permet d'observer l'état et la valeur des variables PENDANT l'exécution du code. Cela permet de <strong>comprendre</strong> le comportement du code et surtout de voir où se trouvent les erreurs.
+<img src="images/debugger.png" alt="Debugger"></p>
+<h2>Interface Git</h2>
+<p>VSCode s'intègre parfaitement avec Git et permet d'afficher de manière distincte les modifications apportées à un fichier par rapport à la version précédente. Cela permet de voir rapidement les changements effectués et de les valider ou de les annuler.</p>
+<p>Vous pouvez aussi gérer vos branches, effectuer des commits, des pulls et des pushes directement depuis l'interface de VSCode. Cela permet de ne pas avoir à passer par un terminal pour effectuer ces opérations. Cette interface graphique est généralement plus intuitive, plus facile et même plus rapide que la ligne de commande.
+<img src="images/git.png" alt="Interface Git"></p>
+<h2>Extensions</h2>
+<h3>Remote Development</h3>
+<p>Microsoft a intégré un très grand nombre de fonctionnalités permettant le travail en équipe et la collaboration <strong>à distance</strong> dans VSCode.<br>
+Cela permet de travailler dans des environnements distants tels que des <em>conteneurs</em>, des <em>machines virtuelles</em>, des <em>serveurs distants</em> (via SSH) ou des <em>environnements de développement en ligne</em> (comme GitHub Codespaces).<br>
+Cela permet de développer sur des machines plus puissantes, d'<strong>uniformiser</strong> l'environnement de développement de l'équipe, de travailler sur des projets plus volumineux, de <strong>tester</strong> des configurations spécifiques. Cela peut simplement servir à travailler sur un projet depuis un autre ordinateur <strong>sans avoir à tout installer</strong>. Ou encore à <strong>isoler son environnement</strong> de développement pour éviter les conflits avec d'autres projets.</p>
+<p>Il existe un ensemble d'extensions appelé <strong>Remote Development</strong> qui permettent de tirer parti de ces fonctionnalités. Vous pouvez les trouver en cherchant &quot;Remote Development&quot; dans les extensions de VSCode.</p>
+<h3>Code Suggestions AI</h3>
+<p>Les études de productivité montrent qu'un développeur <strong>gagne en moyenne 80% de productivité</strong> en intégrant des <strong>suggestions de code par IA</strong> dans son éditeur de code.<br>
+Il existe plusieurs extensions qui permettent d'<em>intégrer différents modèles de suggestions de code par IA dans VSCode</em>.</p>
+<p>Le principe est toujours le même : l'extension envoie et cache (stocke) les modifications apportées au code au modèle, l'IA analyse le code que vous écrivez et vous <strong>propose des suggestions de code en temps réel</strong>.<br>
+Cela permet de <strong>gagner du temps</strong> en évitant de taper des lignes de code répétitives ou en découvrant des fonctions ou des méthodes que vous ne connaissiez pas.</p>
+<p>Les extensions les plus populaires sont :</p>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=GitHub.copilot">GitHub Copilot</a> (payant)</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=Continue.continue">Continue (CodeStral, Claude)</a> (gratuit selon le modèle)</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=nr-codetools.localaipilot">Local AI Pilot (Ollama)</a> (gratuit, open-source)</li>
+</ul>
+<p>Il suffit d'installer l'extension correspondant à votre modèle de suggestion de code par IA et de l'activer dans les paramètres de VSCode.
+<img src="images/ai_suggestions.png" alt="Code Suggestions AI"></p>
+<h3>Live Share</h3>
+<p>Live Share est une extension de VSCode qui permet de <strong>collaborer en temps réel</strong> avec d'autres développeurs.<br>
+Cela permet de <strong>partager</strong> son éditeur de code, son terminal, son serveur de développement, et même son debugger avec d'autres personnes.<br>
+Cela permet de <strong>travailler ensemble</strong> sur un même projet, de résoudre des problèmes plus rapidement, de partager des connaissances, et de former des équipes plus efficaces.</p>
+<p>Il suffit d'installer l'extension Live Share dans VSCode et de partager un lien avec les personnes avec lesquelles vous souhaitez collaborer. Elles pourront alors rejoindre votre session et travailler avec vous</p>
+<h2>Conclusion</h2>
+<p>Avec toutes ces astuces de productivité, j'estime que vous pouvez <strong>gagner environ 300% de productivité</strong> en utilisant VSCode.<br>
+Il est important de <strong>pratiquer</strong> ces astuces régulièrement pour les <strong>intégrer</strong> dans votre flux de travail et les <strong>utiliser naturellement</strong>.<br>
+N'hésitez pas à <strong>explorer</strong> les <strong>fonctionnalités</strong> de VSCode et à <strong>expérimenter</strong> de nouvelles astuces pour <strong>optimiser</strong> votre utilisation de l'éditeur. Il est régulièrement mis à jour et le marketplace d'extensions aussi !</p>
 
 
 </article>

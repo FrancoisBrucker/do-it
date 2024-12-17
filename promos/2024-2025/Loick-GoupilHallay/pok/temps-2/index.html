@@ -126,7 +126,7 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Loick-GoupilHallay/">Bienvenue sur ma page Do_It</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Loick-GoupilHallay/pok/">POKs Loïck Goupil-Hallay</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Loick-GoupilHallay/pok/temps-2/">VSCode Extension: Achievements</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Loick-GoupilHallay/">Loïck Goupil-Hallay</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Loick-GoupilHallay/pok/">POKs Loïck Goupil-Hallay</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Loick-GoupilHallay/pok/temps-2/">VSCode Extension: Achievements</a>
 
 </div></div>
 
@@ -189,16 +189,32 @@
 </ol>
 <h3>Webview</h3>
 <p>L'extension dispose d'une <strong>Webview</strong> qui permet à l'utilisateur de consulter la liste des succès débloqués et en cours. Cela permet de garder un historique des succès débloqués et de voir les succès restants à débloquer.
-<img src="webview.png" alt="Webview"></p>
+<img src="images/webview.png" alt="Webview"></p>
 <h3>Commandes</h3>
 <p>L'extension ajoute des commandes custom à la palette VSCode à vscode:
-<img src="commands.png" alt="Commandes"></p>
+<img src="images/commands.png" alt="Commandes"></p>
 <ul>
 <li><code>achievements.enable</code>: Active / désactive l'extension</li>
 <li><code>achievements.settings</code>: Ouvre la configuration de l'extension</li>
 <li><code>achievements.show</code>: Ouvre la Webview des succès</li>
 </ul>
 <p>Il s'agit de raccourcis pour les actions les plus courantes.</p>
+<h3>Settings</h3>
+<p><img src="images/settings.png" alt="Settings">
+L'extension dispose de quelques paramètres de configuration:</p>
+<ul>
+<li><code>achievements.enabled</code>: Active / désactive l'extension</li>
+<li><code>achievements.logLevel</code>: Niveau de log de l'extension</li>
+<li><code>achievements.logDirectory</code>: Dossier de stockage des logs</li>
+<li><code>achievements.username</code>: Nom d'utilisateur à afficher dans la Webview</li>
+<li><code>achievements.listeners.debug</code>: Active / désactive les listeners pour les évènements de type debug / breakpoint</li>
+<li><code>achievements.listeners.extensions</code>: Active / désactive les listeners pour les évènements de type extension, thème</li>
+<li><code>achievements.listeners.files</code>: Active / désactive les listeners pour les évènements de type ouverture de fichier, sauvegarde</li>
+<li><code>achievements.listeners.git</code>: Active / désactive les listeners pour les évènements de type git</li>
+<li><code>achievements.listeners.tabs</code>: Active / désactive les listeners pour les évènements de type ouverture de tab</li>
+<li><code>achievements.listeners.tasks</code>: Active / désactive les listeners pour les évènements de type tâches VSCode</li>
+<li><code>achievements.listeners.time</code>: Active / désactive les listeners pour les évènements de type temps passé</li>
+</ul>
 <h3>Base de données</h3>
 <ul>
 <li>J'utilise une base de données SQLite pour <strong>stocker les succès</strong>, leurs conditions de déblocage, leur état, la date de complétion, et tout un tas de propriétés.</li>
