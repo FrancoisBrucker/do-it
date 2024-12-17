@@ -62,16 +62,31 @@ Le workflow de l'extension est le suivant:
 
 ### Webview
 L'extension dispose d'une **Webview** qui permet à l'utilisateur de consulter la liste des succès débloqués et en cours. Cela permet de garder un historique des succès débloqués et de voir les succès restants à débloquer.
-![Webview](./webview.png)
+![Webview](./images/webview.png)
 
 ### Commandes
 L'extension ajoute des commandes custom à la palette VSCode à vscode:
-![Commandes](./commands.png)
+![Commandes](./images/commands.png)
 - `achievements.enable`: Active / désactive l'extension
 - `achievements.settings`: Ouvre la configuration de l'extension
 - `achievements.show`: Ouvre la Webview des succès
 
 Il s'agit de raccourcis pour les actions les plus courantes.
+
+### Settings
+![Settings](./images/settings.png)
+L'extension dispose de quelques paramètres de configuration:
+- `achievements.enabled`: Active / désactive l'extension
+- `achievements.logLevel`: Niveau de log de l'extension
+- `achievements.logDirectory`: Dossier de stockage des logs
+- `achievements.username`: Nom d'utilisateur à afficher dans la Webview
+- `achievements.listeners.debug`: Active / désactive les listeners pour les évènements de type debug / breakpoint
+- `achievements.listeners.extensions`: Active / désactive les listeners pour les évènements de type extension, thème
+- `achievements.listeners.files`: Active / désactive les listeners pour les évènements de type ouverture de fichier, sauvegarde
+- `achievements.listeners.git`: Active / désactive les listeners pour les évènements de type git
+- `achievements.listeners.tabs`: Active / désactive les listeners pour les évènements de type ouverture de tab
+- `achievements.listeners.tasks`: Active / désactive les listeners pour les évènements de type tâches VSCode
+- `achievements.listeners.time`: Active / désactive les listeners pour les évènements de type temps passé
 
 ### Base de données
 - J'utilise une base de données SQLite pour **stocker les succès**, leurs conditions de déblocage, leur état, la date de complétion, et tout un tas de propriétés.
