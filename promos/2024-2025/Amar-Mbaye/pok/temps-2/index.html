@@ -180,8 +180,16 @@
 <li><a href="#sprint-2--backend-et-int%C3%A9gration"><strong>Sprint 2 : Backend et Intégration</strong></a></li>
 </ul>
 </li>
+<li><a href="#architecture-et-fonctionnalit%C3%A9s"><strong>Architecture et Fonctionnalités</strong></a>
+<ul>
+<li><a href="#1-fonctionnalit%C3%A9s-cl%C3%A9s-du-forum"><strong>1. Fonctionnalités Clés du Forum</strong></a></li>
+<li><a href="#2-architecture-du-projet"><strong>2. Architecture du Projet</strong></a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li><a href="#r%C3%A9sultat-sous-format-de-vid%C3%A9o">Résultat (Sous format de vidéo)</a></li>
+<li><a href="#sources-">Sources :</a></li>
 </ul>
 <h3><strong>Présentation du Projet : Forum de Discussion</strong></h3>
 <p>Pour ce projet, je vise à développer un forum de discussion où les utilisateurs peuvent partager des idées, poser des questions, et échanger des avis.</p>
@@ -206,23 +214,17 @@ Créer un forum de discussion où je vais:</p>
 <li>
 <p><strong>Sprint 1 : Frontend et Maquette</strong></p>
 <ul>
-<li>
-<p>[x] Création de la maquette du forum (UX/UI) <a href="https://www.figma.com/design/6EleCT87Blb4ecdAUifrFx/forum?t=404V5TOHt19Sr2Qc-1">(lien vers la maquette)</a>.</p>
-</li>
-<li>
-<p>[x] Développement des composants frontend en React.js.</p>
-</li>
-<li>
-<p>[x] Configuration initiale des interactions utilisateur (ajouter un post, afficher des posts).</p>
-</li>
+<li>[x] Création de la maquette du forum (UX/UI) <a href="https://www.figma.com/design/6EleCT87Blb4ecdAUifrFx/forum?t=404V5TOHt19Sr2Qc-1">(lien vers la maquette)</a></li>
+<li>[x] Développement des composants frontend en React.js.</li>
+<li>[x] Configuration initiale des interactions utilisateur (ajouter un post, afficher des posts).</li>
 </ul>
 </li>
 <li>
 <p><strong>Sprint 2 : Backend et Intégration</strong></p>
 <ul>
 <li>[x] Mise en place du backend avec NestJS.</li>
-<li>[ ] Implémentation des endpoints API REST pour gérer les posts, commentaires et likes.</li>
-<li>[ ] Intégration frontend-backend pour synchroniser les fonctionnalités.</li>
+<li>[x] Implémentation des endpoints API REST pour gérer les posts, commentaires et likes.</li>
+<li>[x] Intégration frontend-backend pour synchroniser les fonctionnalités.</li>
 </ul>
 </li>
 </ul>
@@ -280,9 +282,6 @@ Créer un forum de discussion où je vais:</p>
 <hr>
 <h4><strong>3. Étude Post-Mortem</strong></h4>
 <p>Après chaque sprint, j'ai effectué une <strong>analyse post-mortem</strong> pour évaluer ce qui a fonctionné, ce qui a été difficile et ce qui doit être amélioré.</p>
-<ul>
-<li><strong>Sprint 1 : Frontend</strong></li>
-</ul>
 <h4><strong>Sprint 1 : Frontend et Maquette</strong></h4>
 <ul>
 <li><strong>Points forts :</strong>
@@ -316,90 +315,120 @@ Créer un forum de discussion où je vais:</p>
 <p>Redux est un gestionnaire d'état global pour les applications React. Il permet de gérer l 'état de l'application de manière centralisée et de réduire la complexité des composants.</p>
 </div></div>
 <h4><strong>Sprint 2 : Backend et Intégration</strong></h4>
-<!-- #### **Sprint 2 : Backend et Intégration**
-- **Points forts :**
-  - Les endpoints REST sont bien organisés (CRUD standardisé).
-
-- **Points faibles :**
-  - Gestion des erreurs CORS qui a ralenti l'intégration initiale.
-  - Probléme de PC trop lent
-  - Complexité dans la synchronisation des états entre le frontend et le backend.
-- **Leçons apprises :**
-  - Toujours prévoir du temps pour les tests d’intégration entre les différentes parties du projet.
-
-  - **Améliorations :**
-    - Ajouter des tests automatisés pour éviter les régressions.
-  
-   
+<ul>
+<li>
+<p><strong>Points forts :</strong></p>
+<ul>
+<li>Les endpoints REST sont bien organisés (CRUD standardisé).</li>
+</ul>
+</li>
+<li>
+<p><strong>Points faibles :</strong></p>
+<ul>
+<li>Gestion des erreurs CORS qui a ralenti l'intégration initiale.</li>
+<li>Probléme de PC trop lent</li>
+<li>Complexité dans la synchronisation des états entre le frontend et le backend.</li>
+</ul>
+</li>
+<li>
+<p><strong>Leçons apprises :</strong></p>
+<ul>
+<li>
+<p>Toujours prévoir du temps pour les tests d’intégration entre les différentes parties du projet.</p>
+</li>
+<li>
+<p><strong>Améliorations :</strong></p>
+<ul>
+<li>Ajouter des tests automatisés pour éviter les régressions.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
 </svg>
 <div class="pl-8 mr-8">
-
-
-Les tests automatisés sont des scripts qui vérifient automatiquement que le code fonctionne comme prévu. Ils permettent de détecter les erreurs et les bugs rapidement et de garantir la qualité du code.
-
-
+<p>Les tests automatisés sont des scripts qui vérifient automatiquement que le code fonctionne comme prévu. Ils permettent de détecter les erreurs et les bugs rapidement et de garantir la qualité du code.</p>
 </div></div>
-
- 
- 
----
-
-### **Architecture et Fonctionnalités**
-
-#### **1. Fonctionnalités Clés du Forum**
-- **Posts** :
-  - Les utilisateurs peuvent créer, lire, modifier et supprimer des posts (CRUD).
-  - Les posts sont affichés avec leur titre et contenu.
-
-- **Commentaires** :
-  - Chaque post peut recevoir des commentaires.
-  - Les utilisateurs peuvent ajouter .
-
-- **Interactions** :
-  - Les utilisateurs peuvent liker et partager des posts.
-
-#### **2. Architecture du Projet**
-Le projet est divisé en plusieurs couches.
-
-- **Frontend** (React.js) :
-  - Composants principaux :
-    - **MainContent** : Affiche la liste des posts.
-    - **Editor** : Permet à l’utilisateur de créer un post.
-    - **QuestionListItem** : Gère les interactions avec un post (likes, commentaires).
-
-- **Backend** (NestJS) :
-  - Modules :
-    - **PostsModule** : Gère les endpoints pour les posts.
-    - **CommentsModule** : Gère les endpoints pour les commentaires.
-  - Modèles Mongoose :
-    - **Post** : Définit la structure d’un post dans MongoDB (titre, contenu).
-    - **Comment** : Définit la structure d’un commentaire (contenu, post associé).
-
----
-
-## Résultat (Sous format de video)
+<hr>
+<h3><strong>Architecture et Fonctionnalités</strong></h3>
+<h4><strong>1. Fonctionnalités Clés du Forum</strong></h4>
+<ul>
+<li>
+<p><strong>Posts</strong> :</p>
+<ul>
+<li>Les utilisateurs peuvent créer, lire, modifier et supprimer des posts (CRUD).</li>
+<li>Les posts sont affichés avec leur titre et contenu.</li>
+</ul>
+</li>
+<li>
+<p><strong>Commentaires</strong> :</p>
+<ul>
+<li>Chaque post peut recevoir des commentaires.</li>
+<li>Les utilisateurs peuvent ajouter .</li>
+</ul>
+</li>
+<li>
+<p><strong>Interactions</strong> :</p>
+<ul>
+<li>Les utilisateurs peuvent liker et partager des posts.</li>
+</ul>
+</li>
+</ul>
+<h4><strong>2. Architecture du Projet</strong></h4>
+<p>Le projet est divisé en plusieurs couches.</p>
+<ul>
+<li>
+<p><strong>Frontend</strong> (React.js) :</p>
+<ul>
+<li>Composants principaux :
+<ul>
+<li><strong>MainContent</strong> : Affiche la liste des posts.</li>
+<li><strong>Editor</strong> : Permet à l’utilisateur de créer un post.</li>
+<li><strong>QuestionListItem</strong> : Gère les interactions avec un post (likes, commentaires).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Backend</strong> (NestJS) :</p>
+<ul>
+<li>Modules :
+<ul>
+<li><strong>PostsModule</strong> : Gère les endpoints pour les posts.</li>
+<li><strong>CommentsModule</strong> : Gère les endpoints pour les commentaires.</li>
+</ul>
+</li>
+<li>Modèles Mongoose :
+<ul>
+<li><strong>Post</strong> : Définit la structure d’un post dans MongoDB (titre, contenu).</li>
+<li><strong>Comment</strong> : Définit la structure d’un commentaire (contenu, post associé).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>Résultat (Sous format de vidéo)</h2>
 <!-- integrer video .mp4 --> 
-<!-- <video width="100%" controls>
-<source src="./Resultat.mp4" type="video/mp4">
-
-## Sources :
-
+<video controls="">
+ <source src="Resultat.mp4" type="video/mp4">
+</video>
+<h2>Sources :</h2>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
-<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500"xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
 </svg>
 <div class="pl-8 mr-8">
-
-
-
-
-
+<ul>
+<li><a href="https://francoisbrucker.github.io/do-it/promos/2024-2025/Amar-Mbaye/mon/temps-1.1/">Mon Mon 1.1</a></li>
+<li><a href="https://francoisbrucker.github.io/do-it/promos/2024-2025/Amar-Mbaye/mon/temps-2.1/">Mon Mon 2.1</a></li>
+<li><a href="https://francoisbrucker.github.io/do-it/promos/2024-2025/Amar-Mbaye/mon/temps-2.2/">Mon MON 2.2</a></li>
+</ul>
 </div></div>
-</div>
-  --> 
+
 
 
 </article>
