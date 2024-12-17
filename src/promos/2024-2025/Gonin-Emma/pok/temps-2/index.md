@@ -32,7 +32,7 @@ But final.
 
 #### Sprint 2 : Déployement !
 
-- [ ] Déployer le site sur aioli à la main, en créant mon serveur et en utilisant tmux pour survivre à la déconnexion.
+- [x] Déployer le site sur aioli à la main, en créant mon serveur et en utilisant tmux pour survivre à la déconnexion.
 - [ ] Tester une seconde manière de déployer, cette fois en dockerisant mon appli en parallèle de mon MON 2.2 sur Docker.
 - [ ] Rajout post-sprint 1 : Trouver comment forcer le rafraichissement du DOM après un clic sur les flèches gauche ou droite pour enfin mettre en place la navigation clavier dans le portfolio. 
 
@@ -47,6 +47,10 @@ Toutes les séances et le nombre d'heure que l'on y a passé.
 | Mercredi 13/11 | 2H | Essais pour la navigation clavier/Mise en pause de cette navigation là : j'ai nettoyé le code et décalé cette tâche au sprint 2, deux heures peu productives |
 | Jeudi 14/11 | 2H30 | Après la session peu productive de la veille et le cours de dev web sur Flask, je me suis décidée à implémenter ma propre API avec FastAPI. J'ai changé l'arborescence de mon projet pour séparer backend et frontend  |
 | Lundi 18/11 | 1H | J'ai créé mon nouveau repo git et j'ai push mon projet ainsi que fini de rédiger cette synthèse. | 
+| Lundi 09/12 | 2H | Copie du frontend et du backend depuis ma version locale au serveur aioli |
+| Mercredi 11/12 | 5H | Déployement et mise en production |
+| Dimanche 15/12 | 3H30 | Essai de rendre le frontend responsive |
+| Lundi 16/12 | 3H | Rédaction compte-rendu et diapo pour restitution |
 
 ## Contenu
 
@@ -123,9 +127,47 @@ Pour déployer le site, j'ai plusieurs idées, si je n'avais pas créer d'API il
 
 ### Second Sprint
 
+Lors de ce second sprint, j'ai d'abord créer un dossier .tar.gz de mon application React sans les modules node afin de pouvoir modifier le code directement avec nano sur le serveur et effectuer le build depuis la machine virtuelle. J'ai copié ce dossier sur balsamite avec `scp -r \chemin\local\dossier mon-herbe@aioli-ec-m.fr:./paintings/`. J'ai pu build mon application sur le serveur et copier ces fichiers de build dans mon dossier /static/ pour qu'ils soient servis par nginx.
+
+J'ai également copié mon dossier de backend de la même manière, sans l'environnement python que j'ai créé depuis aioli. J'ai modifié mon API pour qu'elle puisse servir l'application React directement, sans avoir à passer par un script node comme je le faisais auparavant et j'ai changé les path et les ports dans le main.py. Les url de mes images étaient configurées pour être utilisées en local mais pas sur un serveur donc j'ai dû les adapter en utilisant la route /static/paintings. 
+
+Avant modification :
+
+![backend](<image-2.png>)
+Après modification :
+![alt text](image-3.png)
+
+Pour survivre à la déconnexion, je lance mon serveur uvicorn (pour servir le backend) depuis une session `tmux` cf [les cours d'Unix de François Brucker](https://francoisbrucker.github.io/cours_informatique/enseignements/ecm/3A/do-it/devOPS/).
+
+Je me suis rendue compte en ouvrant mon site web balsamite.aioli.ec-m.fr qu'il n'est pas du tout responsive, ainsi j'ai passé un peu plus de 3 heures à rendre le site web plus responsive grâce à un des outils de développement de chrome mais je ne suis pas tout-à-fait satisfaite du résultat. Après je ne suis pas tant frustrée car en un peu plus que 40 heures j'ai beaucoup appris, que ce soit sur le frontend, sur le backend et sur le déployement sur un serveur. 
+
+#### Essai adaptabilité téléphone pour la page d'accueil
+![alt text](image-4.png)
+
+![alt text](image-5.png)
+
+#### Essai adaptabilité pour la galerie
+![alt text](image-7.png)
+
+![alt text](image-6.png)
+
+#### Essai adaptabilité pour la page "à propos"
+
+![alt text](image-9.png)
+
+![alt text](image-8.png)
+
+### Post-mortem sprint 2
+
+J'ai passé plus de temps de prévu car je n'avais pas prévu une vue mobile de mon site web à la base. J'ai dû changer aussi le code de mon backend pour que cela fonctionne hors de localhost. Pour conclure ce POK, j'ai mis les mains dans le cambouis et j'ai pu toucher à plusieurs technologies web qui me serviront plus tard.
+
 ### Ressources
 - Pour la gestion du backend et du frontend (les faire tourner en parallèle) : Stackoverflow, how to put backend and frontend together - returning react frontend from fastapi backend endpoint, https://stackoverflow.com/questions/62928450/how-to-put-backend-and-frontend-together-returning-react-frontend-from-fastapi
 - Pour mes questions spécifiques au code, j'utilise l'extension VSCode de https://phind.com
+  
 En prévision du sprint 2 :
 - https://stacklima.com/comment-dockeriser-une-application-reactjs/
 - https://www.youtube.com/watch?v=4xj8N4a36Zs&ab_channel=chillotech
+
+Ressources réellement utilisées pour le sprint 2 : 
+- [Tutoriel tmux](https://www.hostinger.fr/tutoriels/comment-utiliser-tmux-plus-cheatsheet#:~:text=La%20fen%C3%AAtre%20tmux%20en%20cours,utilisant%20Ctrl%2Db%20%2B%20p)

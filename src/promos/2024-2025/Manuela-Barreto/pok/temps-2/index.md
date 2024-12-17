@@ -38,25 +38,29 @@ Développer une application mobile pour un jeu simple qui met les joueurs au dé
 
 | Tâche | Durée Prévue | Durée Réel | Tâche Réalisée|
 | :---: | :----: | :----------: | :--------: |
-| Création du design de l'application sur figma | 2H | 2H30 | X |
-| Développement de l'écran d'accueil | 1H30 | 2H | X |
-| Créer les objets/personnages | 1H | 1H | X |
-| Créer l'écran de niveau (hardcoded) | 3H | 2H30 | X |
-| Mettre en œuvre la logique de base pour déplacer un bloc | 2H |  |  |
-| Documentation du sprint 1 | 1H | 1H | X |
-| *Résoudre problème de l'emulateur* | *-* | *2H* | *X* |
+| Création du design de l'application sur figma            | 2H                  | 2H30                 | X           |
+| Développement de l'écran d'accueil                       | 1H30                | 2H                   | X           |
+| Créer les objets/personnages                             | 1H                  | 1H                   | X           |
+| Créer l'écran de niveau (hardcoded)                      | 3H                  | 2H30                 | X           |
+| Mettre en œuvre la logique de base pour déplacer un bloc | 2H                  | **Non Réalisée**     | -           |
+| Documentation du sprint 1                                | 1H                  | 1H                   | X           |
+| *Résoudre problème de l'emulateur*                       | **Non Pévue**       | *2H*                 | *X*           |
 | **TOTAL** | **10H30** | **11H** |  |
 
-#### Sprint 2
+#### **Sprint 2**
 
-| Tâche | Durée Prévue | Durée Réel | Tâche Réalisée|
-| :---: | :----: | :----------: | :--------: |
-| Mettre en œuvre la logique de base pour déplacer un bloc | 2H |  |  |
-| Créer la base des données stocker les niveaux | 2H30 |  |  |
-| Mettre les niveaux dans la base des données| 0H30 |  |  |
-| Créer la page des niveaux | 2H |  |  |
-| Tester et corriger les éventuelles erreurs | 3H|  |  |
-| **TOTAL** | **10H** |  |  |
+| **Tâche**                                   | **Durée Prévue** | **Durée Réelle** | **Tâche Réalisée** |
+| :------------------------------------------: | :--------------: | :-------------: | :----------------: |
+| Mettre en œuvre la logique de base pour déplacer un bloc | 2H               | 7H               | X                 |
+| Créer la base des données pour stocker les niveaux      | 2H30             | 2H30             | X                 |
+| Mettre les niveaux dans la base des données             | 0H30             | **Non Réalisée** | -                 |
+| Créer la page des niveaux                               | 2H               | **Non Réalisée** | -                 |
+| Tester et corriger les éventuelles erreurs              | 3H               | **En parallèle** | X                 |
+| Logique de conclusion d'un niveau                       | **Non Prévue**   | 1H               | X                 |
+| Documentation du sprint 2                               | **Non Prévue**   | 1H               | X |
+| **TOTAL**                                               | **10H**          | **11H30**        | -                 |
+
+**Note :** La tâche "Tester et corriger les éventuelles erreurs" a été réalisée **en parallèle** des autres tâches exécutées, ce qui a permis d'intégrer les corrections au fur et à mesure. Les deux dernières tâches n’ont pas été finalisées faute de temps.
 
 ### Horodatage
 
@@ -68,14 +72,22 @@ Développer une application mobile pour un jeu simple qui met les joueurs au dé
 | Samedi 02/11 | 0H30 |  Travail sur les boutons de l'écran d'accueil |
 | Samedi 02/11 | 3H30 |  Travail sur le développement de l'écran des niveaux (y compris la création des objets/personnages)|
 | Mardi 19/11 | 1H | Travail sur la documentation |
-| **TOTAL** | **11H** |  |
+| Jeudi 28/11 | 3H |  Travail sur les mouvements des voitures |
+| Mercredi 11/12 | 4H | Travail sur les mouvements des voitures |
+| Vendredi 13/11 | 1H | Travail sur la conclusion d'u niveau (bouton "Go") |
+| Vendredi 13/11 | 2H30 | Travail sur la création et implementation de 3 niveaux |
+| Mardi 17/11 | 1H | Travail sur la documentation |
+
+| **TOTAL** | **22H30** |  |
 
 ## Sommaire
 
 - [Le Design de l'Application](#le-design-de-l-application)
 - [Développement - Premier Sprint](#développement-premier-sprint)
 - [Post-Mortem - Premier Sprint](#post-mortem-premier-sprint)
-- [Résultat Intermédiaire](#resultat-intermédiaire)
+- [Développement - Deuxième Sprint](#développement-deuxième-sprint)
+- [Post-Mortem - Deuxième Sprint](#post-mortem-deuxième-sprint)
+- [Résultat](#resultat)
 
 
 ## Le Design de l'Application <a id="le-design-de-l-application"></a>
@@ -123,11 +135,14 @@ En complément, j'ai également utilisé des fichiers de ressources pour défini
 Pour construire la page du niveau, j'ai utilisé les fichiers suivants :  
 
 - **`PlayActivity`** : ce fichier contrôle non seulement les actions des boutons, mais également le fonctionnement du chronomètre et les mouvements des objets présents sur la page.  
-- **`activity_play.xml`** : ce fichier s'occupe de créer le layout de la page.  
+- **`activity_play.xml`** : ce fichier s'occupe de créer le layout de la page.
 
 Comme pour la page d'accueil, des fichiers de ressources ont été utilisés pour gérer les textes, les couleurs, la police et les images. Voici le résultat final du layout :  
 
-![activity_play](./assets/activity_play.png)  
+![activity_play](./assets/activity_play.png)
+
+Il est important de noter que les objets de la voiture à l'écran ont été **hard coded**. Cela signifie que j'ai créé un objet pour chacune de ces voitures avec une image, une taille et un positionnement spécifiques.
+Ce n'est pas idéal, mais c'est le moyen que j'ai trouvé pour me familiariser avec le langage et la logique à mettre en œuvre avant d'améliorer la façon dont ces objets sont généré.
 
 
 ### La Création des Objets du Jeu  
@@ -169,30 +184,140 @@ En essayant d’utiliser l’émulateur, celui-ci fonctionnait correctement, mai
 1. **Vérification Initiale des Configurations**  
    Avant de commencer, il est important de vérifier les versions du SDK et d’éviter de travailler dans des dossiers synchronisés (comme OneDrive) pour éviter les problèmes d’accès.  
 
-2. **Automatisation et Documentation**  
-   Mettre en place des processus pour automatiser certaines tâches et documenter les solutions aux problèmes rencontrés afin de gagner du temps et de partager les apprentissages avec l’équipe.  
-
-3. **Préparation aux Imprévus**  
-   Prévoir un temps supplémentaire pour résoudre les problèmes techniques imprévus, surtout ceux liés à l’environnement de développement.  
+2. **Préparation aux Imprévus**  
+   Prévoir un temps supplémentaire pour résoudre les problèmes techniques imprévus, surtout ceux liés à l’environnement de développement.
 
 
-### Post-Mortem - Deuxième Sprint <a id="post-mortem-deuxieme-sprint"></a>
+## Développement - Deuxième Sprint <a id="développement-deuxième-sprint"></a>
 
-Avec la conclusion de cette deuxième sprint, je termine également l'ensemble du projet. Globalement, je suis satisfaite du travail accompli, en particulier dans la réalisation des objectifs définis. La phase finale a été marquée par des défis techniques et des ajustements, mais elle a également permis de mettre en place les principales fonctionnalités du site web, notamment la page des flashcards.
+### **Déplacement des voitures**  
 
-Cependant, il y a plusieurs **leçons à retenir** de cette dernière phase de développement. Le premier point concerne les **imprévus techniques** rencontrés. L'erreur liée à la politique CORS lors de l’utilisation de l’API `fetch` a entraîné un retard d’environ une heure, durant laquelle j’ai exploré plusieurs solutions alternatives sans succès, avant de pouvoir résoudre le problème avec l'accès à un autre ordinateur. Bien que le problème ait été finalement résolu, cela souligne l’importance de prévoir des **temps de contingence pour les imprévus techniques** dans les futures planifications de projets.
+Cette partie constitue le cœur du jeu, car l’objectif principal est de déplacer les voitures pour dégager le chemin et permettre à la voiture rouge d’atteindre la sortie. Bien que j’étais conscient de l’importance de cette fonctionnalité, j’ai largement sous-estimé le temps nécessaire pour la mettre en place. Cette étape a été de loin la plus chronophage du projet, me demandant un total de **7 heures** de travail. Je vais diviser cette phase en plusieurs sous-étapes, correspondant aux différentes problématiques rencontrées pour implémenter cette fonctionnalité.
 
-Un autre point à améliorer est lié à la **planification des fonctionnalités de la page des flashcards**. Le choix initial de ne pas inclure immédiatement l’option d’affichage de la traduction a conduit à un retravail conséquent sur le HTML et le CSS, notamment pour intégrer un effet de rotation des flashcards lors de l’affichage de la traduction. Ce contretemps a occasionné une perte de temps qui aurait pu être évitée avec une planification plus approfondie dès le départ.
+#### **1. Mouvement en temps réel des voitures**  
 
-Malgré ces défis, cette deuxième sprint a également montré des **améliorations notables**, notamment en ce qui concerne la **qualité et l'organisation du code**. Contrairement à la première sprint, où l’apprentissage du JavaScript a nécessité de faire des compromis sur la structuration du code, cette phase a intégré une étape dédiée à l’optimisation du code. Cette prévoyance a non seulement facilité le travail final mais a également contribué à un développement plus fluide et à une meilleure lisibilité du projet.
+   La première étape a consisté à permettre aux voitures de se déplacer en synchronisation avec le toucher de l’utilisateur sur l’écran. Bien que le langage **Kotlin** facilite cette fonctionnalité, j’ai été confronté à un problème inattendu : la différence entre les unités de mesure **"dp"** et **"px"**. Ce manque de connaissance initial a fait que les voitures se déplaçaient de manière incohérente jusqu’à ce que je comprenne et développe une fonction capable de gérer correctement cette différence.
 
-En conclusion, bien que le projet ait connu quelques difficultés, je considère que les **objectifs principaux ont été atteints**. La création du site web avec des flashcards interactives bilingues (français/portugais) et une navigation fluide entre les termes a été réalisée avec succès. Les **principales améliorations pour de futurs projets** incluraient une meilleure anticipation des contraintes techniques et un **détail plus précis des fonctionnalités dès le début du processus**, afin de minimiser le retravail.
-
-Je quitte ce projet avec une meilleure compréhension des **principes de développement web**, des **techniques de gestion des imprévus** et une compétence accrue en **JavaScript et en structuration de code**. Ces apprentissages seront essentiels pour mes futurs projets.
+   **Durée de cette étape : environ 1h30**  
 
 
-## Résultat Intermédiaire <a id="resultat-intermédiaire"></a>
+#### **2. Définir les positions d’arrêt des voitures**  
+
+   Il était essentiel que les joueurs ne puissent pas lâcher les voitures n’importe où, mais uniquement sur les **cases spécifiques** du plateau. Pour cela, j’ai développé une fonction **`snapToGrid`** qui, en fonction de la position où le joueur relâche la voiture, calcule la case la plus proche et ajuste la position de la voiture en conséquence.
+
+   Ici encore, j’ai rencontré des difficultés liées aux unités **"dp"** et **"px"**. Toutefois, ayant déjà résolu ce problème à l’étape précédente, la correction a été plus rapide. De nouvelles difficultés sont toutefois apparues, notamment la nécessité de :  
+   - Définir un **seuil** pour déterminer si la voiture doit se placer sur la case précédente ou suivante.  
+   - Gérer le fait qu’une voiture peut occuper plusieurs cases simultanément.
+
+   **Durée de cette étape : environ 2h**  
+
+#### **3. Vérifier si la nouvelle position est valide**  
+
+   Une règle essentielle du jeu est qu’aucune voiture ne peut occuper une case déjà utilisée par une autre voiture. Pour gérer cela, j’ai dû :  
+   1. **Créer une base de données** pour stocker et mettre à jour l’état des cases (libres ou occupées). C’était la première fois que je manipulais des **Data Class** en Kotlin et que je travaillais avec un fichier **JSON** pour structurer les données sur AndroidStudio.  
+   2. **Implémenter des fonctions de vérification** :  
+      - S’assurer que les cases à occuper sont disponibles.  
+      - Si les cases appartiennent déjà à la voiture en cours de déplacement, les considérer comme disponibles.  
+      - En cas d’indisponibilité, ramener la voiture à sa position initiale.  
+
+   Il fallait également s’assurer que l’intégralité de la voiture (en fonction de sa longueur) reste dans les limites du **plateau 6x6** pour valider son positionnement.
+
+   **Durée de cette étape : environ 2h45**  
+
+#### **4. Vérifier si le déplacement est valide**  
+
+   En plus de vérifier si les cases cibles sont libres, il était nécessaire de s’assurer que le **chemin** emprunté par la voiture pour s’y rendre n’était pas bloqué par une autre voiture. Si ce n’était pas le cas, le déplacement devait être annulé, et la voiture ramenée à sa position précédente.
+
+   **Durée de cette étape : environ 45 minutes**  
+
+### **Conclusion et réflexion**  
+
+Pour traiter ces différentes conditions, j’ai dû effectuer de nombreux **tests**. En toute honnêteté, lorsque j’ai commencé à implémenter cette fonctionnalité, je n’avais pas anticipé autant de contraintes ni d’aspects à prendre en compte. Cela m’a appris qu’il est crucial de tester minutieusement chaque fonctionnalité afin d’identifier les éventuelles lacunes.  
+
+De plus, il peut être extrêmement utile de faire tester le jeu par une **autre personne**. Celle-ci pourrait adopter un comportement imprévu, révélant des bugs ou des restrictions auxquelles je n’avais pas pensé. Ce retour externe permet de peaufiner davantage la logique et la robustesse du jeu.
+
+### **Validation du niveau et mouvement automatique**  
+
+Une fois que l’utilisateur a déplacé les voitures et appuie sur le bouton **"Go"**, deux actions essentielles doivent être réalisées pour valider la fin du niveau et offrir une expérience fluide :  
+
+1. **Validation de la réussite du niveau**  
+   Il est impératif de vérifier qu’aucun véhicule ne bloque le chemin entre la **voiture rouge** et la **sortie**. Pour cela, j’ai implémenté une fonction de validation qui :  
+   - Parcourt les **cases** situées entre la position actuelle de la voiture rouge et la sortie.  
+   - Vérifie que ces cases sont libres, en se basant sur la base de données des cases occupées générée précédemment.  
+
+   Si toutes les cases sont vides, le niveau est considéré comme **réussi**, et l’animation suivante peut être déclenchée.
+
+2. **Mouvement automatique de la voiture rouge**  
+   Une fois la validation effectuée, la voiture rouge se déplace automatiquement jusqu’à la sortie. Pour cela j’ai utilisé une animation pour déplacer la voiture rouge de sa position actuelle jusqu’à la **case de sortie**.
+
+### **Création des niveaux**  
+
+Une fois la mise en place de la **mouvementation des voitures** terminée, il ne me restait plus beaucoup de temps pour réaliser tout ce que j’avais prévu. J’ai donc décidé de trouver au moins une solution pour **créer des niveaux** et passer automatiquement d’un niveau à l’autre une fois l’étape terminée.
+
+#### **Organisation des niveaux**  
+Jusqu’à présent, comme mentionné précédemment, le jeu comportait uniquement **un niveau hard codé**. Modifier cela a été assez compliqué, car j’ai dû créer plusieurs nouvelles fonctions. Cependant, cela m’a permis de **mieux organiser mon code** :  
+- J’ai déplacé toutes les **fonctions liées à la gestion des déplacements** des voitures vers un fichier séparé nommé **`BoardUtils.kt`**.  
+- Ainsi, dans **`PlayActivity`**, seules les fonctions responsables de **l’initialisation de la page**, de **la construction des niveaux** et du **passage automatique d’un niveau à l’autre** ont été conservées.
+
+#### **Enchaînement des niveaux**  
+Dans la version actuelle du jeu :  
+- Quand un niveau est **terminé**, le suivant démarre **automatiquement**.  
+- Si l’utilisateur retourne au menu principal et clique sur le bouton **"Play"**, le jeu **reprend toujours au premier niveau**.  
+
+Je suis conscient que cette solution n’est **pas idéale**. Par exemple, je n’ai pas eu le temps de développer une option permettant au joueur de **choisir un niveau** à partir d’un menu.
+
+#### **Limites et prochaines étapes**  
+Ce manque de flexibilité est principalement dû au **temps limité** alloué au projet (j’avais déjà dépassé les **20 heures** prévues). Je pense que cette fonctionnalité de sélection de niveaux, ainsi que la sauvegarde de la progression, nécessiterait une **gestion de base de données** plus avancée, ce que je n’ai pas pu approfondir dans cette version.
+
+Je suis motivé pour continuer à travailler sur ce projet lors de la **POK3**, car je suis convaincu qu’il m’aidera à progresser, en particulier dans les domaines de la **gestion de base de données** et de l’optimisation de la structure du code.
+
+### **Post-Mortem - Deuxième Sprint** <a id="post-mortem-deuxième-sprint"></a>  
+
+#### **Problèmes Rencontrés**  
+
+1. **Sous-estimation du temps nécessaire pour implémenter la fonctionnalité de déplacement des voitures**  
+   Bien que cette fonctionnalité soit au cœur du jeu, j’ai grandement sous-estimé sa complexité. Entre la gestion des mouvements "en direct", l’alignement sur la grille, la vérification des positions valides et des chemins libres, le processus a été long et laborieux. Cela a pris **7 heures au total**, ce qui a largement dépassé mon estimation initiale.  
+
+2. **Difficultés liées aux unités de mesure "dp" et "px"**  
+   Lors de l’implémentation du mouvement des voitures, la différence entre les unités **"dp"** (densité indépendante) et **"px"** (pixels) a causé des dysfonctionnements dans les déplacements, rendant le jeu instable au début. Une compréhension plus approfondie de ces unités a été nécessaire pour corriger ces erreurs.  
+
+3. **Problèmes d’organisation des niveaux**  
+   Passer d’un niveau "hard codé" à un système dynamique de création de niveaux a été complexe. Bien que j’aie réussi à automatiser l’enchaînement des niveaux, je n’ai pas eu le temps d’implémenter une fonctionnalité permettant au joueur de **choisir un niveau** ou de sauvegarder sa progression.  
+
+
+#### **Activités Non Prévues**  
+
+1. **Gestion des erreurs techniques**  
+   - Le temps passé à résoudre les problèmes d’unités **dp/px** a été bien plus long que prévu.  
+   - J’ai dû effectuer plusieurs ajustements pour que les voitures s’alignent correctement sur les cellules de la grille.  
+
+2. **Refactorisation du code**  
+   - Afin de mieux organiser le projet, j’ai déplacé les fonctions de gestion des mouvements dans un fichier **`BoardUtils.kt`**, ce qui n’était pas initialement prévu dans ce sprint. Cette réorganisation a été bénéfique, mais elle a consommé une partie du temps alloué pour d’autres tâches.  
+
+3. **Tests et ajustements supplémentaires**  
+   - De nombreux tests ont été nécessaires pour identifier et résoudre des bugs inattendus, comme les collisions entre voitures, les mouvements invalides ou les retours à la position initiale.
+
+#### **Leçons Apprises pour la Prochaine Sprint et Projets Futurs**  
+
+1. **Estimer plus précisément la complexité des fonctionnalités**  
+   - Il est important d’évaluer en détail les différentes étapes d’une fonctionnalité complexe avant de commencer, afin d’éviter de sous-estimer le temps nécessaire à son implémentation.  
+   - Diviser les fonctionnalités en sous-tâches claires permet de mieux suivre l’avancement du projet.  
+
+2. **Tester régulièrement et impliquer d’autres personnes**  
+   - Les tests fréquents pendant le développement permettent d’identifier rapidement les problèmes.  
+   - Faire tester l’application par quelqu’un d’autre peut révéler des cas d’usage imprévus ou des bugs non anticipés.  
+
+3. **Prévoir un temps pour les imprévus**  
+   - Une marge de temps supplémentaire doit être prévue dans chaque sprint pour gérer les problèmes techniques imprévus, comme les erreurs de compatibilité ou les ajustements d’interface.  
+
+4. **Organiser le code dès le début**  
+   - Structurer le code dès le départ permet d’éviter les refactorisations tardives et facilite l’ajout de nouvelles fonctionnalités. Un fichier dédié aux utilitaires comme **`BoardUtils.kt`** aurait pu être créé dès le début pour gagner du temps.
+
+
+## Résultat <a id="resultat"></a>
+
+Dans la vidéo ci-dessous, je présente le **résultat final** de mon projet. J'y démontre certains mouvements **invalides** qui ont dû être traités tout au long du développement, ainsi que le fonctionnement global du jeu.
 
 <video width="200" controls>
-  <source src="./assets/resultat_intermediaire.webm" type="video/webm">
+  <source src="./assets/resultat.mp4" type="video/mp4">
 </video>

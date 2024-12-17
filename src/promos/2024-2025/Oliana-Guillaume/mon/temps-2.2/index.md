@@ -9,7 +9,7 @@ date: 1971-01-01
 tags: 
   - "temps 2"
 
-résumé: "Un MON autour de React."
+résumé: "Un MON autour de la blockchain."
 ---
 
 {% prerequis %}

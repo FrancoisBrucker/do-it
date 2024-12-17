@@ -36,6 +36,15 @@ résumé: Ce POK a pour but de présenter mes avancées sur ma simulation du tra
   
 {%enddetails%}
 
+{% details "✏️ TO-DO Sprint 2"%}
+
+- [x] Commenter et reformat le code
+- [x] Implementer les passages piétons
+- [x] Gérér les voies coupées lors d'une sortie de priorité
+- [x] Tests
+  
+{%enddetails%}
+
 {% details "⌛ Horodatage sprint 1"%}
 
 | Date           | Heures passées | Indications                                    |
@@ -50,6 +59,23 @@ résumé: Ce POK a pour but de présenter mes avancées sur ma simulation du tra
 | Total          | 10H30          |                                                |
 
 Sur ce sprint, j'ai sous-estimé la charge de travail à fournir pour atteindre l'ensemble de mes objectifs. Il est préférable que je me concentre sur l'accomplissement ces objectifs sur le second sprint et faire l'interface graphique pendant le POK 3. En revanche je m'en sorti mieux sorti avec l'étape débogage car effectué des tests tout au long de mon travail.
+
+{%enddetails%}
+
+{% details "⌛ Horodatage sprint 2"%}
+
+| Date          | Heures passées | Indications        |
+| ------------- | -------------- | ------------------ |
+| Dimanche 1/12 | 3H             | Reformat code      |
+| Lundi 2/12    | 1H             | Fin reformat code  |
+| Vendredi 6/12 | 3h             | Passage piéton     |
+| Samedi 7/12   | 2H             | Fin passage piéton |
+| Mardi 17/12   | 30min          | Feux rouges        |
+| Mardi 17/12   | 30min          | Rédaction POK      |
+|               |                |                    |
+| Total         | 10H            |                    |
+
+Bonne gestion des objectifs j'ai pût finaliser ce que je n'avais pas eu le temps de faire au sprint 1. On peut passer à la dernière étape interface graphique.
 
 {%enddetails%}
 
@@ -71,29 +97,26 @@ Afin de pouvoir trouver mon chemin dans une intersection, il me fallait, dans un
 
 <div style="text-align: center;">
     <img src="DFS.PNG" width="200"/>
-    <br>
     <u> Image 1 : Fonctionnement algo DFS [Source](https://medium.com/@jwbtmf/dfs-vs-bfs-algorithms-for-graph-database-5948f0fd2057)</u>
 </div>
 <br>
 
-2) Une fois les intersections regroupées entre elles, on parcourt les bords des intersections dans le sens antihoraire. Si ce sens peut être suivi, on l'ajoute à la direction. Mais pourquoi faire cela ? L'objectif est de définir le sens de circulation dans une intersection ou un rond-point, en partant du principe qu'il est toujours possible de longer les bords d'une intersection. 
+1) Une fois les intersections regroupées entre elles, on parcourt les bords des intersections dans le sens antihoraire. Si ce sens peut être suivi, on l'ajoute à la direction. Mais pourquoi faire cela ? L'objectif est de définir le sens de circulation dans une intersection ou un rond-point, en partant du principe qu'il est toujours possible de longer les bords d'une intersection. 
 
 Petit schéma explicatif :
 
 <div style="text-align: center;">
     <img src="directions_intersections_sens_circu.jpg" width="500"/>
-    <br>
     <u> Image 2 : Schéma explicatif initialisation sens de circulation</u>
 </div>
 <br>
 
-3) Enfin, pour chaque case de notre intersection, on examine les cases adjacentes. Si une direction pointe vers nous, on l'ajoute aux directions possibles. Cette opération est répétée tant que de nouvelles directions apparaissent.
+1) Enfin, pour chaque case de notre intersection, on examine les cases adjacentes. Si une direction pointe vers nous, on l'ajoute aux directions possibles. Cette opération est répétée tant que de nouvelles directions apparaissent.
 
 Petit schéma explicatif :
    
 <div style="text-align: center;">
     <img src="directions_intersections.jpg" width="500"/>
-    <br>
     <u> Image 3 : Schéma explicatif construction des directions possibles</u>
 </div>
 <br>
@@ -106,7 +129,6 @@ Une fois les directions possibles trouvées, il faut maintenant parvenir à trou
 
 <div style="text-align: center;">
     <img src="BFS.PNG" width="200"/>
-    <br>
     <u> Image 4 : Fonctionnement algo BFS [Source](https://medium.com/@jwbtmf/dfs-vs-bfs-algorithms-for-graph-database-5948f0fd2057)</u>
 </div>
 <br>
@@ -119,7 +141,6 @@ Enfin, pour un départ donné et une direction souhaitée, il faut trouver le po
 
 <div style="text-align: center;">
     <img src="choix_sortie.jpg" width="500"/>
-    <br>
     <u> Image 5 : Comment choisir la sortie ?</u>
 </div>
 <br>
@@ -128,17 +149,48 @@ On remarque dans les deux cas que le chemin privilégié est celui le plus court
 
 <div style="text-align: center;">
     <img src="distribution_sortie.jpg" width="500"/>
-    <br>
     <u> Image 6 : Distribution pour choix de la sortie</u>
 </div>
 <br>
 
 Finalement, pour les sorties qui ne se situent pas en face de l'entrée, on peut, par un jeu de rotation, se rapporter au cas précédent. Je passe la partie codage et débogage, mais en implémentant toutes les fonctions dans le bon ordre, on a réussi notre premier objectif.
 
+## 🚧 Partie 4 : Implementer les passages piétons
+
+Il faut pas seulement prendre en compte les voitures, en effet la route est un lieu de partage entre les automobilistes et les piétons.
+
+Mon objectif est donc d'implementer un nouvau bloc : le passage piéton. 
+
+Pour cela j'ai fais plusieurs hypothèses:
+
+- Une voiture ne peut pas avancer si il y a un piéton en face de lui = non prise en compte de la courtoisie
+- Un piéton met 4 sec à traverser une voie (calcul : largeur moy 6m / vitesse moy 5 km/h)
+
+Pour mettre en place cette nouvelle fonction, j'ai reformat le code pour une meilleure clarté et ajouté des docstings.
+
+J'ai également crée la nouvelle route pour le test, repris les règles de priorités et définit le mouvement d'un piéton. 
+
+<div style="text-align: center;">
+    <img src="Cas_etude_pieton.PNG" width="800"/>
+    <u> Image 7 : Nouveau cas d'étude</u>
+</div>
+<br>
+
+## 🚦 Partie 5 : Cycles des feux variables
+
+Actuellement il est possible uniquement de définir un cycle fixe pour les feux rouges, ex : si 30 sec rouge alors 30 sec vert. 
+
+L'objectif est de pouvoir définir des cycles plus souples, par exemple il serait intéressant de pouvoir avoir un feu 30 sec rouge et 10 sec vert.
+
+Pour cela j'ai légèrement modifié les structures des code update et des variables.
+
+Finalement voici la simulation finale :
+
+<video controls src="Simu_V2.mp4"></video>
 
 {% lien "Bibliographie" %}
 
-**[1] -** [Mais c'est quoi un algo de parcours !?](https://www.jesuisundev.com/comprendre-les-algorithmes-de-parcours-en-8-minutes/)
+**[1] -** [Mais c'est quoi un algo de parcours !?](https://www.jesuisundev.com/comprendre-les-algorithmes-de-parcours-en-8-minutes/)  
 **[2] -** [Explication A-star](https://www.geeksforgeeks.org/a-search-algorithm/)
 
 {% endlien %}
