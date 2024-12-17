@@ -73,6 +73,21 @@ L'extension ajoute des commandes custom à la palette VSCode à vscode:
 
 Il s'agit de raccourcis pour les actions les plus courantes.
 
+### Settings
+![Settings](./settings.png)
+L'extension dispose de quelques paramètres de configuration:
+- `achievements.enabled`: Active / désactive l'extension
+- `achievements.logLevel`: Niveau de log de l'extension
+- `achievements.logDirectory`: Dossier de stockage des logs
+- `achievements.username`: Nom d'utilisateur à afficher dans la Webview
+- `achievements.listeners.debug`: Active / désactive les listeners pour les évènements de type debug / breakpoint
+- `achievements.listeners.extensions`: Active / désactive les listeners pour les évènements de type extension, thème
+- `achievements.listeners.files`: Active / désactive les listeners pour les évènements de type ouverture de fichier, sauvegarde
+- `achievements.listeners.git`: Active / désactive les listeners pour les évènements de type git
+- `achievements.listeners.tabs`: Active / désactive les listeners pour les évènements de type ouverture de tab
+- `achievements.listeners.tasks`: Active / désactive les listeners pour les évènements de type tâches VSCode
+- `achievements.listeners.time`: Active / désactive les listeners pour les évènements de type temps passé
+
 ### Base de données
 - J'utilise une base de données SQLite pour **stocker les succès**, leurs conditions de déblocage, leur état, la date de complétion, et tout un tas de propriétés.
 - Je stocke aussi la **progression de chaque critère** pour débloquer les succès. Cela me permet de savoir si un succès est débloqué ou non.
