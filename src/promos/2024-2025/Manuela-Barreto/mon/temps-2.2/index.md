@@ -130,16 +130,16 @@ Le NSDR est une technique de relaxation profonde qui, bien qu'elle n'implique pa
 3. **Stimuli Externes :**
 
 - *Bonheur* :
-Être de bonne humeur peut sembler simple, mais cela a un impact significatif sur le processus créatif. Lorsque nous sommes heureux, les niveaux de dopamine augmentent, notamment dans les zones du cerveau responsables de la pensée divergente. Cela facilite la génération de nouvelles idées. Ainsi, être de bonne humeur favorise la phase initiale du processus créatif, où l'objectif est de penser à plusieurs solutions ou alternatives.
-
-Cependant, il est important de se rappeler que des niveaux trop élevés de dopamine peuvent aussi être nuisibles, car ils peuvent entraîner une concentration excessive. C'est pourquoi l'auto-connaissance est essentielle. Si vous constatez que vous n'êtes pas de bonne humeur, il est possible d'utiliser des activités courtes, comme écouter de la musique ou faire de l'exercice, pour stimuler le cerveau et améliorer l'humeur, le mettant ainsi dans un état idéal pour la pensée divergente.
-
-D'un autre côté, si les niveaux de dopamine sont trop élevés, avec une énergie excessive ou de l'agitation, il est recommandé d'éviter les stimuli externes avant de commencer le processus créatif. Dans ce cas, chercher à apaiser l'esprit avant de plonger dans la pensée divergente peut aider à obtenir de meilleurs résultats dans le développement des idées créatives.
+  Être de bonne humeur peut sembler simple, mais cela a un impact significatif sur le processus créatif. Lorsque nous sommes heureux, les niveaux de dopamine augmentent, notamment dans les zones du cerveau responsables de la pensée divergente. Cela facilite la génération de nouvelles idées. Ainsi, être de bonne humeur  favorise la phase initiale du processus créatif, où l'objectif est de penser à plusieurs solutions ou alternatives.
+  
+  Cependant, il est important de se rappeler que des niveaux trop élevés de dopamine peuvent aussi être nuisibles, car ils peuvent entraîner une concentration excessive. C'est pourquoi l'auto-connaissance est essentielle. Si vous constatez que vous n'êtes pas de bonne humeur, il est possible d'utiliser des activités courtes, comme écouter de la musique ou faire de l'exercice, pour stimuler le cerveau et améliorer l'humeur, le mettant ainsi dans un état idéal pour la pensée divergente.
+  
+  D'un autre côté, si les niveaux de dopamine sont trop élevés, avec une énergie excessive ou de l'agitation, il est recommandé d'éviter les stimuli externes avant de commencer le processus créatif. Dans ce cas, chercher à apaiser l'esprit avant de plonger dans la pensée divergente peut aider à obtenir de meilleurs résultats dans le développement des idées créatives.
 
 - *Caféine* :
-La caféine peut être utile pendant la phase de pensée convergente, car elle augmente l'attention et la concentration, nécessaires pour affiner les idées et trouver des solutions pratiques. Cependant, elle n'est pas indiquée lors de la phase de pensée divergente, qui nécessite de la flexibilité et de la fluidité mentale.
-
-Ainsi, si vous aimez le café, il est préférable d'attendre la phase de pensée convergente pour le consommer. De cette manière, la caféine peut aider à améliorer la concentration et la capacité à affiner les idées générées pendant la phase d'exploration créative.
+  La caféine peut être utile pendant la phase de pensée convergente, car elle augmente l'attention et la concentration, nécessaires pour affiner les idées et trouver des solutions pratiques. Cependant, elle n'est pas indiquée lors de la phase de pensée divergente, qui nécessite de la flexibilité et de la fluidité mentale.
+  
+  Ainsi, si vous aimez le café, il est préférable d'attendre la phase de pensée convergente pour le consommer. De cette manière, la caféine peut aider à améliorer la concentration et la capacité à affiner les idées générées pendant la phase d'exploration créative.
 
 - *Mouvement* :
-Bien que l'étude de l'impact du mouvement sur la créativité soit limitée, des recherches indiquent que des activités comme marcher sans but précis aident à stimuler la pensée divergente. Ce mouvement "pseudo-aléatoire" libère la créativité de manière plus fluide, favorisant l'exploration de nouvelles idées et possibilités. Ainsi, lors de la pensée divergente, essayez de vous déplacer de manière légère et aléatoire, comme marcher sans but précis, pour favoriser l'exploration de nouvelles possibilités et idées.
+  Bien que l'étude de l'impact du mouvement sur la créativité soit limitée, des recherches indiquent que des activités comme marcher sans but précis aident à stimuler la pensée divergente. Ce mouvement "pseudo-aléatoire" libère la créativité de manière plus fluide, favorisant l'exploration de nouvelles idées et possibilités. Ainsi, lors de la pensée divergente, essayez de vous déplacer de manière légère et aléatoire, comme marcher sans but précis, pour favoriser l'exploration de nouvelles possibilités et idées.
