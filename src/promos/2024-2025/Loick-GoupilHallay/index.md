@@ -25,7 +25,7 @@ Mon truc c'est l'automatisation, la cybersécurité et les potichats.
 
 <div style="margin: auto; width: fit-content">
   <video style="max-height: min(50vh, 300px)" controls autoplay loop>
-    <source src="https://github.com/BoxBoxJason/do-it/blob/e68be49d76ffcfec321d8692dea9e281b2748534/static/vid/happy_cat.mp4" type="video/mp4">
+    <source src="https://boxboxjason.github.io/do-it/vid/happy_cat.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </div>
