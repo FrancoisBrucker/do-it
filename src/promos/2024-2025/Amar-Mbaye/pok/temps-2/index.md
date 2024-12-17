@@ -170,7 +170,11 @@ Le projet est divisé en plusieurs couches.
     - **CommentsModule** : Gère les endpoints pour les commentaires.
   - Modèles Mongoose :
     - **Post** : Définit la structure d’un post dans MongoDB (titre, contenu).
-    - **Comment** : Définit la structure d’un commentaire (contenu, post associé).
+    - **Comment** : Définit la structure d’un commentaire (contenu, post associé). 
+
+Voici le lien du code source (Backend) : [Code source](https://github.com/MbayeSyAmar/forum-backend)
+
+Voici le lien du code source(Frontend) : [Code source](https://github.com/MbayeSyAmar/forum-front)
 
 ---
 
