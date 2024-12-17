@@ -188,6 +188,7 @@ Les extensions les plus populaires sont :
 - [Local AI Pilot (Ollama)](https://marketplace.visualstudio.com/items?itemName=nr-codetools.localaipilot) (gratuit, open-source)
 
 Il suffit d'installer l'extension correspondant à votre modèle de suggestion de code par IA et de l'activer dans les paramètres de VSCode.
+![Code Suggestions AI](./images/ai_suggestions.png)
 
 ### Live Share
 Live Share est une extension de VSCode qui permet de **collaborer en temps réel** avec d'autres développeurs.\
