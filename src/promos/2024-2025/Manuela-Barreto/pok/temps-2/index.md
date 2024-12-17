@@ -38,25 +38,29 @@ Développer une application mobile pour un jeu simple qui met les joueurs au dé
 
 | Tâche | Durée Prévue | Durée Réel | Tâche Réalisée|
 | :---: | :----: | :----------: | :--------: |
-| Création du design de l'application sur figma | 2H | 2H30 | X |
-| Développement de l'écran d'accueil | 1H30 | 2H | X |
-| Créer les objets/personnages | 1H | 1H | X |
-| Créer l'écran de niveau (hardcoded) | 3H | 2H30 | X |
-| Mettre en œuvre la logique de base pour déplacer un bloc | 2H |  |  |
-| Documentation du sprint 1 | 1H | 1H | X |
-| *Résoudre problème de l'emulateur* | *-* | *2H* | *X* |
+| Création du design de l'application sur figma            | 2H                  | 2H30                 | X           |
+| Développement de l'écran d'accueil                       | 1H30                | 2H                   | X           |
+| Créer les objets/personnages                             | 1H                  | 1H                   | X           |
+| Créer l'écran de niveau (hardcoded)                      | 3H                  | 2H30                 | X           |
+| Mettre en œuvre la logique de base pour déplacer un bloc | 2H                  | **Non Réalisée**     | -           |
+| Documentation du sprint 1                                | 1H                  | 1H                   | X           |
+| *Résoudre problème de l'emulateur*                       | **Non Pévue**       | *2H*                 | *X*           |
 | **TOTAL** | **10H30** | **11H** |  |
 
-#### Sprint 2
+#### **Sprint 2**
 
-| Tâche | Durée Prévue | Durée Réel | Tâche Réalisée|
-| :---: | :----: | :----------: | :--------: |
-| Mettre en œuvre la logique de base pour déplacer un bloc | 2H | 6H | X |
-| Créer la base des données stocker les niveaux | 2H30 |  |  |
-| Mettre les niveaux dans la base des données| 0H30 |  |  |
-| Créer la page des niveaux | 2H |  |  |
-| Tester et corriger les éventuelles erreurs | 3H |  |  |
-| **TOTAL** | **10H** |  |  |
+| **Tâche**                                   | **Durée Prévue** | **Durée Réelle** | **Tâche Réalisée** |
+| :------------------------------------------: | :--------------: | :-------------: | :----------------: |
+| Mettre en œuvre la logique de base pour déplacer un bloc | 2H               | 7H               | X                 |
+| Créer la base des données pour stocker les niveaux      | 2H30             | 2H30             | X                 |
+| Mettre les niveaux dans la base des données             | 0H30             | **Non Réalisée** | -                 |
+| Créer la page des niveaux                               | 2H               | **Non Réalisée** | -                 |
+| Tester et corriger les éventuelles erreurs              | 3H               | **En parallèle** | X                 |
+| Logique de conclusion d'un niveau                       | **Non Prévue**   | 1H               | X                 |
+| Documentation du sprint 2                               | **Non Prévue**   | 1H               | X |
+| **TOTAL**                                               | **10H**          | **11H30**        | -                 |
+
+**Note :** La tâche "Tester et corriger les éventuelles erreurs" a été réalisée **en parallèle** des autres tâches exécutées, ce qui a permis d'intégrer les corrections au fur et à mesure. Les deux dernières tâches n’ont pas été finalisées faute de temps.
 
 ### Horodatage
 
@@ -72,16 +76,18 @@ Développer une application mobile pour un jeu simple qui met les joueurs au dé
 | Mercredi 11/12 | 4H | Travail sur les mouvements des voitures |
 | Vendredi 13/11 | 1H | Travail sur la conclusion d'u niveau (bouton "Go") |
 | Vendredi 13/11 | 2H30 | Travail sur la création et implementation de 3 niveaux |
-| Mardi 17/11 | 1H | Travail sur la documentation + Présentation |
+| Mardi 17/11 | 1H | Travail sur la documentation |
 
-| **TOTAL** | **23H** |  |
+| **TOTAL** | **22H30** |  |
 
 ## Sommaire
 
 - [Le Design de l'Application](#le-design-de-l-application)
 - [Développement - Premier Sprint](#développement-premier-sprint)
 - [Post-Mortem - Premier Sprint](#post-mortem-premier-sprint)
-- [Résultat Intermédiaire](#resultat-intermédiaire)
+- [Développement - Deuxième Sprint](#développement-deuxième-sprint)
+- [Post-Mortem - Deuxième Sprint](#post-mortem-deuxième-sprint)
+- [Résultat](#resultat)
 
 
 ## Le Design de l'Application <a id="le-design-de-l-application"></a>
@@ -265,7 +271,7 @@ Ce manque de flexibilité est principalement dû au **temps limité** alloué au
 
 Je suis motivé pour continuer à travailler sur ce projet lors de la **POK3**, car je suis convaincu qu’il m’aidera à progresser, en particulier dans les domaines de la **gestion de base de données** et de l’optimisation de la structure du code.
 
-### **Post-Mortem - Deuxième Sprint** <a id="post-mortem-deuxieme-sprint"></a>  
+### **Post-Mortem - Deuxième Sprint** <a id="post-mortem-deuxième-sprint"></a>  
 
 #### **Problèmes Rencontrés**  
 
