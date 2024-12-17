@@ -44,10 +44,10 @@ Cette question englobe plusieurs aspects :
 
 {% endfaire %}
 
-De cette façon, nous verrons le lien entre 
-l’<span class="bg-blue-100 rounded-full p-1.5">industrie tertiaire</span>,
-la <span class="bg-pink-100 rounded-full p-1.5">gestion de projet</span> en source ouverte et 
-le <span class="bg-green-100 rounded-full p-1.5">développement logiciel</span>.
+De cette façon, nous verrons le lien avec le sujet dans 
+l’<span class="bg-blue-100 rounded-full p-1.5">industrie tertiaire</span> dans un premier temps ([Partie 1](#partie-1)),
+puis avec la <span class="bg-pink-100 rounded-full p-1.5">gestion de projet</span> en source ouverte et 
+le <span class="bg-green-100 rounded-full p-1.5">développement logiciel</span> dans un second ([Partie 2](#partie-2)).
 
 ## Précédentes contributions
 
@@ -57,14 +57,10 @@ Lorsque l’on cherche le terme “*Open Source*” sur le site de Do_<span styl
 
 Parmi eux certains ont étudié particulièrement d’*Open Source* au travers de ses communautés, comme dans le **MON de Jeffrey** :
 
-{% lien %}
-[Découverte d'une communauté Open Source avec Blender](https://francoisbrucker.github.io/do-it/promos/2022-2023/Edisah-Jeffrey/mon/openSource/)
-{% endlien %}
+{% lieninterne "/promos/2022-2023/Edisah-Jeffrey/mon/openSource/" %}
 
 ou bien ont simplement détaillé les définitions des outils utilisés comme dans le **MON de Lucie** _(“1. Découverte de WordPress”)_ :
-{% lien %}
-[CMS : Apprendre à utiliser WordPress](https://francoisbrucker.github.io/do-it/promos/2023-2024/Lucie-Le-Boursicaud/mon/temps-3.1/)
-{% endlien %}
+{% lieninterne "/promos/2023-2024/Lucie-Le-Boursicaud/mon/temps-3.1/"%}
 
 <br />
 
@@ -73,14 +69,15 @@ Dans l’ensemble, on constate que les POKs et MONs citent beaucoup de logiciels
 {% endinfo %}
 
 
-## Définitions
+## Définitions { #partie-1 }
 
-**Open source** : désigne un modèle de développement et de distribution de logiciels où le code source est librement accessible et parfois modifiable et distribuable [1].
+**Open source** : désigne un modèle de développement et de distribution de logiciels où le code source est librement accessible et parfois modifiable et distribuable [1](#bibliographie).
 
 **Logiciel libre** : usuellement, on désigne par ce terme un logiciel ou une application développée selon les principes de l’*Open Source*. Le logiciel libre va plus loin garantissant les aspects distribuables et l’appropriation par tous et pour tous les usages, en faisant la promotion de principes définis par la [Free Software Foundation](https://www.fsf.org/?set_language=fr), notamment.
 
 {% info %}
 **On retient** - Souvent confondus, il existe une nuance entre **Libre** et ***Open Source***, le premier étant plus ouvert encore que la simple mise à disposition publique du code.
+Pour en savoir plus : [Logiciel « libre » et « open source » sont-ils synonymes ?](https://insolus.com/blog/difference-open-source-logiciel-libre) et les débats éthiques de la communauté : [2](#bibliographie).
 {% endinfo %}
 
 ## Dimension historique de l’*Open Source* dans l’informatique
@@ -89,7 +86,7 @@ Dans l’ensemble, on constate que les POKs et MONs citent beaucoup de logiciels
 
 Les débuts de l’informatique s’accompagnent de la **distribution** conjointe du **logiciel** et du **matériel**. On fait ici référence aux années 50’ à 60’, aux prémisses de l’informatique électronique, faisant suite aux cartes perforées. Par la même occasion, il semble à l’époque tomber sous le sens de donner **accès au code** permettant de générer du code compilé : de ce fait lisible par un humain. Les premiers logiciels sont en ce sens *Open Source* et manipulés principalement par des universitaires.
 
-Ces informations [4][5] montrent que l’industrie s’est en fait approprié des technologies développées dans le cadre de la recherche, bénéficiant d’un vide juridique à propos de la propriété intellectuelle. Ainsi, l’expansion de l’informatique telle que l’on la connait se partage entre deux rapports à la propriété : libre et collaborative ou bien protégée et respectueuse du droit d’auteur. Ce sont bien des visions politiques et économiques qui s’affrontent, ce qui justifie que l’on traite de ce sujet au cours d’un tel article.
+Ces informations [4](#bibliographie)[5](#bibliographie) montrent que l’industrie s’est en fait approprié des technologies développées dans le cadre de la recherche, bénéficiant d’un vide juridique à propos de la propriété intellectuelle. Ainsi, l’expansion de l’informatique telle que l’on la connait se partage entre deux rapports à la propriété : libre et collaborative ou bien protégée et respectueuse du droit d’auteur. Ce sont bien des visions politiques et économiques qui s’affrontent, ce qui justifie que l’on traite de ce sujet au cours d’un tel article.
 
 Nous allons explorer la première frange : la communauté du libre. Cette communauté, animée par des valeurs de collaboration sans secret industriel, a joué un rôle crucial dans le développement de nombreux outils et technologies que nous utilisons aujourd'hui.
 
@@ -100,7 +97,7 @@ GNU/Linux est un exemple assez emblématique de la puissance de l'*Open Source*.
 ![image.png](./assets/fig-1.png)
 <span class="text-center italic">Fig 1 - Chronologie des systèmes UNIX. Source : Wikipédia</span>
 
-UNIX est une famille de systèmes d’exploitation encadrée par des standards et issue de développements privés. Avant la rédaction de ce MON, j’aurais dit qu’UNIX n’était qu’une base aux systèmes Linux d’aujourd’hui ! Il n’en est rien. En réalité, il s’agit d’un système répondant aux mêmes caractéristiques (multi-utilisateur, multi-programmes, a un système de fichier propre et compatibilité avec de nombreux matériels) mais dérivé de UNIX ou *“**Unix-like**”* [7]. La communauté de hackers rédigeant ainsi le [*GNU Manifesto*](https://www.gnu.org/gnu/manifesto.html) embrassent ainsi pleinement la philosophie du libre et structurent des programmes sous forme de briques logicielles empruntées du fonctionnement de logiciels privés.
+UNIX est une famille de systèmes d’exploitation encadrée par des standards et issue de développements privés. Avant la rédaction de ce MON, j’aurais dit qu’UNIX n’était qu’une base aux systèmes Linux d’aujourd’hui ! Il n’en est rien. En réalité, il s’agit d’un système répondant aux mêmes caractéristiques (multi-utilisateur, multi-programmes, a un système de fichier propre et compatibilité avec de nombreux matériels) mais dérivé de UNIX ou *“**Unix-like**”* [7](#bibliographie). La communauté de hackers rédigeant ainsi le [*GNU Manifesto*](https://www.gnu.org/gnu/manifesto.html) embrassent ainsi pleinement la philosophie du libre et structurent des programmes sous forme de briques logicielles empruntées du fonctionnement de logiciels privés.
 
 > *GNU is not in the public domain. Everyone will be permitted to modify and redistribute GNU, but no distributor will be allowed to restrict its further redistribution.*
 > 
@@ -152,67 +149,184 @@ Dès lors, nous pouvons citer d’autres multinationales qui ont investi dans l�
 Mais quel intérêt pour les GAFAM de voir leur code en libre accès et modifiable par toutes et tous ?
 {% endexercice %}
 
-Une partie de la réponse se trouve dans la **vente de services complémentaires**, la **stimulation de l’innovation** et la **réduction des coûts** par le travail de communautés actives d’utilisateurs [9]. J’ajouterai au papier de 2011 ainsi cité que la stratégie d’un géant technologique peut aussi être de **déstabiliser une situation monopolistique** propriétaire, comme le fait Meta avec LLaMa [10][11].
+Une partie de la réponse se trouve dans la **vente de services complémentaires**, la **stimulation de l’innovation** et la **réduction des coûts** par le travail de communautés actives d’utilisateurs [9](#bibliographie). J’ajouterai au papier de 2011 ainsi cité que la stratégie d’un géant technologique peut aussi être de **déstabiliser une situation monopolistique** propriétaire, comme le fait Meta avec LLaMa [10](#bibliographie)[11](#bibliographie).
+
+{% info %}
+<figure style="float: right; margin: 0 0 0 10px;">
+    <img width="150" src="./assets/fig-5.jpg" alt="" />
+    <figcaption class="text-center">Fig 5 - Logo Meta</figcaption>
+</figure>
+
+**Ajout suite à la conférence de Christian Keller** à Centrale, Product Lead pour la recherche en IA générative chez **Meta** (et anciennement Product Lead pour PyTorch).
+
+Meta décrit sa contribution à l’Open Source selon trois axes :
+
+- Pour **la communauté** (de chercheurs, de développeurs)
+- Pour **Meta** (facilité de recrutement de profils connaissant l’écosystème logiciel)
+- Pour **le monde** (volonté philanthropique à laquelle on peut choisir l’adhérer)
+
+Et vous pouvez en savoir plus en suivant le lien ci-dessous.
+{% endinfo %}
+
+{% lieninterne "./conference" %}
 
 Ensuite, il faut considérer que les entreprises ont un intérêt significatif à ne pas être dépendantes de solutions propriétaires pour leurs usages, faisant valoir l'importance de leur souveraineté technologique. En adoptant et en contribuant à des solutions *Open Source*, les entreprises peuvent mieux contrôler leur infrastructure informatique, réduire leur dépendance vis-à-vis de prestataires uniques ou encore se rendre plus flexible dans les réponses technologiques aux besoins clients. Par exemple, dans le domaine du marketing numérique, WordPress est un outil *Open Source* omniprésent (presque 43% du web selon les dernières études, en progression par rapport au [MON de Lucie](https://francoisbrucker.github.io/do-it/promos/2023-2024/Lucie-Le-Boursicaud/mon/temps-3.1/) sur le sujet daté d’il y a un an).
 
 Enfin, cette approche favorise l'innovation interne et la collaboration avec d’autres entreprises dans des écosystèmes logiciels partagés. Ici, je dois prendre l’exemple de Kubernetes qui illustre  cette dynamique en entreprise. Cette plateforme d'orchestration de conteneurs est maintenant au cœur de nombreuses infrastructures cloud dans toutes les industries, bénéficiant des contributions d'une vaste communauté d'entreprises et de développeurs indépendants.
 
-Ces exemples montrent que de grandes entreprises multinationales contribuent activement à l’*Open Source* et indiquent comment leur modèle économique est viable au regard des innovations apportées par une partie de la communauté.
+Ces exemples montrent que de grandes entreprises multinationales contribuent activement à l’*Open Source* et indiquent comment leur modèle économique est viable au regard des innovations apportées par une partie de la communauté. À leurs échelles, certaines entreprises européennes ont aussi vu dans l’*Open Source* un moyen de développer une philosophie libre en accord avec un modèle économique pérenne. C’est le sujet de la prochaine partie. [12](#bibliographie)
 
 ## Des communautés *Open Source* aux enjeux divers
 
-Internet regorge de communautés variées qui partagent leurs codes et génèrent de l’interaction entre utilisateurs.
+Internet regorge de communautés variées qui partagent leurs codes et génèrent de l’interaction entre utilisateurs. De la plus anecdotique : 
 
-De la plus anecdotique : Personnes qui font des [animations pour des croix de pharmacies](https://github.com/MathisHammel/CroixPharmacie)
+{% lien %}
+Personnes qui font des [animations pour des croix de pharmacies](https://github.com/MathisHammel/CroixPharmacie)
+{% endlien %}
 
-Aux plus sérieux des enjeux, comme la démocratie représentative
 
-- https://pol.is/home
-- [https://github.com/tournesol-app/tournesol/](https://github.com/tournesol-app/tournesol/tree/main)
+Aux enjeux les plus sérieux, comme la démocratie représentative :
 
-## Bibliographie et documentation
+{% lien %}
+- [Polis](https://pol.is/home)
+- [Le Projet Tournesol](http://tournesol.app/)
+{% endlien %}
+
+<figure style="float: right; margin: 0 0 0 1rem; width: 150px;">
+    <img width="150" src="./assets/fig-6.png" alt="" />
+    <figcaption class="text-center">Fig 6 - Logo VLC Media Player</figcaption>
+</figure>
+
+Ces projets peuvent prendre plusieurs formes comme des **associations à but non lucratif**, prenons l’exemple français de VideoLAN (portant le projet bien connu **VLC**) ou bien **des entreprises en transition** vers des modèles économiques nouveaux. Pour VLC comme pour d’autres associations, les porteurs du projet ont su développer un modèle économique basé sur le sponsoring et les dons, permettant de maintenir une équipe de développeurs dédiés tout en gardant le logiciel gratuit et *Open Source*. En comptant plus de 400 millions d’utilisateurs, cette approche montre qu'il est possible de concilier les valeurs du logiciel libre avec une structure organisationnelle stable. [13](#bibliographie)
+
+<figure style="float: right; margin: 0 0 0 1rem; width: 150px;">
+    <img width="150" src="./assets/fig-7.png" alt="" />
+    <figcaption class="text-center">Fig 7 - Logo Odoo</figcaption>
+</figure>
+
+Je pense ensuite à OpenEPR, devenue **Odoo**, qui est passée d’un modèle de distribution *Open Source*, rémunéré par des services de support, à un modèle à noyau ouvert et une distinction entre leurs logiciels commerciaux et ouverts. C’est ainsi que 80% des développements annoncés servent leur modèle “*Community*” tandis que le reste sont attribués à la version “*Entreprise*”, dégageant l’essentiel de la valeur économique de l’entreprise. [14](#bibliographie)
+
+L’exemple de VideoLAN montre la possibilité d’impact mondial avec une collaboration ouverte, tandis qu’Odoo illustre la force d’un modèle hybride liant communauté et rentabilité. Ces réussites soulignent l’importance stratégique de l’*Open Source* pour l’innovation et l’autonomie numérique en Europe.
+
+Enfin, pour terminer ce MON (ma toute dernière production à Centrale !), j’aimerais vous raconter ma contribution à l’*Open Source*…
+
+## Ma contribution à l’Open Source { #partie-2 }
+
+<figure style="float: right; margin: 0 0 0 1rem; width: 200px;">
+    <img width="200" src="./assets/fig-8.jpg" alt="" />
+    <figcaption class="text-center">Fig 8 - Logo de Tournesol</figcaption>
+</figure>
+
+Pour commencer, je m’intéresse à la plateforme **Tournesol** 🌻 depuis la création de l’association du même nom en 2021 qui 
+faisait suite à la sortie du livre *Le Fabuleux Chantier* [15](#bibliographie). Cet ouvrage, comme d’autres des mêmes auteurs, 
+mentionnent les problématiques d’**alignement des intelligences artificielles** aux **démocraties numériques**. 
+Ces problématiques faisant écho à plusieurs domaines qui me passionnent (intelligence artificielle, démocratie et 
+modes de scrutin), j’ai continué à suivre les productions du chercheur et vidéaste Lê Nguyên Hoang de 
+[la chaîne YouTube Science4All](https://www.youtube.com/@le_science4all).
+
+<br />
+
+{% lien %}
+- [L'application Tournesol](http://tournesol.app/) 🌻
+- [Le GitHub de Tournesol](https://github.com/tournesol-app/tournesol/)
+- [Tutoriel Tournesol - YouTube](https://www.youtube.com/watch?v=xSqqXN0D4fY) (déjà un peu daté)
+- [Le whitepaper](https://doi.org/10.48550/arXiv.2107.07334) (papier de recherche à la génèse du projet)
+{% endlien %}
+
+Ainsi, cette plateforme a pour mission d’assurer la **transparence** et la **robustesse** des votes par le prisme des **algorithmes 
+de recommandation**, omniprésents sur le web. Ce qui a déclenché mon envie d’entrer en action pour ce projet fut la lecture 
+d’un deuxième ouvrage : *La Dictature des Algorithmes* [16](#bibliographie). C’est comme cela que j’ai contacté les membres actifs de la 
+communauté sur l’application Discord.
+
+### Premiers échanges
+
+Après avoir longuement hésité, tâtonné, pour trouver les bons mots et surtout vaincre le syndrome de l’imposteur, 
+j’envoyai un message dans un canal Discord pour me présenter.
+
+Voilà la teneur, enthousiasmée, de la première réponse à ma volonté de participer au projet :
+
+> Salut! 
+Je suis ravi de te rencontrer. D'autant plus que l'UX est un compétence qui nous manque beaucoup dans l'équipe de Tournesol. 
+> On a eu de l'aide au début qui a fait que le site ressemble à quelque chose 😃
+> 
+> 
+> Un but sur notre roadmap cette année serait d'avoir une **page pour que chaque utilisateur** puisse voir quelques **statistiques** 
+> de leur utilisation de Tournesol (par exemple: le **nombre de comparaison**, le **nombre moyen de comparaison par vidéo comparée**, 
+> le **nombre de vidéos recommandées** qu'il ou elle a mis en avant, le nombre de fois qu'elle a été la première contributrice à voter 
+> sur une vidéo qui plus tard a un très bon score)
+> Ça te dirait de proposer un design pour cette nouvelle page et de le développer?
+> On peut en discuter dans [`#dev`](https://discord.com/channels/760540475139817472/826519326131093565)
+> 
+
+### Le futur
+
+Le projet était donc en demande de compétences que je pouvais apporter. 
+Je rencontrai ainsi les membres du projet par un appel et j’allais me lancer dans le design de cette application avec Figma. 
+C’est ainsi que toutes les compétences de cette dernière année et demi de Do_<span style="color: #4a86e8">It</span> allaient se croiser pour interagir avec une communauté active : 
+reste à voir combien de temps s’écoulera avant de voir apparaitre une contribution publique [sur mon GitHub](https://github.com/alouradou). 
+
+## Conclusion, perspectives, regard critique
+
+En conclusion, nous sommes revenus sur les définitions parfois philosophiques et clivantes du monde du libre dans le secteur du logiciel. 
+Nous avons montré que l'approche *Open Source* a **transformé le paysage technologique et économique** du secteur tertiaire 
+dans l’histoire. Son impact sur l'innovation se manifeste à travers la **collaboration ouverte et le partage des connaissances** 
+qui permettent aux entreprises et aux projets libres d'accélérer leur développement en réduisant les coûts. 
+Les **différents modèles économiques** observés, qu'ils soient portés par des géants technologiques ou des structures plus modestes, 
+démontrent la viabilité de cette approche.
+
+La compétitivité des entreprises est renforcée par une meilleure maîtrise des technologies, 
+une **indépendance** aux solutions propriétaires du secteur privé et une capacité d'**innovation collaborative**. 
+Nous n’avons pas eu le temps de se pencher sur **le rapport de l’État et de la législation sur le libre**, 
+notamment par le prisme de la propriété intellectuelle ou bien de la transparence des services publics numériques, 
+mais cela constituerait un axe intéressant pour aller plus loin.
+
+Pour finir, mon expérience avec le projet Tournesol illustre cette dynamique où l'*Open Source* devient un catalyseur 
+d'innovation tout en promouvant des valeurs de transparence et de démocratie numérique. 
+Ce MON a été l’occasion de me lancer vers une participation bénévole à un projet que je juge bénéfique. 
+Quoi qu’il en soit, c’est comme cela que se poursuivra mon parcours, au-delà du monde professionnel, 
+au service de la vision que j’aspire à partager. 
+Merci pour votre attention !
+
+## Bibliographie et documentation { #bibliographie }
+
+{% lien %}
 
 [1] [L'Open Source, qu'est-ce que c'est ? - RedHat](https://www.redhat.com/fr/topics/open-source/what-is-open-source)
 
-[2] https://insolus.com/blog/difference-open-source-logiciel-libre
+[2] [En quoi l'open source perd de vue l'éthique du logiciel libre - GNU](https://www.gnu.org/philosophy/open-source-misses-the-point.fr.html)
 
 [3] [Les logiciels libres et open source en France : où en sommes-nous ? - Labo Société Numérique](https://labo.societenumerique.gouv.fr/fr/articles/dossier-les-logiciels-libres-et-open-source-en-france-o%C3%B9-en-sommes-nous/)
 
-[4] https://en.wikipedia.org/wiki/History_of_free_and_open-source_software
+[4] [History of free and open-source software - Wikipedia [en]](https://www.notion.so/MON-Bonus-1-Le-vaste-monde-de-l-Open-Source-11a91615bf17807ea4b0ed9e281950ec?pvs=21)
 
-[5] [https://fr.wikipedia.org/wiki/Ordinateur_à_programme_enregistré](https://fr.wikipedia.org/wiki/Ordinateur_%C3%A0_programme_enregistr%C3%A9)
+[5] [Ordinateur à programme enregistré - Wikipédia [fr]](https://fr.wikipedia.org/wiki/Ordinateur_%C3%A0_programme_enregistr%C3%A9)
 
-[6] https://web.maths.unsw.edu.au/~lafaye/CCM/unix/unixintro.htm
+[6] [Introduction aux systèmes UNIX - CommentCaMarche.net](https://web.maths.unsw.edu.au/~lafaye/CCM/unix/unixintro.htm)
 
-[7] https://www.techtarget.com/searchdatacenter/definition/Unix
+[7] [UNIX Definition - TechTarget](https://www.techtarget.com/searchdatacenter/definition/Unix)
 
-[8] https://www.it-connect.fr/etude-utilisation-open-source-en-france-2023/
+[8] [Usage de l’open source : 80% des entreprises françaises utilisent des solutions open source ! - IT-Connect FR](https://www.it-connect.fr/etude-utilisation-open-source-en-france-2023/)
 
-[9] Why do commercial companies contribute to open source software?
+[9] [**Why do commercial companies contribute to open source software?**](https://doi.org/10.1016/j.ijinfomgt.2011.10.003)
 
-> Morten Andersen-Gott, Gheorghita Ghinea, Bendik Bygstad,
-Why do commercial companies contribute to open source software?,
-International Journal of Information Management,
-Volume 32, Issue 2,
-2012,
-Pages 106-117,
-ISSN 0268-4012,
-https://doi.org/10.1016/j.ijinfomgt.2011.10.003.
-> 
+    Morten Andersen-Gott, Gheorghita Ghinea, Bendik Bygstad,
 
-[10] ****[Why Meta Open Sourced their best LLM but Google didn't - YouTube](https://www.youtube.com/watch?v=NZru7z2r9M8) - [**Devansh**](https://www.youtube.com/@ChocolateMilkCultLeader)
+    International Journal of Information Management, Volume 32, Issue 2, 2012, Pages 106-117, ISSN 0268-4012
+
+[10] [Why Meta Open Sourced their best LLM but Google didn't - YouTube](https://www.youtube.com/watch?v=NZru7z2r9M8) - [**Devansh**](https://www.youtube.com/@ChocolateMilkCultLeader)
 
 [11] [Llama 2: Meta’s Open-Source Model Shakes Up the AI Industry](https://www.linkedin.com/pulse/llama-2-metas-open-source-model-shakes-up-ai-industry-1f/)
 
-[12] When does community participation enhance the performance of open source software companies?
+[12] [**When does community participation enhance the performance of open source software companies?**](https://doi.org/10.1016/j.respol.2009.06.004)
 
-> Wouter Stam,
-When does community participation enhance the performance of open source software companies?,
-Research Policy,
-Volume 38, Issue 8,
-2009,
-Pages 1288-1299,
-ISSN 0048-7333,
-https://doi.org/10.1016/j.respol.2009.06.004.
->
+    Wouter Stam, Research Policy, Volume 38, Issue 8, 2009, Pages 1288-1299, ISSN 0048-7333
+
+[13] [VLC, l'histoire extraordinaire du logiciel français le plus téléchargé au monde - Capital](https://www.capital.fr/entreprises-marches/vlc-lhistoire-extraordinaire-du-logiciel-francais-le-plus-telecharge-au-monde-1361858)
+
+[14] [Odoo développe une stratégie Open-Source](https://arkeup.odoo.com/blog/le-blog-arkeup-1/odoo-developpe-une-strategie-open-source-7)
+
+[15] L. N. Hoang et E. M. El Mhamdi, "**Le fabuleux chantier : Rendre l'intelligence artificielle robustement bénéfique**", EDP Sciences, 2020
+
+[16] J. L. Fourquet et L. N. Hoang, "**La Dictature des Algorithmes : Une transition numérique démocratique est possible**", Tallandier, 2024.
+
+{% endlien %}

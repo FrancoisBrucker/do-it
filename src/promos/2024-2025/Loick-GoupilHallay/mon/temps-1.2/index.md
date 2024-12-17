@@ -11,6 +11,8 @@ tags:
   - 'temps 1'
   - 'dev'
   - 'cyber'
+
+résumé: "Guide de bonnes pratiques pour sécuriser l'environnement de développement des développeurs."
 ---
 
 <head>
@@ -22,7 +24,7 @@ tags:
 - Réseau
 {%endprerequis%}
 
-{% lien %}
+{% lien '**Liens utiles**'%}
 - [ANSSI](https://cyber.gouv.fr)
 - [POK déploiement automatisé de l'environnement de développement pour une équipe](../../pok/temps-1/)
 {% endlien %}

@@ -136,7 +136,7 @@ Par exemple, lorsqu'on crée un composant *hello*, on obtient un nouveau dossier
 Pour définir le comportement d'un composant ou encore ses données, on utilise l'**état** ou **state**. Ce state représente tout ce que le composant "sait" à un moment donné et qui est susceptible de changer au fil du temps, en réponse à des événements utilisateur, des interactions avec des services, ou d'autres actions.
 Voici, un exemple avec les deux propriétés *taskTitle* et *isComplete* :
 
-``` TypeScript
+```
 @Component({ ... })
 export class TodoListItem {
   taskTitle = '';
@@ -146,7 +146,8 @@ export class TodoListItem {
 
 Pour modifier cet état, on peut définir des méthodes à l'intérieur de ce *'class component'* en veillant à bien utiliser le mot **this** :
 
-``` javascript
+{% raw %}
+```
 @Component({ ... })
 export class TodoListItem {
   taskTitle = '';
@@ -159,12 +160,14 @@ export class TodoListItem {
   }
 }
 ```
+{% endraw %}
 
-Pour afficher du contenu dynamique dans le template (i.e. le rendu html), on utilise des doubles accolades : ``<p> Title : {{taskTitle}} </p>``. Ainsi lorsque la valeur de *taskTitle* changera, Angular modifiera le DOM (Document Object Model) pour que le fichier HTML affiche correctement la nouvelle valeur.
+Pour afficher du contenu dynamique dans le template (i.e. le rendu html), on utilise des doubles accolades :{% raw %} `<p> Title : {{taskTitle}} </p>` {% endraw %}. Ainsi lorsque la valeur de *taskTitle* changera, Angular modifiera le DOM (Document Object Model) pour que le fichier HTML affiche correctement la nouvelle valeur.
 
 Similairement, on peut définir des propriétés CSS de façon dynamique en utilisant des crochets :
 
-``` javascript
+{% raw %}
+```
 @Component({
   selector: 'sign-up-form',
   template: `
@@ -175,10 +178,12 @@ export class SignUpForm {
   formIsInvalid = true;
 }
 ```
+{% endraw %}
 
 Il est également possible d'utiliser des conditions **if**, voici un exemple :
 
-``` javascript
+{% raw %}
+```
 @Component({
   standalone: true,
   selector: 'user-controls',
@@ -194,17 +199,19 @@ export class UserControls {
   isAdmin = true;
 }
 ```
+{% endraw %}
 
 Il est aussi possible d'utiliser des boucles **for** :
 
-``` javascript
+{% raw %}
+```
 @Component({
   standalone: true,
   selector: 'user-controls',
   template: `
     <ul>
       @for (ingredient of ingredientList; track ingredient.name) {
-        <li>{{ ingredient.quantity }} - {{ ingredient.name }}</li>
+        <li> {{ ingredient.quantity }} - {{ ingredient.name }}</li>
       }
     </ul>
   `,
@@ -217,6 +224,7 @@ export class IngredientList {
   ];
 }
 ```
+{% endraw %}
 
 On remarque la présence de la propriété **track** qui correspond à un identifiant unique qu'il faut préciser pour qu'Angular traite correctement chaque élément d'une liste. Nous avions vu qu'il y avait cette même propriété en React, présente sous le nom **key** (cf projets de mon [MON 2.1](https://francoisbrucker.github.io/do-it/promos/2024-2025/Corne-Titouan/mon/temps-2.1/)).
 
@@ -224,7 +232,8 @@ J'ai églament appris de nouveaux concepts sur lesquels, je ne vais pas m'attard
 
 - les **vues différées** (**deferrable views**) qui permettent d'optimiser le chargement des différents composants en indiquant à certains qu'ils n'ont pas besoin d'être chargés immediatement pour divers raisons. Illustration :
 
-``` javascript
+{% raw %}
+```
 @defer (on viewport) {
       <comments />
       } @placeholder {
@@ -233,11 +242,13 @@ J'ai églament appris de nouveaux concepts sur lesquels, je ne vais pas m'attard
       <p>Loading comments...</p>
       }
 ```
+{% endraw %}
 
 - la **communication intercomposants** avec `@Input` (parent --> enfant) et `@Output` (enfant --> parent)
 - la gestion des événements (**Event Handling**) permettant de répondre aux actions des utilisateurs, comme les pressions sur les boutons, les soumissions de formulaires, etc.
 
-``` javascript
+{% raw %}
+```
 @Component({
     ...
     template: `<button (click)="greet()">`
@@ -248,6 +259,7 @@ class AppComponent {
     }
 }
 ```
+{% endraw %}
 
 - le chargement les images de façon optimisée avec la directive **NgOptimizedImage**. Par exemple, on décidera de charger l'élément LCP (Largest Contentful Paint) en premier.
 - le **routage** pour les applications nécessitant plusieurs pages.
@@ -255,7 +267,8 @@ class AppComponent {
 - la création d'**interfaces** qui permet de générer un nouveau type de données (utiliser la commande ``ng generate interface <nom-interface>``). J'utilise une interface nommée *housinglocation* dans le projet *fristApp* disponible sur mon [GitHub](https://github.com/TitouanCorne/ApprendreAngular/tree/main/firstApp).
 - la directive **ngFor** qui permet d'afficher dynamiquement les données sur un template Angular (i.e. fichier html). Voici un exemple que l'on peut également retrouver dans le projet *fristApp* disponible sur mon [GitHub](https://github.com/TitouanCorne/ApprendreAngular/tree/main/firstApp).
 
-``` html
+{% raw %}
+```
 <section class="results">
     <app-housing-location
     *ngFor="let housingLocation of housingLocationList"
@@ -263,17 +276,21 @@ class AppComponent {
     ></app-housing-location>
 </section>
 ```
+{% endraw %}
 
 - la création de classes **services** qui sont utilisées pour transmettre les données à l'application. Les services récupèrent les données depuis un point de terminaison d'API (Application Programming Interface). Les services sont **injectables**  à l'aide du **système d'injection de dépendances (DI) d'Angular** et on peut faire appel à eux depuis différents composants (=> centralisation). Pour générer un nouveau service il faut utiliser la commande ``ng generate service <nom-service>``. Là encore, un exemple (*housing.service.ts*) est présent dans le projet *fristApp* disponible sur mon [GitHub](https://github.com/TitouanCorne/ApprendreAngular/tree/main/firstApp).
 - l'utilisation de **template reference variables** qui permettent d'accéder à la valeur saisie dans un input. Illustration avec la variable *#filter* :
 
-``` html
+{% raw %}
+```
   <form>
     <input type="text" placeholder="Filter by city" #filter/>
     <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
   </form>
 ```
+{% endraw %}
 
 ### 3. Cahier des charges du site de cuisine **Miam'Miam** <a id="section3"></a>
 
-![Cahier des charges]()
+![Cahier des charges - 1](./img/cahier-charges1.png)
+![Cahier des charges - 2](./img/cahier-charges2.png)

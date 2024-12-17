@@ -30,8 +30,7 @@ résumé: Développement d'une extension permettant de débloquer des succès en
 - [TypeScript](https://www.typescriptlang.org/)
 {% endprerequis %}
 
-{% lien %}
-**Liens utiles**
+{% lien '**Liens utiles**'%}
 - [Repo Achievements sur GitHub](https://github.com/boxboxjason/achievements)
 - [API VSCode](https://code.visualstudio.com/api)
 - [Développer son extension VSCode](https://code.visualstudio.com/api/get-started/your-first-extension)
@@ -47,7 +46,7 @@ Toujours dans l'optique de créer le **meilleur environnement de développement 
 
 Et puis *Qui n'a jamais rêvé de terminer VSCode* ? C'est pourquoi j'ai décidé de développer une extension pour VSCode permettant de débloquer des achievements en fonction de l'utilisation de l'éditeur.
 
-Il existe déjà deux extensions de ce type sur le marché, mais elles ne sont pas complètes du tout et ne sont plus maintenues. J'ai donc décidé de développer la mienne, qui sera plus complète et plus à jour.
+Il existe déjà deux extensions de ce type sur le marché, mais elles ne sont pas complètes du tout et ne sont plus maintenues. J'ai donc décidé de développer la mienne, qui sera plus complète et plus à jour. 
 
 ## Fonctionnement
 L'extension `Achievements` fonctionne de manière assez simple. Le but est de ne pas impacter les performances de l'éditeur et de pouvoir fonctionner hors ligne.
@@ -66,11 +65,10 @@ L'extension dispose d'une **Webview** qui permet à l'utilisateur de consulter l
 ![Webview](./webview.png)
 
 ### Commandes
-L'extension ajoute tout un tas de commandes à vscode:
+L'extension ajoute des commandes custom à la palette VSCode à vscode:
+![Commandes](./commands.png)
 - `achievements.enable`: Active / désactive l'extension
-- `achievements.disable`: Désactive l'extension
-- `achievements.configuration`: Ouvre la configuration de l'extension
-- `achievements.notifications`: Active / désactive les notifications
+- `achievements.settings`: Ouvre la configuration de l'extension
 - `achievements.show`: Ouvre la Webview des succès
 
 Il s'agit de raccourcis pour les actions les plus courantes.
@@ -82,61 +80,87 @@ Il s'agit de raccourcis pour les actions les plus courantes.
 - Enfin, je **stocke les versions de la base de données** pour pouvoir mettre à jour les tables en fonction de la version de l'extension. (C'est utile pour les mises à jour qui vont nécessiter des migrations de bases de données).
 
 <pre class="mermaid">
-%%{init: {'theme': 'forest'}}%%
-classDiagram
-    class schema_version {
-      +INTEGER id
-      +INTEGER version
-      +DATETIME applied_at
+erDiagram
+    SchemaVersion {
+        int id PK
+        int version
+        datetime applied_at
     }
 
-    class achievements {
-      +INTEGER id
-      +TEXT title
-      +TEXT icon
-      +TEXT category
-      +TEXT group
-      +TEXT labels
-      +TEXT criteria
-      +TEXT description
-      +INTEGER tier
-      +INTEGER points
-      +INTEGER hidden
-      +INTEGER repeatable
-      +BOOLEAN achieved
-      +DATETIME achievedAt
+    Achievement {
+        int id PK
+        string title
+        string icon
+        string category
+        string group
+        string description
+        int tier
+        int exp
+        int hidden
+        int repeatable
+        boolean achieved
+        datetime achievedAt
     }
 
-    class achievement_requirements {
-      +INTEGER achievement_id
-      +INTEGER requirement_id
+    AchievementLabel {
+        int achievement_id FK
+        string label
     }
-    achievement_requirements --> achievements : achievement_id
-    achievement_requirements --> achievements : requirement_id
 
-    class progressions {
-      +INTEGER id
-      +TEXT name
-      +INTEGER value
+    AchievementCriteria {
+        int id PK
+        int achievement_id FK
+        int progression_id FK
+        string required_value
+        string type
+        string comparison_operator
     }
+
+    AchievementRequirement {
+        int achievement_id FK
+        int requirement_id FK
+    }
+
+    Progression {
+        int id PK
+        string name
+        string type
+        string value
+    }
+
+    DailySession {
+        int id PK
+        string date
+        int duration
+    }
+
+    Achievement ||--o{ AchievementLabel : "has"
+    Achievement ||--|{ AchievementCriteria : "has"
+    Achievement ||--o{ AchievementRequirement : "has"
+    AchievementRequirement ||--|| Achievement : "references"
+    AchievementCriteria }|--|{ Progression : "references"
 </pre>
 
 ## Développement
 VSCode fonctionne grâce à Electron, ce qui signifie qu'il fonctionne exactement comme un site web. Le développement des extensions se fait donc en JavaScript / TypeScript.
-J'ai choisi d'utiliser **TypeScript** pour mon extension car il permet de <u>s'assurer que le code est correct</u> avant de l'exécuter. Cela permet de réduire les erreurs et de gagner du temps.
+J'ai choisi d'utiliser **TypeScript** pour mon extension car il permet de <u>s'assurer que le code est correctement typé</u> avant de l'exécuter. Cela permet de réduire les erreurs et de gagner du temps.
+
+Le développement se centre sur l'**optimisation des performances** et la réduction de l'impact sur l'éditeur. Cela passe par deux choses essentielles:
+- l'**optimisation SQL** pour réduire le nombre de requêtes et traiter les données le plus rapidement possible
+- la **gestion des listeners** pour ne pas surcharger l'éditeur avec des événements inutiles ou dupliquer les fonctionnalités déjà existantes
 
 ### Dépendances
 Pour mon extension, j'ai utilisé les dépendances suivantes :
 - Développement
     - `npm` pour le management des dépendances
-    - `esbuild` pour le bundling du code (la compilation de TypeScript)
-    - `electron-rebuild` pour pouvoir packager mes dépendances avec l'extension
+    - `esbuild` pour le bundling du code (le lint, la compilation de TypeScript)
     - `eslint` pour l'analyse statique du code
+    - `typescript` pour le typage du code
 - Run
     - `vscode` pour l'API de VSCode
     - `better-sqlite3` pour la base de données
     - `react` pour l'interface utilisateur
-    - `fluentUI` pour le style des composants UI
+    - `styled-components` pour les styles de l'interface des composants react
 
 ## Post-mortem
 La documentation de l'API de VSCode concernant les webviews est TRES MAUVAISE, contrairement à ce qu'on pourrait croire, il est très difficile de trouver des exemples concrets pour réaliser des actions relativement peu complexes. On dirait que les développeurs de VSCode ont oublié de documenter leur propre API.
@@ -149,5 +173,7 @@ Le bundle des vues n'est pas prévu par défaut par VSCode, c'est une catastroph
 | Date | Heures passées | Indications |
 | -------- | -------- |-------- |
 | Mercredi 12/11  | 3H  | Etablissement du projet, création du premier modèle de base de données |
-| Jeudi 13/11  | 4H  | Création des premiers succès (1099), standardisation de l'attribution des points, des difficultés,... |
+| Jeudi 13/11  | 4H  | Création des premiers succès (1200), standardisation de l'attribution des points, des difficultés,... |
 | Samedi 15/11 | 3H | Création de la webview et communication extension <-> webview |
+| Samedi 01/12 | 6H | Migration / Optimisation SQL pour minimiser l'impact sur les performances |
+| Samedi 08/12 | 4H | Création des listeners d'events et tests d'intégration |

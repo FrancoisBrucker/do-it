@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du premier MON du temps 3"
+title: "HTML CSS : comprendre le web quand on est pas Dev Web"
 authors:
   - Esther Henry
 
@@ -9,7 +9,7 @@ date: 1971-02-01
 tags: 
   - "temps 3"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "L’objectif de ce MON est de découvrir les langages HTML et CSS afin d’être capable de comprendre ces langages notamment pour comprendre de quoi parle les Dev."
 ---
 
 {% prerequis %}

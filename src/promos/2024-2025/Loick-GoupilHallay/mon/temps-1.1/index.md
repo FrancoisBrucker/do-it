@@ -15,16 +15,12 @@ tags:
 résumé: "Introduction à l'environnement de développement idéal pour une équipe"
 ---
 
-<head>
-  <link rel="icon" href="https://github.com/BoxBoxJason/resume/blob/d07f37a66e2a583832533a10a9a4bf73b020be6f/src/assets/avatar.png?raw=true" type="image/x-icon">
-</head>
-
-{%prerequis 'MON débutant'%}
+{%prerequis '**MON débutant**'%}
 - Utiliser un navigateur web
 - Travail en équipe
 {%endprerequis%}
 
-{% lien %}
+{% lien '**Liens utiles**'%}
 - [Stack Overflow Developer Survey 2024](https://survey.stackoverflow.co/2024)
 - [POK déploiement automatisé de l'environnement de développement pour une équipe](../../pok/temps-1/)
 - [MON sécurisation de l'environnement de développement](../temps-1.2/)

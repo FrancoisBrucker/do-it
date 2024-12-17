@@ -35,11 +35,13 @@ Connaissances du web :
 
 ## Table des matières
 
-1. [1. React : qu'est ce que c'est ?](#section1)
-2. [2. Synthèse de balisage *JSX*](#section2)
-3. [3. Mise en place de l'environnement de travail](#section3)
-4. [4. Variables d'état](#section4)
-5. [5. Mise en pratique](#section5)
+- [Table des matières](#table-des-matières)
+- [1. React : qu'est ce que c'est ? ](#1-react--quest-ce-que-cest--)
+- [2. Synthèse de balisage *JSX* ](#2-synthèse-de-balisage-jsx-)
+- [3. Mise en place de l'environnement de travail ](#3-mise-en-place-de-lenvironnement-de-travail-)
+- [4. Variables d'état ](#4-variables-détat-)
+- [5. Mise en pratique ](#5-mise-en-pratique-)
+- [Sources utiles](#sources-utiles)
 
 ## 1. React : qu'est ce que c'est ? <a id="section1"></a>
 
@@ -59,7 +61,7 @@ JSX permet de produire des 'éléments' dans React. À la place de séparer les 
 
 Pour montrer un exemple de code en JSX :
 
-``` JavaScript
+```
 function formatName(user) {
   return user.firstName + ' ' + user.lastName;
 }
@@ -102,7 +104,7 @@ On utilise le hook (fonction spéciale dont le nom commence par use) **useState*
 
 Exemple illustratif :
 
-``` JavaScript
+```
 import React, { useState } from 'react';
 
 function Counter() {
@@ -150,7 +152,7 @@ Pour une mise en pratique des points étudiés jusqu'à présent, j'ai décidé 
 
 Pour ce qui concerne les données, j'ai voulu faire au plus simple en créant un tableau d'objet JavaScript regroupant toutes les informations nécessaires. Voici à quoi ressemble le tableau :
 
-``` Javascript
+```
 const COURSES = [
   { name: "Marathon des Géants", place: "Toulouse", date: "10 novembre 2024", price: "50€", img: "./img/marathondesgeants", commitment: true},
   { name: "Semi Lourdes-Tarbes", place: "Lourdes", date: "17 novembre 2024", price: "20€", img: "./img/semilourdestarbes", commitment: false },

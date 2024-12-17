@@ -20,6 +20,7 @@ authors:
   - [Un pas vers l'intellignece artificielle](./mon/temps-1.1)
   - [Impact énergétique des IA](./mon/temps-1.2)
   - [Création d'un EDT automatique avec Sheet et Appscript](./mon/temps-2.1)
+  - [Création d'un tableau de bord à l'aide de Figma](./mon/temps-2.2)
 
 ## Projet
 

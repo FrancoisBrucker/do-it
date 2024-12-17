@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du premier MON du temps 2"
+title: "Automatisation avec Google App Script"
 authors:
   - Matthieu Dufort
 
@@ -35,9 +35,9 @@ L'objectif premier de ce MON est de monter en compétences sur Google script afi
 
 En bref, beaucoup de taches répétitives qui me prennent énormément de temps. Mais, la bonne nouvelle et que tout est automatisable ! Je vais donc apprendre à utiliser google script en partant de la documentation que je vais adapter a mon utilisation. Ceci va me permettre de bien prendre en main l'outils.
 
-## Fondamentals
+## Fondamentaux
 
-J'ai commencé par voir les principes fondamentals de app script et des macros avec google sheet.
+J'ai commencé par voir les principes fondamentaux de app script et des macros avec google sheet.
 
 ### Macro
 

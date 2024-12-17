@@ -1,32 +1,29 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 3"
+title: "MON 3.2 - RGPD spécifique aux données médicales"
 authors:
   - Emma Gonin
 
-date: 1971-03-01
+date: 2024-12-16
 tags: 
   - "temps 3"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Un MON traitant de la RGPD, axée sur les données médicales."
 ---
 
 {% prerequis %}
 
-Liste des prérequis du POK ET/OU MON
+[Le CNIL](https://www.cnil.fr/fr/le-rgpd-applique-au-secteur-de-la-sante)
+[L'utilisation des données de santé](https://www.legalplace.fr/guides/rgpd-donnees-sante/)
 
 {% endprerequis %}
 {% lien %}
 
-Les lien utiles pour la compréhension de celui-ci.
 
 {% endlien %}
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :
-
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
+Toutes mes expériences professionnelles ont été dans le domaine du médical, avec du traitement de données d'imagerie médicales. Je souhaite retranscrire dans ce MON la réglementation liée à ces données médicales et comment l'appliquer en tant qu'ingénieur, dans sa pipeline de données.
 
 ## Contenu
 
