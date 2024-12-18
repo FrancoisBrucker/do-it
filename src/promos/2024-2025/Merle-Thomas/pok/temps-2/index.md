@@ -41,7 +41,7 @@ Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de 
 - le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
 - les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
 
-# <span style="color: green">POK 12 - Dark Kitchen - BackEnd
+# <span style="color: green">POK2 - Dark Kitchen - BackEnd
 Codage en JS (NodeJS). 
 
 Ce POK décrit les étapes du développement du site web de notre Dark Kitchen de Fried Rice et de Noodles **S&T Goreng**. Il comprend la mise en place d'une **API REST**, la connexion à une base de données **MongoDB** et des fonctionnalités essentielles côté serveur.
@@ -59,16 +59,16 @@ Ce POK décrit les étapes du développement du site web de notre Dark Kitchen d
 - **Tâches :**
   - [Sofiane](#)&[Thomas](#) Initialiser un projet Node.js avec `npm init`.
   - [Sofiane](#)&[Thomas](#) Installer les dépendances principales : `express`, `mongoose`, `dotenv`.
-  - [Sofiane](#)&[Thomas](#) Configurer un fichier `.env` pour stocker les variables sensibles comme le port et l’URI MongoDB.
+  - [Sofiane](#)&[Thomas](#) Configurer un fichier `.env` pour stocker les variables sensibles comme le port et l’URI **MongoDB**.
   - [Sofiane](#)&[Thomas](#) Créer un serveur Express.js fonctionnel qui écoute sur un port donné.
 
 ### 2. Connexion à MongoDB
 - **Tâches :**
-  - [Thomas](#) Créer un cluster MongoDB sur MongoDB Atlas.
+  - [Thomas](#) Créer un cluster MongoDB sur **MongoDB Atlas**.
   - [[Thomas](#) Configurer la connexion entre le serveur Node.js et MongoDB à l’aide de `mongoose`.
   - [Thomas](#) Définir les schémas et modèles pour :
     - **Produits** (nom, description, prix, image).
-    - **Commandes** (produits, quantités, prix total, état).
+    - **Users** (nom, eamil, passwords).
   - [Thomas](#) Ajouter des données de test pour les produits.
 
   ### 3. Création des routes API REST
@@ -76,11 +76,11 @@ Ce POK décrit les étapes du développement du site web de notre Dark Kitchen d
   - [Sofiane](#) Implémenter les routes suivantes :
     - `GET /api/products` : Liste tous les produits.
     - `GET /api/products/:id` : Détaille un produit spécifique.
-    - `POST /api/cart` : Ajoute un produit au panier.
-    - `POST /api/orders` : Crée une nouvelle commande.
-    - `GET /api/orders/:id` : Donne les détails d’une commande.
-    - `api/register`: Permet de se sign In sur le site.
-    - `api/register`: Permet de se LogIn sur le site.
+    - `POST /api/products/` : Création un produit spécifique.
+    - `PUT /api/products/:id` : Update un produit spécifique.
+    - `DELETE /api/products/:id` : Suprimer un produit spécifique.
+    - `POST /api/login` : Se connecter
+    - `POST /api/register` : Créaction d'un nouveau compte
   - Structurer les routes pour qu'elles utilisent les méthodes **CRUD** associées.
 
 ### 4. Refactorisation et modularisation du code
@@ -93,7 +93,7 @@ Ce POK décrit les étapes du développement du site web de notre Dark Kitchen d
 
 ### 5. Ajout des données et validation simple
 - **Tâches :**
-  - [Sofiane](#)&[Thomas](#) Ajouter des produits par défaut via un script ou directement dans MongoDB.
+  - [Sofiane](#)&[Thomas](#) Ajouter des produits par défaut directement dans MongoDB: données **Product** notamment.
   - [Sofiane](#)&[Thomas](#) Vérifier que les produits sont bien récupérés via les routes `GET /api/products` et `GET /api/products/:id`.
 
 ### 6. Intégration du Backend avec le Frontend
@@ -114,23 +114,22 @@ Ce POK décrit les étapes du développement du site web de notre Dark Kitchen d
 - **Tâches** :
   - [x] [Sofiane](#)&[Thomas](#) Initialisation du projet et installation des dépendances.
   - [x] [Sofiane](#)&[Thomas](#) Configuration du serveur avec **express**.
-  - [x] [Sofiane](#) Ajout d’une route de test `GET /api/test`.
 
 ## Sprint 2 : Connexion à MongoDB et création des modèles
 - **Objectif :** Configurer MongoDB et définir les schémas des données.
 - **Tâches** :
-  - [x] [Thomas](#) Création du cluster MongoDB.
+  - [x] [Thomas](#) Création du cluster **MongoDB Atlas**.
   - [x] [Thomas](#) Connexion avec **mongoose**.
   - [x] [Thomas](#) Création des modèles **Product**, **Order** et **User**.
   - [x] [Thomas](#) Ajout de données de test pour les **Product**.
-  - [x] [Sofiane](#) Connexion à MongoDB pour l'authentification : création des données **Users**.
+  - [x] [Sofiane](#) Connexion à MongoDB pour l'authentification : création des données **Users** via script.
 
 ### Sprint 3 : Développement des routes API
 - **Objectif :** Implémenter les fonctionnalités principales de l’API.
 - **Tâches** :
-  - [x] [Thomas](#) Création route pour les produits.
+  - [x] [Thomas](#) Création route pour les produits (`GET`, `POST`, `PUT`, `DELETE`)..
   - [x] [Sofiane](#) Création routes pour l'authentification.
-  - [ ] [Sofiane](#)&[Thomas](#) Validation basique des données entrantes.
+  - [x] [Sofiane](#)&[Thomas](#) Validation basique des données entrantes.
 
 --
 
@@ -138,23 +137,22 @@ Ce POK décrit les étapes du développement du site web de notre Dark Kitchen d
 - **Objectif :** Organiser le projet pour faciliter la maintenance et les futures évolutions.
 - **Tâches** :
   - [x] [Sofiane](#)&[Thomas](#) Séparation des routes, contrôleurs et modèles dans des dossiers dédiés.
-  - [x] [Sofiane](#)&[Thomas](#) Structuration du code en modules clairs (`routes/`, `controllers/`, `models/`).
+  - [x] [Sofiane](#)&[Thomas](#) Structuration du code en modules clairs (`routes/`, `models/`).
 
 ### Sprint 5 : Ajout des données et validation simple
 - **Objectif :** Ajouter des données de test et vérifier le fonctionnement des routes API.
 - **Tâches** :
-  - [ ] [Sofiane](#)&[Thomas](#) Ajout Via script des produits par défaut dans la base de données MongoDB.
+  - [x] [Sofiane](#)&[Thomas](#) Ajout manuel des produits par défaut dans la base de données MongoDB.
   - [ ] Validation des données récupérées avec **Postman**.
 
 ### Sprint 6 : Intégration du Backend avec le Frontend
 - **Objectif :** Assurer la communication entre le frontend **Vue.js** et le backend **Node.js** via des API.
 - **Tâches** :
-  - [ ] Implémentation des appels API pour récupérer les produits et gérer le panier.
+  - [x] [Sofiane](#)&[Thomas](#) Implémentation des appels API pour récupérer les produits et gérer le panier.
   - [x] [Sofiane](#) Implémentation des appels API pour enregistrer des **User**.
-  - [x] [Sofiane](#) Mise à jour du FrontEnd avec les popups **LOGIN** et **SIGNIN**.
-  - [ ] Vérification de l'affichage dynamique des produits dans le frontend.
-  - [ ] Tester l'ajout de produits au panier depuis le frontend et la mise à jour des informations de commande.
-
+  - [x] [Sofiane](#) Mise à jour du FrontEnd avec les popups **LogIn** et **SignIn**.
+  - [x] [Sofiane](#)&[Thomas](#) Vérification de l'affichage dynamique des produits dans le frontend.
+  - [x] [Sofiane](#)&[Thomas](#) Tester connexion/l'enregistrement d'un user et ajout à la base de donnée.
 
 --
 
@@ -169,4 +167,8 @@ Toutes les séances et le nombre d'heure que l'on y a passé.
 | 01/11  | 1H             | Structuration du nouveau projet avec intégration du backend et configuration des servers|
 | 01/11  | 3H             | Mise en place de MongoDB et connexion|
 | 02/11  | 2H             | Création des modèles pour les données : **Product**, **Order** et **User** |
-| 03/11  | 2H            | Développement des routes API authentification et products avec Sofiane|
+| 07/11  | 2H             | Développement des routes API authentification et products|
+| 07/12  | 3H             | Création du middleware d'authentification JWT |
+| 08/12  | 3H             | Tests manuels des routes et ajustements |
+| 12/11  | 4H             | Intégration des produits dynamiques au backend |
+| 14/11  | 4H             | Connexion du frontend au backend (authentification et produits) |
