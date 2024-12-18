@@ -150,7 +150,7 @@ Pour ce qui est des cours (dans la limité des choix donnés), des POK, MON et p
 Ensuite, les ressources notamment intellectuelles sont mises en commun via le site DO-IT: on retrouve les travaux de tout le monde pour s'aider, apprendre, découvrir.
 
 Comme on peut le voir, le gros point bloquant est au niveau de la hierarchie rigide.
-Si on venait à ne pas prendre en compte les deux professeurs encadrants dans l'analyse, on pourrait peut-être plus parler de phalanstère.
+Si on venait à ne pas prendre en com# Bibliographie# Bibliographie[pte les deux professeurs encadrants dans l'analyse, on pourrait peut-être plus parler de phalanstère.
 
 # Bibliographie
 
@@ -172,4 +172,4 @@ Autres sources non citées mais pertinentes:
 
 [8] [Entretien avec Simon Cottin-Marx et Baptiste Mylondo, _Des organisations sans patron?_](*https://journals.openedition.org/ethiquepublique/8720)
 
-Retour en haut](#)
+[Retour en haut](#)

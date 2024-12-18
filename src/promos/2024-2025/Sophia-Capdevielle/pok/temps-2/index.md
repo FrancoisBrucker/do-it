@@ -37,23 +37,29 @@ L'objectif de ce POK est de faire un état des lieux des différentes méthodes 
 
 #### Sprint 2
 
-- [ ] Créer une base de données test sur Airtable
-- [ ] Lien Google Sheet / Excel - Airtable
-- [ ] Automatisations Airtable
-- [ ] Réunion avec parties prenantes pour voir si tout convient
-- [ ] Implémentation et tests
+- [x] Créer une base de données test sur Airtable
+- [x] Lien Google Sheet / Excel - Airtable
+- [x] Automatisations Airtable
+- [x] Réunion avec parties prenantes pour voir si tout convient
+- [x] Implémentation et tests
 
 ### Horodatage
 
-| Date           | Heures passées | Indications                                                                              |
-| -------------- | -------------- | ---------------------------------------------------------------------------------------- |
-| Jeudi 24/10    | 30min          | Discussion avec membre de l'association sur les modifications apportées à la page Notion |
-| Vendredi 08/11 | 30min          | Première discussion avec membre du labo sociétal                                         |
-| Jeudi 14/11    | 1h15           | Réunion pour cerner les besoins et faire le point sur les outils actuels                 |
-| Samedi 16/11   | 2h             | Compte-rendu réunion & débuts sur ce qu'il est possible de faire                         |
-| Dimanche 17/11 | 3h             | Lien Airtable - Notion, BD                                                               |
-| Lundi 18/11    | 2h             | Gestion des autorisations avec form Airtable                                             |
-| Mardi 19/11    | 45min          | Point avec labo et asso sur ce qui a été fait et les points de blocage                   |
+| Jeudi 24/10 | 30min | Discussion avec membre de l'association sur les modifications apportées à la page Notion |
+| Vendredi 08/11 | 30min | Première discussion avec membre du labo sociétal |
+| Jeudi 14/11 | 1h15 | Réunion pour cerner les besoins et faire le point sur les outils actuels |
+| Samedi 16/11 | 2h | Compte-rendu réunion & débuts sur ce qu'il est possible de faire |
+| Dimanche 17/11 | 3h | Lien Airtable - Notion, BD |
+| Lundi 18/11 | 2h | Gestion des autorisations avec form Airtable |
+| Mardi 19/11 | 45min | Point avec labo et asso sur ce qui a été fait et les points de blocage |
+| Jeudi 05/12 | 30min | Début création BD tuteurs |
+| Samedi 07/12 | 30min | Suite création BD tuteurs |
+| Dimanche 08/12 | 1h30 | Formulaire et automatisations |
+| Mardi 10/12 | 1h30 | Démonstration et explication à membre LS |
+| Mecredi 11/12 | 1h | Recherches lien tables Airtable et Sheets|
+| Jeudi 12/12 | 1h | Suite travail sur BD et schéma|
+| Lundi 16/12 | 1h | Présentation des solutions et discussions|
+| Mardi 17/12 | 2h | Rédaction document explicatif de tout ce qui a été fait, fonctionnement|
 
 ## Contenu
 
@@ -142,4 +148,36 @@ Un avantage du form Airtable est qu'à l'aide des automatisations Airtable, il s
 
 ### Second Sprint
 
-Pour le moment j'ai travailler sur la structure des BD mais je souhaite établir un schéma relationnel clair. Je souhaite réaliser une base de données test pour tester différentes automatisations. Essayer de synchroniser les tableaux entre les différentes applications utilisées.
+Alors déja pour commencer, voici un schéma avec des différentes bases de donnés et les champs.
+![Schéma BD](BD_EP.jpg)
+
+Pour ce qui est des accès à Airtable et notamment à la version Team, seul le Labo sociétal y a accès. Ceux-ci ont seulement la base de données Tutoré.es faites sur les 5 dernières années. Pour des raisons de RGPD, je ne pouvais pas travailler sur ces données directement. Afin de continuer mon travail mais aussi d'avancer dasn le process de développer l'outil Airtable (en ayant d'autres bases que simplement celles Tutoré.es), j'ai créer la base Tuteurs et j'ai rentré toutes les données nécessaires à partir des contrats d'engagement.
+De la même façon, j'ai créer une base SVES (Sorties Voyages Événements Stages) qui regroupe les différents types de sorties, date, lieu, qui est concerné par la sortie,...
+Voici la base de données SVES:
+![BD SVES](BD_SVES.jpg)
+
+Maintenant que cette base est créée, c'est au sein de cette base que l'on va gérer le formulaire d'inscription aux sorties que j'ai expérimenté dans le premier sprint.
+Une fois ce formulaire créé à nouveau, j'ai pu travailler sur les **automatisations**.
+Il faut savoir que lorsque l'on gère une sortie ou un événement, il y a beaucoup de tâches répétitives et chronophages:
+
+- envoi de mail à tout les tutoré.es et leur famille pour leur dire de s'inscrire en présentant la sortie
+- envoi de mail pour confirmer que l'on a reçu l'autorisation et que le ou la tutoré.e est bien inscrit.e
+- envoi de mail / SMS de rappel peu avant la sortie pour rappeler les informations importantes et confirmer sa présence
+
+En faisant ça via Airtable:
+![Automatisation Airtable](Auto_AT.jpg)
+
+Et ça marche (avec la version team). On peut même personnaliser automatiquement le mail avec le nom du tutoré.
+Pour rappel, en utilisant ce formulaire, les réponses arrivent directement dans un tableau Airtable ce qui évite que des données soient perdues en chemin.
+
+Bon, ok on change les choses mais ensuite il faut les expliquer aux personnes qui vont utiliser les outils.
+C'est en faisant ça que des nouvelles questions ont émergés: lier deux tables Airtable qui ne sont pas dans la même base par exemple.
+J'ai fait des recherches. De même pour la partie lien avec d'autres outils comme Google Sheets mais c'est encore en cours de discussion car il y aurait une partie code (avec API) donc réflexion si c'est une solution pérènne étant donné que tout le monde ne comprend pas le code facilement.
+Pour finir, le nouveau système d'autorisations de sortie sera tester pour les prochaines SVES et j'ai expliqué en quoi tout le travail consistait + documentation sur comment créer le forumalaire, les automatisations,... afin que ce soit reproduit pour les prochaines occasions.
+
+## Étude Post-Mortem
+
+Le low-code c'est vraiment pas top car tout est caché donc qand on veut faire quelque chose de spécifique c'est tout de suite très compliqué. Or, l'un des objectifs du no code est de garder les choses simples pour les personnes ne codant pas.
+Au final, dans ce POK, j'ai fait beaucoup de recherches sur les différents outils pour pouvoir présenter différentes solutions et aussi surtout beaucoup de gestion de projet: expression besoins, proposition de différentes solutions, explication du fonctionnement de l'outil, test,...
+De plus, étant donné que je dépendait de plusieurs personnes pour travailler: demander des avis, des droits (Airtable version team seulement sur l'ordinateur membre LS),... c'était parfois compliqué d'avancer.
+MAIS je suis contente globalement, à voir comment le projet va évoluer dans les prochains mois.
