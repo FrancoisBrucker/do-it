@@ -142,6 +142,7 @@
 <div class="pl-8 mr-8">
 <ul>
 <li>Fichier Excel à la fin du sprint 1 : <a href="Sprint%201.zip">Fichier .xlsm à télécharger</a></li>
+<li>Fichier Excel à la fin du sprint 2 : <a href="Sprint%202.zip">Fichier .xlsm à télécharger</a></li>
 </ul>
 </div></div>
 
@@ -274,15 +275,16 @@
 </summary>
 <div class="mx-8 pb-2 cursor-auto select-text">
 <ul>
-<li>[ ] Rédaction des fonctions informatiques permettant le calcul des distances sur la grille</li>
+<li>[x] Rédaction des fonctions informatiques permettant le calcul des longueurs de câble petite section</li>
+<li>[ ] Rédaction des fonctions informatiques permettant le calcul des longueurs de câble grosse section</li>
 <li>[x] Lister les fonctions informatiques a priori nécessaires</li>
-<li>[ ] Coder les fonctions d'extraction de donnée d'une grille à l'autre.</li>
-<li>[ ] Coder la fonction déterminant le type de câblage des strings.</li>
+<li>[x] Coder les fonctions d'extraction de donnée d'une grille à l'autre.</li>
+<li>[x] Coder la fonction déterminant le type de câblage des strings.</li>
 <li>[ ] Coder la fonction permettant le calcul des quantités de câble.</li>
-<li>[ ] Sprint back-log 2</li>
-<li>[ ] Reporting sprint 2 sur site Do-it</li>
-<li>[ ] Finalisation du POK</li>
-<li>[ ] Rédaction des slides pour revue finale</li>
+<li>[x] Sprint back-log 2</li>
+<li>[x] Reporting sprint 2 sur site Do-it</li>
+<li>[x] Finalisation du POK</li>
+<li>[x] Rédaction des slides pour revue finale</li>
 </ul>
 <table>
 <thead>
@@ -292,8 +294,45 @@
 <th>Indications</th>
 </tr>
 </thead>
+<tbody>
+<tr>
+<td>27/11/2024</td>
+<td>2h</td>
+<td>Sprint backlog 2 ¤ Extraction donnée phase 0 à phase 1</td>
+</tr>
+<tr>
+<td>28/11/2024</td>
+<td>0.5h</td>
+<td>Extraction donnée phase 0 à phase 1</td>
+</tr>
+<tr>
+<td>02/12/2024</td>
+<td>1.5h</td>
+<td>Extraction donnée phase 0 à phase 1 ¤ Extraction donnée phase 1 à phase 2</td>
+</tr>
+<tr>
+<td>04/12/2024</td>
+<td>2h</td>
+<td>Détermination du mode de câblage ¤ Calcul des distances</td>
+</tr>
+<tr>
+<td>12/12/2024</td>
+<td>2.5h</td>
+<td>Extraction donnée phase 2 à phase 3 ¤ Extraction donnée phase 3 à phase 4 ¤ Modifications extraction de donnée phase 0 à 1 et 2 à 0</td>
+</tr>
+<tr>
+<td>13/12/2024</td>
+<td>2h</td>
+<td>Vérification de la cohérence des résulats</td>
+</tr>
+<tr>
+<td>16/12/2024</td>
+<td>2h</td>
+<td>Reporting sur site Do_it</td>
+</tr>
+</tbody>
 </table>
-<p><em><strong>Total du sprint 2 :</strong></em></p>
+<p><em><strong>Total du sprint 2 :</strong></em> <em>12.5h soit  25 % de plus que le temps alloué</em></p>
 </div>
 </details>     
 </div>
@@ -303,7 +342,7 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p><strong>QUOTA HORAIRE TOTAL POK 2 :</strong></p>
+<p><strong>QUOTA HORAIRE TOTAL POK 2 :</strong> 26.75h soit 34% de plus que le temps alloué</p>
 </div></div>
 <h4>Analyse post-morterm</h4>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
@@ -346,6 +385,32 @@
 </svg>
 </summary>
 <div class="mx-8 pb-2 cursor-auto select-text">
+<p><strong>GESTION GENERALE DU TEMPS :</strong> Gestion générale améliorée par rapport au sprint 1 et au POK 1. Mais sous-évaluation du temps nécessaire à la rédaction du reporting sur le site Do-it.</p>
+<p><strong>GESTION GENERALE :</strong> Oublie d'un élément de calcul (prise en compte des câbles grande section) et ce dans les templates réalisés en sprint 1 et le sprint back-log 2. Ajouter l'intégralité des tâches correctrices durant le temps 2 aurait pris environ 3 heures supplémentaires. Si l'erreur initiale n'avait pas été commise, alors j'estime une augmentation de seulement 1 heure de la charge de travail : template fait correctement en temps est en heure (peu chronophage), réflexion quant à la méthode de calcul des distances (peu chronophage car déjà mentalisé en début de sprint 1), programmation du calcul et des livrables (se serait appuyé sur le calcul des longueurs petites sections).</p>
+<p><strong>DIMENSIONNEMENT DU PROJET :</strong> Quelques fonctionnalités supprimées car trop ambitieuses pour le temps alloué.</p>
+</div>
+</details>     
+</div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block group-open:select-text">
+<p>POK complet</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2 cursor-auto select-text">
+<p><strong>DIMENSIONNEMENT PROJET :</strong> Plus réaliste qu'au temps 1 et ce grâce à la rédaction d'hypothèses simplificatrices, limitant le projet aux compétences détenues. Réel fonctionnement en mode agile : A GARDER !!<br>
+<strong>DIMENSIONNEMENT TÂCHES:</strong> Plus réaliste qu'au temps 1 mais rédigées de manière trop globales et rigides (par lôts et type de fonctionnalité). In fine, les tâches on été réalisées sans respecter la même segmentation, ni la même granulosité.<br>
+<strong>APPROCHE METHODOLOGIQUE :</strong> Lancement des activités par le test plutôt que par la formalisation. A permis un gain de temps et une meilleure efficacité. Le reporting des activités aurait quand même dû être plus régulier et formel afin de gagner en efficacité lors de la rédaction du livrable sur le site Do-it.</p>
 </div>
 </details>     
 </div>
@@ -511,7 +576,7 @@ Exemple : afin de créer une grille satisfaisante, il était nécessaire d'éval
 <tr>
 <td style="text-align:center"><strong>Phase 5</strong></td>
 <td style="text-align:center">Lancement du calcul par un bouton de la page d'acceuil</td>
-<td style="text-align:center">Page d'accueil</td>
+<td style="text-align:center">Grilles template n°4.1</td>
 </tr>
 </tbody>
 </table>
@@ -530,6 +595,333 @@ Exemple : afin de créer une grille satisfaisante, il était nécessaire d'éval
 <li>Calculer une distance entre deux cellules à partir des données d'entrée (dimension des stands etc...)</li>
 </ul>
 <p>Templates et modèles : les templates et modèles sont visibles dans le document <a href="Sprint%201.zip">Sprint 1</a>.</p>
+<h2>Programmation</h2>
+<h3>Méthodologie</h3>
+<p>La programmation de toutes les fonctionnalités s'est faite en suivant le chemin utilisateur : une fonction par passage d'une phase à une autre.</p>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Bien que cette méthode permette de créer des fonctionnalités proches du besoin utilisateur, elle ne permet pas forcément d'anticiper les besoins en donnée de la suite du programme.</p>
+</div></div>
+<h3>Difficulté principales</h3>
+<p>Le parcours des grilles étant très couteux en temps, il est apparu primordiale d'optimiser ce dernier. Pour cela il a fallu :</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block group-open:select-text">
+<p>Créer des variables d'état au sein des tableaux</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2 cursor-auto select-text">
+<p><strong>Objectif :</strong> Eviter de devoir déterminer les premières lignes ou colonnes vides pour chaque tableau, voire chaque partie de tableau.</p>
+<p><strong>Méthode :</strong> Dédier une cellule précise au compte des colonnes utilisées : en première ligne du tableau ou sur une ligne de rang suffisamment grand. <em>ATTENTION : DANS CE CAS, IL FAUT S'ASSURER QUE LE NOMBRE DE LIGNES UTIILISEES PAR UN TABLEAU EST FINI !!!</em></p>
+<p><strong>Exemple :</strong>
+<img src="Variable%20d'%C3%A9tat%20BR.png" alt="Variable d'état BR">
+On peut ici voir que la cellule en jaune prend comme valeur le nombre de BR déjà renseignée dans le tableau. Ainsi, la fonction chargée de remplir ces données se réfère et met à jour la valeur de cette cellule afin de pouvoir se repérer facilemment dans le tableau. Cela évite de déterminer à chaque nouvelle BR, la première colonne vide.</p>
+</div>
+</details>     
+</div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block group-open:select-text">
+<p>Centraliser les données pour éviter les parcours</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2 cursor-auto select-text">
+<p><strong>Objectif :</strong> Eviter de parcourir plusieurs grilles pour obtenir des informations ou réaliser un calcul.</p>
+<p><strong>Méthode :</strong> A chaque parcours obligatoire/inévitable, reporter les informations sur une grille regroupant toutes les données.</p>
+<p><strong>Exemple :</strong> Ici, cela a consisté à utiliser les feuilles de la phase 4 comme bases de données.</p>
+<ul>
+<li>
+<p>La dernière grille (TEM 4.1) comme base de donnée complète du design. Ainsi, à chaque passage d'une phase à une autre (étapes du parcours utilisateur), la grille de la Phase 4.1 reçoit les informations des autres grilles.
+<img src="Phase%204.1%20ex.png" alt="Phase 4.1"></p>
+</li>
+<li>
+<p>Cela a également consisté en une modification du tableau 4.2 : pour chaque BR et chaque string, j'ai décidé d'ajouter les coordonnées de la string correspondante. Ainsi, lors du calcul de la longueur du câble reliant la string à sa BR, aucun parcours de grille n'était nécessaire (en bleu sur la figure). J'ai réalisé la même opération pour les BR (en jaune sur la figure)
+<img src="Position%20%C3%A9l%C3%A9ments.png" alt="Position des éléments"></p>
+</li>
+</ul>
+</div>
+</details>     
+</div>
+<p>D'autre part, il a été nécessaire de supprimer des fonctionnalités :</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block group-open:select-text">
+<p>Calcul des quantitatifs de câble</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2 cursor-auto select-text">
+<p>La construction de cette fonctionnalité aurait été trop chronophage et peu intéressante. J'ai donc fait le choix de l'omettre.</p>
+</div>
+</details>     
+</div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block group-open:select-text">
+<p>Jonctions entre BR et PTR</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2 cursor-auto select-text">
+<p>Cet outil devait initialement calculer les longueurs de câbles reliant les strings aux boites de raccordement (BR) mais également des BR au poste de transformation (PTR). Or, ce dernier aspect a été oublié lors de la conception du template du livrable final. Afin d'ajouter cette fonctionnalité il aurait fallu :</p>
+<ol>
+<li>Modifier le template final et donc une partie du codeallant de la phase 4 à la phase 5 (livrable final).</li>
+<li>Concevoir une fonction de calcul de distance déterminant : la position des BR, la position du PTR, la position des raccords au niveau du PTR (cloison du bâtiment acceptant l'entrée de câble).</li>
+</ol>
+<p>Coder ces éléments auraient été chronophage et aurait fait exploser le budget horaire du projet.</p>
+</div>
+</details>     
+</div>
+<h2>Conslusions méthodologiques</h2>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Ne pas formaliser le cachier des charges ou le besoin utilisateur trop tôt : cela permet de bien plonger dans le sujet et de rester efficace. <em><strong>On peut aborder préliminairement le sujet par la technique et non par le cadrage et la gestion de projet !</strong></em></p>
+</div></div>
+<h3>Réflexion par le parcours utilisateur</h3>
+<p>Réfléchir au parcours utilisateur d'un point de vue technique permet de :</p>
+<ul>
+<li>Etablir un cahier des charges techniques réaliste.</li>
+<li>Evaluer la faisabilité, les besoins de formation et les hypothèses simplificatrices nécessaires.</li>
+<li>Anticiper les besoins de stockage de donnée et commencer à concevoir des bases de données.</li>
+</ul>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Il peut être facile de tomber dans l'effet tunnel : oublier des fonctionnalités, oublier de récolter certaines données... <strong>Modifier un template utilisé est plus décourageant que de prendre du temps pour sa conception.</strong></p>
+</div></div>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-yellow-500 bg-yellow-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<ul>
+<li><strong>Alterner</strong> les phases de développement pure et les phases de formalisation et de challenge de la démarche.</li>
+<li><strong>Mettre en place des gardes fou</strong> : variables prenant en compte la position de certaines données. Si cette position change, il ne faudra modifier QUE la valeur de cette variable plutôt que de modifier chaque ligne de code ou elle apparait. <em>Ex : coordonnées de la cellule contenant la largeur d'une route dans la page d'input.</em></li>
+</ul>
+</div></div>
+<h3>Le parcours de grille et tableau sur Excel</h3>
+<p>Il est possible d'utiliser Excel comme grille graphique et de créer des simulacres de fonctionnalités de &quot;Drag and drop&quot; ou de dessin. <strong>Toutefois</strong>, il faut veiller à bien définir templates et bases de données pour :</p>
+<ol>
+<li>Limiter le nombre de parcours de grille.</li>
+<li>Limiter le temps d'éxécution des programmes.</li>
+<li>Multiplier les incohérences entre différentes grilles et/ou sources de donnée.</li>
+</ol>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-yellow-500 bg-yellow-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<ul>
+<li>Utiliser une grille servant de base de donnée et résumant les autres. Elle peut-être remplie en parallèle des parcours inévitables des autres grilles.</li>
+<li>Utiliser des variables d'état pour repérer l'état des tableaux. <em>Ex : prochaine colonne ou ligne à utiliser</em></li>
+</ul>
+</div></div>
+<h3>Pistes d'amélioration</h3>
+<p>Pour se rapprocher le plus possible d'un système &quot;Drag and drop&quot;, il pourrait être intéressant de créer une page &quot;outil&quot;, dans laquelle les différents éléments à insérer dans les grilles sont présents. Le <em>drage</em> serait une <em>copier</em> et le <em>drop</em> un <em>coller</em>.
+<em>Exemples : un regroupement de x strings côté à côte, une route pouvant être juxtaposée à x strings,...</em></p>
+<p><strong>Conditions de validation de la piste :</strong></p>
+<ul>
+<li><em><strong>Accessibilité</strong></em> : Peut-on faire apparaître cette page comme une fenêtre additionnelle pour éviter de passer d'une page à l'autre trop régulièrement ?</li>
+<li><em><strong>Facilité d'utilisation</strong></em> : Est-ce intuitif ? Si le &quot;coller&quot; est fait au mauvais endroit, comment l'indiquer à l'utilisateur ? (Coller une string au niveau d'un inter-rangée par exemple)</li>
+</ul>
+<h2>Livrable final</h2>
+<p><em><strong>NB :</strong></em> Les feuilles de type &quot;TEM&quot; (i.e. template) n'ont pas été chachées afin de pouvoir observer les différents outils construits et utilisés. <a href="Sprint%202.zip">Sprint 2</a>.
+Les images ci-dessous montrent un cas d'utilisation de l'outil :</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block group-open:select-text">
+<p>Phase 0 : Entrée des données de design</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2 cursor-auto select-text">
+<p><img src="Phase%200.png" alt="Phase 0"></p>
+</div>
+</details>     
+</div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block group-open:select-text">
+<p>Phase 1 : Positionnement des strings et du PTR</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2 cursor-auto select-text">
+<p><img src="Phase%201.png" alt="Phase 1"></p>
+</div>
+</details>     
+</div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block group-open:select-text">
+<p>Phase 2 : Positionnement des BR</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2 cursor-auto select-text">
+<p><img src="Phase%202.png" alt="Phase 1"></p>
+</div>
+</details>     
+</div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block group-open:select-text">
+<p>Phase 3 : Affectation des strings aux BR</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2 cursor-auto select-text">
+<p><img src="Phase%203.png" alt="Phase 1"></p>
+</div>
+</details>     
+</div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block group-open:select-text">
+<p>Phase 4.1 : Affichage récapitulatif</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2 cursor-auto select-text">
+<p><img src="Phase%204.1.png" alt="Phase 1"></p>
+</div>
+</details>     
+</div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block group-open:select-text">
+<p>Phase 4.2 : Affectation d'une section de câble à chaque string</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2 cursor-auto select-text">
+<p><img src="Phase%204.2.png" alt="Phase 1"></p>
+</div>
+</details>     
+</div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block group-open:select-text">
+<p>Livrable</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2 cursor-auto select-text">
+<p><img src="Livrable.png" alt="Phase 1"></p>
+</div>
+</details>     
+</div>
 
 
 </article>

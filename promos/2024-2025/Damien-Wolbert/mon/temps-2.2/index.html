@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Comment construire des bases de données bien pensées ?</title>
+        <title>Comment construire des bases de données relationnelles dans les règles de l&#39;art ?</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">Comment construire des bases de données bien pensées ?</h1>
+<h1 class="mb-1">Comment construire des bases de données relationnelles dans les règles de l&#39;art ?</h1>
 <div class="mb-4">
     
         <div class="px-4 flex flex-wrap items-center">
@@ -105,7 +105,7 @@
 
         <p class="mb-4 text-lg">
 
-                Reprise des cours de première année, recherche des bonnes pratique et application simple.
+                Reprise des cours de première année et suivi d'un cours en ligne.
 
         </p>
 
@@ -118,35 +118,210 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Damien-Wolbert/">Damien WOLBERT</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Damien-Wolbert/mon/">MON de Damien WOLBERT</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Damien-Wolbert/mon/temps-2.2/">Comment construire des bases de données bien pensées ?</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Damien-Wolbert/">Damien WOLBERT</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Damien-Wolbert/mon/">MON de Damien WOLBERT</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Damien-Wolbert/mon/temps-2.2/">Comment construire des bases de données relationnelles dans les règles de l&#39;art ?</a>
 
 </div></div>
 
 
 
 
-<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
-<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-</svg>
-<div class="pl-8 mr-8">
-<p>Liste des prérequis du POK ET/OU MON</p>
-</div></div>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
   <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Les lien utiles pour la compréhension de celui-ci.</p>
+<ul>
+<li>Un POK très complet sur les bases de donnée : <a href="https://francoisbrucker.github.io/do-it/promos/2024-2025/Matthieu-Dufort/pok/temps-1/">Lien vers le POK</a></li>
+<li>Un MON sur les bases de données non relationnelles : <a href="https://francoisbrucker.github.io/do-it/promos/2022-2023/Varnerot-Antoine/mon/bdd-non-relationnelles/">Lien vers le MON</a></li>
+</ul>
 </div></div>
 
-<p>Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block group-open:select-text">
+<p>Bibliographie</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2 cursor-auto select-text">
 <ul>
-<li>le niveau et les prérequis nécessaires en utilisant la balise <a href="/do-it/cs/contribuer-au-site/#prerequis"><code>prerequis</code></a></li>
-<li>les autres POK &amp; MON en rapport en utilisant la balise <a href="/do-it/cs/contribuer-au-site/#lien"><code>lien</code></a></li>
+<li><strong>[1]</strong> Qu’est-ce qu’une base de données. <a href="https://www.oracle.com/fr/database/definition-base-de-donnees/">https://www.oracle.com/fr/database/definition-base-de-donnees/</a>.</li>
+<li><strong>[2]</strong> Cours sur les bases de données : &quot;Bases de données&quot;, Catherine Jazzar</li>
+<li><strong>[3]</strong> Introduction [La théorie de la normalisation relationnelle]. <a href="https://stph.scenari-community.org/bdd/nor1-lin/co/nor_1.html">https://stph.scenari-community.org/bdd/nor1-lin/co/nor_1.html</a>.</li>
 </ul>
-<h2>Contenu</h2>
-<p>Le contenu du MON.</p>
+</div>
+</details>     
+</div>
+<h2>Les fondamentaux : que sont les BDD ? Comment les représenter ?</h2>
+<p><strong>Définition :</strong> Une base de données est un ensemble d'informations qui est organisé de manière à être facilement accessible, géré et mis à jour. Elle est utilisée par les organisations comme méthode de stockage, de gestion et de récupération de l’informations.
+Les données sont organisées en lignes, colonnes et tableaux et sont indexées pour faciliter la recherche d'informations. Les données sont mises à jour, complétées ou encore supprimées au fur et à mesure que de nouvelles informations sont ajoutées. Elles contiennent généralement des agrégations d'enregistrements ou de fichiers de données, tels que les transactions de vente, les catalogues et inventaires de produits et les profils de clients.[1]</p>
+<p>L'ensemble de ce MON se base sur la connaissance du modèle relationnel.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block group-open:select-text">
+<p><strong>Se former au modèle relationnel</strong></p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2 cursor-auto select-text">
+<p>Ressource : <a href="https://stph.scenari-community.org/bdd/nor1-lin/co/nor_1.html"><em>Théorie et exercices</em></a> Ce site internet fournit un cours intéressant sur le modèle relationnel et propose des exercices d'applicaton intéressants.<br>
+<em><strong>Attention :</strong></em> Certaines explications sous flous et le cours se comprend véritablement grâce aux exercices d'application.</p>
+<h4><strong>Notions à connaître :</strong></h4>
+<p><img src="Definitions.png" alt="Définitions de base">
+Notions générales :</p>
+<ul>
+<li>Attribut</li>
+<li>Schema</li>
+<li>Relation</li>
+</ul>
+<p>Modèle relationnel :</p>
+<ul>
+<li>Dépendance fonctionnelle</li>
+<li>DFE : Dépendance fonctionnelle élémentaire</li>
+<li>Axiomes d'Amstrong</li>
+<li>Fermeture transitive</li>
+<li>Couverture minimale</li>
+<li>Formes normales : 1FN, 2FN, 3FN</li>
+<li>Clé primaire</li>
+</ul>
+</div>
+</details>     
+</div>
+<h3>Réprésentations</h3>
+<p>On peut représenter un schéma ou une relation de multiples façons.</p>
+<ul>
+<li><strong>Entité/association :</strong> Permet de représenter la relation de manière schématique.</li>
+<li><strong>Représentation UML :</strong> Permet de représenter la relation de manière schématique et normée.</li>
+<li><strong>Schema relationnel :</strong> Permet de représenter la relation sous forme analytique : Eleve(nom, prénom, niveau, GPA).</li>
+</ul>
+<h2>Démarche de construction</h2>
+<h3>1. Représentation schématique : modèle entité/association</h3>
+<p><strong>Objectif :</strong> Représenter graphiquement les données et les besoins de relations entre les données. Pour cela on réfléchit aux différents liens entre attributs : quelles entités sont reliées entre elles et comment ?</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block group-open:select-text">
+<p>Nomenclature</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2 cursor-auto select-text">
+<ul>
+<li><strong>Ellipse :</strong> Attribut</li>
+<li><strong>Rectangle :</strong> Entité - Correspond à une relation ou un schéma en fonctiond des cas.</li>
+<li><strong>Losange :</strong> Association - Représente les liens entre les différents schémas ou relations.</li>
+<li><strong>[a;b] :</strong> Cardinalité - Accompagné d'un verbe ou d'un adjectif, indique le nombre d'éléments impliqués par une association. La cardinalité se lit de gauche à droite pour l'entité considérée. <em>Ex : 1 équipe possède 1 à N coureurs ; 1 coureur appartient à 1 équipe ; 1 coureur participe à 0,1,.., ou N étapes.</em></li>
+<li><strong>Attributs soulignés :</strong> Clé primaire de la relation. C.f. ressources ci-avant.</li>
+</ul>
+</div>
+</details>     
+</div>
+<p><img src="Mod%C3%A8le%20entit%C3%A9-association.png" alt="Modèle entité/association"></p>
+<p align="center">Exemple extrait du cours "Bases de données" de C. Jazzar, page 65</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Il faut s'assurer que les clef primaires soient bien définies (C.f. <strong>[2]</strong> et <strong>[3]</strong>).</p>
+</div></div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block group-open:select-text">
+<p>Modèle UML</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2 cursor-auto select-text">
+<p>Le modèle UML permet de représenter les interactions entre les schémas et les relations avec une méthode précise. Toutefois, il me semble moins pertinent dans une phase de conception de base de données que le modèle entité/association car moins différenciant visuellement.</p>
+</div>
+</details>     
+</div>
+<h3>2. Traduction dans le modèle fonctionnel</h3>
+<h4>2.1. Cas général</h4>
+<ul>
+<li>Chaque entité est un schéma. On différencie la clé primaire en la soulignant.</li>
+<li>Chaque association devient un schéma qui ne possède pas de clé primaire. A la place on ajoute les clés primaires des entités rattachés, en les soulignant en pointillés. Ils deviennet des <strong>clés étrangères</strong>.</li>
+</ul>
+<h4>2.2 Cas de la cardinalité [1,1]</h4>
+<p>Si une entité possède une <strong>cardinalité [1,1]</strong> alors on ne créera pas de relation pour l'association correspondantes. A la place, cette entité recevra les attributs directement connectés à l'association, ainsi que la clé primaire de l'autre entité en tant que clé étrangère.</p>
+<h3>3. Normalisation</h3>
+<p>En se basant sur les définitions et les principes énoncés en partie <em>&quot;Les fondamentaux&quot;</em>.</p>
+<h4>3.1. Si les clefs ne sont pas définies ou vérifiées : construction des relations</h4>
+<ul>
+<li>Définir une ou la <strong>fermeture transitive</strong>. Permet de lister toutes les dépendances fonctionnelles à disposition.</li>
+</ul>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Ne pas oublier les différentes formes possibles de dépendances fonctionnelles : X =&gt; Y <strong>OU</strong> X,Y =&gt; Z <strong>OU</strong> X =&gt; Y,Z dans le cas de seulement 3 attributs.</p>
+</div></div>
+<ul>
+<li>Définir un ou la <strong>couverture minimale</strong>. Permet d'identifier les dépendances fonctionnelles indispensables.</li>
+<li>Définir la ou les <strong>clés candidates</strong>. Pour cela, on se base sur la fermeture transitive : *Quelles dépendances fonctionnelles englobent le plus d'attributs ?&quot;</li>
+<li>Choisir la <strong>clé primaire</strong>.</li>
+</ul>
+<h4>3.2. Définir la norme et normaliser</h4>
+<p><strong>1FN : Première forme normale</strong><br>
+¤ <em>Vérifier</em> : Existence d'une clef <strong>&amp;</strong> aucune dépendance non fonctionnelle (un antécédant =&gt; une image)<br>
+¤ <em>Normaliser</em> : Ajouter des attributs en antécédant de la relation afin d'en faire une fonction.</p>
+<p><strong>2FN : Deuxième forme normale</strong><br>
+¤ <em>Vérifier</em> : 1FN <strong>&amp;</strong> tout attribut qui n'est pas dans une clef ne dépend pas que d'une partie d'une clef.<br>
+¤ <em>Normaliser</em> : Décomposer la relation en plusieurs &quot;sous-relations&quot;.</p>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Pour éviter toute perte d'information, il peut être nécessaire de créer une relation liant les clés primaires des sous-relations.</p>
+</div></div>
+<p><strong>3FN : Troisième forme normale</strong><br>
+¤ <em>Vérifier</em> : 2FN <strong>&amp;</strong> toutes les DFE (dépendances fonctionnelles élémentaires) allant vers un attribut qui n'est pas dans une clé proviennent d'une clef.<br>
+¤ <em>Normaliser</em> : Décomposer la relation en plusieurs relations ou compléter la clef par un autre attribut.</p>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>En ajoutant un attribut à une clef, il est possible de perdre la 2FN !!</p>
+</div></div>
 
 
 </article>
