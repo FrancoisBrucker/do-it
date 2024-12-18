@@ -29,7 +29,7 @@ Il y a toujours un chef (parfois une cheffe), quelqu’un “au dessus” et par
 ## Définitions: Hiérarchie et subordination
 
 Le dictionnaire Larousse défini la **hiérarchie** comme une “organisation qui classe les personnes, leurs états, leurs fonctions selon des échelons subordonnés les uns aux autres, chaque échelon correspondant à un degré de pouvoir, de responsabilité, de compétence, de dignité, etc., supérieur à celui de l'échelon immédiatement inférieur”. En effet, une notion clé allant avec la notion de hiérarchie est celle de **subordination**, le fait d’être soumis et de dépendre d’une autorité. La Cour de Cassation, en 1996, caractérise la subordination “par l’exécution d’un travail sous l’autorité d’un employeur qui a le pouvoir de donner des ordres et des directives, d’en contrôler l’exécution et de sanctionner les manquements de son subordonné.”
-Enfin, Philippe Boursier et Willy Pelletier définissent un chef comme quelqu’un détenant des pouvoirs tels que: celui d’influer fortement sur les actions, les façons de voir, les conditions d’existences, celui d’empêcher, d’organiser et de faire advenir; définition que l'on garde en tête pour la suite de l'étude. [1] (#bibliographie)
+Enfin, Philippe Boursier et Willy Pelletier définissent un chef comme quelqu’un détenant des pouvoirs tels que: celui d’influer fortement sur les actions, les façons de voir, les conditions d’existences, celui d’empêcher, d’organiser et de faire advenir; définition que l'on garde en tête pour la suite de l'étude. [1](#bibliographie)
 
 ## Les premières traces de hiérarchie
 
@@ -150,7 +150,7 @@ Pour ce qui est des cours (dans la limité des choix donnés), des POK, MON et p
 Ensuite, les ressources notamment intellectuelles sont mises en commun via le site DO-IT: on retrouve les travaux de tout le monde pour s'aider, apprendre, découvrir.
 
 Comme on peut le voir, le gros point bloquant est au niveau de la hierarchie rigide.
-Si on venait à ne pas prendre en com# Bibliographie# Bibliographie[pte les deux professeurs encadrants dans l'analyse, on pourrait peut-être plus parler de phalanstère.
+Si on venait à ne pas prendre en compte les deux professeurs encadrants dans l'analyse, on pourrait peut-être plus parler de phalanstère.
 
 # Bibliographie <section id="bibliographie"></section>
 
