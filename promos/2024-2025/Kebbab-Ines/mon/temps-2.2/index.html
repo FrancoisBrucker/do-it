@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>MON 2.2 - La revanche du Monopoly en C++</title>
+        <title>MON 2.2 - Programmation Orientée Objet (POO)</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">MON 2.2 - La revanche du Monopoly en C++</h1>
+<h1 class="mb-1">MON 2.2 - Programmation Orientée Objet (POO)</h1>
 <div class="mb-4">
     
         <div class="px-4 flex flex-wrap items-center">
@@ -75,7 +75,7 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">info</li>
                 
-                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">C++</li>
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">POO</li>
                 
 
             </ul>
@@ -113,7 +113,7 @@
 
         <p class="mb-4 text-lg">
 
-                Réalisation d'un jeu en C++.
+                Bases de la POO avec Python, quelles différences avec la POO en C/C++ ?
 
         </p>
 
@@ -126,20 +126,131 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Kebbab-Ines/">Inès KEBBAB</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Kebbab-Ines/mon/">MON de Inès Kebbab</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Kebbab-Ines/mon/temps-2.2/">MON 2.2 - La revanche du Monopoly en C++</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Kebbab-Ines/">Inès KEBBAB</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Kebbab-Ines/mon/">MON de Inès Kebbab</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Kebbab-Ines/mon/temps-2.2/">MON 2.2 - Programmation Orientée Objet (POO)</a>
 
 </div></div>
 
 
 
 
-<p>L'objectif de ce MON est de poursuivre un Monopoly en C++, commencé en électif 2A, pour se rafraichir la mémoire sur le langage C++ / la programmation orientée objet et consolider mes connaissances.</p>
-<p>Nous avions eu beaucoup de mal avec mon groupe il y a 2 ans à arriver à un travail abouti : nous avions un code avec plus de 1000 erreurs, impossible à débugger. Nous avions finalement présentée une version du jeu très simplifiée, en reprenant le code ensemble progressivement. Cette expérience, bien qu'enrichissante, a encore un goût d'échec, et l'idée serait de repartir sur de bonnes bases avec la POO.</p>
-<p>L'idée est donc de repartir de (quasi) zéro et aboutir à un Monopoly répondant au minimum syndical (voire comprendre comment réaliser une interface graphique avec C++).</p>
-<p>Le niveau de ce MON est intermédiaire, les pré-requis étant d'avoir des bases en POO et en C/C++.</p>
+<p>L'objectif de ce MON est de comprendre les bases de la Programmation Objet à partir du cours de M. Brucker. Ce cours utilisant Python et ayant suivi l'électif sur le C++ en 2A, je souhaite identifier les différences possibles.</p>
+<p>Aussi, l'objectif est de comprendre dans quels cas utilsés de la programmation orientée objet est recommandée, les liens et différences avec d'autres langages dits &quot;non typés&quot;, des langages de programmation &quot;impérative&quot; VS &quot;fonctionnelle&quot;, ou de programmation évenementielle (n'ayant jamais mis de définition sur chacun de ces termes).</p>
 <p><em>indiquer les MON/POK en lien</em></p>
 <h2>Contenu</h2>
-<p>À venir.</p>
+<h3>Défintions et différences entre les types de langages</h3>
+<p>En commençant mon étude, je me suis rendue compte que j'étais très confuse sur les différences et les significations entre les termes énoncés ci-dessus, j'opposais par exemple programmation orientée objet et langage non typé. Pour commencer, je propose de refaire un point sur les définitions et cas d'usages.</p>
+<h4>Programmation Orientée Objet et cas d'usages</h4>
+<p>La programmation objet est un principe de programmation utilisé par la quasi-totalité des langages de programmation (avec des nuances et subtilités entre eux). Elle respose sur l'objectif d'écrire du code qui soit :</p>
+<ul>
+<li>facile à lire</li>
+<li>maintenable</li>
+<li>facile à étendre en ajoutant des fonctionnalités</li>
+</ul>
+<p>La programmation orientée objet est souvent opposée à la programmation fonctionnelle dans laquelle les instructions n'ont pas besoin de suivre un ordre particulier lors de l'exécution pour qu'elle réussisse.</p>
+<p><strong>Quels langages sont basés sur de la POO ?</strong>
+En fait il est utilisé dans une très grande partie des langages que j'utilise déjà, et notamment JavaScript, C++, Java et Python.</p>
+<p><strong>Pourquoi et quand utiliser de la POO ?</strong></p>
+<p>La POO présente les avantages suivants :</p>
+<ul>
+<li>Cela favorise la factorisation du code (on ne se répète pas) : on ne définit ses méthodes qu'une seule fois dans les classes.</li>
+<li>Lisibilité avec la notation . : on sait clairement à qui s'applique telle ou telle méthode</li>
+<li>Compartimentation du code : chaque partie du code et chaque opération est compartimentée, ce qui permet de les tester et des améliorer indépendamment du reste du code.</li>
+<li>Plutôt que de créer un gros programme complexe, on crée plein de petits programmes indépendants (les objets) qui interagissent entre eux.</li>
+</ul>
+<p>La <strong>programmation fonctionnelle</strong> s’inspire dans son écriture des fonctions mathématiques, et a une application plus abstraite. Elle est donc très appréciée pour manipuler et analyser de gros volumes de données mais moins pertinente pour développer une application utile au quotidien.</p>
+<p>Un troisième type de programmation, la <strong>programmation procédurale</strong>, est une méthode qui procède à une analyse descendante pour résoudre un problème, en décomposant le problème en sous-problèmes jusqu’à ce que des actions très simples, aussi appelées procédures, soient identifiées. Cette méthode de programmation peut être très lourde, surtout sur des projets complexes. Elle est adaptée pour des programmes courts.</p>
+<p>La POO est donc la méthode à privilégier pour écrire des programmes de taille importante, avec des données complexes.</p>
+<h4>Kézako un langage typé fortement ou faiblement ?</h4>
+<p>Une fois encore, la nuance dépasse le &quot;typé&quot; ou &quot;non typé&quot;.</p>
+<p>Un langage <strong>fortement typé</strong> (comme PHP) va vérifier à la compilation la cohérence entre les données et les types des objets. Cela permet de prévenir les erreurs à l'exécution, comme des erreurs de calcul et des exceptions. Ces langages sont a priori moins permissifs et demandent donc plus de rigueur.</p>
+<p>Avec un langage à <strong>typage dynamique</strong> (comme Python ou JavaScript), le typage est affecté au moment de l'exécution du code. Il permet d'être plus souple et rapide pour coder, d'autant plus que les développeurs peuvent manquer d'informations sur le type de la donnée ; néanmoins, cela rend plus difficile le debug. Cela a aussi un impact sur la consommation de mémoire et temps de processeur.</p>
+<p>Un langage dit <strong>non typé, ou faiblement typé</strong>, se préoccupe peu des types. Cela offre de la flexibilité sur la manipulation des données. Il y a aussi une notion <strong>d'inférences de types</strong> pour permettre dans des langages typés de demander au compilateur de déterminer le type (une fonctionnalité à utiliser avec modération).</p>
+<h4>Programmation déclarative VS impérative</h4>
+<p>Dans un système impératif, les variables doivent être définies, remplies, ajoutées, formatées et affichées, etc. et on se concentre sur le <em>comment</em>. (ex. Python, PHP, Java, JavaScript, C++)</p>
+<p>Dans le système déclaratif, on se concentre sur le contenu et le <em>quoi</em>. Par exemple, les pages HTML sont déclaratives car elles décrivent ce que contient une page (texte, titres, paragraphes, etc.) et non comment les afficher (positionnement, couleurs, polices de caractères…). (Ex. HMTL)</p>
+<h4>Kézako : les autres définitions</h4>
+<p><strong>Programmation événementielle</strong></p>
+<blockquote>
+<p>La programmation événementielle est un paradigme de programmation très utiliser dans les interfaces graphiques. Cette méthode consiste à réagir à des événements issus du programme comme de cliquer sur un bouton, appuyer sur une touche, etc.
+<a href="https://francoisbrucker.github.io/cours_informatique/cours/coder-et-d%C3%A9velopper/programmation-%C3%A9v%C3%A8nementielle/">Source</a></p>
+</blockquote>
+<p><strong>Langage interprété VS natif</strong></p>
+<p>Un langage interprété nécessite un interpréteur pour pouvoir exécuter le code. (ex. Python, HTML).</p>
+<h3>Les notions de bases de la POO</h3>
+<p>Pour reprendre la programmation Orientée Objet sur de bonnes bases, j'ai suivi le cours de F. Brucker utilisant Python et trouvable au lien suivant : <a href="https://francoisbrucker.github.io/cours_informatique/cours/coder-et-d%C3%A9velopper/programmation-objet/">Programmation Objet</a></p>
+<h4>Ce qu'il faut en retenir, dans l'esprit de la POO</h4>
+<ul>
+<li><strong>Objets</strong> (avec attributs et méthodes) et <strong>classes</strong> + constructeur</li>
+<li><strong>Diagramme UML</strong> (représentation des classes, leurs attributs et méthodes)</li>
+<li><strong>Composition et agrégation</strong> pour lier des classes entre elles :
+<ul>
+<li><strong>agrégation:</strong> les objets sont créés en dehors de la classe (ex. piles et télécommande).</li>
+<li><strong>composition:</strong> les objets sont créés au sein de la classe qui les utilise (ex. livre et pages).</li>
+</ul>
+</li>
+<li><strong>Copie et modification d'objets,</strong> liens et impacts sur la définition et le choix des méthodes (en utilisant de préférence des objets non modifiables).</li>
+<li><strong>Héritage:</strong> organiser et réutiliser des classes, à condition que les classes &quot;filles&quot; soit plus spécifique que celle &quot;mère&quot; (ex. classe mère &quot;Personne&quot; / classes filles &quot;Etudiant&quot; ou &quot;Enseignant&quot;).
+<ul>
+<li>L'objectif est qu'une majorité des méthodes est réutilisée pour la classe fille, et non que la totalité des méthodes soient réécrites dans la classe fille.</li>
+<li>Intérêt dans le cadre de l'usage d'une bibliothèque.</li>
+<li>Notion de hiérarchie de classes (racine, <em>mro</em> en Python) : on peut définir une classe &quot;object&quot; de laquelle héritera toutes les autres classes pour créer des méthodes et comportements par défaut.</li>
+<li>Héritage multiple : conflits dans les méthodes. =&gt; Usage de composition.</li>
+</ul>
+</li>
+<li><strong>Design Patterns</strong>, notion que j'ai découverte à la fin du cours.</li>
+</ul>
+<blockquote>
+<p>Les design patterns, ou façons de faire, sont pour ainsi dire de l'algorithmie objet : ils permettent de résoudre nombre de problèmes courants en développement et d'éviter les erreurs classiques, aussi appelées <strong>anti-pattern</strong>.</p>
+<p>Il existe 3 grands types de design pattern:</p>
+<ul>
+<li>
+<p>les types creational qui créent des objets.</p>
+</li>
+<li>
+<p>les types structural qui mettent les objets en relation.</p>
+</li>
+<li>
+<p>les types behavioural qui regroupent les objets ayant même comportement.</p>
+</li>
+</ul>
+</blockquote>
+<p>Le cours aborde aussi le test son code. J'ai noté le point de vigilence suivant avec la POO :</p>
+<blockquote>
+<p>Attention, dans la mesure du possible ne pas utiliser les attributs de classes.
+On ne vérifie que les résultats de la méthode, pas comment l'objet stocke ses informations.</p>
+<p>Chaque méthode doit être testé.</p>
+<p>Chaque test doit être indépendant.</p>
+</blockquote>
+<h4>Avantages et inconvénients de la POO</h4>
+<p>✅ Les avantages :</p>
+<ul>
+<li>Bien pour modéliser des comportements réels et des programmes complexes, grâce à des termes explicites/modulables (pour le développement d'outils métiers par exemple);</li>
+<li>Langage robuste.</li>
+</ul>
+<p>❌ Les inconvénients :</p>
+<ul>
+<li>Héritage - Tomber en désuétude ? et des ressources parfois désuettes</li>
+<li>Peu intuitive : Elle sera moins facile d'accès que l'approche procédurale, généralement la première à être apprise lorsqu'on débute, ou l'approche fonctionnelle qui parlera tout de suite aux matheux.</li>
+<li>Exigeante : La POO demande une grande rigueur dans le code pour que ses concepts s'appliquent correctement.</li>
+</ul>
+<h4>Comparaison Python VS C++</h4>
+<p>🐍 <strong>Python:</strong></p>
+<ul>
+<li>Langage polyvalent et qui n'est pas limité à la POO ;</li>
+<li>Facile à apprendre ;</li>
+<li>Usage de conventions (<code>self</code> le 1er paramètre de chaque méthode, <code>__init__</code>) ;</li>
+<li>Fonction de propriétés</li>
+<li>Lorsque vous souhaitez créer des programmes faciles à modifier et à maintenir au fil du temps.</li>
+</ul>
+<p>🧮 <strong>C++:</strong></p>
+<ul>
+<li>Le langage est plus rapide à exécuter, car il s'agit d'un langage compilé ;</li>
+<li>Il demande du temps pour bien apprendre ;</li>
+<li>C'est un &quot;vieux&quot; langage, les recherches en ligne peuvent donc fournir des informations désuettes voire obsolètes.</li>
+</ul>
+<h3>Conclusion du MON</h3>
+<p>J'ai apprécié lors de ce MON revoir les bases de la programmation orientée objet avec des exemples concrets et clairs.</p>
+<p>De plus, cela m'a permis de refaire un point sur les définitions sur les différentes typologies de programmation.</p>
 
 
 </article>
