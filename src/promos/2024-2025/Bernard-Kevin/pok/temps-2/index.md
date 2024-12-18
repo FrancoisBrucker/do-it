@@ -12,6 +12,10 @@ tags:
   - "React"
   - "3D"
   - "Gestion de tâches"
+  - "Spring Boot"
+  - "Spring Data JPA"
+  - "API REST"
+  - "React Three Fiber"
 
 résumé: Un POK où je crée un site web attirant en React pour gérer mes tâches avec des animations 3D.
 ---
@@ -30,6 +34,8 @@ Pas de prérequis pour le moment
 - [Image générée par IA sur fr.freepik.com par pjdesign](https://fr.pinterest.com/pin/391672498864069106/)
 - [How to Implement a Blender Model in a React.js Application using Three.js de Matthes.B sur FreeCodeCamp](https://www.freecodecamp.org/news/blender-three-js-react-js/)
 - [GitHub du site](https://github.com/KevinBERNARD1901/creature_site)
+- Sprint 2
+- [Vidéo de Youtube de Lucid Software, UML class diagrams](https://www.youtube.com/watch?v=6XrL5jXmTwM)
 {% endlien %}
 
 {% chemin %}
@@ -74,9 +80,13 @@ Le but de ce POK est de réaliser un site en React pour gérer mes tâches avec 
 #### Sprint 1
 
 - [x] Création v0 de la maquette de l'application 
-- [ ] Création des pages
+- [x] Création des pages
 
 #### Sprint 2
+
+- [x] Création du diagramme de classes UML
+- [x] Création de la base de données
+- [] Création des méthodes HTTP (pas totalement fini)
 
 ### Horodatage
 
@@ -91,9 +101,11 @@ Le but de ce POK est de réaliser un site en React pour gérer mes tâches avec 
 | Lundi 18/11 | 0H45 | Ajustement Caméra, position, taille |
 | Mardi 19/11 | 2H15 | Création des pages et ajout de la navigation |
 | Total | 9H45 |
-
-<!-- | **Début Sprint 2** |
-| Total | 0H | -->
+| **Début Sprint 2** |
+| Vendredi 13/12 | 2H50 | Spring Data JPA |
+| Samedi 14/12  | 3H20  | Installation et prise en main Table SQL et injection au backend + Structure API et création du controller/service/repositotry et test de si cela marche |
+| Dimanche 15/12 | 3H50 | Création du diagramme de classes UML + Faire la liste des méthodes HTTP |
+| Total | 10H |
 
 ## Contenu
 
@@ -155,7 +167,7 @@ Ayant clarifier grossièrement à quoi ressemblera mon site, je suis passé à l
 Je me suis renseigné sur React et j'ai créé mon projet grâce aux MONs de Thomas DUROY et Omar SALAME.
 
 {% chemin %}
-- [MON 2.1 : Introduction à React.js, Omar SALAME](../../../../2023-2024/Omar-Salame/mon/temps-2.1/index.md)
+- [MON 2.1 : Introduction à React.js, Omar SALAME](https://francoisbrucker.github.io/do-it/promos/2023-2024/Omar-Salame/mon/temps-2.1/)
 - [MON 3.1 : Débuter avec React.js, Thomas DUROY](../../../../2022-2023/Duroy-Thomas/mon/MON_3.1/index.md)
 {% endchemin %}
 
@@ -179,3 +191,145 @@ Pour le moment cela ressemble à cela :
 ![alt text](media/site_apres_sprint1.png)
 
 ### Second Sprint
+
+Dans un premier temps, j'ai réalisé mon MON 2.2 sur Spring Boot pour me familiariser avec le backend.
+
+{% chemin %}
+- [MON 2.2 : Spring Boot, Kévin BERNARD](../../mon/temps-2.2/index.md)
+{% endchemin %}
+
+Ce MON m'a pris plus de temps que prévu et j'avais besoin de certaines notions pour avancer dans mon POK. J'ai continué l'apprentissage de Spring Data JPA avec la [Vidéo Youtube de Cameron McKenzie, Spring Boot, JPA & Hibernate REST based CRUD Web Project with MySQL & Swagger](https://www.youtube.com/watch?v=Rel5ymzBBFE).
+
+J'ai ensuite installer et pris en main MySQL puis je l'ai connecté à mon backend avec la propriété :
+```Java
+spring.jpa.hibernate.ddl-auto = update
+```
+Propriété pour que mes tables se construisent en fonction des objets que je créerai.
+
+Suite à cela j'ai construit la structure de mon backend avec :
+- Controller : fichier avec la gestion de mes routes
+- Service : dossier avec les services de mes objets
+- Repository : dossier les interfaces repository de mes objets
+- Model: dossier contenant mes objets
+
+J'ai vérifié que l'update automatique dans ma base de donnée sur SQL marchait et j'ai crée une route pour vérifier que cela fonctionnait grâce à Postman.
+
+```Java
+    @GetMapping("/tasks")
+    public Task getTaskById(@RequestParam int id) {
+        return taskService.getTaskById(id);
+    }
+```
+
+Une fois que j'avais un backend qui fonctionnait il ne me manquait que les données.
+La première chose que j'ai faite a été de créer un diagramme de classes UML.
+J'ai pris le premier site qui me permettait de faire cela (LucidChart)[https://www.lucidchart.com/pages/fr] parce que je voulais simplement avoir une base simple.
+
+![alt text](media/creature_site.jpg)
+
+Après cela, j'ai commencé à faire la liste de mes requêtes HTTP, j'ai atteint les 10H avant de la finir donc elle reste très simple et incomplète.
+
+**POST**
+
+- Client
+  - createClient(@RequestBody Client client): Client
+
+- Creature
+  - createCreature(@RequestBody Creature creature): Creature
+
+- Order
+  - createOrder(@RequestBody Order order): Order
+
+- Task
+  - createTask(@RequestBody Task task): Task
+
+- Horodateur
+  - addTaskToSession(@RequestBody Task task): Task
+
+
+**GET**
+
+- Client
+  - getClientById(@PathVariable int clientId): Client
+  - getAllClients(): List<Client>
+
+- Creature
+  - getCreatureById(@PathVariable int creatureId): Creature
+  - getAllCreatures(): List<Creature>
+
+- Order
+  - getOrderById(@PathVariable int orderId): Order
+  - getAllOrders(): List<Order>
+
+- Task
+  - getTaskById(@PathVariable int taskId): Task
+  - getTasksByProjectDomain(@RequestParam int domainId): List<Task>
+
+**PUT**
+
+- Client
+  - updateClient(@PathVariable int clientId, @RequestBody Client client): Client
+
+- Creature
+  - updateCreature(@PathVariable int creatureId, @RequestBody Creature creature): Creature
+
+- Order
+  - updateOrder(@PathVariable int orderId, @RequestBody Order order): Order
+
+- Task
+  - updateTask(@PathVariable int taskId, @RequestBody Task task): Task
+
+**DELETE**
+
+- Client
+  - deleteClient(@PathVariable int clientId): void
+
+- Creature
+  - deleteCreature(@PathVariable int creatureId): void
+
+- Order
+  - deleteOrder(@PathVariable int orderId): void
+
+- Task
+  - deleteTask(@PathVariable int taskId): void
+
+
+**PATCH**
+
+- patchDomain(String name, String color) : Domain
+- Client
+  - updateClientEmail(@PathVariable int clientId, @RequestParam boolean newEmail): Client
+ 
+- Creature
+  - addAnimationToCreature(@PathVariable int creatureId, @RequestBody Animation animation): Creature
+
+- Order
+  - markOrderAsPaid(@PathVariable int orderId): Order
+
+- Task
+  - markTaskAsDone(@PathVariable int taskId): Task
+
+
+#### Retour sur expérience
+
+**Difficultés :**
+
+- Je me suis perdu et fais un effet tunnel sur le design de mon site.
+- Je n'ai pas bien identifié la priorité de ce que je voulais apprendre.
+
+**Bilan**
+
+Pour le sprint 1, je trouve dommmage d'avoir passé autant de temps sur le design. J'aurai aimer toucher plus à React.
+Pour le sprint 2, je suis très content car j'ai appris de mon erreur et je trouve que j'ai bien pris en main Spring Boot.
+Le fait d'avoir le cours sur Java Gradle m'a beaucoup aidé pour comprendre comment fonctionne Spring Boot notamment pour les interfaces et je trouvais cela très complémentaire.
+
+De manière globale, c'est la première fois que je fais à la fois le front et le back et cela m'a débloqué.
+
+**Réponse**
+
+Pour répondre à la question :
+
+**Comment me créer un site de gestion de tâches attirant en React avec une expérience 3D ?**
+
+J'ai commencé à créer un site en React avec une expérience 3D en important un modèle Blender. 
+Ensuite, j'ai crée le backend avec Spring Boot et j'ai fait un diagramme de classes UML pour structurer mes données avec un début de mes routes HTTP.
