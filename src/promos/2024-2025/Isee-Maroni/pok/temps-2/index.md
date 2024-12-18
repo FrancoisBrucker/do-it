@@ -73,7 +73,7 @@ Mon choix s’est porté sur un document du CNIEL, contenant des informations su
 PDF - Les Chiffres clés de la filière laitière - 2024. https://presse.filiere-laitiere.fr/assets/les-chiffres-cles-de-la-filiere-laitiere-2024-pdf-3072-ef05e.html
 {% endlien %}
 
-![Cniel](./Cniel_filiere_laitiere.pdf)
+![Cniel](./Cniel_filiere_laitiere_p1.png)
 
 
 Pour réaliser mon infographie, j'ai fait une sélection des données spécifiques sur la filière laitière que voici :
