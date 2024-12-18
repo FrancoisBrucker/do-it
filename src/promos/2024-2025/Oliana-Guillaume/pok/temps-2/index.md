@@ -116,7 +116,7 @@ La liste est triée ou filtrée selon des critères comme la date ou la priorit�
 Fonctionnalité pour éditer les détails d'une tâche existante.
 Suppression d'une tâche directement depuis l'interface, avec une synchronisation en temps réel avec Firestore.
 
-![alt text](image.png)
+![alt text](./image-2.png)
 
 ##### Structure du Frontend :
 
@@ -124,14 +124,14 @@ Le frontend est conçu en React.
 Utilisation de composants pour organiser le code (ex. : TaskList, TaskForm, LoginForm).
 
 
-![alt text](image.png)
+![alt text](./image.png)
 
 ##### Backend Firebase :
 
 Firestore est utilisé pour gérer la base de données en temps réel.
 Les règles de sécurité Firestore assurent que chaque utilisateur accède uniquement à ses propres tâches.
 
-![alt text](image-1.png)
+![alt text](./image-1.png)
 
 ## Défis Rencontrés
 
@@ -161,22 +161,22 @@ Pour les prochaines versions, j'envisage :
 
 ## Amélioration de l'UI de la page de login
 
-![alt text](image-3.png)
+![alt text](./image-3.png)
 
 Rien de bien compliqué ici, j'ai retravaillé la partie signup/login que je n'avais pas pris le temps de rendre esthétiquement potable au sprint 1.
 
 ## Implémentation d'un formulaire pour créer une tâche
 
-![alt text](image-4.png)
+![alt text](./image-4.png)
 
-![alt text](image-5.png)
+![alt text](./image-5.png)
 
 
 ## Ajout d'une barre de progression d'accomplissement des tâches
 
 Cette barre de progression est globale et les filtres ne s'y applique pas pour le moment.
 
-![alt text](image-6.png)
+![alt text](./image-6.png)
 
 
 # Conclusion 
