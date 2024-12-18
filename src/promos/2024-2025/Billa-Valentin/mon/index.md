@@ -11,4 +11,4 @@ authors:
 - [MON 1.1 - SQL Avancé](./temps-1.1)
 - [MON 1.2 - Lexique](./temps-1.2)
 - [MON 2.1 - Haskell](./temps-2.1)
-- [MON 2.1 - Svelte](./temps-2.1)
+- [MON 2.1 - Redondance](./temps-2.2)
