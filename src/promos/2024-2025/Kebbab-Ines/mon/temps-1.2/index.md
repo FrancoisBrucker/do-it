@@ -172,60 +172,54 @@ D'autres sujets SI peuvent être soulevés (outils de consultation des citoyens 
 #### Outils pour la gestion de projet pour appliquer le Donut
 
 - [**Doughnut impact assessment for development project**](https://doughnuteconomics.org/tools/doughnut-impact-assessment-for-development-project)
-    
-    This workshop is divided into 4 key stages :
-    
-    - Identifying the **basic needs met by the project** ;
-    - Identifying the **social impacts of the project** on the social foundation ;
-    - Identifying the **environmental impacts of the project** on the environmental ceiling ;
-    - Identifying the **practices and resources to be engaged** in order to be part of the safe and just space.
+
     - **Que retenir ?** Les deux questions sur les impacts sociaux et les impacts environnementaux. + Canvas pour le projet (ici public, mais peut être exporter pour tout type de projet avec une adaptation
 - L’atelier [Powers to Act](https://doughnuteconomics.org/tools/powers-to-act-deep-design-of-cities-and-places), créé par la team DEAL
 
-## 
+## Entreprises et théorie du donut
 
 *Pourquoi les acteurs privés n’utilisent pas la théorie pour élaborer leur stratégie RSE et quelles solutions imaginer ?*
 
-1. La démarche
-
-**L’économie régénérative : concrètement en entreprise, ça implique quoi ?**
-
-**Brève cartographie du Donut**
-
-Explorer les impacts et les dépendances sur base des dimensions du Donut.
-
-**Ambitions régénératrices et distributives**
-
-Créer les idées les plus ambitieuses et les plus transformatrices qui permettent à votre entreprise de devenir régénératrice et distributive.
-
-**Connaître la configuration de votre entreprise**
-
-En gardant ces idées à l’esprit, examiner comment la configuration actuelle de votre entreprise vous freine ou vous facilite la tâche.
-
-**Reconfigurer votre entreprise**
-
-Identifier les changements à apporter à la conception de votre entreprise pour permettre de donner vie à vos idées transformatrices.
+Un outil est proposé par le DEAL pour les entreprises, tout en encadrant les conditions d'appropriation du concept du donut pour des enjeux business.
 
 Il comprend également des considérations clés pour certains types de participants : [start-ups](https://docs.google.com/presentation/d/1JD1GsVs8Iih16Wcx_rLWLfdAbQaUUDqDLXl-xMNXzOw/edit#slide=id.p84), [grandes entreprises](https://docs.google.com/presentation/d/1JD1GsVs8Iih16Wcx_rLWLfdAbQaUUDqDLXl-xMNXzOw/edit#slide=id.p85), [entreprises familiales](https://docs.google.com/presentation/d/1JD1GsVs8Iih16Wcx_rLWLfdAbQaUUDqDLXl-xMNXzOw/edit#slide=id.p86) et [entreprises éthiques](https://docs.google.com/presentation/d/1JD1GsVs8Iih16Wcx_rLWLfdAbQaUUDqDLXl-xMNXzOw/edit#slide=id.p87). 
 
-La Méthode :
+### La méthode :
 
 1. On étudie le Donut, les impacts positifs ou négatifs que l’on a sur les items + ceux qui menaçent notre activité d’entreprise
 2. Identifier des idées ambitieuses pour l’entreprise et les relier aux enjeux concernés.
 3. Identifier la configuration actuelle de l’entreprise par rapport aux 5 enjeux. ⭐
 4. Challenger son entreprise actuelle (avec les idées de transformations, les “enablers” et les “blockers”) ⭐
 
-Des redits avec d’autres concepts de la RSE : raison d’être
+### Analyse
 
 Pour les entreprises, ils semblent d’abord important que la ville se soit déjà engagée ou d’avoir une coalition entre acteurs publics et privés pour lancer une dynamique. En effet, l’estimation des enjeux locaux et globaux peut sembler redondante et il serait pertinent d’avoir une base qui permettent déjà de repérer les enjeux principaux selon le secteur de l’entreprise et sa localité.
 
-De plus, pour les entreprises ayant plusieurs sites (voire plusieurs pays), les échelles d’étude sont largement différentes de celle d’une municipalité.
+Le principal défaut des outils disponibles pour les entreprises est qu'il manque d'une traduction des indicateurs adaptés à l'échelle d'une entreprise ou d'une organisaton. A cela s'ajoute les mêmes limites que celles identifiées pour les acteurs publics.
 
-Outil d’aide à la décision, on peut aussi analyser et challenger les projets selon les 4 focus à avoir (environnement et social locaux, environnement et social globaux).
+Des questions différentes se posent dans le cadre d'une entreprise ayant plusieurs sites (voire plusieurs pays), les échelles d’étude sont largement différentes de celle d’une municipalité.
 
-**Mais, comment faire travailler les entreprises et acteurs publiques en coalition ?** ex. des programmes d’open innovation, de co-design de filières, ou l’auto-évaluation ESG obligatoire pour demander des subventions aux acteurs publiques (ex. Métropole de Lyon). D’autres types d’acteurs comme des syndicats peuvent faire le lien entre les entreprises et les acteurs publiques locaux (ex. Bretagne et compétences RH). De plus, les entreprises et les acteurs locaux ont des intérêts communs à discuter (formation et emplois, compétences nécessaires au local…)
+Aussi, on observe des redits avec d’autres concepts de la RSE, comme la raison d’être (ce n'est pas une mauvaise chose, c'est aussi le cas avec la démarche proposée par la régulation de reporting extra-financier). Il serait intéressant de croiser les indicateurs de la théorie du donut avec les autres indicateurs déjà collectés par les entreprises.
 
-https://www.lemonde.fr/emploi/article/2024/10/02/les-lecons-de-management-du-secteur-public-au-prive-et-inversement_6341197_1698637.html
+De plus, le lien avec les autres sujets ESG pertinent en entreprise n'est pas explicite (économie circulaire, Business Models à impact, économie de la fonctionnalité)... La considération des enjeux financiers pour les entreprises semble complètement effacé.
+
+Néanmoins, la théorie du donut peut rester un outil intéressant d’aide à la décision, il reste tout à fait possible d'analyser et challenger les projets selon les 4 focus à avoir (environnement et social locaux, environnement et social globaux).
+
+Pour le monde professionnel, l'outil semble pourtant pertinent pour sensibiliser le personnel sur la question de la transition durable. Hors les principes de fonctionnement de la théorie du donut invite à une gouvernance et à un management plus participatif, pour faire preuve d'intelligence collective.
+
+Un dernier frein non négligeable à l'utilisation de la théorie du donut : la résistance au changement, notamment sur les enjeux socio-environnementaux.
+
+**Mais, comment faire travailler les entreprises et acteurs publiques en coalition ?** 
+Voici quelques pistes :
+- Des programmes d’open innovation, 
+- Des programmes de co-design de filières, 
+- L’auto-évaluation ESG obligatoire pour demander des subventions aux acteurs publiques (ex. Métropole de Lyon). 
+
+D’autres types d’acteurs comme des syndicats peuvent faire le lien entre les entreprises et les acteurs publiques locaux (ex. Bretagne et compétences RH). 
+
+De plus, les entreprises et les acteurs locaux ont des intérêts communs à discuter (formation et emplois, compétences nécessaires au local…)
+
+Voir aussi : [article de Le Monde - 02/10/2024](https://www.lemonde.fr/emploi/article/2024/10/02/les-lecons-de-management-du-secteur-public-au-prive-et-inversement_6341197_1698637.html)
 
 
 ### Le mot de la fin

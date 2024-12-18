@@ -33,8 +33,8 @@ Ayant déjà de bases du dev web (front end, back end...), les objectifs princip
 #### Sprint 1 - Rodage et premiers tests
 1. [X] Maquette express (avec des wireframes ?) de l'interface et choix de premières catégories à implémenter pour le sprint.
 2. [X] Remise à niveau / rappels HTML et CSS.
-3. [X] Remise à niveau / rappels en JS et analyse du code de site de James Turner pour comprendre la structure.
-4. [X] Implémentation du premier bloc de checklist "simple", en front end VS en back puis front end.
+3. [X] Remise à niveau / rappels en JS et analyse du code de site de James Turner pour comprendre la structure. (réalisé au Sprint 2)
+4. [X] Implémentation du premier bloc de checklist "simple", en front end VS en back puis front end. (réalisé au Sprint 2)
 
 #### Sprint 2 - Ajout des autres blocs et informations
 1. [X] Implémentation de blocs à checklist à niveau d'avancement (1,2,3... Fait).
@@ -42,7 +42,7 @@ Ayant déjà de bases du dev web (front end, back end...), les objectifs princip
 3. [X] Affichage des pourcentages d'avancement par catégorie.
 4. [X] Affichage d'informations au survol des informations sur l'item.
 5. [/] Sauvegarde et/ou mise en cache.
-6. [ ] Etudier l'évolution vers une base de donnée (+ rappels back).
+6. [ ] Etudier l'évolution vers une base de donnée (+ rappels back). (abandonné à la fin du sprint 1)
 7. [ ] *(Bonus : Animation / pop up si la checklist est complétée.)*
 
 
