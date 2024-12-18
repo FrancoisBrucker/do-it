@@ -200,7 +200,7 @@
 <li>Définir les schémas et modèles pour :
 <ul>
 <li><strong>Produits</strong> (nom, description, prix, image).</li>
-<li><strong>Commandes</strong> (produits, quantités, prix total, état).</li>
+<li><strong>Users</strong> (nom, eamil, passwords).</li>
 </ul>
 </li>
 <li>Ajouter des données de test pour les produits.</li>
@@ -214,9 +214,11 @@
 <ul>
 <li><code>GET /api/products</code> : Liste tous les produits.</li>
 <li><code>GET /api/products/:id</code> : Détaille un produit spécifique.</li>
-<li><code>POST /api/cart</code> : Ajoute un produit au panier.</li>
-<li><code>POST /api/orders</code> : Crée une nouvelle commande.</li>
-<li><code>GET /api/orders/:id</code> : Donne les détails d’une commande.</li>
+<li><code>POST /api/products/</code> : Création un produit spécifique.</li>
+<li><code>PUT /api/products/:id</code> : Update un produit spécifique.</li>
+<li><code>DELETE /api/products/:id</code> : Suprimer un produit spécifique.</li>
+<li><code>POST /api/login</code> : Se connecter</li>
+<li><code>POST /api/register</code> : Créaction d'un nouveau compte</li>
 </ul>
 </li>
 <li>Structurer les routes pour qu'elles utilisent les méthodes <strong>CRUD</strong> associées.</li>
@@ -229,7 +231,7 @@
 <ul>
 <li>Organiser le projet en modules :
 <ul>
-<li><code>routes/</code> : Fichiers pour les routes (<code>products.js</code>, <code>orders.js</code>).</li>
+<li><code>routes/</code> : Fichiers pour les routes (<code>products.js</code>, <code>auth.js</code>).</li>
 <li><code>controllers/</code> : Logique métier séparée des routes.</li>
 <li><code>models/</code> : Définition des schémas <strong>Mongoose</strong>.</li>
 </ul>
@@ -252,7 +254,7 @@
 <li><strong>Tâches :</strong>
 <ul>
 <li>Connecter le frontend en <strong>Vue.js</strong> avec l'API backend en utilisant <strong>Axios</strong> ou <strong>Fetch</strong> pour effectuer des appels API.</li>
-<li>Tester les appels aux différentes routes API (produits, panier, commandes) depuis le frontend pour vérifier que les données sont correctement affichées et manipulées.</li>
+<li>Tester les appels aux différentes routes API (produits, users) depuis le frontend pour vérifier que les données sont correctement affichées et manipulées.</li>
 <li>Implémenter des actions sur le frontend comme l'ajout de produits au panier via l'API <code>POST /api/cart</code> et l'affichage des produits depuis <code>GET /api/products</code>.</li>
 <li>Vérifier que les pages du frontend, comme le panier et le menu, interagissent correctement avec le backend pour mettre à jour les données de manière dynamique.</li>
 </ul>
@@ -266,7 +268,6 @@
 <ul>
 <li>[x] Initialisation du projet et installation des dépendances.</li>
 <li>[x] Configuration du serveur avec <strong>express</strong>.</li>
-<li>[x] Ajout d’une route de test <code>GET /api/test</code>.</li>
 </ul>
 </li>
 </ul>
@@ -277,7 +278,7 @@
 <ul>
 <li>[x] Création du cluster MongoDB.</li>
 <li>[x] Connexion avec <strong>mongoose</strong>.</li>
-<li>[x] Création des modèles <strong>Product</strong> et <strong>Order</strong>.</li>
+<li>[x] Création des modèles <strong>Product</strong> et <strong>Users</strong>.</li>
 <li>[x] Ajout de données de test pour les produits.</li>
 </ul>
 </li>
@@ -288,8 +289,8 @@
 <li><strong>Tâches</strong> :
 <ul>
 <li>[x] Routes pour les produits (<code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code>).</li>
-<li>[x] Routes pour les commandes (<code>GET</code>, <code>POST</code>).</li>
-<li>[ ] Validation basique des données entrantes.</li>
+<li>[x] Routes pour les commandes (<code>POST</code>).</li>
+<li>[x] Validation basique des données entrantes.</li>
 </ul>
 </li>
 </ul>
@@ -298,8 +299,8 @@
 <li><strong>Objectif :</strong> Organiser le projet pour faciliter la maintenance et les futures évolutions.</li>
 <li><strong>Tâches</strong> :
 <ul>
-<li>[ ] Séparation des routes, contrôleurs et modèles dans des dossiers dédiés.</li>
-<li>[ ] Structuration du code en modules clairs (<code>routes/</code>, <code>controllers/</code>, <code>models/</code>).</li>
+<li>[x] Séparation des routes, modèles dans des dossiers dédiés.</li>
+<li>[x] Structuration du code en modules clairs (<code>routes/</code>, <code>models/</code>).</li>
 </ul>
 </li>
 </ul>
@@ -308,7 +309,7 @@
 <li><strong>Objectif :</strong> Ajouter des données de test et vérifier le fonctionnement des routes API.</li>
 <li><strong>Tâches</strong> :
 <ul>
-<li>[ ] Ajout manuel ou via script des produits par défaut.</li>
+<li>[x] Ajout manuel ou via script des produits par défaut.</li>
 <li>[ ] Validation des données récupérées avec <strong>Postman</strong>.</li>
 </ul>
 </li>
@@ -318,9 +319,9 @@
 <li><strong>Objectif :</strong> Assurer la communication entre le frontend <strong>Vue.js</strong> et le backend <strong>Node.js</strong> via des API.</li>
 <li><strong>Tâches</strong> :
 <ul>
-<li>[ ] Implémentation des appels API pour récupérer les produits et gérer le panier.</li>
-<li>[ ] Vérification de l'affichage dynamique des produits dans le frontend.</li>
-<li>[ ] Tester l'ajout de produits au panier depuis le frontend et la mise à jour des informations de commande.</li>
+<li>[x] Implémentation des appels API pour récupérer les produits.</li>
+<li>[x] Vérification de l'affichage dynamique des produits dans le frontend.</li>
+<li>[x] Tester connexion/l'enregistrement d'un user et ajout à la base de donnée.</li>
 </ul>
 </li>
 </ul>
@@ -347,12 +348,32 @@
 <tr>
 <td>02/11</td>
 <td>2H</td>
-<td>Création des modèles pour les données</td>
+<td>Création des modèles de données (User, Product)</td>
 </tr>
 <tr>
-<td>03/11</td>
+<td>07/11</td>
+<td>2H</td>
+<td>Développement des routes API pour l'authentification</td>
+</tr>
+<tr>
+<td>07/12</td>
+<td>3H</td>
+<td>Création du middleware d'authentification JWT</td>
+</tr>
+<tr>
+<td>08/12</td>
+<td>3H</td>
+<td>Tests manuels des routes et ajustements</td>
+</tr>
+<tr>
+<td>12/11</td>
 <td>4H</td>
-<td>Développement des routes API principales</td>
+<td>Intégration des produits dynamiques au backend</td>
+</tr>
+<tr>
+<td>14/11</td>
+<td>4H</td>
+<td>Connexion du frontend au backend (authentification et produits)</td>
 </tr>
 </tbody>
 </table>
