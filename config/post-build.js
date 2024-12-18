@@ -8,6 +8,8 @@ export default function (eleventyConfig) {
 
     // Search config with pagefind
     eleventyConfig.on('eleventy.after', () => {
-        execSync(`npx pagefind --site dist --output-subdir _pagefind --glob \"**/*.html\"`, { encoding: 'utf-8' })
+        execSync(
+            `npx pagefind --site dist --output-subdir _pagefind --exclude-selectors "img, video, audio, svg"`,
+            { encoding: 'utf-8' })
     })
 }
