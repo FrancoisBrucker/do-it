@@ -78,7 +78,7 @@ PDF - Les Chiffres clés de la filière laitière - 2024. https://presse.filiere
 
 Pour réaliser mon infographie, j'ai fait une sélection des données spécifiques sur la filière laitière que voici :
 
-![Donnees_brutes](./A4-1.pdf)
+![Donnees_brutes](./A4-1.png)
 
 Je me suis ensuite appliquée à les représenter de manière visuelle afin que le message principal soit compris d’un coup d’œil, avec un minimum de texte explicatif. Mon objectif était que les éléments graphiques portent la majeure partie de la signification.
 
@@ -87,15 +87,15 @@ Je me suis ensuite appliquée à les représenter de manière visuelle afin que 
 1. Première étape : J'ai réalisé une version intermédiaire avec les principaux visuels disposés en vrac, comme une esquisse. Cette version, non finalisée, présente des emplacements vides pour intégrer d’autres données ultérieurement.
 
 <div style="display:flex">
-<div><img src="A4-1.pdf"></div>
-<div><img src="A2-1.pdf"></div>
+<div><img src="A4-1.png"></div>
+<div><img src="A2-1.png"></div>
 </div>
 
 2. Ajout des données brutes : J’ai ensuite enrichi cette version avec les chiffres et statistiques nécessaires pour données les informations clés portées par l’infographie.
 
 <div style="display:flex">
-<div><img src="A4-1.pdf"></div>
-<div><img src="A2-2.pdf"></div>
+<div><img src="A4-1.png"></div>
+<div><img src="A2-2.png"></div>
 </div>
 
 #### Difficultés majeures rencontrées
@@ -114,7 +114,7 @@ J'ai également prévu de faire un brief graphique pour déterminer mes polices,
 ![Lait_inspiration](Lait_inspiration-1.png)
 
 #### Infographie en grand
-![Lait](./A2-2.pdf)
+![Lait](./A2-2.png)
 
 
 
