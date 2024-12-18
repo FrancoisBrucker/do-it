@@ -177,5 +177,5 @@ Pour répondre à ma question :
 
 **Comment ajouter de l'animation 3D (blender) à React ?**
 
-Grâce à ce MON, j'ai réussi à comprendre comment s'intégrait le 3D dans du web et quels outils utiliser étaient à ma portée pour répondre à mon besoin.
+Grâce à ce MON, j'ai réussi à comprendre comment s'intégrait le 3D dans du web et quels outils utilisés étaient à ma portée pour répondre à mon besoin.
 Je peux utiliser React Three Fiber pour ajouter mon document blender, sous format glb, à mon canva.
