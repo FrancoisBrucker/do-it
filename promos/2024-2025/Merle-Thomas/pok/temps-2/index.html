@@ -180,7 +180,7 @@
 <li>le niveau et les prérequis nécessaires en utilisant la balise <a href="/do-it/cs/contribuer-au-site/#prerequis"><code>prerequis</code></a></li>
 <li>les autres POK &amp; MON en rapport en utilisant la balise <a href="/do-it/cs/contribuer-au-site/#lien"><code>lien</code></a></li>
 </ul>
-<h1><span style="color: green">POK 12 - Dark Kitchen - BackEnd</span></h1>
+<h1><span style="color: green">POK2 - Dark Kitchen - BackEnd</span></h1>
 <p>Codage en JS (NodeJS).</p>
 <p>Ce POK décrit les étapes du développement du site web de notre Dark Kitchen de Fried Rice et de Noodles <strong>S&amp;T Goreng</strong>. Il comprend la mise en place d'une <strong>API REST</strong>, la connexion à une base de données <strong>MongoDB</strong> et des fonctionnalités essentielles côté serveur.</p>
 <hr>
@@ -197,7 +197,7 @@
 <ul>
 <li><a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Initialiser un projet Node.js avec <code>npm init</code>.</li>
 <li><a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Installer les dépendances principales : <code>express</code>, <code>mongoose</code>, <code>dotenv</code>.</li>
-<li><a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Configurer un fichier <code>.env</code> pour stocker les variables sensibles comme le port et l’URI MongoDB.</li>
+<li><a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Configurer un fichier <code>.env</code> pour stocker les variables sensibles comme le port et l’URI <strong>MongoDB</strong>.</li>
 <li><a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Créer un serveur Express.js fonctionnel qui écoute sur un port donné.</li>
 </ul>
 </li>
@@ -207,12 +207,12 @@
 <li>
 <p><strong>Tâches :</strong></p>
 <ul>
-<li><a href="#">Thomas</a> Créer un cluster MongoDB sur MongoDB Atlas.</li>
+<li><a href="#">Thomas</a> Créer un cluster MongoDB sur <strong>MongoDB Atlas</strong>.</li>
 <li>[<a href="#">Thomas</a> Configurer la connexion entre le serveur Node.js et MongoDB à l’aide de <code>mongoose</code>.</li>
 <li><a href="#">Thomas</a> Définir les schémas et modèles pour :
 <ul>
 <li><strong>Produits</strong> (nom, description, prix, image).</li>
-<li><strong>Commandes</strong> (produits, quantités, prix total, état).</li>
+<li><strong>Users</strong> (nom, eamil, passwords).</li>
 </ul>
 </li>
 <li><a href="#">Thomas</a> Ajouter des données de test pour les produits.</li>
@@ -226,11 +226,11 @@
 <ul>
 <li><code>GET /api/products</code> : Liste tous les produits.</li>
 <li><code>GET /api/products/:id</code> : Détaille un produit spécifique.</li>
-<li><code>POST /api/cart</code> : Ajoute un produit au panier.</li>
-<li><code>POST /api/orders</code> : Crée une nouvelle commande.</li>
-<li><code>GET /api/orders/:id</code> : Donne les détails d’une commande.</li>
-<li><code>api/register</code>: Permet de se sign In sur le site.</li>
-<li><code>api/register</code>: Permet de se LogIn sur le site.</li>
+<li><code>POST /api/products/</code> : Création un produit spécifique.</li>
+<li><code>PUT /api/products/:id</code> : Update un produit spécifique.</li>
+<li><code>DELETE /api/products/:id</code> : Suprimer un produit spécifique.</li>
+<li><code>POST /api/login</code> : Se connecter</li>
+<li><code>POST /api/register</code> : Créaction d'un nouveau compte</li>
 </ul>
 </li>
 <li>Structurer les routes pour qu'elles utilisent les méthodes <strong>CRUD</strong> associées.</li>
@@ -256,7 +256,7 @@
 <ul>
 <li><strong>Tâches :</strong>
 <ul>
-<li><a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Ajouter des produits par défaut via un script ou directement dans MongoDB.</li>
+<li><a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Ajouter des produits par défaut directement dans MongoDB: données <strong>Product</strong> notamment.</li>
 <li><a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Vérifier que les produits sont bien récupérés via les routes <code>GET /api/products</code> et <code>GET /api/products/:id</code>.</li>
 </ul>
 </li>
@@ -282,7 +282,6 @@
 <ul>
 <li>[x] <a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Initialisation du projet et installation des dépendances.</li>
 <li>[x] <a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Configuration du serveur avec <strong>express</strong>.</li>
-<li>[x] <a href="#">Sofiane</a> Ajout d’une route de test <code>GET /api/test</code>.</li>
 </ul>
 </li>
 </ul>
@@ -291,11 +290,11 @@
 <li><strong>Objectif :</strong> Configurer MongoDB et définir les schémas des données.</li>
 <li><strong>Tâches</strong> :
 <ul>
-<li>[x] <a href="#">Thomas</a> Création du cluster MongoDB.</li>
+<li>[x] <a href="#">Thomas</a> Création du cluster <strong>MongoDB Atlas</strong>.</li>
 <li>[x] <a href="#">Thomas</a> Connexion avec <strong>mongoose</strong>.</li>
 <li>[x] <a href="#">Thomas</a> Création des modèles <strong>Product</strong>, <strong>Order</strong> et <strong>User</strong>.</li>
 <li>[x] <a href="#">Thomas</a> Ajout de données de test pour les <strong>Product</strong>.</li>
-<li>[x] <a href="#">Sofiane</a> Connexion à MongoDB pour l'authentification : création des données <strong>Users</strong>.</li>
+<li>[x] <a href="#">Sofiane</a> Connexion à MongoDB pour l'authentification : création des données <strong>Users</strong> via script.</li>
 </ul>
 </li>
 </ul>
@@ -304,9 +303,9 @@
 <li><strong>Objectif :</strong> Implémenter les fonctionnalités principales de l’API.</li>
 <li><strong>Tâches</strong> :
 <ul>
-<li>[x] <a href="#">Thomas</a> Création route pour les produits.</li>
+<li>[x] <a href="#">Thomas</a> Création route pour les produits (<code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code>)..</li>
 <li>[x] <a href="#">Sofiane</a> Création routes pour l'authentification.</li>
-<li>[ ] <a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Validation basique des données entrantes.</li>
+<li>[x] <a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Validation basique des données entrantes.</li>
 </ul>
 </li>
 </ul>
@@ -317,7 +316,7 @@
 <li><strong>Tâches</strong> :
 <ul>
 <li>[x] <a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Séparation des routes, contrôleurs et modèles dans des dossiers dédiés.</li>
-<li>[x] <a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Structuration du code en modules clairs (<code>routes/</code>, <code>controllers/</code>, <code>models/</code>).</li>
+<li>[x] <a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Structuration du code en modules clairs (<code>routes/</code>, <code>models/</code>).</li>
 </ul>
 </li>
 </ul>
@@ -326,7 +325,7 @@
 <li><strong>Objectif :</strong> Ajouter des données de test et vérifier le fonctionnement des routes API.</li>
 <li><strong>Tâches</strong> :
 <ul>
-<li>[ ] <a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Ajout Via script des produits par défaut dans la base de données MongoDB.</li>
+<li>[x] <a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Ajout manuel des produits par défaut dans la base de données MongoDB.</li>
 <li>[ ] Validation des données récupérées avec <strong>Postman</strong>.</li>
 </ul>
 </li>
@@ -336,11 +335,11 @@
 <li><strong>Objectif :</strong> Assurer la communication entre le frontend <strong>Vue.js</strong> et le backend <strong>Node.js</strong> via des API.</li>
 <li><strong>Tâches</strong> :
 <ul>
-<li>[ ] Implémentation des appels API pour récupérer les produits et gérer le panier.</li>
+<li>[x] <a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Implémentation des appels API pour récupérer les produits et gérer le panier.</li>
 <li>[x] <a href="#">Sofiane</a> Implémentation des appels API pour enregistrer des <strong>User</strong>.</li>
-<li>[x] <a href="#">Sofiane</a> Mise à jour du FrontEnd avec les popups <strong>LOGIN</strong> et <strong>SIGNIN</strong>.</li>
-<li>[ ] Vérification de l'affichage dynamique des produits dans le frontend.</li>
-<li>[ ] Tester l'ajout de produits au panier depuis le frontend et la mise à jour des informations de commande.</li>
+<li>[x] <a href="#">Sofiane</a> Mise à jour du FrontEnd avec les popups <strong>LogIn</strong> et <strong>SignIn</strong>.</li>
+<li>[x] <a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Vérification de l'affichage dynamique des produits dans le frontend.</li>
+<li>[x] <a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Tester connexion/l'enregistrement d'un user et ajout à la base de donnée.</li>
 </ul>
 </li>
 </ul>
@@ -382,9 +381,29 @@
 <td>Création des modèles pour les données : <strong>Product</strong>, <strong>Order</strong> et <strong>User</strong></td>
 </tr>
 <tr>
-<td>03/11</td>
+<td>07/11</td>
 <td>2H</td>
-<td>Développement des routes API authentification et products avec Sofiane</td>
+<td>Développement des routes API authentification et products</td>
+</tr>
+<tr>
+<td>07/12</td>
+<td>3H</td>
+<td>Création du middleware d'authentification JWT</td>
+</tr>
+<tr>
+<td>08/12</td>
+<td>3H</td>
+<td>Tests manuels des routes et ajustements</td>
+</tr>
+<tr>
+<td>12/11</td>
+<td>4H</td>
+<td>Intégration des produits dynamiques au backend</td>
+</tr>
+<tr>
+<td>14/11</td>
+<td>4H</td>
+<td>Connexion du frontend au backend (authentification et produits)</td>
 </tr>
 </tbody>
 </table>
