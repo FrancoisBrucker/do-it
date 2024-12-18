@@ -62,10 +62,10 @@ Objectif général : **apprendre l'art de la data visualisation** et plus préci
 - [x] créer une base de données adéquate de mes voyages sur Excel : 2h (1h45)
 - [x] utiliser Power BI pour créer le tableau de bord souhaité et rédiger sur Github : 3h (2h15)
 - [x] trouver un autre petit projet à réaliser (les préfectures) et le faire : 4h (3h30)
-- [ ] progresser en Excel : pas prévu ()
+- [x] progresser en Excel et en powerpoint : pas prévu (2h)
 
-**Total d'heures sprint 2 : ?h**   
-**Etude post mortem** :
+**Total d'heures sprint 2 : 10h**   
+**Etude post mortem** : j'ai fini plus vite que ce que je pensais la prise en main de PowerBI donc j'en ai profité pour améliorer mes compétences sur la suite Microsoft que j'ai téléchargé pour ce POK.
 
 ### ⌛Horodatage
 
@@ -84,8 +84,7 @@ Lundi 18/11 |0h50  | Finalisation rédaction POK |
 Samedi 23/11  | 3h30  | Réflexion indicateur tableau, création tableau et création rapport Power BI |
 Dimanche 24/11  | 1h  | Fin Power BI voyages et rédaction Github |
 Dimanche 24/11  | 3h30  | Excel et Power BI préfectures et rédaction Github |
-
-Il me reste 2h
+Dimanche 15/12  | 2h  | Excel et Microsoft |
 
 {% enddetails %}
 
@@ -93,6 +92,7 @@ Il me reste 2h
 
 - [POK : sprint 1](#POK1)
 - [POK : sprint 2](#POK2)
+- [Comparaison des logiciels](#comp)
 - [Conclusion de ce POK 2](#conclusion)
 
 <h2 id=POK1> 1️⃣POK : sprint 1</h2>
@@ -257,6 +257,18 @@ On pourrait penser que ce projet a été très rapide, mais en vrai j'ai galér�
 Puis j'ai **créer 2 nouvelles mesures** à l'aide de l'onglet Modéalisation, **Mesure Rapide** pour calculer les totaux de préfectures visitées et pas encore visitées. Ci-dessous, l'exemple du calcul pour les villes déjà visitées. Il faut bien penser à **convertir les données des colonnes en "nombre entier"** à l'étape précédente pour que le calcul fonctionne.
 
 <img src="PowerBI_Prefectures_MesureRapide.png" width="90%" alt="Image description">
+
+
+### 👩‍💻 Progression sur Excel et PowerPoint
+
+Il me restait encore 2h pour ce sprint 2 après avoir fini ces 2 projets. Ayant l'impression d'avoir plutôt **bien compris comment utiliser Power BI**, j'ai préféré utiliser ce temps pour **améliorer mes compétences sur Excel et PowerPoint**, 2 logiciels de la suite Microsoft que j'ai téléchargé au cours de ce POK. N'étant pas le sujet principal du POK, je n'ai pas détaillé ici ce que j'ai fait mais pour résumer : j'ai exploré les possibilités qu'offrent ces logiciels et j'ai recopié des modèles trouvés sur Internet.
+
+<h2 id=comp> Comparaisons des logiciels </h2>
+
+J'ai comparé les logiciels sur différents critères résumé dans ce tableau ci-dessous :
+![alt text](image.png)
+
+Ainsi, si on veut des **visualisations simples** et gratuites, **Looker Studio** est un excellent choix. Mais pour des besoins professionnels plus poussés avec des **données complexes**, **Power BI** est quand même préférable (avec des licences payantes pour le partage).
 
 <h2 id=conclusion> 👍 Conclusion de ce POK 2</h2>
 

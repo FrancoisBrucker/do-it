@@ -49,11 +49,13 @@ Après la réunion de cadrage et la réunion avec la DSI, nous avons pu constate
 
 ### Sprint 2
 
-- [ ] Front-end du site
+- [x] Front-end du site
 - [ ] Proposition du nouveau process aux équipes
 - [ ] Back-end du site (+ connexion au CAS si accepté par la DSI)
 - [ ] Mise en conformité RGPD
 - [ ] Communication à destination des élèves sur le projet
+
+La prévision de tâches avant le sprint était particulièrement optimiste. La première erreur qui a été faite est de ne pas l'avoir revu à la baisse à l'issue du Sprint 1 où on aurais pu se rendre compte avec Inès que la charge de travail était démesurée. Ensuite, nous avons probablement était autant optimistes par manque de connaissances de comment fonctionne React et comment créer un back et une connexion via cas. Le projet semblait extrèmement plus simple que il ne l'est réellement.
 
 ### Horodatage
 
@@ -73,6 +75,13 @@ Après la réunion de cadrage et la réunion avec la DSI, nous avons pu constate
 | Ajout de la validation de donnée sur l'excel | 10 min | 18/11/2024 |
 | Traitement des infos des différentes réunions | 30 min | 18/11/2024 |
 | Receuil d’avis des élèves sur le design | 1h | 19/11/2024 |
+| Travail sur le front du header du site | 2h30 | 04/12/2024 |
+| Travail sur le front du contenu élève | 1h30 | 05/12/2024 |
+| Travail sur le front du contenu élève | 2h | 08/12/2024 |
+| Réunion de suivi du projet avec Catherine Musy | 1h | 09/12/2024 |
+| Réunion de suivi du projet avec Clément Leneveu | 1h | 12/12/2024 |
+| Travail sur le front du contenu élève | 1h | 14/12/2024 |
+| Travail sur le front du contenu élève | 1h | 17/12/2024 |
 
 ## Premier Sprint
 
@@ -135,3 +144,49 @@ Enfin, après le travail de maquette, je suis aller voir un petite dizaine d'ét
 Inès a pu travaillé sur la prise en compte de ces avis. Globalement, ces avis nous amènent à retravailler la présentation des crédits ECTS, quelques formulations et la présence du stage de deuxième année en fonction du parcours de l'élève.
 
 ## Second Sprint
+ 
+ Pour le second sprint, j'ai pu me concentrer sur commencer à coder notre application.
+
+### Comment transcrire un design depuis Figma à un code React ?
+
+Pour commencer, j'ai décidé de diviser le travail en étapes et éléments. Ainsi, au début, j'ai fait le choix de commencer par coder seulement le visuel. Dans un second temps, on ajoutera les changements de design en fonction des valeurs dans les différentes cases, les liens avec la base de données, le lien avec le CAS. J'ai aussi fait le choix de commencer par un élément très précis qui est le header puis de continuer sur la page élève classique qui pourra être modulée en fonction des parcours.
+
+Ainsi, j'ai commencé par coder le header qui est utilisé dans toutes les pages du site. Puis j'ai enchaîné sur le code de la page pour les étudiants.
+
+### Comment coder le header ?
+
+Pour faire le header, cela a été assez simple. En html, j'ai séparé avec des balises `<nav>` le côté droit et le côté gauche.
+
+Puis je suis passée au code css. Dans celui-ci, j'ai commencé par ajouter les éléments généraux : le background blanc, l'initialisation des marges de la page et les polices pour les titres et les paragraphes.
+
+Pour le header, j'ai commencé par ajouter les couleurs du background et du texte. J'ai ensuite utilisé une flexbox afin de pouvoir aligner les différents éléments. Enfin, j'ai dimensioné les différents éléments avec les bonnes proporsions, ajouter des marges pour les distancer et utilisé les propriétés `align-items` et `justify-content` afin de les placer au bon endroit et de les aligner.
+
+Pour visualiser :
+- le design Figma
+![Header designé sur Figma](./Header_Figma.jpg)
+- le design React
+![Header codé sur React](./Header_React.jpg)
+
+On peut remarquer quelques différences entre les deux designs. Cela est du au travail qu'à pu effectué Inès pendant que j'étais en train de coder et que je n'ai pas encore eu le temps d'intégrer.
+
+Une fois le header fini, j'ai commencé à coder le contenu élève.
+
+### Comment traduire la page élève de Figma à React ?
+
+Pour cela j'ai décomposé la page en trois éléments que j'ai codé un à un.
+
+J'ai commencé par le "header", la barre qui contient les informations sur le parcours de l'élève. Il s'agit d'un simple titre sur lequel j'ai ajouté un backgroud, une taille et un padding.
+
+Ensuite, je suis passée aux cases Formation et Stage. J'ai suivi à peu près le même process pour les deux boxs.
+
+Simplement, j'ai crée une border pour la box entière puis j'ai designé le header avec un background, une flexbox pour aligner le logo information et le titre, la couleur et la taille du titre et du logo information.
+
+Une fois le début des cases réalisées, j'ai utilisé la propriété flexbox pour aligné la boîte formation et la boîte stage. Puis j'ai réglé leurs width afin qu'elles fassent la bonne taille pour la page.
+
+Enfin, il s'est agi de designé le contenu de ces boîtes. J'ai commencé pas utilisé une flexbox mais cela ne s'est pas avéré très efficace. J'ai donc changé cette solution par une autre, l'utilisation de la propriété `grid`. Une fois cette propriété mise en place avec des balises `<nav>` et `<div>` bien placé dans le fichier jsx, je n'ai plus eu qu'à ajouter le style des textes et des infographies.
+
+Poue visualiser :
+- - le design Figma
+![La page élève designée sur Figma](./Vue_eleve_Figma.jpg)
+- le design React
+![La page élève codée sur React](./Vue_eleves_React.jpg)

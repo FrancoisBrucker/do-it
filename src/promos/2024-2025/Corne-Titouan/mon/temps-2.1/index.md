@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "React (dev Front-End) - découverte et prise ne main"
+title: "React (dev Front-End) - découverte et prise en main"
 authors:
   - Titouan Corne
 
@@ -32,7 +32,6 @@ Connaissances du web :
 
 {% endlien %}
 
-
 ## Table des matières
 
 - [Table des matières](#table-des-matières)
@@ -45,7 +44,7 @@ Connaissances du web :
 
 ## 1. React : qu'est ce que c'est ? <a id="section1"></a>
 
-React est une bibliothèque JavaScript open source utilisée pour créer des interfaces utilisateurs. Cette bibliothèque a vu le jour en 2013. Elle est actuellement maintenue par Meta. React est donc utilisé en développement web, côté front.
+React est une bibliothèque JavaScript open source utilisée pour créer des interfaces utilisateurs. Cette bibliothèque a vu le jour en 2013. Elle est actuellement maintenue par Meta. React est utilisé en développement web, côté front.
 
 Parmi les applications connues développées en utilisant React, on retrouve notamment Netflix et Airbnb.
 

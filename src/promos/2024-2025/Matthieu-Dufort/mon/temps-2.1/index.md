@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Automatisations avec Google App Script"
+title: "Automatisation avec Google App Script"
 authors:
   - Matthieu Dufort
 

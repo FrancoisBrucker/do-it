@@ -23,6 +23,8 @@ Aucun pré-requis
 - [Cours SQL](https://www.w3schools.com/sql/default.asp)
 - [Base de données : Villes de France](https://sql.sh/exercices-sql/villes-de-france)
 - [data.gouv](https://www.data.gouv.fr/fr/organizations/534fff99a3a7292c64a78016/#/datasets)
+- [Cours pandas](https://realpython.com/python-for-data-analysis/)
+- [Base de données Spotify](https://www.kaggle.com/datasets/gauthamvijayaraj/spotify-tracks-dataset-updated-every-week)
 
 {% endlien %}
 
@@ -45,9 +47,9 @@ Le but final est la compréhension de la gestion des données, depuis la créati
 
 #### Sprint 2
 
-- [ ] Apprentissage d'une méthode d'analyse de données (Python ?)
-- [ ] Application afin d'analyser les données d'une table
-- [ ] Présentation de cette données
+- [x] Apprentissage d'une méthode d'analyse de données (Python ?)
+- [x] Application afin d'analyser les données d'une table
+- [ ] Présentation de cette données *(Cette thématique ne m'a pas semblé intéressante dans ce contexte, les données étant déjà présentée au travers de graphiques avec python, un tableau de bord PowerBi aurait été superflu)*
 
 
 
@@ -63,6 +65,11 @@ Le but final est la compréhension de la gestion des données, depuis la créati
 | Vendredi 15/11 PM | 1H45  | Réponses aux questions d'analyse |
 | Samedi 16/11 PM | 1H  | Rédaction Sprint 1 |
 | Dimanche 17/11 PM | 1H  | Rédaction Sprint 1 |
+| Jeudi 12/12 PM | 2H  | Etude de la bibliothèque pandas |
+| Jeudi 12/12 PM | 1H  | Choix de la base de données et des questions en lien avec celle-ci |
+| Vendredi 13/12 PM | 3H  | Réponse aux questions au travers de l'analyse des données |
+| Dimanche 15/12 PM | 2H  | Réponse aux questions au travers de l'analyse des données |
+| Lundi 16/12 PM | 2H  | Rédaction et mise en lien des questions ensemble |
 
 
 
@@ -625,7 +632,21 @@ Pour explorer l'analyse de données, nous allons nous appuyer sur les bibliothè
 - Seabron (une autre bibliothèque permettant de tracer des figures, que j'ai découvert un peu plus tard, mais qui est plus intuitive selon moi)
 
 #### Mise en contexte
-L'objectif de ce second sprint est de manipuler une base de données et de "la faire parler". Pour cela, nous nous placerons dans la peau d'un jeune musicien, qui énormément de talent mais qui peine à trouver de l'inspiration pour créer son premier morceau. Son objectif est de devenir viral très rapidement, avec une musique populaire. Pour cela, nous allons utiliser une base de données contenant plus de 60 000 morceaux recencés, et dont les caractéristiques suivantes sont rensignées : 
+L'objectif de ce second sprint est de manipuler une base de données et de "la faire parler". Pour cela, nous nous placerons dans la peau d'un jeune musicien, qui énormément de talent mais qui peine à trouver de l'inspiration pour créer son premier morceau. Son objectif est de devenir viral très rapidement, avec une musique populaire. Pour cela, nous allons utiliser une base de données contenant plus de 60 000 morceaux recencés, et dont les caractéristiques suivantes sont renseignées : 
+
+````
+import pandas as pd
+
+spotify_tracks=pd.read_csv('/Users/charlescook/Desktop/spotify_tracks.csv')
+
+print(spotify_tracks.head())
+````
+![Base de données](<Images/Capture d’écran 2024-12-12 à 15.31.45.png>)
+
+Les explications et types de données de chacune des colonnes sont données ci-après : 
+
+![Type de données](<Images/Capture d’écran 2024-12-12 à 15.42.41.png>)
+
 - track_id: Spotify ID pour le morecau.
 - track_name: Nom du morceau.
 - artist_name: Noms des artistes ayant travaillés sur le morceau, séparés par une virgule s'il y en a plusieurs.
@@ -648,8 +669,9 @@ L'objectif de ce second sprint est de manipuler une base de données et de "la f
 - track_url: L'URL Spotify pour le morceau.
 - language: Langue des paroles du morceau (English, Tamil, Hindi, Telugu, Malayalam, Korean).
 
-#### Analyse
-Nous allons réaliser une analyse sur les thématiques suivantes : langue, positivité (valence), dansabilité, énergie
+
+#### Analyse des données
+Nous allons réaliser une analyse sur les thématiques suivantes : langue, positivité (valence), dansabilité, énergie, mode, popularité des artistes. 
 
 ##### Comment la popularité des morceaux varie-t-elle en fonction des langues ?
 
@@ -825,3 +847,188 @@ Le résultat obtenu est le suivant :
 ![Lien entre dansabilité et popularité](<Images/Capture d’écran 2024-12-12 à 18.19.33.png>)
 
 Le graphe précédent ne permet pas de mettre en lumière un lien évident entre l'indice de dansabilité d'un morceau et son indice de popularité. 
+
+##### Quelle est la répartition des modes majeurs (1) et mineurs (0) dans les morceaux par langue ?
+
+En tant qu'auteur-compositeur-interprète, on peut également se demander s'il existe une tendance dans la répartition des modes majeurs et mineurs en fonction de la culture.
+
+Ainsi, on cherche à faire un graphique en barres empilés par langue. 
+
+{%details "Code" %}
+Je n'ai pas trouvé de documentation sur ce type de graphiques dans la bibliothèque Seaborn, nous le ferons donc avec MatplotLib. 
+
+Il a d'abord fallu retravailler les données pour pouvoir faire ce graphe, en cherchant à obtenir un tableau contenant les modes en colonne et les langues en ligne (chatGPT m'a aidé dans cette étape car j'avais un problème d'index que je ne parvenais pas à résoudre)
+````
+spotify_tracks=pd.read_csv('/Users/charlescook/Desktop/spotify_tracks.csv')
+
+mode_repartition = spotify_tracks.groupby(['language', 'mode']).size().reset_index(name='nbre_total') #On cherche à compter le nombre de morceaux par langue et mode
+
+pivot_data = mode_repartition.pivot(index='language', columns='mode', values='nbre_total').fillna(0) #On crée une table avec en colonne les mode, en ligne les langues et les valeurs sont les nombre calculés précédemment
+
+pivot_data.plot(kind='bar', stacked=True)
+
+plt.title("Répartition des modes par langue")
+plt.xlabel("Langues")
+plt.ylabel("Nombre de morceaux")
+plt.legend(title="Modes")
+plt.tight_layout()
+
+plt.show()
+````
+{%enddetails%}
+
+Le résultat obtenu est le suivant :
+
+![Répartition modes V1](<Images/Capture d’écran 2024-12-13 à 14.30.52.png>)
+
+Cependant, on remarque que pour les langues ayant peu de morceaux répertoriés dans la base de données, les résultats sont difficilement lisibles. On peut donc réaliser le même graphique en pourentage pour une meilleure lisibilité : 
+
+{%details "Code" %}
+````
+mode_repartition = spotify_tracks.groupby(['language', 'mode']).size().reset_index(name='nbre_total') #On cherche à compter le nombre de morceaux par langue et mode
+
+pivot_data = mode_repartition.pivot(index='language', columns='mode', values='nbre_total').fillna(0)
+
+pivot_data_percentage = pivot_data.div(pivot_data.sum(axis=1), axis=0)
+
+pivot_data_percentage.plot(kind='bar', stacked=True)
+
+plt.title("Répartition des modes par langue")
+plt.xlabel("Langues")
+plt.ylabel("Proportion")
+plt.legend(title="Modes")
+plt.tight_layout()
+
+plt.show()
+````
+{%enddetails%}
+
+![repartition modes V2](<Images/Capture d’écran 2024-12-13 à 14.39.52.png>)
+
+On remarque beaucoup plus aisément ainsi qu'il n'y a pas d'évolution de la répartition entre les modes majeurs et mineurs en fonction de la langue.
+
+##### Comment les caractéristiques musicales (valence, energy, danceability) ont-elles évolué au fil des années ?
+
+On s'intéresse également à l'évolution des caractéristiques que nous avons vu précédemment au fil des années, afin de pouvoir donner une influence à notre futur composition en fonction des tendances d'aujourd'hui :
+
+{%details "Code" %}
+La difficulté a été qu'il a fallut une nouvelle fois retravailler les données afin de créer une table ne contenant que les années et les indices d'énergie, de positivité et de dansabilité. Pour cela, nous avons utlisé la fonction *melt()* qui permet de réorganiser les données de la base. 
+````
+spotify_tracks=pd.read_csv('/Users/charlescook/Desktop/spotify_tracks.csv')
+
+spotify_years = spotify_tracks[['year','danceability','energy','valence']].groupby('year').mean().reset_index()
+
+spotify_years_reworked = spotify_years.melt(id_vars="year", value_vars=["danceability", "energy", "valence"], var_name="Indice", value_name="Valeur")
+
+sns.lineplot(data=spotify_years_reworked, x='year', y='Valeur', hue='Indice')
+
+plt.title("Evolution des indices musicaux au cours des années")
+plt.xlabel("Année")
+plt.ylabel("Valeur moyenne de l'indice")
+plt.legend(title="Indices")
+plt.tight_layout()
+
+plt.show()
+````
+{%enddetails%}
+
+On obtient ainsi les évolutions suivantes : 
+
+![Evolutions au cours des ans](<Images/Capture d’écran 2024-12-13 à 15.13.35.png>)
+
+On remarque une tendance de la valence (indice de joie) à la baisse depuis les années 1990. Ce n’est cependant pas le cas de l’indice d’énergie et de dansabilité. 
+
+##### Quels sont les artistes avec la plus grande popularité moyenne dans chaque langue ?
+
+Nous cherchons également à nous inspirer de grands artistes. Pour cela, nous souhaitons obtenir les artistes les plus populaires par langue. 
+
+{%details "Code" %}
+Deux difficultés ont été rencontrées lors de cette question :
+- Le fait que dans la colonne artiste, il y avait parfois plusieurs artistes, séparés par des virgules. Il a alors fallu séparer dans un premier temps les artistes, puis dupliquer les lignes afin d'avoir un artiste par ligne uniquement. 
+- je voulais avoir tous les graphes sur une seule page, il a donc fallu créer une grille dans laquelle faire apparâitre chacun des graphes. Pour cela, je me suis aidé également de chatGPT.
+
+````
+spotify_tracks['artist_name'] = spotify_tracks['artist_name'].str.split(',')
+
+new_spotify_tracks = spotify_tracks.explode('artist_name') #Dupliquer les lignes pour mettre un seul artiste par ligne. 
+
+new_spotify_tracks['artist_name'] = new_spotify_tracks['artist_name'].str.strip() #Suppression des espaces supplémentaires dans les noms d'artiste
+
+langues = new_spotify_tracks['language'].unique() #Création d'une liste avec les différentes langues présentes dans la base de données
+
+# Créer la figure et les sous-graphes
+fig, axes = plt.subplots(3,3, figsize=(15,15)) #Création de la figure et des sous-graphes que l'on va mettre à l'intérieur afin d'avoir les résultats par langue sur une même page.
+
+axes = axes.flatten()
+
+#Création des graphes
+for i, langues in enumerate(langues):
+    
+    language_data = new_spotify_tracks[new_spotify_tracks['language'] == langues]
+
+    artist_popularity = language_data.groupby('artist_name')['popularity'].mean().reset_index()
+
+    artist_popularity = artist_popularity.sort_values('popularity', ascending=False)
+
+    top_artists = artist_popularity.head(5)
+
+    sns.barplot(data=top_artists, x='popularity', y='artist_name', palette='coolwarm', ax=axes[i])
+
+    axes[7].axis('off')
+    axes[8].axis('off')
+    axes[i].set_title(f"Top 5 des artistes en {langues}")
+    axes[i].set_xlabel("   ")
+    axes[i].set_ylabel("Artistes")
+
+plt.tight_layout()
+plt.show()
+````
+{%enddetails%}
+
+On obtient ainsi les 5 artistes les plus populaires par langue : 
+
+![Top 5 artistes](<Images/Capture d’écran 2024-12-13 à 16.30.23.png>)
+
+{%details "Analyse tempo" %}
+De la même manière, j'ai voulu étudier le tempo par langue, mais le résultat ne donne rien de concluant permettant d'être utilisable.
+````
+spotify_tracks=pd.read_csv('/Users/charlescook/Desktop/spotify_tracks.csv')
+
+langues = spotify_tracks['language'].unique() #Création de la liste des langues considérées
+
+# Créer la figure et les sous-graphes
+fig, axes = plt.subplots(3, 3, figsize=(15, 15))
+axes = axes.flatten()
+
+# Création des graphes
+for i, langue in enumerate(langues):
+
+    language_data = spotify_tracks[spotify_tracks['language'] == langue]
+
+    sns.regplot(
+        ax=axes[i],
+        data=language_data,
+        x='tempo',
+        y='popularity',
+        line_kws={'color': 'black'}
+    )
+
+    axes[i].set_title(f"Lien entre tempo et popularité pour les morceaux en {langue}")
+    axes[i].set_xlabel("Tempo")
+    axes[i].set_ylabel("Popularité")
+
+plt.tight_layout()
+plt.show()
+````
+![Tempos](<Images/Capture d’écran 2024-12-15 à 14.31.44.png>)
+{%enddetails%}
+
+#### Conclusion Second Sprint
+
+Grâce à cette analyse préalable, j'en sais maintenant plus sur le style musicale que je vais donner à mon premier EP : 
+- Celui-ci sera écrit en anglais, pour avoir la plus grande popularité immédiate. 
+- Je préfère personnellement les morceaux positifs, et l'on a vu que la popularité n'était pas liée à l'indice de positivité, je peux donc prendre cette direction artistique sans risque. J'ai cependant vu que usuellement, les morceaux positifs était dansant. Ceci me permet de savoir si je veux me démarquer ou non. 
+- Je note cependant que je prend le contre-pied de la tendance actuelle en réalisant un morceau positif, dernièrement les morceaux tendant à être plus sombre. 
+- Enfin, parmi les artistes que je connais et écoute, je peux m'inspirer de Fall Out Boy, qui fait parti du top 5 des artistes anglophones les plus populaires. 
+
+**Il ne reste plus qu'à composer !!!**

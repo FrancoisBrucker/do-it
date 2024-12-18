@@ -1,21 +1,21 @@
 ---
 layout: layout/pok.njk
 
-title: "Titre du POK du temps 3"
+title: "Création d'un logiciel de maintenance predictive avec PyQt de python"
 authors:
   - Serigne Mbaye Sy AMAR
 
-date: 1971-03-01
+date: 2024-16-12
 
 tags: 
   - "temps 3"
 
-résumé: Un POK traitant d'un sujet.
+résumé: Le but de ce POK c'est de creer un logiciel de maintenance predictive avec PyQt de python. Le logiciel doit permettre de prédire les défaillances des équipements et de planifier les interventions de maintenance.
 ---
 
 {% prerequis %}
 
-Liste des prérequis du POK ET/OU MON
+- Une bonne base en python
 
 {% endprerequis %}
 {% lien %}

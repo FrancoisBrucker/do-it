@@ -25,13 +25,27 @@ résumé: "Ce MON traite les APIs REST, Une API REST permet la communication ent
 
 {% endlien %}
 
-Le but de ce MON est d'acquérir des compétences sur les API REST afin de pouvoir les utiliser dans mon POK. Veuillez consulter mon POK (sous format de lien) pour une application directe de tout ce que nous allons aborder dans ce MON, qui sera divisé en deux grandes questions : comment intégrer les API REST dans NestJS, puis comment intégrer les API REST dans React.  
+## Table des matières
+- [Table des matières](#table-des-matières)
+- [Introduction :](#introduction-)
+- [Comment intégrer des API REST dans NestJS?](#comment-intégrer-des-api-rest-dans-nestjs)
+  - [**1. Créer une Ressource avec Nest CLI**](#1-créer-une-ressource-avec-nest-cli)
+  - [**2. Configurer un Contrôleur REST**](#2-configurer-un-contrôleur-rest)
+  - [**3. Implémenter la Logique Métier dans le Service**](#3-implémenter-la-logique-métier-dans-le-service)
+  - [**4. Ajouter des DTOs pour Valider les Données**](#4-ajouter-des-dtos-pour-valider-les-données)
+  - [**5. Connecter une Base de Données (MongoDB)**](#5-connecter-une-base-de-données-mongodb)
+  - [**5. Ajouter Swagger pour Documenter les API**](#5-ajouter-swagger-pour-documenter-les-api)
+- [**Horodatage**](#horodatage)
+- [Sources :](#sources-)
 
+Le but de ce MON est d'acquérir des compétences sur les API REST afin de pouvoir les utiliser dans mon POK. [Veuillez consulter mon POK](https://francoisbrucker.github.io/do-it/promos/2024-2025/Amar-Mbaye/pok/temps-2/) pour une application directe de tout ce que je vais aborder dans ce MON, qui sera divisé au tour de la question  comment intégrer les API REST dans NestJS. 
+Pour comprendre l'intégration sur la partie React, je vous invite a consulter [mon github](https://github.com/MbayeSyAmar/api_rest_dans_react/blob/main/api_rest_dans_react.md).  
+ 
 ## Introduction :
 
 Cette première partie du MON (la base), à savoir qu'est-ce qu'une API et son fonctionnement, a été traitée de manière très explicite par Baptiste Audouin dans son [MON Temps 1](https://francoisbrucker.github.io/do-it/promos/2024-2025/Baptiste-Audouin/mon/temps-1.1/).  
 
-Pour répondre aux besoins spécifiques de mon POK (sous format de lien), je vais me concentrer davantage sur des aspects concrets : comment utiliser une API REST dans un projet intégrant un backend développé avec NestJS et un frontend avec React.  
+Pour répondre aux besoins spécifiques de mon POK, je vais me concentrer davantage sur des aspects concrets : comment utiliser une API REST dans un projet intégrant un backend développé avec NestJS.  
 
 ## Comment intégrer des API REST dans NestJS?
 
@@ -74,7 +88,7 @@ La section *Controllers* de la **documentation NestJS** m'a aidé à comprendre 
 
 ### **3. Implémenter la Logique Métier dans le Service**
 
-Le fichier `posts.service.ts` contient la logique métier. C'est ici que tu gères les interactions avec la base de données ou d'autres ressources.
+Le fichier `posts.service.ts` contient la logique métier. C'est ici qu'on gère les interactions avec la base de données ou d'autres ressources.
 
 Exemple de service pour gérer les posts en mémoire (avant d’ajouter MongoDB) :
 
@@ -82,7 +96,7 @@ Exemple de service pour gérer les posts en mémoire (avant d’ajouter MongoDB)
    - [Exemple de service](https://github.com/MbayeSyAmar/Comment-integrer-des-API-REST-dans-NestJs.git)
 {% endlien %} 
 
-En plus de **NestJS Documentation - Providers** qui explique comment injecter et structurer des services dans une application NestJS, j'ai consulte aussi **GitHub - NestJS Examples** la section `cats.service.ts` qui fournit un service fonctionnel pour gérer la logique métier.
+En plus de **NestJS Documentation - Providers** qui explique comment injecter et structurer des services dans une application NestJS, j'ai consulté aussi **GitHub - NestJS Examples** la section `cats.service.ts` qui fournit un service fonctionnel pour gérer la logique métier.
 
 ---
 
@@ -139,7 +153,7 @@ Avec **NestJS Documentation - Databases** et **GitHub - MongoDB with NestJS**, j
 
 ---
 
-### **6. Ajouter Swagger pour Documenter les API**
+### **5. Ajouter Swagger pour Documenter les API**
 
 1. **Installer le Module Swagger** :
    ```bash
@@ -153,7 +167,6 @@ Avec **NestJS Documentation - Databases** et **GitHub - MongoDB with NestJS**, j
 {% endlien %}
 
 3. **Ajouter des Décorateurs dans les DTOs** :
-  (lien github ici)
  {% lien %}
    - [Ajouter des Décorateurs](https://github.com/MbayeSyAmar/Comment-integrer-des-API-REST-dans-NestJs.git)
 {% endlien %}
@@ -161,102 +174,36 @@ Avec **NestJS Documentation - Databases** et **GitHub - MongoDB with NestJS**, j
 Pour comprendre cette partie, j'ai consulté  **GitHub - Swagger Integration Example**, qui fournit un exemple complet avec Swagger intégré pour documenter l’API.  
 
 ---
-## **Comment intégrer des API REST dans React ?**
-<!-- 
+{% details "Ce que j'ai appris" %}
 
-## **Comment intégrer des API REST dans React ?**
-
-L'intégration des API REST dans un projet React repose principalement sur l'utilisation d'outils comme **`fetch`**, **`axios`**, et des hooks comme **`useEffect`** pour interagir avec le backend. Voici une démarche étape par étape.
-
-Pour avoir la base sur React, vous pouvez consulter mon MON (1.1).
-
----
-
-### **1. Configurer un Service API dans React**
-
-La meilleure pratique consiste à créer un fichier dédié pour centraliser les appels API, afin d'éviter les répétitions dans les composants.
-
-#### **Créer un Service API avec `axios`**
-
-1. **Installer `axios` :**
-
-   ```bash
-   npm install axios
-   ```
-
-2. **Créer un fichier `api.js`** dans le dossier `src/services`. 
-
-#### Exemple : api.js
-
-   {% lien %}
-   - [Exemple de service API](https://github.com/MbayeSyAmar/Comment-integrer-des-API-REST-dans-React.git)
-{% endlien %} 
-
-
-   
+Voici un résumé de ce que j'ai compris sur NestJS :
+| **Composant**                     | **Rôle**                                                                                                           |
+|------------------------------------|---------------------------------------------------------------------------------------------------------------------|
+| **API REST**                       | Fournir une interface standardisée pour échanger des données entre le backend NestJS et les clients.                |
+| **Nest CLI**                       | Générer automatiquement les fichiers nécessaires (contrôleurs, services, modules, DTOs) pour une ressource REST.    |
+| **Contrôleurs** (`posts.controller.ts`) | Gérer les routes et définir les endpoints de l'API pour effectuer les opérations CRUD.                             |
+| **Services** (`posts.service.ts`)  | Contenir la logique métier, gérer les interactions avec la base de données ou d'autres ressources.                  |
+| **DTOs**                           | Valider et typer les données envoyées par le client pour sécuriser et structurer les entrées.                       |
+| **MongoDB avec Mongoose**          | Fournir une base de données pour persister les données et définir des schémas avec Mongoose.                        |
+| **Swagger**                        | Documenter l'API, facilitant la compréhension et l'utilisation par les développeurs tiers.    |
+{% enddetails %}
 
 ---
 
-### **2. Appeler une API dans un Composant React**
-
-Utilise `axios` pour appeler les API depuis React.
-
-#### Exemple : Afficher la Liste des Posts
-
-1. **Créer un composant `PostList.js` :**
-
-     {% lien %}
-  - [Exemple de composant](https://github.com/MbayeSyAmar/Comment-integrer-des-API-REST-dans-React.git)
-{% endlien %} 
-
----
-
-
-### **3. Sécuriser les Requêtes avec JWT**
-
-1. **Gérer l’Authentification** :
-
-   - Lors de la connexion, récupère le **token JWT** depuis l’API NestJS et stocke-le dans le **localStorage**.
-
-     {% lien %}
-  - [Exemple de gestion de l'authentification]([https://github.com/your-username /your-repo/blob](https://github.com/MbayeSyAmar/Comment-integrer-des-API-REST-dans-React.git))
-{% endlien %} 
-
-1. **Vérifier les Permissions** dans les Composants :
-
-   - Vérifie la présence du token pour afficher ou masquer certains éléments.
-
-     {% lien %}
-     - [Exemple de vérification de permissions]([https://github.com/your-username/your-re po/blob](https://github.com/MbayeSyAmar/Comment-integrer-des-API-REST-dans-React.git))
-{% endlien %} 
-
----
-
-
-### **4. Optimiser l’Intégration**
-
-- **Mémoisation avec React Query** :
-   - Remplace `useEffect` par [React Query](https://tanstack.com/query/latest) pour gérer les appels API avec cache et synchronisation automatique.
-
-- **Gestion d’État Global avec Redux** :
-   - Centralise les données des API REST dans un store Redux pour les partager entre plusieurs composants.
-
-### **Horodatage**
+## **Horodatage**
 Voici a peu pret (pas exactement car des fois ca depasse de quelque minutes) comment organiser mon temps d'etude pour ce MON.
 | **Étape**                                                                                                 | **Durée** |
 |----------------------------------------------------------------------------------------------------------|-----------|
-| Comprendre ce qu'est une API REST et comment elle fonctionne dans un contexte pratique                   | 30 min    |
-| Découvrir les outils essentiels : NestJS, React, MongoDB, et Swagger, et savoir pourquoi ils sont utiles | 30 min    |
-| Apprendre à configurer NestJS : Créer une ressource, un contrôleur, un service, et des DTOs              | 1h        |
-| S'entraîner à connecter MongoDB avec NestJS : Installer, configurer, créer des schémas, et utiliser les services | 1h        |
-| Découvrir comment documenter une API avec Swagger : Installation et utilisation des décorateurs         | 30 min    |
-| Revision React : Comprendre comment appeler une API avec Axios, créer un service API, et afficher des données | 1h        |
-| Apprendre à sécuriser les requêtes avec JWT dans React                                                   | 30 min    |
-| Explorer des techniques comme: Gérer les appels API avec cache et synchronisation automatique | 1h        |
+| Comprendre ce qu'est une API REST et comment elle fonctionne dans un contexte pratique                   | 1h30 min    |
+| Découvrir les outils  : MongoDB et Swagger et savoir pourquoi ils sont utiles | 1h    |
+| Configuration NestJS : Créer une ressource, un contrôleur, un service, et des DTOs              | 1h        |
+| S'entraîner à connecter MongoDB avec NestJS : Installer, configurer, créer des schémas et utiliser les services | 1h        |
+| Voir comment documenter une API avec Swagger : Installation et utilisation des décorateurs         | 30 min    |
+| Revision React : Comprendre comment appeler une API avec Axios, créer un service API et afficher des données | 1h15 min        |
+| Voir des techniques comme: Gérer les appels API avec cache et synchronisation automatique | 1h        |
 | Comprendre comment gérer l'état global avec Redux pour partager les données de l'API entre plusieurs composants | 1h        |
-| Réviser et pratiquer : Ajuster les concepts appris et les appliquer à des projets concrets              | 1h        |
+| Rédaction sur le site | 1h25 min        |
 
--->
 
 ## Sources :
 {% lien %}
@@ -266,7 +213,6 @@ Voici a peu pret (pas exactement car des fois ca depasse de quelque minutes) com
 - [GeeksForGeeks - NestJS DTOs](https://www.geeksforgeeks.org/why-do-we-need-dtos-and-interfaces-both-in-nest-js/)
 - [NestJS Documentation - Databases](https://docs.nestjs.com/recipes/prisma#set-the-database-connection)
 - [GitHub - MongoDB with NestJS](https://github.com/nestjs/nest/tree/master/sample/06-mongoose)
-
 - [GitHub - Swagger Integration Example](https://github.com/nestjs/nest/tree/master/sample/11-swagger)
 
 {% endlien %}  
