@@ -20,7 +20,7 @@ Pas de prérequis
 
 # Introduction
 
-D’après Philippe Boursier et Willy Pelletier “Les chefs sont partout et si célébrés qu’on peine à imaginer un monde sans eux”; et si on essayait quand même?
+D’après Philippe Boursier et Willy Pelletier, “les chefs sont partout et si célébrés qu’on peine à imaginer un monde sans eux”; et si on essayait quand même? [1](#bibliographie)
 
 Il y a toujours un chef (parfois une cheffe), quelqu’un “au dessus” et parfois même quelqu’un “en dessous”. Que ce soit dans les organisations professionnelles, institutions publiques, nos relations sociales, on retrouve toujours une forme de hiérarchie. C’est inévitable, une fatalité inscrite dans nos esprits dès la naissance, “c'est impossible de fonctionner autrement” on entend souvent. Et si on se demandait si c'était possible de vivre sans hiérarchie ?
 
@@ -28,12 +28,12 @@ Il y a toujours un chef (parfois une cheffe), quelqu’un “au dessus” et par
 
 ## Définitions: Hiérarchie et subordination
 
-Le dictionnaire Larousse défini la hiérarchie comme une “organisation qui classe les personnes, leurs états, leurs fonctions selon des échelons subordonnés les uns aux autres, chaque échelon correspondant à un degré de pouvoir, de responsabilité, de compétence, de dignité, etc., supérieur à celui de l'échelon immédiatement inférieur”. En effet, une notion clé allant avec la notion de hiérarchie est celle de subordination, le fait d’être soumis et de dépendre d’une autorité. La Cour de Cassation, en 1996, caractérise la subordination “par l’exécution d’un travail sous l’autorité d’un employeur qui a le pouvoir de donner des ordres et des directives, d’en contrôler l’exécution et de sanctionner les manquements de son subordonné.”
-Philippe Boursier et Willy Pelletier définissent un chef comme quelqu’un détenant des pouvoirs tels que: celui d’influer fortement sur les actions, les façons de voir, les conditions d’existences, celui d’empêcher, d’organiser et de faire advenir; définition que l'on garde en tête pour la suite de l'étude.
+Le dictionnaire Larousse défini la **hiérarchie** comme une “organisation qui classe les personnes, leurs états, leurs fonctions selon des échelons subordonnés les uns aux autres, chaque échelon correspondant à un degré de pouvoir, de responsabilité, de compétence, de dignité, etc., supérieur à celui de l'échelon immédiatement inférieur”. En effet, une notion clé allant avec la notion de hiérarchie est celle de **subordination**, le fait d’être soumis et de dépendre d’une autorité. La Cour de Cassation, en 1996, caractérise la subordination “par l’exécution d’un travail sous l’autorité d’un employeur qui a le pouvoir de donner des ordres et des directives, d’en contrôler l’exécution et de sanctionner les manquements de son subordonné.”
+Enfin, Philippe Boursier et Willy Pelletier définissent un chef comme quelqu’un détenant des pouvoirs tels que: celui d’influer fortement sur les actions, les façons de voir, les conditions d’existences, celui d’empêcher, d’organiser et de faire advenir; définition que l'on garde en tête pour la suite de l'étude. [1] (#bibliographie)
 
 ## Les premières traces de hiérarchie
 
-Lorsque l’on remonte dans le temps, on se rend compte que les “chefferies” n’ont pas toujours exister et n’étaient pas automatiques. Dans leur essai _Des chefs, pourquoi?_, Philippe Boursier et Willy Pelletier expliquent que les archéologues ont repéré les premières hiérarchies des sociétés anciennes en Europe, en étudiant les pratiques funéraires. En effet, jusque vers 4 500 ans avant notre ère, les cimetières et les tombes fouillés ne montrent aucune différence sociale marquante entre individus. Les traces architecturales ne révèlent pas non plus de différences notables de niveau de vie. Les premières tombes de « chefs » ont été découvertes à Varna, sur les bords de la mer Noire, dans l'actuelle Bulgarie. On y trouve des armes, des bijoux, des vêtements, et toutes sortes de richesses accumulées, représentant les pouvoirs de ceux-ci. De la même façon et à la même époque, des villages entourés de fossés et de palissades témoignant de la présence d’une autorité centrale apparaissent.
+Lorsque l’on remonte dans le temps, on se rend compte que les “chefferies” n’ont pas toujours exister et n’étaient pas automatiques. Dans leur essai _Des chefs, pourquoi?_, Philippe Boursier et Willy Pelletier expliquent que les archéologues ont repéré les premières hiérarchies des sociétés anciennes en Europe, en étudiant les pratiques funéraires [1] (#bibliographie). En effet, jusque vers 4 500 ans avant notre ère, les cimetières et les tombes fouillés ne montrent aucune différence sociale marquante entre individus. Les traces architecturales ne révèlent pas non plus de différences notables de niveau de vie. Les premières tombes de « chefs » ont été découvertes à Varna, sur les bords de la mer Noire, dans l'actuelle Bulgarie. On y trouve des armes, des bijoux, des vêtements, et toutes sortes de richesses accumulées, représentant les pouvoirs de ceux-ci. De la même façon et à la même époque, des villages entourés de fossés et de palissades témoignant de la présence d’une autorité centrale apparaissent.
 
 ## Formes de hiérarchie et mécanismes de subordination
 
@@ -42,7 +42,7 @@ Pour comprendre comment la hiérarchie est instaurée, intéressons-nous au méc
 ### Comment devenir chef.fe ?
 
 Si il y a des chef.fe.s, c'est qu'un jour ils sont devenus chef.fe.s, mais comment ?
-D'après Philippe Boursier et Willy Pelletier, cela résulte d'au moins cinq processus:
+D'après Philippe Boursier et Willy Pelletier, cela résulte d'au moins **cinq processus**:
 
 1. travailler à s'approprier un certain volume de capitaux et de relations, ainsi que de savoir-faire
 2. travailler à conquérir des positions éminentes
@@ -52,25 +52,28 @@ D'après Philippe Boursier et Willy Pelletier, cela résulte d'au moins cinq pro
 
 ### Pour les dominés, les violences des dominants semblent dans “l’ordre des choses”
 
-Dans leur essai Philippe Boursier et Willy Pelletier prenne l'exemple de Zahia, vendeuse dans un magasin de chaussures en pleine période de Noël. On nous dit que son chef lui impose, comme aux autres vendeuses, de porter un bonnet de noël. Or, elle ne veut pas, elle ne se sent pas bien lorsqu'elle le porte. Cependant, elle se sent obligé, elle ne peut pas dire "non", sinon elle risque gros. Ici, on observe clairement un déséquilibre dans leur relation; “le pouvoir [...] est toujours une relation, emmêlée à un ensemble de relations. Celle ou celui qui obéit n’est pas soumise ou soumis par nature. Et il ne s’agit pas d’une relation entre deux individus". C'est donc une relation non équilibrée encastrée dans plein d'autres, qui les autorisent. On retrouve donc une dimension collective: prendre appui sur le pouvoir lentement construit d'un groupe social sur un autre.
-Dans le cas de Zahia, c'est le contrat de travail qui vient définir ce lien de subordination: il faut éxecuter les ordres du supérieur et ne pas faire de faut sous peine d'être puni. Ici, "le consentement n'est pas volontaire mais extorqué".
+\***\*Dans leur essai Philippe Boursier et Willy Pelletier prenne l'exemple de Zahia, vendeuse dans un magasin de chaussures en pleine période de Noël. On nous dit que son chef lui impose, comme aux autres vendeuses, de porter un bonnet de noël. Or, elle ne veut pas, elle ne se sent pas bien lorsqu'elle le porte. Cependant, elle se sent obligé, elle ne peut pas dire "non", sinon elle risque gros. Ici, on observe clairement un déséquilibre dans leur relation; “le pouvoir [...] est toujours une relation, emmêlée à un ensemble de relations. Celle ou celui qui obéit n’est pas soumise ou soumis par nature. Et il ne s’agit pas d’une relation entre deux individus". C'est donc une relation non équilibrée encastrée dans plein d'autres, qui les autorisent. On retrouve donc une dimension collective: prendre appui sur le pouvoir lentement construit d'un groupe social sur un autre.
+Dans le cas de Zahia, c'est le contrat de travail qui vient définir ce lien de subordination: il faut exécuter les ordres du supérieur et ne pas faire de fautes sous peine d'être puni. Ici, "le consentement n'est pas volontaire mais **extorqué\*\*".
 Citation issue de l'essai résumant bien ces faits: “ les violences des dominants sont d'ordinaire acceptées dans la mesure où elles sont perçues comme normales, puisqu'elles découlent de tous les mécanismes qui poussent à intérioriser les places sociales établies".
 
 ### Qualités intrinsèques pour être chef.fe?
 
-On dit souvent qu'un chef (ou une cheffe) doit avoir du charisme, de la prestance, et bien d'autres qualités et donc, que ce n'est pas fait pour tout le monde, que certains sont "faits pour être chef" et pas d'autres.
-Or ce ne sont pas des qualités personnelles. D'après Max Weber dans La domination, l'impression du charisme ne tient pas juste aux qualités intrinsèques, c'est en fait une capacité acquise d'exprimer à un groupe social avec légitimité et autorité. En effet, il explique que "le charisme trouve la source de son efficacité dans la croyance des dominés. La reconnaissance par les dominés est le facteur originellement décisif". De la même façon, Bourdieu souligne que la reconnaissance d’une ‘grandeur individuelle’ est production collective, elle tient de la réussite d’entreprises collectives. Ainsi, on comprend que le charisme, souvent considéré comme important chez les chefs, n'est en fait que le simple résultat de la croyance et l'admiration des dominés, qui lui donne toute légitimité.
+On dit souvent qu'un chef (ou une cheffe) doit avoir du **charisme**, de la prestance, et bien d'autres qualités et donc, que ce n'est pas fait pour tout le monde, que certains sont "faits pour être chef" et pas d'autres.
+Or ce ne sont pas des qualités personnelles. D'après Max Weber dans _La domination_, l'impression du charisme ne tient pas juste aux qualités intrinsèques, c'est en fait une capacité acquise d'exprimer à un groupe social avec légitimité et autorité [2](#bibliographie). En effet, il explique que "le charisme trouve la source de son efficacité dans la croyance des dominés. La reconnaissance par les dominés est le facteur originellement décisif". De la même façon, Bourdieu souligne que la reconnaissance d’une ‘grandeur individuelle’ est production collective, elle tient de la réussite d’entreprises collectives. Ainsi, on comprend que le charisme, souvent considéré comme important chez les chefs, n'est en fait que le simple résultat de la croyance et l'admiration des dominés, qui lui donne toute légitimité.
 
-Ainsi, on comprend que si les chefs sont des chefs ce ne sont pas grâce à qui ils sont et à leurs qualités personnelles, mais bien grâce à des mécanismes sociaux qui légitimisent ces individus en dénigrant d'autres. Les dominations et chefferies ne vont pas de soit partout et tout le temps. Cependant, c'est grâce aux dépendances sociales, mécanismes de subordination et garanties symboliques, que les indivus les croient nécessaires.
+Ainsi, on comprend que si les chefs sont des chefs ce le sont pas grâce à qui ils sont et à leurs qualités personnelles, mais bien grâce à des mécanismes sociaux qui légitimisent ces individus en dénigrant d'autres. Les dominations et chefferies ne vont pas de soit partout et tout le temps. Cependant, c'est grâce aux dépendances sociales, mécanismes de subordination et garanties symboliques, que les indivus les croient nécessaires.
 
 ## Management et hiérarchie
 
-Hiérarchie en société ok et que dire de la hiérarchie en entreprise maintenant ? Le management, les managers, les "n+1"...
-Dans son essai intitulé Modernisation managériale: tout plutôt qu’une démocratisation du travail, Danièle Linhart traite de l'impact du management moderne sur les collectifs de travailleurs, et comment la hiérarchie se manifeste en entreprise via le management.
+Hiérarchie en société ok et que dire de la hiérarchie en entreprise maintenant ?
+
+Le management, les managers, les "n+1"...
+
+Dans son essai intitulé _Modernisation managériale: tout plutôt qu’une démocratisation du travail_, Danièle Linhart traite de l'impact du management moderne sur les collectifs de travailleurs, et comment la hiérarchie se manifeste en entreprise via le management [3](#bibliographie).
 Le management moderne s'inscrit dans une démarche de changement permanent, et non pas de démocratisation: manager et décider c'est pas pour tout le monde: les salariés n'ont pas le choix des critères et méthodes de travail car le management agit en toute connaissance de cause. Cette modernisation managériale s’inscrit dans une **continuité taylorienne** : ensemble de prescriptions sous forme de protocoles, procédures, process et bonnes pratiques **imposés**. Taylor avait compris à la fin du 19e siècle que le savoir, c'était du pouvoir, et que, si on laissait le savoir de métier aux ouvriers, on leur laissait le pouvoir; l'organisation “scientifique” du travail consiste en une dépossession des travailleurs de leurs savoirs de métier pour qu’ils ne puissent pas imposer leur point de vue sur la manière de travailler, ni défendre leur intérêts, explique Danièle Linhart.
-De la même façon, dans son écrit intitulé _What do Bosses do?: The Origins and Functions of Hierarchy in Capitalist Production_, Stephen A. Marglin argue que les innovations de la production capitaliste, comme la division du travail et l'organisation centralisée des usines, n'ont pas été introduites pour des raisons d'efficacité technique, mais pour renforcer le contrôle des capitalistes sur les travailleurs. Marglin soutient que la hiérarchie permet aux capitalistes de contrôler l'accumulation de capital, un processus qui aurait été difficilement réalisable si les travailleurs conservaient le contrôle sur leur production. Christophe Dejours, souligne pour sa part, que les organisations syndicales ont souvent perçu l’organisation du travail comme une affaire scientifique ou technique, abandonnant cette réflexion au patronat.
-Danièle Linhart souligne alors que “si on se penche sur les transformations qui ont ‘modernisé’ les entreprises et le travail salarié, on observe une constante qui va dans le sens d’une fragilisation, d’un affaiblissement des salariés”. En effet, en plus de diviser les travailleurs, de les individualiser, et de les déposséder de leur connaissance sur leur propre travail, le changement perpétuel implique l’obsolescence des savoirs et de l’expérience accumulée des salariés; or il n’y a pas de situation plus dominée que celle d’un apprenti. C’est dans cette optique que l’on perd l’activité déontique : dans un collectif, les membres créent leurs propres règles, adaptées à leur réalité, en combinant efficacité, justice morale et respect des subjectivités.
-Pour finir, Danièle Linhart explique que le management moderne “prétendant répondre aux ‘légitimes’ aspirations des salariés -dignité, liberté, autonomie, reconnaissance- les directions va s’atteler d’une façon systématique à une individualisation de la gestion des salariés et de l’organisation de leur travail et prendre en main les relations que les salariés mobilisaient spontanément entre eux”. Cela marque alors la fin des collectifs et de la solidarité qu’ils entretenaient, les salariés se retrouvent alors en situation de concurrence avec les autres, mais aussi avec eux-mêmes, ceux-ci étaient constamment obligés de se dépasser et de montrer “de quoi ils sont capables”.
+De la même façon, dans son écrit intitulé _What do Bosses do?: The Origins and Functions of Hierarchy in Capitalist Production_, Stephen A. Marglin argue que les innovations de la production capitaliste, comme la division du travail et l'organisation centralisée des usines, n'ont pas été introduites pour des raisons d'efficacité technique, mais pour renforcer le contrôle des capitalistes sur les travailleurs [4](#bibliographie). Marglin soutient que la hiérarchie permet aux capitalistes de contrôler l'accumulation de capital, un processus qui aurait été difficilement réalisable si les travailleurs conservaient le contrôle sur leur production. Christophe Dejours, souligne pour sa part, que les organisations syndicales ont souvent perçu l’organisation du travail comme une affaire scientifique ou technique, abandonnant cette réflexion au patronat.
+Danièle Linhart explique alors que “si on se penche sur les transformations qui ont ‘modernisé’ les entreprises et le travail salarié, on observe une constante qui va dans le sens d’une fragilisation, d’un affaiblissement des salariés”. En effet, en plus de diviser les travailleurs, de les individualiser, et de les déposséder de leur connaissance sur leur propre travail, le changement perpétuel implique l’obsolescence des savoirs et de l’expérience accumulée des salariés; or il n’y a pas de situation plus dominée que celle d’un apprenti. C’est dans cette optique que l’on perd l’**activité déontique** : dans un collectif, les membres créent leurs propres règles, adaptées à leur réalité, en combinant efficacité, justice morale et respect des subjectivités.
+Pour finir, Danièle Linhart explique que le management moderne “prétendant répondre aux ‘légitimes’ aspirations des salariés -dignité, liberté, autonomie, reconnaissance- va s’atteler d’une façon systématique à une individualisation de la gestion des salariés et de l’organisation de leur travail et prendre en main les relations que les salariés mobilisaient spontanément entre eux”. Cela marque alors la fin des collectifs et de la solidarité qu’ils entretenaient, les salariés se retrouvent alors en situation de concurrence avec les autres, mais aussi avec eux-mêmes, ceux-ci étaient constamment obligés de se dépasser et de montrer “de quoi ils sont capables”.
 
 # Pourrait-on fonctionner sans ?
 
@@ -100,13 +103,19 @@ Dans la partie responsabilité, il y a aussi le côté: c'est le rôle de qui ?
 
 Qui jouera l'arbitre ?
 
+1. Efficacité et productivité
+
+On entendra aussi souvent que “oui mais on sera moins productif, on produira moins”. Comme diraient Simon Cottin-Marx et Baptiste Mylondo, auteurs de _Travailler sans patron_ “ Si, pour être efficaces, il nous faut accepter d’être dominés, exploités et aliénés ; s’il nous faut nous résigner à nous soumettre à des chefs et obéir à leurs ordres ; s’il nous faut renoncer à notre désir d’égalité, de démocratie et de justice, alors peut-être qu’il préférable d’être moins efficaces; tout dépend aussi des objectifs.” Je conseille notamment d’aller voir mon MON 1.2 sur la notion de productivité.
+
+On remarque donc que une entreprises non hiérarchisée doit faire face à de nombreux défis clés. Cependant, Simon Cottin-Marx et Baptiste Mylondo, expliquent, en faisant référence à Dwight McDonald que “il n’est pas simple non plus de travailler pour un chef, et les structures hiérarchiques sont, elles aussi, très loin d’être parfaites. En somme, chaque type d’organisation présente ses propres problèmes, et tout l’enjeu est donc de choisir ceux auxquels on souhaite être confronté : les travers de l’anarchisme ou ceux du « hiérarchisme ». [5](#bibliographie)
+
 # Alternatives déjà existantes et critique
 
-Dans la continuité du management moderne, on retrouve, d'après Danièle Linhart ce type de dynamique "On proposera aux salariés, unilatéralement libérés par leur patron, de s’automanager, s’autodiscipliner, s’automotiver, s’autodiriger mais à une seule condition: qu’ils adhèrent à la vision de leur leader (patron de l’entreprise), qu’ils inétriorisent ses valeurs, ses critères, ses objectifs, et se comportent en véritables et loyaux followers”. Elle critique alors les nouveaux modèles émergents d'autogestion en entreprise au sein desquels un salarié est obligé d'adhérer au système et aux idées du chef. Ainsi, la notion de subordination est toujours bien présente.
+Dans la continuité du management moderne, on retrouve, d'après Danièle Linhart ce type de dynamique "On proposera aux salariés, unilatéralement libérés par leur patron, de s’automanager, s’autodiscipliner, s’automotiver, s’autodiriger mais à une seule condition: qu’ils adhèrent à la vision de leur _leader_ (patron de l’entreprise), qu’ils inétriorisent ses valeurs, ses critères, ses objectifs, et se comportent en véritables et loyaux _followers_”. Elle critique alors les nouveaux modèles émergents d'autogestion en entreprise au sein desquels un salarié est obligé d'adhérer au système et aux idées du chef. Ainsi, la notion de subordination est toujours bien présente. De la même façon, Simon Cottin-Marx et Baptiste Mylondo questionnent: “Comment se satisfaire d’une autonomie de gestion qui ne serait qu’accordée par un chef, et qui pourrait par conséquent être reprise sur simple décision d’un propriétaire majoritaire par exemple ?”
 
-CF. MON de Clarisse sur les entreprises opales qui vient donner un exemple de cela.
+CF. MON 2.2 de Clarisse sur les entreprises opales qui vient donner un exemple de cela.
 
-Sinon, on retrouve toutes les notions de management horizontal, autogestion, sociocratie, holacratie,...
+Sinon, on retrouve toutes les notions de management horizontal, autogestion, sociocratie, holacratie, SCOP...
 
 Mais honnêtement, je sais pas si on peut dire que dans ces différentes solutions, on a complètement éliminer la hiérarchie pour passer dans un système anarchiste. En effet, si on prend l'exemple des lois Auroux de 1982 ayant fait suite au rapport de Martine Aubry, celles-ci proposent l'intégration de groupes dʼexpressions au sein des entreprises. Cependant, ceux-ci nʼont au final pas marché car les conditions et lʼorganisation du travail des salariés nʼavaient pas changé. Pour moi, c'est la même chose ici, si le système, les façons de penser et de travailler ne changent pas dans le fond, on n'atteindra jamais un système libre de toute forme de hiérarchie et de subordination.
 
@@ -114,8 +123,8 @@ Mais honnêtement, je sais pas si on peut dire que dans ces différentes solutio
 
 ## Un phalanstère: c'est quoi?
 
-Dans Charles Fourier : l'utopie du phalanstère, Denis Clerc explique que Fourier croyait en une réorganisation complète de la société, qu'il appelait l’"État sociétaire". Il basait sa vision sur l’idée que les passions humaines, au lieu d’être réprimées, devaient être exploitées pour créer une société harmonieuse.
-Un phalanstère, tel que défini par Charles Fourier dans Le Nouveau Monde Industriel et Sociétaire (1829), est une communauté utopique visant à harmoniser les besoins individuels avec les nécessités collectives grâce à une organisation rationnelle et coopérative. On y retrouve alors la suppression de tout structure hiérarchique traditionnelle.
+Dans _Charles Fourier : l'utopie du phalanstère,_ Denis Clerc explique que Fourier croyait en une réorganisation complète de la société, qu'il appelait l’"État sociétaire". Il basait sa vision sur l’idée que les passions humaines, au lieu d’être réprimées, devaient être exploitées pour créer une société harmonieuse. [6](#bibliographie)
+Un **phalanstère**, tel que défini par Charles Fourier dans _Le Nouveau Monde Industriel et Sociétaire_(1829), est une communauté utopique visant à harmoniser les besoins individuels avec les nécessités collectives grâce à une organisation rationnelle et coopérative. On y retrouve alors la suppression de tout structure hiérarchique traditionnelle. [7](#bibliographie)
 
 - Les ressources matérielles et intellectuelles sont mises en commun mais les récompenses sont réparties selon trois critères : le capital investi, le travail fourni, et le talent ou les compétences. D'après lui, « La juste répartition des gains est le fondement de l'harmonie sociétaire. »
 - Architecture: une structure capable d'accueillir tout le monde (idéalement environ 1500 personnes), avec des espaces communs et privés afin de favoriser la proximité physique et l'harmonie.
@@ -127,7 +136,7 @@ Quelques phalanstères ont été expérimentés, comme celui de Condé-sur-Vesgr
 
 ## DO-IT
 
-Peut-on considérer l'option DO-IT comme un phalanstère éducatif?
+**_Peut-on considérer l'option DO-IT comme un phalanstère éducatif?_**
 
 Ici, la communauté c'est les 24 élèves en option DO-IT + 2 profs encadrants.
 Niveau architecture, c'est la salle P6004, assez petite donc on retrouve bien cette idée de proximité.
@@ -142,3 +151,25 @@ Ensuite, les ressources notamment intellectuelles sont mises en commun via le si
 
 Comme on peut le voir, le gros point bloquant est au niveau de la hierarchie rigide.
 Si on venait à ne pas prendre en compte les deux professeurs encadrants dans l'analyse, on pourrait peut-être plus parler de phalanstère.
+
+# Bibliographie
+
+[1] Philippe Boursier et Willy Pelletier, _Des chefs, pourquoi?_
+
+[2] Max Weber, _La domination_
+
+[3] Danièle Linhart, _Modernisation managériale: tout plutôt qu’une démocratisation du travail_
+
+[4] Stephen A. Marglin, _What do Bosses do?: The Origins and Functions of Hierarchy in Capitalist Production_
+
+[5]Simon Cottin-Marx et Baptiste Mylondo, **Travailler sans patron** et [_Et si l’on travaillait ensemble, sans patron et sans hiérarchie?_](https://theconversation.com/et-si-lon-travaillait-ensemble-sans-patron-et-sans-hierarchie-226076)
+
+[6] Denis Clerc, _Charles Fourier : l'utopie du phalanstère_
+
+[7] Charles Fourier, _Le Nouveau Monde Industriel et Sociétaire_
+
+Autres sources non citées mais pertinentes:
+
+[8] [Entretien avec Simon Cottin-Marx et Baptiste Mylondo, _Des organisations sans patron?_](*https://journals.openedition.org/ethiquepublique/8720)
+
+Retour en haut](#)
