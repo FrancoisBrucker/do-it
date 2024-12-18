@@ -33,7 +33,7 @@ Enfin, Philippe Boursier et Willy Pelletier définissent un chef comme quelqu’
 
 ## Les premières traces de hiérarchie
 
-Lorsque l’on remonte dans le temps, on se rend compte que les “chefferies” n’ont pas toujours exister et n’étaient pas automatiques. Dans leur essai _Des chefs, pourquoi?_, Philippe Boursier et Willy Pelletier expliquent que les archéologues ont repéré les premières hiérarchies des sociétés anciennes en Europe, en étudiant les pratiques funéraires [1] (#bibliographie). En effet, jusque vers 4 500 ans avant notre ère, les cimetières et les tombes fouillés ne montrent aucune différence sociale marquante entre individus. Les traces architecturales ne révèlent pas non plus de différences notables de niveau de vie. Les premières tombes de « chefs » ont été découvertes à Varna, sur les bords de la mer Noire, dans l'actuelle Bulgarie. On y trouve des armes, des bijoux, des vêtements, et toutes sortes de richesses accumulées, représentant les pouvoirs de ceux-ci. De la même façon et à la même époque, des villages entourés de fossés et de palissades témoignant de la présence d’une autorité centrale apparaissent.
+Lorsque l’on remonte dans le temps, on se rend compte que les “chefferies” n’ont pas toujours exister et n’étaient pas automatiques. Dans leur essai _Des chefs, pourquoi?_, Philippe Boursier et Willy Pelletier expliquent que les archéologues ont repéré les premières hiérarchies des sociétés anciennes en Europe, en étudiant les pratiques funéraires [1](#bibliographie). En effet, jusque vers 4 500 ans avant notre ère, les cimetières et les tombes fouillés ne montrent aucune différence sociale marquante entre individus. Les traces architecturales ne révèlent pas non plus de différences notables de niveau de vie. Les premières tombes de « chefs » ont été découvertes à Varna, sur les bords de la mer Noire, dans l'actuelle Bulgarie. On y trouve des armes, des bijoux, des vêtements, et toutes sortes de richesses accumulées, représentant les pouvoirs de ceux-ci. De la même façon et à la même époque, des villages entourés de fossés et de palissades témoignant de la présence d’une autorité centrale apparaissent.
 
 ## Formes de hiérarchie et mécanismes de subordination
 
@@ -152,7 +152,7 @@ Ensuite, les ressources notamment intellectuelles sont mises en commun via le si
 Comme on peut le voir, le gros point bloquant est au niveau de la hierarchie rigide.
 Si on venait à ne pas prendre en com# Bibliographie# Bibliographie[pte les deux professeurs encadrants dans l'analyse, on pourrait peut-être plus parler de phalanstère.
 
-# Bibliographie
+# Bibliographie <section id="bibliographie"></section>
 
 [1] Philippe Boursier et Willy Pelletier, _Des chefs, pourquoi?_
 
