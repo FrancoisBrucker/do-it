@@ -145,6 +145,119 @@
 
 
 
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Ce MON s’adresse à des lecteurs ayant une intérêt pour la programmation et une curiosité envers les paradigmes
+alternatifs comme la programmation fonctionnelle. Aucune expérience préalable avec Haskell n’est nécessaire,
+mais une compréhension de base des langages de programmation (comme Python ou Java) facilitera la lecture.</p>
+</div></div>
+<h2>Objectifs du MON</h2>
+<p>L’objectif de ce MON est de découvrir la programmation fonctionnelle à travers Haskell et d’évaluer son potentiel
+dans des environnements de production. Nous chercherons à répondre à la question :
+<strong>peut-on utiliser un langage fonctionnel comme Haskell pour des applications concrètes en production ?</strong></p>
+<p>Mon parcours d’apprentissage suivra les étapes suivantes :</p>
+<ol>
+<li>Introduction aux concepts de la programmation fonctionnelle.</li>
+<li>Exploration et apprentissage des bases d'Haskell.</li>
+<li>Recherche de retours d’expérience sur l’utilisation d'Haskell dans des projets concrets.</li>
+<li>Synthèse et réflexion critique sur les domaines d’application possibles.</li>
+</ol>
+<h2>Découverte de la programmation fonctionnelle</h2>
+<p>La programmation fonctionnelle repose sur plusieurs concepts clés :</p>
+<ul>
+<li><strong>Fonctions pures</strong> : des fonctions sans effets de bord, ce qui signifie que leur résultat dépend uniquement de leurs entrées.</li>
+<li><strong>Immutabilité</strong> : une approche où les variables sont immuables, ce qui facilite le raisonnement sur le code.</li>
+<li><strong>Expressions</strong> : tout est une expression, ce qui rend le code plus prévisible et composable.</li>
+</ul>
+<h3>Exploration initiale</h3>
+<p>Pour comprendre ces idées, j’ai consulté plusieurs ressources introductives sur la programmation fonctionnelle,
+notamment des articles techniques et des vidéos explicatives. Ces études m’ont permis de saisir les avantages potentiels,
+comme la facilité de parallélisation et la réduction des bugs grâce à l’absence d’état mutable.</p>
+<p>Cependant, une question persistait : pourquoi la programmation fonctionnelle, bien qu’élégante,
+reste-t-elle sous-utilisée dans de nombreux environnements de production ?</p>
+<h2>Introduction à Haskell</h2>
+<h3>Choix d’une ressource d’apprentissage</h3>
+<p>Pour trouver des ressources, <a href="https://www.reddit.com/r/haskell/comments/xlemih/best_resources_to_learn_haskell/">une discussion Reddit</a>
+(initiée par un utilisateur visiblement désespéré !) m'a permis de me constituer une petite bibliographie introductive.</p>
+<h3>Premiers pas</h3>
+<p>Haskell est un langage statiquement typé, avec une syntaxe concise et un système de types très puissant.
+Voici quelques concepts que j’ai découverts :</p>
+<ul>
+<li><strong>Les types et fonctions</strong> : tout en Haskell est typé, et les fonctions peuvent être composées facilement.</li>
+<li><strong>Les listes</strong> : un outil puissant pour manipuler des collections de données.</li>
+</ul>
+<p>Dans l'article <a href="https://www.snoyman.com/blog/2017/12/what-makes-haskell-unique/">What Makes Haskell Unique</a>
+j'ai découvert quelques super concepts qui auraient été une vraie aubaine dans certains projets de dev que j'ai eu l'occassion de développer :</p>
+<ul>
+<li><strong>Le parallélisme avec <code>race</code></strong> : une fonction qui exécute deux tâches en parallèle et retourne la première à se terminer.</li>
+<li><strong>Utilisation de types</strong> pour créer facilement des parsers.</li>
+</ul>
+<h3>Installation Haskell</h3>
+<p>J'ai perdu pas mal de temps, car j'ai initialement voulu suivre un tutoriel Haskell qui ne devait pas vraiment
+être prévu pour des utilisateurs sur Linux donc j'ai adapté comme je pouvais et j'ai installé des trucs qui
+sont rentrés en conflit quand j'ai finalement essayé de simplement suivre la
+<a href="https://www.haskell.org/get-started/">documentation d'Haskell</a> pour télécharger ce qu'il faut pour
+développer en Haskell...</p>
+<p>Ce point de ralentissement a pas mal stoppé mon élan, mais j'ai finalement suivi en partie la trame d'un MOOC
+<a href="https://haskell.mooc.fi/material/">https://haskell.mooc.fi/material/</a> qui était plutôt bien organisé avec pas mal
+de petits exercices que j'ai résolus au fur et à mesure.</p>
+<h2>Recherche de retours d’expérience (REX)</h2>
+<p>Après pas mal de temps passé sur le language, je me suis rendu compte que sans projet concret, il va être difficile
+pour moi de répondre à ma question, j'ai donc décidé par manque de temps de plutôt partir à la
+recherche de retours d'expériences.</p>
+<h3>Applications concrètes</h3>
+<p>Pour comprendre l’utilisation d'Haskell en production,
+j’ai exploré des cas d’usage concrets et analysé les avantages ainsi que les inconvénients cités dans les retours d’expérience.</p>
+<h3>Secteurs</h3>
+<p>Haskell est utilisé dans divers secteurs où la fiabilité, la performance, et la robustesse du code sont essentielles.
+Voici quelques cas d’usage notables :</p>
+<ul>
+<li>
+<p><strong>Blockchain et crypto-monnaies</strong> :</p>
+<ul>
+<li><em>Cardano</em> : une blockchain de troisième génération qui repose fortement sur Haskell pour garantir la sécurité et la robustesse de son protocole.</li>
+<li><em>IOHK</em> (Input Output Hong Kong) : développe des solutions blockchain et utilise Haskell pour concevoir des systèmes distribués fiables.</li>
+</ul>
+</li>
+<li>
+<p><strong>Finance et trading</strong> :</p>
+<ul>
+<li><em>Standard Chartered</em> : cette banque internationale utilise Haskell pour concevoir des systèmes de gestion des risques et d’automatisation des calculs financiers.</li>
+<li><em>Tsuru Capital</em> : un fonds d’investissement japonais qui adopte Haskell pour ses algorithmes de trading à haute fréquence.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cloud et infrastructures</strong> :</p>
+<ul>
+<li><em>Facebook</em> : le langage Haskell est utilisé dans certains outils internes pour gérer la configuration et la maintenance des datacenters.</li>
+<li><em>GitHub</em> : l’outil de migration <em>Semantic</em> utilise Haskell pour analyser et transformer le code source de manière sûre et rapide.</li>
+</ul>
+</li>
+<li>
+<p><strong>Avantages</strong> : sa sécurité typographique réduit les bugs en production, et son parallélisme natif est idéal pour traiter des charges de travail intensives.</p>
+</li>
+<li>
+<p><strong>Inconvénients</strong> : la communauté est restreinte et l’écosystème moins développé que celui des langages mainstream comme Python ou JavaScript.</p>
+</li>
+</ul>
+<h3>Domaines d’application</h3>
+<p>En analysant ces retours, il est clair qu'Haskell excelle dans les niches où la robustesse et la précision sont prioritaires.
+Cependant, son adoption reste limitée à ces cas particuliers, souvent en raison de la courbe d’apprentissage et du manque de développeurs expérimentés.</p>
+<h2>Mise en pratique et conclusion</h2>
+<p>Malgré mes efforts, le temps consacré à ce MON n’a pas suffi pour développer un projet significatif en Haskell.
+Mes programmes se sont limités à des exercices simples pour assimiler les bases.</p>
+<p>Cependant, cet apprentissage m’a permis de répondre partiellement à ma question initiale :
+<strong>oui, Haskell peut être utilisé en production, mais principalement dans des contextes spécifiques et avec une équipe compétente dans ce paradigme.</strong></p>
+<p>Pour aller plus loin, je serais tenté de réaliser un projet complet en Haskell, comme je l’ai fait précédemment avec Go.
+Cela permettrait d’avoir une vision plus claire de sa robustesse et de ses limites en conditions réelles.</p>
+<h2>Bibliographie</h2>
+<p>[1] <a href="https://learnyouahaskell.com/chapters">Learn You a Haskell for Great Good! | Miran Lipovača</a></p>
+<p>[2] <a href="https://www.cse.chalmers.se/~rjmh/Papers/whyfp.pdf">Why Functional Programming Matters | John Hughes</a></p>
+<p>[3] <a href="https://serokell.io/blog/top-software-written-in-haskell">11 Companies that use Haskell in production | Serokell</a></p>
+<p>[4] Haskell Documentation <a href="https://www.haskell.org/documentation/">https://www.haskell.org/documentation/</a></p>
 
 
 </article>

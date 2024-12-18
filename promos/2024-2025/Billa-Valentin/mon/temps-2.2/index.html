@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Svelte</title>
+        <title>Redondance</title>
 
         <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
         <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
             
 <article class="relative">
-<h1 class="mb-1">Svelte</h1>
+<h1 class="mb-1">Redondance</h1>
 <div class="mb-4">
     
         <div class="px-4 flex flex-wrap items-center">
@@ -77,15 +77,23 @@
                 
                     <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">débutant</li>
                 
-                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">front</li>
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">devops</li>
                 
-                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">svelte</li>
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">serveur</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">RAID</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">ZFS</li>
                 
 
             </ul>
             
             
             <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
                 
                     
                 
@@ -121,7 +129,7 @@
 
         <p class="mb-4 text-lg">
 
-                Introduction à Svelte / SvelteKit
+                Comparaison des technologies RAID et ZFS pour le stockage et la redondance de données
 
         </p>
 
@@ -134,15 +142,263 @@
 </svg>
 <div class="pl-8 mr-8">
 
-<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Billa-Valentin/">Valentin Billa</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Billa-Valentin/mon/">MONs Valentin Billa</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Billa-Valentin/mon/temps-2.2/">Svelte</a>
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Billa-Valentin/">Valentin Billa</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Billa-Valentin/mon/">MONs Valentin Billa</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Billa-Valentin/mon/temps-2.2/">Redondance</a>
 
 </div></div>
 
 
 
 
-<p>J'ai déjà touché à un peu tous les frameworks front classiques (React, Vue, Angular),
-j'aimerais bien tester Svelte qui si je comprends bien se rapproche pas mal de Vue.</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8 mr-8">
+<ul>
+<li>Compréhension des bases du stockage (disques, partitions, systèmes de fichiers)</li>
+<li>Vocabulaire courant lié à la redondance et aux sauvegardes</li>
+</ul>
+</div></div>
+<h2>Objectifs</h2>
+<p>Récemment le GInfo a acquis de nouveaux serveurs, j'aide l'association dans l'élaboration de configurations de nos
+périphériques de stockage dans l'objectif de mettre à disposition plusieurs dizaines de tera de stockage aux associations
+étudiantes sans pour autant leur faire prendre le risque de perdre leurs données !</p>
+<p>Dans ce MON, je souhaite donc explorer les différentes <strong>technologies RAID</strong> ainsi que <strong>ZFS</strong>,
+afin de mieux comprendre leurs avantages, limites et applications dans la gestion de stockage de données.</p>
+<p>RAID est omniprésent dans les systèmes de stockage critiques, tandis que ZFS, avec son approche moderne,
+est devenu un incontournable (entre autre recommandé à l'association par des membres de la DSI de l'école)
+pour garantir intégrité et flexibilité dans le stockage.</p>
+<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p><strong>Mise en garde :</strong>
+Dans ce MON, lorsque nous parlons de &quot;sécurité des données&quot;, nous nous référons <strong>exclusivement à la protection contre la perte de données</strong>.
+L'encryption peut toujours être ajoutée par-dessus les solutions que je présenterais.</p>
+<p>Même si votre serveur utilise des solutions comme RAID ou ZFS pour garantir la redondance des données, <strong>cela ne remplace pas des sauvegardes régulières</strong>.
+Ces solutions protègent principalement contre les défaillances matérielles, mais elles ne couvrent pas les erreurs humaines,
+les attaques logicielles ou les catastrophes physiques (incendie, inondation, etc.).<br>
+<strong>Avoir des sauvegardes (backups) reste crucial</strong> pour assurer une protection complète.
+Une recommendation généralement donnée est la <a href="https://www.veeam.com/blog/321-backup-rule.html">règle des 3-2-1</a></p>
+</div></div>
+<hr>
+<p>J'ai tout d'abord orienté mes recherches vers le RAID traditionnel puisque c'est ce que nous faisions déjà.</p>
+<h2>Qu'est-ce que RAID ?</h2>
+<p>Le <strong>RAID</strong> (Redundant Array of Independent Disks) est une technologie permettant de combiner plusieurs disques physiques pour offrir des bénéfices en termes de :</p>
+<ul>
+<li><strong>Performance</strong> (lecture/écriture plus rapide)</li>
+<li><strong>Redondance</strong> (tolérance aux pannes)</li>
+<li><strong>Capacité</strong> (agrégation des espaces de stockage).</li>
+</ul>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>RAID peut être implémenté via <strong>hardware</strong> (contrôleurs RAID dédiés) ou <strong>software</strong> (géré par le système d'exploitation).</p>
+</div></div>
+<h3>RAID Hardware vs Software</h3>
+<ul>
+<li><strong>RAID hardware</strong> : Implémenté par un contrôleur RAID dédié (une carte contrôleur RAID). Le matériel gère directement les opérations RAID, soulageant le CPU principal.</li>
+<li><strong>RAID software</strong> : Géré directement par le système d'exploitation (Linux <code>mdadm</code>, Windows Storage Spaces). Plus flexible et moins coûteux, mais légèrement plus gourmand en ressources CPU.</li>
+</ul>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Les cartes RAID matérielles haut de gamme incluent une mémoire cache avec batterie pour améliorer les performances
+d'écriture et sécuriser les données en cas de coupure de courant.</p>
+</div></div>
+<p>Pour les nouveaux serveurs du GInfo, des Dell R740XD contiennent des cartes RAID matérielles de qualité
+ce qui rendrait dommage l'utilisation de RAID logiciel.</p>
+<h2>Les niveaux de RAID les plus courants</h2>
+<h3>RAID 0 : <strong>Striping</strong></h3>
+<ul>
+<li><strong>Objectif</strong> : Performances optimisées.</li>
+<li><strong>Principe</strong> : Les données sont divisées et écrites simultanément sur plusieurs disques.</li>
+<li><strong>Inconvénient</strong> : Aucune redondance. La perte d'un disque entraîne la perte totale des données.</li>
+</ul>
+<pre class="language-text"><code class="language-text">+-----+-----+-----+-----+
+| D1a | D2a | D3a | D4a |   => Données écrites en parallèle
+| D1b | D2b | D3b | D4b |
++-----+-----+-----+-----+</code></pre>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>RAID 0 est principalement utilisé pour les besoins en vitesse pure où la sécurité des données est secondaire (ex : cache temporaire, montage vidéo).</p>
+</div></div>
+<h3>RAID 1 : <strong>Mirroring</strong></h3>
+<ul>
+<li><strong>Objectif</strong> : Redondance maximale.</li>
+<li><strong>Principe</strong> : Les données sont dupliquées sur deux disques (miroir).</li>
+<li><strong>Avantage</strong> : Tolérance à la panne d'un disque.</li>
+<li><strong>Inconvénient</strong> : La capacité totale est limitée à celle d'un seul disque.</li>
+</ul>
+<pre class="language-text"><code class="language-text">+-----+      +-----+
+| D1  |  =   | D1  |   => Les deux disques contiennent exactement les mêmes données.
+| D2  |      | D2  |
++-----+      +-----+</code></pre>
+<h3>RAID 5 : <strong>Striping avec parité</strong></h3>
+<ul>
+<li><strong>Objectif</strong> : Équilibre entre performances et redondance.</li>
+<li><strong>Principe</strong> : Les données et les informations de parité (pour reconstruire les données) sont réparties sur au moins <strong>3 disques</strong>.</li>
+<li><strong>Avantage</strong> : Tolérance à la panne d'un disque.</li>
+<li><strong>Inconvénient</strong> : Reconstruction lente après une panne.</li>
+</ul>
+<pre class="language-text"><code class="language-text">+-----+-----+-----+
+| D1  | D2  | P1  |  => Parité sur le 3ᵉ disque
+| P2  | D3  | D4  |
++-----+-----+-----+</code></pre>
+<h3>RAID 6 : <strong>Striping avec double parité</strong></h3>
+<ul>
+<li><strong>Objectif</strong> : Redondance améliorée.</li>
+<li><strong>Principe</strong> : Semblable au RAID 5, mais avec deux blocs de parité. Tolérance à la panne de <strong>2 disques</strong>.</li>
+<li><strong>Inconvénient</strong> : Nécessite au moins <strong>4 disques</strong> et entraîne des écritures plus lentes.</li>
+</ul>
+<h3>Combinaisons : <strong>RAID 10</strong></h3>
+<p>En RAID, une combinaison comme RAID 10 se lit comme du RAID 1 + 0, il faut lire de gauche à droite ie.
+Un RAID 0 de disques virtuels en RAID 1.</p>
+<ul>
+<li><strong>Objectif</strong> : Performances ET redondance.</li>
+<li><strong>Principe</strong> : Combinaison de RAID 1 (mirroring) et RAID 0 (striping). Nécessite un nombre pair de disques (minimum 4).</li>
+</ul>
+<pre class="language-text"><code class="language-text">RAID 10 = RAID 1 (mirroring) + RAID 0 (striping)
++-----+-----+      +-----+-----+
+| D1  | D2  |  =>  | D1  | D2  |
++-----+-----+      +-----+-----+</code></pre>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>RAID 10 est souvent considéré comme la meilleure solution pour un compromis <strong>performances/redondance</strong>, malgré son coût élevé.</p>
+</div></div>
+<hr>
+<p>Je suis tombé au cours de mes recherches sur des gens mentionnant ZFS, j'ai donc décidé d'investiguer dans
+cette direction.</p>
+<h2>ZFS : une alternative au RAID</h2>
+<p>Le <strong>ZFS</strong> (Zettabyte File System) est à la fois un système de fichiers et un gestionnaire de volumes logiques
+conçu pour garantir la <strong>résilience des données</strong>, la <strong>flexibilité de gestion</strong> et des <strong>performances élevées</strong>.
+Développé initialement par Sun Microsystems, ZFS offre une approche intégrée pour gérer la redondance, la correction
+d'erreurs, les snapshots et la compression des données.</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>ZFS gère lui-même la redondance (RAID-Z) et l'intégrité des données. Il n'a donc pas besoin d'un contrôleur RAID matériel.</p>
+</div></div>
+<h3>Les concepts clés de ZFS</h3>
+<p>ZFS repose sur une hiérarchie de composants logiques et physiques qui permettent une gestion souple et redondante des données.</p>
+<h4>Pool de stockage (zpool)</h4>
+<p>Un <strong>zpool</strong> est l'unité de base de gestion du stockage dans ZFS.
+Il regroupe un ensemble de disques physiques pour former une seule entité logique.</p>
+<p>Un zpool est configuré pour offrir <strong>la redondance</strong>, <strong>la performance</strong> ou une combinaison des deux,
+selon la disposition des disques qu'il contient.</p>
+<p>Les données et l'espace disponible sont automatiquement équilibrés dans le pool, ce qui élimine la gestion
+traditionnelle des partitions.</p>
+<h4>Virtual Devices (vdevs)</h4>
+<p>Un <strong>vdev</strong> est une abstraction logique qui regroupe un ou plusieurs disques physiques.
+Plusieurs types de vdevs peuvent être utilisés pour structurer un zpool :</p>
+<ul>
+<li><strong>Single Disk</strong> : Pas de redondance, un seul disque (non recommandé).</li>
+<li><strong>Mirror</strong> : Chaque disque d’un vdev contient une copie exacte des données. Offre une excellente redondance.</li>
+<li><strong>RAID-Z</strong> : L’équivalent de RAID-5/6 dans ZFS, avec plusieurs niveaux :
+<ul>
+<li><strong>RAID-Z1</strong> : Une parité (équivalent RAID-5).</li>
+<li><strong>RAID-Z2</strong> : Deux parités (équivalent RAID-6).</li>
+<li><strong>RAID-Z3</strong> : Trois parités, offrant une tolérance à trois pannes simultanées.</li>
+</ul>
+</li>
+</ul>
+<p>Certains disques peuvent être dédiés à des fonctions plus spécifiques, <strong>L2ARC</strong> (Cache de niveau 2) pour accélérer les
+lectures fréquentes, ou <strong>SLOG</strong> (Separate Intent Log) pour améliorer les performances des écritures synchrones.
+Ces fonctionnalités permettent d'optimiser les performances globales du système ZFS en tirant
+parti de disques rapides (comme des SSD ou NVMe) en complément des disques principaux (HDD ou autres).</p>
+<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Il est difficile d'évaluer si une configuration ZFS va être bénéfique et les impacts sur la perfomance de notre
+système sans tout simplement la tester. En effet en fonction des besoins,</p>
+</div></div>
+<h4>Système de fichiers et datasets</h4>
+<p>Une fois un zpool configuré, des <strong>datasets</strong> peuvent être créés pour organiser et gérer les données.</p>
+<ul>
+<li><strong>Compression</strong> : ZFS applique une compression transparente pour économiser de l’espace.</li>
+<li><strong>Snapshots</strong> : Des copies instantanées et immuables d’un dataset, idéales pour les sauvegardes.</li>
+<li><strong>Quota et réservations</strong> : Gestion fine de l’espace alloué aux datasets.</li>
+</ul>
+<h3>Pourquoi utiliser ZFS ?</h3>
+<ul>
+<li><strong>Protection contre la corruption des données</strong> : Grâce à un mécanisme de checksum, ZFS détecte et corrige automatiquement les erreurs silencieuses.</li>
+<li><strong>Snapshots et réplication</strong> : Idéal pour des sauvegardes rapides et efficaces.</li>
+<li><strong>Évolutivité</strong> : Conçu pour des systèmes allant de quelques gigaoctets à plusieurs exaoctets.</li>
+<li><strong>Gestion flexible des volumes</strong> : Ajout ou remplacement de disques dans un pool sans interruption des services.</li>
+</ul>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
+</svg>
+<div class="pl-8 mr-8">
+<ul>
+<li><a href="https://itsfoss.com/what-is-zfs/">What is ZFS - ItsFoss</a></li>
+<li><a href="https://www.reddit.com/r/linuxquestions/comments/3usjz8/what_is_zfs_and_why_should_i_want_to_use_it/">What is ZFS and why should I want to use it ? - Reddit</a></li>
+</ul>
+</div></div>
+
+<hr>
+<h2>Solution adoptée</h2>
+<p>Pour l'instant voici la solution que nous avons décidé d'adopter avec le GInfo pour stocker nos données :</p>
+<p>Système d'exploitation (Ubuntu 24.04):</p>
+<ul>
+<li>Installé sur une petite partition (50-100 Go) des disques NVMe en RAID 1 via la carte BOSS.</li>
+</ul>
+<p>Utilisation des NVMe RAID 1 restants (optionel) :</p>
+<ul>
+<li>50-100 Go : SLOG (ZFS Intent Log) pour améliorer les performances des écritures synchrones.</li>
+<li>Espace restant : Volumes Docker ou cache L2ARC pour accélérer les lectures fréquentes.</li>
+</ul>
+<p>Pool ZFS sur HDD :
+<em>décision en partie influencée par un article nommé <a href="https://jrs-s.net/2015/02/06/zfs-you-should-use-mirror-vdevs-not-raidz/">&quot;ZFS you should use mirror vdevs not raidz&quot;</a></em></p>
+<ul>
+<li>Configuration en vdevs miroir pour performance, évolutivité, et redondance.</li>
+<li>1 disque configuré comme hot spare.</li>
+<li>Compression activée (LZ4) et un dataset séparé pour les archives NextCloud.</li>
+</ul>
+<p>Backups :</p>
+<ul>
+<li>Réplication ZFS quotidienne vers un serveur de backup.</li>
+</ul>
+<h2>Bibliographie</h2>
+<ul>
+<li><a href="https://fr.wikipedia.org/wiki/RAID_(informatique)">RAID - Wikipedia</a></li>
+<li><a href="https://serverfault.com/questions/19029/raid-levels-explained">RAID Levels - ServerFault</a></li>
+<li><a href="https://openzfs.github.io/openzfs-docs/">Introduction to ZFS</a></li>
+<li><a href="https://docs.oracle.com/cd/E23824_01/html/821-1448/gbbsh.html">ZFS Overview - Oracle</a></li>
+<li><a href="https://www.ixsystems.com/blog/zfs-raid-z/">ZFS RAID-Z vs RAID - iXsystems Blog</a></li>
+</ul>
+<h3>Communautés Reddit intéressantes</h3>
+<ul>
+<li><a href="https://www.reddit.com/r/homelab/">r/homelab</a></li>
+<li><a href="https://www.reddit.com/r/sysadmin">r/sysadmin</a></li>
+<li><a href="https://www.reddit.com/r/DataHoarder/">r/DataHoarders</a></li>
+</ul>
+<div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>Évidemment, il faut noter que Reddit est un réseau social, qui vient avec ses lots de bêtises et/ou mésinformations,
+mais j'ai remarqué que ces communautés étaient plutôt bien modérées et une bonne source d'inspiration pour des questions
+qui peuvent revenir souvent et auxquelles il serait difficile de répondre sans avoir tout simplement tenté la solution.</p>
+</div></div>
+<hr>
 
 
 </article>
