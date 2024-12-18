@@ -21,6 +21,7 @@ résumé: Afin de pouvoir modéliser facilement un parc photovoltaïque avec un 
 {% endprerequis %}
 {% lien %}
 - Fichier Excel à la fin du sprint 1 : [Fichier .xlsm à télécharger](./Sprint%201.zip)
+- Fichier Excel à la fin du sprint 2 : [Fichier .xlsm à télécharger](./Sprint%202.zip)
 {% endlien %}
 
 
@@ -72,24 +73,32 @@ Le dépassement du quota horaire est dû à la modification des consignes ayant 
 
 {% details "Sprint 2" %}
 
-- [ ] Rédaction des fonctions informatiques permettant le calcul des distances sur la grille
+- [x] Rédaction des fonctions informatiques permettant le calcul des longueurs de câble petite section
+- [ ] Rédaction des fonctions informatiques permettant le calcul des longueurs de câble grosse section
 - [x] Lister les fonctions informatiques a priori nécessaires
-- [ ] Coder les fonctions d'extraction de donnée d'une grille à l'autre.
-- [ ] Coder la fonction déterminant le type de câblage des strings.
+- [x] Coder les fonctions d'extraction de donnée d'une grille à l'autre.
+- [x] Coder la fonction déterminant le type de câblage des strings.
 - [ ] Coder la fonction permettant le calcul des quantités de câble.
-- [ ] Sprint back-log 2
-- [ ] Reporting sprint 2 sur site Do-it
-- [ ] Finalisation du POK
-- [ ] Rédaction des slides pour revue finale
+- [x] Sprint back-log 2
+- [x] Reporting sprint 2 sur site Do-it
+- [x] Finalisation du POK
+- [x] Rédaction des slides pour revue finale
 
 | Date | Heures passées | Indications |
 | -----|----------------|-------------|
+| 27/11/2024 | 2h | Sprint backlog 2 ¤ Extraction donnée phase 0 à phase 1 |
+| 28/11/2024 | 0.5h | Extraction donnée phase 0 à phase 1 |
+| 02/12/2024 | 1.5h | Extraction donnée phase 0 à phase 1 ¤ Extraction donnée phase 1 à phase 2 |
+| 04/12/2024 | 2h | Détermination du mode de câblage ¤ Calcul des distances |
+| 12/12/2024 | 2.5h | Extraction donnée phase 2 à phase 3 ¤ Extraction donnée phase 3 à phase 4 ¤ Modifications extraction de donnée phase 0 à 1 et 2 à 0 |
+| 13/12/2024 | 2h | Vérification de la cohérence des résulats |
+| 16/12/2024 | 2h | Reporting sur site Do_it |
 
-***Total du sprint 2 :***
+***Total du sprint 2 :*** *12.5h soit  25 % de plus que le temps alloué*
 {% enddetails %}
 {% faire %}
 
-**QUOTA HORAIRE TOTAL POK 2 :**
+**QUOTA HORAIRE TOTAL POK 2 :** 26.75h soit 34% de plus que le temps alloué
 {% endfaire %}
 
 #### Analyse post-morterm
@@ -105,6 +114,19 @@ Le dépassement du quota horaire est dû à la modification des consignes ayant 
 {% enddetails %}
 
 {% details "Sprint 2" %}
+**GESTION GENERALE DU TEMPS :** Gestion générale améliorée par rapport au sprint 1 et au POK 1. Mais sous-évaluation du temps nécessaire à la rédaction du reporting sur le site Do-it.
+
+**GESTION GENERALE :** Oublie d'un élément de calcul (prise en compte des câbles grande section) et ce dans les templates réalisés en sprint 1 et le sprint back-log 2. Ajouter l'intégralité des tâches correctrices durant le temps 2 aurait pris environ 3 heures supplémentaires. Si l'erreur initiale n'avait pas été commise, alors j'estime une augmentation de seulement 1 heure de la charge de travail : template fait correctement en temps est en heure (peu chronophage), réflexion quant à la méthode de calcul des distances (peu chronophage car déjà mentalisé en début de sprint 1), programmation du calcul et des livrables (se serait appuyé sur le calcul des longueurs petites sections).
+
+**DIMENSIONNEMENT DU PROJET :** Quelques fonctionnalités supprimées car trop ambitieuses pour le temps alloué.
+
+{% enddetails %}
+
+{% details "POK complet" %}
+
+**DIMENSIONNEMENT PROJET :** Plus réaliste qu'au temps 1 et ce grâce à la rédaction d'hypothèses simplificatrices, limitant le projet aux compétences détenues. Réel fonctionnement en mode agile : A GARDER !!  
+**DIMENSIONNEMENT TÂCHES:** Plus réaliste qu'au temps 1 mais rédigées de manière trop globales et rigides (par lôts et type de fonctionnalité). In fine, les tâches on été réalisées sans respecter la même segmentation, ni la même granulosité.  
+**APPROCHE METHODOLOGIQUE :** Lancement des activités par le test plutôt que par la formalisation. A permis un gain de temps et une meilleure efficacité. Le reporting des activités aurait quand même dû être plus régulier et formel afin de gagner en efficacité lors de la rédaction du livrable sur le site Do-it.
 
 {% enddetails %}
 
@@ -187,7 +209,7 @@ Cette démarche a permis de déterminer le parcours utilisteurs, la stratégie d
 | **Phase 2** | Positionnement des boites de raccordement sur le modèle défini en phase 1| Grille template n°2 |
 | **Phase 3** | Allocation des strings aux différentes BR sur le modèle défini en phase 2 | Grille template n°3 |
 | **Phase 4** | Allocation d'une section de câble de raccordement pour chaque string sur le modèle défini en phase 3 | Grilles template n°4.1 et 4.2 |
-| **Phase 5** | Lancement du calcul par un bouton de la page d'acceuil | Page d'accueil |
+| **Phase 5** | Lancement du calcul par un bouton de la page d'acceuil | Grilles template n°4.1 |
 
 **Fonctions et éléments à coder :**
 - Colorer des cellules en rouge, vert, marron et violet.
@@ -203,3 +225,118 @@ Cette démarche a permis de déterminer le parcours utilisteurs, la stratégie d
 - Calculer une distance entre deux cellules à partir des données d'entrée (dimension des stands etc...)
 
 Templates et modèles : les templates et modèles sont visibles dans le document [Sprint 1](./Sprint%201.zip).
+
+## Programmation
+
+### Méthodologie
+La programmation de toutes les fonctionnalités s'est faite en suivant le chemin utilisateur : une fonction par passage d'une phase à une autre.
+{% attention %}
+Bien que cette méthode permette de créer des fonctionnalités proches du besoin utilisateur, elle ne permet pas forcément d'anticiper les besoins en donnée de la suite du programme.
+{% endattention %}
+
+### Difficulté principales
+Le parcours des grilles étant très couteux en temps, il est apparu primordiale d'optimiser ce dernier. Pour cela il a fallu :
+
+{% details "Créer des variables d'état au sein des tableaux" %}
+
+**Objectif :** Eviter de devoir déterminer les premières lignes ou colonnes vides pour chaque tableau, voire chaque partie de tableau.  
+
+**Méthode :** Dédier une cellule précise au compte des colonnes utilisées : en première ligne du tableau ou sur une ligne de rang suffisamment grand. *ATTENTION : DANS CE CAS, IL FAUT S'ASSURER QUE LE NOMBRE DE LIGNES UTIILISEES PAR UN TABLEAU EST FINI !!!*
+
+**Exemple :**
+![Variable d'état BR](./Variable%20d'état%20BR.png)
+On peut ici voir que la cellule en jaune prend comme valeur le nombre de BR déjà renseignée dans le tableau. Ainsi, la fonction chargée de remplir ces données se réfère et met à jour la valeur de cette cellule afin de pouvoir se repérer facilemment dans le tableau. Cela évite de déterminer à chaque nouvelle BR, la première colonne vide.
+
+{% enddetails %}
+
+{% details "Centraliser les données pour éviter les parcours" %}
+
+**Objectif :** Eviter de parcourir plusieurs grilles pour obtenir des informations ou réaliser un calcul.
+
+**Méthode :** A chaque parcours obligatoire/inévitable, reporter les informations sur une grille regroupant toutes les données.  
+
+**Exemple :** Ici, cela a consisté à utiliser les feuilles de la phase 4 comme bases de données.
+- La dernière grille (TEM 4.1) comme base de donnée complète du design. Ainsi, à chaque passage d'une phase à une autre (étapes du parcours utilisateur), la grille de la Phase 4.1 reçoit les informations des autres grilles.
+![Phase 4.1](./Phase%204.1%20ex.png)
+
+- Cela a également consisté en une modification du tableau 4.2 : pour chaque BR et chaque string, j'ai décidé d'ajouter les coordonnées de la string correspondante. Ainsi, lors du calcul de la longueur du câble reliant la string à sa BR, aucun parcours de grille n'était nécessaire (en bleu sur la figure). J'ai réalisé la même opération pour les BR (en jaune sur la figure)
+![Position des éléments](./Position%20éléments.png)
+
+{% enddetails %}
+
+D'autre part, il a été nécessaire de supprimer des fonctionnalités :
+
+{% details "Calcul des quantitatifs de câble" %}
+La construction de cette fonctionnalité aurait été trop chronophage et peu intéressante. J'ai donc fait le choix de l'omettre.
+{% enddetails %}
+{% details "Jonctions entre BR et PTR" %}
+Cet outil devait initialement calculer les longueurs de câbles reliant les strings aux boites de raccordement (BR) mais également des BR au poste de transformation (PTR). Or, ce dernier aspect a été oublié lors de la conception du template du livrable final. Afin d'ajouter cette fonctionnalité il aurait fallu :
+1. Modifier le template final et donc une partie du codeallant de la phase 4 à la phase 5 (livrable final).
+2. Concevoir une fonction de calcul de distance déterminant : la position des BR, la position du PTR, la position des raccords au niveau du PTR (cloison du bâtiment acceptant l'entrée de câble).   
+
+Coder ces éléments auraient été chronophage et aurait fait exploser le budget horaire du projet.
+{% enddetails %}
+
+## Conslusions méthodologiques
+
+{% info %}
+Ne pas formaliser le cachier des charges ou le besoin utilisateur trop tôt : cela permet de bien plonger dans le sujet et de rester efficace. ***On peut aborder préliminairement le sujet par la technique et non par le cadrage et la gestion de projet !***
+{% endinfo %}
+
+### Réflexion par le parcours utilisateur
+Réfléchir au parcours utilisateur d'un point de vue technique permet de :
+- Etablir un cahier des charges techniques réaliste.
+- Evaluer la faisabilité, les besoins de formation et les hypothèses simplificatrices nécessaires.
+- Anticiper les besoins de stockage de donnée et commencer à concevoir des bases de données.
+{% attention %}
+Il peut être facile de tomber dans l'effet tunnel : oublier des fonctionnalités, oublier de récolter certaines données... **Modifier un template utilisé est plus décourageant que de prendre du temps pour sa conception.**
+{% endattention %}
+{% faire %}
+- **Alterner** les phases de développement pure et les phases de formalisation et de challenge de la démarche.
+- **Mettre en place des gardes fou** : variables prenant en compte la position de certaines données. Si cette position change, il ne faudra modifier QUE la valeur de cette variable plutôt que de modifier chaque ligne de code ou elle apparait. *Ex : coordonnées de la cellule contenant la largeur d'une route dans la page d'input.*
+{% endfaire %}
+
+### Le parcours de grille et tableau sur Excel
+Il est possible d'utiliser Excel comme grille graphique et de créer des simulacres de fonctionnalités de "Drag and drop" ou de dessin. **Toutefois**, il faut veiller à bien définir templates et bases de données pour :
+1. Limiter le nombre de parcours de grille.
+2. Limiter le temps d'éxécution des programmes.
+3. Multiplier les incohérences entre différentes grilles et/ou sources de donnée.
+{% faire %}
+- Utiliser une grille servant de base de donnée et résumant les autres. Elle peut-être remplie en parallèle des parcours inévitables des autres grilles.
+- Utiliser des variables d'état pour repérer l'état des tableaux. *Ex : prochaine colonne ou ligne à utiliser*
+{% endfaire %}
+
+### Pistes d'amélioration
+Pour se rapprocher le plus possible d'un système "Drag and drop", il pourrait être intéressant de créer une page "outil", dans laquelle les différents éléments à insérer dans les grilles sont présents. Le *drage* serait une *copier* et le *drop* un *coller*.
+*Exemples : un regroupement de x strings côté à côte, une route pouvant être juxtaposée à x strings,...*
+
+**Conditions de validation de la piste :**
+- ***Accessibilité*** : Peut-on faire apparaître cette page comme une fenêtre additionnelle pour éviter de passer d'une page à l'autre trop régulièrement ?
+- ***Facilité d'utilisation*** : Est-ce intuitif ? Si le "coller" est fait au mauvais endroit, comment l'indiquer à l'utilisateur ? (Coller une string au niveau d'un inter-rangée par exemple)
+
+## Livrable final
+
+***NB :*** Les feuilles de type "TEM" (i.e. template) n'ont pas été chachées afin de pouvoir observer les différents outils construits et utilisés. [Sprint 2](./Sprint%202.zip).
+Les images ci-dessous montrent un cas d'utilisation de l'outil :
+
+{% details "Phase 0 : Entrée des données de design" %}
+![Phase 0](./Phase%200.png)
+{% enddetails %}
+{% details "Phase 1 : Positionnement des strings et du PTR" %}
+![Phase 1](./Phase%201.png)
+{% enddetails %}
+{% details "Phase 2 : Positionnement des BR" %}
+![Phase 1](./Phase%202.png)
+{% enddetails %}
+{% details "Phase 3 : Affectation des strings aux BR" %}
+![Phase 1](./Phase%203.png)
+{% enddetails %}
+{% details "Phase 4.1 : Affichage récapitulatif" %}
+![Phase 1](./Phase%204.1.png)
+{% enddetails %}
+{% details "Phase 4.2 : Affectation d'une section de câble à chaque string" %}
+![Phase 1](./Phase%204.2.png)
+{% enddetails %}
+{% details "Livrable" %}
+![Phase 1](./Livrable.png)
+{% enddetails %}
