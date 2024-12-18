@@ -33,16 +33,18 @@ Pas de prérequis pour le moment
 - [Tableau peinture paysage nature PARADIS D'AUTOMNE, sur le-petit-fermier.com](https://le-petit-fermier.com/products/tableau-peinture-paysage-nature?variant=50060240290118)
 - [Image générée par IA sur fr.freepik.com par pjdesign](https://fr.pinterest.com/pin/391672498864069106/)
 - [How to Implement a Blender Model in a React.js Application using Three.js de Matthes.B sur FreeCodeCamp](https://www.freecodecamp.org/news/blender-three-js-react-js/)
-- [GitHub du site](https://github.com/KevinBERNARD1901/creature_site)
-- Sprint 2
 - [Vidéo de Youtube de Lucid Software, UML class diagrams](https://www.youtube.com/watch?v=6XrL5jXmTwM)
+- [Vidéo Youtube de Cameron McKenzie, Spring Boot, JPA & Hibernate REST based CRUD Web Project with MySQL & Swagger](https://www.youtube.com/watch?v=Rel5ymzBBFE)
+- [GitHub du site, creature_site de KevinBERNARD1901](https://github.com/KevinBERNARD1901/creature_site)
+
 {% endlien %}
 
 {% chemin %}
 <b> POK & MON </b>
-- [MON 2.1 : Introduction à React.js, Omar SALAME](../../../../2023-2024/Omar-Salame/mon/temps-2.1/index.md)
-- [MON 3.1 : Débuter avec React.js, Thomas DUROY](../../../../2022-2023/Duroy-Thomas/mon/MON_3.1/index.md)
-- [MON 2.1 : Animation 3D en React, Kévin BERNARD](../../mon/temps-2.1/index.md)
+- [MON 2.1 : Introduction à React.js, Omar SALAME](https://francoisbrucker.github.io/do-it/promos/2023-2024/Omar-Salame/mon/temps-2.1/)
+- [MON 3.1 : Débuter avec React.js, Thomas DUROY](https://francoisbrucker.github.io/do-it/promos/2022-2023/Duroy-Thomas/mon/MON_3.1/)
+- [MON 2.1 : Animation 3D en React, Kévin BERNARD](https://francoisbrucker.github.io/do-it/promos/2024-2025/Bernard-Kevin/mon/temps-2.1/)
+- [MON 2.2 : Spring Boot, Kévin BERNARD](https://francoisbrucker.github.io/do-it/promos/2024-2025/Bernard-Kevin/mon/temps-2.2/)
 {% endchemin %}
 
 <!-- **Liste d'idées:**
@@ -192,10 +194,12 @@ Pour le moment cela ressemble à cela :
 
 ### Second Sprint
 
+#### Spring
+
 Dans un premier temps, j'ai réalisé mon MON 2.2 sur Spring Boot pour me familiariser avec le backend.
 
 {% chemin %}
-- [MON 2.2 : Spring Boot, Kévin BERNARD](../../mon/temps-2.2/index.md)
+[MON 2.2 : Spring Boot, Kévin BERNARD](https://francoisbrucker.github.io/do-it/promos/2024-2025/Bernard-Kevin/mon/temps-2.2/)
 {% endchemin %}
 
 Ce MON m'a pris plus de temps que prévu et j'avais besoin de certaines notions pour avancer dans mon POK. J'ai continué l'apprentissage de Spring Data JPA avec la [Vidéo Youtube de Cameron McKenzie, Spring Boot, JPA & Hibernate REST based CRUD Web Project with MySQL & Swagger](https://www.youtube.com/watch?v=Rel5ymzBBFE).
@@ -221,13 +225,21 @@ J'ai vérifié que l'update automatique dans ma base de donnée sur SQL marchait
     }
 ```
 
+#### Diagramme de classes UML
+
 Une fois que j'avais un backend qui fonctionnait il ne me manquait que les données.
 La première chose que j'ai faite a été de créer un diagramme de classes UML.
 J'ai pris le premier site qui me permettait de faire cela (LucidChart)[https://www.lucidchart.com/pages/fr] parce que je voulais simplement avoir une base simple.
 
 ![alt text](media/creature_site.jpg)
 
+{% lien %}
+[Vidéo de Youtube de Lucid Software, UML class diagrams](https://www.youtube.com/watch?v=6XrL5jXmTwM)
+{% endlien %}
+
 Après cela, j'ai commencé à faire la liste de mes requêtes HTTP, j'ai atteint les 10H avant de la finir donc elle reste très simple et incomplète.
+
+#### Routes HTTP
 
 **POST**
 
@@ -309,8 +321,9 @@ Après cela, j'ai commencé à faire la liste de mes requêtes HTTP, j'ai attein
 - Task
   - markTaskAsDone(@PathVariable int taskId): Task
 
+---
 
-#### Retour sur expérience
+### Retour sur expérience
 
 **Difficultés :**
 

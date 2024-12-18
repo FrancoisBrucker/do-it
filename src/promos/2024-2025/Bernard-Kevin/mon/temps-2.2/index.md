@@ -1,4 +1,4 @@
-a---
+---
 layout: layout/mon.njk
 
 title: "MON 2.2 : Spring Boot et API REST"
@@ -62,7 +62,7 @@ résumé: ""
 
 ## 1. Introduction <a id="section1"></a>
 
-Ce MON s'inscrit dans la continuité de mon projet pour mon POK 2. J'avais fait l'ébauche du frontend et je suis passé au backend que je voulais faire en Java.
+Ce MON s'inscrit dans la continuité de mon projet pour mon [POK 2](https://francoisbrucker.github.io/do-it/promos/2024-2025/Bernard-Kevin/pok/temps-2/). J'avais fait l'ébauche du frontend et je suis passé au backend que je voulais faire en Java.
 Je me suis donc posé comme question :
 
 <center><b>Comment faire un backend en Java pour gérer une to do list?</b></center>
@@ -75,11 +75,11 @@ Dans un premier temps j'ai cherché à comprendre ce qu'était le backend dans u
 
 On a le frontend qui va gérer le visuel que l'on voit sur un site web et le backend correspond à ce qui va enregistrer et gérer nos données sur ce site.
 
-Grâce à la - [Vidéo Youtube de SuperSimpleDev, Backend web development - a complete overview](https://www.youtube.com/watch?v=XBu54nfzxAQ), j'ai pu revoir les bases déjà aborder en Linux avec François BRUCKER et les principaux langages utilisés.
+Grâce à la [Vidéo Youtube de SuperSimpleDev, Backend web development - a complete overview](https://www.youtube.com/watch?v=XBu54nfzxAQ), j'ai pu revoir les bases déjà aborder en Linux avec François BRUCKER et les principaux langages utilisés.
 
 Le backend s'apparente à gérer des requêtes pour manipuler les données de notre database.
 
-J'avais déjà la théorie donc je me suis concentré sur la partie plus appliqué en suivant ces étapes :
+J'avais déjà la théorie donc je me suis concentré sur la partie plus appliquée en suivant ces étapes :
 - Choisir le langage dans lequel je veux coder : **Java**
 - Le framework dans lequel je veux travailler : **Spring**
 - Choisir le package manager (qui gère les dépendances/bibliothèque) : **Maven**
@@ -99,7 +99,7 @@ Dans Spring, on a plein de "project" comme ils les appellent. Et j'ai eu beaucou
 - Spring Boot est une version préconfigurée de Spring Framework adaptée à l'utilisation par un développeur avec des dépendances déjà installées.
 - Les "projects" sont des modules que l'on peut ajouter comme dépendances pour simplifier une utilisation spécifique dans le backend, par exemple Spring Data JPA pour la gestion des données ou Spring Security pour la sécurité des données.
 
-Les sources qui m'ont aidé :
+Une source qui m'a aidée :
 [Vidéo Youtube de KANHOUN ACADEMIE, Qu'est-ce que Spring Boot ?, What is Spring Boot?](https://www.youtube.com/watch?v=8xrR49iCW38&t=603s)
 
 ## 4. Gradle/Maven <a id="section4"></a>
@@ -131,9 +131,18 @@ Pour cela, on prend l'architecture REST qui définit de règles à respecter.
 
 Une API REST est donc une API qui respecte l'architecture REST.
 
-Je survole simplement le sujet car cela s'éloigne de mon sujet. 
-J'ai récupéré ces informations des anciens MON et de vidéo sur le sujet :
+Je survole simplement le sujet car cela s'éloigne de mon sujet.
 
+{% lien %}
+J'ai récupéré ces informations des anciens MON et de vidéo sur le sujet :
+- [Définition d'une API REST sur Red Hat, Une API REST, qu'est-ce que c'est ?](https://www.redhat.com/fr/topics/api/what-is-a-rest-api)
+- [Wikipédia, Définition architecture REST](https://fr.wikipedia.org/wiki/Representational_state_transfer)
+- [Vidéo Youtube de IBM Technology, What is a REST API? ](https://www.youtube.com/watch?v=lsMQRaeKNDk)
+- [Mon de Amar](https://francoisbrucker.github.io/do-it/promos/2024-2025/Amar-Mbaye/mon/temps-2.2/)
+- [MON de Manuela](https://francoisbrucker.github.io/do-it/promos/2024-2025/Manuela-Barreto/mon/temps-1.2/)
+- [MON de Baptiste](https://francoisbrucker.github.io/do-it/promos/2024-2025/Baptiste-Audouin/mon/temps-1.1/)
+
+{% endlien %}
 
 ## 6. API REST dans Spring <a id="section6"></a>
 
@@ -231,4 +240,4 @@ Pour répondre à ma question :
 Grâce à ce MON, j'ai réussi à comprendre comment mettre en pratique mes connaissances sur le backend.
 Je peux utiliser Spring Boot avec Maven pour coder une API REST connecté à ma base de données MySQL pour gérer mes tâches.
 
-PS : Petit conseil de la fin, le cours de Java Gradle est vraiment bien fait pour revoir les bases de Java et appronfondir ses connaissjsons sur le sujet.
+**PS :** Petit conseil de la fin, le cours de Java Gradle est vraiment bien fait pour revoir les bases de Java et appronfondir ses connaissjsons sur le sujet.
