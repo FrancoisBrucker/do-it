@@ -37,6 +37,8 @@ Il existe un autre POK sur le sujet, [celui de William Lalanne](https://francois
 
 Le code est accessible ici : [memory game repository](https://github.com/lolapdx/memory-game/tree/main)
 
+Ou vous pouvez accéder directement au site pour y jouer : [mon site de mémory](https://lolapdx.github.io/memory-game/index.html)
+
 ## Planning
 
 ### Sprint 1
@@ -212,23 +214,29 @@ Je n'ai vraiment pas tout regardé en entier, je recherchais surtout des explica
 
 Durant ce sprint, j'avais réduit la quantité de travail en décidant de faire un site uniquement statique et me débarrassant de l'élaboration de questions de validation. C'était une bonne décision ! Au terme de ce deuxième sprint, je dispose d'un jeu fonctionnel, sans bugs.
 
-En revanche, je suis consciente que mon code est probablement loin d'être optimal, et j'ai trouvé ça difficile de savoir se positionner vis-à-vis des pratiques à adopter ou non dans le code en travaillant en autonomie, sans expérience, et avec "peu" de temps. Par exemple, j'ai décidé de ne pas trop me casser la tête avec le CSS, c'est donc peut être un peu fouillis.
+En revanche, je me suis rendue compte à la toute fin d'un petit soucis : le site n'était pas du tout responsive... et ne s'affichait pas bien sur les autres ordinateurs. J'ai corrigé ce défaut dans la partie bonus, car c'était essentiel d'avoir ce point là de réglé.
 
-Les plus grosses difficultées que j'ai rencontrées étaient situées au niveau de l'empêchement du click, l'affichage de l'input box, le style des boutons, les animations des cartes, et l'attente de la réponse de l'utilisateur. J'ai mis beaucoup de temps à trouver des solutions utiles à mes problèmes sur internet malgré la quantité d'infos.
+Je suis également consciente que mon code est probablement loin d'être optimal, et j'ai trouvé ça difficile de savoir se positionner vis-à-vis des pratiques à adopter ou non dans le code en travaillant en autonomie, sans expérience, et avec "peu" de temps.
 
-Enfin, il me reste quelques fonctionnalités que j'ai laissées de côté pour pouvoir finir à temps : le chronomètre, et le niveau expert. C'est une petite déception mais je suis quand même contente de tout ce que j'ai réussi à produire.
+Sinon, les plus grosses difficultées que j'ai rencontrées étaient situées au niveau de l'empêchement du click, l'affichage de l'input box, le style des boutons, les animations des cartes, et l'attente de la réponse de l'utilisateur. J'ai mis beaucoup de temps à trouver des solutions utiles à mes problèmes sur internet malgré la quantité d'infos.
 
-## BONUS : mode expert
+Enfin, il me reste donc quelques fonctionnalités que j'ai laissées de côté pour pouvoir finir à temps : le responsive, le chronomètre, et le niveau expert. C'est une petite déception mais je suis quand même contente de tout ce que j'ai réussi à produire.
 
-En bonus, c'est-à-dire au delà des 20h du projet, j'ai passé une petite heure en plus pour améliorer le code et surtout pour implémenter le niveau expert que je n'avais pas eu le temps de faire. Pourtant, ce n'était pas si compliqué une fois le niveau initié de fait.
+## BONUS : améliorations
+
+En bonus, c'est-à-dire au delà des 20h du projet, j'ai passé quelques heures en plus pour améliorer le code et surtout pour implémenter le responsive et le niveau expert que je n'avais pas eu le temps de faire. Pourtant, ce n'était pas si compliqué une fois le niveau initié de fait.
 
 Le principe de ce mode est de valider la paire en devinant le numéro du pokédex du pokemon retourné. Le public est sans doute plus restreint, sans pour autant être inexistant...
 
-Enfin, en dernières modifications, les règles du jeu ainsi que le header. Il manque donc juste le chronomètre désormais... Mais mon site me plaît bien comme ça.
+Ensuite, quelques modifications, les règles du jeu ainsi que le header.
 
 | Début de la partie | Version initié | Version expert | Jeu gagné ! |
 |----|----|----|----|
 |![initialisation](final.jpg)|![niveau initiate](final_initiate.jpg)|![niveau expert](final_expert.jpg)|![final](final_congrats.jpg)|
+
+C'est seulement à cette étape que j'ai compris qu'il fallait que fasse la partie responsive du site, mais désormais ça marche bien !
+
+Il manque donc juste le chronomètre désormais... Mais mon site me plaît bien comme ça.
 
 ## Sources
 
