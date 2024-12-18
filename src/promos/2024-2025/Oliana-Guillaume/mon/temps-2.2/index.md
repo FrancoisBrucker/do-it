@@ -5,7 +5,7 @@ title: "Introduction à la blockchain"
 authors:
   - OLIANA Guillaume
 
-date: 1971-01-01
+date: 2024-12-01
 tags: 
   - "temps 2"
 
@@ -14,7 +14,7 @@ résumé: "Un MON autour de la blockchain."
 
 {% prerequis %}
 
-LAucun prérequis, ce MON est un travail de recherche qui a pour but de m'éduquer sur ces technologies, aussi bien que ceux qui prendront le temps de le lire.
+LAucun prérequis, ce MON est un travail de recherche qui a pour but de m'éduquer sur ces technologies.
 
 {% endprerequis %}
 {% lien %}
@@ -25,6 +25,8 @@ LAucun prérequis, ce MON est un travail de recherche qui a pour but de m'éduqu
 
 [Comprendre la blockchain en 7min](https://www.youtube.com/watch?v=6uYRN6b5EMU&t=13s)
 
+[Different consensus mechanisms](https://www.investopedia.com/terms/c/consensus-mechanism-cryptocurrency.asp)
+
 
 
 {% endlien %}
@@ -33,25 +35,21 @@ LAucun prérequis, ce MON est un travail de recherche qui a pour but de m'éduqu
 ## Contenu
 
 ### **1. Introduction à la blockchain**
-Définition
+
 La blockchain est une technologie de stockage et de transmission de données fonctionnant comme un registre distribué et immuable. Chaque transaction ou information est enregistrée dans un réseau décentralisé de manière sécurisée et transparente, accessible à tous les participants du réseau. Une fois les données validées, elles deviennent impossibles à modifier ou à supprimer, garantissant ainsi l’intégrité des informations.
 
-Historique : Origine et évolution
-Les prémices de la blockchain
+### Historique : Origine et évolution
+
 Les bases théoriques de la blockchain remontent aux années 1990, avec des travaux sur l’horodatage sécurisé des données numériques. Ces concepts techniques se sont concrétisés en 2008 avec l’invention de Bitcoin, la première application fonctionnelle de cette technologie.
 
-### Création de Bitcoin (2008)
+#### Création de Bitcoin (2008)
 
-Satoshi Nakamoto, un pseudonyme collectif ou individuel, publie le livre blanc intitulé "Bitcoin: A Peer-to-Peer Electronic Cash System".
-La blockchain est utilisée pour résoudre le problème du "double spending" dans les monnaies numériques, garantissant qu’une unité de monnaie ne puisse pas être dépensée deux fois.
+Satoshi Nakamoto, connu comme le créateur de Bitcoin et dont l'identité reste encore à ce jour inconnue, publie le un papier (white paper) intitulé "Bitcoin: A Peer-to-Peer Electronic Cash System".
+
+Dans ce document, il explique comment la blockchain peut être utilisée pour résoudre le problème du "double spending" dans les monnaies numériques, garantissant qu’une unité de monnaie ne puisse pas être dépensée deux fois.
 Le premier bloc, connu sous le nom de Genesis Block, est miné le 3 janvier 2009, marquant le début de l’ère blockchain.
-Au-delà de Bitcoin : Évolution vers d'autres plateformes
 
-### Ethereum (2015) : Introduit les smart contracts, des programmes exécutés automatiquement sur la blockchain, ouvrant la voie à des applications complexes au-delà des paiements.
-Hyperledger Fabric (2016) : Développé pour des blockchains permissionnées adaptées aux entreprises, comme dans la gestion de la chaîne d'approvisionnement.
-Polkadot, Solana et d’autres : Axées sur des solutions innovantes comme l’interopérabilité et la haute performance.
-
-Cas d’utilisation de la blockchain
+#### Cas d’utilisation de la blockchain
 
 Bien que la blockchain soit née pour soutenir les cryptomonnaies, son champ d'application s'est étendu à de nombreux secteurs.
 
@@ -98,7 +96,7 @@ Voici les étapes détaillées lorsque **A** envoie 1 Bitcoin à **B** :
    - **A** utilise son portefeuille Bitcoin pour créer une transaction.
    - La transaction spécifie :
      - L'adresse Bitcoin de **B** (clé publique de B, dérivée de sa clé privée).
-     - Le montant transféré (1 BTC, soit 0.40€ en 2010 et 90 000€ en 2024).
+     - Le montant transféré (1 BTC, soit 0.40€ en 2010 et 105 000€ à l'heure actuelle).
      - Une signature numérique générée avec la clé privée de **A**, prouvant que **A** autorise la transaction.
 
 2. **Diffusion de la transaction** :
@@ -151,11 +149,11 @@ Dans un réseau décentralisé, le consensus est essentiel pour garantir la coh�
   - **Avantages** :  
     - Garantit une sécurité robuste grâce au coût élevé du minage.  
   - **Inconvénients** :  
-    - Inefficience énergétique : La résolution de $H(\text{header} + n)$ est un processus de recherche exhaustive (brute-force).  
+    - Inefficience énergétique : La résolution de $H(\text{header} + n)$ est un processus de recherche exhaustive (brute-force). Cela fait d'ailleurs partie de ce qui est reproché à Bitcoin par ses détracteurs et concurrents.
     - Centralisation potentielle dans des pools de minage.  
 
 - **Proof of Stake (PoS)**  
-  - **Principe** : Les validateurs sont choisis pour proposer ou valider des blocs en fonction de la quantité de tokens qu’ils possèdent et ont "stakée".  
+  - **Principe** : Les validateurs sont choisis pour proposer ou valider des blocs en fonction de la quantité de tokens qu’ils possèdent et ont "stakée" (accumulée, bloquée).  
   - **Sélection du validateur** :  
     - Le choix est souvent basé sur une fonction pseudo-aléatoire pondérée par :  
       - Le montant staké $S$.  
@@ -222,7 +220,7 @@ La sécurité de la blockchain repose sur des propriétés mathématiques et cry
 
 ### 3. Composants techniques classiques
 
-Les composants techniques qui font fonctionner une blockchain sont variés, allant des protocoles réseau à la cryptographie utilisée pour sécuriser les transactions. Comprendre ces éléments est essentiel pour saisir comment la blockchain garantit la sécurité, la décentralisation et l'intégrité des données.
+Les composants techniques qui font fonctionner une blockchain sont variés, allant des protocoles réseau à la cryptographie utilisée pour sécuriser les transactions. Comprendre ces éléments est essentiel pour saisir comment la blockchain garantit la sécurité, la décentralisation et l'intégrité des données. Commeçpns par la base : 
 
 #### Langages de programmation
 
@@ -256,10 +254,10 @@ La blockchain, en plus de ses fondements théoriques, se déploie déjà dans de
 
 #### Démonstration d'une blockchain simple en Python
 
-L'une des façons les plus simples d'appréhender le fonctionnement d'une blockchain est de la créer en Python. Voici les étapes essentielles pour concevoir une blockchain de base.
+L'une des façons les plus simples d'appréhender le fonctionnement d'une blockchain est de la créer en Python. De façon très simplifiée, voici la structure de celle-ci:
 
 1. **Structure d’un bloc**
-   Un bloc de la blockchain contient généralement trois éléments essentiels :
+   Un bloc de la blockchain contient généralement les éléments essentiels suivants:
    - **Index** : Un identifiant unique pour chaque bloc.
    - **Timestamp** : La date et l’heure de la création du bloc.
    - **Données** : Les informations stockées dans le bloc, comme des transactions ou des événements.
@@ -271,41 +269,100 @@ L'une des façons les plus simples d'appréhender le fonctionnement d'une blockc
    ```python
    import hashlib
    import time
-
+   import networkx as nx
+   import matplotlib.pyplot as plt
+   
    class Block:
-       def __init__(self, index, previous_hash, timestamp, data, hash):
-           self.index = index
-           self.previous_hash = previous_hash
-           self.timestamp = timestamp
-           self.data = data
-           self.hash = hash
+    def __init__(self, index, previous_hash, timestamp, data, hash):
+      self.index = index
+      self.previous_hash = previous_hash
+      self.timestamp = timestamp
+      self.data = data
+      self.hash = hash
 
-       def calculate_hash(self):
-           block_string = f'{self.index}{self.previous_hash}{self.timestamp}{self.data}'
-           return hashlib.sha256(block_string.encode('utf-8')).hexdigest()
+    def calculate_hash(self):
+      block_string = f'{self.index}{self.previous_hash}{self.timestamp}{self.data}'
+      return hashlib.sha256(block_string.encode('utf-8')).hexdigest()
+      
+    def create_genesis_block():
+      genesis_data = "Genesis Block"
+      genesis_hash = hashlib.sha256(genesis_data.encode('utf-8')).hexdigest()
+      return Block(0, "0", int(time.time()), genesis_data, genesis_hash)
+      
+    def create_new_block(previous_block, data):
+      index = previous_block.index + 1
+      timestamp = int(time.time())
+      combined_data = f'{index}{previous_block.hash}{timestamp}{data}'
+      block_hash = hashlib.sha256(combined_data.encode('utf-8')).hexdigest()
+      return Block(index, previous_block.hash, timestamp, data, block_hash)
+      
+    
+    blockchain = [create_genesis_block()]
+    previous_block = blockchain[0]
+    
+    
+    for i in range(1, 5):
+      new_block = create_new_block(previous_block, f"Transaction data for Block #{i}")
+      blockchain.append(new_block)
+      previous_block = new_block
+      
+      
+    def plot_blockchain(blockchain):
+      G = nx.DiGraph()
+      
+      for block in blockchain:
+        block_label = f"Block #{block.index}\nHash: {block.hash[:8]}..."
+        G.add_node(block.index, label=block_label)
 
-   def create_genesis_block():
-       return Block(0, "0", int(time.time()), "Genesis Block", "0")
+        if block.index > 0:
+            G.add_edge(block.index - 1, block.index, label="Linked via hash")
 
-   def create_new_block(previous_block, data):
-       index = previous_block.index + 1
-       timestamp = int(time.time())
-       hash = hashlib.sha256(f'{index}{previous_block.hash}{timestamp}{data}'.encode('utf-8')).hexdigest()
-       return Block(index, previous_block.hash, timestamp, data, hash)
+    pos = {i: (i, 0) for i in range(len(blockchain))}
 
-   # Création de la chaîne de blocs
-   blockchain = [create_genesis_block()]
-   previous_block = blockchain[0]
-   for i in range(1, 10):
-       new_block = create_new_block(previous_block, f"Block #{i} Data")
-       blockchain.append(new_block)
-       previous_block = new_block
+    plt.figure(figsize=(12, 6))
+    nx.draw(
+        G, pos, with_labels=True, labels=nx.get_node_attributes(G, 'label'),
+        node_color="skyblue", node_size=2000, font_size=10, font_weight="bold", 
+        arrows=True, arrowstyle="->", arrowsize=15
+    )
 
-   # Affichage de la blockchain
-   for block in blockchain:
-       print(f"Block #{block.index} : {block.hash}")
+    edge_labels = nx.get_edge_attributes(G, 'label')
+    nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, font_color="red")
 
+    plt.title("Visualisation de la Blockchain")
+    plt.show()
+
+    plot_blockchain(blockchain)
   ```
+
+#### Résultats: 
+
+
+================================================================================
+                     Visualisation graphique de la Blockchain                  
+================================================================================
+
+--------------------------------------------------------------------------------
+| BLOCK #0                              Timestamp: 1702913450 |
+--------------------------------------------------------------------------------
+| Previous Hash : 0                                                           |
+| Data          : Genesis Block                                               |
+| Current Hash  : 9a6e0c80d243fcf2b9adfe32024cc03be27364fb8db4...             |
+--------------------------------------------------------------------------------
+                                     ↓
+
+--------------------------------------------------------------------------------
+| BLOCK #1                              Timestamp: 1702913451 |
+--------------------------------------------------------------------------------
+| Previous Hash : 9a6e0c80d243fcf2b9adfe32024cc03be27364fb8db4...             |
+| Data          : Transaction data for Block #1                              |
+| Current Hash  : b7c1a748bd8d843e51912b23be8b9a1f55c42c72fa17...             |
+--------------------------------------------------------------------------------
+                                     ↓
+...
+================================================================================
+
+![alt text](image-3.png)
 
 
   Ce code illustre une chaîne de blocs qui s’étend avec chaque nouvelle "transaction" (ici, des données textuelles). Chaque bloc se réfère au précédent grâce à son hash, assurant la continuité de la blockchain.
@@ -314,10 +371,12 @@ L'une des façons les plus simples d'appréhender le fonctionnement d'une blockc
 
 Lorsqu’un nouveau bloc est ajouté, sa validité est vérifiée par rapport à la chaîne existante. Si le hash du bloc précédent ne correspond pas, cela signifie qu'une tentative de fraude a été effectuée. Dans une implémentation réelle, ce processus est répété et vérifié par plusieurs nœuds du réseau, assurant la sécurité de la blockchain.
 
-**Utilisation de frameworks de blockchain**
 
 
-Bien que créer une blockchain à partir de zéro soit un excellent moyen d'apprendre, dans un cadre réel, des frameworks et des plateformes spécialisées sont utilisés pour déployer des blockchains plus complexes.
+
+
+
+
 
 
 
