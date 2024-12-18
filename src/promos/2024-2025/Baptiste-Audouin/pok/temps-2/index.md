@@ -24,7 +24,7 @@ Pas de prérequis particuliers.
  - [Cours DevWeb](https://francoisbrucker.github.io/cours_informatique/enseignements/ecm/2A/option-web/)
  - [Developer mozilla](https://developer.mozilla.org/en-US/)
  - [Jeu snake](https://www.snake.fr)
-
+{% endlien %}
 
 ## Tâches
 
