@@ -1,24 +1,156 @@
-<p>a---
-layout: layout/mon.njk</p>
-<p>title: &quot;MON 2.2 : Spring Boot et API REST&quot;
-authors:</p>
-<ul>
-<li>Kévin BERNARD</li>
-</ul>
-<p>date: 2024-12-16
-tags:</p>
-<ul>
-<li>&quot;temps 2&quot;</li>
-<li>&quot;vert&quot;</li>
-<li>&quot;java&quot;</li>
-<li>&quot;spring&quot;</li>
-<li>&quot;spring boot&quot;</li>
-<li>&quot;api rest&quot;</li>
-<li>&quot;maven&quot;</li>
-<li>&quot;jpa&quot;</li>
-<li>&quot;backend&quot;</li>
-</ul>
-<h2>résumé: &quot;&quot;</h2>
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>MON 2.2 : Spring Boot et API REST</title>
+
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [
+                [
+                '$', '$'
+                ],
+                [
+                '\\(', '\\)'
+                ]
+            ]
+            },
+            svg: {
+            fontCache: 'global'
+            }
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
+
+        <header class="border-b-2 border-gray-200 mb-4">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="min-h-[50px] flex justify-between items-center">
+                <a class="mx-2" href="/do-it/">Home</a>
+                <div class="flex items-center gap-4 sm:gap-6 ">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                        </svg>
+                    </a>
+                    <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
+                        <svg class="h-5 aspect-square" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
+            
+<article class="relative">
+<h1 class="mb-1">MON 2.2 : Spring Boot et API REST</h1>
+<div class="mb-4">
+    
+        <div class="px-4 flex flex-wrap items-center">
+            
+                <div class="font-bold">Tags : </div>
+            
+            <ul class="flex flex-wrap overflow-auto not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">MON</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">2024-2025</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 2</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">vert</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">java</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">spring</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">spring boot</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">api rest</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">maven</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">jpa</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">backend</li>
+                
+
+            </ul>
+            
+            
+            <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="px-4 flex flex-wrap items-center">
+            <div class="font-bold">Auteurs : </div>
+            <ul class="flex flex-wrap not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Kévin BERNARD</li>
+                
+            </ul>
+        </div>
+    
+
+    
+</div>
+
+
+
+    
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-purple-500 bg-purple-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>
+</svg>
+<div class="pl-8 mr-8">
+
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Bernard-Kevin/">Kévin BERNARD</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Bernard-Kevin/mon/">MON de Kévin BERNARD</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Bernard-Kevin/mon/temps-2.2/">MON 2.2 : Spring Boot et API REST</a>
+
+</div></div>
+
+
+
+
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
@@ -76,16 +208,16 @@ tags:</p>
 <li><a href="#section7">Conclusion</a></li>
 </ol>
 <h2>1. Introduction <a id="section1"></a></h2>
-<p>Ce MON s'inscrit dans la continuité de mon projet pour mon POK 2. J'avais fait l'ébauche du frontend et je suis passé au backend que je voulais faire en Java.
+<p>Ce MON s'inscrit dans la continuité de mon projet pour mon <a href="https://francoisbrucker.github.io/do-it/promos/2024-2025/Bernard-Kevin/pok/temps-2/">POK 2</a>. J'avais fait l'ébauche du frontend et je suis passé au backend que je voulais faire en Java.
 Je me suis donc posé comme question :</p>
 <center><b>Comment faire un backend en Java pour gérer une to do list?</b></center>
 <p>Ce MON sera mon raisonnement pour répondre à cette question et les choses que j'ai apprises au fur et à mesure. Je veux que ce MON permette à d'autres de savoir si ils veulent travailler en Java en backend et qu'il leur serve de raccourci puisqu'ils seront quoi chercher et pourront s'inspirer de mon travail.</p>
 <h2>2. Le backend <a id="section2"></a></h2>
 <p>Dans un premier temps j'ai cherché à comprendre ce qu'était le backend dans un site web.</p>
 <p>On a le frontend qui va gérer le visuel que l'on voit sur un site web et le backend correspond à ce qui va enregistrer et gérer nos données sur ce site.</p>
-<p>Grâce à la - <a href="https://www.youtube.com/watch?v=XBu54nfzxAQ">Vidéo Youtube de SuperSimpleDev, Backend web development - a complete overview</a>, j'ai pu revoir les bases déjà aborder en Linux avec François BRUCKER et les principaux langages utilisés.</p>
+<p>Grâce à la <a href="https://www.youtube.com/watch?v=XBu54nfzxAQ">Vidéo Youtube de SuperSimpleDev, Backend web development - a complete overview</a>, j'ai pu revoir les bases déjà aborder en Linux avec François BRUCKER et les principaux langages utilisés.</p>
 <p>Le backend s'apparente à gérer des requêtes pour manipuler les données de notre database.</p>
-<p>J'avais déjà la théorie donc je me suis concentré sur la partie plus appliqué en suivant ces étapes :</p>
+<p>J'avais déjà la théorie donc je me suis concentré sur la partie plus appliquée en suivant ces étapes :</p>
 <ul>
 <li>Choisir le langage dans lequel je veux coder : <strong>Java</strong></li>
 <li>Le framework dans lequel je veux travailler : <strong>Spring</strong></li>
@@ -103,7 +235,7 @@ Je me suis donc posé comme question :</p>
 <li>Spring Boot est une version préconfigurée de Spring Framework adaptée à l'utilisation par un développeur avec des dépendances déjà installées.</li>
 <li>Les &quot;projects&quot; sont des modules que l'on peut ajouter comme dépendances pour simplifier une utilisation spécifique dans le backend, par exemple Spring Data JPA pour la gestion des données ou Spring Security pour la sécurité des données.</li>
 </ul>
-<p>Les sources qui m'ont aidé :
+<p>Une source qui m'a aidée :
 <a href="https://www.youtube.com/watch?v=8xrR49iCW38&amp;t=603s">Vidéo Youtube de KANHOUN ACADEMIE, Qu'est-ce que Spring Boot ?, What is Spring Boot?</a></p>
 <h2>4. Gradle/Maven <a id="section4"></a></h2>
 <p>Quand j'ai compris ce qu'était SpringBoot, j'ai essayé de l'installer dans l'environnement de VSCode. J'ai suivi la <a href="https://code.visualstudio.com/docs/java/java-spring-boot">Documentation Vscode, Spring Boot in Visual Studio Code</a> pour le faire.</p>
@@ -124,8 +256,23 @@ Je me suis donc posé comme question :</p>
 <p>Sauf que pour que le frontend et le backend se comprennent il faut qu'il parle la même langue.
 Pour cela, on prend l'architecture REST qui définit de règles à respecter.</p>
 <p>Une API REST est donc une API qui respecte l'architecture REST.</p>
-<p>Je survole simplement le sujet car cela s'éloigne de mon sujet.
-J'ai récupéré ces informations des anciens MON et de vidéo sur le sujet :</p>
+<p>Je survole simplement le sujet car cela s'éloigne de mon sujet.</p>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p>J'ai récupéré ces informations des anciens MON et de vidéo sur le sujet :</p>
+<ul>
+<li><a href="https://www.redhat.com/fr/topics/api/what-is-a-rest-api">Définition d'une API REST sur Red Hat, Une API REST, qu'est-ce que c'est ?</a></li>
+<li><a href="https://fr.wikipedia.org/wiki/Representational_state_transfer">Wikipédia, Définition architecture REST</a></li>
+<li><a href="https://www.youtube.com/watch?v=lsMQRaeKNDk">Vidéo Youtube de IBM Technology, What is a REST API? </a></li>
+<li><a href="https://francoisbrucker.github.io/do-it/promos/2024-2025/Amar-Mbaye/mon/temps-2.2/">Mon de Amar</a></li>
+<li><a href="https://francoisbrucker.github.io/do-it/promos/2024-2025/Manuela-Barreto/mon/temps-1.2/">MON de Manuela</a></li>
+<li><a href="https://francoisbrucker.github.io/do-it/promos/2024-2025/Baptiste-Audouin/mon/temps-1.1/">MON de Baptiste</a></li>
+</ul>
+</div></div>
+
 <h2>6. API REST dans Spring <a id="section6"></a></h2>
 <p>Je savais quel outil utilisé (Spring Boot avec Maven) et ce que je voulais faire : une API REST. Je me suis ensuite intéressé à comment créer une API REST dans Spring Boot.</p>
 <h3>Controller</h3>
@@ -197,4 +344,30 @@ Les autres sources qui m'ont aidé :</li>
 <p><strong>Comment faire un backend en Java pour gérer une to do list?</strong></p>
 <p>Grâce à ce MON, j'ai réussi à comprendre comment mettre en pratique mes connaissances sur le backend.
 Je peux utiliser Spring Boot avec Maven pour coder une API REST connecté à ma base de données MySQL pour gérer mes tâches.</p>
-<p>PS : Petit conseil de la fin, le cours de Java Gradle est vraiment bien fait pour revoir les bases de Java et appronfondir ses connaissjsons sur le sujet.</p>
+<p><strong>PS :</strong> Petit conseil de la fin, le cours de Java Gradle est vraiment bien fait pour revoir les bases de Java et appronfondir ses connaissjsons sur le sujet.</p>
+
+
+</article>
+
+        </main>
+
+
+        <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div class="min-h-[50px] flex justify-center items-center">
+                    <p class="text-center">
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développent et Organisation en IT
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        MathJax
+            .startup
+            .document
+            .getMathItemsWithin(document.body);
+        </script>
+        <script src="/do-it/assets/node_modules/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+    </body>
+</html>
