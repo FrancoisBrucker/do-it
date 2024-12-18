@@ -23,9 +23,8 @@ Pas de prérequis particuliers.
  - [Site Do_it](https://francoisbrucker.github.io/do-it/)
  - [Cours DevWeb](https://francoisbrucker.github.io/cours_informatique/enseignements/ecm/2A/option-web/)
  - [Developer mozilla](https://developer.mozilla.org/en-US/)
- - [Jeu snake](https://www.snake.fr/blog-pages/guide-creer-jeu-snake-JavaScript)
+ - [Jeu snake](https://www.snake.fr)
 {% endlien %}
-
 
 ## Tâches
 
@@ -72,7 +71,7 @@ Le prochain sprint sera consacré au code du jeu en JavaScript puis, en fonction
 
 ## Second Sprint
 
-Pour ce second sprint le but était d'implémenter le code JavaScript du jeu, après avoir trouvé le code "simple" du [jeu](https://www.snake.fr/blog-pages/guide-creer-jeu-snake-JavaScript) sur un blog j'ai compris la logique à suivre et les différents éléments indispensables pour réussir mon projet. Après avoir compris ce code j'ai défini toutes les améliorations que je voulais faire afin d'ajouter des éléments à ce premier exemple : 
+Pour ce second sprint le but était d'implémenter le code JavaScript du jeu, après avoir trouvé le code "simple" du [jeu](https://www.snake.fr) sur un blog j'ai compris la logique à suivre et les différents éléments indispensables pour réussir mon projet. Après avoir compris ce code j'ai défini toutes les améliorations que je voulais faire afin d'ajouter des éléments à ce premier exemple : 
 
  - 1. Accélération progressive
  - 2. Calcul de record
