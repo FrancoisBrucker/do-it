@@ -146,11 +146,14 @@
 <li><a href="https://tailwindcss.com/">CSS Utility Framework (Tailwind)</a></li>
 <li><a href="https://firebase.google.com/docs/auth">Firebase Authentication</a></li>
 <li><a href="https://firebase.google.com/docs/firestore">Firestore</a></li>
+<li><a href="https://stackblitz.com/edit/vite-mwbmhvcj?file=main.js">Stackblitz setup</a></li>
+<li><a href=".">Lien vers le repo Github</a></li>
 </ul>
 </div></div>
 
 <h2>Contexte du Projet</h2>
-<p>J'ai entrepris de créer une application de gestion de tâches, un projet basique mais qui permet selon mes recherches d'acquérir les bases.  L'idée était de développer une application web qui soit à la fois légère, fonctionnelle et agréable à utiliser. Je n'ai pas vraiment atteint ce dernier objectif mais le sprint 2 me permettra d'aller plus loin dans le front end pur, les animations,</p>
+<p>J'ai entrepris de créer une application de gestion de tâches, un projet basique mais qui permet selon mes recherches d'acquérir les bases.  L'idée était de développer une application web qui soit à la fois légère, fonctionnelle et agréable à utiliser. Je n'ai pas vraiment atteint ce dernier objectif mais le sprint 2 me permettra d'aller plus loin dans le front end.</p>
+<p>A noter que j'ai utilisé partiellement l'environnement de développement Stackblitz qui permet de faire tourner des &quot;server-side sorftware&quot; directement dans le web browser. Une fois les test sur Firebase faits et validés j'ai travaillé en local sur ma machine sur VSCode.</p>
 <h3>Horodatage</h3>
 <p>Mon parcours de développement s'est étalé sur plusieurs sessions de travvail :</p>
 <table>
@@ -183,22 +186,22 @@
 <td>Développement du formulaire d'ajout de tâches</td>
 </tr>
 <tr>
-<td>09/11/2024</td>
+<td>29/11/2024</td>
 <td>3h</td>
 <td>Mise en place des filtres et de la logique de catégories</td>
 </tr>
 <tr>
-<td>11/11/2024</td>
+<td>01/12/2024</td>
 <td>2h</td>
 <td>&quot;Raffinement&quot; l'interface utilisateur</td>
 </tr>
 <tr>
-<td>13/11/2024</td>
-<td>2h</td>
+<td>03/12/2024</td>
+<td>3h</td>
 <td>Stylisation et harmonisation visuelle</td>
 </tr>
 <tr>
-<td>15/11/2024</td>
+<td>05/12/2024</td>
 <td>2h</td>
 <td>Tests, débogage et derniers ajustements</td>
 </tr>
@@ -209,8 +212,8 @@
 <p>Après quelques réflexions, j'ai opté pour une stack moderne :</p>
 <ul>
 <li><strong>React.js</strong> : Pour sa flexibilité et sa réactivité</li>
-<li><strong>Tailwind CSS</strong> : Afin de gagner en rapidité de développement et enfin découvrir ce qu'était Tailwind.</li>
-<li><strong>Firebase</strong> : Pour gérer l'authentification et le stockage des données facilement, je ne voulais pas développer le &quot;backend&quot; de zéro par moi même, le but de ce POK est de découvrir le frontend.</li>
+<li><strong>Tailwind CSS</strong> : Afin de gagner en rapidité de développement et découvrir ce qu'était Tailwind.</li>
+<li><strong>Firebase</strong> : Pour gérer l'authentification et le stockage des données facilement, je ne voulais pas développer le &quot;backend&quot; de zéro par moi même, le but de ce POK est de découvrir le front.</li>
 </ul>
 <h3>Étapes de Réalisation</h3>
 <h4>Initialisation et Configuration</h4>
@@ -232,29 +235,32 @@
 Utilisation des fonctions pour vérifier si un utilisateur est déjà connecté (persistance des sessions).
 Alternance entre les modes &quot;Connexion&quot; et &quot;Créer un compte&quot; via une logique conditionnelle dans l'interface.</p>
 <h5>Gestion des tâches :</h5>
-<p>Ajout d'une tâche avec des champs tels que :
-Titre
-Catégorie
-Niveau de priorité
-Date et heure
-Les données saisies dans le formulaire sont validées avant d'être enregistrées.</p>
+<p>Ajout d'une tâche avec des champs tels que :</p>
+<ul>
+<li>Titre</li>
+<li>Catégorie</li>
+<li>Niveau de priorité</li>
+<li>Date et heure</li>
+</ul>
+<p>Les données saisies dans le formulaire sont validées avant d'être enregistrées.</p>
 <h5>Stockage Firebase Firestore :</h5>
 <p>Les tâches créées par l'utilisateur sont enregistrées dans Firestore.
-Chaque tâche est associée à l'utilisateur connecté grâce à l'ID unique de celui-ci.
-A</p>
-<h5>ffichage des tâches :</h5>
+Chaque tâche est associée à l'utilisateur connecté grâce à l'ID unique de celui-ci.</p>
+<h5>Affichage des tâches :</h5>
 <p>Les tâches récupérées depuis Firestore sont affichées dynamiquement dans une liste.
 La liste est triée ou filtrée selon des critères comme la date ou la priorité.</p>
 <h5>Mise à jour et suppression des tâches :</h5>
 <p>Fonctionnalité pour éditer les détails d'une tâche existante.
 Suppression d'une tâche directement depuis l'interface, avec une synchronisation en temps réel avec Firestore.</p>
+<p><img src="image.png" alt="alt text"></p>
 <h5>Structure du Frontend :</h5>
 <p>Le frontend est conçu en React.
-Utilisation de composants pour organiser le code (ex. : TaskList, TaskForm, LoginForm).
-Les états globaux et locaux sont gérés efficacement via useState et useEffect.</p>
+Utilisation de composants pour organiser le code (ex. : TaskList, TaskForm, LoginForm).</p>
+<p><img src="image.png" alt="alt text"></p>
 <h5>Backend Firebase :</h5>
 <p>Firestore est utilisé pour gérer la base de données en temps réel.
 Les règles de sécurité Firestore assurent que chaque utilisateur accède uniquement à ses propres tâches.</p>
+<p><img src="image-1.png" alt="alt text"></p>
 <h2>Défis Rencontrés</h2>
 <p>Le développement n'a pas été un long fleuve tranquille. J'ai dû :</p>
 <ul>
@@ -267,7 +273,7 @@ Les règles de sécurité Firestore assurent que chaque utilisateur accède uniq
 <ul>
 <li>Approfondir mes compétences en React (qui étaient proches de zéro)</li>
 <li>Comprendre l'écosystème Firebase (j'ai développé plus en profondeur ce sujet dans mon MON2.1)</li>
-<li>Maîtriser Tailwind CSS (maîtriser les bases et aller un peu plus loin avec des tutoriels Youtube)</li>
+<li>Maîtriser Tailwind CSS (maîtriser les bases et aller un peu plus loin avec des tutoriels Youtube, du genre ajouter des confettis)</li>
 <li>Appréhender une approche composant pour le développement web (c'est mon premier projet web avec React)</li>
 </ul>
 <h2>Perspectives pour le SPRINT 2 :</h2>
@@ -279,6 +285,18 @@ Les règles de sécurité Firestore assurent que chaque utilisateur accède uniq
 <li>Ajouter une barre de progression des tâches.</li>
 <li>Utiliser un formulaire pour ajouter des tâches (laisser seulement un bouton &quot;Ajouter une tâche&quot; sur la page)</li>
 </ol>
+<h1>SPRINT 2 :</h1>
+<h2>Amélioration de l'UI de la page de login</h2>
+<p><img src="image-3.png" alt="alt text"></p>
+<p>Rien de bien compliqué ici, j'ai retravaillé la partie signup/login que je n'avais pas pris le temps de rendre esthétiquement potable au sprint 1.</p>
+<h2>Implémentation d'un formulaire pour créer une tâche</h2>
+<p><img src="image-4.png" alt="alt text"></p>
+<p><img src="image-5.png" alt="alt text"></p>
+<h2>Ajout d'une barre de progression d'accomplissement des tâches</h2>
+<p>Cette barre de progression est globale et les filtres ne s'y applique pas pour le moment.</p>
+<p><img src="image-6.png" alt="alt text"></p>
+<h1>Conclusion</h1>
+<p>En conclusion ce projet m'a permis de découvrir plus en profondeur le front avec l'implémentation de fonctionnalités simples. L'utilisation de firebase m'a fait gagné énormément de temps et éviter beaucoup de prises de tête sur la logique à découvrir pour gérer un backend.</p>
 
 
 </article>
