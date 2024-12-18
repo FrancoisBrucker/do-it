@@ -45,21 +45,23 @@ L'objectif de ce POK est de faire un état des lieux des différentes méthodes 
 
 ### Horodatage
 
-| Jeudi 24/10 | 30min | Discussion avec membre de l'association sur les modifications apportées à la page Notion |
-| Vendredi 08/11 | 30min | Première discussion avec membre du labo sociétal |
-| Jeudi 14/11 | 1h15 | Réunion pour cerner les besoins et faire le point sur les outils actuels |
-| Samedi 16/11 | 2h | Compte-rendu réunion & débuts sur ce qu'il est possible de faire |
-| Dimanche 17/11 | 3h | Lien Airtable - Notion, BD |
-| Lundi 18/11 | 2h | Gestion des autorisations avec form Airtable |
-| Mardi 19/11 | 45min | Point avec labo et asso sur ce qui a été fait et les points de blocage |
-| Jeudi 05/12 | 30min | Début création BD tuteurs |
-| Samedi 07/12 | 30min | Suite création BD tuteurs |
-| Dimanche 08/12 | 1h30 | Formulaire et automatisations |
-| Mardi 10/12 | 1h30 | Démonstration et explication à membre LS |
-| Mecredi 11/12 | 1h | Recherches lien tables Airtable et Sheets|
-| Jeudi 12/12 | 1h | Suite travail sur BD et schéma|
-| Lundi 16/12 | 1h | Présentation des solutions et discussions|
-| Mardi 17/12 | 2h | Rédaction document explicatif de tout ce qui a été fait, fonctionnement|
+| Date           | Heures passées | Indications                                                                              |
+| -------------- | -------------- | ---------------------------------------------------------------------------------------- |
+| Jeudi 24/10    | 30min          | Discussion avec membre de l'association sur les modifications apportées à la page Notion |
+| Vendredi 08/11 | 30min          | Première discussion avec membre du labo sociétal                                         |
+| Jeudi 14/11    | 1h15           | Réunion pour cerner les besoins et faire le point sur les outils actuels                 |
+| Samedi 16/11   | 2h             | Compte-rendu réunion & débuts sur ce qu'il est possible de faire                         |
+| Dimanche 17/11 | 3h             | Lien Airtable - Notion, BD                                                               |
+| Lundi 18/11    | 2h             | Gestion des autorisations avec form Airtable                                             |
+| Mardi 19/11    | 45min          | Point avec labo et asso sur ce qui a été fait et les points de blocage                   |
+| Jeudi 05/12    | 30min          | Début création BD tuteurs                                                                |
+| Samedi 07/12   | 30min          | Suite création BD tuteurs                                                                |
+| Dimanche 08/12 | 1h30           | Formulaire et automatisations                                                            |
+| Mardi 10/12    | 1h30           | Démonstration et explication à membre LS                                                 |
+| Mecredi 11/12  | 1h             | Recherches lien tables Airtable et Sheets                                                |
+| Jeudi 12/12    | 1h             | Suite travail sur BD et schéma                                                           |
+| Lundi 16/12    | 1h             | Présentation des solutions et discussions                                                |
+| Mardi 17/12    | 2h             | Rédaction document explicatif de tout ce qui a été fait, fonctionnement                  |
 
 ## Contenu
 
@@ -67,7 +69,7 @@ L'objectif de ce POK est de faire un état des lieux des différentes méthodes 
 
 Échanges Phocéens est une association étudiante ayant pour but d’accompagner des jeunes issus des quartiers prioritaires de la ville de Marseille (QPV: quartier politique de la ville) et étudiant en REP/REP+ (Réseau d’Éducation Prioritaire) pour construire et réussir un projet d’études supérieures; c’est ce qu’on appelle une Cordée de la Réussite.
 Concrètement, EP (Échanges Phocéens) propose des séances de tutorat hebdomadaires en petits groupes encadrées par des étudiants bénévoles de l’École Centrale Méditerranée ainsi que des sorties culturelles, des excursions ou voyages en fin d’année, des stages créatifs durant les vacances scolaires. Ces séances de tutorat consistent en de l’ouverture culturelle, culture générale, actualités, aide à l’orientation, aide à la méthodologie, aide aux examens, …
-Chaque année on retrouve donc des tutoré.es issu.es d'établissements partenaires, des tuteurs et tutrices bénévoles, mais aussi des membres du bureau de l'association qui organisent et gèrent toutes ces activités
+Chaque année on retrouve donc des tutoré.e.s issu.e.s d'établissements partenaires, des tuteurs et tutrices bénévoles, mais aussi des membres du bureau de l'association qui organisent et gèrent toutes ces activités
 Afin de mener à bien toutes ces actions, le bureau de l'association collabore étroitement avec le labo sociétal, structure de l’école qui mène des actions d’ouverture sociale et de responsabilité sociétale.
 
 Pour ce qui est des outils numériques utilisés (en gros):
