@@ -71,7 +71,7 @@ L'étape suivante consistait à ajouter la possibilité à l'utilisateur de déf
 
 Ensuite, le tutoriel nous guide dans l'implémention d'un programme permettant de visualiser la fractale de Mandelbrot (même si on ne peut afficher que de l'ASCII, donc ce n'est pas exactement de la HD) ! Voici le résultat :
 
-![](mandelbrot.png)
+![](mandelbrot.webp)
 
 ## Variables mutables
 

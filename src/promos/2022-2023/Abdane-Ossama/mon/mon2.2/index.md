@@ -44,14 +44,14 @@ Il existe plusieurs logiciels permettant la création d'un site WordPress en loc
 
 Pour commencer, il faut d'abord télécharger l'application en se rendant sur le site suivant : https://localwp.com. Il suffit ensuite de cliquer sur le lien de téléchargement comme sur l'image ci-dessous (il n'est pas nécessaire de créer de compte). Après avoir choisis son système d'exploitation, le téléchargement se lance. 
 
-![Optional Text](Image1.png)
+![Optional Text](Image1.webp)
 
 
 ### Création d'un site
 
 Après avoir ouvert l'application téléchargée, il faut cliquer sur "Create a new site" comme sur l'image ci-dessous :
 
-![Optional Text](Image3.png)
+![Optional Text](Image3.webp)
 
 Il faudra ensuite choisir un nom pour le site, sélectionnez "WordPress" comme type de site, et cliquez sur "Continue". Enfin, il va falloir choisir un emplacement pour le fichier du site sur l'ordinateur, et cliquez sur "Create Site".
 Local by Flywheel va maintenant installer WordPress sur l'ordinateur et créer une base de données pour le site. Il demandera également de choisir un nom d'utilisateur et un mot de passe pour la base de donnée.
@@ -60,7 +60,7 @@ Local by Flywheel va maintenant installer WordPress sur l'ordinateur et créer u
 
 Le site est maintenant configuré !
 
-![Optional Text](Image4.png)
+![Optional Text](Image4.webp)
 
 #### Bouton "Open Site"
 
@@ -93,7 +93,7 @@ En utilisant le bouton "WP Admin" sur Local by Flywheel, vous pouvez facilement 
 
 Il est possible de partager un "Live Link" en activant l'option dans l'onglet "tools" comme sur l'image ci-dessous :
 
-![Optional Text](Image2.png)
+![Optional Text](Image2.webp)
 
 Le partage de ce lien permet de donner un aperçu du site en rentrant un identifiant et un mot de passe. L'envoi de ce lien permet :
 

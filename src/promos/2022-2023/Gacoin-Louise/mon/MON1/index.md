@@ -32,7 +32,7 @@ L'agile est un mode de conduite de projet né dans les années 2000. Il s'oppose
 
 En agile on réalise les projets par petits blocs et chaque étape est discutée, validée avec le client. L'objectif de ces itérations est de satisfaire au mieux le du besoin client. (On hiérarchise ses besoins et on ajuste le projet au fil de l'eau.) L’idée est alors de replacer les individus et les interactions au centre de chaque projet (plutôt que de prioriser les processus et les outils). Mais aussi et surtout de répondre et de s’adapter au changement.
 
-<img src="agile-vs-waterfall-min.png">
+<img src="agile-vs-waterfall-min.webp">
 source: https://hackr.io/blog/agile-vs-waterfall
 
 Il existe alors plusieurs méthodologies agile. Nous allons ici en étudier 4 : le Lean, le Scrum, le SAFe et le Shape up.
@@ -57,7 +57,7 @@ Pour produire vite, on utilise un MVP ou Minimum Viable Product. Le but est de c
 - MVP
 {% endfaire %}
 
-<img src="Tbl Lean.png" >
+<img src="Tbl Lean.webp" >
 
 
 
@@ -77,7 +77,7 @@ Les étapes de réalisation d'un projet sont les suivantes :
 A la fin du sprint, des tests qualité sont réalisés, puis on présente la solution au client lors du Sprint Meeting Review. Ses retours sont priorisés et ajoutés au product backlog
 - On recommence un nouveau sprint
 
-<img src="Scrum.png">
+<img src="Scrum.webp">
 source: https://www.google.fr/
 https://www.cfi.ch/wp-content/uploads/processus-2048x842.png
 
@@ -86,7 +86,7 @@ https://www.cfi.ch/wp-content/uploads/processus-2048x842.png
 - Burn down chart (graphique qui montre l'avancement du projet et les points de difficultées)
 {% endfaire %}
 
-<img src="tbl Scrum.png" >
+<img src="tbl Scrum.webp" >
 
 
 
@@ -110,12 +110,12 @@ Du plus local au plus global :
 Les rôles de SCRUM sont conservés au niveau des équipes. Ils sont complétés par d'autres rôles qui s'assurent que les différents équipes du projet livrent bien les fonctionnalités dues, au  moments attendus. A chacun des niveaux de cette organisation, on retrouve des backlogs, qui fonctionnent sur le même modèle que décrit dans la partie précédente.
 
 
-<img src="Safe level.png" >
+<img src="Safe level.webp" >
 
 
 La notion de CADENCE est très importante dans SAFe. Elle est établie en nombre de Sprints
 
-<img src="SAFE.png" >
+<img src="SAFE.webp" >
 source: https://www.google.fr/
 https://blog.talanlabs.com/safe-cest-quoi/cover.png
 
@@ -138,7 +138,7 @@ La solution est évaluée. Les équipes ainsi que le manangement indentifient le
 - Burn down Chart
 {% endfaire %}
 
-<img src="tbl SAFE.png">
+<img src="tbl SAFE.webp">
 
 ## 5.Shape UP
 
@@ -181,11 +181,11 @@ Les équipes passent à l'action. On leur donne un projet à réaliser et non de
 A noter : Les phases de Shape et de build se déroulent simultanément à partir de la 2 ème itération (on parle de dual run).
 Les équipes tournent ! ( ce ne sont pas les même personnes qui shape et build à chaque fois).
 
-<img src="cycles ShapeUp.png">
+<img src="cycles ShapeUp.webp">
 source: https://www.le-ticket.fr/resume-shape-up-basecamp/2821/
 
 
-<img src="tbl Shape up.png">
+<img src="tbl Shape up.webp">
 
 
 ## 6.Conclusion

@@ -35,7 +35,7 @@ La CLI **kubectl** est très puissante, mais elle n'est pas forcément la plus e
 
 Dans ce MON, nous allons voir comment devenir un maître de **k9s**, afin de ne plus jamais perdre de temps pour nos opérations de tous les jours.
 
-![k9s default view](./images/k9s.png)
+![k9s default view](./images/k9s.webp)
 
 ## Cas d'usage
 Nous allons nous baser sur un exemple concret de déploiement de service (**SonarQube**) sur un cluster Kubernetes, en passant par une helm chart. L'idée est de suivre le workflow de déploiement complet afin de s'assurer que le déploiement fonctionne sans encombre. En cas de problème, nous devrons être capables de débugger rapidement et efficacement, uniquement avec **k9s**.
@@ -67,32 +67,32 @@ Pour cela, on va suivre 3 ressources principales:
 
 #### Events au déploiement, tout va bien
 `:events` pour afficher les évènements du namespace `workspace-test`
-![Events déploiement SonarQube](./images/events_start.png)
+![Events déploiement SonarQube](./images/events_start.webp)
 
 #### Pods en cours de démarrage
 `:pods` pour afficher les pods du namespace `workspace-test`
-![Pods démarrage SonarQube](./images/missing_pods.png)
+![Pods démarrage SonarQube](./images/missing_pods.webp)
 
 On voit une première anomalie (classique), un des pods est prêt, l'autre est en `Pending`. Cela peut être normal dans le cas où le pod attend quelque chose pour démarrer. Cependant cela ne doit pas durer trop longtemps.
 
 #### Malheureusement, un pod ne démarre pas
 `ENTER` sur le pod en `Pending` pour voir les détails
-![Failing containers](./images/pods_fail.png)
+![Failing containers](./images/pods_fail.webp)
 
 Catastrophe, tous nos conteneurs du pod SonarQube sont en erreur ! Il va falloir débugger ça.
 
 #### Logs du pod
 `L` pour afficher les logs du pod
-![Logs pod SonarQube](./images/pod_logs.png)
+![Logs pod SonarQube](./images/pod_logs.webp)
 
 Oh misère de misère ! Les logs sont complètement vides ! Que faire capitaine ?
 
 #### Events
 `:events` pour afficher les évènements du namespace `workspace-test`
-![Events pod SonarQube](./images/events_error.png)
+![Events pod SonarQube](./images/events_error.webp)
 
 `ENTER` sur l'évènement pour voir les détails
-![Event pod SonarQube](./images/error_detail.png)
+![Event pod SonarQube](./images/error_detail.webp)
 
 Enfin une information ! Le pod n'arrive pas à démarrer car il n'a pas assez de mémoire sur aucune des nodes à sa disposition. Il va falloir trafiquer notre cluster pour lui donner plus de mémoire. Il s'agit d'un cluster construit rapidement pour le MON à l'aide de Minikube. Il est donc normal que les ressources par défaut soient faibles.
 
@@ -105,17 +105,17 @@ minikube start --memory=6000 --cpus=4
 
 #### Problème résolu
 `:pods` pour afficher les pods du namespace `workspace-test`
-![Pods up](./images/pods_up.png)
+![Pods up](./images/pods_up.webp)
 
 Cette fois-ci, plus de problème, on peut voir que nos pods sont vivants et ont fini de démarrer
 
 #### Accès au service
 1. `:services` pour afficher les services du namespace `workspace-test`
 2. `SHIFT + F` pour effectuer un port forward entre le service et votre machine (pour pouvoir y accéder sur navigateur)
-![Port forward](./images/portforward.png)
+![Port forward](./images/portforward.webp)
 
 `localhost:9000` sur un navigateur quelconque pour accéder à SonarQube
-![SonarQube](./images/service_up.png)
+![SonarQube](./images/service_up.webp)
 
 Et voilà, votre SonarQube est accessible sur `localhost:9000` !
 
@@ -123,7 +123,7 @@ Et voilà, votre SonarQube est accessible sur `localhost:9000` !
 1. `:pods` pour afficher les pods du namespace `workspace-test`
 2. `/sonarqube` pour filtrer sur les pods de SonarQube
 3. `S` pour ouvrir un shell dans le pod
-![Shell SonarQube](./images/shell_k9s.png)
+![Shell SonarQube](./images/shell_k9s.webp)
 
 Au besoin, vous avez accès à la console du conteneur pour effectuer des opérations de maintenance (en tant qu'administrateur bien sûr)
 

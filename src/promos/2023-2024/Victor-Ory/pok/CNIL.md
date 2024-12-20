@@ -103,7 +103,7 @@ Concernant un accès illégitime au données, on pense particulièrement à un o
 
 Une modification non désirée des données pourrait arrivée suite un dysfonctionnement des librairies, ainsi on souhaite établir un ensemble de procédures annuelles menés par le responsable Réseau du GInfo pour mettre à jour les infrastructures et par les équipes de développement pour le code.
 
-![Matrice des risques](../MatriceRisque.png)
+![Matrice des risques](../MatriceRisque.webp)
 
 Concernant les possibles mises en place de processus de chiffrement, d'anonymisation, vu l'application et l'ampleur de l'installation et les capacités de l'association, beaucoup de mesures sembleraient être trop importantes face aux risques.
 

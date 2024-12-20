@@ -41,7 +41,7 @@ Un modèle génératif peut prendre ce qu'il a appris à partir des exemples qui
 Avant l'émergence des transformateurs, les modèles de langage génératifs utilisaient principalement des réseaux neuronaux récurrents (RNN). Cependant, malgré leur puissance à l'époque, les RNN étaient limités par leur capacité à traiter efficacement les dépendances à long terme dans les données textuelles, ainsi que par leur besoin de ressources computationnelles considérables pour gérer des tâches génératives complexes.
 Prenons l'exemple d'une tâche simple de prédiction du prochain mot : les RNN peinaient à fournir des prédictions précises, même en ayant accès à plusieurs mots précédents dans la séquence. Cette limitation était principalement due à la nature séquentielle du traitement des données par les RNN, qui les empêchait de capturer efficacement les relations à long terme dans le texte.
 L'arrivée de l'architecture des transformateurs a marqué un tournant majeur dans le domaine de l'IA générative. Basée sur le concept d'attention, cette approche novatrice a permis de surmonter les limitations des RNN en offrant une capacité d'apprentissage parallèle et une meilleure prise en compte du contexte global des données. Les transformateurs peuvent efficacement traiter des séquences de données de longueur variable et apprendre à prêter attention aux parties importantes du texte, ce qui leur permet de générer des résultats de meilleure qualité dans une variété de tâches génératives, telles que la traduction automatique et la génération de texte.
-<img src="transformers.png" width="300" height="500">
+<img src="transformers.webp" width="300" height="500">
 *[Attention is all you need](https://arxiv.org/pdf/1706.03762.pdf)
 
 

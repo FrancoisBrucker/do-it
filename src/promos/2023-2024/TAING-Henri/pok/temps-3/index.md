@@ -132,7 +132,7 @@ Le siège de la société est installé dans l’Ouest de la France à Pessac, p
 Le 1er janvier 2013, en pleine crise, Angeline Walker prend la tête de l'entreprise, succédant ainsi à Roberta Foiré (qui avait été nommé le 1er juillet 2011). Une semaine après, elle annonce la restructuration et la réorganisation plus large du groupe en commençant d’abord par un changement de nom : Geailetrakt devenait Tractors Walkers ou “Promeneurs de Tracteurs” en français. 
 L’entreprise avant focalisée sur la construction des tracteurs agricoles diversifie son offre en proposant maintenant de la machinerie pour la construction, le militaire, etc. Elle place aussi beaucoup d’efforts sur sa partie maintenance. 
 
-<img src = "fig1.PNG" width = 80%>
+<img src = "fig1.webp" width = 80%>
 
 ### Une gestion de risques cyber pour un outil digital
 
@@ -189,9 +189,9 @@ Les documents existants liés à la sécurité sont :
 - la liste des actifs de l’entreprises (applications, outils, infrastructures, process, serveurs, matériel, personnes, réseaux, fournisseurs) qui sont séparés en Non-Critiques et en Critiques à partir des critères CIA ou CID en français, 
 - un organigramme simplifié.
 
-<img src = "fig2.PNG"> 
+<img src = "fig2.webp"> 
 
-<img src = "fig3.PNG">
+<img src = "fig3.webp">
 
 ### Votre approche en tant que consultant en cybersécurité
 
@@ -225,13 +225,13 @@ Les managers pourront suivre le travail des employés concernés sur leurs ordin
 
 #### Annexe 2 - Vos notes sur la formation de cybersécurité (CC de (ISC)²) que vous avez suivie
 
-<img src = "note1.PNG">
-<img src = "note2.PNG">
-<img src = "note3.PNG">
+<img src = "note1.webp">
+<img src = "note2.webp">
+<img src = "note3.webp">
 
 #### Annexe 3 - Exemple d'application de la méthode de gestion des risques EBIOS pour qualifier une source de risques
 
-<img src = "ebios.PNG">
+<img src = "ebios.webp">
 
 #### Annexe 4 - Top 10 vulnérabilités de l’OWASP (Open Web Application Security Project - organisation internationale à but non lucratif qui se consacre à la sécurité des applications web) et quelques explications à propos d’elles
 

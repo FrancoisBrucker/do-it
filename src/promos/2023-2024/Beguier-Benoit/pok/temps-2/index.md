@@ -63,12 +63,12 @@ Concrètement j'aimerais proposer les fonctionnalités suivantes :
 
 - Afficher des graphiques décomposant les musiques écoutées par l'utilisateur selon des paramètres définis dans la suite du POK.
 
-![features](Music-features.jpg)
+![features](Music-features.webp)
 Ces graphiques prennent en ordonnée des paramètres tels que le tempo, la dançabilité
 
 - En bonus, effectuer une analyse en composantes principales (ACP, *PCA* en anglais) des musiques écoutées par l'utilisateur, et afficher le spectre d'écoute (*cf.* image ci-dessous). Vous pourrez trouver [ici](https://fr.wikipedia.org/wiki/Analyse_en_composantes_principales) la documentation sur l'ACP.
 
-![spectre](spectre.jpg)
+![spectre](spectre.webp)
 Illustration du type de graphique que je souhaite afficher.
 
 ## Objectifs du Sprint 1
@@ -106,7 +106,7 @@ Je choisis en premier lieu une interface simple et épurée. Afin de rappeler la
 
 Je crée aussi un logo se basant sur la forme ronde du logo Spotify, mais en y incluant un rappel de statistiques au travers des courbes de tendances. Je choisis ainsi le nom de mon service : **Spotistats**.
 
-![Logo](Allonge.png)
+![Logo](Allonge.webp)
 
 Je choisis ensuite le type de boutons de ma page Web. Je télécharge les icones sur le site [Flaticon](https://www.flaticon.com/). J'utilise le pack d'icônes [*Outline*](https://www.flaticon.com/authors/icongeek26/outline?author_id=296&type=standard) créé par Icongeek26.
 
@@ -114,15 +114,15 @@ Je définis les composantes de mes pages :
 
 - les boutons seront des rectangles de 330px*65px, avec des bords arrondis de 38px.
 
-![bouton](Group-1.png)
+![bouton](Group-1.webp)
 
 - le header fait 1440px*120px, de couleur #25242F, avec une ombre portée grise.
 
-![Header](Header.png)
+![Header](Header.webp)
 
 - la page fait 1440px*1024px (dimension Desktop), de couleur #25242F qui rappelle le mode sombre sur Spotify. Les titres de section sont écrits avec la police Gotham de couleur #1ED760, tandis que le corps de texte est blanc en Roboto Light de 25px.
 
-![Accueil](Accueil.png)
+![Accueil](Accueil.webp)
 
 Ma maquette Figma est accessible [ici](https://www.figma.com/file/Rx2sAj4SSzLNnZjNFwKq6O/Spotistats?type=design&node-id=0%3A1&mode=design&t=T7OGaQuYW9phVxnz-1).
 
@@ -131,7 +131,7 @@ Ma maquette Figma est accessible [ici](https://www.figma.com/file/Rx2sAj4SSzLNnZ
 Rien de très intéressant à ajouter dans cette partie, si ce n'est que je vais transformer la maquette Figma en HTML et en CSS.
 
 Voici le résultat pour la page d'accueil :
-![Accueil](AccueilHtml.png)
+![Accueil](AccueilHtml.webp)
 
 {% details "Cliquez pour afficher le **code HTML** de la page d'accueil" %}
 
@@ -148,16 +148,16 @@ Voici le résultat pour la page d'accueil :
     </head>
     <body>
         <header>
-            <img src="Allonge.png" class="logo" width="15%" height="60%" >
+            <img src="Allonge.webp" class="logo" width="15%" height="60%" >
             <a class="FAQ" href="FAQ.html">FAQ</a>
             <button class="Connexion">
-                <img src="Spotify_black.png" width="38" height="39">
+                <img src="Spotify_black.webp" width="38" height="39">
                 <span class="ButtonText">S’identifier avec Spotify</span>
             </button>
         </header>
 
         <div class="container">
-            <img src="chart-up 1.png" class="arrow">
+            <img src="chart-up 1.webp" class="arrow">
             <div class="column">
                 <h1> Toutes vos statistiques.</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
@@ -185,7 +185,7 @@ Voici le résultat pour la page d'accueil :
                     venenatis.
                 </p>
             </div>
-            <img src="sound 1.png" class="sound">
+            <img src="sound 1.webp" class="sound">
         </div>
         
     </body>
@@ -384,16 +384,16 @@ A noter que la page ne fait rien avec l'e-mail et le mot de passe, cela viendra 
     </head>
     <body>
         <header>
-            <img src="Allonge.png" class="logo" width="15%" height="60%" >
+            <img src="Allonge.webp" class="logo" width="15%" height="60%" >
             <a class="FAQ" href="FAQ.html">FAQ</a>
             <button onclick="afficherEcran_noir()" class="Connexion">
-                <img src="Spotify_black.png" width="38" height="39">
+                <img src="Spotify_black.webp" width="38" height="39">
                 <span class="ButtonText">S’identifier avec Spotify</span>
             </button>
         </header>
 
         <div class="container">
-            <img src="chart-up 1.png" class="arrow">
+            <img src="chart-up 1.webp" class="arrow">
             <div class="column">
                 <h1> Toutes vos statistiques.</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
@@ -421,7 +421,7 @@ A noter que la page ne fait rien avec l'e-mail et le mot de passe, cela viendra 
                     venenatis.
                 </p>
             </div>
-            <img src="sound 1.png" class="sound">
+            <img src="sound 1.webp" class="sound">
         </div>
         
         <div id="ecran_noir" class="ecran_noir">
@@ -696,10 +696,10 @@ Je vais maintenant créer la page FAQ, ce qui devrait être assez rapide.
     </head>
     <body>
         <header>
-            <img src="Allonge.png" class="logo" width="15%" height="60%" >
+            <img src="Allonge.webp" class="logo" width="15%" height="60%" >
             <a class="FAQ" href="FAQ.html">FAQ</a>
             <button onclick="afficherEcran_noir()" class="Connexion">
-                <img src="Spotify_black.png" width="38" height="39">
+                <img src="Spotify_black.webp" width="38" height="39">
                 <span class="ButtonText">S’identifier avec Spotify</span>
             </button>
         </header>
@@ -928,11 +928,11 @@ Création de la page principale; c'est-à-dire la page d'analyse de l'utilisateu
     <body>
         <header>
             <a href="Accueil.html" style="width: 15%; height: 60%;">
-                <img src="Allonge.png" class="logo" width="100%" height="100%">
+                <img src="Allonge.webp" class="logo" width="100%" height="100%">
             </a>
             <a class="FAQ" href="FAQ.html">FAQ</a>
             <button onclick="afficherEcran_noir()" class="Connexion">
-                <img src="image-1.png" width="38" height="39">
+                <img src="image-1.webp" width="38" height="39">
                 <span class="ButtonText">Nicolas Ouzouliasse</span>
             </button>
         </header>
@@ -960,11 +960,11 @@ Création de la page principale; c'est-à-dire la page d'analyse de l'utilisateu
                     Et tortor consequat id porta nibh venenatis.</li>  
                 </p>
             </div>
-            <img src="../spectre.jpg" class="spectre">
+            <img src="../spectre.webp" class="spectre">
         </div>
 
         <div class="container2">
-            <img src="../Music-features.jpg" class="graphe">
+            <img src="../Music-features.webp" class="graphe">
             <div class="column2">
                 <h1> Vos goûts musicaux.</h1>
                 <p><li>
@@ -1161,7 +1161,7 @@ L'*access token* est un string qui contient les informations d'identification et
 Pour résumer, voici la logique que je vais suivre pour mener à bien mon projet :
 
 - Créer une app sur le [Dashboard Spotify](https://developer.spotify.com/dashboard/create)
-![Dashboard](Dashboard.png)
+![Dashboard](Dashboard.webp)
 
 - Récupérer le *Client ID* et le *Client Secret*
 - Demander un *access token*
@@ -1171,10 +1171,10 @@ Pour résumer, voici la logique que je vais suivre pour mener à bien mon projet
 ### Mise en pratique
 
 Une fois l'app créée, je peux récupérer le *Client ID* directement dans les paramètres de l'app :
-![ID](ClientID.png)
+![ID](ClientID.webp)
 
 et aussi le *Client Secret* :
-![Secret](ClientSecret.png)
+![Secret](ClientSecret.webp)
 
 Une fois que ces codes ont été récupérés, il est possible de faire une requête en [cURL](https://curl.se/) (un outil de ligne de commande en open source) pour obtenir l'*Access Token*.
 
@@ -1235,7 +1235,7 @@ Dans le fichier index.html créé par cette commande Vite, j'ai inséré le cont
     <body>
         <header>
             <a href="Accueil.html" style="width: 15%; height: 60%;">
-                <img src="Allonge.png" class="logo" width="100%" height="100%">
+                <img src="Allonge.webp" class="logo" width="100%" height="100%">
             </a>
             <a class="FAQ" href="FAQ.html">FAQ</a>
             <button onclick="afficherEcran_noir()" class="Connexion">
@@ -1267,11 +1267,11 @@ Dans le fichier index.html créé par cette commande Vite, j'ai inséré le cont
                     Et tortor consequat id porta nibh venenatis.</li>  
                 </p>
             </div>
-            <img src="../spectre.jpg" class="spectre">
+            <img src="../spectre.webp" class="spectre">
         </div>
 
         <div class="container2">
-            <img src="../Music-features.jpg" class="graphe">
+            <img src="../Music-features.webp" class="graphe">
             <div class="column2">
                 <h1> Vos goûts musicaux.</h1>
                 <p><li>
@@ -1425,8 +1425,8 @@ function populateUI(profile) {
 {% enddetails %}
 
 Après exécution d'un rapide `npm run dev` dans la console, j'obtiens le résultat suivant :
-![cc](Accepter.png)
-![connexion](Connected.png)
+![cc](Accepter.webp)
+![connexion](Connected.webp)
 
 Au-delà du CSS qui est absent, j'obtiens bien la page d'authentification de Spotify appelée par l'API, et je suis effectivement redirigé ensuite vers la bonne page avec ma photo de profil et mon prénom récupérés sur mon compte Spotify.
 
@@ -1435,7 +1435,7 @@ Au-delà du CSS qui est absent, j'obtiens bien la page d'authentification de Spo
 Je choisis d'abord, comme annoncé en préambule, de visualiser les genres de musiques écoutés par l'utilisateur sur un graphique. J'aimerais aussi afficher les 5 artistes favoris de l'utilisateur.
 
 Enfin, la visualisation des paramètres des musiques pourrait être affiché de telle sorte :
-![alt](Music-features.jpg)
+![alt](Music-features.webp)
 Source de l'image : Researchgate
 
 ### Récupérer le top artiste et genres de l'utilisateur
@@ -1613,7 +1613,7 @@ et on adapte le code HTML pour intégrer les réponses de l'API : `topTracksList
     <body>
         <header>
             <a href="Accueil.html" style="width: 15%; height: 60%;">
-                <img src="Allonge.png" class="logo" width="100%" height="100%">
+                <img src="Allonge.webp" class="logo" width="100%" height="100%">
             </a>
             <a class="FAQ" href="FAQ.html">FAQ</a>
             <button class="Connexion">
@@ -1629,11 +1629,11 @@ et on adapte le code HTML pour intégrer les réponses de l'API : `topTracksList
                     <ul id="topArtistsList"></ul> 
                 </p>
             </div>
-            <img src="../spectre.jpg" class="spectre">
+            <img src="../spectre.webp" class="spectre">
         </div>
 
         <div class="container2">
-            <img src="../Music-features.jpg" class="graphe">
+            <img src="../Music-features.webp" class="graphe">
             <div class="column2">
                 <h1> Votre top 5 des musiques les plus écoutées.</h1>
                 <p><ul id="topTracksList"></ul>
@@ -1651,8 +1651,8 @@ et on adapte le code HTML pour intégrer les réponses de l'API : `topTracksList
 
 Quand je lance l'API, j'obtiens maintenant mon TOP artiste et musique. La photo de profil a disparu, c'est un petit bug sur lequel je m'attarderai après. Le CSS est aussi à adapter, mais ce n'est pas le but de mon projet.
 
-![alt](Analyse1.png)
-![alt](Analyse2.png)
+![alt](Analyse1.webp)
+![alt](Analyse2.webp)
 
 ## Retour d'expérience du Sprint 2
 

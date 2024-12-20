@@ -36,8 +36,8 @@ J’ai donc écrit quelques clés pour garder un esprit critique à la lecture d
 
 Pour introduire brièvement le sujet, l’**hypersensibilité** se définit par une plus grande réceptivité aux stimuli extérieurs, qu'ils soient sensoriels (bruits, lumières, textures), émotionnels (relations, réactions) ou environnementaux (changement, stress). Elle se manifeste par une intensité émotionnelle plus élevée et une facilité à être submergé mais également par un soucis du travail de qualité et une grande empathie.
 
-![Hypersensibilite_1](./Hypersensibilite_1.png)
+![Hypersensibilite_1](./Hypersensibilite_1.webp)
 
 L'**hypersensibilité au travail** est un sujet que j'ai choisi d'explorer davantage, car il représente une dimension pertinente pour le management des années à venir. J'ai approfondi mes recherches pour mieux comprendre les enjeux et les implications pratiques de ce trait dans le contexte professionnel.
 
-![Hypersensibilite_2](./Hypersensibilite_2.png)
+![Hypersensibilite_2](./Hypersensibilite_2.webp)

@@ -42,9 +42,9 @@ J'ai réalisé les exercices proposés tout au long de la formation puis les exe
 Dans cette première partie, j'ai revu les bases d'excel que je connaissais mais qui avait besoin d'être étudiées à nouveau. Pour cela, je vais simplement faire une fiche méthode à utiliser la prochaine fois que j'aurai besoin d'excel. La formation sur excel.pratique.com étant très synthétique, je vais juste énumérer les points importants pour moi.
 
 - L'utilisation du `$` permet de fixer une cellule/colonne/ligne lorsque nous utilisons des formules, par exemple :
-  ![excel](EXCEL2.png)
+  ![excel](EXCEL2.webp)
   Dans cette exemple, on divise par la valeur **3**, qui apparaît dans la cellule **B8**. Seulement on veut pouvoir diviser à chaque fois par cette **même valeur** de cellule **B8** lors de la recopie. Corrigeons:
-  ![excel](EXCEL3.png)
+  ![excel](EXCEL3.webp)
   Pour cela; le premier `$` de `$B$8` fixe la **colonne** lors de la recopie et le second `$` fixe la **ligne**. Ici, on aurait pu simplement fixer la ligne
 - L'opérarteur **<>** signifie est **différent de**
 - L'opérateur **<=** signifie est **inférieur ou égal à**
@@ -59,10 +59,10 @@ N'ayant pas la version payante d'excel sur mon ordinateur, une partie de la form
 - La **fonction SI** ou **IF** en anglais : **=SI(test logique, valeur si vrai, valeur si faux)**
   Elle permet de retourner une valeur ou une autre en fonction d'une condition et nécessite 3 arguments.
   Prenons l'exemple suivant, dans lequel on se demande si les personnes sont majeures selon leur âge :
-  ![excel](screen_SI_1.png)
+  ![excel](screen_SI_1.webp)
   Il suffit de rentrer dans la cellule D36: **=SI(C36>=18 (qui explique la condition); "majeur";"mineur")** et de faire une recopie sur les cellules souhaitées.
   Si on essaye dans un cas plus complexe, comme dans cet exercice proposé par la formation:
-  ![excel](screen_SI_2.png)
+  ![excel](screen_SI_2.webp)
 
   Ici, on souhaite calculer dans la cellule **D3** la valeur du _rabais_ en fonction de la _quantité d'article_. Pour cela il faut **imbriquer** une fonction SI dans une autre.
   Dans ce cas, on demande d'abort si la quantité est inférieure à 50:
@@ -72,7 +72,7 @@ N'ayant pas la version payante d'excel sur mon ordinateur, une partie de la form
      2. Si **Faux** on revoie le prix **C3** multiplié par le rabais **H4** sans oublier de fixer **H3** avec des '$'
   2. Si **Faux** on revoie le prix **C3** multiplié par le rabais **H5** sans oublier de fixer **H3** avec des '$'
      Cela donne la formule suivante, non unique:
-     ![excel](formule1.png)
+     ![excel](formule1.webp)
 
 - Les **fonctions ET** et **OU**
   1. La fonction ET renvoie VRAI si **tous** les tests sont VRAI: **=ET(test_1; test_2; ...)**
@@ -86,7 +86,7 @@ Pour l'insérer il suffit de faire :
 **insertion > graphique sparkline > choisir** entre _courbe_, _histogramme_ et _conclusion et perte_ **> choisir la ligne ou colonne de données à utiliser > recopie possible > personnalisation possible.**
 Cela donne par exemple:
 
-![excel](screen_sparkline.png)
+![excel](screen_sparkline.webp)
 
 ### Chapitres 8 à 11 - Apprendre
 
@@ -110,7 +110,7 @@ On pourra ensuite faire:
 
 Cela donne le résultat suivant :
 
-![excel](screen_MFC.png)
+![excel](screen_MFC.webp)
 
 Pour gérer/modifier les MFC ajoutées il faut :
 
@@ -136,7 +136,7 @@ La fonctionnalité **Trier** permet de **trier** une plage de cellules par ordre
 
 Il est également possible d'ajouter des niveaux de tri à partir de cette fenêtre, par exemple :
 
-![excel](screen_tri2.png)
+![excel](screen_tri2.webp)
 
 La fonctionnalité **filtrer des données** permet **d'afficher** les données en fonction d'un ou de plusieurs critères, pour cela il faut : **onglet données > filtre > remplir** la fenêtre qui s'affiche.
 
@@ -144,10 +144,10 @@ La fonctionnalité **validation de données** s'assure de la **validité** des d
 
 **Sélectionner la plage qui contiendra les données valides > onglet données > Validation des données > remplir** la fenêtre qui s'affiche.
 Par exemple, on souhaite pourvoir entrer seulement des nombres entiers entre 1 et 100
-![excel](screen_valisation.png)
+![excel](screen_valisation.webp)
 
 Cette fenêtre permet aussi de valider selon d'autres critères (liste, date, heure, etc.) et de personnaliser le message d'entrée, par exemple :
-![excel](screen_valisation3.png)
+![excel](screen_valisation3.webp)
 
 #### Tableaux croisés dynamiques
 

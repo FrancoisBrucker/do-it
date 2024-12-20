@@ -114,18 +114,18 @@ L'architecture du site se compose comme suit :
 Design de la d'accueil (je ne vais pas détailler tous les étapes de design de chaque page au risque d'être trop redondant):
 
  J'ai commencé par faire l'entête avec le logo  à gauche et un menu à droite.
-![bubble](screen_pok1.png)
+![bubble](screen_pok1.webp)
 Puis j'ai ajouté un lien cliquable et ai donné un premier visage à la page de garde.
-![bubble](screen_pok2.png)
+![bubble](screen_pok2.webp)
 J'ai ajouté deux boutons cliquables pour se connecter/enregistrer et un menu déroulant. Puis, l'idée principale de mon application web étant de trouver un montre, j'ai modifié l'esprit de la page pour donner le résultat suivant : (en terme de design)
-![bubble](screen_accueil.png)
+![bubble](screen_accueil.webp)
 
 Design de la page listant les montres :
 En ce qui concerne la page où l'utilisateur peut visualiser les montres, le premier design assez simple est fonctionnel mais vraiment pas très esthétique.
-![bubble](screen_liste_montre.png)
+![bubble](screen_liste_montre.webp)
 
 Pour la page sign In, Bubble propose un composant déjà prêt que j'ai utilisé :
-![bubble](scree_signup.png)
+![bubble](scree_signup.webp)
 Ce composant est pratique mais pas très esthétique, je vais l'améliorer et le compléter par la suite.
 
 ### La Base de donnée
@@ -136,46 +136,46 @@ Pour la base de donnée de ce projet, je vais avoir besoin de trois *"Data types
 - la page **Vendre_montre** implémente la base de donnée **montre** ainsi que la page **vendre_montre**.
 - La base de donnée **panier** est implémentée par le bouton **"ajouter au panier"** de la page liste_montre, détaillé plus tard.
 
-![bubble](screen_BDD2.png)
+![bubble](screen_BDD2.webp)
 Dans l'onglet Data > App Data, on peut voir les éléments de chaque *"Data types"* déjà implémentés ou ajoutés manuellement.
-![bubble](screen_BDD.png)
+![bubble](screen_BDD.webp)
 
 ### Workflow 
 
 Un workflow représente une série d'actions automatisées qui se déclenchent en réponse à un événement donné, comme un clic sur un bouton.
 Par exemple, sur la page d'accueil, il y a 5 boutons cliquables (sign up, log in, icône personnel et trouver sa montre deux fois). L'idée est que ces boutons envoient vers d'autres pages ou pop up. Cela représente des workflow simples.
 Le design de la page d'accueil finale est le suivant :
-![bubble](screen_accueil_t.png)
+![bubble](screen_accueil_t.webp)
 
 ##### Header
 
 L'entête de toutes les pages du site offre les disponibilités suivantes :
 
 * **Log In** j'ai décidé que le bouton log in afficherai un *popup*, cela donne le résultat suivant:
-![bubble](screen_login.png)
+![bubble](screen_login.webp)
 * **Sign Up** envoie à la page Sign_up, capable elle même d'afficher le pop up log In
-![bubble](screen_signup_t.png)
+![bubble](screen_signup_t.webp)
 * Les deux boutons **Trouver Montre** envoient directement à la page liste_montre
-![bubble](screen_liste_montre2.png)
+![bubble](screen_liste_montre2.webp)
 * **Icon personnel** renvoie quant à lui un menu déroulant à l'aide d'un *GroupFocus* qui permet d'accéder à son profil, ses favoris, son panier et donnera la possibilité de proposer une montre à la plateforme ou bien de se déconnecter.
-![bubble](screen_accueil_t.png)
+![bubble](screen_accueil_t.webp)
 Actuellement, je n'ai pas donné suite aux boutons panier et favoris. 
 
 ##### Accès aux autres pages
 
 La page **Mon profil** affiche les données de l'utilisateur connecté et permet de modifier certaines informations. Pour cela, il faut utiliser des *Dynamic data* dans le design comme suit : 
-![bubble](screen_builder_profil.png)
+![bubble](screen_builder_profil.webp)
 ce qui donne le résultat suivant sur le site :
-![bubble](screen_profil_user.png)
+![bubble](screen_profil_user.webp)
 Les informations peuvent être modifiées en temps réel sur le site lorsque l'utilisateur entre la donnée à modifier puis clique sur **Actualiser**.
 La page **Vendre une montre** affiche un formulaire qui permet de renseigner une montre que l'on souhaite vendre. On y entre diverses informations et une photo, qui vont directement implémenter la base de donnée **montre** et la page liste_montre après avoir cliqué sur le bouton **soumettre**.
-![bubble](screen_formulaire_vendre.png)
+![bubble](screen_formulaire_vendre.webp)
 L'action de cliquer sur le bouton **soumettre** qui ajoute une montre à la base de donnée est traduite par le workflow suivant : 
-![bubble](screen_workflow.png)
+![bubble](screen_workflow.webp)
 Une fois le formulaire rempli, le bouton **soumettre** amène a la page suivante, avec  des boutons fonctionnels : 
-![bubble](scree_felicitations.png)
+![bubble](scree_felicitations.webp)
 Sur la page Liste_montre, l'utilisateur a la possibilité d'ajouter au panier en cliquant sur le bouton correspondant. Cela apporte une alerte *Ajouté au panier* et  implémente la base de donnée **panier**. 
-![bubble](screen_panier.png)
+![bubble](screen_panier.webp)
 Malheureusement, je ne trouve actuellement pas la solution pour afficher le panier.
 
 ### Remarques sprint 2

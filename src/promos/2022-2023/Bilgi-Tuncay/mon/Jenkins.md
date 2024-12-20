@@ -183,7 +183,7 @@ On passe d'abord la langue en anglais car la traduction est désastreuse, pour c
 
 Voici le résultat : 
 
-<img src="../images/blueocean1.png" alt="Composer" style="height: 200px; margin: 0 auto; border: 0" />
+<img src="../images/blueocean1.webp" alt="Composer" style="height: 200px; margin: 0 auto; border: 0" />
 
 La suite de la doc est [ici](https://www.jenkins.io/doc/book/blueocean/creating-pipelines/).
 
@@ -193,7 +193,7 @@ Après avoir installé **Pipeline**, on à accès à ce nouveau type de workflow
 
 On crée notre premiere pipeline en suivant la doc et on l'execute : 
 
-<img src="../images/jenkins1.png" alt="Composer" style="height: 200px; margin: 0 auto; border: 0" />
+<img src="../images/jenkins1.webp" alt="Composer" style="height: 200px; margin: 0 auto; border: 0" />
 
 #### Les Jenkinsfile : 
 
@@ -264,7 +264,7 @@ Pour cela on génère une paire de clé dans notre projet Artblog avec `ssh keyg
 
 Ensuite, on entre cette nouvelle clé dans le repository github en tant que clé de déploiement.
 
-<img src="../images/github1.png" alt="Composer" style="height: 200px; margin: 0 auto; border: 0" />
+<img src="../images/github1.webp" alt="Composer" style="height: 200px; margin: 0 auto; border: 0" />
 
 Coté Jenkins on met en place les **credentials**, c'est à dire notre clé privée SSH dans une pipeline qui va permettre de modifier notre Repository github.
 

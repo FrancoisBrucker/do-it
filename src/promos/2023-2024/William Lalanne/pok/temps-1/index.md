@@ -64,14 +64,14 @@ Pour les pages de jeux, la mécanique sera la suivante :
 
 La page d'accueil est la suivante : 
 
-![Page d'accueil](pageAccueilPOK1.png)
+![Page d'accueil](pageAccueilPOK1.webp)
 
 Pour faire ça, je me suis servi des connaissances acquises avec mon premier MON sur les grid et le flexbox. 
 J'ai aussi du apprendre ce qu'était les radio button et comment les modifier pour créer les petites cases à cocher. 
 Sur cette page on peut paramétrer la partie, d'abord on choisit si on veut des numéros ou des images sur les cartes. Ensuite on choisit si on veut jouer seul ou à deux et enfin la taille du jeu, 4x4 ou 6x6. 
 Pour l'instant on ne peut pas choisir si l'on veut des numéros ou des images, seuls les numéros sont disponibles. De plus on ne peut pour l'instant jouer qu'à deux. Ainsi l'utilisateur doit seulement choisir le nombre de cartes. S'il ne choisit pas, un message d'erreur apparaît et il ne peut pas démarrer la partie. 
 
-![message d'erreur](memoryErrorMessage.png)
+![message d'erreur](memoryErrorMessage.webp)
 
 ```javascript 
 newGameButton.addEventListener("click", function () {
@@ -415,7 +415,7 @@ Par exemple, chaque carte du jeu est un bouton avec un identifiant. On ajoute à
 ```javascript 
 card.addEventListener("click", returnCard(card));
 ```
-![carte retournée](memoryCardReturn.png)
+![carte retournée](memoryCardReturn.webp)
 
 On ajoute aussi un addEventListener qui permet quand deux cartes sont retournés de comparer leur valeur. 
 
@@ -425,15 +425,15 @@ card.addEventListener("click", checkCardPair());
 
 Puis si les cartes sont les mêmes ont les ajoutes dans une liste et on leur attribut la class "found" pour signifier que la paire est trouvée. Un fond vert apparaît sur les cartes pour montrer au joueur qu'elles sont identiques. 
 
-![cartes identiques](memoryCardFound.png)
+![cartes identiques](memoryCardFound.webp)
 
 Si les cartes sont différentes, on leur attribut la class "notFound" qui affiche un fond rouge sur les cartes pour montrer au joueur qu'elles sont différentes. Après 2 secondes, les cartes se retournent. 
 
-![cartes differentes](memoryCardNotFound.png)
+![cartes differentes](memoryCardNotFound.webp)
 
 Lorsque toutes les cartes ont été trouvées, un message s'affiche pour dire au joueur qu'il a gagné la partie. 
 
-![partie gagnee](gameWon.png)
+![partie gagnee](gameWon.webp)
 
 En cliquant sur le bouton **"new game"** en haut à droite, on retourne à la page d'accueil. 
 

@@ -26,7 +26,7 @@ Ayant déjà fait du développement mobile en entreprise, j'ai pu apprendre à m
 
 <div style="width:100%;">
   <figure style="text-align:center">
-    <img style="height:200px; margin-left: auto; margin-right: auto" src="../flutter.png">
+    <img style="height:200px; margin-left: auto; margin-right: auto" src="../flutter.webp">
     <figcaption>Logo de lutter</figcaption>
   </figure>
 </div>
@@ -49,7 +49,7 @@ Je note deux avantages majeurs de ce framework:
 
 <div style="width:100%;">
   <figure style="text-align:center">
-    <img style="height:200px; margin-left: auto; margin-right: auto" src="../flutterfire.png">
+    <img style="height:200px; margin-left: auto; margin-right: auto" src="../flutterfire.webp">
     <figcaption>Flutter et Firebase</figcaption>
   </figure>
 </div>

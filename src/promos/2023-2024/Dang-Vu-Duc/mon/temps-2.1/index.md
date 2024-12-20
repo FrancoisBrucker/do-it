@@ -56,7 +56,7 @@ while True:
 
 L'exécution de ce code affiche la fenêtre suivante:
 
-![Image1](Image1.png)
+![Image1](Image1.webp)
 
 Il faut à présent remplir cette page. Une première étape est de personnaliser le fond, en utilisant la méthode *fill* : `screen.fill("White")`. Il est également possible de rajouter une image. Pour cela, il faut comprendre la classe **Surface**. Les objets de cette classe sont des éléments, sur lesquels on peut placer différents éléments, comme des images par exemple. Pour associer une image à une surface, on utilise le module *image* et sa méthode *load*. Ensuite, on utilise la méthode *blit* pour afficher cette surface sur l'écran principal. Il ne faut pas oublier d'actualiser la fenêtre avec la méthode *update* du module *display*.
 On peut également ajuster la taille de la surface avec le module *tranform* et la méthode *scale*, ou aussi renommer la fenêtre grâce à la méthode *set_caption*.
@@ -69,7 +69,7 @@ pygame.init()
 screen = pygame.display.set_mode((800, 500))
 pygame.display.set_caption("Fenêtre test")
 screen.fill("White")
-image_chaton = pygame.image.load("Image_chaton.jpg")
+image_chaton = pygame.image.load("Image_chaton.webp")
 image_chaton = pygame.transform.scale(image_chaton, (200,150))
 
 while True:
@@ -83,7 +83,7 @@ while True:
 
 Ce nouveau code affiche la fenêtre suivante:
 
-![Image2](Image2.png)
+![Image2](Image2.webp)
 
 {% note %}
 Toutes les coordonnées spécifiées dans la nomenclature pygame ont pour origine le coin supérieure gauche de l'écran.
@@ -107,7 +107,7 @@ class TicTacToe():
         pygame.display.set_caption("Morpion")
         self.clock = pygame.time.Clock()
         self.font = pygame.font.Font(None, 33)
-        self.morpion_surface = pygame.image.load('Plateau morpion.png')
+        self.morpion_surface = pygame.image.load('Plateau morpion.webp')
         self.title_surface = self.font.render('Jeu du morpion', False, "Black")
         self.text_rect = self.title_surface.get_rect(center = (400, 30))
         self.board = [[None for j in range(3)] for i in range(3)]
@@ -317,7 +317,7 @@ def restart(self):
 
 Voici deux exemples de parties avec cette implémentation:
 
-![Image3](Image3.png)
+![Image3](Image3.webp)
 
 Le jeu est disponible sur le lien suivant: [Jeu du morpion avec Pygame](https://duc-dgv.itch.io/morpion).
 

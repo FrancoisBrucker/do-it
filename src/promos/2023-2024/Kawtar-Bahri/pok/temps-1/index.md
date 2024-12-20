@@ -21,7 +21,7 @@ Le but de ce POK est d'étudier l'écosystème numérique de l’entreprise où 
 ## Démarche 
 Cette démarche est inspirée de l’approche que nous avons vu dans le cours d’écosystème digital, qui est souvent adoptée dans les cabinets de conseil  :
 
-<img src="demarche.png">
+<img src="demarche.webp">
  <br/>
 
 {% info "**Démarche**" %}
@@ -41,9 +41,9 @@ Ceci entraîne plusieurs problèmes et défis, notamment : manque d'interopérab
 
 ## Définition des objectifs de transformation 
 Faire un projet de transformation digitale ne se résume pas à l'automatisation totale. Comme illustré dans le schéma ci-dessous, il est essentiel de traverser plusieurs étapes pour atteindre un niveau de maturité plus élevé. De plus, il est important de noter que la majorité des entreprises ne possèdent qu'un niveau de maturité digitale relativement bas, avec 80 % d'entre elles (y compris l'entreprise sujet dece POK) se situant à l'étape de la connectivité.
-<img src="maturity_stage.png" width = 550px>
+<img src="maturity_stage.webp" width = 550px>
 Ci après les principales catégories des tranformations digitales selon une [étude de Capgemini Consulting & MIT Sloan Management](https://www.capgemini.com/wp-content/uploads/2017/07/Digital_Transformation__A_Road-Map_for_Billion-Dollar_Organizations.pdf): 
-<img src="digital.png" width = 550px>
+<img src="digital.webp" width = 550px>
  <br/>
 L’opportunité que j’ai identifiée pour l'entreprise étudiée s’inscrit dans la catégorie Operational Process, Performance management, Data-driven decision-making. Les objectifs sont donc :
 -	Centraliser les données pour faciliter le reporting 
@@ -83,10 +83,10 @@ Plan de déploiement des solutions choisies  :
 
 <div style="display: flex;">
     <div style="flex: 50%; padding: 5px;">
-        <img src="1.png" alt="Image 1" >
+        <img src="1.webp" alt="Image 1" >
     </div>
     <div style="flex: 50%; padding: 5px;">
-        <img src="3.png" alt="Image 2" >
+        <img src="3.webp" alt="Image 2" >
     </div>
 </div>
 

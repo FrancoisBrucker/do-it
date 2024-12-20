@@ -75,7 +75,7 @@ Editeur de texte = Il permet de produire du code en format texte brut, contrair
 Maintenent qu'on est équipé comme il faut (terminal, python et VSC), il faut créer un projet django.
 La création du projet fait apparaitre différents fichiers :
 
-<img src='djg.png'>
+<img src='djg.webp'>
 
 myvenv correspond à l'environnement virtuel de travail. Je dois avouer que je n'ai toujours pas bien compris son utilité.
 
@@ -127,9 +127,9 @@ Vous trouverez plus de détails ici: https://docs.djangoproject.com/fr/4.1/topic
 
 A l'issue de ce tutoriel j'ai bien obtenu mon blog , déployer sur internet. En voici quelques images: 
 
-<img src='blog1.png'>
-<img src='blog2.png'>
-<img src='blog3.png'>
+<img src='blog1.webp'>
+<img src='blog2.webp'>
+<img src='blog3.webp'>
 
 
 

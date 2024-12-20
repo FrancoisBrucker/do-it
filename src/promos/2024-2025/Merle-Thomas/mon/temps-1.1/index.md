@@ -205,7 +205,7 @@ Il existe trois manières d'insérer une feuille de style, en interne, en extern
 
 **La syntaxe CSS :**
 
-![Syntaxe_CSS](./syntaxe_CSS.png)
+![Syntaxe_CSS](./syntaxe_CSS.webp)
 
 Le sélecteur pointe vers l’élément HTML que vous souhaitez styliser. Chaque déclaration comprend un nom de propriété CSS et une valeur.
 
@@ -375,14 +375,14 @@ Et voici ensuite la code HTML permettant de faire appel à notre fichier CSS ext
             <h1>Nos Menus</h1>
             <div class="menu-grid">
                 <div class="menu-item">
-                    <img src="../images/nazi_goreng.jpg" alt="Menu 1">
+                    <img src="../images/nazi_goreng.webp" alt="Menu 1">
                     <h3>Menu Savoureux</h3>
                     <h4>Nazi Goreng</h4>
                     <p>Un délicieux menu composé d'ingrédients ultra proteine.</p>
                     <a href="panier.html" class="btn-primary">Ajouter au panier</a>
                 </div>
                 <div class="menu-item">
-                    <img src="../images/mie_goreng.jpg" alt="Menu 2">
+                    <img src="../images/mie_goreng.webp" alt="Menu 2">
                     <h3>Menu Gourmand</h3>
                     <h4>Mie Goreng</h4>
                     <p>Un menu généreux pour les afters salle.</p>
@@ -397,7 +397,7 @@ Et voici ensuite la code HTML permettant de faire appel à notre fichier CSS ext
 ```
 
 L'exécution de ce code sur le serveur web nous permet d'afficher ce rendu visuel : 
-![Page-Menu-Dark-Kitchen](./page-menu.png)
+![Page-Menu-Dark-Kitchen](./page-menu.webp)
 
 ## 3.Bilan<a name="3bilan"></a>
 Lors de ce MON, j'ai réalisé 2 tutoriels complets sur W3School qui m'ont permis de découvrir et d'apprendre la mécanique du FrontEnd avec l'utilisation des languages HTML et CSS. L'objectif de ce MON était de bien assimilé ces 2 languages afin de les utiliserr pour le codage de mon propre site web qui fait l'objet de mon POK1. Je suis donc satisfait du travail réalisé puisque le rendu des premières pages de mon site est satisfaisant. Reste maintenant à acquérir des connaissance complémentaires en JavaScript et sur l'utilisation du framework Vue pour ajouter de l'interactivité aux pages de mon site internet. 

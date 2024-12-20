@@ -44,14 +44,14 @@ Pour le premier sprint j'aimerais réaliser les étapes suivantes :
 D'abord il fallait créer la page d'accueil, sur cette page il faut le logo du site, un bouton pour se connecter, un bouton pour s'inscrire. Il faut aussi une petite présentation du site. Voilà ce que je fais avec mes talents de designer : 
 
 <div style="display:flex">
-<div><img src="accueil.png" width="300" height="600"></div>
+<div><img src="accueil.webp" width="300" height="600"></div>
 </div>
 
 
 Lorsqu'on clique sur le bouton "Connexion", une nouvelle fenêtre s'ouvre et permet à l'utilisateur de se connecter. Il faut qu'il puisse rentrer son email, son mot de passe et cliquer sur le bouton. J'ai aussi rajouté un lien **Mot de passe oublié** au cas où l'utilisateur veuille changer son mot de passe. 
 
 <div style="display:flex">
-<div><img src="connexion.png" width="300" height="600"></div>
+<div><img src="connexion.webp" width="300" height="600"></div>
 </div>
 
 
@@ -63,14 +63,14 @@ Ensuite il faut faire la même chose mais pour l'inscription, cette fois-ci on a
 - la confirmation du mot de passe
 
 <div style="display:flex">
-<div><img src="inscription.png" width="300" height="600"></div>
+<div><img src="inscription.webp" width="300" height="600"></div>
 </div>
-![inscription](inscription.png)
+![inscription](inscription.webp)
 
 Enfin, une fois que l'utilisateur est connecté, il a accès à la page principale sur laquelle se trouve les annonces. Il doit pouvoir faire une recherche parmi les annonces présentes et il doit pouvoir en ajouter s'il le souhaite. 
 
 <div style="display:flex">
-<div><img src="principale.png" width="300" height="600"></div>
+<div><img src="principale.webp" width="300" height="600"></div>
 </div>
 
 
@@ -85,7 +85,7 @@ Voici le component pour la page d'accueil :
 const Accueil = () => {
   return (
     <View style={[styles.container, { backgroundColor }]}>
-      <Image source={require('./logo.png')} style={styles.logo}/>
+      <Image source={require('./logo.webp')} style={styles.logo}/>
       <Text style={styles.presentation}>Bienvenue sur l'application Centrale M'Aide</Text>
       <View style={styles.userInput}>
         <CustomButton title="CONNEXION" onPress={ouvertureModal} />
@@ -98,7 +98,7 @@ const Accueil = () => {
 ```
 
 <div style="display:flex">
-<div><img src="accueil.jpg" width="300" height="600"></div>
+<div><img src="accueil.webp" width="300" height="600"></div>
 </div>
 
 
@@ -150,14 +150,14 @@ La fonction permet de changer la visibilité de la fenêtre à chaque fois qu'el
 Voilà ce que ça donne : 
 
 <div style="display:flex">
-<div><img src="fenetre_connexion.jpg" width="300" height="600"></div>
+<div><img src="fenetre_connexion.webp" width="300" height="600"></div>
 </div>
 
 
 Ensuite on fait la même chose mais avec l'inscription :
 
 <div style="display:flex">
-<div><img src="inscription.jpg" width="300" height="600"></div>
+<div><img src="inscription.webp" width="300" height="600"></div>
 </div>
 
 Voici le code associé :
@@ -234,7 +234,7 @@ Je devais lors de mon deuxième sprint finir la création des pages de l'applica
 Je devais ensuite créer la page sur laquelle figure les annonces, c'est aussi la page qui apparaîtra après que l'utilisateur se soit connecté. Voici à quoi je suis arriver : 
 
 <div style="display:flex">
-<div><img src="Page_Annonce.jpg" width="300" height="600"></div>
+<div><img src="Page_Annonce.webp" width="300" height="600"></div>
 </div>
 
 Voici le code qui permet d'arriver à cette page: 
@@ -246,7 +246,7 @@ const Annonces = () => {
         <View>
             <View style={styles.header}>
                 <Image 
-                    source={require('../logo.png')}
+                    source={require('../logo.webp')}
                     style={styles.logo}
                 />
             </View>
@@ -261,11 +261,11 @@ const Annonces = () => {
                 <View style={styles.annonce}>
                     <Text style={styles.titre}>Appartement libre Réformés</Text>
                     <View style={styles.date}>
-                        <Image style={styles.dateImage} source={require('./date.png')}></Image>
+                        <Image style={styles.dateImage} source={require('./date.webp')}></Image>
                         <Text style={styles.dateText}>Octobre 2023</Text>
                     </View>
                     <View style={styles.adresse}>
-                        <Image style={styles.adresseImage} source={require('./adresse.png')}></Image>
+                        <Image style={styles.adresseImage} source={require('./adresse.webp')}></Image>
                         <Text style={styles.adresseText}>8 rue Lafayette 13001</Text>
                     </View>
                 </View>
@@ -273,11 +273,11 @@ const Annonces = () => {
                 <View style={styles.annonce}>
                     <Text style={styles.titre}>Donne table 4 personnes</Text>
                     <View style={styles.date}>
-                        <Image style={styles.dateImage} source={require('./date.png')}></Image>
+                        <Image style={styles.dateImage} source={require('./date.webp')}></Image>
                         <Text style={styles.dateText}>Mai 2O24</Text>
                     </View>
                     <View style={styles.adresse}>
-                        <Image style={styles.adresseImage} source={require('./adresse.png')}></Image>
+                        <Image style={styles.adresseImage} source={require('./adresse.webp')}></Image>
                         <Text style={styles.adresseText}>45 Allée Léon Gambetta</Text>
                     </View>
                 </View>

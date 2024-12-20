@@ -39,7 +39,7 @@ Puis ensuite implémenter le chatbot, du mieux que je peux.
 
 Je n'ai pas passé 10h sur ce premier sprint, et je n'ai donc pas eu le temps d'avancer sur la main page.
 
-<img src="login.png">
+<img src="login.webp">
 
 ## Sprint 2
 
@@ -110,7 +110,7 @@ L'API met à jour la base de données avec le nombre de fois que l'utilisateur a
 On reconnait l'utilisateur grâce à un cookie créé ou modifié sur la page de connexion.
 
 
-<img src="main.png">
+<img src="main.webp">
 
 On voit ici que l'humeur est affichée à gauche, sur 10 (donc là il est très content). Je lui ai raconté une blague et il m'a répondu qu'il avait rit. On voit aussi les boutons caresser et nourrir. On est pas sur un design de niveau GAFA encore. Mais l'utilisation est simple en tout cas.
 
@@ -118,7 +118,7 @@ On voit ici que l'humeur est affichée à gauche, sur 10 (donc là il est très 
 
 On a donc 3 fichiers, l'app.py, le template login.html et le template main.html (en plus des différentes images et font utilisées, toutes regroupées dans un fichier image).
 
-<img src=structure.png>
+<img src=structure.webp>
 
 Je n'ai pas fait de template css par mauvaise habitude de toujours tout mettre au même endroit, après avoir eu des problèmes dans certains serveurs...
 
@@ -266,7 +266,7 @@ if __name__ == '__main__':
         background-color: #2c2c2c;
         background-repeat: no-repeat;
         background-attachment: fixed;
-        background-image: URL("getimage/test.jpg");
+        background-image: URL("getimage/test.webp");
         background-position: center top; 
         font-family: "Open Sans", sans-serif;
         color: #00353F;
@@ -601,7 +601,7 @@ if __name__ == '__main__':
     <title>ChatClique</title>
 </head>
 <body>
-    <img id="catImage" src="/getimage/cutiecat.jpg">
+    <img id="catImage" src="/getimage/cutiecat.webp">
     <button id="pet" name="pet">Pet</button>
     <button id="pet" name="feed">Feed</button>
     <br>
@@ -675,7 +675,7 @@ if __name__ == '__main__':
         e.target.classList.add('animate');
         setTimeout(function() {
             e.target.classList.remove('animate');
-            replaceImage("/getimage/cutiecat.jpg");
+            replaceImage("/getimage/cutiecat.webp");
         }, 1200);
     };
 

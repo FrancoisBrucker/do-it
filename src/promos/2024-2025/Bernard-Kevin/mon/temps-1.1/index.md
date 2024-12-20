@@ -66,12 +66,12 @@ Donc
 
 ### Desktop
 
-![alt text](1_1_figma_desktop.png)
+![alt text](1_1_figma_desktop.webp)
 
 Alors voilà sur quoi on arrive quand on ouvre un design file sur Figma (je vous fais confiance pour arriver jusque là 😉).
 
 On peut définir 4 zones qu'on va utiliser :
-![alt text](1_2_figma_desktop_encadre.png)
+![alt text](1_2_figma_desktop_encadre.webp)
 
 On va avoir :
 - <span style="color:blue"><b>L'explorateur</b></span> : c'est là où seront listés nos composants (textes, images, carrés, cercles...).
@@ -81,18 +81,18 @@ On va avoir :
 
 ## 2.Fonctionnement des Frames <a id="section2"></a>
 
-![alt text](2_1_figma_frame.png)
+![alt text](2_1_figma_frame.webp)
 
 En cliquant sur cet icône dans la partie <span style="color:#FFD700"><b>outils</b></span> on va pouvoir tracer un rectangle qui définira une **frame**. On peut aussi choisir un type de frame prédéfini dans la partie <span style="color:red"><b>paramètres</b></span>.
 
-![alt text](2_2_figma_frame_parametres.png)
+![alt text](2_2_figma_frame_parametres.webp)
 
 Les frames sont ce qui va nous servir de **zones de rangement** pour tous nos composants.
 Elles représentent la taille de nos écrans (écran d'ordinateur, d'iphone, de smartphone...) mais aussi des zones contenant des composants.
 
 Ainsi on va pouvoir mettre des frames dans des frames ce qui va former une hiérarchie, comme avec nos dossiers, visible dans la zone <span style="color:blue"><b>explorateur</b></span>.
 
-![alt text](2_3_figma_frame_layers.png)
+![alt text](2_3_figma_frame_layers.webp)
 
 🚨**Petite attention** s'il-vous-plaît !
 Utiliser des **FRAMES** plutôt des **formes** quand vous voulez mettre des composants dedans/devant.
@@ -107,15 +107,15 @@ Je ne parle ici que de ceux principalement utilisés et de même pour leurs <spa
 
 Dans les <span style="color:#FFD700"><b>outils</b></span>, on peut créer différentes formes...
 
-![alt text](3_1_figma_formes.png)
+![alt text](3_1_figma_formes.webp)
 
 ...et sur le <span style="color:black"><b>bureau</b></span> cela donne ceci :
 
-![alt text](3_2_figma_formes_bureau.png)
+![alt text](3_2_figma_formes_bureau.webp)
 
 Ensuite dans les <span style="color:red"><b>paramètres</b></span>, on peut modifier la couleur, la position dans la frame, les contours...
 
-![alt text](3_3_figma_formes_parametres.png)
+![alt text](3_3_figma_formes_parametres.webp)
 
 On peut aussi insérer des images mais on va voir qu'on peut faire beaucop plus simple.
 
@@ -129,11 +129,11 @@ Après on peut toujours aller dans les <span style="color:red"><b>paramètres</b
 
 On sélectionne l'<span style="color:#FFD700"><b>outil</b></span> texte ou, plus rapide, on tape `T`
 
-![alt text](3_4_figma_texte_outis.png)
+![alt text](3_4_figma_texte_outis.webp)
 
 ...et dans les <span style="color:red"><b>paramètres</b></span> on change la police, la taille...
 
-![alt text](3_5_figma_texte_parametres.png)
+![alt text](3_5_figma_texte_parametres.webp)
 
 ### Icônes
 
@@ -141,7 +141,7 @@ Pour les icônes c'est comme les images, on va faire un `Ctrl + C` et `Ctrl + V`
 
 C'est pas trop compliqué, il suffit de chercher "figma free icons" sur le navigateur et d'ouvrir le premier lien. Vous aurez quelque chose de similaire à ceci :
 
-![alt text](3_6_figma_icons.png)
+![alt text](3_6_figma_icons.webp)
 
 Sinon l'autre solution c'est de sélectionner des icônes via une librairie téléchargée...
 
@@ -154,7 +154,7 @@ De mon côté je me suis plutôt intéressé aux UI Kit qui sont dédiés à la 
 On va y trouver des boutons, des icônes, des barres de navigations, des polices préfaites (pour les différents titres par exemple : h1, h2...) et plein, pleiiin d'autres choses.
 
 Petit exemple avec des composants stylisés de la librairie d'iOS 18 :
-![alt text](4_1_figma_librairie_exemple.png)
+![alt text](4_1_figma_librairie_exemple.webp)
 
 Ce qui est bien avec Figma c'est qu'il y a une communauté où tout le monde peut publier ce qu'il fait et on retrouve à la fois les librairies des composants de google, d'android... mais aussi d'autres réalisées par des particuliers.
 
@@ -162,26 +162,26 @@ Ce qui est bien avec Figma c'est qu'il y a une communauté où tout le monde peu
 
 Dans un premier temps, on revient sur notre compte Figma avec nos fichiers et on va explorer le contenu de la communauté.
 
-![alt text](4_2_figma_librairie_telechargement_community.png)
+![alt text](4_2_figma_librairie_telechargement_community.webp)
 
-![alt text](4_3_figma_librairie_telechargement_browse.png)
+![alt text](4_3_figma_librairie_telechargement_browse.webp)
 
-![alt text](4_4_figma_librairie_telechargement_UIkit.png)
+![alt text](4_4_figma_librairie_telechargement_UIkit.webp)
 
 Une fois le UI Kit choisi, il reste plus qu'à l'ouvrir.
 
 On publie la librairie dans son répertoire.
-![alt text](4_5_figma_librairie_telechargement_publish1.png)
+![alt text](4_5_figma_librairie_telechargement_publish1.webp)
 
 ### Ajouter la librairie au projet
 
 On revient sur notre fichier figma et on va sur <span style="color:green"><b>Assets</b></span> dans notre <span style="color:blue"><b>explorateur</b></span>.
 
-![alt text](4_6_figma_librairie_ajout1.png)
+![alt text](4_6_figma_librairie_ajout1.webp)
 
 Il ne reste plus qu'à ajouter la librairie :
 
-![alt text](4_7_figma_librairie_ajout2.png)
+![alt text](4_7_figma_librairie_ajout2.webp)
 
 **Remarques :**
 On retrouvera les nouveaux composants stylisés toujours dans la partie <span style="color:green"><b>Assets</b></span>.
@@ -224,4 +224,4 @@ Liste de raccourcis utiles :
 Cela m'a été très utile, et j'ai vraiment pu apprendre et l'utiliser pour mon projet perso.
 Clairement, je ferai toujours une maquette sur figma avant de coder.
 
-![alt text](6_figma_portfolio.png)
+![alt text](6_figma_portfolio.webp)

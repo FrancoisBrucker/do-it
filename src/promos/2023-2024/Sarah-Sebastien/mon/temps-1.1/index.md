@@ -70,7 +70,7 @@ Aujourd’hui, les ERP gèrent une multitude de processus vitaux :
 
 ### a. Architecture technique
 
-<img align="right" width="350" src="image_1.png" >
+<img align="right" width="350" src="image_1.webp" >
 
 Les ERP sont basés sur une architecture client/serveur : les différents postes informatiques accèdent à l’informations de loin et les transformations effectuées sont appliquées **à toutes les fonctions**. Les serveurs sont couplés à une **base de données unique**, où sont stockées toutes les données, et communiquent avec les clients.
 De plus, les ERP sont **compatibles au pack Office**, en particulier pour PowerPoint et Excel. Le premier étant utile pour personnaliser les bureaux ERP en fonction de l'entreprise et le second pour effectuer les imports/exports de données. Les ERP sont aussi compatibles avec des outils de reporting (es CrystalReport), outils principalement utilisés pour le module de gestion relation client.
@@ -79,7 +79,7 @@ De plus, les ERP sont **compatibles au pack Office**, en particulier pour PowerP
 
 Un ERP est **modulaire** dans le sens où il est possible de n'avoir qu'une ou plusieurs applications pour une entreprise, et d'en ajouter quand elle veut. Les applications modulaires telles que les ERP permettent d'être sûr de la compatibilité des modules entre eux, ils s'imbriquent comme des blocs de Lego et fonctionnent ensemble (pas de vérification de compatibilité à effectuer). 
 
-<img  src="image_2.png" >
+<img  src="image_2.webp" >
 
 ## 4. Différents types d'ERP
 
@@ -115,7 +115,7 @@ Selon la taille d’une entreprise, ses attentes et son besoin concernant les fo
 
 ### d. Différents types de déploiements du progiciel
 
-<img  src="image_3.png" >
+<img  src="image_3.webp" >
 
 |**ERP cloud**| **ERP sur site/"on-premise"**| **ERP hybride/à deux niveaux**|
 |---|---|---|

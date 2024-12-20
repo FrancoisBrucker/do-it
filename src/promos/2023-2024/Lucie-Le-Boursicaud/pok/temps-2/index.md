@@ -115,17 +115,17 @@ Pour créer le logo j'ai utilisé Canva que je maitrise plutôt bien.
 J'ai essayé différents arrangements pour avoir le nom VIBE en harmonie avec l'information "Brunch & Art".Choisir la disposition parfaite pour intégrer ces éléments a été mon point de départ, je voulais refléter l'atmosphère artistique tout en assurant une lisibilité claire et immédiate. Au début j'ai essayé des arrangements très simples ce qui est efficace mais qui reflète peu le côté créatif que je voulais exprimé. 
 
 <div style="display:flex">
-<div><img src="logoVIBE.png"></div>
-<div><img src="vibe3Nv.png"></div>
+<div><img src="logoVIBE.webp"></div>
+<div><img src="vibe3Nv.webp"></div>
 </div>
 
 J'ai essayé donc d'autres justement. Ensuite, il a fallu trouvé la police adéquate assez expressive pour le nom de la marque mais aussi une police plus élégante et sobre pour l'information.
 J'ai ajouté des formes un peu artistiques et de la couleur pour former des versions finales qui correspondent bien à ce que j'imaginais. Ces formes évocatrices soulignent la créativité et l'énergie du lieu. Pour la palette de couleurs j'hésitait entre des couleurs vibrantes pour stimuler les sens ou des couleurs plus pastelles.
 
 <div style="display:flex">
-<div><img src="vibe1Cv.png"></div>
-<div><img src="vibe2Cv.png"></div>
-<div><img src="vibe3Cv.png"></div>
+<div><img src="vibe1Cv.webp"></div>
+<div><img src="vibe2Cv.webp"></div>
+<div><img src="vibe3Cv.webp"></div>
 </div>
 
 #### Typographie 
@@ -137,7 +137,7 @@ Pour le corps du texte, j'ai choisi Kokoro. Cette police offre une bonne lisibil
 En ce qui concerne les boutons, j'ai opté pour Koulen. Cette typographie confère aux boutons une apparence distinctive et une certaine énergie, tout en maintenant une clarté visuelle pour les interactions utilisateur. Koulen ajoute une dimension subtile, soulignant l'importance des actions à entreprendre sans compromettre la facilité d'utilisation.
 
 <div>
-<div><img src="typo.png"></div>
+<div><img src="typo.webp"></div>
 </div>
 
 Dans l'ensemble, cette combinaison de Montserrat, Kokoro et Koulen vise à créer une expérience visuelle harmonieuse, cohérente pour les utilisateurs, renforçant ainsi l'identité visuelle de l'entreprise.
@@ -146,8 +146,8 @@ Dans l'ensemble, cette combinaison de Montserrat, Kokoro et Koulen vise à crée
 #### Couleurs
 
 <div style="display:flex">
-<div><img src="palette pastel.png"></div>
-<div><img src="palette vive.png"></div>
+<div><img src="palette pastel.webp"></div>
+<div><img src="palette vive.webp"></div>
 </div>
 
 ## 3. Réalisation d'une maquette simplifiée
@@ -166,30 +166,30 @@ La première étape est donc d'avoir une idée globale de la structure du site n
 La réflexion principale pour ces maquettes simplifiées c'est que le parcours utilisateur soit le plus fluide possible lors que celui-ci cherche une information précise. Je veux donc quelque chose d'assez original mais qui reste intuitif : tout le défi de ce POK réside dans ce travail. 
 
 <div style="display:flex">
-<div><img src="homeMS.png"></div>
-<div><img src="carteMS.png"></div>
-<div><img src="artMS.png"></div>
-<div><img src="resaMS.png"></div>
+<div><img src="homeMS.webp"></div>
+<div><img src="carteMS.webp"></div>
+<div><img src="artMS.webp"></div>
+<div><img src="resaMS.webp"></div>
 </div>
 
 ## 4. Ebauche des différentes pages et création de premiers composants
 À partir d'une maquette simplifiée, j'ai élaboré des ébauches de pages toujours à l'aide de l'outil Figma. 
 <div style="display:flex">
-<div><img src="homeME.png"></div>
-<div><img src="carteME.png"></div>
-<div><img src="artME.png"></div>
-<div><img src="resaME.png"></div>
+<div><img src="homeME.webp"></div>
+<div><img src="carteME.webp"></div>
+<div><img src="artME.webp"></div>
+<div><img src="resaME.webp"></div>
 </div>
 
 Et les premiers composants : 
 <div style="display:flex">
-<div><img src="compo1.png"></div>
-<div><img src="compo2.png"></div>
-<div><img src="compo3.png"></div>
+<div><img src="compo1.webp"></div>
+<div><img src="compo2.webp"></div>
+<div><img src="compo3.webp"></div>
 </div>
 <div style="display:flex">
-<div><img src="compo4.png"></div>
-<div><img src="compo5.png"></div>
+<div><img src="compo4.webp"></div>
+<div><img src="compo5.webp"></div>
 </div>
 
 # Sprint 2
@@ -209,24 +209,24 @@ Et les premiers composants :
 En utilisant les outils de Figma, j'ai créé une structure de base pour l'en-tête de page. J'ai essayé plusieurs modèles mais je trouvais que le plus sobre était celui qui rendait le mieux finalement.
 
 <div style="display:flex">
-<div><img src="entete2.png"></div>
-<div><img src="entete3.png"></div>
-<div><img src="entete.png"></div>
+<div><img src="entete2.webp"></div>
+<div><img src="entete3.webp"></div>
+<div><img src="entete.webp"></div>
 </div>
 
 J'ai aussi fait différents prototypes pour les catégories de plats et j'en ai gardé un assez sobre. 
 
 <div style="display:flex">
-<div><img src="nomcat.png"></div>
-<div><img src="cat2.png"></div>
-<div><img src="cat3.png"></div>
+<div><img src="nomcat.webp"></div>
+<div><img src="cat2.webp"></div>
+<div><img src="cat3.webp"></div>
 </div>
 
 ### Réservation bien prise en compte
 Pour ce composant je me suis inspirée de ce que j'ai trouve en me baladant sur les templates de site pour essayer de recréer quelque chose de similaire et dans l'esprit du mien. 
 
 <div style="display:flex">
-<div><img src="enr.png"></div>
+<div><img src="enr.webp"></div>
 </div>
 
 ### Ajouter les couleurs aux différentes pages 
@@ -236,7 +236,7 @@ Cette partie là était pas vraiment évidente parce que j'ai testé plusieurs t
 Je voulais qu'il y ait des animations sur les boutons lors du survol et lors du clic et aussi ajouter des animations sur les en-tête de page lors de l'arrivée sur une page. Pour la page principale j'ai aussi des animations sur les boutons qui apparaissent à l'écran. 
 
 <div style="display:flex">
-<div><img src="boutonhme.png"></div>
+<div><img src="boutonhme.webp"></div>
 </div>
 
 A l'arrivée sur la page le bouton n'est qu'un simple trait, puis il s'élargit jusqu'à devenir le bouton, et lors de son survol il grossit. J'ai bien toutes les animations que je voulais et je me suis servie de mon MON pour un peu mieux gérer les transitions et les temps d'animations optimaux.
@@ -246,25 +246,25 @@ La page principale ne me plaisait pas. J'ai donc essayé d'autres structures jus
 
 Exemples : 
 <div style="display:flex">
-<div><img src="lafourchette.png"></div>
-<div><img src="cafeoneleventh.png"></div>
+<div><img src="lafourchette.webp"></div>
+<div><img src="cafeoneleventh.webp"></div>
 </div>
 
 <div style="display:flex">
-<div><img src="homepagecouleur1.png"></div>
-<div><img src="homecouleurs.png"></div>
+<div><img src="homepagecouleur1.webp"></div>
+<div><img src="homecouleurs.webp"></div>
 </div>
 
 #### Réalisation finale 
 <div style="display:flex">
-<div><img src="homecouleurs.png"></div>
+<div><img src="homecouleurs.webp"></div>
 </div>
 <div style="display:flex">
-<div><img src="cartecouleurs.png"></div>
+<div><img src="cartecouleurs.webp"></div>
 </div>
 <div style="display:flex">
-<div><img src="résacouleurs.png"></div>
-<div><img src="enrresacouleurs.png"></div>
+<div><img src="résacouleurs.webp"></div>
+<div><img src="enrresacouleurs.webp"></div>
 </div>
 
 ### Horodateur

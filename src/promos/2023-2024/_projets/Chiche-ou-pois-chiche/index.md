@@ -26,7 +26,7 @@ Ce projet a pour but de créer une version mobile du jeu de cartes "Chiche ou Po
 
 Par ailleurs, en terme de plus value apportée au jeu, une application mobile serait un moyen d'accroître sa visibilité, et faciliter son accès. En effet, à l’ère du digital, les jeux mobiles offrent une accessibilité sans précédent, qui permet aux utilisateurs de jouer n'importe où et à tout moment, contrairement aux jeux de cartes papier qui nécessitent d’avoir le jeu à portée de soi pour cela.
 
-![Image jeu](Image1.jpg)
+![Image jeu](Image1.webp)
 *Image du jeu original*
 
 <h2 id=papier> Comparaison avec le jeu papier</h2>
@@ -58,11 +58,11 @@ Ensuite, nous avons décidé de nous organiser en suivant la méthode Agile, don
 
 Nous avons donc tout d'abord établi le backlog de notre projet. Nous avons classé les User Stories suivant plusieurs catégories. Nous avons aussi estimé les complexités de chaque fonctionnalité (échelle de Fibonacci) et associé à chacune une valeur métier (méthode MoSCoW).
 
-![backlog](backlog_png.png)
+![backlog](backlog_png.webp)
 
 Si l'on fait un bilan des User Stories qui ont été réalisées et celles qui ne l'ont pas été, on obtient le graphique suivant:
 
-<img width=500 src=nombre_fonctionnalités.png>
+<img width=500 src=nombre_fonctionnalités.webp>
 
 Deux fonctionnalités "Must" n'ont pas été développées:
 
@@ -116,7 +116,7 @@ print('FINI')
 
 Voici un diagramme de Gantt représentant l'évolution de notre projet sur l'année:
 
-![Gannt](gantt.png)
+![Gannt](gantt.webp)
 
 <h2 id=resultat> Résultats et livrables</h2>
 
@@ -126,13 +126,13 @@ Comme la réussite de notre jeu résidait en grande partie à la réussite de **
 
 Nous avions obtenu une première version à la fin des **cours d'UX design**, qui ressemblait à ceci :
 
-<img width=500 src=maquette1.png>
+<img width=500 src=maquette1.webp>
 
 Mais lors du cours d'**UI**, plus centré sur le **design visuel**, il nous a été reproché que notre design ne faisait pas assez *jeu*. En voulant nous adresser à un public *large*, plutôt que de choisir un *persona*, nous n'arrivions pas à nous décider sur des choix visuels précis.
 
 Nous avons alors décidé de refaire toute la démarche, de définir un persona précis qui soit un jeune de notre âge, et de créer un *Moodboard*. Nous avons choisi de nous inspirer d'un jeu mobile sur le même principe que nous (ie qui se jouait sur un seul téléphone), et s'adressant aux jeunes : **l’imposteur**.
 
-<img width=500 src=imposteur.png>
+<img width=500 src=imposteur.webp>
 
 Nous avons alors analysé ce qu'il manquait à notre maquette essentiellement : des **images/icônes**, des **couleurs**, et un **logo** qui correspondait à l'univers du jeu.
 
@@ -140,16 +140,16 @@ Alors on a tenté de retravailler :
 - notre logo
 
 |---|---|
-|<img width=300 src=logo1_1.png> | <img width=300 src=logo1_2.png>|
-|<img width=300 src=logo2_1.png> | <img width=300 src=logo2_2.png>|
+|<img width=300 src=logo1_1.webp> | <img width=300 src=logo1_2.webp>|
+|<img width=300 src=logo2_1.webp> | <img width=300 src=logo2_2.webp>|
 
 - notre maquette
 
-<img width=500 src=maquette2.png>
+<img width=500 src=maquette2.webp>
 
 Mais c'était très dur pour nous de nous défaire de notre idée de départ. Alors on s'est finalement dirigé vers une alternative de notre première idée :
 
-<img width=500 src=maquette3.png>
+<img width=500 src=maquette3.webp>
 
 {%faire%}
 **[Lien vers le preview Figma](https://www.figma.com/proto/qpd6RRPLzQF2yXglJ3bFc3/Interface-application?type=design&node-id=42-93&t=i522PIOTavWnt3Og-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=71%3A561&show-proto-sidebar=1&mode=design)**
@@ -159,7 +159,7 @@ Mais c'était très dur pour nous de nous défaire de notre idée de départ. Al
 
 Nous avons également présenté notre application lors de l'après- midi de présentation des projets 3A aux anciens de Do-It ainsi qu’aux élèves intéressés. Voici le poster que nous avons réalisé pour expliquer le concept, la planification et l’avancement du projet :
 
-<img width=500 src=poster.png>
+<img width=500 src=poster.webp>
 
 ### Application Bubble
 
@@ -211,7 +211,7 @@ Comme nous l'avons mentionné précédemment, il existe plusieurs inconvénients
 
 Ce projet a pour but de créer une version mobile du jeu de cartes “Chiche ou Pois Chiche”. Après plusieurs parties, on retombe rapidement sur les mêmes questions et le jeu devient vite obsolète pour un joueur une fois qu’il a rencontré toutes les questions et connaît toutes les réponses. Notre idée serait donc de créer une version mobile du jeu pour pouvoir alimenter la base de données et ainsi offrir aux fervents joueurs de “Chiche ou pois Chiche”, de pouvoir y jouer indéfiniment. De plus, une application mobile serait un moyen d'accroître la visibilité du jeu.
 
-![Image jeu](Image1.jpg)
+![Image jeu](Image1.webp)
 
 Le but du jeu est de gagner le plus de points en posant les bonnes questions à son ou ses partenaire de jeu. On forme plusieurs équipes de 2 minimum. Pour chaque question le joueur lit l'indice à son partenaire puis lui demande "Chiche ou Pois Chiche ?". Il répond "Chiche" s'il pense pouvoir répondre à la question sans proposition de réponse ou "Pois Chiche" s'il souhaite les 4 propositions. Si la réponse donnée est correcte l'équipe récupère une "Carte Chiche" (3 points) ou une "Carte Pois Chiche" (1 point) selon l'annonce faite précédemment.
 Le jeu possède 8 catégories de questions pour permettre à tout le monde d’avoir des points forts et des faiblesses. ("Sport", "Culture G", "Petits écrans", "Grand écran", "Voyage", “Musique", "Bouffe")

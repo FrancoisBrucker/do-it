@@ -86,15 +86,15 @@ Photo montage de mon aventure :
 
 L'envers du décor avec la VM :
 
-![](./server.png)
+![](./server.webp)
 
 Le pont qui dessert ma VM :
 
-![](./routeur.png)
+![](./routeur.webp)
 
 J'accède au site depuis mon téléphone en 5G :
 
-![](./youpi.jpg)
+![](./youpi.webp)
 
 ## Sprint 2
 
@@ -130,7 +130,7 @@ Pour pouvoir voir qui se connecte sur le site, il faut configurer la récupérat
 
 Je peux maintenant me connecter sur mon serveur à partir de n'importe quel ordinateur et avoir une vue d'ensemble des fichiers en quelques clics, sans avoir à "ls" dans tous les coins.
 
-![](./saveas.png)
+![](./saveas.webp)
 
 Mais un problème apparaît : Modifier et sauvegarder le fichier avec les commandes de l'IDE ne l'effectue pas en tant que 'sudo' (membre avec tous les droits). J'ai trouvé une extension VSCode qui permet de "Save as root", que j'ai lié à un shortcut au clavier. Pratique !
 
@@ -140,7 +140,7 @@ Cette étape n'était pas nécessaire et a ajouté une vulnérabilité à mon se
 
 Configurer les logs s'est fait en quelques lignes seulement dans les fichiers .conf d'Apache. Il fallait déterminer le format des informations qu'on récupère, ainsi que le fichier de sortie. Cette configuration a été rapide, mais la mise en place correcte des droits d'écriture et de lecture corrects pour les fichiers et dossiers de logs a été compliquée (pour moi en tout cas).
 
-![](./conf.png)
+![](./conf.webp)
 
 ### Création de la CGI pour afficher les logs
 
@@ -198,11 +198,11 @@ J'ai laissé tourner mon détecteur pendant :
 
 **1 heure**
 
-![](./1heure.png)
+![](./1heure.webp)
 
 **4 heures**
 
-![](./4heures.png)
+![](./4heures.webp)
 
 
 J'ai filtré quelques adresses telles que 127.0.0.1 ou autre mais je n'ai pas enlevé ma propre adresse, ce qui fausse le total. NEANMOINS ! On remarque que dès la première heure, il y a eu relativement beaucoup de visites sur le site (alors qu'il n'est pas référencé, et que je n'ai envoyé mon IP à personne). Notamment une IP irlandaise qui a tenté 100 accès, probablement pour "mapper" le site et voir les URLs disponibles, mais j'avoue que je n'ai pas approfondi les recherches.

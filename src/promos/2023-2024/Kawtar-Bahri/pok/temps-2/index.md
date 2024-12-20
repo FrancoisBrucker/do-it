@@ -33,9 +33,9 @@ Objectifs du Portfolio :
 •	Communiquer avec ces employeurs / clients (via une rubrique de demandes & recommandations) 
 
 3.  Développement du Front-End 
-<img src="1.png">
-<img src="2.png">
-<img src="3.png">
+<img src="1.webp">
+<img src="2.webp">
+<img src="3.webp">
 
 ## Réalisation du sprint 2:
 ***1. Installation des outils***
@@ -77,10 +77,10 @@ module.exports = mongoose.model('Recommandations', monSchema);
 
 ***5. Tests & Debogage***
 La base de données :
-<img src="MongoDB.png" >
+<img src="MongoDB.webp" >
 Le serveur : 
-<img src="server.png" >
+<img src="server.webp" >
 Le site :
-<img src="site.png" >
+<img src="site.webp" >
 Le code : 
 Le code développé dans ce POK est disponible sur mon [github repository ](https://github.com/KawtarBahri/Mon-portfolio/)

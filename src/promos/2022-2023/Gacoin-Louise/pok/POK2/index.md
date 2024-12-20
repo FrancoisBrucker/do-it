@@ -113,8 +113,8 @@ Pour tester mon prototype, j'ai besoin de jeunes parents. J'ai contacté plus de
 
 Avec le temps qui défile à une vitesse folle, mon premier MVP n'en est pas un. L'idée était surtout de valider mes hypothèses de départ. J'ai donc envoyé un mail sous forme de questionnaire. J'ai aussi ajouté un croquis de mon site afin que mes testeurs puissent visualiser quelques fonctionnalités.
 
-<img src="croq1.png">
-<img src="croq2.png">
+<img src="croq1.webp">
+<img src="croq2.webp">
 
 **Questions posées:**
 
@@ -189,15 +189,15 @@ Concernée par son porte-monnaie et l’environnement
 Je me suis inspirée d’autres sites de marque pour enfants eco responsables. On remarque que les tons majoritairement présents sont le rose, le marron et le vert.
 
 
-<img src="mood.png">
+<img src="mood.webp">
 
 - Les palettes de couleur : Je me suis inspirée du mood board pr sélectionner différentes palettes de couleurs correspondant à la marque
 
-<img src="couleu.png">
+<img src="couleu.webp">
 
 - La police : j’ai choisi des polices refletant les côtés simples et familiaux de la marque. Elles sont plus personnelles et arrondies que les polices classiques.
 
-<img src="police.png">
+<img src="police.webp">
 
 - Les écrans :
 J’ai choisis de réaliser 6 écrans qui reflètent les fonctionnalités principales de mon site :
@@ -208,12 +208,12 @@ L’onglet vêtements de ski
 L’onglet correspondant au panier
 l’onglet « Mon compte »
 
-<img src="test.png">
+<img src="test.webp">
 
 Après plusieurs tests couleur voici le resultat final. J’ai aussi choisi de mettre des photos des vêtements portés et sur fond de nature (dans le but de rappeler le côté eco-friendly de la boutique) . Je pensais que mes premiers dessins sur canvas ne me serviraient pas. Au final ils m’ont pas mal aidé pour remplir mes pages figma.
 
-<img src="accueilv1.png">
-<img src="cerev1.png">
+<img src="accueilv1.webp">
+<img src="cerev1.webp">
 
 J’ai enregistré une démo vidéo de la maquette afin de l’envoyer à mes testeurs qui n’habitent pas sur Marseille.
 
@@ -270,11 +270,11 @@ Ajouter des petites icones sur les pages produits afin d'afficher s'ils sont veg
 
 J'ai intégré la plupart de ces retours sur ma maquette:
 
-<img src= "accueilv2.png">
-<img src= "cerev2.png">
-<img src= "commandev2.png">
-<img src= "comptev2.png">
-<img src= "panierv2.png">
+<img src= "accueilv2.webp">
+<img src= "cerev2.webp">
+<img src= "commandev2.webp">
+<img src= "comptev2.webp">
+<img src= "panierv2.webp">
 
 Voici le lien de la maquette figma si vou voulez tester par vous même:
 https://www.figma.com/file/khPdhK9WQWeb1AcI7C2Iwx/BabyCam%C3%A9l%C3%A9onV2_pourtest?node-id=15%3A2&t=bLHL4qt4jXd6yuWf-1

@@ -120,8 +120,8 @@ npx react-native run-android
 Projet 3A : **KILLER**
 
 <div style="display: flex; justify-content: space-around;">
-  <img src="page2.jpg" alt="Description Image 1" style="width: 40%; margin-right: 2%;">
-  <img src="page1.jpg" alt="Description Image 2" style="width: 40%;">
+  <img src="page2.webp" alt="Description Image 1" style="width: 40%; margin-right: 2%;">
+  <img src="page1.webp" alt="Description Image 2" style="width: 40%;">
 </div>
 
 

@@ -131,7 +131,7 @@ OAuth est souvent utilisé pour permettre des connexions via des services comme 
 tout en renforçant la sécurité.
 
 Voici une image pour illustrer rapidement le rôle du serveur d'authentification (Dropbox dans le cas ci-dessous)
-![Illustration de l'authentification](./basic-auth-flow.png)
+![Illustration de l'authentification](./basic-auth-flow.webp)
 
 L'objectif premier du protocole OAuth est simple : transmettre un token (~équivalent à une clé numérique)
 à une application tierce pour que celle-ci puisse faire des actions en tant que l'utilisateur qui
@@ -166,7 +166,7 @@ mais aussi puisque c'est d'après moi le plus intéressant.
 Ce [playground](https://www.oauth.com/playground/authorization-code.html) est une petite merveille pour mieux comprendre
 le protocole utilisé, je conseille de faire une tour dessus avant la lecture des paragraphes suivants.
 
-![Authorization Code Flow](authorization-code-flow.png)
+![Authorization Code Flow](authorization-code-flow.webp)
 Ici, okta est le serveur d'authentification et le 'resource server' peut être utilisé pour récupérer des données à partir des tokens fournis par okta.
 *Tout à l'heure Dropbox était responsable à la fois de l'authentification et de ressources, ce n'est pas toujours le cas.*
 
@@ -374,7 +374,7 @@ Ce qu'on met en place, c'est un proxy, un programme qui va servir d'intermédiai
 et on oblige toutes les requêtes à passer par le proxy lui en HTTPS (on verra comment plus tard) qui va relayer les
 requêtes à notre site en HTTP tout simple puis transmettre les réponses du site au client en HTTPS.
 
-![Un serveur proxy](proxy.png)
+![Un serveur proxy](proxy.webp)
 
 J'ai décidé d'utiliser [Caddy](https://caddyserver.com/) un proxy ~relativement simple à mettre en place, disponible
 en image docker et surtout qui gère le SSL (protocole qui garantie la sécurité d'HTTPS) tout seul à ma place.
@@ -438,7 +438,7 @@ un compose déjà commencé.
 Pour le CSS, j'ai décidé de m'entraîner un peu en touchant à pas mal des concepts que j'ai vu dans la vidéo dont je
 parle dans la rétro :
 
-![Page d'autorisation](authorize.png)
+![Page d'autorisation](authorize.webp)
 
 - `position: absolute` - Logo
 - `display: flex` - Position centrée de la carte blanche

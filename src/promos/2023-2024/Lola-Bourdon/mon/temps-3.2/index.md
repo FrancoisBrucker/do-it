@@ -58,7 +58,7 @@ La méthode du TRL (Technological Readiness Level), également connue sous le no
 
 Développée à l'origine par des organisations gouvernementales américaines telles que la NASA et l'US Air Force, l'échelle TRL a été conçue pour aider à mesurer et à évaluer la maturité des technologies émergentes. Elle est devenue un outil essentiel dans le domaine de la recherche et développement, ainsi que dans l'évaluation des projets innovants.
 
-![nsa](nasatrl.png)
+![nsa](nasatrl.webp)
 
 Les Technology Readiness Levels (TRL) sont définis comme un ensemble de neuf niveaux, chacun représentant un stade spécifique dans le cycle de développement d'une technologie. Voici une brève description de chaque niveau :
 

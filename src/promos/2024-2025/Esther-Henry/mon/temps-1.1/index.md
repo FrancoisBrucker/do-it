@@ -62,7 +62,7 @@ Une fois VS Code installé, il est nécessaire d’installer un certain nombre d
 
 Nous recommandons donc d’installer à minima : **Python** (et **Pylance**, qui s’installera automatiquement) et **Python Debugger** (qui permet de corriger certains bugs) afin de pouvoir exécuter notre code (c'est-à-dire permettre à la machine de nous donner les résultats des opérations demandées dans notre script).
 
-![Installer les extensions](./images/VSCode-Extensions.png)
+![Installer les extensions](./images/VSCode-Extensions.webp)
 
 Il peut aussi être utile d’installer **Jupyter**, qui permettra d’enregistrer des fichiers contenant à la fois le script, le résultat de son exécution et des commentaires supplémentaires.
 
@@ -76,7 +76,7 @@ Pour ce faire :
 - Ouvrez un nouveau fichier (sur macOS, cliquez sur “File” puis “New File …”)
 - Sélectionnez “Python File”
 
-![Ouvrir un fichier python](./images/ouvrir-un-fichier-python.png)
+![Ouvrir un fichier python](./images/ouvrir-un-fichier-python.webp)
 
 {% faire %}
 Vérifiez alors qu’un fichier Python s’est bien ouvert : le fichier se nomme “quelque-chose **.py**” et en bas à droite de votre fenêtre, il est bien écrit “Python”.
@@ -88,7 +88,7 @@ Dans cette fenêtre, vous allez donc pouvoir écrire vos premières lignes de co
 print("Hello World !")
 ```
 
-![Hello World](./images/hello-world.png)
+![Hello World](./images/hello-world.webp)
 
 Vous voyez alors que dans le terminal il est marqué:  Hello World !. Cela signifie que votre code est bien éxecuter et que tout est bien installé.
 

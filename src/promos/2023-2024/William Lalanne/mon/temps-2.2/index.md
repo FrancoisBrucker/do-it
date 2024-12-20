@@ -329,7 +329,7 @@ const App = () => {
 export default App;
 ```
 
-![Page React](Page_Accueil.png)
+![Page React](Page_Accueil.webp)
 
 
 ## Conclusion

@@ -52,41 +52,41 @@ Dans le cas de mon POK, ce concept est appliqué spécifiquement à la ligue mar
 ## Premier Sprint <a id="section-3"></a>
 - Initialisation à l HTML CSS
 :-------------------------:|:-------------------------:
-<img src="header.png" width="650" height="500"> | <img src="body.png" width="650" height="500">
+<img src="header.webp" width="650" height="500"> | <img src="body.webp" width="650" height="500">
 
 ## Deuxième Sprint <a id="section-4"></a>
 
 ### Base de données<a id="subsection-1"></a>
 J'ai fais un webscrapping pour collecter les données de la ligues(équipes, joueurs...). La difficulté que j'ai rencontré c'est que les données ne sont pas centralisées en un endroit. Donc j'ai utilisé differents site web pour la collecte des données.
 :-------------------------:|:-------------------------:
-<img src="player_excel.png" width="650" height="500"> | <img src="player_excel2.png" width="650" height="500">
+<img src="player_excel.webp" width="650" height="500"> | <img src="player_excel2.webp" width="650" height="500">
 
  ### Front <a id="subsection-2"></a>
 J'ai travaillé sur la création d'un poster pour la ligue, la modélisation du terrain, puis la restructuration de la page d'accueil:
 :-------------------------:|:-------------------------:
-<img src="poster.png" width="700" height="550"> | <img src="index.png" width="700" height="550">
-<img src="pitch2.png" width="150" height="300">
+<img src="poster.webp" width="700" height="550"> | <img src="index.webp" width="700" height="550">
+<img src="pitch2.webp" width="150" height="300">
 
 J'ai principalement utiliser du HTML et CSS pour le developpement du front:
 :-------------------------:|:-------------------------:
-<img src="front4.png" width="700" height="550">|<img src="front1.png" width="700" height="550">
+<img src="front4.webp" width="700" height="550">|<img src="front1.webp" width="700" height="550">
 
-<img src="front2.png" width="700" height="550">|<img src="front3.png" width="700" height="550">
+<img src="front2.webp" width="700" height="550">|<img src="front3.webp" width="700" height="550">
 
 Après avoir suivi une formation en JavaScript, j'ai implémenté une fonction d'authentification (pour l'instant locale):
-<img src="login.png" width="700" height="550">
+<img src="login.webp" width="700" height="550">
 
 Ensuite, j'ai ajouté la fonctionnalité de sélectionner les joueurs pour ton équipe. Jusqu'à ce stade, toutes les fonctionnalités sont purement visuelles et aucune n'est encore opérationnelle.
-<img src="selection.png" width="700" height="550">
+<img src="selection.webp" width="700" height="550">
 
 ### Back <a id="subsection-3"></a>
 Pour mon deuxieme MON, j'ai acquis des connaissances de base en utilisant Node.js, Express, et MongoDB. J'ai ensuite mis en pratique ces compétences pour développer la partie backend de mon site. Cela m'a permis de créer une structure solide pour gérer les données, les requêtes, et les fonctionnalités interactives de la plateforme, en assurant ainsi une expérience utilisateur complète et fonctionnelle.
 
 J'ai initié le processus en établissant la première connexion avec MongoDB, en mettant en place une base de données login pour gérer les connexions et en créant une collection user.
-<img src="auth.png" width="700" height="550">
+<img src="auth.webp" width="700" height="550">
 
 Le problème réside dans le fait que, même si le formulaire de création de compte est associé à MongoDB, l'authentification reste impossible. Pour remédier à cela, il était nécessaire de mettre en place une session, d'où ma décision d'utiliser la méthode des sessions et des cookies.
-<img src="session.png" width="700" height="550">
+<img src="session.webp" width="700" height="550">
 
 ## Récapitulatif de l'avancement du projet et prochaines étapes <a id="section-5"></a>
 

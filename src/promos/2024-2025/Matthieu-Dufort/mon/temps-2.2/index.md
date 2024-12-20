@@ -29,7 +29,7 @@ Pour ce MON, je vais commencer par détailler l'impact des data centers actuelle
 
 Le rôle des données est extrémement important au quotiden, autant dans la vie personnelle que professionnelle. Et le monde en compte de plus en plus. D'ici 2025, le nombre de données attendra 175 Zettabytes (175 * 10^12 GB) soit 10 fois plus qu'en 2018. Si nous devions télécharger ça actuellement avec la vitesse d'internet aujourd'hui, cela prendrait 1.8 milliard d'années.
 
-![Graphique de l'évolution de la quantité de données au cours du temps](DatasphereSize.png)
+![Graphique de l'évolution de la quantité de données au cours du temps](DatasphereSize.webp)
 
 Ces données évoluent et sont stockées dans les data centers qui sont donc ammenés à grossir et évoluer de plus en plus.
 Ils présentent des enjeux autant stratégiques que politiques et économiques.
@@ -55,7 +55,7 @@ Il existe différents niveaux de serveurs définis en fonction de leur capacité
 
 On peu observer sur le schéma suivant l'organisation habituelle :
 
-![Schéma de l'organisation d'un data center](DatacenterSchema.png)
+![Schéma de l'organisation d'un data center](DatacenterSchema.webp)
 
 On peut voir les générateurs de secours pour garantir la continuité de l'alimentation, les blocks de climatisation, les racks stockant tous les serveurs, les services de sécurité...
 
@@ -105,7 +105,7 @@ On peut citer par exemple la société Neutral It qui utilise cette méthode cou
 
 La méthode précédente se décline en une méthode de refroidissement par liquide direct qui consiste à refroidir le processeur directement en faisant circuler de l'eau (ou huile) dessus. Cette méthode permet ensuite de rediriger l'eau chauffé vers un batiment ou de rentrer dans un cycle de refroidissement similaire à une pompe à chaleur inversé. En général ce système se combine avec de la ventilation mais il permet une baisse de 45% de la consommation en énergie.
 
-![Système de refroidissement liquide direct](LiquideDirect.png) *Système de refroidissement par liquide direct, 2CRSI*
+![Système de refroidissement liquide direct](LiquideDirect.webp) *Système de refroidissement par liquide direct, 2CRSI*
 
 Cette méthode est applicable dans les data centers déjà existant en réalisant quelques réarrangement, mais, elle ne nécessite pas de structure particulière.
 

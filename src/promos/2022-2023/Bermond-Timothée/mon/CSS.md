@@ -24,11 +24,11 @@ J'ai tout d'abord commencé par suivre la partie sur le CSS de cette [formation 
 Le CSS permet de faire la mise en forme son site (couleur du texte, police, mise en page,...).
 
 
-<img src="../Images/index_sans_css.jpg">
+<img src="../Images/index_sans_css.webp">
 Mon POK sans css.
 
 
-<img src="../Images/index_avec_css.jpg">
+<img src="../Images/index_avec_css.webp">
 Mon POK avec css.
 
 Le CSS peut-être écrit dans un fichier *.css* (recommandé), dans l'en-tête du fichier html à l'aide d'une balise *style* ou directement dans les balises (non recommandé). Utiliser un fichier *.css* permet de facilement généraliser les propriétés à toutes nos pages html sans avoir à faire des copié-collé.
@@ -137,7 +137,7 @@ Pour cela on utilise la propriété *background-color* et les mêmes valeurs que
 
 **Image de fond**
 
-Pour cela on utilise la propriété *background-image* et en valeur *url("nom_de_l_image.png")*.
+Pour cela on utilise la propriété *background-image* et en valeur *url("nom_de_l_image.webp")*.
 
 Avec la propriété *background-attachment* on peut décider :
 - de faire défiler l'image de fond avec le texte : *scroll*;
@@ -159,7 +159,7 @@ Pour modifier l'apparence de la bordure on utilise la propriété *border* qui p
 - la largeur : valeur en pixels (2px);
 - la couleur : utiliser un des choix vu plus haut pour décider de la couleur;
 - type de bordure : il existe 8 types différents de bordure.
-<img src="../Images/types_bordures.jpg">
+<img src="../Images/types_bordures.webp">
 
 Il est également possible de ne sélectionner qu'une bordure avec les propriétés : 
 - *border-top*
@@ -202,7 +202,7 @@ Des balises ont été introduites pour structurer les pages :
 - un article indépendant : balise *article*
 
 Ce qui donne a peu près :
-<img src="../Images/balises_structure.jpg">
+<img src="../Images/balises_structure.webp">
 
 **Flexbox**
 
@@ -229,10 +229,10 @@ On peut maintenant modifier la direction avec la propriété *flex-direction* qu
 Afin de permettre aux éléments d'aller à la ligne si il n'y a plus de place il faut utiliser la propriété *flex-wrap*.
 
 On peut ensuite aligner les éléments selon l'axe principal avec la propriété *justify-content* qui peut prendre différentes valeurs :
-<img src="../Images/alignement_axe_principal.jpg">
+<img src="../Images/alignement_axe_principal.webp">
 
 Mais on peut également aligner les éléments sur l'axe secondaire avec la propriété *align-items* qui peut prendre différentes valeurs :
-<img src="../Images/alignement_axe_secondaire.jpg">
+<img src="../Images/alignement_axe_secondaire.webp">
 Il est possible d'aligner un seul élément sur l'axe secondaire avec la propriété *align-self*.
 
 La propriété *order* permet de changer l'ordre des éléments du conteneur.

@@ -163,7 +163,7 @@ Voici quelques conclusions de l'étude :
 - "Alors que les effectifs salariés ont augmenté depuis 2001 (+13,5%), la baisse globale des accidents du travail (-11,1%) constitue une avancée encourageante, notamment pour les hommes (-27,2%). Mais elle masque la progression continue des accidents du travail pour les femmes (+41,6%)."
 - Le secteur le plus accidentogène pour les hommes est le BTP avec plus de 86 000 accidents de travail reconnus. Il s'agit des activités de service pour les femmes avec plus de 106 000 accidents reconnus. Ce dernier chiffre est en hausse de 110% sur la période 2001-2019.
 
-![Évolution différenciée par sexe des accidents de travail](evolution-accidents-travail.png)
+![Évolution différenciée par sexe des accidents de travail](evolution-accidents-travail.webp)
 
 **Bien qu'en baisse, les chiffres des accidents du travail en France restent loin d'être négligeables :** en 2021, 640 000 accidents du travail étaient reconnus dont 39 000 dits "graves". En réaction, le gouvernement a lancé fin 2023 une **campagne de prévention** pour alerter l'opinion publique : "Sécurité au travail : responsabilité de l'entreprise, vigilance". [8] Dans le but de faire réagir l'opinion public sont alors mis en avant des chiffres chocs : **près 700 morts par an soit 2 par jour sont liées aux accidents de travail.**
 

@@ -95,7 +95,7 @@ Exemple de lien hypertexte :
 Exemple d'image :
 
 ```
-<img src="image.jpg" alt="Description de l'image">
+<img src="image.webp" alt="Description de l'image">
 ```
 
 ### CSS

@@ -95,17 +95,17 @@ WordPress propose deux types de contenus de base : <strong>les articles et les p
 On va créer notre premier article. 
 Pour cela on survole "Posts" puis on clique sur "Add new"
 <div style="display:flex">
-<div><img src="addnewpost.png"></div>
+<div><img src="addnewpost.webp"></div>
 </div>
 
 On arrive alors sur cette page : 
 <div style="display:flex">
-<div><img src="pageaddnew.png"></div>
+<div><img src="pageaddnew.webp"></div>
 </div>
 
 Je créer mon premier post que j'ajoutes dans la <strong>Catégorie</strong> *Weekend* : 
 <div style="display:flex">
-<div><img src="firstpost.png"></div>
+<div><img src="firstpost.webp"></div>
 </div>
 
 WordPress propose également deux systèmes de classification par défaut : <strong>les catégories et les tags.</strong>
@@ -223,15 +223,15 @@ Dans ce chapitre, nous apprenons à définir <strong>une charte graphique</stron
 1. <strong>Trouver une inspiration :</strong> Nous recherchons des sites d'inspiration pour définir une identité graphique cohérente. Des sites comme Dribbble, CollectUI, ou des comptes Instagram spécialisés dans le design peuvent être utiles.
 
 <div style="display:flex">
-<div><img src="inspi1.jpg"></div>
-<div><img src="inspi2.png"></div>
+<div><img src="inspi1.webp"></div>
+<div><img src="inspi2.webp"></div>
 </div>
 
 1. <strong>Définir une palette de couleurs :</strong> Nous utilisons des outils en ligne comme Paletton ou ColorMind pour créer une palette de couleurs, en nous basant sur une image d'inspiration. Cette palette servira de base pour les choix de couleurs sur le site.
 
 <div style="display:flex">
-<div><img src="palette couleur.png"></div>
-<div><img src="palette couleur2.png"></div>
+<div><img src="palette couleur.webp"></div>
+<div><img src="palette couleur2.webp"></div>
 </div>
 
 Le seul bémol pour la première palette est le rose qui je pense ne correspond pas assez à la cible visé (enfant/adolescent masculin pour la plus part), je préfère passer à un orange tout aussi flashy mais qui sera plus adapté.
@@ -242,18 +242,18 @@ Le seul bémol pour la première palette est le rose qui je pense ne correspond 
 2. <strong>Choisir un master visuel :</strong> Nous sélectionnons une image ou une photo qui représente notre marque et son ambiance générale. Cette image sera utilisée comme élément visuel principal sur le site. J'ai trouvé différentes images inspirantes sur le site [unsplash.fr](https://unsplash.com/fr).
    
 <div style="display:flex">
-<div><img src="v1.jpg"></div>
-<div><img src="v2.jpg"></div>
-<div><img src="v3.jpg"></div>
-<div><img src="v4.jpg"></div>
-<div><img src="v5.jpg"></div>
-<div><img src="v6.jpg"></div>
+<div><img src="v1.webp"></div>
+<div><img src="v2.webp"></div>
+<div><img src="v3.webp"></div>
+<div><img src="v4.webp"></div>
+<div><img src="v5.webp"></div>
+<div><img src="v6.webp"></div>
 </div>
 
 3. <strong>Créer un logo :</strong> Si nous ne sommes pas graphistes, nous optons pour la simplicité en créant un logo avec le nom de la marque et éventuellement une icône simple. Des sites comme FreePik ou des outils en ligne comme Snappa ou Canva peuvent être utiles pour créer un logo professionnel. J'ai travaillé sur Canva pour obtenir ce logo : 
 
 <div style="display:flex">
-<div><img src="Clapas_Bartas.png"></div>
+<div><img src="Clapas_Bartas.webp"></div>
 </div>
 
 4. <strong>Paramétrer les options du thème :</strong> Nous utilisons le customizer de WordPress pour intégrer les éléments de notre charte graphique dans le thème. Cela inclut l'ajout du logo, la définition des palettes de couleurs et des polices de caractères, ainsi que la configuration du layout des pages.
@@ -296,7 +296,7 @@ En suivant ces étapes et en explorant les fonctionnalités d'Elementor, on peut
 Voilà un aperçu de ce que j'ai fait : 
 
 <div style="display:flex">
-<div><img src="premiereavancee.png"></div>
+<div><img src="premiereavancee.webp"></div>
 </div>
 
 ## 13. Fonctionnalités complémentaires grâce aux extensions
@@ -389,11 +389,11 @@ Ce chapitre aborde l'importance de <strong>mesurer et d'optimiser le temps de ch
    - Des outils comme <strong>GT Metrix </strong> permettent de mesurer le temps de chargement et fournissent des <strong>indicateurs de performance</strong> importants tels que le Largest Contentful Paint, le Total Blocking Time et le Cumulative Layout Shift.
    Voici ce que j'obtiens pour mon site. 
    <div style="display:flex">
-   <div><img src="GTmetrix.png"></div>
-   <div><img src="GTmetrix_topissues.png"></div>
+   <div><img src="GTmetrix.webp"></div>
+   <div><img src="GTmetrix_topissues.webp"></div>
    </div>
    <div style="display:flex">
-   <div><img src="GTmetrix_waterfall.png"></div>
+   <div><img src="GTmetrix_waterfall.webp"></div>
    </div>
    Gloablement c'est plutôt très positif, par contre il y un soucis lors de la requête affichant favicon.icon qu'il va falloir régler.
 
@@ -449,7 +449,7 @@ En suivant ces vérifications, on s'assure que notre site est prêt à être lan
 
 J'arrive un peu trop tôt, je n'aurais donc pas la méthode pour faaaster dans ce chapitre.
 <div style="display:flex">
-<div><img src="majcours.png"></div>
+<div><img src="majcours.webp"></div>
 </div>
 
 Ce chapitre guide sur la configuration du nom de domaine pour notre site avant de le mettre en ligne. Voici les étapes à suivre :

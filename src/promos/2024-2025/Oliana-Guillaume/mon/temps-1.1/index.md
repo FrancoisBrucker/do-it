@@ -104,7 +104,7 @@ Chaque page HTML commence par la déclaration `<!DOCTYPE html>`, qui informe le 
     <section>
       <h2>À propos</h2>
       <p>Je m'appelle Guillaume et je suis passionné par le web.</p>
-      <img src="profil.jpg" alt="Ma photo de profil">
+      <img src="profil.webp" alt="Ma photo de profil">
       <p>Pour en savoir plus, cliquez <a href="https://exemple.com">ici</a>.</p>
     </section>
 
@@ -157,7 +157,7 @@ Maintenant que nous avons écrit notre fichier HTML, il est temps de le tester e
 
 Dans notre exemple, voici à quoi ressemble notre premiere page web : 
 
-![alt text](image.png)
+![alt text](image.webp)
 
 
 ---
@@ -209,7 +209,7 @@ Les balises sémantiques en HTML, telles que `<header>`, `<nav>`, `<section>`, e
 ```
 Voici alors notre page : 
 
-![alt text](image-1.png)
+![alt text](image-1.webp)
 
 ### 2.4 Importance des balises sémantiques
 
@@ -351,7 +351,7 @@ Pour appliquer ce fichier CSS à votre page web, vous devez lier le fichier CSS 
 
 Voici à quoi ressemble maintenant notre site :
 
-![alt text](image-2.png)
+![alt text](image-2.webp)
 
 
 
@@ -441,7 +441,7 @@ Nous allons créer une section avec trois colonnes qui utilisent Flexbox pour s'
 
 Voici alors à quoi ressemble notre site.
 
-![alt text](image-6.png)
+![alt text](image-6.webp)
 
 
 ---
@@ -557,7 +557,7 @@ Le but de cette dernière partie est de combiner tout ce que nous avons appris p
     <section id="home">
       <h2>Bienvenue</h2>
       <p>Voici la section d'accueil.</p>
-      <img src=bg.png>
+      <img src=bg.webp>
     </section>
 
     

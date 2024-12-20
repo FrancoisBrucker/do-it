@@ -59,7 +59,7 @@ The data the forwarder can retrieve can be configured in the forwarder's configu
 
 #### Data Pipeline
 The data flow in Splunk can be described like this:
-![Data Pipeline](./pipeline-border.png)
+![Data Pipeline](./pipeline-border.webp)
 
 ### Other Components
 #### Deployment server

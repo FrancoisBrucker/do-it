@@ -30,11 +30,11 @@ L'idée de la programmation objet est d'encapsuler les données(i.e. les attribu
 
 <div style="display: flex; align-items: center;">
   <div style="width: 50%; display: flex; flex-direction: column; align-items: center;">
-    <img src="./../images/procedurale.png" style="border: 0;" />
+    <img src="./../images/procedurale.webp" style="border: 0;" />
     <p>La programmation procédrale</p>
   </div>
   <div style="width: 50%; display: flex; flex-direction: column; align-items: center;">
-    <img src="./../images/orientee-objet.png" style="border: 0;" />
+    <img src="./../images/orientee-objet.webp" style="border: 0;" />
     <p>La programmation orientée objet</p>
   </div>
 </div>
@@ -48,7 +48,7 @@ Ce petit MON se base sur le [cours de François Brucker](https://francoisbrucker
 Dans ce cours j'ai réalisé comme il est suggéré dans le cours de François de Brucker à la section 7 un petit jeu en ligne de commande permettant de faire combatter deux personnages. Je fais ici combattre un magicien contre un nain. Vous pourrez retrouver mon code sur [GitHub](https://github.com/nbert71/POO-Python).
 
 <div style="display: grid; place-items: center;">
-  <img src="./../images/gandalf-gimli.png" style="width: 50%;" />
+  <img src="./../images/gandalf-gimli.webp" style="width: 50%;" />
 </div>
 
 ### La classe Character
@@ -153,7 +153,7 @@ class Magician(Character):
 Les relations entre les classes sont résumées dans le diagramme UML suivant.
 
 <div style="display: grid; place-items: center;">
-  <img src="./../images/uml-poo.png" style="border: 0;">
+  <img src="./../images/uml-poo.webp" style="border: 0;">
 </div>
 
 ## La mécanique de jeu

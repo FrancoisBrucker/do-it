@@ -152,8 +152,8 @@ C'est une requête graphQL il n'y à pas d’intérêt à la coller ici.
 
 Après ça, on code le front, allez voir le premier POK ou des MON Reacts pour des tutos détaillés sur comment faire. Voici les résultats :
 
-<img src="./../images/artblog-cat1.png" alt="page de sculpture" style="height: 250px;width:600px; margin: 0 auto;" />
-<img src="./../images/artblog-cat2.png" alt="page de sculpture" style="height: 250px;width:500px; margin: 0 auto;" />
+<img src="./../images/artblog-cat1.webp" alt="page de sculpture" style="height: 250px;width:600px; margin: 0 auto;" />
+<img src="./../images/artblog-cat2.webp" alt="page de sculpture" style="height: 250px;width:500px; margin: 0 auto;" />
 
 ### Conclusion Premier sprint :
 
@@ -238,7 +238,7 @@ Ces secrets sont accessible depuis le Jenkinsfile grâce aux méthodes withcrede
 {%endinfo%}
 
 - Résultats : 
-<img src="./../images/jenkins-cred.png" alt="credentials" />
+<img src="./../images/jenkins-cred.webp" alt="credentials" />
 
 
 
@@ -268,9 +268,9 @@ On met en place tout ça et voici les résultat :
 
 <div style = " display: grid;grid-template-columns: repeat(3, minmax(0, 1fr))">
 
-<img src="./../images/jenkins-hour1.png" alt="page d'index" style="grid-column : 1 ;grid-row : 1" />
-<img src="./../images/jenkins-hour2.png" alt="pipeline log" style="grid-column : 2 ;grid-row : 1" />
-<img src="./../images/jenkins-hour3.png" alt="deploy list" style="grid-column : 3 ;grid-row : 1 " />
+<img src="./../images/jenkins-hour1.webp" alt="page d'index" style="grid-column : 1 ;grid-row : 1" />
+<img src="./../images/jenkins-hour2.webp" alt="pipeline log" style="grid-column : 2 ;grid-row : 1" />
+<img src="./../images/jenkins-hour3.webp" alt="deploy list" style="grid-column : 3 ;grid-row : 1 " />
 
 </div>
 

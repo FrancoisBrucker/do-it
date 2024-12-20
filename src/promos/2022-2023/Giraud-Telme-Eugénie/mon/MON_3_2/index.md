@@ -48,10 +48,10 @@ Pour le reste, nous allons couper la poire en deux et partir sur une répartitio
 #### Liste de course prévisionnelle et budget associé :
 
 Voici une liste de course prévisionnelle avec les prix à l'unité lorsque cela est possible :
-<img src="achats-30.png">
+<img src="achats-30.webp">
 
 Voici le prix total des achats :
-<img src="total-30.png">
+<img src="total-30.webp">
 
 Au départ, il était prévu de demander un budget auprès de Centrale pour le barbecue. Cette possibilité s'est avérée difficile à mettre en place.
 Il a fallu mettre en place le plan B : faire participer tout le monde au budget. Cela n'a posé problème à personne, de plus, les professeurs ont proposé d'augmenter leur part pour diminuer celle des élèves.
@@ -60,7 +60,7 @@ Comme je vais avancer les courses, il va falloir trouver une solution simple pou
 #### Demandes de prêt :
 
 Voici une première liste des choses à emprunter auprès du Bar'bu, de l'UA ou d'ISF :
-<img src="emprunts.png">
+<img src="emprunts.webp">
 
 #### Permis feu :
 

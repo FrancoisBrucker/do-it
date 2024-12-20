@@ -44,7 +44,7 @@ Premièrement, un accent est mis sur l'importance de l'environnement de travail 
 
 J'ai suivi cette [playlist](https://www.youtube.com/watch?v=ceQhIBKFp2A&list=PLfRX-xJAc2yz6CjQVQuogJeCBoy8HbCOR) pour prendre en main le logiciel Maltego. Après les bases (très basiques mais nécessaires) et un peu de pratique comme la production de ce graphique concernant Centrale Marseille:
 
-![GraphMaltego](../MaltegoCentraleMarseille.png )
+![GraphMaltego](../MaltegoCentraleMarseille.webp )
 
 C'était un peu intéressant, mais pour le moment, cela semble réservé à un usage professionnel surtout. Par conséquent, j'ai choisi de regarder ce tutoriel [from photo to passport](https://www.youtube.com/watch?v=TtTOp-o-TOs) parce que j'avais besoin de faire quelque chose de concret, un exercice.
 

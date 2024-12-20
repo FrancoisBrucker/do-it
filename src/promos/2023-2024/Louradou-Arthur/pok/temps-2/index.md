@@ -301,7 +301,7 @@ Le fonctionnement de l’application est possible de plusieurs façons que je va
 
 </div>
 
-<img src="./assets/schema_data_serenadoit.png" style="width: 30vw; aspect-ratio: 1/1;" />
+<img src="./assets/schema_data_serenadoit.webp" style="width: 30vw; aspect-ratio: 1/1;" />
 
 </div>
 

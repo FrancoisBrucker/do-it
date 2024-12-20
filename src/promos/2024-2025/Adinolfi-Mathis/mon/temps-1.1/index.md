@@ -32,7 +32,7 @@ En fin de compte, l'IA ne doit pas être perçue comme une forme de magie, mais 
 Tout le monde a déjà entendu parler du deep learning, du machine learning ou de l'intelligence artificielle sans réellement en faire la différence. Pourtant, chacun de ces termes fait référence à des approches distinctes dans le domaine de l'IA et possède des spécificités qui leurs sont propres. Il est donc important de faire la différence entre chacune de ces technologies.
 
 <div style="text-align: center;">
-    <img src="Branches_IA.png" width="500"/>
+    <img src="Branches_IA.webp" width="500"/>
     <br>
     <u> Image 1 : Classification des différents domaines de l'intelligence artificielle</u>
     <br>

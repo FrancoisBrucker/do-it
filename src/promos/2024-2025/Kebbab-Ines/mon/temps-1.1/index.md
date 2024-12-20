@@ -256,29 +256,29 @@ Le référentiel **RGAA propose notamment avec ces 106 critères des tests et de
     - **Le défilement horizontal** (swipe) peut être désactivé pour garder un seul mouvement vertical tout au long de la navigation
     - En plus des changements visuels, nous remarquons que la **navigation au clavier** (grâce aux touches : tabulation, espace et entrée) est **disponible**
     
-    ![Image des paramétrages de l'ancien site de la SCNF](./img/sncf.png "Exemple Ancien site SNCF")
+    ![Image des paramétrages de l'ancien site de la SCNF](./img/sncf.webp "Exemple Ancien site SNCF")
     
 - Hollister : réglages “Hauts Contraste” (correction de texte blanc sur fond noir). 👍
     
-    ![Réglages de constrastes sur le site Hollister](./img/hollister-contrast.png "Exemple Hollister 1-3")
+    ![Réglages de constrastes sur le site Hollister](./img/hollister-contrast.webp "Exemple Hollister 1-3")
 
-    ![Réglages de constrastes sur le site Hollister](./img/hollister-contrast-1.png "Exemple Hollister 2-3")
+    ![Réglages de constrastes sur le site Hollister](./img/hollister-contrast-1.webp "Exemple Hollister 2-3")
 
-    ![Réglages de constrastes sur le site Hollister](./img/hollister-contrast-2.png "Exemple Hollister 3-3")
+    ![Réglages de constrastes sur le site Hollister](./img/hollister-contrast-2.webp "Exemple Hollister 3-3")
     
 - Amazon 👎
     - Grâce à **l’extension Chrome [Tanaguru](https://chrome.google.com/webstore/detail/tanaguru-webext/hhopdkekcmkdfpdjbpajmmfbheglcaac/related)**, nous pouvons voir qu’il y a un certain nombre de **conflits et d’éléments invalidés** par l’outil concernant l’accessibilité :
         - Par exemple, sur cette capture d’écran, il est précisé qu’il y a un **changement de sens de lecture non-conforme** qui peut amener à perdre l’utilisateur·rice lors de sa navigation sur le site.
     - En étudiant un peu plus le site, on peut remarquer que **les formulaires n’ont pas d’étiquettes associées**. Cette négligence entraîne une navigation et une **compréhension impossible** par les **personnes aveugles ou malvoyantes** qui utilisent des **lecteurs d’écran**.
     
-    ![Audit d'accessibilité du site Amazon, comme mauvais élève du web](./img/amazon.png "Amazon")
+    ![Audit d'accessibilité du site Amazon, comme mauvais élève du web](./img/amazon.webp "Amazon")
     
 - **Un site promotionnel d’une [Renault Twingo](https://www.experience-nouvelletwingo.renault.fr/) 👎:** bien que primé à l’époque, le site propose un jeu qui n’est accessible qu’à la souris et avec un choix de couleurs très peu contrastés.
     - Même si ici le jeu est surtout une pub, il est intéressant aussi de se questionner sur les jeux en général et l’approche que l’on aura (notamment si l’on veut créer des jeux ludiques pour transmettre une information, pour gamifier des expériences).
 - **Le site de Centrale: quelles sont les améliorations à faire ?**
     - Après avoir fait passé un audit d’accessibilité au site de l’école avec le site [www.accessibilitychecker.org](http://www.accessibilitychecker.org/), l’évaluation semble nous indiquer 3 erreurs qui renderaient le site non conforme : qu’en est-il réellement ?
         
-        ![Image exemple du site de Centrale](./img/ecm.png "Exemple Site de Centrale")
+        ![Image exemple du site de Centrale](./img/ecm.webp "Exemple Site de Centrale")
         
     - *“Ensures aria-hidden elements are not focusable nor contain focusable elements”* : on a un carrousel de photos pour la couverture avec deux flèches qui permettent de passer de l’image “bachelor” à l’image “Digital Lab” (au clavier si on clique sur Enter). Hors en naviguant au clavier, la navigation fait un aller retour entre les éléments focusables du carrousel et les flèches. On pourrait ne pas avoir de focus sur les flèches du carrousel pour améliorer la fluidité.
     - *“Ensures buttons have discernible text”* : comme il s’agissait des boutons cachés “Rechercher” et celui du Burger Menu (lorsque la fenêtre est plus petite), a priori on est bon ! Il faut simplement s’assurer que les boutons ont un label adapté qui indique l’action qu’il va faire, ce qui est aussi a priori bon.

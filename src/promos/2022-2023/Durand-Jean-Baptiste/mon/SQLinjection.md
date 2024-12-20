@@ -66,7 +66,7 @@ D'après les chiffres d'Akamai ([lien de l'article](https://www.akamai.com/site/
 
 {% endinfo %}
 
-<img src="../Image/nb_attaque_sql.png" alt="Technologies utilisées" style="height: 500px; margin: 0 auto; border: 0" />
+<img src="../Image/nb_attaque_sql.webp" alt="Technologies utilisées" style="height: 500px; margin: 0 auto; border: 0" />
 
 *Graphique provenant du même article*
 

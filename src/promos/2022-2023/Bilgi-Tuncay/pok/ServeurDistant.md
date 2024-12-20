@@ -508,7 +508,7 @@ exit 0
 
  Le script fonctionne come voulue, voici un exemple de logs que l'on récupère si il y a des erreurs :
 
- <img src="../images/error1.png" alt="error log" style="height: 200px; margin: 0 auto; border: 0" />
+ <img src="../images/error1.webp" alt="error log" style="height: 200px; margin: 0 auto; border: 0" />
 
 {%info%}Pour aller plus loin, on peut automatiser le lancement de se script, suivant certaines conditions, avec Jenkins par exemple, comme dans [ce MON](../../../../mon/TBi/MON/Jenkins)
 {%endinfo%}

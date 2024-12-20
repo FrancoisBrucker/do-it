@@ -22,13 +22,13 @@ Après avoir suivi des cours d'initiation au design thinking en classe, j'ai vou
 
 Pour expliquer ce qu'est le design thinking, je vais m'appuyer sur une image présentée dans ce MOOC. Un projet est général présenté de la manière suivante :
 
-![Optional Text](Image1.png)
+![Optional Text](Image1.webp)
 
 On part d'une idée présentée à gauche par le point d'interrogation et on arrive à un résultat qui génère un bénéfice représenté par le dollard à droite. Le processus créatif entre l'idée et le résultat est souvent flou ou à l'apparence complexe. 
 
 Le design thinking, va s'opposer à cette idée et le désordre se transforme en une série de questions comme on peut le voir sur l'image ci-dessous : 
 
-![Optional Text](Image2.png)
+![Optional Text](Image2.webp)
 
 A travers les question suivantes , on va pouvoir mener un projet à son terme. 
 
@@ -48,7 +48,7 @@ Enfin, le design thinking est **itératif**, il va à travers des cycles de test
 
 Ce processus ne peut pas être utilisé pour répondre à tout les types de problématiques, on peut voir ci-dessous un tableau qui résume les cas où il est intéressant de l'utiliser. Il faut donc se poser ces questions avant d'utiliser la méthode de Design Thinking. 
 
-![Optional Text](Image3.png)
+![Optional Text](Image3.webp)
 
 
 ### Préparer son esprit à l'innovation

@@ -50,11 +50,11 @@ Louise Gacoin, dans son [MON 5: Bases de VBA](../../../../2022-2023/Gacoin-Louis
 
 En fait, lorsqu'on ouvre l'éditeur de macros (voir le [MON de Louise](../../../../2022-2023/Gacoin-Louise/mon/MON5/index.md)), voilà la présentation face à laquelle on arrive : 
 
-<div><img src="accueil.png"></div>
+<div><img src="accueil.webp"></div>
 
 On va commencer par s'intéresser à l'onglet en haut à gauche : 
 
-<div><img src="partie_gauche.png"></div>
+<div><img src="partie_gauche.webp"></div>
 
 C'est là que sont répartis les différents endroits où l'on peut écrire nos macros, notre code VBA. Il y a trois catégories : 
 + **Microsoft Excel Objects** - dans cette catégorie, il y a une page de programmation par élément d'Excel (le classeur et chaque feuille) où l'on va pouvoir écrire du code qui s'éxecutera à un moment précis de l'élément en question. 
@@ -64,7 +64,7 @@ C'est là que sont répartis les différents endroits où l'on peut écrire nos 
 Ensuite, l'autre onglet intéressant est celui de droite. C'est là que vont être écrites les macros. 
 Dans l'image présentée plus haut, la page de programmation ouverte correspondait à celle du classeur *MON_classeur* (ThisWorkbook dans VBAProject (MON_classeur)). Il n'y a aucune ligne de code qui n'a été rentrée. Mais dans l'explemple suivant, la page de programmation de la feuille 1, nommée *NOM de ma feuille 1*, il y a du code d'indiqué : 
 
-<div><img src="partie_droite.png"></div>
+<div><img src="partie_droite.webp"></div>
 
 Ce code se déclanche lorsqu'on change de cellule dans la feuille (Worksheet_selectionChange). Et ce sont les deux volets dépliants supérieurs qui ont permis de choisir ce mode. Il y a beaucoup d'autres modes possibles (à l'activation de la feuille, au click sur un lien hypertexte,...). 
 

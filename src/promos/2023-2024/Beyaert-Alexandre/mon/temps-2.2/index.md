@@ -49,14 +49,14 @@ iris = pd.read_csv(chemin)
 sns.pairplot(iris)
 ```
 
-![Figure des relations entre variables du dataset iris](pairplot.png)
+![Figure des relations entre variables du dataset iris](pairplot.webp)
 
 Pour aller plus loin, il va même être possible d'analyser les sépales et pétales par variété de fleur grâce à l'ajout d'un seul paramètre.
 
 ```python
 sns.pairplot(iris, hue = 'variety')
 ```
-![Distinction par variété](pairplot_variety.png)
+![Distinction par variété](pairplot_variety.webp)
 
 Les possibilités de seaborn sont multiples, [la documentation officielle](https://seaborn.pydata.org/) répertorie les différents graphiques réalisables en fonction des besoins :
 - distributions
@@ -73,16 +73,16 @@ sns.catplot(x='pclass', y='age', data=titanic, hue='sex')
 sns.boxplot(x='pclass', y='age', data=titanic, hue='sex')
 ```
 
-![Répartition des passagers](catplot_titanic.png)
+![Répartition des passagers](catplot_titanic.webp)
 
-![Répartition des passagers](boxplot_titanic.png)
+![Répartition des passagers](boxplot_titanic.webp)
 
 On va également pouvoir visualiser la relation entre 2 distributions.
 
 ```python
 sns.jointplot(x='age', y='fare', data=titanic, kind='hex')
 ```
-![Tarif en fonction de l'âge](jointplot_titanic.png)
+![Tarif en fonction de l'âge](jointplot_titanic.webp)
 
 Ou encore visualiser les matrices de corrélation sous forme de heatmap.
 
@@ -92,7 +92,7 @@ Ou encore visualiser les matrices de corrélation sous forme de heatmap.
 sns.heatmap(titanic.corr())
 ```
 
-![Heatmap de corrélation](heatmap_titanic.png)
+![Heatmap de corrélation](heatmap_titanic.webp)
 
 
 ## 3. Bibliothèque Scikit Learn
@@ -128,7 +128,7 @@ predictions = model.predict(X) ## renvoie un tableau Numpy des prédictions
 plt.scatter(X, Y)
 plt.plot(X,predictions, c='r')
 ```
-![Régression linéaire](regression_lineaire.png)
+![Régression linéaire](regression_lineaire.webp)
 
 Pour s'adapter à un cas où la relation entre les données ne serait plus linéaire, il ne suffira que de changer de modèle. Nous pourrions envisager le modèle SVR *(Support Vector Regression)*.
 
@@ -147,7 +147,7 @@ model = SVR(C=100)
 ```
 Et voici notre nouvelle régression.
 
-![Régression SVR](SVR.png)
+![Régression SVR](SVR.webp)
 
 ### 3.2 Classification
 
@@ -227,7 +227,7 @@ plt.ylabel('score')
 plt.legend()
 plt.show()
 ```
-![Recherche du meilleur nombre de plus proches voisins](cross_validation.png)
+![Recherche du meilleur nombre de plus proches voisins](cross_validation.webp)
 
 L'écart entre la courbe train et celle validation est très important lorsqu'on ne sélectionne qu'un seul plus proche voisin, il y a de l'**overfitting**. Le modèle essaye trop de se rapprocher des données qu'il apprend et en déforme la réalité. Cet écart diminue plus le nombre de plus proches voisins augmente. Cependant, lorsque l'on choisit trop de plus proches voisins, la performance de la courbe validation diminue puisque certains plus proches voisins sont en réalité éloignés de l'élément à analyser.
 
@@ -464,7 +464,7 @@ conf_matrix = confusion_matrix(Y_test, Y_pred)
 sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', cbar=False,
             xticklabels=['Not Survived', 'Survived'], yticklabels=['Not Survived', 'Survived'])
 ```
-![Matrice de confusion](combinaison.png)
+![Matrice de confusion](combinaison.webp)
 
 On remarque ainsi que la performance est de 81%, alors que pour un modèle sans pré-traitement :
 

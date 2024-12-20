@@ -340,13 +340,13 @@ Pour mettre en place ces trois composantes d'un application, nous pouvons :
 
   On voit que si on envoie notre requête GET, le backend répond : 
 
-  <img src="./../images/get.png" alt="oops"/>
+  <img src="./../images/get.webp" alt="oops"/>
 
   Le mot de passe n'est pas dans la réponse, c'est ce que l'on veut.
 
   Si on essaie de créer un compte qui existe déjà, le backend répond : 
 
-  <img src="./../images/post.png" alt="oops"/>
+  <img src="./../images/post.webp" alt="oops"/>
   
 
   ### Création d'un account.
@@ -360,9 +360,9 @@ Pour mettre en place ces trois composantes d'un application, nous pouvons :
 
 <div style = " display: grid;grid-template-columns: repeat(3, minmax(0, 1fr))">
 
-<img src="./../images/account1.png" alt="oops"/>
-<img src="./../images/account2.png" alt="oops"/>
-<img src="./../images/account3.png" alt="oops"/>
+<img src="./../images/account1.webp" alt="oops"/>
+<img src="./../images/account2.webp" alt="oops"/>
+<img src="./../images/account3.webp" alt="oops"/>
 
 </div>
   

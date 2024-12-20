@@ -50,7 +50,7 @@ Mon objectif pour ce MON était à la fois de découvrir les bases du VBA, mais 
 
 Cependant, dans l’optique de pouvoir présenter mon travail sur le site, je ne pouvais pas le faire sur des données réelles de mon entreprise. J’ai alors choisi de demander à ChatGPT de me fournir un exercice pratique via le prompt suivant :
 
-![Prompt](./images/Prompt.png)
+![Prompt](./images/Prompt.webp)
 
 {% exercice %}
 
@@ -110,11 +110,11 @@ End Sub
 
 On passe alors de :
 
-![Image 1](./images/image001.png)
+![Image 1](./images/image001.webp)
 
 À :
 
-![Image 2](./images/image002.png)
+![Image 2](./images/image002.webp)
 
 ```vba
 Sub deplacer()
@@ -127,7 +127,7 @@ End Sub
 
 On passe alors à :
 
-![Image 3](./images/image003.png)
+![Image 3](./images/image003.webp)
 
 #### Validation des données :
 
@@ -174,7 +174,7 @@ End Sub
 
 On passe alors à :
 
-![Image 4](./images/image004.png)
+![Image 4](./images/image004.webp)
 
 Puis on vient supprimer les lignes vides :
 
@@ -207,7 +207,7 @@ End Sub
 
 Ce qui donne :
 
-![Image 5](./images/image005.png)
+![Image 5](./images/image005.webp)
 
 {% info %}
 Ici, pour ne pas créer de décalage en raison de la suppression des lignes, il est essentiel de commencer par la dernière ligne puis de remonter, d'où le “Step -1” dans la boucle For.
@@ -241,7 +241,7 @@ End Sub
 
  On passe alors à :
 
-![Image 6](./images/image006.png)
+![Image 6](./images/image006.webp)
 
 #### Ajout de colonnes calculées :
 
@@ -293,7 +293,7 @@ End Sub
 
  On passe alors au résultat final :
 
-![Image 7](./images/image007.png)
+![Image 7](./images/image007.webp)
 
 {% info %}
 Autant VBA permet d'automatiser pas mal d'opérations, mais je pense qu'ici une rechercheV (qu'on aurait pu enregistrer à la main) aurait sûrement été plus efficace. Le résultat est le même, mais coder en VBA est assez complexe pour une fonction déjà existante sur Excel.

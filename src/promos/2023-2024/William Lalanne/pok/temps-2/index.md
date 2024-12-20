@@ -32,11 +32,11 @@ Dans ce POK j'aimerais commencer à intégrer l'aspect backend au site que j'ai 
 ## Sprint 1 - Reprise du Front
 Certaines choses que j'avais faites la dernière fois doivent être modifié. D'abord je dois ajouter des boutons pour la connexion et l'inscription. De plus, j'ai modifié les boutons pour paramétrer la partie sur la page d'accueil, voici ce que ça donne: 
 
-![Page accueil modifié](Page_Accueil.png)
+![Page accueil modifié](Page_Accueil.webp)
 
 Ensuite sur les pages de jeux, je trouvais que tous les éléments étaient trop gros, on ne voyait donc pas tous les éléments sur la page sans scrollé. J'ai fait en sorte de tout réduire:
 
-![Page de jeu](Page_Jeu.png)
+![Page de jeu](Page_Jeu.webp)
 
 Comme on peut le voir en bas à gauche, j'ai aussi rajouté un système pour compter le nombre de coups effectués pendant la partie. Cela permet au joueur de comparer ses parties. 
 
@@ -44,13 +44,13 @@ Comme on peut le voir en bas à gauche, j'ai aussi rajouté un système pour com
 
 Pour s'incrire, l'utilisateur doit appuyer sur le bouton inscription, puis un formulaire s'affiche pour collecter les informations nécessaires :
 
-![Inscription](Inscription.png)
+![Inscription](Inscription.webp)
 
 Pour s'inscrire l'utilisateur doit rentrer obligatoirement son prénom, son nom, son adresse mail, son mot de passe et confirmer son mot de passe. Il peut aussi, s'il le souhaite, ajouter une photo de profil. 
 
 Pour que l'utilisateur se connecte, j'ai créé la fenêtre suivante : 
 
-![Connexion](Connexion.png)
+![Connexion](Connexion.webp)
 
 Il doit entrer son adresse mail et son mot de passe, il peut aussi cliquer sur "Créer un nouveau compte" pour ouvrir la fenêtre précédente. 
 
@@ -63,7 +63,7 @@ CREATE DATABASE IF NOT EXISTS mydb
 ```
 "mydb" est le nom de la base de données créés.
 Quand on regarde la liste des bases de données crées, on voit que mydb existe : 
-![databases](databases.png)
+![databases](databases.webp)
 
 Ensuite au sein de la base de données on crée une table qui va contenir les informations des utilisateurs du Memory, cette table s'appelera **users**. Pour faire cela il faut utiliser la commande : 
 ```sql
@@ -71,10 +71,10 @@ CREATE TABLE IF NOT EXISTS users (
   id INT AUTO_INCREMENT PRIMARY KEY,     
   name VARCHAR(255) NOT NULL );
 ```
-![table](table.png)
+![table](table.webp)
 
 On précise que dans la table on veut 2 colonnes, une première qui s'appelle **id** qui contient des int et qui est la clé primaire de la table. La clé primaire permet d'identifier de manière unique chaque objet. Le mot clé *AUTO_INCREMENT* permet d'augmenter automatiquement la valeur de l'id à chaque ajout. Il y a une seconde colonne qui s'appelle **name** qui contiendra le nom des utilisateurs, c'est un string limité à 255 caractères : 
-![colonnes](colonnes.png)
+![colonnes](colonnes.webp)
 
 Pour utiliser notre base de données avec Node plus tard, il faut aussi configurer un profil utilisateur, on aura besoin de plusieurs informations pour se connecter à la base de donnée: 
 ```js
@@ -271,19 +271,19 @@ Donc la requête sql devient : **INSERT INTO users (first_name, last_name, email
 
 On peut faire le test et essayer d'inscrire Nicolas Ouzouliasse à la base de données. 
 
-![Exemple d'inscription](Exemple_Inscription.png)
+![Exemple d'inscription](Exemple_Inscription.webp)
 
 Lorsqu'on appuie sur le bouton "S'inscrire", la requête est envoyée au serveur. On peut voir le résultat de la requête :
 
-![Serveur](Requete_Get.png)
+![Serveur](Requete_Get.webp)
 
 On voit que la requête GET a fonctionné et qu'elle a renvoyé un status 200, donc l'utilisateur entré n'a pas de compte. 
 
-![Serveur](Requete_Post.png)
+![Serveur](Requete_Post.webp)
 
 La requête POST pour l'inscription a elle aussi fonctionné, elle a renvoyé un status 200 donc les informations de l'utilisateur ont été enregistrées dans la base de données : 
 
-![Exemple de donnee](Donnee.png)
+![Exemple de donnee](Donnee.webp)
 
 Tout a bien fonctionné, Nicolas a bien été ajouté à la base de données comme il le fallait. 
 

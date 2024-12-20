@@ -26,7 +26,7 @@ Globalement voilà ce qui est ressorti :
 
 ### Esthétique
 L'esthétique du site est convenable mais pourrait être améliorée. Mais je ne suis pas designer donc ça sera pour quelqu'un d'aautre !
-<img src="../images/esthetique.png" />
+<img src="../images/esthetique.webp" />
 
 ### Contribution
 Pour tout le monde il est généralement facile de contribuer au site, peut-être un peu de mal au début mais on s'y fait. 
@@ -34,35 +34,35 @@ Pour tout le monde il est généralement facile de contribuer au site, peut-êtr
     - l'arborescence est un peu complexe --> **refonte**
     - les shortcodes ne sont pas forcément connus --> **clarifier via un tuto**
     - la gestion des tags --> **clarifier avec un tuto**
-<img src="../images/contribution.png" />
+<img src="../images/contribution.webp" />
 
 ### Arborescence
 L'arborescence est en effet peu claire pour beaucoup --> **refonte de l'arborescence par année**
-<img src="../images/arborescence.png" />
+<img src="../images/arborescence.webp" />
 
 ### Navigation
 La navigation n'est pas super fluide et intuitive --> **amélioration de la navbar**
-<img src="../images/navigation.png" />
+<img src="../images/navigation.webp" />
 
 ### Recherche
 La recherche de contenu est peu fréquente de la part des élèves mais ceux qui cherchent ne trouvent pas facilement les informations. --> **mise en place d'un crawler et d'une barre de recherche**
-<img src="../images/recherche.png" />
+<img src="../images/recherche.webp" />
 
 ### Mots-clés
 La mise en place de mots-clés semble être l'élement qui fait l'unanimité, tout le monde trouve utile l'implémentation de mots-clés. --> **intégration dans la recherche avec des filtres**
-<img src="../images/mots-cles.png" />
+<img src="../images/mots-cles.webp" />
 
 ### Utilisation dans le futur
 Selon les réponses, 61% des élèves n'utiliseront pas le site plus tard. Ceux qui vont l'utiliser on indiqué que cela sera principalement pour faire de la veille technologique et se tenir informé.
-<img src="../images/futur.png" />
+<img src="../images/futur.webp" />
 
 ### Les améliorations voulues
 Pour beaucoup, c'est la gestion des mots-clés qui arrive en première place.
-<img src="../images/ameliorations.png" />
+<img src="../images/ameliorations.webp" />
 
 ### Nouvelles fonctionnalités demandées
 Il ressort des réponses que les filtres de recherche ainsi qu'une barre de recherche seraient les plus bénéfiques lors de l'utilisation du site. Tous ces problèmes seront, je pense, résolus avec l'arrivée de la barre de recherche.
-<img src="../images/fonctionnalites.png" />
+<img src="../images/fonctionnalites.webp" />
 
 ### Bac à sable
 Voici également une liste de suggestions qui ont été faite en commentaires libres, certaines ne sont techniquement pas réalisables et d'autres que je trouve inutiles mais je les mets quand même !

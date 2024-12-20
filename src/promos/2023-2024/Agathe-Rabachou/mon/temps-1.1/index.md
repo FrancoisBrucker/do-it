@@ -118,11 +118,11 @@ Durant les parties parties pratiques du cours suivi, j'ai pu réaliser le site w
 
 Voici le rendu obtenu :
 
-<img src="accueil_site1.jpg">
-<img src="accueil_site2.jpg">
-<img src="a_propos.jpg">
-<img src="portfolio1.jpg">
-<img src="portfolio2.jpg">
-<img src="portfolio3.jpg">
+<img src="accueil_site1.webp">
+<img src="accueil_site2.webp">
+<img src="a_propos.webp">
+<img src="portfolio1.webp">
+<img src="portfolio2.webp">
+<img src="portfolio3.webp">
 
 Je laisse également [ici](https://github.com/FrancoisBrucker/do-it/blob/main/src/promos/2023-2024/Agathe-Rabachou/mon/temps-1.1/codes_sites.md) le code **HTML** de chaque page ainsi que la feuille de style du site en **CSS** pour de potentiels intéressés !

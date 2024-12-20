@@ -103,7 +103,7 @@ Je suis ravi de partager mes connaissances avec vous et j'espère que vous appre
 
 Le HTML/CSS/JS pur peut rapidement devenir complexe et difficile à maintenir dans des applications front-end de taille moyenne ou grande. La gestion de l'état de l'application peut vite devenir un casse-tête, surtout lorsque plusieurs composants doivent partager le même état. En outre, le HTML/CSS/JS pur ne permet pas de créer facilement des composants réutilisables, ce qui peut rendre le développement fastidieux et chronophage.
 
-![Frameworks front-end (React, Vue, Angular, Svelte)](./frameworks.png)
+![Frameworks front-end (React, Vue, Angular, Svelte)](./frameworks.webp)
 
 C'est pourquoi l'utilisation d'un framework, tel que React, Vue, Angular ou Svelte, peut s'avérer très utile pour le développement d'applications front-end. Les frameworks permettent de simplifier la gestion de l'état de l'application et facilitent la création de composants réutilisables. Ils permettent également de rendre l'interface utilisateur plus dynamique et interactive en permettant des mises à jour en temps réel. En utilisant un framework, les développeurs peuvent également bénéficier d'une communauté active qui fournit des bibliothèques et des outils pour faciliter le développement.
 
@@ -322,7 +322,7 @@ En résumé, Redux est une bibliothèque de gestion d'états pour les applicatio
 
 Les bibliothèques de composants telles que Bootstrap ou MUI sont des outils très utiles pour simplifier le développement d'interfaces utilisateur. Elles proposent des composants pré-conçus (boutons, formulaires, menus déroulants, etc.) qui peuvent être facilement intégrés dans une application. Les développeurs peuvent ainsi gagner du temps en évitant de réinventer la roue à chaque fois qu'ils ont besoin d'un composant standard.
 
-![Bootstrap et MUI](./bibliotheques.png)
+![Bootstrap et MUI](./bibliotheques.webp)
 
 En utilisant une bibliothèque de composants, les développeurs peuvent également s'assurer que leur application a une apparence cohérente et professionnelle. Les composants de la bibliothèque ont généralement un style prédéfini, ce qui permet de garantir une homogénéité de l'interface utilisateur.
 
@@ -432,7 +432,7 @@ D'autres bibliothèques de composants populaires pour le développement d'applic
 
 Le CSS peut rapidement devenir fastidieux et limité dans sa fonctionnalité. Pour remédier à cela, il existe plusieurs alternatives qui peuvent améliorer la productivité des développeurs.
 
-![Outils CSS](./css.png)
+![Outils CSS](./css.webp)
 
 ### 🌊 TailwindCSS
 
@@ -517,7 +517,7 @@ Le code SASS présenté utilise une mixin appelée "button-base" pour définir l
 
 Les outils de compilation les plus couramment utilisés pour le développement front-end sont **Parcel**, **Create React App** et **Webpack**.
 
-![Compilation du code](./build.png)
+![Compilation du code](./build.webp)
 
 Parcel est un outil de compilation de code JavaScript sans configuration, Create React App est un outil de développement front-end pour React et Webpack est un outil de compilation de code JavaScript très puissant qui prend en charge une grande variété de fichiers. Chacun de ces outils a ses avantages et ses inconvénients en fonction du contexte d'utilisation.
 

@@ -69,7 +69,7 @@ Il existe de nombreuses balises, notamment :
 - `<ul> </ul>` pour une liste (`<ol> </ol>` pour une liste ordonnée) et `<li> </li>` pour chaque élément de liste
 - `<a href="https://adressedulien.com>Nom affiché</a>` pour un lien, `title="titre"` permet d'afficher un texte lorsque l'on survole le lien et `target="_blank"` d'ouvrir le lien dans un nouvel onglet/fenêtre. Le lien peut aussi être une image par exemple
 - il est aussi possible de créer un lien relatif vers une autre page du site ou un fichier à télécharger avec `href="chemin/autrepage.html"` / `href="chemin/fichier.zip"` ou vers une ancre dans la même page avec `href="#ancre` et avec `id=ancre` dans la balise correspondant à l'ancre
-- `<img src="chemin/image.jpg" alt="texte alternatif" />` pour une image
+- `<img src="chemin/image.webp" alt="texte alternatif" />` pour une image
 - `<div> </div>` et `<span> </span>` sont des balises génériques (qui n'ont pas de sens particulier)
 - `<audio src="chemin/fichier.mp3"> </audio>` pour des fichiers audios (fonctionne avec différents formats)
 - `<video src="chemin/fichier.mp4"> </video>` pour des vidéos
@@ -78,7 +78,7 @@ Il existe de nombreuses balises, notamment :
 
 Certaines balises peuvent servir à identifier les différentes sections de la page.
 
-![Balises pour identifier les sections de la page](sections_page_web.png)
+![Balises pour identifier les sections de la page](sections_page_web.webp)
 
 #### Tableaux
 

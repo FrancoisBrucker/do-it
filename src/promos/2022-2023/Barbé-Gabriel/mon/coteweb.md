@@ -35,8 +35,8 @@ Ce serveur suit le protocole http c'est à dire une suite de requête de l'utils
 ### Création du premier projet grâce à Node/Express 
 Express est un framework de node, lui-même environnement de développement, permettant de coder des sites côtés serveurs. Tout l'intéret de l'apprentissage de ce MON est de basculer le site créer avec le premier POK : "Mon site chez moi" coté serveur.<br>
 Le framework Express crée tout le "squelette" de notre site web et l'importe sur un serveur local. Ce serveur est localisé à http://localhost:3000/.
-Nous obtenons donc notre premier site web sur serveur : <img src="../Images/Express.png">
-Nous avons pour le moment les dossiers suivants dans notre environnement de programmation : <img src="../Images/Dossiers.PNG">
+Nous obtenons donc notre premier site web sur serveur : <img src="../Images/Express.webp">
+Nous avons pour le moment les dossiers suivants dans notre environnement de programmation : <img src="../Images/Dossiers.webp">
 - le dossier "bin" contient un fichier "www" qui représente l'hébergement de notre site
 - les dossiers "models" ainsi que "public" sont vides pour le moment : "models" nous servira pour la base de données et "public" pour les images et les styles. 
 - "routes" indique les routes 
@@ -163,7 +163,7 @@ PersonSchema.virtual("url").get(function () {
 module.exports = mongoose.model("Person", PersonSchema);
 ```
 
-Nous pouvons retrouver cette base de données à tout moment sur mangodb : <img src='../Images/database.PNG'>
+Nous pouvons retrouver cette base de données à tout moment sur mangodb : <img src='../Images/database.webp'>
 
 ### Routes 
 

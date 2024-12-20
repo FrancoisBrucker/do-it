@@ -85,7 +85,7 @@ Quelques estimations sont nécessaires :
 - bénéfice par vente
 - Le point de rentabilité : nombre de vente à partir du quel je suis rentable par semaines/mois.
 
-![prévision ventes](vente.png)
+![prévision ventes](vente.webp)
 
 Il faut être capable d'admettre qu'une idée n'est pas rentable si même les prévisions les plus haute ne mènent pas à la rentabilité.
 

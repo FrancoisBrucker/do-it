@@ -121,11 +121,11 @@ Rentrons dans le vif du sujet en nous intéressant tout d'abord aux techniques d
 
 Comment passer de ça :
 
-![illustration](exemple-tableau.png)
+![illustration](exemple-tableau.webp)
 
 à ça :
 
-![illustration](exemple-graphes.png)
+![illustration](exemple-graphes.webp)
 
 (1)
 
@@ -137,7 +137,7 @@ Plus on va mettre d'informations sur notre représentation, moins notre cerveau 
 
 |Exemple 1 | Exemple 2 |
 | :-------------: | :-------------: |
-| ![illustration](trop-dinfos.png) | ![illustration](info-claire.png) |
+| ![illustration](trop-dinfos.webp) | ![illustration](info-claire.webp) |
 | ***Pour une simple présentation, ce graphe contient trop d'informations : mieux vaut les présenter séparément.***  | ***Celui-ci est plus clair***  |
 
 {% note %}
@@ -152,7 +152,7 @@ Quant aux contrastes, ils sont importants pour **mettre en lumière ce qui est e
 
 | Sans contraste           |  Avec contraste |
 | :-------------------------: |:-------------------------:|
-| ![illustration](sans-contraste.png)  | ![illustration](avec-contraste.png) |
+| ![illustration](sans-contraste.webp)  | ![illustration](avec-contraste.webp) |
 
 ***Par exemple, ici le contraste de couleur permet de nous faire prendre conscience plus rapidement de quels employés font les meilleures performances.***
 
@@ -160,7 +160,7 @@ Quant aux contrastes, ils sont importants pour **mettre en lumière ce qui est e
 Attention à l'emploi des couleurs qui peut être contre-productif :
 {% endattention %}
 
-![illustration](utilisation-couleurs.png)
+![illustration](utilisation-couleurs.webp)
 
 ***Par exemple, ici on peut facilement associer la couleur orange avec le titre "meilleurs employés" alors que c'est l'inverse !***
 
@@ -170,13 +170,13 @@ Avec un titre accrocheur désignant immédiatement ce dont il est question, le p
 
 | Titre descriptif            |  Titre messager |
 | :---------------------: |:-------------------------:|
-| ![illustration](titre-descriptif.png)  | ![illustration](titre-messager.png) |
+| ![illustration](titre-descriptif.webp)  | ![illustration](titre-messager.webp) |
 
 ***Par exemple, nous mettons plus de temps à comprendre le message sur l'exemple de gauche tandis que cela est beaucoup plus facile sur l'exemple de droite.***
 
 De plus, c'est aussi un moyen d'inciter à l'action pour influencer / rendre la prise de décsion plus rapide :
 
-![illustration](call-to-action.png)
+![illustration](call-to-action.webp)
 
 #### 4. Respecter les conventions établies
 
@@ -184,7 +184,7 @@ Certaines couleurs sont de manière courante associées à certains principes : 
 
 |     Conventionnel  |  Pas conventionnel   |
 | :-------------------------: |:-------------------------:|
-| ![illustration](conventionnel.png)  | ![illustration](pas-conventionnel.png) |
+| ![illustration](conventionnel.webp)  | ![illustration](pas-conventionnel.webp) |
 
 ***Notre cerveau est quand même plus à l'aise face aux couleurs qui confirment l'information transmise...***
 

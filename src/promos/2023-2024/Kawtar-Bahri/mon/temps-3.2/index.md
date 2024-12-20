@@ -40,7 +40,7 @@ Dans ce contexte de transformation du secteur financier, les grandes entreprises
 ### Etude de Cas
 Dans cette analyse de cas sur Capital One, on aborde l'évolution de cette entreprise, de ses débuts en tant que pionnier de la Fintech à sa transformation en un géant bancaire confronté à des défis de gestion et de marché. L'histoire de Capital One illustre les défis et les opportunités auxquels sont confrontées les entreprises FinTech lors de leur croissance et de leur évolution dans un paysage financier en constante évolution.
 
-<img src="1.png" alt="Image 1" style="max-width: 50%;">
+<img src="1.webp" alt="Image 1" style="max-width: 50%;">
 
 **N.B** : Les hypothèques subprimes font référence à un type spécifique de prêts hypothécaires accordés à des emprunteurs considérés comme présentant un risque plus élevé de non-remboursement. 
 
@@ -130,7 +130,7 @@ Enfin, l'identification est importante comme technologie sous-jacente à de nomb
         </p>
     </div>
     <div style="flex: 45%; padding: 10px;">        
-        <img src="2.png" alt="Image 1" style="max-width: 100%;">
+        <img src="2.webp" alt="Image 1" style="max-width: 100%;">
     </div>
 </div>
 Concernant l'efficacité de la blockchain, sa conception implique une complexité computationnelle dans le processus de minage de chaque bloc, ce qui rend les transactions difficiles à modifier. Cette caractéristique est considérée comme inhérente à la blockchain et vise à garantir la sécurité des transactions sans faire appel à un tiers de confiance grâce aux fonctions de hachage. Ces fonctions sont essentielles à la sécurité et à l'intégrité des données dans la blockchain qui permettant de générer des identifiants uniques pour les données, rendant toute altération de ces données facilement détectable.

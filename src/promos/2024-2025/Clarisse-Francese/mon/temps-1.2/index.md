@@ -90,7 +90,7 @@ Grâce à sa démarche soucieuce de résoudre des problèmes complexes d’une m
 
 À l’heure actuelle, il existe de nombreuses méthodes pour le DT car tout dépend du projet et du but poursuivi. Cependant, toutes ces techniques relèvent d’une approche expérimentale centrée sur l’utilisateur et qui mettent l’**intelligence collective au service de l’innovation**. Je présente ci-dessous la méthode du double diamant qui est l’une des plus populaires en DT.
 
-<img src="double diamant.png" width="50%" alt="Image description">
+<img src="double diamant.webp" width="50%" alt="Image description">
 
 Le double diamant comportent plusieurs étapes qui alternent :
 

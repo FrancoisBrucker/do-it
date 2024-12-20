@@ -128,14 +128,14 @@ fn main() {
 ```
 - **Flappy Dragon** : comme flappy bird mais avec un dragon; et sans les beaux graphismes (Hands-on Rust)
 Voici quelques images du résultat obtenu :
-![le jeu](./flappy1.jpg)
-![Menu du jeu](./flappy2.jpg)
+![le jeu](./flappy1.webp)
+![Menu du jeu](./flappy2.webp)
 *Retrouve le code sur mon [Github](https://github.com/assanediouf18/FlappyRust)*
 - **Minigrep** : coder en Rust un programme qui trouve les occurrences d'une chaine de caractère dans un fichier (Rust Handbook)
 L'objectif ici était de faire un grep vraiment très simple en utilisant de nouvelles connaissances en Rust (gestion des erreurs, tests, architecture du projet, etc...). C'est un programme a utiliser dans l'invité de commandes, retrouve le code sur mon [github](https://github.com/assanediouf18/Minigrep).
 - **DungeonCrawl** : un aventurier cherche une amulette dans un donjon rempli de monstre. Je n'ai pas terminé le jeu au complet (Hands-on Rust)
 Ce projet m'a vraiment permis d'en apprendre beaucoup sur Rust et sur le développement de jeu vidéo. J'ai pu gérer la création du donjon, son affichage, l'affichage du joueur et des monstres, implémenter un sytème de mouvement, etc...
-![Image de la fenêtre actuelle](./dungeoncrawl.png)
+![Image de la fenêtre actuelle](./dungeoncrawl.webp)
 *Retrouve le code sur mon [github](https://github.com/assanediouf18/DungeonCrawl).*
 
 ## Conclusion

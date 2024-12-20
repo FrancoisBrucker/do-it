@@ -309,7 +309,7 @@ func init() {
 }
 ```
 Ainsi, lorsqu'on écrit et lance sur le terminal la ligne `.\name-project.exe add -content "Seek an internship" -category "To do"`, normalement, le fichier *todo.csv* est mis à jour avec une nouvelle ligne contenant "Seek an internship, To do" !
-![Exemple todo](image.png)
+![Exemple todo](image.webp)
 
 Si vous êtes intéressés, je vous conseille de jeter un coup d'oeil au github de [Gtodo](https://github.com/heybran/gtodo) de heybran qui a un projet similaire complet. Le point positif de son projet, c'est qu'il n'a pas utilisé Cobra donc la structure du code est probablement plus intuitive. Il manipule des JSON et pas des CSV également donc les packages à installer seront différents mais son ReadMe.md est assez clair. 
 

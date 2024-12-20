@@ -45,7 +45,7 @@ Mon objectif était de me familiariser avec la théorie de la datavisualisation 
 Cette carte mentale n’est pas exhaustive, mais elle rassemble les éléments clés que je retiens de mes lectures et que je considère comme des outils essentiels à emporter dans mes futures réalisations. Je laisse de la place à disposition pour la compléter au fur et à mesure de mes expériences futures. Bien sûr, ces ouvrages contiennent d’autres informations précieuses, et il serait pertinent de s'y référer à chaque nouvelle situation nécessitant la création de visualisations et de graphiques à partir de données, pour faire le moins d'erreur possible.
 
 
-![MON2.2_Mindmap](./MON2.2_Mindmap.png)
+![MON2.2_Mindmap](./MON2.2_Mindmap.webp)
 
 ### Exemples d'application
 
@@ -55,15 +55,15 @@ Voici quelques exemples concrets où j’ai pu transmettre à mes camarades les 
 
 Jeanne avait produit un graphique illustrant le nombre de joueurs étrangers par rapport au nombre total de joueurs dans différents clubs de football français. Nous avons constaté qu’il était difficile d’identifier quel point correspondait à quel club.
 
-![Tableau_couleurs](./Tableau_couleurs.png)
+![Tableau_couleurs](./Tableau_couleurs.webp)
 
 Son graphique utilisait plus de huit couleurs différentes, rendant la lecture confuse. En nous appuyant sur l’un des principes de [`Fundamentals of Data Visualization`](https://clauswilke.com/dataviz/s) "Utilisez des étiquettes directes plutôt que des couleurs lorsque vous devez distinguer plus de huit catégories.", nous avons ajouté des étiquettes directement sur les points. Le résultat était nettement plus clair, permettant une identification rapide et précise des clubs.
 
-![Tableau_couleurs_labels](./Tableau_couleurs_labels.png)
+![Tableau_couleurs_labels](./Tableau_couleurs_labels.webp)
 
 En poursuivant les tests, nous avons même constaté que les couleurs n’étaient pas nécessaires : les étiquettes seules suffisaient à rendre le graphique compréhensible. La couleur, bien qu’esthétique, peut parfois ajouter de la confusion plutôt que de la clarté si elle n’est pas utilisée judicieusement.
 
-![Tableau_labels](./Tableau_labels.png)
+![Tableau_labels](./Tableau_labels.webp)
 
 #### Exemple 2
 
@@ -74,7 +74,7 @@ Ce qu'elle a fait dans cet exemple :
 - Bleu pour les attaquants,
 - Rose pour les défenseurs.
 
-![Postes_joueurs.jpg](./Postes_joueurs.jpg)
+![Postes_joueurs.webp](./Postes_joueurs.webp)
 
 Cela a permis une meilleure organisation visuelle, mais deux points méritaient encore d’être améliorés :
 

@@ -72,11 +72,11 @@ J'ai commencé par filtrer les données, supprimer les lignes trop incomplètes 
 Cela étant fait il restait des transformations a faire sur Power Query, notamment :
 
 - remplacement de valeur pour alléger
-![powerbi](ecranremplacer.png)
+![powerbi](ecranremplacer.webp)
 - supprimer les colonnes inexploitables (trop peu de valeurs, etc.)
-![powerbi](ecranchoisircolonne.png)
+![powerbi](ecranchoisircolonne.webp)
 - fractionner les colonnes (permet d'ajouter une une colonne pour les réponses à choix multiples, inexploitable par Power BI)
-![powerbi](ecranfrac.png)  
+![powerbi](ecranfrac.webp)  
 
 Une fois que la transformation de données est terminée, on peut revenir a Power BI en cliquant sur *Fermer&appliquer*.
 
@@ -84,20 +84,20 @@ Une fois que la transformation de données est terminée, on peut revenir a Powe
 
 Lorsqu'on revient sur power BI on a un tableau vierge avec toutes nos données à droite qu'il est possible de faire glisser sur le tableau de travail. On y trouve également les onglets visualiser et filtrer. Plusieurs éléments visuels sont disponibles pour traiter nos données dans l'onglet visualiser.
 
-![powerbi](ecranpBI.png)  
+![powerbi](ecranpBI.webp)  
 
 L'onglet filtrer permet d'afficher les données pertinentes à chaque élément visuel.
 
-![powerbi](ecrandecouverte.png) 
+![powerbi](ecrandecouverte.webp) 
 
 
 ### Visualiser
 Dans Power BI il est possible d'avoir plusieurs pages (comme les feuilles excel) ce qui me permet d'organiser les différents graphiques par thèmes.
 Après avoir modéliser et analyser une partie des données, voici ce que j'obtient : 
-![powerbi](ecranfinmain.png)
+![powerbi](ecranfinmain.webp)
 <div style="display:flex">
-<div><img src="ecranfinsport.png"></div>
-<div><img src="ecranfinresto.png"></div>
+<div><img src="ecranfinsport.webp"></div>
+<div><img src="ecranfinresto.webp"></div>
 </div>
 La visualisation n'est pas encore optimale, les tableaux ne sont pas homogènes mais j'arrive a avoir un premier visuel des données de mon formulaire et les résultats sont intéressants pour l'équipe. Toutefois, le travail n'est pas encore terminé pour l'analyse de ce form, beaucoup de données sont encore à exploiter, et certains visuels pourraient être réétudier.
 

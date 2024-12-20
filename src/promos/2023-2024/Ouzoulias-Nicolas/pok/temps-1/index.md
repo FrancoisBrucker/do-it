@@ -116,7 +116,7 @@ Mon site est organisé avec plusieurs onglets afin de classer les diverses infor
 ``` html
     <header> 
         <nav> 
-            <img src="images/logo.png" alt="logo centrale coinche" width="90" height="90">
+            <img src="images/logo.webp" alt="logo centrale coinche" width="90" height="90">
             <div>
                 <a href="index.html">Accueil</a>
                 <a href="regles.html">Règles</a>
@@ -197,7 +197,7 @@ a:hover {
 {% enddetails %}
 
 
-![Header site](Header.png)
+![Header site](Header.webp)
 
 Le pied de page quant à lui sert de zone de contact pour l'utilisateur. 
 
@@ -211,7 +211,7 @@ Le pied de page quant à lui sert de zone de contact pour l'utilisateur.
                     <li> Nicolas Ouzoulias</li>
                     <li> nicolas.ouzoulias@centrale-marseille.fr </li>
                     <a href="https://www.facebook.com/nicolas.ouzoulias/"> 
-                            <img src="images/logo-fb.png" alt="logo messenger" width="50" height="50"></a>
+                            <img src="images/logo-fb.webp" alt="logo messenger" width="50" height="50"></a>
                 </ul>
             </div>
 
@@ -221,7 +221,7 @@ Le pied de page quant à lui sert de zone de contact pour l'utilisateur.
                     <li> Guillaume Villard</li>
                     <li> guillaume.villard@centrale-marseille.fr </li>
                     <a href="https://www.facebook.com/guillaume.villard17"> 
-                            <img src="images/logo-fb.png" alt="logo messenger" width="50" height="50"></a>
+                            <img src="images/logo-fb.webp" alt="logo messenger" width="50" height="50"></a>
             </div>
         </div>
     </footer>
@@ -255,7 +255,7 @@ footer p, footer li{
 ```
 {% enddetails %}
 
-![Pied de page](Footer.png)
+![Pied de page](Footer.webp)
 
 
 ### Pages de présentation
@@ -403,7 +403,7 @@ table,th {
 
 {% enddetails %}
 
-![Tableau Valeurs](valeur-cartes.png)
+![Tableau Valeurs](valeur-cartes.webp)
 
 
 {% details "Cliquez pour afficher le code **HTML** de **l'historique des parties**" %}
@@ -536,7 +536,7 @@ table,th {
 ```
 {% enddetails %}
 
-![Historique parties](histo-parties.png)
+![Historique parties](histo-parties.webp)
 
 Ces onglets m'ont permis de bien pratiquer l'utilisation des balises HTML ainsi que leurs paramètres CSS associées. J'ai notamment pu manipuler les *flexboxs* ainsi que les *tables* pour mieux positioner mes éléments sur la pages. 
 
@@ -644,7 +644,7 @@ form {
 ```
 {% enddetails %}
 
-![Formulaire inscription](formulaire.png)
+![Formulaire inscription](formulaire.webp)
 
 
 ## III. Prochaines avancées

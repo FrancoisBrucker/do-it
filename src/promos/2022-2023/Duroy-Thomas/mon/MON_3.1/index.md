@@ -50,7 +50,7 @@ Voici les étapes à suivre pour initialiser un nouveau projet React avec "Creat
 ```
 
 Une preuve que votre installation s'est déroulée sans accroc est l'apparition de la page suivante sur le port 3000:
-![](react_default_screen.png)
+![](react_default_screen.webp)
 
 Dans le dossier "src", vous trouverez différents fichier JavaScript. Deux seulement nous intéressent : index.js qui a pour rôle d'afficher ce qui est contenu dans App.js. Vous l'aurez compris, c'est donc dans App.js que nous assemblerons les components.
 

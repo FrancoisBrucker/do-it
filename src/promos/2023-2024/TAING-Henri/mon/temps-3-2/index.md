@@ -53,10 +53,10 @@ On va s'intéresser plus à Power BI Desktop en premier lieu.
 
 **Pour commencer**
 Vous avez 3 fenêtres sur la colonne de gauche qui correspondent de haut en bas à votre page de rapport (Report View), votre base de données (Table View) et les liens entre les différentes tables et colonnes (Model View).
-<img src="fenetre.PNG">
+<img src="fenetre.webp">
 
 Pour **extraire** une base de données qu'on va étudier, analyser puis visualiser, il suffit d'aller dans "Get Data", puis de choisir ce qui vous intéresse.
-<img src="getdata.PNG">
+<img src="getdata.webp">
 {% details "Remarques sur l'extraction" %}
 - Il faut avoir les autorisations nécessaires et ses identifiants si on veut utiliser les données d'un sharepoint de son entreprise par exemple
 - Faire attention à bien avoir la même version installée pour SQL Connector et MySQL/SQLServer 
@@ -69,7 +69,7 @@ Une fois votre base de données extraite, il est temps de la transformer.
 **Transformer avec Power Query Editor**
 On peut d'abord consulter les profils des colonnes en faisant un clic droit sur les colonnes et en sélectionnant Column Quality (Valid - Error- Empty) et Column Distribution (Répartition des données entrées dans la colone) ou en allant dans View > Cocher ces mêmes cases. 
 
-<img src="profile_distrib.PNG">
+<img src="profile_distrib.webp">
 
 Puis changer la première ligne en titre si ce n'est pas fait avec "Use First Row as Headers". 
 En faisant ça, une ligne apparaît avec **Promoted Headers** sur la droite dans Query Settings (Si vous ne voyez pas cette fenêtre, il suffit d'aller dans View > Cliquer sur Query Settings). Cette fenêtre fournit un suivi des opérations effectuées sur la table.
@@ -84,7 +84,7 @@ Si vous appliquez une autre transformation, par exemple, clic droit une colonne 
 On vient donc d'appliquer Table.RemoveRowsWithErrors à la table précédente nommée "Promoted Headers" à cause de notre transformation (on peut la renommer dans la fenêtre Querry Settings). 
 
 Pour aller plus loin, vous pouvez utiliser l'éditeur avancé : View > Advanced Editor
-<img src="advanced_editor.PNG">
+<img src="advanced_editor.webp">
 
 Pour créer d'autres colonnes, vous pouvez utiliser Add Column :
 - Merge Columns pour concaténer des colonnes de la table ou d'autres tables
@@ -102,10 +102,10 @@ Pour créer d'autres colonnes, vous pouvez utiliser Add Column :
 
 Au-delà de tous les visuels qu'on peut créer que ce soit grâce aux visuels déjà intégrés dans Power BI ou aux visuels qu'on peut télécharger, une chose que je trouve importante à relever est la "mesure". 
 Cette fonctionnalité permet de faire des opérations (en DAX) avec des colonnes sans changer la base de données et avoir d'autres attributs intéressants à exploiter comme par exemple la somme du nombre d'employés. 
-<img src="mesure.PNG">
+<img src="mesure.webp">
 
 Ce qui est aussi intéressant dans Power BI est l'interactivité, on peut soit utiliser un "slicer" qui est en fait un filtre intelligent ou par exemple ici cliquer sur un département et les "cards" vont s'adapter. 
-<img src="departement.PNG">
+<img src="departement.webp">
 
 ### Model View
 
@@ -118,7 +118,7 @@ Dans cette partie, on peut aussi explorer la notion de cardinalité et de direct
 Il s'agit de la plateforme en ligne pour pouvoir partager et concevoir vos dashboards.
 
 Avant de s'attaquer à tout ça, récapitulons à quoi ressemble le flux de données (schéma inspiré par le cours Skillsoft) :
-<img src="dataflow.PNG">
+<img src="dataflow.webp">
 
 Power BI Service va donc nous accompagner pendant tout ce processus. On peut y créer des visuels (qu'on créera plutôt sur Power BI Desktop d'habitude, car plus pratique, pas besoin de connexion), créer des rapports, des métriques et surtout des dashboards (et les alertes, informations intéressantes à exploiter associées) à partir de datasets.
 De plus, il y a aussi des fonctions BI IA (qui sont aussi sur Power BI Desktop d'une façon ou d'une autre) super intéressantes, comme la "QA" sur les visuels, les "Get Insights", etc. 

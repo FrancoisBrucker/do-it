@@ -79,7 +79,7 @@ truffle develop
 
 qui renvoit ici :
 <figure>
-  <img src="../assets/truffleDevelop.png">
+  <img src="../assets/truffleDevelop.webp">
 </figure>
 
 On voit que ca a créé 10 comptes avec leurs clés respectives.

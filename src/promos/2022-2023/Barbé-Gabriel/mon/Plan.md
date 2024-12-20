@@ -21,7 +21,7 @@ Je suivrai donc ici la suite d'un cours sur le business plan que vous pouvez ret
 Comme on l'a expliqué lors du cours précédent (voir [Business Model](Business)), le business plan désigne la stratégie qu'une entreprise va suivre après sa création. Cette stratégie est libre mais elle doit posséder des étapes clés conditionnant la qualité du business plan. Nous allons voir ces étapes clés ci-dessous. 
 ## Détailler sa place dans le marché 
 La première étape clé est de détailler sa place dans le marché. En effet, après avoir définit les partenaires-clés et les segments de clientèles, il faut réussir à comprendre où va se situer notre projet dans le marché auquel on s'attaque. A cette fin, on va produire un tableau de concurrence. Ce tableau doit contenir les concurrents qui répondent au meme besoin que vous, pas seulement ceux qui font la même chose. Ci-dessous le tableau de concurrence d'AirBnb.
-<img src="../Images/Concurrence.png"/>.
+<img src="../Images/Concurrence.webp"/>.
 Après avoir déterminer les concurrents, il faudra quantifier votre marché : estimer les parts de marché de vos concurrents, donner vos objectifs de parts de marché, projeter l'évolution de vos clients en fonction des moyens mis en oeuvre... Dans cette démarche, il vaut mieux étudier des données et des chiffres provenant de votre projet : quelles dépenses avez-vous investies pour vos différents moyens de communication, combien de clients avez-vous actuellement etc. Cela sera plus révélateur de la réalité du marché que si vous effectuez des suppositions sur vos concurrents. 
 Pour détailler sa place, on se base sur l'existant.
 
@@ -75,8 +75,8 @@ Les multiples scénarios doivent être obtenus en faisant varier les hypothèses
 Il s'agit de construire un compte de résultat simplifié et un tableau de trésorerie. 
 Je ne vais pas revenir sur la construction d'un compte de résultat et d'un tableau de trésorerie, les cours de comptabilité dispensés en première année sont assez bien pour cela. 
 Vous pouvez néanmoins trouver des templates issus de la formation openclassrooms ci-dessous : 
-<img src="../Images/CR.png"/>
-<img src="../Images/Tableau de trésorerie.png"/>
+<img src="../Images/CR.webp"/>
+<img src="../Images/Tableau de trésorerie.webp"/>
 L'horizon de temps doit être adapté les projections doivent être réalisées sur plusieurs années. Il est recommandé de réaliser les projections sur une base mensuelle pour un meilleur suivi opérationnel mais il peut aussi se faire sur une base annuelle. 
 
 ## Conclusion

@@ -79,9 +79,9 @@ Tout d'abord, j'ai réfléchi aux bases de données nécessaires pour une entrep
 
 Voici des captures d'écran d'une partie des deux tables les plus importantes pour suivre la suite du raisonnement. La base complètes est disponible à [ce lien](https://airtable.com/invite/l?inviteId=invc2LAbkSvKVUnEi&inviteToken=1c7005e9f0657cb15f4fa7ae54c7ff06a310988c4991084748d8f2b8e2585733&utm_medium=email&utm_source=product_team&utm_content=transactional-alerts) sous réserve de créer un compte Airtable.
 
-<img src="baseSalaries.png">
-<img src="basePrestas1.png">
-<img src="basePrestas2.png">
+<img src="baseSalaries.webp">
+<img src="basePrestas1.webp">
+<img src="basePrestas2.webp">
 
 Ensuite, j'ai crée les connexions pertinentes entre les différentes tables pour faciliter la lecture et l'utilisation des données. Entre autres, j'ai par exemple extrait de la table *Salariés* dans la table *Équipes habituelles* les habilitations des chefs de chaque équipe, puis j'ai utilisé cela pour reporter dans une colonne Équipes habilitées de la table *Prestations* la liste des équipes pouvant effectuer chaque prestation au regard des habilitations de leur chef d'équipe (comme mentionné dans le cahier des charges).
 
@@ -138,7 +138,7 @@ Sub test()
 End Sub
 ```
 
-<img src="fonctionHabilitations.png">
+<img src="fonctionHabilitations.webp">
 
 A partir de cela, j'ai donc voulu créer une procédure qui pour chaque prestation (priorisées par urgence) cherche un salarié habilité (grâce à la fonction ci-dessus) et disponible le plus tôt possible (on considère qu'un salarié est disponible au lendemain du dernier jour de sa dernière prestation, on calcule donc son premier jour de disponibilité en faisant "date de début de la prestation attribuée juste avant" + "durée de cette prestation" + 1). Lorsque ce salarié est trouvé, la prestation lui est attribué dès son prochain jour vide et le code passe à la prestation suivante.
 Cependant, même après de nombreux tests et modifications, je n'ai pas réussi à faire aboutir cette idée. Voici la dernière version du code mais qui n'est donc pas fonctionnelle comme je le souhaitais :

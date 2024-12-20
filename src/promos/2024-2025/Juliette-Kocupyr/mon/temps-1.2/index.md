@@ -46,7 +46,7 @@ Historiquement les professionnels de l'Ux étaient des **psychologues**, des **e
 
 Prenons par exemple les plans de métros. A l'origine les plans des lignes de métros étaient très réalistes, conformes à leur disposition géographique ce qui les rendaient peu lisibles pour les utilisateurs. Mais en 1933, Henry Beck a décidé de prendre de son temps libre pour revoir le design des plans de métro londonien. D'abord critiqué par l'entreprise, ils ont finalement dû l'adopté face à l'engouement des utilisateurs trouvant ces plans beaucoup plus lisibles et compréhensible. Aujourd'hui ce format de plan existe partout dans le monde.
 
-<img src="./image12/plan.png" width="80%">
+<img src="./image12/plan.webp" width="80%">
 
 Il faut bien différencier l'Ux de l'Ui. L'Ui est l'**user interface ou interface utilisateur**. L'interface est le **point de rencontre** entre la personne et le produit, elle permet l'interaction avec le produit.
 
@@ -54,7 +54,7 @@ En Ux, c'est l'**expérience globale** de l'utilisateur qui compte alors que l'U
 
 La complexité d'un bon produit est donc de réaliser une interface **visuelle et attractive** tout en restant **simple et efficace**, c'est-à-dire combiner l'Ui et l'Ux.
 
-<img src="./image12/uxui.png" width="50%">
+<img src="./image12/uxui.webp" width="50%">
 
 ### L'utilisateur au centre de l'Ux design
 
@@ -107,7 +107,7 @@ Le mobile first nécessite donc de prendre en compte de nouvelles contraintes li
 
 ### Intégrer l'approche Design Thinking
 
-<img src="./image12/design.png" width="50%">
+<img src="./image12/design.webp" width="50%">
 
 Popularisé par des designers de la Silicon Valley, le design thinking se base sur 5 étapes clés :
 
@@ -156,7 +156,7 @@ Les bonnes pratiques du prototypage passent par un modèle **responsive** ou **m
 
 L'utilisateur mobile a apporté un nouveau concept, **le design pour le pouce**. Ça correspond à la zone qui est facilement accessible avec le pouce sur un smartphone. Il est alors nécessaire d'avoir des éléments de taille adaptée qui soient hiérarchisés, avec des noms explicites pour ne pas avoir à chercher l'information.
 
-<img src="./image12/pouce.png" width="50%">
+<img src="./image12/pouce.webp" width="50%">
 
 #### Le test utilisateur
 
@@ -218,7 +218,7 @@ Un cas d'usage est l'**ensemble de situations** où l'utilisateur va **interagir
 
 On veut comprendre les besoins d'un utilisateur pour développer une application qui empêche tout **élément de friction** dans le but d'améliorer l'usabilité et de prendre en compte l'utilisateur mobile.
 
-<img src="./image12/persona.png" width="50%">
+<img src="./image12/persona.webp" width="50%">
 
 Le persona est un outil polyvalent visant à **générer de l'empathie** lors du processus de conception. Il se fait une fois les recherches utilisateurs réalisées. Le format doit être visuel et assez simple et les personnalités marquantes. **Un maximum de 10 persona** permet de se concentrer sur un type de population et de les exploiter au mieux car une Ux ne peut pas être designer pour plair à tous.
 
@@ -288,7 +288,7 @@ Aux Etats-Unis l'industrie des machines à sous rapporte plus que le cinéma, le
 
 Bien qu'ils ne jouent qu'avec des pièces l'addiction les pousse à jouer encore et encore. On peut faire le même parallèle avec **le téléphone**. Quand on ouvre une application, on attend une récompense. Cela traduit **une vraie dépendance**. On le sait pertinemment mais on ne peut pas s'en défaire. Finalement l'utilisateur se trouve toujours dans un de ces deux états : **connecté mais distrait** ou **déconnecté mais avec le sentiment de rater quelque chose**.
 
-<img src="./image12/addiction.png" width="50%">
+<img src="./image12/addiction.webp" width="50%">
 
 L'éthique de l'Ux designer est de restaurer ce choix. Bien que le modèle économique de beaucoup d'applications vit à travers ce phénomène d'addiction, il est primordial de permettre à l'utilisateur de choisir ce qu'il veut faire de son temps. Ça peut passer par des fonctionnalités supplémentaires comme le mode concentration dans une messagerie instantanée.
 

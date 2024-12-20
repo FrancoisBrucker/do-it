@@ -34,16 +34,16 @@ Les cibles de cette application sont les suivantes :
 Ci-après, deux exemples de personne cible pouvant profiter de l'application MusiCoach :
 
 *Personae 1 :*
-![Personae 1](<Images/Personae 1.png>)
+![Personae 1](<Images/Personae 1.webp>)
 
 *Personae 2 :*
-![Personae 2](<Images/Personae 2.png>)
+![Personae 2](<Images/Personae 2.webp>)
 
 ### Benchmark 
 Nous avons réalisé une étude de marché afin de voir les offres proposées par les principales applications de musique ayant le même objectif que MusiCoach
 
 *Benchmark :*
-![Benchmark](Images/Benchmark.png)
+![Benchmark](Images/Benchmark.webp)
 
 On remarque les éléments suivants : 
 + Aucune application ne propose les fonctionnalités *correction en temps réel* **et** *génération de partition*.

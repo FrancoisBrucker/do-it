@@ -24,7 +24,7 @@ Une structure de page web fait référence à l'organisation et à la dispositio
 
 La majorité de sites web (y compris celui que j’ai développé) sont organisés de la façon suivante : 
 
-<img src="structure site.png"  width=600px>
+<img src="structure site.webp"  width=600px>
 
 ## Code HTML
 {% info "**HTML (Hypertext Markup Language)**" %}
@@ -82,7 +82,7 @@ En appliquant cette structure, j’ai développé le stylesheet du site que vous
 
 ## Résultat
 En liant les deux codes HTML et CSS explicités précédemment, j’ai obtenu le résultat suivant : 
-<img src="site.png">
+<img src="site.webp">
 
 ## Références : 
 {% prerequis %}

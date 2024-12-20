@@ -21,7 +21,7 @@ Afin d'améliorer les connaissances dans le tableur Excel et de découvrir les m
 Mes attentes pour cette formation était d'apprendre à utiliser de nouvelles fonctions sur Excel et de découvrir les macros VBA (car c'est quelque chose que je ne connaissais pas du tout). 
 
 Voici le plan de la formation que j'ai suivi :
-<img src="plan de la formation.PNG">
+<img src="plan de la formation.webp">
 (la partie 1 est une simple intro)
 
 Pour chaque **leçon**, OpenClassRoom fournit un fichier sur lequel s'entrainer en suivant les instructions du cours. Ensuite, à la fin de la leçon, il y a un **exercice** à faire avec un autre fichier, ce qui permet de mettre en pratique sans être guidé. J'ai trouvé que cela permettait de bien assimilé ce que je venais d'apprendre. A la fin de chaque partie, il y a un **quizz**, qu'il faut réussir à 70% pour pouvoir accéder à la suite. C'est la seule partie réellement obligatoire du cours. Les exercices en fin de leçon ne sont pas obligatoires. 

@@ -48,9 +48,9 @@ React est une bibliothèque JavaScript open source utilisée pour créer des int
 
 Parmi les applications connues développées en utilisant React, on retrouve notamment Netflix et Airbnb.
 
-![Interface Netflix](./img/interface-netflix.png) *Capture d'écran (2024)*
+![Interface Netflix](./img/interface-netflix.webp) *Capture d'écran (2024)*
 
-![Interface Airbnb](./img/interface-airbnb.png) *Capture d'écran (2024)*
+![Interface Airbnb](./img/interface-airbnb.webp) *Capture d'écran (2024)*
 
 ## 2. Synthèse de balisage *JSX* <a id="section2"></a>
 
@@ -92,7 +92,7 @@ Une fois le projet créé, on peut lancer l'application avec la commande ```npm 
 
 Le projet créé a l'architecture suivante :
 
-![organisation-fichiers-react](./img/organisation-fichiers-react.png)
+![organisation-fichiers-react](./img/organisation-fichiers-react.webp)
 *Capture d'écran personnelle (2024)*
 
 ## 4. Variables d'état <a id="section4"></a>
@@ -122,7 +122,7 @@ Il est important de comprendre où placer l'état... Parfois des composants part
 
 Voici une capture d'écran qui permet de comprendre la hiérarchie entre les différents composants :
 
-![Hierarchie des composants](./img/hierarchie-components.png)
+![Hierarchie des composants](./img/hierarchie-components.webp)
 *Exemple repris du site officiel de [React](https://fr.react.dev/learn/thinking-in-react) (2024)*
 
 Lorsqu'on développe une application il est donc important de savoir comment structurer l'état au sein de cette application. Il faut alors considérer l'état comme étant le jeu minimum de données susceptibles de changer dont l'application doit mémoriser. Il est important de ne pas se perdre avec un trop grand nombre d'états, c'est pourquoi on utilise le principe DRY (*Don't Repeat Yourself*). Pour déterminer si une donnée constitue de l'état, il faut se poser les bonnes questions :
@@ -147,7 +147,7 @@ On a vu que React utilise un flux de données unidirectionnel (les données desc
 
 Pour une mise en pratique des points étudiés jusqu'à présent, j'ai décidé de développer une interface web assez simple. Cette interface web permet de lister des courses (running) à venir et d'en sélectionner quelques unes en tant que favoris. Voici la maquette du site auquel j'aimerais aboutir :
 
-![maquette site](./img/maquette-site.png)*Maquette personnelle réalisée sur Figma (2024)*
+![maquette site](./img/maquette-site.webp)*Maquette personnelle réalisée sur Figma (2024)*
 
 Pour ce qui concerne les données, j'ai voulu faire au plus simple en créant un tableau d'objet JavaScript regroupant toutes les informations nécessaires. Voici à quoi ressemble le tableau :
 
@@ -161,13 +161,13 @@ const COURSES = [
 
 Ensuite, j'ai identifié le nombre de composants et leur hierarchie :
 
-![mes composants](./img/mes-composants.png)*Capture d'écran personnelle (2024)*
+![mes composants](./img/mes-composants.webp)*Capture d'écran personnelle (2024)*
 
 Ensuite, j'ai construit une première version statique, c'est-à-dire que la logique de l'application n'est pas présente dans cette première version (impossibilité d'ajouter des éléments dans sa liste de courses).
 
 Voici le rendu visuel de cette première version :
 
-![version statique](./img/version-statique.png)*Capture d'écran personnelle (2024)*
+![version statique](./img/version-statique.webp)*Capture d'écran personnelle (2024)*
 
 Le style du site est adapté à ma maquette pour que ce soit plus facile de comprendre où se trouve chaque composant. Le design final viendra en fin de projet, lorsque la logique de l'interface sera implémentée.
 

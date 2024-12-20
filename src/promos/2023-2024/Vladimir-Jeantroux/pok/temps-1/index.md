@@ -39,7 +39,7 @@ Après avoir révisé le cours de Java de 1ère année, j'ai regardé des vidéo
 
 J'ai ensuite écrit les fichiers HTML et CSS pour la page principale et une page type de recette. Pour le prochain sprint, je compte transformer cette page en template, qui pourra s'adapter selon la recette qu'on choisit, en me basant sur les méthodes qu'on a pu employer en low code/no code.
 
-![Page prototype d'une recette](./recette.jpg)
+![Page prototype d'une recette](./recette.webp)
 
 J'ai ensuite fait plusieurs tentatives pour implémenter une barre de recherche, un système de tags en javascript. J'ai finalement réussi à implémenter une fonction plus simple : avoir une galerie de photos du plat qu'on peut faire défiler avec des flèches. 
 
@@ -86,7 +86,7 @@ recettes.forEach(recette => {
 ```
 Résultat : 
 
-![Page listant toutes les recettes du site](./liste.JPG)
+![Page listant toutes les recettes du site](./liste.webp)
 
 ## Travail accompli 
 

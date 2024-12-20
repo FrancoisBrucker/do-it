@@ -70,10 +70,10 @@ function Hello_world() {
 }
 ```
 Après avoir cliqué sur le bouton de lancement, un certain nombre de fenêtre vont se succéder.
-![Autorisation 1](./Autorisation%201.png)
-![Autorisation 2](./Autorisation%202.png)
-![Autorisation 3](./Autorisation%203.png)
-![Autorisation 4](./Autorisation%204.png)
+![Autorisation 1](./Autorisation%201.webp)
+![Autorisation 2](./Autorisation%202.webp)
+![Autorisation 3](./Autorisation%203.webp)
+![Autorisation 4](./Autorisation%204.webp)
 
 {% enddetails %}
 
@@ -84,8 +84,8 @@ Les déclencheurs permettent de lancer des programmes de manière différentes o
 - Horaires : date et heure précise, intervalles de temps (de la minute au mois).
 - Basé sur un agenda : A la modification d'un google agenda.
 
-![Menu déclencheurs](Menu%20déclencheurs.png)
-![Réglage déclencheur](Réglage%20déclencheur.png)
+![Menu déclencheurs](Menu%20déclencheurs.webp)
+![Réglage déclencheur](Réglage%20déclencheur.webp)
 {% enddetails%}
 
 {% details "Journal d'exécution" %}
@@ -96,7 +96,7 @@ console.log("7");
 console.log("8");
 ```
 Résultat :
-![Journal d'exécution](./Journal%20d'exécution.png)
+![Journal d'exécution](./Journal%20d'exécution.webp)
 {% enddetails %}
 
 ## Syntaxes AppScript et VBA
@@ -191,7 +191,7 @@ End If
 Suppossons que nous voulons connaitre le premier élément de la suite de Fibonacci supérieur à 8, ainsi que son rang dans la suite.
 {% details "Rappel sur la suite de Fibonacci" %}
 D'après Wikipédia :
-![Suite de Fibonacci](./Suite%20de%20Fibonacci.png)
+![Suite de Fibonacci](./Suite%20de%20Fibonacci.webp)
 {% enddetails %}
 **En Appscript :**
 ```

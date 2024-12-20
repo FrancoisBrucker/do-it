@@ -38,7 +38,7 @@ résumé: "Ce POK présente le développement d’une plateforme simple de e-com
 
 L’objectif de ce POK est de **concevoir une boutique en ligne simple** utilisant des **technologies de développement web modernes**, notamment React. Pour cela, j’ai décidé de reprendre une maquette Figma que j’ai réalisé à lors de la création d’une formation afin d’avoir une vue claire de l’endroit où amener ce POK.
 
-![Untitled](images/Untitled.png)
+![Untitled](images/Untitled.webp)
 
 {% chemin "**Choix des technologies**" %}
 
@@ -84,7 +84,7 @@ Afin de réaliser ce POK, j’ai identifié les tâches nécessaires suivantes. 
 
 J’ai repris ma maquette Figma pour définir les différents composants React nécessaires pour réaliser le prototype, ainsi que leurs designs respectifs. Voici ci-dessous les composants Figma.
 
-![Untitled](images/Untitled1.png)
+![Untitled](images/Untitled1.webp)
 
 ## Arborescence des fichiers
 
@@ -108,7 +108,7 @@ src/
 
 Le code ci-dessous représente la version 1 du prototype d'application React développée dans le cadre d'un POK sur la création d'une boutique en ligne. Cette version contient la page du catalogue, qui permet d'afficher les produits disponibles à l'achat. Le code utilise TailwindCSS pour appliquer des styles au composant et des composants Material-UI pour ajouter des fonctionnalités supplémentaires tels que les boutons d'ajout au panier.
 
-![Untitled](images/Untitled2.png)
+![Untitled](images/Untitled2.webp)
 
 ### App.js
 
@@ -234,7 +234,7 @@ Lorsque l'utilisateur clique sur le bouton "Add to cart", la fonction `props.add
 
 ## Sprint 2 - Ajout de la page produit avec React Router
 
-![Untitled](images/Untitled3.png)
+![Untitled](images/Untitled3.webp)
 
 [https://upmostly.com/tutorials/how-to-pass-param-to-a-component-in-react-router](https://upmostly.com/tutorials/how-to-pass-param-to-a-component-in-react-router)
 
@@ -378,7 +378,7 @@ Nous avons enveloppé l'image du produit dans un lien `Link` pour que l'utilisat
 
 ## Sprint 3 - Ajout de la gestion du panier
 
-![Untitled](images/Untitled4.png)
+![Untitled](images/Untitled4.webp)
 
 ### Création de la page du panier
 

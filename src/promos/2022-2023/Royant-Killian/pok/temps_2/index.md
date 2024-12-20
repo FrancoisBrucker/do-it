@@ -35,7 +35,7 @@ Le temps 2 est consacré à l'**ajout d'une partie back-end** avec NodeJS et Exp
 
 **Find The Key** est un jeu que j'ai développé durant mon S7. Le but est de trouver la clé placée aléatoirement sur un plateau puis de la ramener à la base en évitant les monstres.
 
-![Image Find The Key](FindTheKey.png)
+![Image Find The Key](FindTheKey.webp)
 
 Durant le temps 1, j'ai eu l'occasion de résoudre les problèmes de compatibilité du site ainsi que de recréer la structure du HTML/CSS pour rendre l'application responsive. Le temps 2 sera consacré à l'**ajout d'une partie back-end** avec NodeJS et Express et au **déploiement sur un serveur distant**.
 
@@ -50,7 +50,7 @@ Mes objectifs à l'occasion de la deuxième partie de ce POK sont les suivants :
 
 Pour mener à bien ce projet, j'ai décidé de m'organiser en **4 étapes principales** traitant les parties **back** (en rouge), **serveur** (en vert) et adaptation du **front** (en bleu).
 
-![Image planning](planning.png)
+![Image planning](planning.webp)
 
 On peut retrouver le détail du temps prévu et passé sur chaque étape dans le tableau ci-dessous :
 

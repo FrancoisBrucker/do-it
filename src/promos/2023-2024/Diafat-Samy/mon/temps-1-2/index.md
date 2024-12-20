@@ -54,7 +54,7 @@ Définition : Flask est un petit framework web Python léger, qui fournit des ou
 La formation d'OpenClassRoom est censé durer 8h.
 
 
-![Openclassroom_accueil](./openclassroom_accueil.png)
+![Openclassroom_accueil](./openclassroom_accueil.webp)
 
 
 Comme vous pouvez le voir sur la capture d'écran ci-dessus, je n'ai terminé le tutoriel.
@@ -64,14 +64,14 @@ Je vais tout d'abord restituer ce que j'ai appris de ce tutoriel et expliquer le
 Pour commencer le guide nous demande de savoir créer et activer un environnement virtuel.
 Celui-ci nous dirige vers une autre formation d'OpenClassroom
 
-![Henry](./henry.png){: width="150px" height="100px"}
+![Henry](./henry.webp){: width="150px" height="100px"}
 
 
 ### Créer un environnement virtuel ? Kezako ? <a id="subsection-1"></a>
 
 J'ai donc suivi cette autre formation sur OpenClassroom.
 
-![Openclassroom_accueil2](./openclassroom_accueil2.png)
+![Openclassroom_accueil2](./openclassroom_accueil2.webp)
 
 
 {% info %}
@@ -145,11 +145,11 @@ Le but de la formation d'OpenClassroom web est d'apprendre à développer une ap
 La première étape est donc de créer un compte développeur sur le site de facebook, de créer une application qui servira pour récupérer les informations d'un compte Facebook.
 
 
-![fb](./meta.png)
+![fb](./meta.webp)
 
 Le site fourni ensuite un dossier contenant l'architecture du projet, et indique les variables à remplacer afin de connecter notre application précedemment créée à l'aide d'un identifiant.
 
-![git](./git.png)
+![git](./git.webp)
 
 
 
@@ -212,7 +212,7 @@ def hello():
 
 Et voici ce que l'on obtient
 
-![ex1](./ex_1.png)
+![ex1](./ex_1.webp)
 
 
 Après ça, on nous demande à nous d'interagir avec la console Flask.
@@ -225,13 +225,13 @@ Enfin, face à ce mur qui se dressait devant moi, j'ai décidé de faire un reto
 
 ## Retour aux sources : Youtube <a id="section-3"></a>
 
-![youtube](./youtube.png)
+![youtube](./youtube.webp)
 
 
 En suivant ce tutoriel, je suis parvenu à avoir une simple application fonctionnel.
 
-![web1](./web1.png)
-![web2](./web2.png)
+![web1](./web1.webp)
+![web2](./web2.webp)
 
 J'ai par la suite réaliser une application un peu plus élaboré à travers mon POK 1.
 

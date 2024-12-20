@@ -133,7 +133,7 @@ Le projet est alors créé. Une fois dans le dossier du projet, vous pouvez lanc
 
 Voici l'arborescence de fichiers obtenue :
 
-![organisation projet Angular](./img/organisation-projet.png) *Illustration personnelle (2024)*
+![organisation projet Angular](./img/organisation-projet.webp) *Illustration personnelle (2024)*
 
 ### 2. Les composants <a id="section2"></a>
 
@@ -145,7 +145,7 @@ Pour créer un composant, il existe la commande : ```ng generate component <nom-
 
 Par exemple, lorsqu'on crée un composant *hello*, on obtient un nouveau dossier comme suit :
 
-![création d'un composant hello](./img/creation-component.png) *Capture d'écran personnelle (2024).*
+![création d'un composant hello](./img/creation-component.webp) *Capture d'écran personnelle (2024).*
 
 Pour définir le comportement d'un composant ou encore ses données, on utilise l'**état** ou **state**. Ce state représente tout ce que le composant "sait" à un moment donné et qui est susceptible de changer au fil du temps, en réponse à des événements utilisateur, des interactions avec des services, ou d'autres actions.
 Voici, un exemple avec les deux propriétés *taskTitle* et *isComplete* :
@@ -306,8 +306,8 @@ class AppComponent {
 
 ### 3. Cahier des charges du site de cuisine **Miam'Miam** <a id="section3"></a>
 
-![Cahier des charges - 1](./img/cahier-charges1.png)
-![Cahier des charges - 2](./img/cahier-charges2.png)
+![Cahier des charges - 1](./img/cahier-charges1.webp)
+![Cahier des charges - 2](./img/cahier-charges2.webp)
 
 ### 4. Choix des différents composants à créer <a id="section4"></a>
 
@@ -331,13 +331,13 @@ Pour choisir quel composants créer, il faut se poser les bonnes questions :
 
 ### 5. Ne plus utiliser de NgModules <a id="section5"></a>
 
-![Ne plus utiliser de modules](./img/nomorengmodules.png)
+![Ne plus utiliser de modules](./img/nomorengmodules.webp)
 
 Comme le montre la capture d'écran, l'équipe Angular recommande d'utiliser des composants autonomes (standalone components) plutôt que les traditionnels NgModule pour tout nouveau code.
 
 Un **NgModule** permet d'organiser et de structurer le code d'une application en regroupant des composants, des services, des directives et des pipes afin de les rendre disponibles à différents endroits de l'application.
 
-![Exemple NgModule](./img/exemplengmodule.png)
+![Exemple NgModule](./img/exemplengmodule.webp)
 
 Avant, la bonne pratique était d'utiliser des NgModule pour organiser le code en sections logiques. En général, chaque fonctionnalité de l'application correspondait à un module distinct, par exemple, on avait : un module de gestion des utilisateurs, un module de gestion des produits, etc.
 

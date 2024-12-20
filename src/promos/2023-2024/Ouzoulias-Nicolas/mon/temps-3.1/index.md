@@ -87,7 +87,7 @@ Les projets d'analyse de données reposent sur plusieurs documents :
 
 On structure donc un projet sous forme de  ***Working directory***. Cela permet de communiquer avec d'autres fichiers plus facilement sans avoir à préciser les emplacements complets de ces derniers. De plus cela permet de lier un projet R avec ***Github*** plus facilement car il ne va pas dépendre de l'ordinateur utilisé. 
 
-![structuration projet](./Images/structure_projet.png)
+![structuration projet](./Images/structure_projet.webp)
 
 *from* https://openclassrooms.com/fr/courses/8248096-initiez-vous-a-r-pour-lanalyse-de-donnees/8309117-creez-votre-premier-projet-dans-r
 
@@ -154,7 +154,7 @@ A travers les cours j'ai suivi des petits exemples et exercice mais j'ai voulu a
 
 J'ai ainsi trouvé en ligne une data base *csv* qui regroupait toutes les parties professionnelles qui ont été jouées depuis 2014 à travers les ligues et tournois principaux. 
 
-![projet data LoL](./Images/projetdataLoL.png)
+![projet data LoL](./Images/projetdataLoL.webp)
 
 Il y avait un *data frame* par an, je les ai donc tous importés puis filtrés pour ne garder que les parties du joueur qui m'intéresse avant de concaténer les *data frames* filtrées en un seul. 
 
@@ -174,7 +174,7 @@ barplot(kill_year$kills, names.arg = kill_year$year,
         xlab = "Année", ylab = "Kills")
 ```
 
-![kill par an](./Images/kill_an_faker.png)
+![kill par an](./Images/kill_an_faker.webp)
 
 ### K/D/A global et par champion
 
@@ -227,7 +227,7 @@ top_3_champions <- merge(top_3_champions, games_champion, by = "champion", all.x
 print(top_3_champions)
 ```
 
-![resultat print top_3_champions](./Images/top3winrate.png)
+![resultat print top_3_champions](./Images/top3winrate.webp)
 
 
 ## Conclusion 

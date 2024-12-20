@@ -53,7 +53,7 @@ Dans l'idée de pouvoir automatiser la planification d'événements, il faut tou
 On met en forme cela sous forme de tableau et on obtient notre interface !
 
 <div style="text-align: center;">
-    <img src="Interface.PNG" width="800"/>
+    <img src="Interface.webp" width="800"/>
     <br>
     <u> Image 1 : Interface Planning </u>
 </div>
@@ -75,7 +75,7 @@ Afin d'automatiser la création de planning dans mon calendrier Google, j'ai uti
 Une fois ces fonctions codées, il ne reste plus qu'à créer un bouton qui exécute la fonction MAJ lorsqu'on clique dessus. On lance et on obtient :
 
 <div style="text-align: center;">
-    <img src="Resultat.PNG" width="800"/>
+    <img src="Resultat.webp" width="800"/>
     <br>
     <u> Image 2 : Résultat dans Calendar</u>
 </div>

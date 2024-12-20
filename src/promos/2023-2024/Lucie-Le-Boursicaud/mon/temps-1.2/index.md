@@ -76,7 +76,7 @@ Chaque colonne correspond à une information. On indique en haut de chaque colon
 La première colonne sera toujours l'ID de l'enregistrement. Les en-tête de colonnes sont uniques, courts et clairs. On peux rajouter si on le souhaite des en-tête supplémentaire pour définir des parties afin d'améliorer la lisibilité de la BDD.
 
 Exemple : mini-BDD de peintures
-<div style="display:flex"><img src="bdd.png"></div>
+<div style="display:flex"><img src="bdd.webp"></div>
 Grace à la fonctionnalité de filtre il sera plus simple de naviguer dans des BDD plus imposantes.
 
 #### Principes de bases
@@ -86,7 +86,7 @@ Lors de l'utilisation d'Excel on fait souvent référence à des cellules. Si l'
 + <strong>Nommer une plage de cellules</strong>
 Nommer une plage de cellules permet de <strong>gagner du temps sur l'entrée et la lisibilité des formules</strong>.
 Pour ce faire il suffit de sélectionner la plage des cellules à nommer et d'entrer le nom voulu dans la plage associée.
-<div stype="display:flex"><img src="plage.png"></div>
+<div stype="display:flex"><img src="plage.webp"></div>
 
 ## 3. Nettoyage de données sur Excel
 Maintenant que l'on sait créer une BDD sous Excel nous allons voir comment nettoyer des données c'est à dire à <strong>analyser la cohérence des données</strong> et à effectuer une <strong>triangulation</strong> avec d'autres informations.
@@ -111,7 +111,7 @@ Pour cela on peut utiliser l'outil de <strong>Mise en forme conditionelle</stron
 On trouve alors facilement les valeur extrême en utilisant *Supérieur à ...* ou *Inférieur à...* et les doublons à l'aide de *Valeurs en double...*. 
 
 Exemples : Nettoyage de la mini-BDD peintures avec des erreurs et des doublons intégrés exprès
-<div stype="display:flex"><img src="nettoyage.png"></div>
+<div stype="display:flex"><img src="nettoyage.webp"></div>
 Sur cet exemple, pour toute la colonne durée j'ai demandé à ce que les cellules inférieures à 6à soit mis en rouge et pour toute la colonne représentation que les cellule en doublons soit mise en rouge.
 
 Ces méthodes mettent en exerbe des comportements étrange sur les données néanmoins cela ne veut pas focément signifier qu'il y a une erreure. Il est tout à fait possible que deux peinture représente la même chose ou qu'une peinture soit bien plus longue à réaliser que la moyenne, il est important de <strong>garder un esprit critique</strong> lors du nettoyage des données.
@@ -134,7 +134,7 @@ On peut s'y pencher selon 3 axes :
 L'objectif est de pouvoir compter l'effectif d'une donnée au sein d'une série statistique. La fonction *NB.SI* permet de compter le nombre de cellules qui répondent à un critère donné.
 
 Exemple : *Nombre de peintures qui ont nécessités plus de 2H de travail*
-<div stype="display:flex"><img src="denomb.png"></div>
+<div stype="display:flex"><img src="denomb.webp"></div>
 
 Avec cette fonction les données manquantes sont automatiquement exclues de l'anlyse. Pour savoir combien de données manquent on peut utiliser la fonction *NB* qui permet de compter le nombre de cellules remplies. Il suffira donc de soustraire ce nombre au nombre total d'enregistrement dans la base de données.
 
@@ -164,7 +164,7 @@ Il existe une variété de représentations statistiques mais toutes ne sont pas
 Dans chacune en fonction du type et du nombre de variables que l'on souhaite réalisée différents sous-modèle sont plus ou moins appropriés.
 
 Exemples : *Il y a-t-il une corrélation entre le temps passé sur une peinture et son appréciation ?*
-<div stype="display:flex"><img src="correlation.png"></div>
+<div stype="display:flex"><img src="correlation.webp"></div>
 
 Pour déterminer si il y'a une corrélation entre les deux données on peut tracer le nuage de points d'une variable par rapport à l'autre. On se rend compte qu'il n'y a pas nécessairement de tendance mise en lumière mais comme il s'agit d'un tout petit échantillon de données c'est plutôt normal surtout que les données ont été inventé. Sur de vraie jeux de données il est très utile d'analyse ce genre de comportement.
 
@@ -174,7 +174,7 @@ Afin d'appliquer les différentes notions vu précédemment j'ai décidé de té
 #### Etape 1 : Mise en forme des données
 Lorsqu'on ouvre le fichier voici ce que l'on obtient : 
 
-<div stype="display:flex"><img src="bddmusee.png"></div>
+<div stype="display:flex"><img src="bddmusee.webp"></div>
 
 [Télécharger le fichier Excel](fréquentationsmusées.zip)
 
@@ -199,43 +199,43 @@ La première chose que je trouve intéressante est de chercher l'enregistrement 
   J'utilise alors la formule <strong>=INDEX</strong>
 
 On obtient alors ce type de données pour les premières réponses : 
-<div stype="display:flex"><img src="analyse.png"></div>
+<div stype="display:flex"><img src="analyse.webp"></div>
 
 Pour les quatres questions j'ai utilisé des feuilles de calculs à part car il s'agit de renvoyer plusieurs lignes et non pas une seule. 
 
 ##### Q5 : Quel est le pourcentage de la fréquentation totale attribuable aux visiteurs payants pour chaque musée ?
 
-<div stype="display:flex"><img src="qpourcentage.png"></div>
-<div stype="display:flex"><img src="qpourcentagevisu.png"></div>
+<div stype="display:flex"><img src="qpourcentage.webp"></div>
+<div stype="display:flex"><img src="qpourcentagevisu.webp"></div>
 
 ##### Q6 : Quels musées ont eu une fréquentation gratuite supérieure à leur fréquentation payante en 2006 ?
 
-<div stype="display:flex"><img src="qgplusquep.png"></div>
+<div stype="display:flex"><img src="qgplusquep.webp"></div>
 
 On peut visualiser l'évolution de cette variable au fil des années : 
-<div stype="display:flex"><img src="qgplusquepvisu.png"></div>
+<div stype="display:flex"><img src="qgplusquepvisu.webp"></div>
 
 ##### Q7 : Quels musées ont enregistré une baisse de la fréquentation totale de l'année 2015 à 2016 ?
 
-<div stype="display:flex"><img src="qbaisse.png"></div>
+<div stype="display:flex"><img src="qbaisse.webp"></div>
 
 Je me suis demandé si on pouvait trouver les musées gratuits de la région en filtrant la colonne *PAYANT* sur la valeur 0. Et voici ce que j'ai obtenu : 
-<div stype="display:flex"><img src="museegratuit.png"></div>
+<div stype="display:flex"><img src="museegratuit.webp"></div>
 
 
 #### Etape 3 : Visualisation des données 
 Maintenant j'ai envie de rendre mes données plus interprétables pour des personnes n'ayant pas travaillé sur la BDD. 
-<div><div stype="display:flex"><img src="fglobale.png"></div><div stype="display:flex"><img src="fannées.png"></div></div>
-<div stype="display:flex"><img src="fparannées.png"></div>
+<div><div stype="display:flex"><img src="fglobale.webp"></div><div stype="display:flex"><img src="fannées.webp"></div></div>
+<div stype="display:flex"><img src="fparannées.webp"></div>
 
 Grâce à ces visualisations on peut remarquer qu'il y a une une augmentation significative de la fréquentation des musées entre l'année 2012 et 2013 : elle a quasiment triplé ! J'ai voulu me renseigner pour savoir à quoi cela était dû et j'ai trouveé cet article du Figaro [Musées : un millésime 2013 riche en fréquentation](https://www.lefigaro.fr/arts-expositions/2014/01/02/03015-20140102ARTFIG00383-musees-un-millesime-2013-riche-en-frequentation). L'article parle d'une hausse de fréquentation dans toute la France et pas que dans les Bouches-Du-Rhônes. Un événément qui a sûrement permis de faire grimper les fréquentations cette année là c'est l'inauguration du MuCem à Marseille le 4 juin 2013. Comme le montre ce graphique, le MuCem était le musée le plus fréquenté cette année là et de loin:
-<div stype="display:flex"><img src="f2013.png"></div>
+<div stype="display:flex"><img src="f2013.webp"></div>
 Il représente à lui tout seul 51,64% des fréquentations de l'année.
 
 On peut aussi constater l'impact de la crise du COVID qui a engendré une brutale chute des fréquentations des musées à partir de 2020.
 
 J'ai aussi voulu comprendre le pic de 2006. Et voilà le graphique de cette année là :
-<div stype="display:flex"><img src="f2006.png"></div>
+<div stype="display:flex"><img src="f2006.webp"></div>
 Le <strong>Musée Granet</strong> a été réouvert cette année là après sa rénovation et son agrandissement ce qui a engendré une hausse significative des fréquentations. 
 
 ## 7. Pour aller plus loin

@@ -37,7 +37,7 @@ Pour s'initier a React ce cours utilise plusieurs tuto, organisés selon une pro
 const element = <h1>Bonjour, React !</h1>;
 ```
 On commence par créer une page simple avec deux composants Header et Main. qui intègre deux composants, à savoir Header et Main. Le composant Header englobe une barre de navigation, et le composant Main comporte un titre accompagné d'une liste non ordonnée.
-<img src="tuto1.png" width="500" height="550">
+<img src="tuto1.webp" width="500" height="550">
 
 Maintenant que je me suis familiarisé avec ces notions basiques de React, il est temps de mettre en place une application React. Pour cela il faut executer cette commande dans le terminal pour créer et ce déplacer dans le répertoire créé:
 ```bash
@@ -74,14 +74,14 @@ nom-du-projet/
 Une fois que l'infrastructure de base de ton application React est en place, il est crucial de comprendre le concept de "props" (propriétés). Les props sont un mécanisme essentiel dans React qui permet de transmettre des données d'un composant parent à un composant enfant. Cela facilite la communication entre les différents composants de ton application.
 
 En React, chaque composant peut accepter des props en tant que paramètres. Ces props sont définies dans le composant parent et peuvent être passées aux composants enfants pour influencer leur comportement ou affichage. Les props sont immuables, ce qui signifie qu'une fois qu'elles sont définies, elles ne peuvent pas être modifiées par le composant qui les reçoit.
-<img src="tuto2.png" width="200" height="550">
+<img src="tuto2.webp" width="200" height="550">
 
 ## Résultats <a id="section-4"></a>
 J'ai consacré du temps à explorer cette fonctionnalité, car elle m'a offert une certaine souplesse dans le processus de développement, évitant ainsi la nécessité de coder en dur chaque élément de la page. Je peux simplement créer une fonction telle que celle-ci :
 ```js
 import React from "react";
-import Star from "../images/star.png";
-import Euro from "../images/euro.png";
+import Star from "../images/star.webp";
+import Euro from "../images/euro.webp";
 
 export default function Joueurs(props){
     return(
@@ -101,4 +101,4 @@ export default function Joueurs(props){
 }
 ```
 Et en integrant les données je peux avoir ce résultat:
-<img src="tuto3.png" width="600" height="550">
+<img src="tuto3.webp" width="600" height="550">

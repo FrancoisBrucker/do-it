@@ -518,7 +518,7 @@ La programmation par les tests est essentielle pour développer rapidement des l
 Maintenant que je connais mieux le fonctionnement du TDD et que j'ai réalisé mon premier programme à l'aide du cours, je peux tenter de réaliser un exercice par moi-même. J'ai donc demandé à ChatGPT de me proposer un exercice pour mettre en application ce que j'ai appris : 
 
 <div style="display:flex">
-<div><img src="ChatGPTExo.png"></div>
+<div><img src="ChatGPTExo.webp"></div>
 </div>
 
 Donc on va coder une <stong>calculatrice simple</strong> ! 
@@ -527,7 +527,7 @@ Donc on va coder une <stong>calculatrice simple</strong> !
 
 Je crée un nouveau dossier <strong>calculatrice-tdd</strong> dans lequel j'ajoute un fichier pour les tests <strong>test_calculatrice.py</strong>, un fichier pour mon code <strong>calculatrice.py</strong> et bien sur on n'oublies pas <strong>todo.md</strong>.
 <div style="display:flex">
-<div><img src="environnementExo.png"></div>
+<div><img src="environnementExo.webp"></div>
 </div>
 
 La première chose c'est donc de remplir notre <strong>todo</strong>.
@@ -666,7 +666,7 @@ Bon cet exercice est assez simple parce qu'on manipule des nombres, même si je 
 Je redemande à ChatGPT un nouvel exo mais un peut moins simple cette fois :
 
 <div style="display:flex">
-<div><img src="ExoBibliothèque.png"></div>
+<div><img src="ExoBibliothèque.webp"></div>
 </div>
 
 Je crée mes différents fichiers et je rempli ma <strong>todo</strong>.
@@ -1050,7 +1050,7 @@ On a fini notre gestionaire de bibliothèque !
 Je redemande à ChatGPT un nouvel exo mais encore plus dur :
 
 <div style="display:flex">
-<div><img src="ExoVol.png"></div>
+<div><img src="ExoVol.webp"></div>
 </div>
 
 Je crée mes différents fichiers et je rempli ma <strong>todo</strong>.

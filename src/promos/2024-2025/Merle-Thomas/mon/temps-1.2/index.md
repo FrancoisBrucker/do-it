@@ -395,7 +395,7 @@ describe("About Objects", function () {
 
 Voici comment se présente la page de passage des tests pour suivre notre avancée dans le tutoriel : 
 
-![Tests js-koans](./test-js-koans.png)
+![Tests js-koans](./test-js-koans.webp)
 
 ## Tutoriel W3School JS<a name="tutoriel-w3school-js"></a>
 Comme pour les languages HTML et CSS, j'ai utilisé le tutoriel W3School pour apprendre les bases de JS. J'ai suivi les cours puis réalisé chaque exercices de chaque partie grâce à l'éditeur de code en ligne. Ces tutoriels sont vraiment bien fiat pour ceux qui veulent apprendre les bases des languages du FrontEnd, même s'ils sont très longs car traitent de toutes les notions de chaque language, donc difficile de faire le tri sur ce dont on a besoin dès le départ de l'apprentissage. 

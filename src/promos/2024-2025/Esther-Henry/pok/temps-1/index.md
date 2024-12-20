@@ -78,7 +78,7 @@ L’acronyme SAP pour Systems, Applications, and Products for Data Processing se
 
 - SAP est aussi utilisé, par abus de langage, pour désigner le progiciel développé et vendu par la compagnie SAP SE. C’est ce que l’on appelle un ERP propriétaire.
 
-![Timeline de l’évolution de SAP de sa création à nos jours](./images/timeline-POK-1.png)
+![Timeline de l’évolution de SAP de sa création à nos jours](./images/timeline-POK-1.webp)
 **Timeline de l’évolution de SAP de sa création à nos jours**
 
 - **R/1 :**
@@ -218,7 +218,7 @@ Le **questionnaire en détail** est disponible en annexe à la fin de cette page
 Pour obtenir un maximum de réponses à un questionnaire publié sur un réseau social professionnel, il est essentiel de l'accompagner d'un message percutant afin de capter l'attention de votre réseau.
 **Voici le post en question**
 
-![Post LinkedIN](./images/linkedin1.png)
+![Post LinkedIN](./images/linkedin1.webp)
 
 ### Flop du questionnaire
 
@@ -258,7 +258,7 @@ Comme vu dans la partie “Comprendre le sujet”, on attend d’un ERP qu’il 
 
 Ici, le point de vue des experts diverge à ce sujet, car à la question : *Dans votre travail, êtes-vous amené à devoir chercher des données ailleurs que dans SAP ?*, l’un répond **Non** et l’autre **Oui**, en précisant à la question : *Si oui, où ?* : “Dans d'autres systèmes de reporting ou d'autres outils”.
 
-![Réponse 1](./images/reponse_1.png)
+![Réponse 1](./images/reponse_1.webp)
 
 Ainsi, même si pour certains, **SAP peut constituer une base de données unique**, il semblerait que cela ne puisse **pas être une généralité** et que dans les faits, dans certaines entreprises, d’autres bases de données existent. Cela peut amener à se questionner sur la vérification des données (avoir des données qui soient uniques, utilisées et utilisables), ainsi que sur les facteurs qui amènent à utiliser d’autres outils pour stocker des données (s'agit-il des mêmes données stockées dans deux endroits différents, ou de données différentes qui ne peuvent pas être stockées dans SAP tel qu’il est dans cette organisation).
 
@@ -268,7 +268,7 @@ Lorsque l’on s'intéresse à un logiciel SI, et donc aussi à un logiciel d’
 
 On mesure l’interface utilisateur grâce à la question :
 
-![Réponse 2](./images/reponse_2.png)
+![Réponse 2](./images/reponse_2.webp)
 
 Les avis de nos experts sont **globalement satisfaits de l’interface de SAP**, on peut donc dire que l’interface utilisateur de SAP semble tout du moins être assez facilement utilisable pour une grande partie des utilisateurs, et permet donc une bonne utilisation de ce logiciel.
 
@@ -278,7 +278,7 @@ Les avis de nos experts sont **globalement satisfaits de l’interface de SAP**,
 
 Comme on l’a vu dans les promesses de SAP, celui-ci propose une gamme complète d'outils et de systèmes ERP conçus pour répondre à tous les besoins spécifiques. Dans notre questionnaire, nous avons deux approches pour répondre à cette question : une explicite en demandant directement : *Estimez-vous que SAP répond bien aux besoins spécifiques de votre métier ?* Ce à quoi nos experts répondent différemment, mais l’on peut dire qu’à minima, **SAP répond à la majorité des besoins métiers** de ceux-ci.
 
-![Réponse 3](./images/reponse_3.png)
+![Réponse 3](./images/reponse_3.webp)
 
 Ainsi, en interrogeant directement les experts, on voit qu’ils sont globalement satisfaits de SAP pour ce qui est de la couverture de la quasi-totalité de leurs besoins métier.
 
@@ -314,7 +314,7 @@ SAP promet aussi de booster la croissance du chiffre d'affaires des entreprises 
 
 Ainsi, avec la question : **“Selon vous, dans quelle mesure l'utilisation de SAP contribue-t-elle à la croissance financière de votre entreprise ?”**, l’idée était d’évaluer le ressenti des utilisateurs sur cette notion de croissance. Bien qu’on suppose qu’il n’est pas évident pour un collaborateur d’évaluer le lien entre l'utilisation de SAP et la croissance du chiffre d'affaires (sauf si c’est une donnée mesurée par des indicateurs au sein de l’entreprise, ce qui après coup aurait pu être intéressant de demander à nos experts).
 
-![Reponse 4](./images/reponse_4.png)
+![Reponse 4](./images/reponse_4.webp)
 
 Finalement, nos experts ont globalement la sensation que tout du moins **l’utilisation de SAP a une influence bénéfique sur la croissance économique de l’entreprise**.
 
@@ -324,7 +324,7 @@ Finalement, nos experts ont globalement la sensation que tout du moins **l’uti
 
 SAP nous promet aussi que grâce à son expertise métier, SAP permet de collaborer plus efficacement. C’est alors ce que nous avons voulu essayer de mesurer en demandant : **Selon vous, SAP favorise-t-il efficacement la collaboration au sein de votre organisation ?**
 
-![Reponse 5](./images/reponse_5.png)
+![Reponse 5](./images/reponse_5.webp)
 
 Une fois de plus, nos experts sont globalement d’accord. Il semblerait donc que **SAP ait plutôt tendance à favoriser la collaboration** au sein des équipes, même si cela comporte des limites.
 
@@ -332,7 +332,7 @@ Une fois de plus, nos experts sont globalement d’accord. Il semblerait donc qu
 
 SAP, en tant qu'ERP, est censé, grâce à son utilisation en entreprise, permettre aux utilisateurs d’améliorer leur productivité au travail, notamment en augmentant l’efficacité de nombreuses tâches. Nous avons alors directement demandé : **“Quel est l'impact de SAP sur votre productivité au travail ?”**, afin d’obtenir directement le point de vue de l’utilisateur sur sa productivité au travail face à son utilisation de SAP.
 
-![Reponse 6](./images/reponse_6.png)
+![Reponse 6](./images/reponse_6.webp)
 
 Nos experts s’accordent alors sur le fait que **SAP a plutôt tendance à avoir un effet positif sur leur productivité au travail**, ce qui est en accord avec les promesses de SAP.
 
@@ -352,7 +352,7 @@ Notre **groupe d’utilisateurs** est composé de quatre ingénieurs de divers s
 
 Aucun de ces quatre utilisateurs ne connaît réellement SAP en dehors de son utilisation dans le cadre de leurs postes. En effet, d’après leurs réponses aux questions, ils n’ont ni été réellement formés, ni ne sont informés de l’évolution de SAP, contrairement à notre expert. Il est à noté que tous utilisent **SAP ECC**, comme nos experts.
 
-![Utilisateurs](./images/utilisateur_sans_exp.png)
+![Utilisateurs](./images/utilisateur_sans_exp.webp)
 
 Encore une fois, notre étude ne pouvant pas être représentative tant l’échantillon est réduit, nous allons nous concentrer uniquement sur certaines questions pour lesquelles l’avis des utilisateurs diverge avec celui des experts, afin de nuancer nos conclusions précédentes.
 
@@ -360,13 +360,13 @@ Encore une fois, notre étude ne pouvant pas être représentative tant l’éch
 
 Là où **nos experts avaient tendance à trouver l’interface SAP fonctionnelle, nos utilisateurs sont plus divisés**. En effet, la moitié est satisfaite, mais on note tout de même que l’autre moitié ne l’est pas. Étant donné que tous utilisent une version assez similaire de SAP, on peut se demander si cette différence de perception de l’interface utilisateur est influencée par l'absence de formation à l’outil.
 
-![Reponse 7](./images/reponse_7.png)
+![Reponse 7](./images/reponse_7.webp)
 
 #### Assistance continue
 
 Il est là aussi intéressant de prendre en compte l’avis de nos utilisateurs, car il semblerait que **les utilisateurs ne l'utilisent finalement pas**, là où nos experts avaient tendance à en être satisfaits et semblaient donc l’utiliser régulièrement. Cela nous amène à nous poser des questions sur la pertinence du support client. Si la majorité des utilisateurs quotidiens de SAP ne s'en servent pas, et que ce support semble être utilisé principalement par des personnes déjà considérées comme expertes du sujet, on peut se demander **s’il répond vraiment aux besoins des utilisateurs moins expérimentés**.
 
-![Reponse 8](./images/reponse_8.png)
+![Reponse 8](./images/reponse_8.webp)
 
 #### Collaboration efficace
 
@@ -374,19 +374,19 @@ Ici encore, on constate que **nos utilisateurs perçoivent SAP comme ayant un im
 
 Ainsi, il pourrait être intéressant de pousser l’étude sur ce sujet, car les facteurs à prendre en compte sont sûrement multiples, et l’on sait que l’aspect collaboratif est un point essentiel lors du déploiement des systèmes d’ERP.
 
-![Reponse 9](./images/reponse_9.png)
+![Reponse 9](./images/reponse_9.webp)
 
 #### Booster la croissance du CA
 
 Ici, on constate que **l’opinion de nos utilisateurs diverge au sein du groupe**. On peut alors se demander **si les utilisateurs quotidiens de SAP ont les outils pour mesurer cet impact sur la croissance du chiffre d’affaires**, alors que nos experts, de leur côté, sont sûrement plus amenés à définir des critères de réussite de leurs systèmes d’information (SI). On peut également imaginer qu’on leur demande de mesurer notamment l’impact de SAP sur la croissance du chiffre d’affaires de leur organisation.
 
-![Reponse 10](./images/reponse_10.png)
+![Reponse 10](./images/reponse_10.webp)
 
 #### Productivité
 
 Là où nos experts trouvaient que SAP avait un impact plutôt positif sur leur productivité, on constate que **les utilisateurs, eux, ont plutôt tendance à penser que l’utilisation de SAP a un impact négatif sur leur productivité**. On peut alors se demander si, dans son utilisation quotidienne et pour des tâches plus opérationnelles, SAP a vraiment un impact positif sur la productivité. Cela amène à s’interroger sur l’adaptation de l’outil aux besoins des utilisateurs, et si SAP est vraiment conçu dans une optique d’efficacité d’utilisation.
 
-![Reponse 11](./images/reponse_11.png)
+![Reponse 11](./images/reponse_11.webp)
 
 #### Interessés par SAP ?
 
@@ -394,11 +394,11 @@ Un autre point intéressant à relever est que, **là où nos experts disaient s
 
 **Avis des experts**
 
-![Reponse 12](./images/reponse_12.png)
+![Reponse 12](./images/reponse_12.webp)
 
 **Avis des utilisateurs**
 
-![Reponse 13](./images/reponse_13.png)
+![Reponse 13](./images/reponse_13.webp)
 
 On peut alors se questionner sur l’implication entre être intéressé ou non par le fonctionnement d’un logiciel ERP et son point de vue sur celui-ci. Ainsi, il serait pertinent de se demander si l’utilisateur est objectif dans sa perception de SAP. Cela permettrait de mieux comprendre si la divergence de perception par rapport aux promesses de SAP est liée à un manque d’information ou d’intérêt pour l’outil.
 
@@ -472,8 +472,8 @@ Les MON utiles :
 
 Voici mon questionnaire en détail :
 
-![Question 1](./images/question1.png)
-![Question 2](./images/question2.png)
-![Question 3](./images/question3.png)
-![Question 4](./images/question4.png)
-![Question 5](./images/question5.png)
+![Question 1](./images/question1.webp)
+![Question 2](./images/question2.webp)
+![Question 3](./images/question3.webp)
+![Question 4](./images/question4.webp)
+![Question 5](./images/question5.webp)

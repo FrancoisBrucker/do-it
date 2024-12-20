@@ -30,7 +30,7 @@ Ils ont mis en place une simple page web pour faire de la publicité à leur off
 En janvier 2008, le trio a décidé d'officialiser leur entreprise, partant du principe que leur idée pourrait être utile à d'autres dans des situations similaires. Ils ont réfléchi à ce concept et ont décidé de créer Airbnb.
 
 ### Fondateurs
-|Photo | ![Brian Chesky](Brian_Chesky.jpg) |![Joe Gebbia](Joe_Gebbia.jpg) |![Nathan Blecharczyk](Nathan_Blecharczyk.jpg)|
+|Photo | ![Brian Chesky](Brian_Chesky.webp) |![Joe Gebbia](Joe_Gebbia.webp) |![Nathan Blecharczyk](Nathan_Blecharczyk.webp)|
 | -------- | -------- |-------- |-------- |
 | Nom    | *Brian Chesky*     |*Joe Gebbia*    |*Nathan Blecharczyk*    |
 | Rôle    |  *PDG et co-fondateur d'Airbnb*     |*CPO (Chief Product Officer) et co-fondateur d'Airbnb*    |*CTO (Chief Technology Officer) et co-fondateur d'Airbnb*    |
@@ -97,13 +97,13 @@ Enfin, la collaboration d'Airbnb avec des événements et des forums a cherché 
 ### Site web au fil du temps
 Le site web de Airbnb a connu d'énormes changements depuis sa création en 2008. Vous trouverez dans le site [WayBackMachine](https://web.archive.org/web/20161122123602/https://www.airbnb.com/?cdn_locale_redirect=1)  les détails de ces changements.
 Exemple : 
-![Exemples de changements](2009.jpg)
+![Exemples de changements](2009.webp)
 
 En 2014, l'entreprise a décidé de changer son logo et de choisir un qui reflète sa vision et ses valeurs.
-![Les deux logos](2_logos.png)
+![Les deux logos](2_logos.webp)
 
 La communauté d'Airbnb n'a pas compris la signification du new logo. ***"[Le Bélo ](https://youtu.be/nMITXMrrVQU?si=3DijuNji2BUyxVeg)"*** est le nom de ce logo : The Story of a Symbol of Belonging 
-![Le Bélo](newlogo.png)
+![Le Bélo](newlogo.webp)
 
 
 

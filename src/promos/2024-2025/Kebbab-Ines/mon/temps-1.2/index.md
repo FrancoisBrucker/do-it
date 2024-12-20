@@ -42,7 +42,7 @@ Comme expliqué plus haut, le concept se base sur les limites planétaires ainsi
 
 #### Les indicateurs
 
-![Image de la théorie du donut](./img/doughnut.jpg "La théorie du donut en graphe")
+![Image de la théorie du donut](./img/doughnut.webp "La théorie du donut en graphe")
 
 D'un point de vue environnemental, le plafond écologique et les indicateurs de dépassement (au-delà desquelles la préservation des conditions de vie actuelles n'est pas garantie) :
   * Le **changement climatique**, via la mesure la concentration en CO2 dans l'atmosphère ;
@@ -91,13 +91,13 @@ Mais concrètement, comment un gros livre d'économie peut être traduit en poli
 
 Le DEAL (Donut Economics Action Lab) propose des outils gratuits pour accompagner les acteurs dans leurs démarches. Les acteurs doivent s'engager à respecter le coeur de la théorie : avoir une vision hollistique et donc prendre en compte des enjeux/impacts sociaux et environnementaux, à l'échelle locale (de la ville, région) et à l'échelle globale/mondiale. Tout en faisant un état des lieux de leurs impacts, les politiques brainstorment avec un maximum de parties prenantes (citoyens, entreprises, associations, écoles...) sur les politiques et actions prioritaires à mener pour atteindre l'espace sûr pour l'humanité prévu par le donut.
 
-![Matrice Donut et collectivités](./img/Doughnut-Cities-Matrix.jpg "La théorie du donut en graphe")
+![Matrice Donut et collectivités](./img/Doughnut-Cities-Matrix.webp "La théorie du donut en graphe")
 
 Si on on observe rarement des donuts calculés à l'échelle d'une ville, l'échelle étant trop petite pour avoir tous les indicateurs, il est possible de réaliser un donut par pays et ainsi comprendre les enjeux d'un pays (par exemple en France, nous devons faire attention aux dimensions écologiques et certains indicateurs sociaux relatifs au chômage, à l'éducation et parfois les enjeux de représentants politiques). L'Université de Leeds propose un [comparateur entre pays et de nombreuses analyses sur son site](https://goodlife.leeds.ac.uk/national-snapshots/countries/).
 
 ### La démarche
 
-![Démarche Donut et collectivités](./img/Demarche-Donut.png "La démarche du donut en collectivités")
+![Démarche Donut et collectivités](./img/Demarche-Donut.webp "La démarche du donut en collectivités")
 
 Après avoir testé sur quelques projets l'esprit du donut, les villes font un état des lieux en étudiant les impacts au local et ceux à l’échelle globale, en s’appuyant sur des données collectées (soit dans des bases pour les impacts mondiaux, soit celles locales). Un guide pour dresser le [“Portrait analytique d’un endroit”](https://doughnuteconomics.org/tools/doughnut-unrolled-data-portrait-of-place) (ou Data Portrait of Place) est généralement utilisé à cette étape (avec un template excel de la ville d'Amsterdam). La récupération des données et indicateurs (nombreux) peut être pénibles, des informations peuvent manquer.
 

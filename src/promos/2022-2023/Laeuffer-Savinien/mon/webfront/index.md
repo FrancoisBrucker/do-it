@@ -50,7 +50,7 @@ Le fichier doit contenir ce code pour démarrer une page web:
 Maintenant réfléchissons à ce que l'on veut sur notre page. Pour ma part je souhaiterais faire un site portfolio qui regroupera mes compétences, mon contact, mes projets, un peu comme un CV en ligne de développeur web. Voici un schéma de ce que je veux faire:
 
 <figure>
-  <img src="../schema.png">
+  <img src="../schema.webp">
   <figcaption>Schema du site</figcaption>
 </figure>
 
@@ -149,7 +149,7 @@ On obtient cela:
 En lançant notre fichier html dans un navigateur internet, cela s'affiche:
 
 <figure>
-  <img src="../justehtml.png">
+  <img src="../justehtml.webp">
   <figcaption>index.html</figcaption>
 </figure>
 
@@ -236,7 +236,7 @@ Maintenant que la barre de navigation est en place, nous pouvons attaquer le cor
 .background {
     background-size: 100%;
     width: 100%;
-    background-image: url(homescreen.jpg);
+    background-image: url(homescreen.webp);
     min-height: 93vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -306,7 +306,7 @@ Pour cela, il a fallu fixer ma toute première image avec ```background-repeat: 
 .autrebackground {
     background-size: 100%;
     width: 100%;
-    background-image: url(background.png);
+    background-image: url(background.webp);
     min-height: 93vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -438,14 +438,14 @@ et en ajoutant un peu de CSS pour les couleurs:
 L'avantage de cette navbar c'est qu'elle est prête à l'usage et ressemble à ceci:
 
 <figure> 
-  <img src="../navbar1.png">
+  <img src="../navbar1.webp">
   <figcaption>Navbar Bootstrap</figcaption>
 </figure>
 
 Mais elle est aussi adaptative à la taille de l'écran, et lorsque que la largeur diminue, par exemple sur mobile, les liens se déplacent dans un menu déroulant:
 
 <figure> 
-  <img src="../navbar2.png">
+  <img src="../navbar2.webp">
   <figcaption>Navbar Bootstrap</figcaption>
 </figure>
 
@@ -518,6 +518,6 @@ On imbrique tout cela pour obtenir:
 Il manque biensûr du backend pour que le message puisse s'envoyer, mais le résultat front-end est le suivant:
 
 <figure> 
-  <img src="../contacttoast.png">
+  <img src="../contacttoast.webp">
   <figcaption>Toast de contact</figcaption>
 </figure>

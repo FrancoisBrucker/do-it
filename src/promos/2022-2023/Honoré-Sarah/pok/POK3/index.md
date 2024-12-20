@@ -170,7 +170,7 @@ L'intervenant va alors de son coté commencer par **cadrer la demande** en lista
 - **les actions déjà tentées**
 - **les évolutions prévisibles**
 
-<img src="syst_a_considerer.jpg">
+<img src="syst_a_considerer.webp">
 Source : Manager par l'approche systémique, Dominique Bériot
 
 Ensuite l'intervenant **analyse la modélisation du système à considérer** avec le schéma des acteurs et la nature de leur relation.(cf schéma ci-dessus) Il cherche des informations sur la stratégie à adopter. La modélisation montre ici que M.Jeanlez est complètement exclu des interactions même si il est le directeur du projet. 

@@ -69,7 +69,7 @@ En plus des codes de la **bonne pratique**, tels qu’avoir une barre de recherc
 
 Repensez au dernier produit que vous avez acheté en ligne, puis réexaminez le modèle "**See, Think, Do, Care**" (voir, penser, agir, accorder de l'attention) que nous avons abordé dans cette leçon.
 Analysez votre parcours client via les points de contact rencontrés avant de réaliser l'achat.
-![Questions à se poser sur le parcours client](lesquestions.jpg "Questions à se poser sur le parcours client"){width=70%}.
+![Questions à se poser sur le parcours client](lesquestions.webp "Questions à se poser sur le parcours client"){width=70%}.
 
 Quelques points à garder en tête en plus :
 

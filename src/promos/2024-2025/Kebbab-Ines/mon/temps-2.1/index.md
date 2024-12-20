@@ -39,7 +39,7 @@ A partir des échanges et de mes recherches préalables, j'ai pu constitué une 
 - Les cartes "bleues", avec des enjeux et objectifs plus macro liés à l'enseignement qui ne rentraient pas dans une des catégories précédentes ;
 - Les cartes "jaunes", qui sont des cartes avec des questions à débattre (pour le début ou la fin de l'atelier).
 
-![Version 0 des cartes](.\InnoPedago_CartesV0.jpg "Première version des cartes papier")
+![Version 0 des cartes](.\InnoPedago_CartesV0.webp "Première version des cartes papier")
 
 Dans mon analyse, j'ai identifié un découpage possible en 4 types de "problématiques" :
 - Les problèmes de fond ou à l'échelle individuelle (ex. réduction de l'attention à l'échelle sociétale);
@@ -59,7 +59,7 @@ Des objectifs plus macro apparaissent dans les cartes bleues et proposent une le
 
 Sur cette première base, A. Exertier a pu me faire des retours pour retravailler les formulations ou le contenu voire ajouter des cartes. J'ai ensuite numérisé les cartes et cette image mentale des cartes. En parallèle, j'ai proposé une trame pour le déroulé et l'animation de l'atelier.
 
-![Mind map des cartes V1](.\MindMap_FresqueInno.png "Première idée d'image mentale des problèmes et solutions")
+![Mind map des cartes V1](.\MindMap_FresqueInno.webp "Première idée d'image mentale des problèmes et solutions")
 
 Une fois le contenu des cartes arrêté, j'ai pu m'attaquer à la réalisation du visuel des cartes pour l'animation d'un premier crash test : le temps manquant et s'agissant d'un POC, je suis partie sur un design minimaliste.
 

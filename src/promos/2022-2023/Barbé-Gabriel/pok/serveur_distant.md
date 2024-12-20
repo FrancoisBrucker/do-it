@@ -88,7 +88,7 @@ Nous en arrivons ici à la partie création des routes pour notre site sur le se
 - http://localhost:3000/catalog/joueurs
 - http://localhost:3000/users
 Ici, la route "catalogue" n'a pas de sens en soi, j'ai simplement utilisé des fichiers similaires à mon cours afin de ne pas me perdre. Les routes pays et joueurs sont pour le moment vide car on n'y a pas encore implenté la base de données. 
- <img src="./../Images/routes.png" alt='routes'/>
+ <img src="./../Images/routes.webp" alt='routes'/>
 
 ### Etablissement des premières pages 
 
@@ -164,8 +164,8 @@ block content
   else
     li There are no authors.
 ```
-Ma page historique ressemble alors à cela : <img src="./../Images/Historique.png" alt='routes'/>
-En y appliquant le design de mon site et quelques touches de CSS en plus, on obtient : <img src="./../Images/Data.png" alt='routes'/>
+Ma page historique ressemble alors à cela : <img src="./../Images/Historique.webp" alt='routes'/>
+En y appliquant le design de mon site et quelques touches de CSS en plus, on obtient : <img src="./../Images/Data.webp" alt='routes'/>
 
 ### Mise à jour de la base de données
 Il me reste maintenant à actualiser l'historique à chaque coup jouer, c'est une manipulation qui me prend beaucoup de temps et que je n'ai toujours pas réussi à l'heure actuelle. En effet, le problème est que mon script utilise la fonction "appenchild" pour faire apparaitre la liste de coups et que mes variables "pierre", "feuille" et "ciseaux" ne semblent pas être déclarées. Ainsi, lorsque je veux mettre ma base de données à jour avec une fonction dans le fichier "coup.js", le terminal me renvoi que la variable "pierre" n'est pas déclarée : 

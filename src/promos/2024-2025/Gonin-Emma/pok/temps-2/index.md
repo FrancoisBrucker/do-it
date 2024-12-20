@@ -92,7 +92,7 @@ useEffect(() => {
 ### Rajout nouvelles peintures / hovering Galerie
 Une fois que j'étais satisfaite du résultat, j'ai rajouté deux peintures/dessins récents dans ma base de données. J'ai ensuite rajouté une fonctionnalité dans ma galerie photo qui est que lorsque l'utilisateur passe la souris sur une des images, s'affiche alors le titre et la description de l'image. Pour se faire, j'ai rajouté un state `hoveredItem` et une Box noire transparente qui se superpose à l'image.  
 
-![Hovering](image.png)
+![Hovering](image.webp)
 
 ### Séparation backend/frontend
 Après l'ajout de cette nouvelle fonctionnalité, j'ai voulu séparer le backend du frontend. 
@@ -111,7 +111,7 @@ Pour mon backend et préparer la migration des données à un autre endroit que 
 ```
 Ainsi, lorsque je lance la commande `npm run dev`, npm appelle mon script `concurrently \"npm run react-dev\" \"npm run backend-api\"`. Le script `react-dev` va permettre de lancer mon application React et le script `backend-api` va permettre de lancer l'API avec Uvicorn. 
 
-![Déployement](image-1.png)
+![Déployement](image-1.webp)
 
 J'ai créé un nouveau repo Git pour mon portfolio 2.0 avec le backend et le frontend séparés : https://github.com/egonin/art-portfolio-2.0.
 
@@ -133,29 +133,29 @@ J'ai également copié mon dossier de backend de la même manière, sans l'envir
 
 Avant modification :
 
-![backend](<image-2.png>)
+![backend](<image-2.webp>)
 Après modification :
-![alt text](image-3.png)
+![alt text](image-3.webp)
 
 Pour survivre à la déconnexion, je lance mon serveur uvicorn (pour servir le backend) depuis une session `tmux` cf [les cours d'Unix de François Brucker](https://francoisbrucker.github.io/cours_informatique/enseignements/ecm/3A/do-it/devOPS/).
 
 Je me suis rendue compte en ouvrant mon site web balsamite.aioli.ec-m.fr qu'il n'est pas du tout responsive, ainsi j'ai passé un peu plus de 3 heures à rendre le site web plus responsive grâce à un des outils de développement de chrome mais je ne suis pas tout-à-fait satisfaite du résultat. Après je ne suis pas tant frustrée car en un peu plus que 40 heures j'ai beaucoup appris, que ce soit sur le frontend, sur le backend et sur le déployement sur un serveur. 
 
 #### Essai adaptabilité téléphone pour la page d'accueil
-![alt text](image-4.png)
+![alt text](image-4.webp)
 
-![alt text](image-5.png)
+![alt text](image-5.webp)
 
 #### Essai adaptabilité pour la galerie
-![alt text](image-7.png)
+![alt text](image-7.webp)
 
-![alt text](image-6.png)
+![alt text](image-6.webp)
 
 #### Essai adaptabilité pour la page "à propos"
 
-![alt text](image-9.png)
+![alt text](image-9.webp)
 
-![alt text](image-8.png)
+![alt text](image-8.webp)
 
 ### Post-mortem sprint 2
 

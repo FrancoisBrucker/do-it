@@ -53,7 +53,7 @@ Commencez votre journée avec CupCare! ☕✨
 ```
 
 J'ai aussi fait générer un logo par Bing Image Creator. Cela m'a permis d'avoir une piste pour la charte graphique de l'application. Voici le logo en question :
-![Logo généré par Bing Image Creator](./CupCare.jpg)
+![Logo généré par Bing Image Creator](./CupCare.webp)
 
 ### Comment je vais m'y prendre ?
 J'ai prévu d'utiliser Flutter et Firebase pour développer cette application. 
@@ -92,15 +92,15 @@ Après un retour d'Arthur j'ai ajouté les pages suivantes ainsi que quelques co
 
 Comme j'ai pris le cours de spécialité sur le design au temps 2, j'ai pu appliqué les principes vus en cours au fur et à mesure.
 
-![Le figma de l'application](./figmaCupCare.png)
+![Le figma de l'application](./figmaCupCare.webp)
 [Lien vers le figma](https://www.figma.com/file/KrzuGL4Nrb4MhMlsdhjwRe/CupCare?type=design&node-id=0%3A1&mode=design&t=5il8f3tk5P32RCeI-1)
 
 ### Le début du développement
 Initialiser le projet en Flutter s'est fait très rapidement. J'ai ensuite pu commencer à développer les pages. Pour ce premier sprint, j'ai réaliser l'armature des pages de mon figma. En effet, elles partagent toutes une base commune exceptée les pages d'inscription et de connexion. J'avais simplement noté que je voulais réaliser les pages principales de l'application, ayant réalisé la page d'accueil côté produit et machine, je ne sais pas si cela correspond à ce que je voulais.
 **La prochaine fois je serai plus claire dans les taches que je souhaite entreprendre**
 
-<img src="pageProd.jpg" alt="La page d'accueil" style="height: 500px"/>
-<img src="pageMachine.jpg" alt="La page avec la liste des machines" style="height: 500px"/>
+<img src="pageProd.webp" alt="La page d'accueil" style="height: 500px"/>
+<img src="pageMachine.webp" alt="La page avec la liste des machines" style="height: 500px"/>
 
 ### Et Firebase ?
 Je n'ai pas ajouté de données factices à Firebase, ni même initialisé Firebase dans le projet, car je me suis laissé prendre par Flutter. En effet, depuis ma dernière utilisation le framework a bien évolué et je me suis un peu perdu en explorant ses changements !

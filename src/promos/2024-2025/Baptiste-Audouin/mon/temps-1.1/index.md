@@ -26,7 +26,7 @@ A travers ce MON j'ai pu découvrir le fonctionnement et les utilisations des AP
 ## 1. Qu'est-ce qu'une API ?
 #### Définition
  API ou Application Programming Interface est une interface de programmation, c'est-à-dire un ensemble de classes, de fonctions et de méthodes qui servent de façade à un logiciel. D'autres logiciels pourront donc accéder aux services de ce logiciel grâce à cette interface.
- <div><img src="API_Schema.png"></div>
+ <div><img src="API_Schema.webp"></div>
 
 #### Utilisation
 L’API permet de faciliter la communication entre 2 produits ou services, comme par exemple une application et un service de géolocalisation. L’API permet à ces 2 entités d’échanger des données sans en connaître les détails de mise en œuvre. Elle permet donc un immense gain de temps pour les développeurs et un gain d’argent pour les entreprises.
@@ -59,7 +59,7 @@ Dans un premier temps, il faut que l'API utilise le protocole HTTPS, comme c'est
 
 Voici un exemple de requête avec POSTMAN, j'ai choisi l'API [countrylayer](https://countrylayer.com/documentation/) qui est libre d'accès. Pour la tester on regarde dans la documentation, par exemple il y a une requête qui nous donne le nom d'un pays en fonction de sa capitale. Avant de l'exécuter il faut générer une clé d'accès unique afin de s'authentifier lors de la requête. On peut désormais exécuter la requête :
 
-<div><img src="API-request_country_by_capital.png"></div>
+<div><img src="API-request_country_by_capital.webp"></div>
 
 
 ## 3. Intégration dans un script Python

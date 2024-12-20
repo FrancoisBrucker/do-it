@@ -87,15 +87,15 @@ Cependant, j'aurais aimé faire plus de Backend, mais d'un coté le HeadlessCMS 
 
 On peut voir ici l'interface du CMS avec mon schéma de données :
 
-<img src="./../images/graphCMSinterface.png" alt="Interface CMS" style="height: 250px; margin: 0 auto;width:500px" />
+<img src="./../images/graphCMSinterface.webp" alt="Interface CMS" style="height: 250px; margin: 0 auto;width:500px" />
 
 Ici des captures d'écrans de mon blog avec des publications test :
 
 <div style = " display: grid;grid-template-columns: repeat(3, minmax(0, 1fr))">
 
-<img src="./../images/ArtblogInterface.png" alt="page de garde du site" style="height: 250px; margin: 0 auto; width : 500px,grid-column : 1 ;grid-row : 1" />
-<img src="./../images/artblogForm.png" alt="Formulaire de comentaire" style="height: 250px; margin: 0 auto; width : 400px,grid-column : 2 ;grid-row : 1" />
-<img src="./../images/artblogComments.png" alt="Affichage de commentaires" style="height: 250px; margin: 0 auto; width : 500px,grid-column : 3 ;grid-row : 1 " />
+<img src="./../images/ArtblogInterface.webp" alt="page de garde du site" style="height: 250px; margin: 0 auto; width : 500px,grid-column : 1 ;grid-row : 1" />
+<img src="./../images/artblogForm.webp" alt="Formulaire de comentaire" style="height: 250px; margin: 0 auto; width : 400px,grid-column : 2 ;grid-row : 1" />
+<img src="./../images/artblogComments.webp" alt="Affichage de commentaires" style="height: 250px; margin: 0 auto; width : 500px,grid-column : 3 ;grid-row : 1 " />
 
 </div>
 

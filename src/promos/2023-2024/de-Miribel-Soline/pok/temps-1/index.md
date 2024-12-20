@@ -158,11 +158,11 @@ Le compte rendu comprend un rappel des objectifs puis un récit de la simulation
 La direction des risques opérationnels et du contrôle permanent va à la rencontre des équipes des différents services pour mettre à jour le plan de prévention des risques. Cette partie résume les différentes étapes du processus de refonte de ce plan pour l’un des processus de l’entreprise.
 #### Processus
 L’activité de l’entreprise peut être cartographiée en une trentaine de processus. Chacun de ces processus se divise lui-même en sous-processus. Ces sous processus sont représentés par des logigrammes explicitant les parties prenantes, les outils informatiques utilisés et les procédures de choix.
-![logigramme type d'un processus](./image-1.png)
+![logigramme type d'un processus](./image-1.webp)
 
 #### Identification des risques
 Pour chacun des sous-processus, l’équipe qui les opère identifie, avec un membre de la direction des risques opérationnels et du contrôle permanent, les risques qui lui sont rattachés. Ces risques sont ensuite croisés et regroupés entre les différentes sous procédures pour obtenir les risques de la procédure
-![Cartographie des risques](./image-2.png)
+![Cartographie des risques](./image-2.webp)
 
 
 #### Contrôle permanent des risques

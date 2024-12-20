@@ -72,37 +72,37 @@ Pour mes objectifs du sprint 1, j'ai rempli en partie toutes les tâches car il 
 
 ##### Les enjeux éthiques de l'UX design
 
-<img src="./image2/un.png" width="50%">
+<img src="./image2/un.webp" width="50%">
 
 <div style='display:flex'>
 
-<div><img src="./image2/deux.png"width="100%"></div>
+<div><img src="./image2/deux.webp"width="100%"></div>
 
-<div><img src="./image2/trois.png"width="100%"></div>
+<div><img src="./image2/trois.webp"width="100%"></div>
 
 </div>
 
 <div style='display:flex'>
 
-<div><img src="./image2/quatre.png"width="100%"></div>
+<div><img src="./image2/quatre.webp"width="100%"></div>
 
-<div><img src="./image2/cinq.png"width="100%"></div>
+<div><img src="./image2/cinq.webp"width="100%"></div>
 
 </div>
 
 ##### Le design persuasif
 
-<img src="./image2/six.png" width="50%">
+<img src="./image2/six.webp" width="50%">
 
 ##### Les dark patterns
 
-<img src="./image2/sept.png" width="50%">
+<img src="./image2/sept.webp" width="50%">
 
 ### Second Sprint
 
 Durant ce second sprint, j'ai pu achever mon travail de recherche et de mise en forme pour obtenir une carte mentale. L'objectif de cette carte est de condenser les notions principales sur le sujet et de rester accessible afin de pouvoir aider n'importe quel utilisateur à savoir réagir face aux dark patterns. En la téléchargeant, l'utilisateur peut la conserver pour l'avoir sous la main en cas de besoin. Un des points importants que j'ai découvert durant ce travail est que la loi est très floue sur ces sujets  aujourd'hui. Donc la meilleure façon de se protéger, au-delà de faire attention en naviguant sur Internet, c'est la prévention et la communication sur le sujet. Cela permettra aux designers de mieux se rendre compte de l'impact de leur travail pour viser un web plus éthique.
 
-<img src="./image2/carte.png" width="50%">
+<img src="./image2/carte.webp" width="50%">
 
 La carte se compose de cinq tableaux, chacun abordant une notion clé mise en avant un peu plus bas. Si vous le souhaitez, cliquez sur le lien ci-dessous pour la télécharger en format PDF, pour en faciliter la lecture (pensez à zoomer!).
 
@@ -111,21 +111,21 @@ La carte se compose de cinq tableaux, chacun abordant une notion clé mise en av
 
 <div style='display:flex'>
 
-<div><img src="./image2/t1.png"width="100%"></div>
+<div><img src="./image2/t1.webp"width="100%"></div>
 
-<div><img src="./image2/t2.png"width="100%"></div>
+<div><img src="./image2/t2.webp"width="100%"></div>
 
 </div>
 
 <div style='display:flex'>
 
-<div><img src="./image2/t3.png"width="100%"></div>
+<div><img src="./image2/t3.webp"width="100%"></div>
 
-<div><img src="./image2/t4.png"width="100%"></div>
+<div><img src="./image2/t4.webp"width="100%"></div>
 
 </div>
 
-<img src="./image2/t5.png" width="50%">
+<img src="./image2/t5.webp" width="50%">
 
 ##### Les enjeux éthiques de l'UX design
 

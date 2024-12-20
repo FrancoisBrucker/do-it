@@ -47,7 +47,7 @@ Différentes fonctionnalités sont encore à coder comme la prévisualisation d'
 
 ## Poster
 
-![Poster](./Poster/Poster.png "Poster FirePixel")
+![Poster](./Poster/Poster.webp "Poster FirePixel")
 
 ## Rapport du projet
 
@@ -90,7 +90,7 @@ Pour débuter ce projet, nous avons choisi de réaliser une **première version*
 Pour que notre projet puisse être utilisé, un des premiers grands enjeux est que **l’interface utilisateur soit simple et intuitive**. En effet, si celle-ci est trop complexe, les joueurs ne chercheront pas à comprendre et partiront sans même tester notre application.
 Nous avons donc réalisé une première maquette de la Web App sur Figma.
 
-![Maquette1](./Photo_rapport/Maquette1.1.png "Maquette1")
+![Maquette1](./Photo_rapport/Maquette1.1.webp "Maquette1")
 
 Cette maquette est simple et épurée.
 
@@ -98,7 +98,7 @@ Cependant, sur ce modèle, l’identité visuelle est faible et certaines foncti
 
 Suite à ces conclusions, nous avons donc réalisé la maquette suivante :
 
-![Maquette2](./Photo_rapport/Maquette1.2.png "Maquette2")
+![Maquette2](./Photo_rapport/Maquette1.2.webp "Maquette2")
 
 Cette interface reprend la couleur du logo de FirePixel afin de garder une certaine cohérence. Par ailleurs, elle dispose de boutons permettant d’utiliser toutes les fonctionnalités que nous souhaitions implémenter.
 
@@ -106,7 +106,7 @@ Ainsi, le bouton *Help* permet d’afficher un texte explicatif. Le bouton *Colo
 
 Il est également important que la télévision où sera affiché FirePixel ait un visuel simple et esthétique, qui incite les personnes qui passent à scanner le QR Code.
 
-![Maquette3](./Photo_rapport/Maquette1.3.png "Maquette3")
+![Maquette3](./Photo_rapport/Maquette1.3.webp "Maquette3")
 
 #### 2. Schéma d'entité
 
@@ -114,7 +114,7 @@ Après avoir mis en place le visuel de l’application, nous avons créé le sch
 
 Nous avons construit 3 entités : l’écran, les curseurs et les pixels selon le schéma ci-dessous :
 
-![Schema_entite](./Photo_rapport/Schema_entite.png "Schema_entite")
+![Schema_entite](./Photo_rapport/Schema_entite.webp "Schema_entite")
 
 #### 3. Développement
 
@@ -190,13 +190,13 @@ La première étape a été de refaire les boutons pour les remplacer par des sy
 
 <div style="display: flex; align-items: center;">
   <div style="width: 32%; display: flex; flex-direction: column; align-items: center;">
-    <img src="./Photo_rapport/Maquette2.1.png" style="border: 0;" />
+    <img src="./Photo_rapport/Maquette2.1.webp" style="border: 0;" />
   </div>
   <div style="width: 50%; display: flex; flex-direction: column; align-items: center;">
-    <img src="./Photo_rapport/Maquette2.2.png" style="border: 0;" />
+    <img src="./Photo_rapport/Maquette2.2.webp" style="border: 0;" />
   </div>
   <div style="width: 50%; display: flex; flex-direction: column; align-items: center;">
-    <img src="./Photo_rapport/Maquette2.3.png" style="border: 0;" />
+    <img src="./Photo_rapport/Maquette2.3.webp" style="border: 0;" />
   </div>
 </div>
 
@@ -206,7 +206,7 @@ Finalement, nous avons réfléchi à d’autres possibilités. Le rouge, en coul
 
 Nous avons donc réalisé une nouvelle maquette corrigeant tout ceci :
 
-![Maquette1](./Photo_rapport/Maquette3.1.png "Maquette1")
+![Maquette1](./Photo_rapport/Maquette3.1.webp "Maquette1")
 
 La couleur grise de fond permet de corriger l’attirance de l'œil vers le rouge.
 

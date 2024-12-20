@@ -43,7 +43,7 @@ Ces informations m'ont permis de mieux saisir ce qu'est le WebAssembly. Elles on
 J'ai donc décidé d'essayer wasm. J'ai commencé par un autre langage que Rust car je ne le connaissais pas encore assez. Il est cependant possible de cibler le WebAssembly depuis plusieurs langages comme le C et le C++ par exemple, j'ai donc commencé par là.
 
 Pour créer un code wasm avec du C++, il faut utiliser [emscripten](https://emscripten.org). Emscripten va prendre les fichiers sources et sortir un fichier en WebAssembly (.wasm), un fichier javascript et un fichier en HTML. Le javascript va automatiquement appelé le WebAssembly et définir les fonctions nécessaires pour que nos méthodes puissent être appelées depuis le javascript. Le HTML est alors une page générée automatiquement pour appeler ce javascript (en tout cas sa fonction main). J'ai pu obtenir le résultat suivant en utilisant emscripten sur un programme en C++/SDL :
-![Affichage avec emscripten](./emscripten.png)
+![Affichage avec emscripten](./emscripten.webp)
 
 ### Rust et WebAssembly
 J'ai ensuite suivi le tutoriel fournit par Rust sur le WebAssembly accessible [ici](https://rustwasm.github.io/docs/book/introduction.html).
@@ -52,7 +52,7 @@ Après cette étape, la majorité de mes questions sur le WebAssembly avaient tr
 
 ### Des équations croisées
 Ensuite, il me fallait appliquer ce que je venais d'apprendre sur le WebAssembly et produire un livrable pour mon POK. Je me suis donc lancé le défi de réaliser un jeu d'équations croisées. Le résultat final, ressemblerait à ça :
-![Crossmath](./crossmath.png)
+![Crossmath](./crossmath.webp)
 *Cette image a été tirée du jeu Crossmath*
 
 Je n'ai pas d'affichage pour l'instant, cependant voici ma progression jusqu'à présent :
@@ -71,7 +71,7 @@ Pour la suite, voici les taches que je souhaite terminer :
 - Gérer la validation de la grille remplie par le joueur *(difficulté estimée : 1)*
 
 ## Ce que j'ai fait à la fin du temps 1
-![Le résultat après 20h de travail](./crossmath_final.png)
+![Le résultat après 20h de travail](./crossmath_final.webp)
 
 
 

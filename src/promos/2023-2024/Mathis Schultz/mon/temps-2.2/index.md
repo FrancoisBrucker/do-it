@@ -27,7 +27,7 @@ La Business Intelligence (BI) combine analytique métier, data mining, visualisa
 
 **Jasques Bertin**, il n'est pas le premier à avoir réalisé une carte ou un graphique bien évidemment, mais son ouvrage "**Sémiologie Graphique**" pose de nombreuses bases sur les choix qu'il est nécessaire de prendre afin de pouvoir transmettre plus facilement de l'information. Son ouvrage est une aide à la décision et à la compréhension de représentation graphique. Il défini l'utilisation des symboles, types de graphique ou encore couleur afin d'insister sur un point ou un autre.
 
-![Choix de graphique](graphique.png)
+![Choix de graphique](graphique.webp)
 *Image tiré du livre Sémiologie Graphique*
 
 Le but de ce MON est donc de répondre à la question : *Comment construire un tableau de bord pertinent ?*
@@ -115,7 +115,7 @@ Le but de ce paragraphe est de construire un dashboard. Pour cela, je vais utili
 
 Voici un aperçu de Power BI :
 
-![Aperçu Power BI](apercu.png)
+![Aperçu Power BI](apercu.webp)
 
 Au centre on retrouve le tableau de bord, c'est à dire les données que l'on souhaite visualiser.
 Sur la droite on retrouve 3 choses :
@@ -132,11 +132,11 @@ Sur la droite on retrouve 3 choses :
 **Quelques exemple de pièges**
 Les exemples suivants sont ceux d'Open Classroom :
 
-![Graphique Camembert Trompeur](camembert.png)
+![Graphique Camembert Trompeur](camembert.webp)
 
 Lorsque l'on observe le graphique on peut avoir l'impression que la majorité des gens sont pour la légalisations de la marijuana, cependant cela est du au fait que les proportions ne sont pas respecté.
 
-![Graphique en courbe trompeur](courbe.png)
+![Graphique en courbe trompeur](courbe.webp)
 
 Rien ne laisse paraître de problème dans ce graphique, le partie conservateur norvégien semble avoir tenue la promesse de diminuer les émissions CO2. Cependant, les années 2014-2016 ne sont pas représentés, et les émissions étaient plus élevés sur cette période.
 
@@ -160,11 +160,11 @@ Cependant, pour aller plus loin, il est possible d'utiliser les graphiques qui s
 **Autres outils de Power BI**
 Power BI propose un ensemble d'outil afin de faciliter son utilisation, par exemple, lorsque l'on importe des données, Power BI propose le diagramme relationnel de cette base de données. Cela permet de savoir facilement comment il fait le lien entre les données.
 
-![Diagramme relationnel](diagramme.png)
+![Diagramme relationnel](diagramme.webp)
 
 Power BI propose pour son tableau de bord une dynamique complète : en effet, lorsque l'on interagie avec un graphique cela se répercute sur les autres, et permet donc de visualiser facilement des données spécifiques. Cela est comparable à un système de filtre mais qui permet une interaction intuitive avec l'utilisateur sans avoir à aller écrire des requêtes de filtres.
 
-![Filtrage dynamique](brest.png)
+![Filtrage dynamique](brest.webp)
 
 Par exemple ici, j'ai cliqué sur la ville de Brest, cela va mettre à jour les autres graphiques :
 
@@ -172,7 +172,7 @@ Par exemple ici, j'ai cliqué sur la ville de Brest, cela va mettre à jour les 
 - Le montant "en attente de validation" est mis à jour.
 - La ville de Brest est légèrement plus visible que les autres sur la map (ce paramètre est réglable)
 
-![Accord en attente](accord.png)
+![Accord en attente](accord.webp)
 
 Sur cet extrait, j'ai cliqué sur les accords "vide" du diagramme donc ceux en attente. Cela met en avant les villes dans lesquels il y a des prêts en attente.
 

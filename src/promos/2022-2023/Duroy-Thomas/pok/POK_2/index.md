@@ -103,14 +103,14 @@ Pour ce projet, je compte illustrer la dualité de mon parcours en développant 
 
 Le site présente une page d'accueil composée d'une partie Data/IA, d'une partie Dev et d'un bouton de requête.
 
-![Image accueil](aperçu%20POK%201.png)
+![Image accueil](aperçu%20POK%201.webp)
 
 En cliquant sur l'une ou l'autre des moitiés Data/Dev, on accède à un carrousel des projets correspondants.
-![Image Carrousel](aperçu%20POK%203.png)
+![Image Carrousel](aperçu%20POK%203.webp)
 
 En cliquant sur le bouton de proposition, on accède à un  formulaire et mon API back-end s'occupe de trier et d'afficher le propositions de projets.
 
-![Image formulaire](aperçu%20POK%202.png)
+![Image formulaire](aperçu%20POK%202.webp)
 
 ## Bilan
 

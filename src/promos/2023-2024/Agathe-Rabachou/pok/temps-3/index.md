@@ -51,11 +51,11 @@ A la fin du match, l'utilisateur doit pouvoir récupérer :
 Si le temps me le permet, une suite intéressante au projet pourrait être de conserver toutes les informations de chaque match dans une base de données pour pouvoir faire des comparaisons de performance des équipes et des joueurs entre les matchs ou encore des statistiques moyennes sur une saison complète. Dans ce cas, il faudrait également conserver en mémoire pour chaque match la date, le lieu (domicile ou extérieur) et l'équipe adverse.
 
 Dans un **second temps**, j'ai imaginé un design pour l'interface, que j'ai maquetté sur Canva. Voici le rendu de la page principale :
-<img src="maquette_page_principale.png">
+<img src="maquette_page_principale.webp">
 La maquette complète avec la page d'accueil et des exemples de fonctionnement est disponible à [ce lien](https://www.canva.com/design/DAF9aX-qabs/2vwFKz3I0joGODFLJQR0hw/edit?utm_content=DAF9aX-qabs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton).
 
 **Ensuite**, j'ai commencé le développement. J'ai fait quelques recherche avant de choisir Tkinter comme framework Python pour réaliser l'interface. J'ai eu un peu de mal à le prendre en main, mais je suis finalement arrivée au résultat suivant pour ma page principale :
-<img src="interface_main.png">
+<img src="interface_main.webp">
 J'ai alors commencé le développement des fonctionnalités : pour l'instant, une liste déroulante pour choisir le joueur s'affiche lorsque l'on clic sur un événement, et une fois le joueur choisi, un couple ('événement', 'numéro du joueur') s'ajoute à la liste correspondante.
 
 ### Retours
@@ -91,11 +91,11 @@ Pour commencer, l'ensemble de mon code est toujours disponible à [ce lien](http
 
 Dans ce deuxième sprint, j'ai réalisé toutes les fonctions qui permettent de récupérer les données rentrées par l'utilisateur dans l'interface, de les identifier et de les classer correctement dans différentes listes afin de pouvoir les réutiliser. Pour cela, j'ai crée un menu déroulant avec les différents choix possibles qui apparaît lors de chaque interaction avec l'interface, et j'ai stocké les informations dans un dictionnaire.
 
-<img src="menu_deroulant.png">
+<img src="menu_deroulant.webp">
 
 Ensuite, je suis passée à la partie qui a été de loin la plus compliquée de ce projet : la création et la mise en page de la feuille de match. Pour cela, j'ai utilisé une partie de la bibliothèque *reportlab*, qui permet entre autres de générer des fichiers PDF (et que j'ai découverte au passage). J'ai mis beaucoup de temps à la prendre en main, j'ai fait face à de nombreux bugs et il m'a vraiment fallu plusieurs heures pour obtenir un rendu de template convenable. Puis il a fallu remplir ce template à partir d'un dictionnaire de données contenant les points par joueur et par équipe ainsi que les fautes, dans le même format que les dictionnaires remplis grâce aux fonctions et à l'interface dans la partie précédente, le but étant bien sûr par la suite de relier les deux. Cela a encore été une très longue étape et beaucoup de problèmes à régler, mais voici un exemple de résultat avec des données choisies aléatoirement :
 
-<img src="feuille_de_match-1.png">
+<img src="feuille_de_match-1.webp">
 
 Le PDF généré lors de l'utilisation de l'interface est alors téléchargeable (voici d'ailleurs la [version PDF](feuille_de_match.pdf)).
 

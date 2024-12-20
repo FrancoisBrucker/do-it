@@ -66,7 +66,7 @@ npm run dev
 NPM signifie Node Package Manager.
 Vite dirige l'application sur le port 5173. Cela crée un répertoire entier avec des modules, un fichier `index.html`, un fichier .css, et un package .json. Le code de l'application est dans le dossier *src*.
 
-![alt](dossier.png)
+![alt](dossier.webp)
 
 ### Configuration du serveur Node.js
 

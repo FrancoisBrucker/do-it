@@ -49,7 +49,7 @@ Mais, le temps réel ne s'applique pas qu'à cela. Il faut également que les si
 Cette dernière solution permet de ne **pas perdre l'information** que l'on souhaite collecter sur l'utilisateur tout en lui permettant d'**accéder à notre site**.
 Cependant, si les appels au serveur externes sont faits avant que la page s'affiche (donc de manière **asynchrone**), le **temps d'attente** pour le client peut être **très long**. Une solution est donc d'effectuer ces calculs de manière **asynchrone**.
 
-![Schéma de l'asynchronicité](../image/Schéma6.1.png "Schéma explicatif asynchronicité")
+![Schéma de l'asynchronicité](../image/Schéma6.1.webp "Schéma explicatif asynchronicité")
 
 *Source : Openclassrooms*
 
@@ -71,7 +71,7 @@ Kafka est souvent utilisé pour du **traitement en temps réel**, du **traitemen
 
 Cela correspond à la partie **file de messages** détaillée précédemment. Kafka reçoit tous les messages et les redistribue aux bons services. Il fait office de "centre de distribution de messages".
 
-![Schéma de Kafka](../image/Schéma6.2.png "Schéma explicatif Kafka")
+![Schéma de Kafka](../image/Schéma6.2.webp "Schéma explicatif Kafka")
 
 *Source : Openclassrooms*
 
@@ -150,7 +150,7 @@ Un site peut par exemple transmettre des logs sur ses visites (date et heure, ur
 
 Storm possède une architecture comme suit :
 
-![Schéma de Storm](../image/Schéma6.3.png "Schéma explicatif Storm")
+![Schéma de Storm](../image/Schéma6.3.webp "Schéma explicatif Storm")
 
 *Source : Openclassrooms*
 

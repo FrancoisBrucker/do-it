@@ -101,7 +101,7 @@ J'ai continué en ajoutant une image et le lien de chaque page de patron que j'a
 ```
 
 Voici donc le résultat de la page pour le moment : 
-![Page d'acceuil](./Pageacceuil1.jpg)
+![Page d'acceuil](./Pageacceuil1.webp)
 
 #### Page patron typique
 
@@ -178,9 +178,9 @@ La page patron à une structure typique à chaque fois :
 ```
 
 Le résultat final du sprint donne quelque chose comme ça : 
-![Début de la page patron](./Lilithtop1.jpg)
-![Milieu de la page patron](./Lilithtop2.jpg)
-![Fin de la page patron](./Dosnu1.jpg)
+![Début de la page patron](./Lilithtop1.webp)
+![Milieu de la page patron](./Lilithtop2.webp)
+![Fin de la page patron](./Dosnu1.webp)
 
 Pour l'instant le visuel n'est pas incroyable mais cela devrait s'arranger avec le sprint 2 et l'ajout du code css.
 
@@ -190,7 +190,7 @@ Pendant le second sprint, je me suis concentrée sur l'apparence de mon site web
 
 Pour cela, j'ai commencé par réaliser une maquette sommaire du rendu que je voulais afin de mieux cerner sur quoi travailler et dans quelle direction me tourner.
 
-![Fin de la page patron](./Maquette.jpg)
+![Fin de la page patron](./Maquette.webp)
 
 Une fois cette maquette terminée, j'ai pu me lancer dans le code, d'abord en html pour ajouter les classes de mes éléments et les balises ```<div>``` et ```<span>``` qui sont utiles pour séparer les éléments de la page et les disposer aux bons endroits.
 
@@ -211,7 +211,7 @@ Mon code final en html donne ceci :
     <body>
         <header role="banner">
             <div class="header-left">
-                <img src="logo-modified.png" alt="Logo du site" id="logo"/>
+                <img src="logo-modified.webp" alt="Logo du site" id="logo"/>
             </div>
             <div class="header-center">
                 <h1>Capitaine crochet</h1>
@@ -232,15 +232,15 @@ Mon code final en html donne ceci :
     
                 <div class="gallerie">
                     <div class="Lilith">
-                        <img src="Lilith Top photo.jpg" alt="Photo du Lilith Top en ocre" class="ImageLilith"/>
+                        <img src="Lilith Top photo.webp" alt="Photo du Lilith Top en ocre" class="ImageLilith"/>
                         <a href = "patron3.html">Lilith Top</a>
                     </div>
                     <div class="Pull">
-                        <img src="Pull patchwork photo.jpg" alt="Photo d'un pull patchwork réalisé au crochet" class="ImagePull"/>
+                        <img src="Pull patchwork photo.webp" alt="Photo d'un pull patchwork réalisé au crochet" class="ImagePull"/>
                         <a href = "patron1.html">Pull en patchwork</a>
                     </div>
                     <div class="Top">
-                        <img src="Backless Tank Top photo.png" alt="Photo d'un top dos nu réalisé au crochet" class="ImageBackless"/>
+                        <img src="Backless Tank Top photo.webp" alt="Photo d'un top dos nu réalisé au crochet" class="ImageBackless"/>
                         <a href = "patron2.html">Top dos nu</a>
                     </div>
                     </div>
@@ -269,7 +269,7 @@ Mon code final en html donne ceci :
         <header role="banner">
             <div class="header-left">
                 <a href="Acceuil.html">
-                    <img src="logo-modified.png" alt="Logo du site" id="logo"/>
+                    <img src="logo-modified.webp" alt="Logo du site" id="logo"/>
                 </a>
             </div>
     
@@ -282,16 +282,16 @@ Mon code final en html donne ceci :
             <h1>Top dos nu</h1>
             
             
-            <img src="Backless Tank Top photo.png" alt="Photo d'un top dos nu réalisé au crochet" />
+            <img src="Backless Tank Top photo.webp" alt="Photo d'un top dos nu réalisé au crochet" />
             
     
             <div class="Niveau">
                 <p>Niveau du patron : </p>
-                <img src="Etoile remplie.jpg" alt="Photo d'un pull patchwork réalisé au crochet" class="etoile"/>
-                <img src="Etoile remplie.jpg" alt="Photo d'un pull patchwork réalisé au crochet" class="etoile"/>
-                <img src="Etoile vide.jpg" alt="Photo d'un pull patchwork réalisé au crochet" class="etoile"/>
-                <img src="Etoile vide.jpg" alt="Photo d'un pull patchwork réalisé au crochet" class="etoile"/>
-                <img src="Etoile vide.jpg" alt="Photo d'un pull patchwork réalisé au crochet" class="etoile"/>
+                <img src="Etoile remplie.webp" alt="Photo d'un pull patchwork réalisé au crochet" class="etoile"/>
+                <img src="Etoile remplie.webp" alt="Photo d'un pull patchwork réalisé au crochet" class="etoile"/>
+                <img src="Etoile vide.webp" alt="Photo d'un pull patchwork réalisé au crochet" class="etoile"/>
+                <img src="Etoile vide.webp" alt="Photo d'un pull patchwork réalisé au crochet" class="etoile"/>
+                <img src="Etoile vide.webp" alt="Photo d'un pull patchwork réalisé au crochet" class="etoile"/>
             </div>
     
             <div class="Corps">
@@ -305,7 +305,7 @@ Mon code final en html donne ceci :
             </ul>
     
             <h2 id = "mesures">Mesures à prendre avant de commencer</h2>
-            <img src="Dos nu mesures.jpg" alt="Photo expliquant les mesures à prendre pour réaliser le top." />
+            <img src="Dos nu mesures.webp" alt="Photo expliquant les mesures à prendre pour réaliser le top." />
     
             <h2 id = "abbréviations">Abbréviations utilisés dans le patron</h2>
                 <p>
@@ -655,14 +655,14 @@ Quand le code html est structuré et les balises correctement placé, on peut ut
     
 Tout ce code me permet d'obtenir un résultat beaucoup plus sympathique que lorsque l'on a juste un code html. Voici une plus jolie vision de ce que mon code a pu donné :
     
-![Visuel de la page d'accueil](./Accueilfinal1.png)
+![Visuel de la page d'accueil](./Accueilfinal1.webp)
     
-![Visuel de la page d'accueil 2](./Accueilfinal2.png)
+![Visuel de la page d'accueil 2](./Accueilfinal2.webp)
     
-![Visuel de la page patron](./Patronfinal1.png)
+![Visuel de la page patron](./Patronfinal1.webp)
     
-![Visuel de la page patron 2](./Patronfinal2.png)
+![Visuel de la page patron 2](./Patronfinal2.webp)
     
-![Visuel de la page patron 3](./Patronfinal3.png)
+![Visuel de la page patron 3](./Patronfinal3.webp)
     
-![Visuel de la page patron 4](./Patronfinal4.png)
+![Visuel de la page patron 4](./Patronfinal4.webp)

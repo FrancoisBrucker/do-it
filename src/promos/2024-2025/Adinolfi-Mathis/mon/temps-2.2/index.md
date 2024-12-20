@@ -41,7 +41,7 @@ J'ai un peu dépassé le temps à cause de la rédaction du MON, sinon bonne ges
 Suite aux cours de no/low code et UI/UX design, j'ai eu envie de créer mon propre site internet à l'aide des outils présentés : Figma / Bubble / Dribble. Plus précisément j'avais envie d'améliorer le tableau de bord que j'ai mis en place dans mon entreprise. Ce tableau a pour but de présenter l'avancement des projets de nos services afin d'estimer la charge de travail des collaborateurs. Actuellement, il s'agit d'un outil Excel qui présente de nombreuses limites : mise à jour de la BDD non automatique / bugs liés à Excel / pas très esthétique.
 
 <div style="text-align: center;">
-    <img src="Planning_excel.png" width="800"/>
+    <img src="Planning_excel.webp" width="800"/>
     <u> Image 1 : Aperçu planning Excel </u>
 </div>
 
@@ -73,7 +73,7 @@ _Charte graphique_
 - Couleur = bleu / blanc / gris
 
 <div style="text-align: center;">
-    <img src="Palette.png" width="800"/>
+    <img src="Palette.webp" width="800"/>
     <u> Image 2 : Palette de couleur utilisée </u>
 </div>
 
@@ -82,7 +82,7 @@ _Inspirations_
 Pour le design du site j'ai opté pour la présentation suivante :
 
 <div style="text-align: center;">
-    <img src="Desing.png" width="800"/>
+    <img src="Desing.webp" width="800"/>
     <p> [Source Dribble](https://dribbble.com/shots/23393705-Atos-Task-Management-Dashboard-List-View) </p>
 </div>
 
@@ -91,21 +91,21 @@ Afin de répondre à toutes les exigences l'application se décompose en trois o
 1. Planning : Gantt présentant les avancements des projets
 
 <div style="text-align: center;">
-    <img src="Gantt.png" width="800"/>
+    <img src="Gantt.webp" width="800"/>
     <p> [Source Dribble](https://dribbble.com/shots/23913594-Dashboard-Gantt-Chart) </p>
 </div>
 
 1. Production : Dashboard présentant les livrables à produire
 
 <div style="text-align: center;">
-    <img src="Dashboard.png" width="800"/>
+    <img src="Dashboard.webp" width="800"/>
     <p> [Source Dribble](https://dribbble.com/shots/24852217-Xenity-Health-Medical-Dashboard) </p>
 </div>
 
 1. Affectation : Tableau permettant d'affecter les équipes aux projets
 
 <div style="text-align: center;">
-    <img src="Tab.png" width="800"/>
+    <img src="Tab.webp" width="800"/>
     <p> [Source Dribble](https://dribbble.com/shots/23047845-NFS-Spreadsheet-Table-View) </p>
 </div>
 

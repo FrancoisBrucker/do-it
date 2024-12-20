@@ -30,7 +30,7 @@ Dans le cadre de l'apprentissage supervisé, l'algorithme va essayer de prédire
 
 <div style="width:100%;">
   <figure style="text-align:center">
-    <img style="height:400px; margin-left: auto; margin-right: auto" src="../supervised.png">
+    <img style="height:400px; margin-left: auto; margin-right: auto" src="../supervised.webp">
     <figcaption>Schéma de modèle supervisé</figcaption>
   </figure>
 </div>
@@ -55,7 +55,7 @@ La formule de Bayes est la suivante:
 
 <div style="width:100%;">
   <figure style="text-align:center">
-    <img style="height:100px; margin-left: auto; margin-right: auto" src="../prob1.png">
+    <img style="height:100px; margin-left: auto; margin-right: auto" src="../prob1.webp">
     <figcaption>Formule de Bayes</figcaption>
   </figure>
 </div>
@@ -70,7 +70,7 @@ Le calcul est donc le suivant:
 
 <div style="width:100%;">
   <figure style="text-align:center">
-    <img style="height:100px; margin-left: auto; margin-right: auto" src="../prob2.png">
+    <img style="height:100px; margin-left: auto; margin-right: auto" src="../prob2.webp">
     <figcaption>Calcul d'appartenance à une catégorie</figcaption>
   </figure>
 </div>
@@ -79,7 +79,7 @@ Or grâce à la formule de Bayes, sachant que la probabilté d'avoir les mots (x
 
 <div style="width:100%;">
   <figure style="text-align:center">
-    <img style="height:300px; margin-left: auto; margin-right: auto" src="../prob3.png">
+    <img style="height:300px; margin-left: auto; margin-right: auto" src="../prob3.webp">
     <figcaption>Simplification du calcul</figcaption>
   </figure>
 </div>
@@ -99,7 +99,7 @@ La machine va par elle même grouper les objets dans des classes qu'elle invente
 
 <div style="width:100%;">
   <figure style="text-align:center">
-    <img style="height:400px; margin-left: auto; margin-right: auto" src="../unsupervised.png">
+    <img style="height:400px; margin-left: auto; margin-right: auto" src="../unsupervised.webp">
     <figcaption>Schéma de modèle non supervisé</figcaption>
   </figure>
 </div>
@@ -122,7 +122,7 @@ Sur un schéma en une dimension, voici un exemple:
 
 <div style="width:100%;">
   <figure style="text-align:center">
-    <img style="height:500px; margin-left: auto; margin-right: auto" src="../cluster.png">
+    <img style="height:500px; margin-left: auto; margin-right: auto" src="../cluster.webp">
     <figcaption>Exemple - K-moyennes</figcaption>
   </figure>
 </div>
@@ -137,7 +137,7 @@ Il est possible de réaliser des schéma/algorithme comme suit:
 
 <div style="width:100%;">
   <figure style="text-align:center">
-    <img style="height:600px; margin-left: auto; margin-right: auto" src="../orangeschema.png">
+    <img style="height:600px; margin-left: auto; margin-right: auto" src="../orangeschema.webp">
     <figcaption>Orange</figcaption>
   </figure>
 </div>
@@ -150,7 +150,7 @@ Il est possible de réaliser des schéma/algorithme comme suit:
 
 <div style="width:100%;">
   <figure style="text-align:center">
-    <img style="height:200px; margin-left: auto; margin-right: auto" src="../confusion.png">
+    <img style="height:200px; margin-left: auto; margin-right: auto" src="../confusion.webp">
     <figcaption>Matrice de confusion</figcaption>
   </figure>
 </div>
@@ -163,7 +163,7 @@ Voici un exemple de mise en place d'un algorithme K-Moyennes.
 
 <div style="width:100%;">
   <figure style="text-align:center">
-    <img style="height:700px; margin-left: auto; margin-right: auto" src="../weka.png">
+    <img style="height:700px; margin-left: auto; margin-right: auto" src="../weka.webp">
     <figcaption>Weka</figcaption>
   </figure>
 </div>
@@ -182,7 +182,7 @@ Voici dans ce cas là le résultat de la pipeline que nous avons fait, sur un da
 
 <div style="width:100%;">
   <figure style="text-align:center">
-    <img style="height:700px; margin-left: auto; margin-right: auto" src="../wekaresults.png">
+    <img style="height:700px; margin-left: auto; margin-right: auto" src="../wekaresults.webp">
     <figcaption>Résultats weka</figcaption>
   </figure>
 </div>

@@ -110,9 +110,9 @@ Ensuite, je dois gérer certaines données pour lesquelles un modèle relationne
 
 Pour l'interface graphique, j'ai donc réalisé une maquette sur Figma :
 
-![](./recherches_edition.png)
-![](./recherches_list.png)
-![](./compteurs.png)
+![](./recherches_edition.webp)
+![](./recherches_list.webp)
+![](./compteurs.webp)
 
 ### Second Sprint
 
@@ -120,17 +120,17 @@ Pour l'interface graphique, j'ai donc réalisé une maquette sur Figma :
 
 J'ai commencé par définir mes entités pour la base de données : les recherches et les shinies. Diesel propose deux options : on peut soit choisir d'écrire les migrations en SQL, que Diesel "traduit" en Rust pour définir l'interface Rust utilisée pour interagir avec la base de données, soit choisir de définir cette interface et laisser Diesel traduire ça en SQL. J'ai choisi d'écrire du SQL :
 
-![](./sql_entites.png)
+![](./sql_entites.webp)
 
 Ce qui donne, une fois traduit par Diesel :
 
-![](./rust_tables.png)
+![](./rust_tables.webp)
 
 Ce sont ces deux représentations que l'on peut choisir d'écrire, et que Diesel peut générer pour nous.
 
 Cependant, il faut encore définir les objets Rust correspondants :
 
-![](./rust_structs.png)
+![](./rust_structs.webp)
 
 Rien de bien compliqué, mais il faut avouer que c'est assez verbeux puisqu'il faut essentiellement définir nos entités deux fois, alors que d'autres ORM tels que Doctrine en PHP sont capables de tout de tout générer à partir des objets définis dans le langage de programmation directement. De plus, on remarque que quand il y a des relations entres entités, Diesel ne les récupère pas automatiquement de la base de données à l'initialisation des objets Rust, donc on est obligé de le faire soi-même.
 
@@ -146,10 +146,10 @@ Iced est basé sur l'architecture Elm, qui est une architecture pour créer des 
 
 De plus, Iced offre évidemment la possibilité de définir le style des éléments, mais j'ai trouvé la documentation très lacunaire sur ce point dès que l'on cherche à faire quelque chose de complexe donc je n'ai pas réussi à complètement implémenter la maquette Figma, même si j'ai réussi à bien m'en rapprocher :
 
-![](./recherches_impl_detail.png)
-![](./recherches_impl_2col.png)
-![](./recherches_impl_3col.png)
-![](./compteurs_impl.png)
+![](./recherches_impl_detail.webp)
+![](./recherches_impl_2col.webp)
+![](./recherches_impl_3col.webp)
+![](./compteurs_impl.webp)
 
 Au final j'ai trouvé Iced assez facile d'utilisation, à condition de bien comprendre les concepts que l'on retrouve en Rust : j'ai quelques fois eu du mal à implémenter certaines choses à cause des notions de propriété et des durées de vie qui m'empêchaient parfois d'utiliser la méthode qui me paraissait la plus intuitive.
 

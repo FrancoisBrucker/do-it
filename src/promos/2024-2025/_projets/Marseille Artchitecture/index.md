@@ -19,10 +19,10 @@ Il y a aussi un système de points en fonction de la précision de la localisati
 Voici un premier exemple de ce qu'il faudrait faire :
 
 - L'utilisateur a sur son téléphone la photo ancienne :
-![Photo ancienne](./PictureOld.png)
+![Photo ancienne](./PictureOld.webp)
 
 - Il doit ensuite prendre cette photo, à l'endroit ou l'ancienne a été prise et l'envoyer dans l'application :
-![Photo Récente](./PictureNew.png)
+![Photo Récente](./PictureNew.webp)
 
 ## En Pratique
 

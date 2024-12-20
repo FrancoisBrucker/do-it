@@ -40,7 +40,7 @@ Le Transformer, c'est à la base un outil présenté pour les traductions par ma
 
 Pour référence par la suite, il sera utile de regarder ce schéma classique:
 
-<img src="transformer.png">
+<img src="transformer.webp">
 
 ## 2. Entraînement et création
 

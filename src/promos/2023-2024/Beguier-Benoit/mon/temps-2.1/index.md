@@ -64,7 +64,7 @@ J'ai débuté ce MON en effectuant un grand nombre d'exercices Python sur le sit
 Ces exercices représentaient selon moi le meilleur moyen de me remettre dans la syntaxe Python. Bien que Python soit assez intutif, certains mots-clés m'échappaient (*dir*, *break*, *continue*, ...). Les exercices sont d'abord très simples ce qui permet de se refaire la main, puis ils se corsent (très légèrement) pour aborder quelques détails, commandes et méthodes. J'ai aussi consulté en profondeur la documentation sur les listes car j'utilise fréquemment ce type d'objets.
 Je recommande à tous de faire ces exercices. Ils m'ont pris deux heures, car j'ai systématiquement survolé la documentation des types et des commandes que je maîtrisais mal.
 
-![W3](W3.png)
+![W3](W3.webp)
 
 ### Échauffement (2 heures 30)
 
@@ -92,7 +92,7 @@ pip install seaborn
 
 pour installer la bibliothèque.
 
-![Seaborn](Seaborn.png)
+![Seaborn](Seaborn.webp)
 
 ### Analyse de la documentation fournie sur le site Seaborn (2 heures)
 
@@ -130,7 +130,7 @@ sns.get_dataset_names()
 Je m'attarde ensuite sur la partie [Visualizing distributions of data](https://seaborn.pydata.org/tutorial/distributions.html) car c'est ce que j'aimerais effectuer dans la suite de ce MON.
 J'apprends d'abord à paramétrer l'affichage des histogrammes, dans les cas simples et dans les cas de données multiples. Seaborn permet par exemple de sélectionner **très facilement** le mode d'affichage de données multiples sur un même graphique. En jouant sur deux paramètres, on peut alors empiler (*stack*) les barres des données au lieu de les superposer, les faire afficher en *step*, ou encore les afficher côte-à-côte.
 
-![histo](histo.png)
+![histo](histo.webp)
 
 Nous abordons aussi le cas des distributions à deux variables. J'ai trouvé cette partie très intéressante car elle lie statistiques et programmation. J'ai légèrement survolé la partie sur les distributions marginales, qui ne m'intéressent pas spécialement dans mon étude.
 
@@ -149,7 +149,7 @@ sns.pairplot(penguins)
 ```
 
 **Output :**
-![pairplot](pairplot.png)
+![pairplot](pairplot.webp)
 
 #### Vidéos Youtube (1 heure)
 
@@ -171,7 +171,7 @@ J'ai ensuite regardé la vidéo [*Seaborn Tutorial : Seaborn Full Course*](https
 
 Dans mon [MON 1.1](https://francoisbrucker.github.io/do-it/promos/2023-2024/Beguier-Benoit/mon/temps-1.1/), j'avais utilisé le langage R pour analyser les données issues du Grand Prix du Japon et afficher un graphique montrant la position de deux pilotes en foction du tour de la course.
 
-![MON](MON_R.png)
+![MON](MON_R.webp)
 
 Je souhaite cette fois améliorer le graphique obtenu et le temps machine grâce à Seaborn. Je vais pour ce MON me baser sur les données du dernier Grand Prix de la saison qui s'est déroulé à Abu Dhabi le 26/11/2023. J'ai récupéré les données sur le site [Pitwall](https://pitwall.app/analysis/compare-lap-times) et je crée un fichier .csv avec les données.
 
@@ -183,4 +183,4 @@ J'ai réalisé tout ce travail dans un Notebook que vous pourrez trouver ci-dess
 
 Je suis satisfait de la finalité de mon MON et de la bibliothèque Seaborn. Je n'ai fait ici qu'effleurer les possibilités qu'elle offre car je n'ai pas fait d'études statistiques, mais il en résulte une très grande facilité d'utilisation.
 
-![final](final.png)
+![final](final.webp)

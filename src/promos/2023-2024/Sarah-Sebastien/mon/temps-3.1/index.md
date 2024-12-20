@@ -73,7 +73,7 @@ https://www.ibm.com/fr-fr/analytics/big-data-analytics
 
 ### Love Will Tear Us Apart Again - Peter Crnokrak - 2007 
 
-<img src="exemple1.png">
+<img src="exemple1.webp">
 
 [Source](https://www.petercrnokrak.com/love-will-tear-us-apart-again/)
 
@@ -82,7 +82,7 @@ Cette oeuvre représente toutes les reprises connues de la chanson de Joy Divisi
 
 ### Flight patterns - Aaron Koblin - 2005
 
-<img src="exemple2.jpg">
+<img src="exemple2.webp">
 
 [Source](https://www.aaronkoblin.com/work/flightpatterns/)
 
@@ -90,7 +90,7 @@ Dans cette oeuvre, l'artiste propose de visualiser, le trafic aérien américain
 
 ### Mountains out of Molehills - David McCandless - 2007
 
-<img src="exemple3.png">
+<img src="exemple3.webp">
 
 [Source](https://informationisbeautiful.net/visualizations/mountains-out-of-molehills/)
 
@@ -148,7 +148,7 @@ Si j'ai retenu une chose c'est que les méthodes **setup()** et **draw()** sont 
 
 Voici un exemple présenté par Processing lors du lancement de l'application, qui permet de voir ce que l'on peut réaliser facilement :
 
-<img width=350 src="test2.png">
+<img width=350 src="test2.webp">
 
 ```java
 void setup() {
@@ -182,7 +182,7 @@ De mon côté, j'ai construit une BDD qui répertoriait 11 espèces d'oiseaux, l
 
 Voici ce que représente l'application de son exercice à ma base de données :
 
-<img src="birds.png">
+<img src="birds.webp">
 
 - La taille de la police d'écriture de l'espèce d'oiseau est proportionnelle à la taille de l'oiseau : *plus l'oiseau est grand, plus la police est épaisse*.
 - La taille de l'ellipse est proportionnelle, quant à elle, a la taille de l'oeuf pondu par l'oiseau. 
@@ -234,7 +234,7 @@ void draw (){
     //2 correspond à la colonne contenant la taille de l'oeuf de l'oiseau (en cm)
     ellipse(400, 50+ i*40, sqrt(table.getFloat(i,2))*9, sqrt(table.getFloat(i,2))*9);
   }
-  save("birds.png");
+  save("birds.webp");
 }
 ```
 {% enddetails %}
@@ -246,7 +246,7 @@ Après tout cet apprentissage, il était temps pour moi de mettre à profit tout
 Je vous présente donc le premier chef d'oeuvre de Sarah Sebastien, intitulé 
 **"Une année toute en couleur"**
 
-<img src="TheColorsOfTheYear.png">
+<img src="TheColorsOfTheYear.webp">
 
 {% details "Mais qu'est ce que c'est que ce truc?" %}
 Cette oeuvre représente l'évolution de la température sur l'année 2023 dans les villes respectives de Marseille, Lille et Toulouse. 
@@ -269,7 +269,7 @@ Une fois les données recueillies, il a fallu les exploiter:
 - J'ai d'abord trié les données pour les classer par ordre chronologique.
 - Ensuite, je savais que je voulais un dégradé de couleurs qui serait proportionnel au degré de température. Pour ça, j'ai utilisé une *"mise en forme conditionnelle"*, avec un dégradé à 3 couleurs (bleu - pour les températures les plus froides - jaune, et rouge - pour les températures les plus chaudes) en indiquant le min et le max selon les valeurs déterminées plus haut. 
 
-<img width=350 src="exploitation_donnees_1.png">
+<img width=350 src="exploitation_donnees_1.webp">
 
 Pour renseigner une couleur de remplissage dans *Processing*, il faut utiliser la méthode *fill* qui prend en argument le code RGB d'une couleur. Il me fallait donc récupérer ce code pour chaque couleur générée par la mise en forme conditionnelle. Seule solution (trouvée) : *utiliser une macro.*
 
@@ -305,7 +305,7 @@ End Sub
 - Puis on vient utiliser ce code couleur que l'on divise selon les formules expliquées [ici](https://excel-downloads.com/threads/resolu-obtenir-code-couleur-rgb-ou-hexadecimal.20022616/) pour obtenir le **code RGB** de la couleur de la ligne. 
 - On inscrit ces 3 composantes dans **3 colonnes distinctes** et le tour est joué.
 
-<img width=350 src="exploitation_donnees_2.png">
+<img width=350 src="exploitation_donnees_2.webp">
 
 ### Etape 3 : Mise en forme des données 
 
@@ -346,7 +346,7 @@ void draw() {
     fill(table3.getInt(i,0),table3.getInt(i,1),table3.getInt(i,2));
     rect(i/2,400,0.5,600);
   }
-  save("une_annee_toute_en_couleurs.png");
+  save("une_annee_toute_en_couleurs.webp");
 }
 ```
 {% enddetails %}

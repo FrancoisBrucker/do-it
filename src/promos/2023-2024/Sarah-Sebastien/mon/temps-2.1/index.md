@@ -52,7 +52,7 @@ Je trouvais cette BDD très intéressante, d'une part pour son thème, sur leque
 
 |Fichier de départ "quantités"| Fichier de départ "durées"|
 |---|---|
-| <img src="Initial1.png" > |<img src="Initial2.png" >|
+| <img src="Initial1.webp" > |<img src="Initial2.webp" >|
 
 #### Verification des données 
 
@@ -75,7 +75,7 @@ Dans une liste de données, on cherche à réduire le nombre de colonnes. La lis
 
 Ici, les deux tables initiales se trouvent sur trop de colonnes. Il faut donc chercher à réduire ce nombre en regroupant toutes les chaines selon une colonne. 
 
-<img src="PowerQuery.png">
+<img src="PowerQuery.webp">
 
 Pour ce faire, comme illustré dans l'image ci-dessus, j'ai utilisé Power Query pour "dépivoter" les colonnes correspondant aux chaînes télévisées, permettant ainsi de créer une ligne pour chaque chaîne.
 
@@ -101,7 +101,7 @@ Après réalisation de ces étapes, on obtient alors:
 
 |Tableau_quantités| Tableau_durées|
 |---|---|
-|<img src="Etape1_1.png">|<img src="Etape1_2.png">| 
+|<img src="Etape1_1.webp">|<img src="Etape1_2.webp">| 
 
 > Remarque : j'ai fait en sorte d'ajouter des colonnes pour obtenir les informations sur le mois et l'année de diffusion des JT, mais je me suis rendue compte, par la suite, que ça n'avait pas grand intérêt car les tableaux croisés dynamiques décomposaient déjà automatiquement la date selon ces critères.
 
@@ -131,7 +131,7 @@ Dans ce cas, les 2 premières méthodes marchent tout aussi bien :
 
 On obtient alors un tableau exploitable : 
 
-<img src="Etape1final.png">
+<img src="Etape1final.webp">
 
 <h2 id=analyse> Analyse des données </h2>
 
@@ -145,7 +145,7 @@ Excel permet de créer des filtres élaborés avec la création d’une zone de 
 Par exemple ici :
 
 |---|---|
-|<img src="FiltreAvancé1.png">|<img src="FiltreAvancé2.png">| 
+|<img src="FiltreAvancé1.webp">|<img src="FiltreAvancé2.webp">| 
 |On filtre sur les JT diffusés en 2020 ET sur le thème Santé| On filtre sur les JT diffusés en Janvier OU qui durent plus d'1 heure|
 
 {%prerequis "**Calcul statistique**"%}
@@ -165,7 +165,7 @@ J'ai renommé ma table de données "Global" puis j'ai appliqué la formule BDSOM
 =BDSOMME(Global;"Quantité";N2:O3) (appliqué en O4)
 ```
 
-<img width="350" src="FormuleBDD.png">
+<img width="350" src="FormuleBDD.webp">
 
 On retrouve alors des résultats assez cohérents avec l'explication de l'épidémie de COVID en 2020. 
 
@@ -184,7 +184,7 @@ Pour cette étape, il me fallait trouver des données intéressantes à mettre e
 
 |2005|2015|2020|
 |---|---|---|
-|<img width="400" src="Question1_1.png">|<img width="400" src="Question1_2.png">|<img width="400" src="Question1_3.png">|
+|<img width="400" src="Question1_1.webp">|<img width="400" src="Question1_2.webp">|<img width="400" src="Question1_3.webp">|
 
 On peut voir que depuis 2005, il y a un monopole des chaines TF1 et France 2. Même si la diffusion de journaux télévisés a globalement beaucoup diminué depuis le début de l'étude, la chaine M6 quant à elle diffuse de plus en plus de JT.
 On remarque également qu'aucun JT n'a été publié en 2020 par Canal +. Si on regarde plus précisément, on peut voir qu'un tournant a été observé entre 2015 et 2017 où la chaine est passée de **3 143 JT diffusés** à **491**. *Après recherche, ol s'avère que "le JT de Canal +" a arrêté d'être diffusé depuis le 3 juillet 2016*.
@@ -193,7 +193,7 @@ On remarque également qu'aucun JT n'a été publié en 2020 par Canal +. Si on 
 
 |TF1|France 3|M6|
 |---|---|---|
-|<img width="400" src="Question2_1.png">|<img width="400" src="Question2_2.png">|<img width="400" src="Question2_3.png">|
+|<img width="400" src="Question2_1.webp">|<img width="400" src="Question2_2.webp">|<img width="400" src="Question2_3.webp">|
 
 Comme on l'imagine, si on compare sur la même année, on se rend compte que les chaines diffusent globalement le même contenu, qui se trouve surtout être en rapport avec les faits sociaux. *Mise à part Arte, dont le thème des JT diffusés est presque exclusivement "International".*
 
@@ -201,8 +201,8 @@ Cependant, les chaines adaptent le contenu de leurs journaux télévisés en fon
 
 |TF1|M6|
 |---|---|
-|<img width="350" src="Question2_4.png">|<img width="350" src="Question2_5.png">|
-|<img width="350"  src="Question2_6.png">|<img width="350" src="Question2_7.png">|
+|<img width="350" src="Question2_4.webp">|<img width="350" src="Question2_5.webp">|
+|<img width="350"  src="Question2_6.webp">|<img width="350" src="Question2_7.webp">|
 
 On peut voir alors que 2017 a été marquée par l'élection de Macron et 2020 par la pandémie de COVID.
 
@@ -210,7 +210,7 @@ On peut voir alors que 2017 a été marquée par l'élection de Macron et 2020 p
 
 |Société|Justice|Environnement|
 |---|---|---|
-|<img width="400" src="Question3_1.png">|<img width="400" src="Question3_2.png">|<img width="400" src="Question3_3.png">|
+|<img width="400" src="Question3_1.webp">|<img width="400" src="Question3_2.webp">|<img width="400" src="Question3_3.webp">|
 
 On remarque que certaines chaines ont tendance a diffusé des JT plus longs par rapport aux autres chaines *(ex: M6)*. Pour d'autres, la durée des JT dépend du thème *(ex: Arte a fait des JT plus longs que les autres sur le thème "Société" et moins longs que les autres sr le thème "Environnement").
 
@@ -220,7 +220,7 @@ Les mois d'hiver présentent-ils une tendance à avoir une quantité de journaux
 
 |2011|2014|2017|
 |---|---|---|
-|<img width="400" src="Question4_1.png">|<img width="400" src="Question4_2.png">|<img width="400" src="Question4_3.png">|
+|<img width="400" src="Question4_1.webp">|<img width="400" src="Question4_2.webp">|<img width="400" src="Question4_3.webp">|
 
 Contrairement à ce que je pensais au début, *(ie que les téléspectateurs auraient tendance à moins regarder la télé en été qu'en hiver, et que donc les chaines auraient tendance à moins diffuser de JT l'été que l'hiver)* en analysant ces graphiques, on ne remarque pas de tendance saisonnière particulière. Finalement, les journaux télévisés sont autant regardés en été qu'en hiver, et les pics de quantité de JT diffusés pour un mois particulier semblent plus s'expliquer par un évènement spécial survenu à ce moment là qu'à autre chose.
 
@@ -230,7 +230,7 @@ Pour réaliser mon tableau de bord final, j'y ai inclus les graphiques obtenus a
 
 Vous pouvez télécharger le fichier excel contenant ce tableau [ici](MON2_Tableau_de_bord_Excel.zip)
 
-<img width="500" src="Tableau_de_bord.png">
+<img width="500" src="Tableau_de_bord.webp">
 
 ### Le petit mot de la fin
 

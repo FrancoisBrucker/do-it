@@ -30,7 +30,7 @@ J'ai décidé de consacrer mon deuxième MON au langage Java car c'est un langag
 
 
 
-![Openclassroom_accueil](./logo.png)
+![Openclassroom_accueil](./logo.webp)
 
 
 Mais avant de commencer, qu'est ce que Java ? 
@@ -51,7 +51,7 @@ J'ai suivi sa piste et commencé par regarder des vidéos sur plusieurs chaînes
 
 Tout d'abord, j'ai visionné quelques vidéos de la chaine [Coding with John](https://www.youtube.com/playlist?list=PLkeaG1zpPTHhXOfy-mFbdqd1Zz4GnjcpC).
 
-![Openclassroom_accueil](./john.png)
+![Openclassroom_accueil](./john.webp)
 
 Ces vidéos sont en anglais mais j'ai trouvé que les explications étaient très claires et maitrisées par le formateur. J'aurais bien voulu en voir davantage mais le formateur vend une formation payante sur son site.
 
@@ -63,7 +63,7 @@ Sur la chaine Youtube de [Graven](https://www.youtube.com/playlist?list=PLMS9Cy4
 
 J'ai alors regardé une quinzaine de ces vidéos :
 
-![Openclassroom_accueil](./graven.png)
+![Openclassroom_accueil](./graven.webp)
 
 
 ## Où pratiquer ?
@@ -73,18 +73,18 @@ Toujours sur les recommandations du POK de Sarah, j'ai consulté 3 sites afin de
 
 - [w3schools](https://www.w3schools.com/java/default.asp) : Les exercices sont très rapides à terminer et sont à faire directement sur la page web. Permet de survoler les notions. Je recommande si l'on débute vraiment la POO.
 - [cours-gratuit](https://www.cours-gratuit.com/java) : Des exercices complets et prenant parfois du temps. J'ai terminé les 10 premiers exercices ce qui m'a permis d'appréhender les concepts d'héritage, de surcharge, d'interface, de polymorphismes...
-![Openclassroom_accueil](./coursgratuit2.png)
+![Openclassroom_accueil](./coursgratuit2.webp)
 - [site de Télécom Paris](https://perso.telecom-paristech.fr/hudry/coursJava/exercices/) : Super site avec des exercices très bien guidés et des bons corrigés. J'ai terminé environ 25 exercices sur ce site et je le recommande vivement. Les exercices sont suffisament guidés pour qu'un débutant puisse les réussir à son rythme.
 
 Voici l'exemple d'un exercice ayant pour but de coder un jeu du chifoumi avec une petite interface graphique à l'aide de la bibliothèque Swing.
 
-![Openclassroom_accueil](./chifoumi1.png){: width="250" height="150"}
+![Openclassroom_accueil](./chifoumi1.webp){: width="250" height="150"}
 >> Samy clique sur Caillou
 
-![Openclassroom_accueil](./chifoumi2.png){: width="250" height="150"}
+![Openclassroom_accueil](./chifoumi2.webp){: width="250" height="150"}
 >>Leo clique sur Ciseaux (dsl pour la faute d'orthographe dans le jeu)
 
-![Openclassroom_accueil](./chifoumi3.png){: width="250" height="150"}
+![Openclassroom_accueil](./chifoumi3.webp){: width="250" height="150"}
 
 >>Samy gagne donc.
 

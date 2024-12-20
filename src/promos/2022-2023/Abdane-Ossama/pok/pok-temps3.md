@@ -30,7 +30,7 @@ L'objectif de mon POK est de découvrir comment créer un jeu en python en suiva
 
 #### Résultat du premier sprint : 
 
-![Optional Text](../Image.png)
+![Optional Text](../Image.webp)
 
 
 #### Sprint 2

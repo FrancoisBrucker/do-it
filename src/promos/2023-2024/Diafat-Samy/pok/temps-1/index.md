@@ -60,21 +60,21 @@ Avoir les bases en html/css, python (pandas), invit de commande et avoir de la p
 
 Afin d'accéder aux données, j'ai tout d'abord dû récupérer une clef me permettant de faire des requêtes à l'API.
 
-![Api key](clef_riot.jpg)
+![Api key](clef_riot.webp)
 
 Une fois ma clef récupérée, j'ai tout d'abord pris connaissance de l'ensemble de méthodes mis à notre disposition.
 
 >Il y a plus d'une dizaine de méthodes disponibles pour le jeu League of Legends.
 
-![Riot API](riot_api.jpg)
+![Riot API](riot_api.webp)
 
 J'ai ensuite testé la requête suivante qui permet de récupérer des informations sur un compte à partir du pseudo :
 
-![Exemple requête](exemple_requete.jpg)
+![Exemple requête](exemple_requete.webp)
 
 Ce qui m'a permis d'obtenir les données suivantes :
 
-![Exemple réponse](exemple_rep.jpg)
+![Exemple réponse](exemple_rep.webp)
 
 On passe maintenant à un notebook afin d'automatiser tout cela avec python !
 
@@ -511,7 +511,7 @@ if __name__ =="__main__":
     Récupération des statistiques en classés
     
 
-    127.0.0.1 - - [16/Oct/2023 18:06:41] "[37mGET /static/Sylas.png HTTP/1.1[0m" 200 -
+    127.0.0.1 - - [16/Oct/2023 18:06:41] "[37mGET /static/Sylas.webp HTTP/1.1[0m" 200 -
     
 
     Récupération des parties classés
@@ -558,9 +558,9 @@ if __name__ =="__main__":
 
 Voici ce que l'on obtient
 
-![Exemple homepage](homepage.jpg)
-![Exemple seerank](SeeRank.jpg)
-![Exemple result](result.jpg)
+![Exemple homepage](homepage.webp)
+![Exemple seerank](SeeRank.webp)
+![Exemple result](result.webp)
 
 ## Ce que j'ai prévu pour le second point POK<a id="section-3"></a>
 
@@ -603,42 +603,42 @@ Présentation des pages de l'application :
 
 Les 3 icones forment une barre de navigation, il faut cliquer sur le jeu désiré.
 
-![samy gg leo](accueil.png)
+![samy gg leo](accueil.webp)
 
 
 ### Page du jeu TFT<a id="subsection-6"></a>
 
-![samy gg leo](tft.png)
+![samy gg leo](tft.webp)
 
 ### Page du jeu Valorant<a id="subsection-7"></a>
 
-![samy gg leo](tft.png)
+![samy gg leo](tft.webp)
 
 
 ### Page du jeu League of Legends<a id="subsection-8"></a>
 
-![samy gg leo](search.png)
+![samy gg leo](search.webp)
 
 
 ### Comparaison avec des statistiques issues du site OP.GG<a id="subsection-9"></a>
 
-![samy gg leo](samyggleo.png)
+![samy gg leo](samyggleo.webp)
 
 Comparaison avec le site op.gg qui permet d'avoir des statistiques :
-![samy gg leo](opggleo.png)
-![samy gg leo](opggleo2.png)
+![samy gg leo](opggleo.webp)
+![samy gg leo](opggleo2.webp)
 
 On peut voir sur le site que les données coincident bien !
 
 Pour un autre joueur :
 
-![samy gg leo](samyggyomm.png)
+![samy gg leo](samyggyomm.webp)
 
 
 
 
-![samy gg leo](opggyomm2.png)
-![samy gg leo](opggyomm.png)
+![samy gg leo](opggyomm2.webp)
+![samy gg leo](opggyomm.webp)
 
 
 

@@ -92,7 +92,7 @@ function onOpen() { // fonction qui run dès que le sheet s'ouvre ou est recharg
 
 On peut ainsi se faire par exemple des automatismes de formating de la feuille Excel pour formater toutes les feuilles de la même façon :
 
-![Ajustement du format d'une feuille de calcul](FormatingSheet.png) *Screen d'une feuille de calcul formaté avec google app script*
+![Ajustement du format d'une feuille de calcul](FormatingSheet.webp) *Screen d'une feuille de calcul formaté avec google app script*
 
 ### Interaction entre plusieurs document
 
@@ -113,7 +113,7 @@ Le but de cet automatisme est de créer un programme qui ajoutera un onglet sur 
 
 Pour cela, il faut récupérer les informations sur le nom des équipier et sur ce qu'ils ont rempli dans le premier sheet qui ressemble à ceci :
 
-![Forme du sheet de présence](SheetPresence.png) *Exemple d'un google sheet pour confirmer la présence des équipiers sur une régate*
+![Forme du sheet de présence](SheetPresence.webp) *Exemple d'un google sheet pour confirmer la présence des équipiers sur une régate*
 
 Ainsi, la fonction va devoir regarder pour chaque ligne du tableau :
 
@@ -199,11 +199,11 @@ function sendEmailAlertForCalendar() {
 
 On retrouver maintenant l'onglet :
 
-![Sheet de présence avec Automatisme](SheetReminderOnglet.png) *Google sheet avec l'alerte disponible*
+![Sheet de présence avec Automatisme](SheetReminderOnglet.webp) *Google sheet avec l'alerte disponible*
 
 Et en déclanchant l'automatisme (dès qu'on clique sur le *Reminder* de l'onglet *Alert*) on obtient le mail suivant :
 
-![Email de Rappel](EmailRappel.png) *Email d'alert que l'on reçoit si l'on ne rempli pas toutes les cases*
+![Email de Rappel](EmailRappel.webp) *Email d'alert que l'on reçoit si l'on ne rempli pas toutes les cases*
 
 Ceci va permetre de gagner énormément de temps en évitant d'avoir à faire un rappel en privé à chaque personne une par une.
 

@@ -84,9 +84,9 @@ Il y aura donc 2 paragraphes principaux et des images :
 
 En remplissant les blabla... avec du texte et des images on arrive au site suivant :
 
-<img src="base1.png">
-<img src="base2.png">
-<img src="base3.png">
+<img src="base1.webp">
+<img src="base2.webp">
+<img src="base3.webp">
 
 
 
@@ -118,7 +118,7 @@ Il faut maintenant organiser l'espace de notre site. Pour cela on va le 'diviser
 ```
 Voici un petit schéma récapitulant les principales divisions de mon site:
 
-<img src="schema.png" width="250" >
+<img src="schema.webp" width="250" >
 
 On peut bien sûr imbriquer des divisions. J'ai aussi mis mes images dans des divisions/blocs pour pouvoir les manipuler plus facilement.
 
@@ -247,10 +247,10 @@ J'ai rempli ma side-bar avec des images et du texte.
 
 Voilà le résultat ! :
 
-<img src="sitef1.png">
-<img src="sitef2.png">
-<img src="sitef3.png">
-<img src="sitef4.png">
+<img src="sitef1.webp">
+<img src="sitef2.webp">
+<img src="sitef3.webp">
+<img src="sitef4.webp">
 
 
 

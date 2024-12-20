@@ -91,7 +91,7 @@ C'est ce qui a été fait. Voici quelques images de l'interface:
 
 Depuis, le Notion a été amélioré. Par exemple, la partie sur les sorties ressemble à ça:
 
-![Photo nouveau Notion SVES](PhotoNewNotion.png)
+![Photo nouveau Notion SVES](PhotoNewNotion.webp)
 
 On peut désormais remplir les présences directement sur Notion dans un tableau synchronisé avec un API à un Google Sheet (et plus un lien qui renvoit vers un google sheet). De même pour le planning pédagogique.
 De plus, seuls les tuteurs et tutrices du groupe en question ont accès à l'espace dédié à leur groupe, protégeant ainsi les données de chaque tuturé.e, conformément à la clause RGPD du contrat.
@@ -151,12 +151,12 @@ Un avantage du form Airtable est qu'à l'aide des automatisations Airtable, il s
 ### Second Sprint
 
 Alors déja pour commencer, voici un schéma avec des différentes bases de donnés et les champs.
-![Schéma BD](BD_EP.jpg)
+![Schéma BD](BD_EP.webp)
 
 Pour ce qui est des accès à Airtable et notamment à la version Team, seul le Labo sociétal y a accès. Ceux-ci ont seulement la base de données Tutoré.es faites sur les 5 dernières années. Pour des raisons de RGPD, je ne pouvais pas travailler sur ces données directement. Afin de continuer mon travail mais aussi d'avancer dasn le process de développer l'outil Airtable (en ayant d'autres bases que simplement celles Tutoré.es), j'ai créer la base Tuteurs et j'ai rentré toutes les données nécessaires à partir des contrats d'engagement.
 De la même façon, j'ai créer une base SVES (Sorties Voyages Événements Stages) qui regroupe les différents types de sorties, date, lieu, qui est concerné par la sortie,...
 Voici la base de données SVES:
-![BD SVES](BD_SVES.jpg)
+![BD SVES](BD_SVES.webp)
 
 Maintenant que cette base est créée, c'est au sein de cette base que l'on va gérer le formulaire d'inscription aux sorties que j'ai expérimenté dans le premier sprint.
 Une fois ce formulaire créé à nouveau, j'ai pu travailler sur les **automatisations**.
@@ -167,7 +167,7 @@ Il faut savoir que lorsque l'on gère une sortie ou un événement, il y a beauc
 - envoi de mail / SMS de rappel peu avant la sortie pour rappeler les informations importantes et confirmer sa présence
 
 En faisant ça via Airtable:
-![Automatisation Airtable](Auto_AT.jpg)
+![Automatisation Airtable](Auto_AT.webp)
 
 Et ça marche (avec la version team). On peut même personnaliser automatiquement le mail avec le nom du tutoré.
 Pour rappel, en utilisant ce formulaire, les réponses arrivent directement dans un tableau Airtable ce qui évite que des données soient perdues en chemin.

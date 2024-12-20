@@ -55,7 +55,7 @@ Premièrement, les précurseurs des microservices identifient l'architecture en 
 
 On peut schématiser les différentes architectures de la manière suivante :
 
-<img src="./../images/schema_comp_archi.png" style="width: 100%;" />
+<img src="./../images/schema_comp_archi.webp" style="width: 100%;" />
 
 ## Quels sont les avantages et inconvénients d'une architecture en microservices ?
 
@@ -83,11 +83,11 @@ Dans une architecture microservices, de nombreux services peuvent être présent
 
 La première idée qui nous vient pour faire communiquer des services entre eux est d'utiliser des API REST.
 
-<img src="./../images/orch-1.png" style="width: 100%" />
+<img src="./../images/orch-1.webp" style="width: 100%" />
 
 Cette façon de faire est assez simple à mettre en place mais le système devient rapidement complexe et fastidieux et maintenir puisque l'on crée des dépendances entre les services. Pour éviter cela, une meilleure façon est d'introduire une couche supplémentaire avec un nouveau service que l'on appelle l'**orchestrateur** :
 
-<img src="./../images/orch-2.png" style="width: 100%" />
+<img src="./../images/orch-2.webp" style="width: 100%" />
 
 L'orchestrateur est le seul service qui a connaissance de tous les autres. Ainsi si un service est mis à jour, la seul dépendance à mettre à jour également est l'orchestrateur, on réduit grandement le niveau de dépendances. Cependant, en introduisant un orchestrateur, on va indirectement introduire de la latence et une mauvaise tolérance aux pannes.
 
@@ -95,7 +95,7 @@ L'orchestrateur est le seul service qui a connaissance de tous les autres. Ainsi
 
 La chorégraphie est une approche différente qui permet de pallier certains inconvénients de l'orchestration : la dépendance et la latence. Cette approche consiste à utiliser des événements avec un modèle *publish-subscribe* :
 
-<img src="./../images/chore-1.png" style="width: 100%" />
+<img src="./../images/chore-1.webp" style="width: 100%" />
 
 Ici, lorsqu'une action est effectuée, le service en question va publier un événement indiquant qu'il a effectué cette action. Les autres services quant à eux peuvent souscrire à cet événement de manière asynchrone pour effectuer les modifications nécessaires de l'événement. Les services n'ont pas connaissances des autres, le système est donc performant reste simple à maintenir à plus grande échelle. Si un service tombe en panne, le système continue de fonctionner mais l'on peut cependant perdre la cohérence des données.
 
@@ -111,7 +111,7 @@ Ici, lorsqu'une action est effectuée, le service en question va publier un év�
 
 Il existe de nombreuses façons de découper un projet en microservices. Pour l'exemple uniquement, voici comment Amazon pourrait organiser une partie de son application en microservice. *(Amazon fonctionne très probablement en microservices, mais le découpage que je propose est purement fictif)*
 
-<img src="./../images/amazon.png" style="width: 100%;">
+<img src="./../images/amazon.webp" style="width: 100%;">
 
 Ici j'ai pris l'exemple de la recherche d'un article et de son achat sur Amazon. Chaque fonctionnalité représenté par un rectangle rouge pourrait être organisé comme un microservice.
 
@@ -127,7 +127,7 @@ Toutes ces fonctionnalités, qui sont externes au site (dans le sens où elles v
 
 L'auteur de l'[article](https://github.com/SebastienBtr/Micro-express) Sébastien Bouttier, nous mets à disposition une preuve de concept avec l'architecture suivante sous Docker :
 
-<img src="./../images/sdd-diagram.png" style="width: 100%;" />
+<img src="./../images/sdd-diagram.webp" style="width: 100%;" />
 
 What you can do:
 

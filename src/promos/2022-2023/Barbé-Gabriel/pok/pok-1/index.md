@@ -21,7 +21,7 @@ Timothé : Réalisation d'une roulette permettant de faire des choix au hasard.
 
 <!-- Fin Résumé -->
 
-<img src="./Images/Accueil.png"/>
+<img src="./Images/Accueil.webp"/>
 
 ### Partie Gabriel 
 
@@ -33,7 +33,7 @@ Sans avoir besoin de rentrer dans les détails de ce jeu, le but était plutot d
 
 La partie plus technique est d'afficher les boutons et les liens effectuant ce que l'on veut au bon moment ainsi que les faire disparaitre. Une fois que cela sera fait j'aimerais généraliser ce jeu afin de pouvoir jouer contre l'ordinateur qui donne un coup aléatoire ; l'enjeu étant là encore d'avoir un graphisme cohérent avec différents boutons etc. 
 
-<img src="./Images/Page_Gaby.png"/>
+<img src="./Images/Page_Gaby.webp"/>
 
 J'ai donc commencé par une fonction se déclanchant après l'appui d'un bouton simple. Cette fonction demande quel coup veut effectuer chaque joueur : 
 
@@ -118,8 +118,8 @@ J'ai ensuite développé une autre méthode permettant cette fois-ci de jouer co
 J'ai ensuite adapté ma page afin que les deux options de jeu soit possible. Ce changement m'a pris du temps car je n'arrivais pas à identifier mes deux boutons séparément. <br>
 J'ai ensuite corriger tous les bugs mineurs notamment la fonction choixCoups1 afin que l'on puisse sortir du "prompt", j'avais aussi mon élèment "panel" qui aparaissait à des moments non nécessaire et qui ne partait plus après, j'avais aussi quelques problèmes de boucles. De même, le "resetbutton" n'aparaissait pas comme je le souhaitais. <br>
 
-<img src="./Images/Choix.png"/>
-<img src="./Images/Reset.png"/>
+<img src="./Images/Choix.webp"/>
+<img src="./Images/Reset.webp"/>
 Le reste du code est bien sur disponible via le lien en haut de page. 
 
 <h2> Partie Timothée</h2>
@@ -241,7 +241,7 @@ if (text_choix1 != "" && text_choix2 != "") {
 ```
 
 J'arrive donc à cette page :
-<img src="./Images/Index_sans_css.jpg"/>
+<img src="./Images/Index_sans_css.webp"/>
 
 Il me reste donc la mise en page afin d'avoir une page qui ressemble un peu à quelque chose.
 
@@ -259,7 +259,7 @@ J'ai enfin utilisé la caractéristiques *placeholder* afin d'écrire les numér
 
 Je suis donc arrivé à ce résultat là:
 
-<img src="./Images/index_avec_css.jpg"/>
+<img src="./Images/index_avec_css.webp"/>
 
 
 
@@ -302,4 +302,4 @@ Cette fonction se lance lorsque l'on clique sur le bouton start.
 Lorsque la roue a fini de tourner un bouton retour apparait qui nous permet de retourner à la page des choix.
 
 J'ai donc obtenu cette page :
-<img src="./Images/roulette.jpg"/>
+<img src="./Images/roulette.webp"/>

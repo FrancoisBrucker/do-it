@@ -25,7 +25,7 @@ L'analyse statistique met en avant les compétences essentielles nécessaires po
 
 
 ## Cheminement des données <a id="section-2"></a>
- <img src="stat.png">
+ <img src="stat.webp">
  <br/>
 
 ### Etape 1 : Touver les données
@@ -44,7 +44,7 @@ Et ce en exploitant des outils selon la nature des données, comme IBM Infospher
 
 Le nettoyage des données est une étape d’importance cruciale, sans laquelle un bon modèle d’analyse perd sa valeur.
 
- <img src="garbage.png">
+ <img src="garbage.webp">
  <br/>
 
 ### Etape 3 : Analyser les données
@@ -52,38 +52,38 @@ Le but de l'analyse et de la modélisation est d'utiliser des techniques statist
  
  -**Analyse bivariée** : L’analyse bivariée a pour objectif d’analyser le lien qui peut exister entre deux variables. Le schéma mentale suivant résume les étapes à suivre dans ce type d'analyses : 
 
-<img src="bivar.png">
+<img src="bivar.webp">
  <br/>
 
 ## Introduction à R <a id="section-3"></a>
 ### Statistiques descriptives 
 Les statistiques descriptives permettent à résumer et à comprendre vos données. R propose des fonctions telles que summary(), mean(), median(), sd() et quantile() pour calculer des statistiques descriptives de base pour les variables numériques.
 
-<img src="stat desc.png">
+<img src="stat desc.webp">
  <br/>
 
 ### Tests d'hypothèses :
 R offre de nombreuses fonctions et packages pour les tests d'hypothèses, notamment les tests t, les tests du chi-carré, et bien d'autres. Les fonctions t.test(), chisq.test() et wilcox.test() sont des exemples d'outils utilisés pour les tests d'hypothèses.
 
-<img src="test.png">
+<img src="test.webp">
  <br/>
 
 ### Analyse de régression :
 L'analyse de régression est utilisée pour modéliser la relation entre une ou plusieurs variables indépendantes et une variable dépendante. La fonction lm() de R est couramment utilisée pour la régression linéaire, tandis que glm() est utilisée pour les modèles linéaires généralisés (par exemple, la régression logistique).
 
-<img src="regression.png">
+<img src="regression.webp">
  <br/>
 
 ### Graphiques statistiques :
 La création de représentations graphiques appropriées des données est essentielle pour comprendre les relations et les tendances. Le package ggplot2 de R est un outil puissant pour créer une large gamme de graphiques statistiques, notamment des graphiques de dispersion, des boîtes à moustaches, des histogrammes, et plus encore.
 
-<img src="fctgraph.png">
+<img src="fctgraph.webp">
  <br/>
 
 ### Apprentissage automatique :
 R est également largement utilisé pour les tâches d'apprentissage automatique. Les packages tels que caret, randomForest, xgboost et caret fournissent des outils pour la classification, la régression, le regroupement, et bien plus encore.
 
-<img src="xgboost.png">
+<img src="xgboost.webp">
  <br/>
 
 ## Ressources utilisées <a id="section-4"></a>

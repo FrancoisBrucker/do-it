@@ -362,7 +362,7 @@ L'une des façons les plus simples d'appréhender le fonctionnement d'une blockc
 ...
 ================================================================================
 
-![alt text](image-3.png)
+![alt text](image-3.webp)
 
 
   Ce code illustre une chaîne de blocs qui s’étend avec chaque nouvelle "transaction" (ici, des données textuelles). Chaque bloc se réfère au précédent grâce à son hash, assurant la continuité de la blockchain.

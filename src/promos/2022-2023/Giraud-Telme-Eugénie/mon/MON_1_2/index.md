@@ -50,7 +50,7 @@ Pour répondre aux deux premières questions, il n'y a besoin que du premier tex
 Pour la question III, j'ai fait un schéma avec les grands blocs d'acteurs et les différentes intéractions entre ces blocs et au sein des blocs. J'ai détaillé assez finement ces intéractions.
 
 Pour la question IV, au lieu de faire une liste des processus, j'ai fait un schéma pour classer les processus selon ce principe :
-<img src="Exemple-cartographie-des-processus.png">
+<img src="Exemple-cartographie-des-processus.webp">
 Source : https://www.certification-qse.com/fiche-processus-lapproche-processus/
 
 Pour la question V, j'ai utilisé le logiciel [edrawsoft](https://www.edrawsoft.com/fr/how-to-create-bpmn.html#:~:text=Pour%20cr%C3%A9er%20des%20diagrammes%20BPMN%2C%20les%20objets%20BPMN%20sont%20s%C3%A9lectionn%C3%A9s,les%20formes%20comme%20d'habitude.) proposé par Sarah. J'ai utilisé la version d'essai mais j'ai évité d'enregistrer mes diagrammes BPMN pour ne pas dépasser la limite autorisée sans payer : j'ai fait des captures d'écran des diagrammes. L'utilisation du logiciel est assez simple : il suffit d'ouvrir un diagramme vide, puis de trouver la bonne bibliothèque (c'est indiqué BPMN) et de faire glisser les éléments dont on a besoin au fur et à mesure.
@@ -58,6 +58,6 @@ Pour la question V, j'ai utilisé le logiciel [edrawsoft](https://www.edrawsoft.
 Pour la question VI, je me suis basée sur les diagrammes BPMN et sur les différentes interviews.
 
 Pour la question VII, j'ai utilisé ce diagramme :
-<img src="Matrice_SWOT.png">
+<img src="Matrice_SWOT.webp">
 
 Pour les deux dernières questions, j'ai partagé ce que j'imaginais à propos du futur SI.

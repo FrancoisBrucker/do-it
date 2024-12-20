@@ -214,17 +214,17 @@ Pour finaliser cette étude, j'ai suivi [ce tutoriel](https://www.youtube.com/wa
 
 Pour installer cet IDE et certains de ses outils, rendez-vous sur le [site officiel](https://developer.android.com/studio) et cliquez sur le bouton ci-dessous.
 
-![Installation d'Android Studio](./assets/Installation_AndroidStudio.png)
+![Installation d'Android Studio](./assets/Installation_AndroidStudio.webp)
 
 Double-cliquez ensuite sur le fichier installé pour lancer le téléchargement. Lorsque vous arrivez à l'onglet « Check Components “, si vous souhaitez également télécharger l'émulateur AndroidStudio standard, cochez ” Android Virtual Device ».
 
-![Android Virtual Device](./assets/Android_Virtual_Device.png)
+![Android Virtual Device](./assets/Android_Virtual_Device.webp)
 
 Enfin, choisissez le dossier dans lequel vous souhaitez installer le logiciel et finalisez l'installation.
 
 Une fois l'application installée, lors de la première utilisation, l'utilisateur est invité à choisir le type d'installation qu'il souhaite. Comme je suis encore une débutante et que je ne connais pas les possibilités de configuration, j'ai opté pour la configuration « standard ».
 
-![Android Studio Setup](./assets/AndroidStudio_Setup.png)
+![Android Studio Setup](./assets/AndroidStudio_Setup.webp)
 
 Vous devez ensuite accepter les conditions d'utilisation et voilà, l'IDE Android Studio est installé.
 
@@ -235,7 +235,7 @@ Le premier est l'endroit où nous écrivons le code avec les instructions sur ce
 
 Dans mon cas, seul le premier fichier a été créé automatiquement, j'ai donc créé le second fichier manuellement dans un dossier « layouts ».
 
-![main_activity.xml](./assets/main_activityxml.png)
+![main_activity.xml](./assets/main_activityxml.webp)
 
 Une fois cela fait, j'ai simplement suivi les instructions et les codes écrits dans le tutoriel et le résultat final peut être vu dans la vidéo suivante.
 

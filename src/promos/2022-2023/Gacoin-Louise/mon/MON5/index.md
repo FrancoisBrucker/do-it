@@ -47,7 +47,7 @@ Ce compte rendu pourra servir de mémo pour les personnes connaissant déjà le 
 
 On découvre l’onglet développeur qui permet d’utiliser le VBA. Le  bouton « Visual Basic » permet d’accéder à l’éditeur de macros.
 
-<img src="rubanVBA.png">
+<img src="rubanVBA.webp">
 
 Dans cet éditeur on peut écrire du code dans des « Modules » . Une macro s’écrit toujours entre ces deux balises :
 
@@ -67,7 +67,7 @@ A noter : on peut enregistrer une macro : c’est à dire effectuer des manipu
 
 Ici on voit un exemple de changement de colonnes et le code associé qu’a créé excel.  
 
-<img src="VBA1.png">
+<img src="VBA1.webp">
 
 
 ## 2. Ecriture d’une macro :
@@ -76,7 +76,7 @@ Ici on voit un exemple de changement de colonnes et le code associé qu’a cré
 
 Voici un petit exemple de macro
 
-<img src="VBA3.png">
+<img src="VBA3.webp">
 
 Le schéma d’écriture est toujours le même et fonctionne un peu comme une programmation objet :
 
@@ -283,9 +283,9 @@ Pour pratiquer, j'ai réalisé un petit projet pour un ami. Il voulait un fichie
 
 Voici le résultat:
 
-<img src="projetVBA1.png">
-<img src="projetVBA2.png">
-<img src="projetVBA4.png">
+<img src="projetVBA1.webp">
+<img src="projetVBA2.webp">
+<img src="projetVBA4.webp">
 
 
 

@@ -44,16 +44,16 @@ Avec ce que j'ai appris j'ai voulu voir ce que je pouvais faire et tester un peu
 
 J'ai réalisé une voiture :
 
-![Voiture 3D](../Voiture.png )
+![Voiture 3D](../Voiture.webp )
 
 une carte mère :
 
-![Carte Mere](../CarteMere.png )
+![Carte Mere](../CarteMere.webp )
 
 
 Un personnage :
 
-![Personnage](../Perso.png )
+![Personnage](../Perso.webp )
 
 
 et je travaille sur la recréation d'un image de clip vidéo dans un style particulier selon [cette vidéo](https://www.youtube.com/watch?v=ZsvZsVPhTVs).

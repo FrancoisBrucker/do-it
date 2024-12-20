@@ -36,13 +36,13 @@ Avec la surcharge d'informations (aussi appelée ***infobésité***) que nous vi
 L'évolution fulgurante des technologies numérique ouvre constamment la porte à de nouvelles fonctionnalités plus ou moins utiles. Pour rendre son site plus esthétique et pousser l'utilisateur à rester dessus le plus longtemps possible, le développeur va ajouter une multitude de services, ces derniers étant signes de qualité et de confiance.    
 La peur de la lassitude et de la fuite des utilisateurs force également le développeur à continuellement mettre à jour le site et à rajouter des *features*.
 
-![La croissance du numérique](./Images/53_Graphique_Croissance_num_rique.jpg)
+![La croissance du numérique](./Images/53_Graphique_Croissance_num_rique.webp)
 
 *from https://www.revuegestion.ca/souffre-t-on-dobesite-numerique*
 
 Le virage numérique que prend le monde depuis deux décennies n'épargne aucun secteur. Même un simple restaurant de campagne DOIT avoir un site ou au minimum être répertorié sur Google. 
 
-![L'augmentation du nombre de site Web](./Images/nombre_site_web.png)
+![L'augmentation du nombre de site Web](./Images/nombre_site_web.webp)
 *from https://www.sales-hacking.com/post/evolution-nombre-de-sites-web*
 
 En 10 ans (donc depuis 2014, ce n'est pas si loin que ça) le nombre de site Web a doublé dans le monde, passant de presque 1 milliard à presque 2 milliards de sites en ligne. De plus parmi ce nombre colossal, on estime que **moins de 200 millions d'entre eux sont réellement actifs**. 
@@ -67,7 +67,7 @@ La conception d'un ordinateur ou d'un smartphone est une horreur environnemental
 En plus de cela les composants, **dont plus de 50 métaux rares**, proviennent d'extraction reposant exclusivement sur l'énergie fossile. Je ne m'attarde malheureusement pas sur l'aspect social et les conditions d'extractions de ces métaux mais cela n'est bien évidemment pas négligeable. 
 
 
-![Métaux rares smartphone](./Images/metaux-rares-smartphone-165967.jpg)
+![Métaux rares smartphone](./Images/metaux-rares-smartphone-165967.webp)
 
 {% note %} Pour la conception d'un ordinateur portable de quelques kg, près de 600kg de matières premières sont utilisées. {% endnote %}
 
@@ -107,7 +107,7 @@ Le collectif GreenIt a listé **115 bonnes pratiques** pour eco-concevoir le plu
 
 Pour les futurs développeurs je vous laisse aller regarder cela peut être intéressant, j'espère que vous comprendrez mieux que moi les termes. 
 
-![Bonne pratiques GreenIt](./Images/greenit.png)
+![Bonne pratiques GreenIt](./Images/greenit.webp)
 
 
 ## Conclusion

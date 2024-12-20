@@ -42,7 +42,7 @@ Maintenant, avec ce nouveau dataset nettoyé, nous pouvons passer à la suite.
 
 {% details "Head" %}
 
-![Data_head](./images/data_head.png)
+![Data_head](./images/data_head.webp)
 
 {% enddetails %}
 
@@ -55,20 +55,20 @@ Dans un premier temps j'ai voulu créer  desnouveaux tableaux qui vont nous donn
 Dans cette  partiej'ai voulu me familiariser avec la librairie *ggplot2* qui permet de visualiser les données à partir de graphiques. 
 Ci-dessous un histogramme des prix des offres à Paris ainsi que la répartition des prix en fonction des types de logement sous deux formes  différentes :
 
-<div><img src="./images/histogramme_prix.png"></div>
-<div><img src="./images/prix_logement.png"></div>
-<div><img src="./images/prix_logement_violon.png"></div>
+<div><img src="./images/histogramme_prix.webp"></div>
+<div><img src="./images/prix_logement.webp"></div>
+<div><img src="./images/prix_logement_violon.webp"></div>
 
 ### 4. Création de cartes avec la librairie *leaflet* and *shiny*
 
 Enfin, au cours de mes recherches sur les différentes libraires R j'ai trouvé la librairie *leaflet* qui permet de visualiser des données géographiques sur des cartes en créant des fichers .html.
 Voici le résultat d'un graphique indiquant toutes les offres disponibles avec en vert les logements les moins chers et en rouge les plus chers : 
 
-<div><img src="./images/carte.png"></div>
+<div><img src="./images/carte.webp"></div>
 
 Cette carte n'étant pas très visible j'ai voulu en créer une plus complète et interactives avec des filtres sur les prix, types d'offres et quartiers. J'ai alors trouvé la librairie *shiny* qui permet de créer des interfaces interactives avec des filtres et voici le résultat, par exemple ici, pour les *private room* du quartiers des Gobelins : 
 
-<div><img src="./images/carte_interactive.png"></div>
+<div><img src="./images/carte_interactive.webp"></div>
 
 
 ### 5. Conclusion

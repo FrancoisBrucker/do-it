@@ -34,7 +34,7 @@ Pour mieux appréhender la suite, il est important de comprendre que dans une ap
 
 Dans ce cadre, on parle souvent d'**API**. Une API (pour *Application Programming Interface*) est l'interface qui permet la communication entre les différentes parties d'une application, ici principalement le front, le back et la potentielle base de données, via ces requêtes HTTP et différentes routes que l'on verra plus loin. Le schéma suivant explique simplement le but de cette interface :
 
-<img src="schema_API.png">
+<img src="schema_API.webp">
 
 Plus largement et même si ce n'est pas l'utilisation que nous en ferons ici dans un premier temps, une API permet la communication et l'échange de données entre deux applications qui peuvent être distinctes. Un exemple classique : l'application météo d'un téléphone portable ne fait pas elle même une recherche et une analyse de données pour afficher la météo. Elle utilise une API qui se connecte à une base de données qui contient déjà ces informations.
 Une API permet donc à un utilisateur de récupérer et d'intégrer à son application des fonctionnalités ou des données issues d'un programme externe, même si il n'en connaît pas exactement le fonctionnement.
@@ -201,7 +201,7 @@ app.use('/api/stuff', (req, res, next) => { // '/api/test' correspond à la rout
 });
 ```
 On effectue ensuite une requête GET sur Postman, et on obtient comme prévu le résultat suivant :
-<img src="requete_GET_postman.png">
+<img src="requete_GET_postman.webp">
 
 - **Les headers**
 

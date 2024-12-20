@@ -127,7 +127,7 @@ Il faut mettre un point virgule à la fin de chaque ligne d'instruction.
 {% endnote %}
 
 Voici les plages d'utilisation maximum de chacun des types étant du à l'espace de mémoire accordé :
-![test](typeLangageC.png)*Tableau des tailles de chiffres possible en fonction du type, Openclassroom*
+![test](typeLangageC.webp)*Tableau des tailles de chiffres possible en fonction du type, Openclassroom*
 
 ### Calcul
 
@@ -162,7 +162,7 @@ printf("Vous avez donnée la valeur %d", variable);
 
 Ceci permet de demander la valeur puis d'afficher ce que l'utilisateur à écrit. on référence les variables dans l'affichage avec le % suivi du type de variable comme le tableau ci-joint :
 
-![test](AffichageEnC.png)*Tableau des format en fonction du type, Openclassroom*
+![test](AffichageEnC.webp)*Tableau des format en fonction du type, Openclassroom*
 
 On peut rajouter le type **%s** pour les chaines de caractères ou **%c** pour un type char.
 
@@ -272,7 +272,7 @@ Dans cette partie, nous allons travailler sur la gestion de fichiers grâce a la
 
 Il est possible d'ouvrir un fichier de plusieurs façons :
 
-![test](TypeOuvertureFichier.png)*Liste des façons d'ouvrir un fichier possible en C, Openclassroom*
+![test](TypeOuvertureFichier.webp)*Liste des façons d'ouvrir un fichier possible en C, Openclassroom*
 
 Faisons un exercice avec un programme qui recopie des lignes dans un fichier pour nous :
 

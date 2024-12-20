@@ -46,7 +46,7 @@ Pour la constitution de cette base de données, j'ai choisi de commencer par dem
 
 Je suis ensuite parti de sa réponse en corrigeant légèrement certaine abération afin d'aboutir à ceci :
 
-![image de la base de données non formatées](./Picture1.png)
+![image de la base de données non formatées](./Picture1.webp)
 
 On peut bien observer sur cette base que certains emails sont faux et ne peuvent pas marcher. Les numéros de téléphone ont absolument tous les formats possibles et imaginables, tout comme les dates de naissance. Certains champs ne sont pas remplis et l'information se trouve ailleurs. Il faut donc remettre tout cela en ordre afin de pouvoir faire du reporting efficace. Mais, avant cela, il faut faire en sorte que ce genre d'erreurs ne se reproduise pas en mettant des règles en place.
 
@@ -102,7 +102,7 @@ Pour réaliser l'extraction et on peut maintenant rajouter la logique en rentran
 
 Ce qui donne :
 
-![Analyse de la base sur les emails](./Picture2.png)
+![Analyse de la base sur les emails](./Picture2.webp)
 
 Et on peut donc maintenant supprimer tous ceux qui sont mauvais et passer à la suite.
 
@@ -135,7 +135,7 @@ On combine ensuite, en fonction de la longueur de la chaîne, des fonctions logi
 
 Et on obtient :
 
-![Analyse de la base sur les emails](./Picture3.png)
+![Analyse de la base sur les emails](./Picture3.webp)
 
 On applique ceci au numéro 2 aussi pour passer ensuite au numéro de rue et à l'adresse.
 
@@ -149,7 +149,7 @@ Pour l'adresse, comme observé dans les règles précédemment, on ne peut que f
 
 Et cela donne :
 
-![Analyse de la base sur l'adresse](./Picture4.png)
+![Analyse de la base sur l'adresse](./Picture4.webp)
 
 ### Nationalité
 
@@ -159,7 +159,7 @@ Pour la nationalité, nous allons homogénéiser en passant par une liste de cho
 =IF(LEFT(M2;4)="Fran";"FR"; "Other")
 ```
 
-![Analyse de la base sur la nationalité](./Picture5.png)
+![Analyse de la base sur la nationalité](./Picture5.webp)
 
 ### Date de naissance
 
@@ -169,7 +169,7 @@ Pour la date de naissance, il suffit de substituer tout ce qui n'est pas un chif
 =IF(ISNUMBER(SEARCH("/";TEXT(K2; "jj/mm/aaaa")))=TRUE;TEXT(K2;"jj/mm/aaaa");SUBSTITUTE(SUBSTITUTE(K2;".";"/");"-";"/"))
 ```
 
-![Analyse de la base sur la date de naissance](./Picture6.png)
+![Analyse de la base sur la date de naissance](./Picture6.webp)
 
 Et on obtient alors une base de données propre et alignée sur les nouveaux critères afin de repartir sur de bonnes bases pour faire du reporting.
 
@@ -192,6 +192,6 @@ Exemple :
 ```
 
 Ce qui donne :
-![Analyse de la base sur les doublons](./Picture7.png)
+![Analyse de la base sur les doublons](./Picture7.webp)
 
 Il ne reste plus ensuite qu'a combiner les informations des doublons pour les supprimer.

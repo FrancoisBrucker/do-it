@@ -43,10 +43,10 @@ Je pensais en apprendre plus sur les réseaux sociaux, finalement, nous sommes r
 
 Pour une raison qui me dépasse, j'ai rencontré beaucoup de problèmes sur la deuxième moitié de la formation, des erreurs 404 à la pelle et des fautes (?) de traduction.
 :-------------------------:|:-------------------------:
-<img src="erreur404.jpg" width="350" height="350"> | <img src="eng2.jpg" width="350" height="350">
+<img src="erreur404.webp" width="350" height="350"> | <img src="eng2.webp" width="350" height="350">
 
 J'ai essayé de reporter le problème à Google, mais même le formulaire ne voulait pas s'envoyer.
-![Erreur formulaire](erreurformulaire.jpg "Erreur formulaire"){width = 70%}.
+![Erreur formulaire](erreurformulaire.webp "Erreur formulaire"){width = 70%}.
 
 Enfin, j'ai réussi à finir la formation tant bien que mal, sans bien saisir le pourquoi du comment.
 
@@ -92,7 +92,7 @@ Ceci consiste à placer un **cookie** sur l'ordinateur ou le navigateur d'un uti
 Selon les spécialistes, une minute de vidéo équivaut à 1,8 million de mots !
 Si on n'est pas prêt à mettre en ligne ses propres vidéos, on peut diffuser des annonces sur les chaînes et les sites d'autres personnes. On peut aussi publier une vidéo sur les réseaux sociaux, mais on doit utiliser sa page professionnelle et non personnelle. Une autre façon d'utiliser la vidéo est d'intégrer cet aspect à ses e-mails, par exemple, pour augmenter le taux d'interaction avec le contenu.
 
-![Étapes classiques dans la création de vidéo](etapes.jpg "Étapes classiques dans la création de vidéo"){width = 70%}.
+![Étapes classiques dans la création de vidéo](etapes.webp "Étapes classiques dans la création de vidéo"){width = 70%}.
 
 En planifiant votre action en amont, vous pouvez tourner plusieurs vidéos en même temps. Cela nécessitera moins d'efforts et de ressources, et donc un budget moins élevé. Afin de limiter les frais, vous pouvez utiliser des téléphones mobiles pour tourner vos vidéos, et le logiciel fourni avec le système d'exploitation de votre ordinateur pour effectuer le montage. N'oubliez pas que l'élaboration du story-board de votre contenu vidéo est une étape essentielle. Elle vous permet de vérifier que tous les paramètres sont définis avant de commencer (dialogues, illustrations, mouvements et angles de la caméra).
 
@@ -110,7 +110,7 @@ Un des principaux avantages qu'offre le numérique pour votre entreprise est de 
 
 Si vous savez comment transformer vos données numériques en **connaissances exploitables**, vous pourrez améliorer les résultats de vos campagnes en ligne et atteindre plus facilement vos objectifs.
 
-![Cycle des données](Cycle_des_donnees.jpg "Cycle des données").
+![Cycle des données](Cycle_des_donnees.webp "Cycle des données").
 
 Grâce aux outils d'analyse, vous pouvez collecter et examiner des données en temps réel. Les feuilles de calcul sont idéales pour stocker et gérer vos données en matière de marketing numérique.
 Réfléchissez aux données relatives à vos actions sur les médias sociaux et essayez de créer une feuille de calcul qui vous permettra d'étudier chaque jour toutes vos statistiques :

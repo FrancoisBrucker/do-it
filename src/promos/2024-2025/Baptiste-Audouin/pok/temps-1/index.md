@@ -62,8 +62,8 @@ Voici les différents points que j'ai retenu durant cette seconde tâche pour d�
 ### 3. Première version
 La première version de l'outil utilise deux feuilles Excel, une feuille *Déplacements* où l'utilisateur remplis ses déplacements et une seconde feuille *Récap* qui récapitule tous les déplacements :
 <div>
-  <img src="Deplacements_V1.png">
-  <img src="Recap_V1.png">
+  <img src="Deplacements_V1.webp">
+  <img src="Recap_V1.webp">
 </div>
 
 Le bouton *Enregistrer*fait référence à la première macro du projet qui, lors d'un clique, va remplir le tableau sur la page Récap en ajoutant une ligne et en la remplissant suivant les données entrées dans le formulaire.

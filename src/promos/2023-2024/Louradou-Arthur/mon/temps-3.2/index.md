@@ -14,8 +14,8 @@ résumé: "CSS, Scss, Sass, Animations dans le web. Après la lecture de ce MON,
 ---
 
 <div style="display:flex;flex-direction:row;">
-    <img style="height:150px" src="./images/css3.png" alt="Logo CSS 3" />
-    <img style="height:150px" src="./images/sass.png" alt="Logo Sass" />
+    <img style="height:150px" src="./images/css3.webp" alt="Logo CSS 3" />
+    <img style="height:150px" src="./images/sass.webp" alt="Logo Sass" />
 </div>
 
 ## Prérequis
@@ -60,7 +60,7 @@ Sur inscription est aussi disponible un jeu du même auteur que Flexbox Froggy :
 
 Pour résumer, la grid doit être utilisée pour favoriser la **disposition de la page** tandis que le flex met l’accent sur les **différents contenus des éléments** [\[8\]](#bibliographie).
 
-<img align="center" src="./images/GridVSFlex.png" alt="Grid VS Flex from Berker Erol">
+<img align="center" src="./images/GridVSFlex.webp" alt="Grid VS Flex from Berker Erol">
 Source : [8]
 
 ## Une corde de plus a notre arc : les animations

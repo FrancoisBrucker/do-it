@@ -49,7 +49,7 @@ On a par exemple "id" qui permet de donner un identifiant à notre élément:
 De même avec "class". Cela permet ensuite de cibler le paragraphe ou le titre que l'on veut stylisé.
 
 * `<a href="autre_page.html">Cliquez ici pour vous rendre sur une autre page</a>` pour faire un lien cliquable
-* `<img src="image.jpg" alt="descrption"/>` (balise à la fois ouvrante et fermante) pour insérer une image
+* `<img src="image.webp" alt="descrption"/>` (balise à la fois ouvrante et fermante) pour insérer une image
 
 
 Niveau style de texte, on trouve:
@@ -198,16 +198,16 @@ Installation CLI Vue: 'npm install -g @vue/cli'\
 'vue create mon-projet-vue' \
 Voilà on a créer notre premier projet Vue !
 
-![Vue CLI](./VueCLI.png)
+![Vue CLI](./VueCLI.webp)
 
 Ici, on choisira "Default" avec Vue3.\
 Tous les fichiers nécessaires sont ensuite générés automatiquement: structure de base, Babel, ESLint, scripts de base. Voilà ce à quoi ressemble le base créée:
 
-![App Vue Base](./AppVuebase.png)
+![App Vue Base](./AppVuebase.webp)
 
 Et voilà les dossiers et fichiers créés:
 
-![Dossiers App Vue](./DossiersAppVue.png)
+![Dossiers App Vue](./DossiersAppVue.webp)
 
 App.vue est appelé **composant racine**
 

@@ -111,7 +111,7 @@ transition-timing-function: linear;
 ```css
 transition: transform 1000ms ease-in-out;
 ```
-<div style="display:flex"><img src="courbeseases.png"></div>
+<div style="display:flex"><img src="courbeseases.webp"></div>
 
 - la fonction <strong>ease</strong> : c'est la fonction qui est utilisée par défaut lorsqu'aucune fonction n'est précisée. Elle ressemble beaucoup aux fonctions ci-dessus mais avec une accélération plus nette et une rampe de décélération plus prononcée.
 

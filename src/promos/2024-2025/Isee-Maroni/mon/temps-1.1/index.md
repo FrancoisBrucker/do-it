@@ -62,8 +62,8 @@ Dans Airtable, une base est l'élément fondamental où sont stockées et organi
 Une base est composée de plusieurs tables, chacune dédiée à une catégorie de données. 
 Par exemple, dans ma base, j'ai fait une table pour les **Offres** et une autre pour les **Entreprises**.
 
-![table_Offres](./Airtable_tableOffres.png)
-![table_Entreprises](./Airtable_tableEntreprises.png)
+![table_Offres](./Airtable_tableOffres.webp)
+![table_Entreprises](./Airtable_tableEntreprises.webp)
 
 Une des fonctionnalités puissantes d’Airtable, que j'apprécie particulièremnt, est la possibilité de créer des relations entre tables en utilisant des champs liés. Cela permet de relier les données et de mieux les organiser. Par exemple, dans la table **Offres**, j'ai lié chaque offre à une entreprise de la table **Entreprise**, et j'en ai récupérer l'information à propos du type de structure : champ nommé "Structure (à partir de Entreprises)".
 
@@ -76,14 +76,14 @@ La **Galerie** permet d'afficher les enregistrements sous forme de cartes visuel
 {% endinfo %}
 
 
-![Vue_Kanban](./Airtable_VueKanban.png)
-![Vue_Galerie](./Airtable_VueGalerie.png)
+![Vue_Kanban](./Airtable_VueKanban.webp)
+![Vue_Galerie](./Airtable_VueGalerie.webp)
 
 Airtable permet de configurer des automatisations afin d'effectuer des actions automatiquement, comme envoyer des emails, mettre à jour des enregistrements, ou déclencher des workflows dans d'autres applications, à partir de conditions spécifiques définies. Cependant, pour l'instant je n'ai pas encore utilisé d'automatisations avec d'autres applications.
 
 J'ai mis en place une petite automatisation au sein d'Airtable qui assure la liaison entre la table **Offres** et la table **Entreprises**. Lorsque un nouvelle entrée est créé dans la table **Offres** et que le nom de l'Entreprise y est renseigné, le champ "liaison à la table Entreprises" se remplit automatiquement. Ainsi, le champ "Structure" dans la table **Offres** se remplit automatiquement également. De plus, si l'entreprise n'existe pas encore dans la table **Entreprises**, une nouvelle entrée y est automatiquement ajoutée. 
 
-![Automatisation](./Airtable_Automatisation.png)
+![Automatisation](./Airtable_Automatisation.webp)
 
 Airtable s'intègre avec de nombreux outils via des connecteurs tels que Zapier et Integromat (Make). Lors de mes précédentes utilisations d'Airtable, j'ai eu l'occasion d'automatiser des flux de travail entre Airtable et diverses applications comme Slack, Google Sheets, Typeform, ou encore Trello, facilitant ainsi la synchronisation et la gestion des données.
 
@@ -120,8 +120,8 @@ L'un des points les plus importants est que Softr peut se connecter directement 
 
 On peut ajouter des filtres dynamiques et des barres de recherche aux pages pour permettre aux utilisateurs de trouver rapidement des informations. Par exemple, dans le cas des offres de stage, les utilisateurs pourraient filtrer les produits par entreprise, types de stage, localisation ou secteur d'activité. 
 
-![Softr](./Softr_InterfaceList.png)
-![Softr_Avancement](./Softr_OffresIntermediaire.png)
+![Softr](./Softr_InterfaceList.webp)
+![Softr_Avancement](./Softr_OffresIntermediaire.webp)
 
 De plus, les formulaires peuvent alimenter directement Airtable pour stocker les données collectées.
 

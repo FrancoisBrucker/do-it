@@ -19,7 +19,7 @@ Une première expérience en developpement web.
 Avoir un environnement de devéloppement type IntelliJ.
 {%endprerequis%}
 
-<img src="./illustration.jpg" alt="Illustration" style="width:50%;">
+<img src="./illustration.webp" alt="Illustration" style="width:50%;">
 
 
 Tout comme mon précédent MON, j'ai choisi de suivre la formation du même formateur [Jean-Philippe Ehret](https://www.udemy.com/course/bien-debuter-avec-spring-et-spring-boot/) à ce sujet.
@@ -38,13 +38,13 @@ Il est possible d'obtenir 30 jours d'essai gratuit sur toutes les formations Jav
 
 ## Présentation de la formation
 
-![Openclassroom_accueil](./firstillu.png)
+![Openclassroom_accueil](./firstillu.webp)
 
 
 L'enseignant de la formation est Jean-Philippe EHRET, voici sa description sur le site Udemy :
 
 
-![Openclassroom_accueil](./JP.png)
+![Openclassroom_accueil](./JP.webp)
 
 
 Ce mon fait suite à mon précedent [MON](https://francoisbrucker.github.io/do-it/promos/2023-2024/Diafat-Samy/mon/temps-3-1/), vous pouvez trouver la formation que j'ai suivie directement sur le site du formateur [apprendre-java](https://apprendre-java.com/courses) (où les formations sont beaucoup moins chères).
@@ -63,7 +63,7 @@ Les cours sont assez classiques dans leur forme : un lecteur vidéo (avec la pos
 
 ### Comment valide-t-on nos connaissances ?
 
-![Openclassroom_accueil](./exemplechapitre.png)
+![Openclassroom_accueil](./exemplechapitre.webp)
 
 Généralement, il y a, après chaque vidéo, un exercice similaire à ce qui a été traité dans les vidéos, permettant de refaire par soi-même les manipulations.
 

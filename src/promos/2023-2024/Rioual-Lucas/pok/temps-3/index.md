@@ -34,7 +34,7 @@ Back-End avec Spring Boot (Java) et une base de données MySQL, Front-End en Rea
 
 
 
-<img src="./illustration.jpg" alt="Illustration" style="width:50%;">
+<img src="./illustration.webp" alt="Illustration" style="width:50%;">
 
 ## **Objectif du POK**
 
@@ -156,21 +156,21 @@ Puis la maquette :
 Le schéma de données utilisé pour le back-end :
 
 
-![Gameplay](./data.png)
+![Gameplay](./data.webp)
 
 ### Front-End
 
 Page d'accueil :
 
-<img src="accueil.PNG">
+<img src="accueil.webp">
 
 Page de salon :
 
-<img src="salon.PNG">
+<img src="salon.webp">
 
 Page de partie :
 
-<img src="partie.PNG">
+<img src="partie.webp">
 
 
 ## **Objectif du sprint 2**

@@ -82,8 +82,8 @@ J'ai fait le choix d'utiliser Bubble.io pour construire ma plateforme. Après l'
 
 Après avoir choisi le logo, le nom et la charte graphique, j'ai commencé à créer les pages de base, l'accueil et la connexion/l'inscription, et la page contacts. Elles sont plus ou moins achevées. Il va falloir prendre en vitesse sur le deuxième sprint.
 
-![](index.jpg)
-![](signin.jpg){ width=50% }
+![](index.webp)
+![](signin.webp){ width=50% }
 
 ## Ce que j'ai prévu pour le second point POK (14h) <a id="section-3"></a>
 
@@ -176,29 +176,29 @@ Malheureusement, ce jugement reste très subjectif. Pour pouvoir être objectif,
 ### Bubble.io et les fonctionnalités que j'ai réussi à implémenter
 
 - La base de données
-  ![La base de données](datatypes.png)
+  ![La base de données](datatypes.webp)
 
 - Inscription/Connexion
   :-------------------------:|:-------------------------:
-  <img src="inscription.png" width="350" height="350"> | <img src="workflowindex.png" width="350" height="350">
+  <img src="inscription.webp" width="350" height="350"> | <img src="workflowindex.webp" width="350" height="350">
 
   Dans la base de données, on obtient alors :
-  ![Users dans la base de données](userpouletfrit.png)
+  ![Users dans la base de données](userpouletfrit.webp)
 
 - Dashboard/Déconnexion
-  <img src="dashboard.png" alt="drawing1" width="500"/>
+  <img src="dashboard.webp" alt="drawing1" width="500"/>
 
 - Contact
-  <img src="contact.png" alt="drawing2" width="500"/>
+  <img src="contact.webp" alt="drawing2" width="500"/>
 
   Dans la base de données, on a :
-  ![Les fiches de contact dans la base de données](datacontact.png){width = 120%}
+  ![Les fiches de contact dans la base de données](datacontact.webp){width = 120%}
 
 - Formulaire pour donner son avis
-  ![Avis](avis.png)
+  ![Avis](avis.webp)
 
   Dans la base de données, on a alors :
-  ![Les formulaires dans la base de données](dataformulaire.png){width = 120%}
+  ![Les formulaires dans la base de données](dataformulaire.webp){width = 120%}
 
 - Pour présenter les résultats sous la forme d'un classement, je voulais utiliser la fonctionnalité "Repeating groups".
   Les étapes à effectuer auraient été :
@@ -210,7 +210,7 @@ Malheureusement, ce jugement reste très subjectif. Pour pouvoir être objectif,
 5. Les afficher dans "Repeating groups".
    Je suis donc resté bloqué ici...
    :-------------------------:|:-------------------------:
-   <img src="classement.png" width="350" height="350"> | <img src="workflowformulaire.png" width="350" height="350">
+   <img src="classement.webp" width="350" height="350"> | <img src="workflowformulaire.webp" width="350" height="350">
 
 ## Conclusion <a id="section-5"></a>
 

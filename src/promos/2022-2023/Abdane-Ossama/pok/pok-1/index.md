@@ -47,7 +47,7 @@ On va passer à la création de l'en-tête du site, il s'agit dune bande tout en
 Création du bandeau avec du html :
 
           <header>
-                      <img src="Logo_ecole.png" alt="Logo site"> 
+                      <img src="Logo_ecole.webp" alt="Logo site"> 
                       <nav class="nav">
                       <li><a href="index.html">Acceuil</a></li>
                       <li> <a href="#MON">MON</a></li>
@@ -84,7 +84,7 @@ On va égalment le CSS pour disposer les futurs boutons cliquable de la manière
 
 A la fin, en compilant toutes nos lignes de comandes, on obtient le résultat suivant :
 
-![Optional Text](Image1.png)
+![Optional Text](Image1.webp)
 
 
 #### La landing page 
@@ -99,7 +99,7 @@ Comme précedemment, on va utiliser le CSS pour mettre en place ce que l'on souh
 
 
                   section.top-page { 
-                      background: url(../Photo_ecole.jpeg);
+                      background: url(../Photo_ecole.webp);
                       background-size: cover;
                       height: 80vh;
                   }
@@ -113,7 +113,7 @@ Comme précedemment, on va utiliser le CSS pour mettre en place ce que l'on souh
 
 En utilisant les paramètres précedents, on obtient :
 
-![Optional Text](Image2.png)
+![Optional Text](Image2.webp)
 
 #### Structuration de la partie POK et MON
 
@@ -180,7 +180,7 @@ Modification de la taille du titre, de sa disposition et de la bande qui va cont
 - Choix des images des MON :
 
         .mon1 {
-            background-image:url( ../App-script.png)
+            background-image:url( ../App-script.webp)
         }
 
         .mon2 {
@@ -190,7 +190,7 @@ Modification de la taille du titre, de sa disposition et de la bande qui va cont
 
 Le résulat obtenu :
 
-![Optional Text](Image3.png)
+![Optional Text](Image3.webp)
 
 
 #### Bas de page 
@@ -220,7 +220,7 @@ On va également, chosir la manière de dispoistion et d'affichage avec le CSS.
 
 Le résulat obtenu :
 
-![Optional Text](Image4.png)
+![Optional Text](Image4.webp)
 
 #### Résultat final 
 

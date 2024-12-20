@@ -138,7 +138,7 @@ plt.grid()  # Ajout d'une grille pour faciliter la lecture
 plt.tight_layout()  # Ajuste la mise en page pour éviter le chevauchement
 plt.show()
 ```
- <div><img src="curry_points.png"></div>
+ <div><img src="curry_points.webp"></div>
 
 Le graphe suivant permet de faire une distinction entre les performances à domicile et à l'exterieur afin de savoir si ce paramètre à une influence sur le joueur.
 
@@ -161,7 +161,7 @@ plt.title("Performance de Curry à domicile vs extérieur")
 plt.ylabel("Moyenne")
 plt.show()
 ```
- <div><img src="home_away_curry.png"></div>
+ <div><img src="home_away_curry.webp"></div>
 
 Au vu de ces derniers résultats, on peut conclure que les statistiques du joueurs ont été constante cette saison et surtout les lieux de matchs n'ont eux aucun impacte sur lui.
 
@@ -177,7 +177,7 @@ sns.heatmap(correlation, annot=True, cmap="coolwarm")
 plt.title("Corrélation entre performances de Poole et résultats des Warriors")
 plt.show()
 ```
- <div><img src="matrix_curry.png"></div>
+ <div><img src="matrix_curry.webp"></div>
 
 #### Analyse des corrélations :
 - **Points (PTS) et Victoires (result)** : La corrélation entre les points de Curry et les victoires des Warriors est faible (0.069), ce qui indique que le nombre de points marqués par Curry n'a pas un impact direct sur les résultats de l'équipe.
@@ -191,8 +191,8 @@ Dans la suite, nous allons comparer ces résultats avec ceux de deux autres joue
 
 Après avoir récupéré les données de deux autres joueurs majeurs de l'équipe (Jordan Poole et Klay Thompson) sur le même site [Basketball Reference](https://www.basketball-reference.com), j'ai effectué les mêmes manipulations sur leurs statistiques et voici les matrices obtenues :
 
- <div><img src="matrix_poole.png"></div>
- <div><img src="matrix_thompson.png"></div>
+ <div><img src="matrix_poole.webp"></div>
+ <div><img src="matrix_thompson.webp"></div>
 
 #### Analyse
 

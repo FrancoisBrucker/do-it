@@ -21,7 +21,7 @@ Après avoir été déçue de la formation OpenClassRoom de mon MON 3-1 car elle
 Je savais que Louise avait déjà faire une formation sur VBA dans ce [MON](/do-it/mon/LG/MON5). J'ai donc cherché une autre formation pour pouvoir comparer 2 formations sur les macros. Malheureusement, la seule que j'ai trouvé qui parcourait un large choix de sujets et qui était assez cadré est celle de Louise. Je ne vais donc pas redétailler le contenu de la formation puisque Louise l'a déjà fait.
 
 ## Le sommaire de la formation 
-<img src="MON_3_2.PNG">
+<img src="MON_3_2.webp">
 
 ## Les points positifs de la formation 
 Cette formation est très **détaillée** et on suit étape par étape la création de macros. Cette formation est faite pour les débutants, il n'y a pas besoin de connaitre le langage VBA ou même d'avoir déjà utilisé Excel. La difficulté augmente petit à petit ce qui permet de ne pas être découragé. 

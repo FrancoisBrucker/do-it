@@ -58,11 +58,11 @@ Exemple :
 
 On commence avec un set de données :
 
-  <img src="../assets/datasetMon2.png">
+  <img src="../assets/datasetMon2.webp">
 
   On clique ensuite sur les fonctions voulues dans la barre de recherche et on obtient le tableau suivant : 
 
-  <img src="../assets/datasetAfterCleaningMon2.png">
+  <img src="../assets/datasetAfterCleaningMon2.webp">
 
   La base de données a été nettoyée. On pourrait trouver une application à cela dans le domaine de l'intelligence artificielle.
 

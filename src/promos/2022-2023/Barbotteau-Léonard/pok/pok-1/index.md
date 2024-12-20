@@ -27,7 +27,7 @@ Notre idée initiale est de créer un site web qui permettrait d'écrire de la m
 
 Nous avons utilisé un canvas HTML pour créer une première version de la partition, qui est composée pour le moment d'une portée de 5 lignes et d'une clé de sol.
 
-![Première version de la partition](partition_premiere_version.png)
+![Première version de la partition](partition_premiere_version.webp)
 
 Il est possible d'ajouter des notes en cliquant sur la portée, grâce à un `EventListener` lié au canvas qui détecte les clics. Les notes ont pour le moment toutes la même durée (ce sont des rondes) mais peuvent être placées à différentes hauteurs. Elles se placent les unes à la suite des autres et ne peuvent pas encore être supprimées.
 
@@ -62,7 +62,7 @@ Il est possible d'ajouter des notes en cliquant sur la portée, grâce à un `Ev
 
 Nous avons ajouté de nouveaux symboles à la partition, et il est désormais possible de changer de mode d'édition avec les touches `a` (add note) et `d` (delete note). En mode suppression, il suffit de cliquer sur une note pour la supprimer et les notes restantes se repositionnent correctement.
 
-![Partition deuxième version](partition_deuxieme_version.png)
+![Partition deuxième version](partition_deuxieme_version.webp)
 
 Il reste à modifier la manière de saisir les notes pour que celles-ci puissent se placer à la place des symboles de silence et non pas en fin de partition.
 
@@ -74,7 +74,7 @@ Les symboles de la portée peuvent être enregistrés et chargés à partir d'un
 
 Dernière version de la partition :
 
-![Partition dernière version](partition_derniere_version.png)
+![Partition dernière version](partition_derniere_version.webp)
 
 ### Difficultés rencontrées
 
@@ -134,21 +134,21 @@ En attendant de pouvoir faire des requêtes API sur un serveur, on va mettre les
 
 Tout d'abord, la première page est le login : ici, on va récupérer l'identifiant de l'utilisateur et son mot de passe, et vérifier qu'il correspond à la base de données.
 
-![Page de login](page_login.png)  
+![Page de login](page_login.webp)  
 
 Si les identifiants ne sont pas corrects, un message d'alerte s'affiche. S'ils sont corrects, on passe à la page suivante en conservant le nom de l'utilisateur et son Id. Cet Id nous permettra de savoir à quelles partitions l'utilisateur à accès.
 
 Ensuite on arrive sur la page d'accueil du site
-![Page d'accueil première version](page_daccueil_premiere_version.png)
+![Page d'accueil première version](page_daccueil_premiere_version.webp)
 On peut ici choisir si l'on veut créer une nouvelle partition ou accéder aux anciennes.
 
 Dans le deuxième cas, on est dirigé vers les partitions sauvegardées et qui sont accessibles à l'utilisateur connecté. Les partitions contiennent dans la sauvegarde l'Id des personnes qui y ont accès, et en particulier l'auteur. On peut aussi dans cette page chosir de finalement créer une nouvelle partition.
 
-![Partitions sauvegardées](partitions_sauvegardees.png)
+![Partitions sauvegardées](partitions_sauvegardees.webp)
 
 Si l'utilisateur a choisi sur la page précédente ou sur celle-ci, il se retrouve face à une partition vierge. Sinon il arrive directement sur la partition sauvegardée au préalable.
 
-![Partition dernière version](partition_derniere_version.png)
+![Partition dernière version](partition_derniere_version.webp)
 
 ### Améliorations possibles
 

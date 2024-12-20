@@ -67,7 +67,7 @@ Il est en effet nécessaire de connaître le format d’un fichier afin de passe
 
 - **.txt** : informations textuelles de base  
 - **.csv** : tableaux de données brutes  
-- **.png** : images  
+- **.webp** : images  
 - **.docx** : textes mis en forme par Word ou LibreOffice  
 - **.xlsx** : tableur Excel ou LibreOffice  
 - **.html** : pages internet  
@@ -618,7 +618,7 @@ Qui nous retourne :
 - Pour le reste, **certains mots ressortent pour chaque note** comme “atención”, “servicio”, ou encore “comida” et “pollo” (ce qui n’est pas étonnant au Pérou, car le “pollo” fait partie des plats les plus consommés). Nous pouvons alors nous demander si, dans le cadre de notre analyse, il n’aurait pas fallu les rajouter à notre liste de stop-words afin de n’avoir que des mots faisant sens du point de vue de l’avis des consommateurs.
 - Sinon, nous constatons quand même que pour **les avis de note 1**, les mots utilisés sont **plutôt négatifs**, tels que “mala”, “mal”, “pesima” et “pesimo”, alors que pour **les avis de note 5**, les mots sont plutôt connotés **positivement**, comme “excelente”, “rico”, “delicioso” et “agradable”, ce qui est ce que nous aurions pu présupposer.
 
-![Comida Lima](./images/comida_lima.png)
+![Comida Lima](./images/comida_lima.webp)
 
 PS : Le choix de ce sujet a été motivé par mon amour pour le lomo saltado, et notamment les meilleurs que j'ai mangés à Lima.
 

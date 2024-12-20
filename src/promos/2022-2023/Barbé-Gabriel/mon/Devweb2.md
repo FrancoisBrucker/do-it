@@ -54,7 +54,7 @@ Le prototypage permet d'hériter des attributs et des méthodes d'autres objets 
 
     let personne1 = new Personne('Jean', 'Biche', 32, 'neutre', ['musique', 'tricot', 'boxe']); //personne1 hérite des attributs de Personne()
 ```
-Nous avons aussi vu comment modifier ce prototypage selon la chaine de prototypage. Tous les objets hérite des prototypes de 'Object()' qui est l'objet original disons.  <img src="../Images/Chaine_prototypage.png"/><br>
+Nous avons aussi vu comment modifier ce prototypage selon la chaine de prototypage. Tous les objets hérite des prototypes de 'Object()' qui est l'objet original disons.  <img src="../Images/Chaine_prototypage.webp"/><br>
 Nous pouvons aussi rajouter des méthodes à notre constructeur 'Personne' avec la structure : 
 ```bash
 Personne.prototype.aurevoir = function() {
@@ -101,7 +101,7 @@ var request = new XMLHttpRequest();
 request.open('GET', requestURL);
 ```
 Nous voyons aussi un exemple permettant de créer une page web grâce aux données récoltées sous format JSON, cet exemple est particulièrement intéressant pous son mélange CSS et JS dans la structure "document.createElement"<br> 
-<img src="../Images/json-superheroes.png"/>
+<img src="../Images/json-superheroes.webp"/>
 
 5. Pratique de construction d'objets
 
@@ -210,5 +210,5 @@ Nous nous occupons ensuite de rendre notre application plus dynamique en y ajout
     </p>
  ```
  Voici à quoi ressemble mon site : <br>
- <img src="../Images/Premier_site.png"/>
+ <img src="../Images/Premier_site.webp"/>
  

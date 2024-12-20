@@ -53,7 +53,7 @@ Pour utiliser les connnaissances que je viens d'acquérir, j'ai décidé de fair
 Explication des grandes lignes:
 
 <figure>
-  <img src="../assets/todoapp.png">
+  <img src="../assets/todoapp.webp">
   <figcaption>To-do list</figcaption>
 </figure>
 

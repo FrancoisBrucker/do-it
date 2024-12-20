@@ -67,26 +67,26 @@ Voici des **exemples** d'offres de stages transmises par des centraliens sur des
 
   <!-- Première colonne -->
   <div style="flex: 1; padding-right: 10px;">
-    <img src="Messenger1.png" alt="Image 1" style="width: 100%; margin-bottom: 10px;">
-    <img src="Messenger2.png" alt="Image 2" style="width: 100%; margin-bottom: 10px;">
+    <img src="Messenger1.webp" alt="Image 1" style="width: 100%; margin-bottom: 10px;">
+    <img src="Messenger2.webp" alt="Image 2" style="width: 100%; margin-bottom: 10px;">
   </div>
 
   <!-- Deuxième colonne -->
   <div style="flex: 1; padding-left: 10px;">
-    <img src="Greenta_message.png" alt="Image 4" style="width: 100%; margin-bottom: 10px;">
-    <img src="Greenta_pdf.png" alt="Image 5" style="width: 100%; margin-bottom: 10px;">
+    <img src="Greenta_message.webp" alt="Image 4" style="width: 100%; margin-bottom: 10px;">
+    <img src="Greenta_pdf.webp" alt="Image 5" style="width: 100%; margin-bottom: 10px;">
   </div>
 
   <!-- Première colonne -->
   <div style="flex: 1; padding-right: 10px;">
-    <img src="Recherche_stage_message.png" alt="Image 1" style="width: 100%; margin-bottom: 10px;">
+    <img src="Recherche_stage_message.webp" alt="Image 1" style="width: 100%; margin-bottom: 10px;">
   </div>
 
 </div>
 
 <div style="display:flex">
-<div><img src="Asso_Fb.png"></div>
-<div><img src="CDI_Fb.png"></div>
+<div><img src="Asso_Fb.webp"></div>
+<div><img src="CDI_Fb.webp"></div>
 </div>
 
 
@@ -97,20 +97,20 @@ Pour cette étape, je suis d'abord allée sur le site des stages pour examiner l
 Un exemple du site des stages de Centrale Méditerranée :
 
 <div style="display:flex">
-<div><img src="SitesDesStages1.png"></div>
-<div><img src="SitesDesStages2.png"></div>
+<div><img src="SitesDesStages1.webp"></div>
+<div><img src="SitesDesStages2.webp"></div>
 </div>
 
 <div>
-<div><img src="SitesDesStages3.png"></div>
+<div><img src="SitesDesStages3.webp"></div>
 </div>
 
 À partir de là, j'ai réfléchi aux informations que j'allais conserver, celles que je supprimerais, et celles qu'il serait utile d'ajouter.
 
 Puis j'ai créé la base de données Offres de stages contenant les tables **Offres** et **Entreprises**
 
-![table_Offres](./Airtable_tableOffres.png)
-![table_Entreprises](./Airtable_tableEntreprises.png)
+![table_Offres](./Airtable_tableOffres.webp)
+![table_Entreprises](./Airtable_tableEntreprises.webp)
 
 ## 3. Début de l'application web avec *Softr*
 
@@ -120,12 +120,12 @@ Pour améliorer la page des offres et optimiser l'expérience utilisateur, j'ai 
 Voici quelques étapes intermédiaires de la page **Offres** liée à la base de données *Airtable* :
 
 <div style="display:flex">
-<div><img src="Softr_InterfaceGrid.png"></div>
-<div><img src="Softr_InterfaceList.png"></div>
+<div><img src="Softr_InterfaceGrid.webp"></div>
+<div><img src="Softr_InterfaceList.webp"></div>
 </div>
 
 <div>
-<div><img src="Softr_OffresIntermediaire.png"></div>
+<div><img src="Softr_OffresIntermediaire.webp"></div>
 </div>
 
 Les pages suivantes que je vais créer sont les pages **Home** et **Offre-Details** auquelle on accèdera en cliquant sur la vignette correspondante de la page **Offres**.
@@ -187,7 +187,7 @@ Enfin, un menu déroulant a été ajouté, affichant uniquement les villes propo
 
 Voilà à quoi ressemble la nouvelle page **Offres** du côté de sa construction, lorsque je la conçois en no-code, avant d'entrer dans l'expérience utilisateur :
 
-![page_Offres_amelioree](./Offres_amelioree.png)
+![page_Offres_amelioree](./Offres_amelioree.webp)
 
 ## 5. Création de la page Offres-Details
 
@@ -195,11 +195,11 @@ Pour la page **Offres-Details**, j'ai conçu une mise en page présentant les in
 
 Voilà un aperçu de l'expérience utilisateur étape par étape :
  
-![Exp_utilisateur1](./Exp_utilisateur1.png)
+![Exp_utilisateur1](./Exp_utilisateur1.webp)
 
-![Exp_utilisateur2](./Exp_utilisateur2.png)
+![Exp_utilisateur2](./Exp_utilisateur2.webp)
 
-![Exp_utilisateur3](./Exp_utilisateur3.png)
+![Exp_utilisateur3](./Exp_utilisateur3.webp)
 
 
 ### Horodatage

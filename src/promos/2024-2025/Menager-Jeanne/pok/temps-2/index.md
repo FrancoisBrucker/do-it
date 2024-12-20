@@ -86,11 +86,11 @@ J'ai commencé par récuppérer le nombre de joueurs qui jouent en équipe natio
 J'ai ensuite recupéré le nombre de place dans les différents stade pour les représenter sur une carte avec des cercles plus gros et plus foncé si la capacité du stade est plus élevée. Ceci permet dez voir en un clin d'oeil que le plus gros stade est dans le sud et en passant la souris dessus, on voit que c'est le velodrome.\
 Enfin, j'ai voulu mettre le classement de la ligue 1 de la saison en cours.
 
-![Statistique de la Ligue 1](./ligue1.png)
+![Statistique de la Ligue 1](./ligue1.webp)
 
 Avec les filtres, on peut choisir de ne voir que certains club : 
 
-![Statistique du PSG et de l'OM](./ligue1_filtre.png)
+![Statistique du PSG et de l'OM](./ligue1_filtre.webp)
 
 (On y voit que l'OM a plus de joueurs étrangers que Paris)
 
@@ -101,15 +101,15 @@ J'ai utilisé lookerStudio pour créer un visuel pour ces données là.\
 Je voulais faire la même chose pour les joueurs des autres équipes et pour cela, il me fallait un dictionnaire avec les noms des joueurs et le lien de leur page transfertMarkt. Cette tache etant fastidueuse et peu interressante, j'ai demandé à chatGPT de me le construire, mais il n'en est pas capable il m'a donc fournit un script pour scraper les lien et construire le dictionnaire. J'ai du modifier ce script car il ne fonctionnait pas.\
 Lorsque je fais tourner le script, l'utilisateur peut choisir l'équipe dont il veut voir les statistiques, le script récupère ensuite les données et les écrivent dans le googleSheet, il ne reste qu'à actualiser les données de lookerStudio pour avoir les statistiques voulues.
 
-![Statistique du PSG](./psg.png)
+![Statistique du PSG](./psg.webp)
 
 En refaisant tourner le script mais en demandant les statistiques de lille et en actualisant lookerStudio, on obtient : 
 
-![Statistique du LOSC](./lille.png)
+![Statistique du LOSC](./lille.webp)
 
 De même, on peut utiliser les filtres, pour par exemple ne voir que les défenseurs centraux :
 
-![Statistique du LOSC filtrées](./lille_filtre.png)
+![Statistique du LOSC filtrées](./lille_filtre.webp)
 
 ### Horodatage
 

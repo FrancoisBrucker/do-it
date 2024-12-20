@@ -65,7 +65,7 @@ Dans la fenêtre de code, certains mots sont écrits en bleu, en noir ou en vert
 - Vert : Ce sont les commentaires.
 - Noir : C'est le code classique.
 
-<img src="./image22/code.png" width="40%">
+<img src="./image22/code.webp" width="40%">
 
 En cas d'erreur de code, une fenêtre d’erreur apparaît lors de l'execution. Objectivement, l’erreur décrite n’est pas vraiment parlante mais vous pouvez par contre appuyer sur **“Débogage”** pour voir la ligne avec l’erreur surlignée.
 
@@ -98,15 +98,15 @@ Parmis les opérateurs conditionnels, on retrouve des opérateurs arithmétiques
 
 Toutes les opérations arithmétiques classiques s’utilisent avec des nombres (integer, float, etc.)
 
-<img src="./image22/operateur1.png" width="40%">
+<img src="./image22/operateur1.webp" width="40%">
 
 **Les opérateurs de comparaison :**
 
-<img src="./image22/operateur2.png" width="40%">
+<img src="./image22/operateur2.webp" width="40%">
 
 **Les opérateurs logiques :**
 
-<img src="./image22/operateur3.png" width="40%">
+<img src="./image22/operateur3.webp" width="40%">
 
 **Les opérateurs de concaténation :**
 
@@ -186,7 +186,7 @@ MsgBox ([Message], [Bouton], [Titre])
 
 Voici les différents boutons existant :
 
-<img src="./image22/bouton.png" width="50%">
+<img src="./image22/bouton.webp" width="50%">
 
 ## Conclusion
 

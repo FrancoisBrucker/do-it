@@ -41,7 +41,7 @@ résumé: "Dans ce MON je souhaite me former au backend avec Node.js et express"
 
 Lorsque l'on a déjà créé tout le front-end d'un site et que l'on veut coder le back, il faut d'abord veiller à séparer les fichiers concernés en les mettant dans deux dossiers distincts, un que l'on peut appeler front-end et l'autre back-end. 
 
-![arborescence projet](arbo_projet.png)
+![arborescence projet](arbo_projet.webp)
 
 C'est par exemple ce que j'ai fait au dessus pour un de mes projets. 
 
@@ -74,7 +74,7 @@ On améliorera plus tard dans ce MON le serveur pour qu'il fasse ce que l'on veu
 
 ## API RESTful : 2h
 
-![schema](schema.png)
+![schema](schema.webp)
 [Source_Image](https://welovedevs.com/fr/articles/api-rest/)
 
 Une API (Application Programming Interface) permet l'interaction entre différentes applications ou différentes briques d'une même application. On parle d'API RESTful ou REST quand l'API suit le principe de "Represential State Transfer". Cela signifie que les interactions qui ont lieu se font grâce au protocole HTTP et la logique CRUD (Create Read Update Delete).

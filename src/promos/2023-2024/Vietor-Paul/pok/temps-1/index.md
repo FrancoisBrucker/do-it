@@ -56,7 +56,7 @@ Pour ce premier point POK, j'ai réussi à afficher un cube texturé, qui tourne
  - Matrice de projection, qui permet d'avoir un rendu en perspective
 - Texture *cube map* : une texture spéciale qui est à la surface d'un cube centré en (0, 0, 0), OpenGL nous permet de récupérer la couleur qui se trouve dans une direction
 
-![cube](cube_qui_tourne.png)
+![cube](cube_qui_tourne.webp)
 
 ## Objectifs pour le deuxième point
 
@@ -82,7 +82,7 @@ Pour l'implémentation du bruit simplexe, je me suis principalement basé sur la
 
 J'ai d'abord fait une [implémentation en python](simplexnoise.zip), dont voici un exemple de résultat, avec 3 octaves :
 
-![Bruit simplexe à 3 octaves](threeoctaves.png)
+![Bruit simplexe à 3 octaves](threeoctaves.webp)
 
 J'ai ensuite porté cette implémentation en C++, celle-ci est disponible sur le dépôt Gihub du projet.
 

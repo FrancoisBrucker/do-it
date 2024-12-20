@@ -91,7 +91,7 @@ J'ai consulté le document *MANAGING STUDENT VEHICLE PROJECTS. The Non-Technical
 J'ai fait remplir par mon département (4 personnes) un sheet anonyme dont l'objectif était de récolter les suggestions d'améliorations, les points bloquants et les risques potentiels.
 En voici un extrait :
 
-![tableau](tableau.png)
+![tableau](tableau.webp)
 
 Il est nécessaire de traiter et prioriser l'ensemble des remarques et des points durs, par ordre d'importance. De mon côté, je décide de m'attarder sur :
 
@@ -106,25 +106,25 @@ La communication est souvent en lien avec l'organisation : la structure est cens
 Il faut ensuite organiser l'action en termes d'acteurs et de temporalité.
 J'ai répertorié ces informations dans un tableau, comme recommandé dans *Lean au 540°*.
 
-![actions](Actions.png)
+![actions](Actions.webp)
 
 ## Actions concrètes
 
 Mise en place d'une réunion hebdomadaire pour faire le point du département (département LAS, Liaison Au Sol)
 
-![z](Point_Las.png)
+![z](Point_Las.webp)
 
 Améliorer la communication au sein du département
 
-![a](nouvelles.png)
+![a](nouvelles.webp)
 
 Jalonnement des tâches du département à court terme
 
-![a](Planning.png)
+![a](Planning.webp)
 
 Jalonnement des tâches du département à long terme
 
-![a](long_terme.png)
+![a](long_terme.webp)
 
 J'ai aussi mis en place un outil Google Tasks, qui permet d'assigner des tâches, avec des jalons et des acteurs, qui apparaissent sur Google Calendar. Force est d'avouer que l'outil n'a pas été adopté par l'équipe, car actuellement toutes les tâches ne sont plus cochées comme faites alors qu'elles le sont lorsqu'on discute avec eux.
 
@@ -177,14 +177,14 @@ J'ai noté un réel redynamisme au sein du département.
 De part plusieurs lectures que j'ai pu faire et mon expérience personnelle, j'ai décidé de mettre en place un planning sur un tableau, au sein du local de l'association. De telle sorte, chaque membre de mon département est constamment au fait des prochaines échéances, que ce soit les siennes mais aussi celles du département dans son ensemble.
 En effet, il est important de **réintégrer dans l'association une cohésion et une vue d'ensemble** du projet. L'articulation du travail de chacun est ainsi mise en exergue par ce planning : il ne suffit pas de concevoir ses pièces dans son coin, mais il faut aussi prendre en compte les pièces du voisin. Dans le même temps, cela permet aussi de mieux s'organiser avec les autres départements. Par exemple, j'ai pu planifier avant de débuter ma conception des moyeux arrières la réunion avec le département GMP (Groupe Motopropulseur) qui était indispensable à la réussite du projet.
 
-![d](planningtableau.png)
+![d](planningtableau.webp)
 
 ### Mise en place d'un Google Tasks
 
 En supplément du planning sur le tableau, il faut aussi que chacun puisse consulter ses tâches à distance, et tenir les autres au courant de ses avancées. J'ai donc décidé de créer un Google Tasks, qui permet de créer une tâche, l'assigner à quelqu'un de l'équipe et ajouter une échéance. La personne peut la cocher en tant que *Terminée* lorsque la mission est remplie.
 Dans mon esprit, cela permettrait un management plus simple des avancées. En réalité, l'outil n'a pas été adopté par tout le monde, il a été au fur et à mesures délaissé.
 
-![a](google_task.png)
+![a](google_task.webp)
 
 ## Pérennisation du savoir
 
@@ -199,7 +199,7 @@ Action :
 
 Dans la continuité du paragraphe précédent, il faut aussi penser à la passation pour les futurs membres et au recrutement. J'ai participé à l'élaboration du formulaire de recrutement qui a pour objectif de mettre en valeur les candidats qui correspondraient à l'engagement et aux valeurs recherchés.
 
-![recrutement](recrutement.png)
+![recrutement](recrutement.webp)
 
 ## Entretiens individuels
 

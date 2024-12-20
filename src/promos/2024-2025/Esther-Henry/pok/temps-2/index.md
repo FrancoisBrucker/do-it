@@ -31,7 +31,7 @@ En effet, dans les années 1990, les femmes représentaient environ 30 % des tra
 
 Par ailleurs, le schéma ci-dessous illustre bien le déficit de femmes s’orientant vers des études en informatique. On constate un pic dans les années 1980, suivi d’une baisse continue jusqu’à aujourd’hui, bien que la proportion de femmes en écoles d’ingénieur (toutes branches confondues) soit en augmentation. [3]
 
-![Femmes en SI](./images/Femme%20en%20info%20évolution.png)
+![Femmes en SI](./images/Femme%20en%20info%20évolution.webp)
 
 Nous allons alors dégager ici les différents facteurs de consolidation et de déconstruction des stéréotypes de genre des femmes dans les SI, identifiés dans les différentes sources de notre bibliographie (disponible en fin de page).
 

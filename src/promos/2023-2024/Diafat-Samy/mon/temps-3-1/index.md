@@ -19,7 +19,7 @@ Première expérience avec Java.
 Avoir un environnement de devéloppement type IntelliJ.
 {%endprerequis%}
 
-<img src="./illustration.jpg" alt="Illustration" style="width:50%;">
+<img src="./illustration.webp" alt="Illustration" style="width:50%;">
 
 
 J'ai choisi de suivre la formation de [Jean-Philippe Ehret](https://www.udemy.com/course/java-et-les-bases-de-donnees-avec-jdbc-hibernate-et-jpa/) à ce sujet, et je compte suivre les autres formations proposées sur son site.
@@ -39,12 +39,12 @@ Il est possible d'obtenir 30 jours d'essai gratuit sur toutes les formations Jav
 
 ## Présentation de la formation
 
-![Openclassroom_accueil](./firstillu.png)
+![Openclassroom_accueil](./firstillu.webp)
 
 
 L'enseignant de la formation est Jean-Philippe EHRET, voici sa description sur le site Udemy :
 
-![Openclassroom_accueil](./JP.png)
+![Openclassroom_accueil](./JP.webp)
 
 Voulant en apprendre plus sur le framework Spring que j'ai un peu manipulé dans l'option Java du temps 2, je suis tombé sur une vidéo youtube de Jean-Philippe que j'ai trouvé très pédagogue et surtout véritablement expert dans ce sujet.
 En me renseignant sur internet, j'ai vu qu'il proposait plusieurs formations Java sur Udemy, mais surtout sur son site [apprendre-java](https://apprendre-java.com/courses) (où les formations sont beaucoup moins chères).
@@ -70,7 +70,7 @@ Les cours sont assez classiques dans leur forme : un lecteur vidéo (avec la pos
 
 ### Comment valide-t-on nos connaissances ?
 
-![Openclassroom_accueil](./exemplechapitre.png)
+![Openclassroom_accueil](./exemplechapitre.webp)
 
 Généralement, il y a, au bout de chaque chapitre, un exercice similaire à ce qui a été traité dans les vidéos, permettant de refaire par soi-même les manipulations.
 

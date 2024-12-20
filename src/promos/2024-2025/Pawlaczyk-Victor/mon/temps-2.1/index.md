@@ -55,7 +55,7 @@ D'un point de vue marketing, cette fois-ci comme on l'a vu précédemment ce n'e
 
 Un dernier exemple qui synthétise toute cette partie est l'enceinte bluetooth nomade THE SWELL de Cabasse. Vendue à partir de 200 € selon les distributeurs, la seule enceinte nomade de la marque est déjà loin de la JBL GO à 50 €. Condensé de technologies de pointe, cette enceinte propose dans un format très compact et très léger des caractéristiques de qualité de son et de puissance bluffantes, décrochant haut la main le titre de [diapason d'or 2017](https://www.diapasonmag.fr/diapason-dor-hi-fi/enceintes/diapason-dor-2017-enceintes-connectees-cabasse-swell-24880.html). Le tout embarqué dans un équipement au design épuré, chic et élégant. On arrive ici aux antipodes de la gamme JBL : beaucoup moins chère, au design plus au service des besoins en robustesse et en puissance que de la beauté de l'enceinte elle-même.
 
-![Alternate](swell2.lifestyle.jpg)
+![Alternate](swell2.lifestyle.webp)
 
 Les entreprises s'inscrivant dans la partie luxueuse du marché audiophile fondent leur stratégie sur le progrès technique et la qualité de leur produit, quitte à devoir sacrifier le budget marketing, pour créer des produits dont la qualité parlera d'elle-même.
 

@@ -23,7 +23,7 @@ Lien vers le repo Github : https://github.com/AntwanV/POKcv
 Voici le wireframe : 
 
 <figure>
-  <img src="../assets/wireframe.png">
+  <img src="../assets/wireframe.webp">
   <figcaption>Wireframe du portfolio</figcaption>
 </figure>
 

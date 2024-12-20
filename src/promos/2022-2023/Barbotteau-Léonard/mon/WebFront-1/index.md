@@ -125,7 +125,7 @@ Pour faire ceci il suffit d'utiliser <strong>:active</strong> au bout d'une bali
 Je commence le projet en HTML et CSS en parallèle du point précédent en créant un fichier site.html. J'ai fait quelque chose de très simple mais qui m'a permis d'utiliser les connaissances acquises, de découvrir aussi plein de template en css ce qui je pense sera ma solution retenue à l'avenir. Je pense que se baser sur un css bien fourni et changer certains objets si besoin est plus efficace que faire tout son css soi-meme.
 
 Voici le résultat :
-![Fromage](imagesite.png "Image du site")
+![Fromage](imagesite.webp "Image du site")
 
 # 3. Apprentissage du Javascript
 

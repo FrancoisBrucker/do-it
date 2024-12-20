@@ -51,7 +51,7 @@ Voyons maintenant la structure basique d'un fichier HTML. On note que les élém
 ```
 Voici comment fonctionne la structure HTML : les éléments sont des blocs délimités par des balises, qui s'imbriquent les uns dans les autres dans un ordre précis.
 
-  ![Structure HTML](./structure_html.jpg "Structure HTML")
+  ![Structure HTML](./structure_html.webp "Structure HTML")
 
 Image : "La structure de base en HTML" OpenClassrooms, https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3/8061261-creez-votre-premiere-page-web-en-html.
 
@@ -85,7 +85,7 @@ On en profite au passage pour créer la page "à-propos" en question, qui contie
     <div class="autobio">
       <p>Vladimir est le créateur de ce site, c'est un étudiant de Centrale Méditerannée, et c'est aussi un homme très
       intelligent en plus d'être super drôle. Il n'y a pas grand-chose d'autre à dire.</p>
-      <img src = "images/moi.jpg" alt = "Vladimir à la plage" height = "300" width = "auto" />
+      <img src = "images/moi.webp" alt = "Vladimir à la plage" height = "300" width = "auto" />
     </div>
 </main>
 ```
@@ -119,7 +119,7 @@ La balise \<ul\> permet de créer une liste à puce, avec chaque point indiqué 
 
 Nous avons maintenant une page d'accueil qui indique ce qu'il y a à savoir sur le site. Voyons voir à quoi elle ressemble !! 
 
-![Résultat](site_moche.jpg)
+![Résultat](site_moche.webp)
 
 C'est laid. 
 
@@ -216,9 +216,9 @@ a:hover, a:active{
 
 Voici le résultat final : 
 
-![Page d'accueil](site_beau.jpg)
+![Page d'accueil](site_beau.webp)
 
-![Présentation élève](presentation.jpg)
+![Présentation élève](presentation.webp)
 
 ### Bibliographie 
 - Schéma "La structure de base en HTML" « Créez votre première page web en HTML ». OpenClassrooms, https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3/8061261-creez-votre-premiere-page-web-en-html.

@@ -236,7 +236,7 @@ Cette bas de donnée doit contenir les éléments suivants :
 + Commandes manufacture. Il s'agit des commandes passées pour le stock central, mais qui n'ont pas encore été livré. Ces quantités n'apparaissent donc pas encore dans le physique en stock. 
 + Commandes marchés. Il s'agit des commandes passées par les différents marchés et qui n'ont pas encore été expédiées. Ces quantités apparaissent donc encore dans le stock central physique. 
 
-![alt text](Images/BDPOK1.png)
+![alt text](Images/BDPOK1.webp)
 
 #### Lead Time
 Les bons de commande contiennent également une date de livraison demandée. Cette date de livraison dépend du fournisseur, une seconde feuille dans le classeur recense donc Lead Time en fonction du fournisseur (en mois).
@@ -362,7 +362,7 @@ wb.save('/Users/charlescook/Desktop/DO IT/fichier_modifié.xlsx')
 ````
 Ce code permet d'obtenir une feuille par manufacture qui permet de une order review par l'utilisateur chargé du processus de la commande mensuelle. 
 
-![alt text](<Images/Feuille Order Review.png>)
+![alt text](<Images/Feuille Order Review.webp>)
 
 #### Pistes d'amélioration du code
 
@@ -383,7 +383,7 @@ if Physique_Dispo<0 :
 Ce code vérifie pour chaque commande passée la valeur du Physique_Dispo. Si celui-ci est négatif, cela signifie que la somme du Stock physique dans le stok central et des commandes déjà passées à la manufacture est inférieure aux quantités passées par les marchés. Ainsi il est urgent de repasser une commande manufacture afin de répondre au besoin client.
 Dans ce cas, le code couleur "FFFF00" est attribué à la ligne, soit la couleur jaune. 
 Le résultat obtenu est le suivant : 
-![alt text](<Images/Code couleur.png>)
+![alt text](<Images/Code couleur.webp>)
 
 ### Création du fichier des bon de commande finaux
 
@@ -423,7 +423,7 @@ Les colonnes restantes qui ne sont pas nécessaires dans le bon de commande sont
 #### Résultat des bons de commande
 Le résultat obtenu en faisant tourner le code est donc le suivant.
 
-![alt text](<Images/Bon de commande.png>)
+![alt text](<Images/Bon de commande.webp>)
 
 ### Historisation des commandes mensuelles
 Il peut être intéressant, au niveau de l'analyse et de la vérification avant d'envoyer le bon de commande, d'avoir une vision globale sur les quantités qui ont été commandées lors des précédentes commeandes mensuelles. Pour cela, nous allons tenter de mettre en place un suivi de l'hitorique sur l'année. 
@@ -433,7 +433,7 @@ Cette partie historisation permet notamment de pouvoir comparer les quantités a
 
 #### Création d'une feuille *Suivi Historique Fournisseur*
 Afin de pouvoir suivre de manière précise l'historique des commandes mensuelles, nous avons créé une feuille Historique : 
-![alt text](<Images/Historique BD.png>)
+![alt text](<Images/Historique BD.webp>)
 
 La cellule *P2* doit être modifiée de manière manuelle par l'utilisateur, afin de renseigner le commande mensuelle de quelle mois va être passée. Ainsi, cela permet au moment de la génération des bons de commande finaux d'avoir une simulation des quantités par rapport aux précédentes. 
 
@@ -444,7 +444,7 @@ Au moment de la génération des bons de commande, le code suibvant permet d'ent
 wb2['Suivi Historique Four'].cell(row=3,column=hst+1).value = total
 ````
 On obtient ainsi le tableau complété suivant : 
-![alt text](<Images/Historique completed.png>)
+![alt text](<Images/Historique completed.webp>)
 
 Afin d'avoir une présentation plus visuelle de l'évolution des quantités de commande, le code suivant permet de présenter les données sous forme de graphique en barres, par manufacture :
 ````
@@ -458,7 +458,7 @@ wb2['Suivi Historique Four'].add_chart(chartObj, 'B12')
 ````
 
 Le résultat obtenu est le suivant : 
-![alt text](<Images/Tableaux historiuqes.png>)
+![alt text](<Images/Tableaux historiuqes.webp>)
 
 ## Pistes d'amélioration
 

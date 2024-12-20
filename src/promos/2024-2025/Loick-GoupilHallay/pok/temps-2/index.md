@@ -62,11 +62,11 @@ Le workflow de l'extension est le suivant:
 
 ### Webview
 L'extension dispose d'une **Webview** qui permet à l'utilisateur de consulter la liste des succès débloqués et en cours. Cela permet de garder un historique des succès débloqués et de voir les succès restants à débloquer.
-![Webview](./images/webview.png)
+![Webview](./images/webview.webp)
 
 ### Commandes
 L'extension ajoute des commandes custom à la palette VSCode à vscode:
-![Commandes](./images/commands.png)
+![Commandes](./images/commands.webp)
 - `achievements.enable`: Active / désactive l'extension
 - `achievements.settings`: Ouvre la configuration de l'extension
 - `achievements.show`: Ouvre la Webview des succès
@@ -74,7 +74,7 @@ L'extension ajoute des commandes custom à la palette VSCode à vscode:
 Il s'agit de raccourcis pour les actions les plus courantes.
 
 ### Settings
-![Settings](./images/settings.png)
+![Settings](./images/settings.webp)
 L'extension dispose de quelques paramètres de configuration:
 - `achievements.enabled`: Active / désactive l'extension
 - `achievements.logLevel`: Niveau de log de l'extension

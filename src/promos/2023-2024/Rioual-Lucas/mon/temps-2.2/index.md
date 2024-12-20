@@ -44,7 +44,7 @@ Je ne vais pas trop rentrer dans les détails de chaque bloc car Gabriel Barbe l
 
 Voici la première ébauche du Business Model Canvas de mon projet
 
-![Business model canvas.png](BMC.png)
+![Business model canvas.webp](BMC.webp)
 
 ## Proposition de valeur
 
@@ -74,7 +74,7 @@ Ensuite, je souhaite aussi vendre mon produit à des **bar à jeux**, qui peuven
 
 Les canaux peuvent être définis en  5 phases distinctes :
 
-![Différentes phases](Canaux.png)
+![Différentes phases](Canaux.webp)
 
 *Business Model Generation_ A Handbook for Visionaries, Game Changers, and Challengers*
 

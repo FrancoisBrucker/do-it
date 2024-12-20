@@ -32,7 +32,7 @@ Les découvertes de scientifiques tels que André-Marie Ampère, Michael Faraday
 L'invention du transistor en 1947 par William Shockley, John Bardeen et Walter Brattain chez les Bell Laboratories a marqué un tournant majeur dans l'histoire de l'électronique. Le transistor a remplacé les encombrants et fragiles tubes à vide par des dispositifs beaucoup plus petits, plus fiables et plus économes en énergie.
 Les dernières décennies du XXe siècle et le début du XXIe siècle ont été marquées par une révolution numérique sans précédent, caractérisée par l'émergence d'Internet, des smartphones, des ordinateurs personnels et d'une multitude d'autres dispositifs électroniques omniprésents dans la vie quotidienne.
 
-![Loi de Moore](image.png)
+![Loi de Moore](image.webp)
 
 Les capacités de calcul des processeur évolue très vite, avec une règle semi-logarithmique. Repoussant les limites physiques années après années. Les épaisseurs de gravure sont actuellement de 10nm, avec des recherches pour atteindre les 2nm.
 

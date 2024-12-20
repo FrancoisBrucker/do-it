@@ -46,7 +46,7 @@ Pour commencer ce travail de design, il est important de fixer une charte graphi
   
 Pour les couleurs, j'ai utilisé adobe color, (personnalisé, triade, monochrome, etc), voyons quelles combinaisons sont retenues: 
 
-![figma](figma_color.png)
+![figma](figma_color.webp)
 
 Comme j'apprécie plusieurs configurations et que je ne suis pas la seule sur le projet, je vais faire les mêmes designs mais avec différentes combinaisons afin qu'on puisse comparer au mieux.
 
@@ -55,8 +55,8 @@ Comme j'apprécie plusieurs configurations et que je ne suis pas la seule sur le
 
 Pour réaliser le logo, j'ai appris à utiliser (plus ou moins) l'application Canva. j'ai commencé par regarder une vidéo de 25 min sur la création de logo canva sur YouTube. Je suis partie de l'idée de faire un logo simple, avec du vert. j'ai fait les logos suivants :
 
-![figma](Protneatlogoavoca.png)
-![figma](protneatlogoavocat2.png)
+![figma](Protneatlogoavoca.webp)
+![figma](protneatlogoavocat2.webp)
 
 Pour l'instant je ne suis pas très convaincue mais je ne maitrise pas assez l'application. Je pense faire d'autres logo à l'avenir, au fur et à mesure que je prends en main l'application Canva.
 
@@ -67,23 +67,23 @@ Pour commencer, j'ai visité de nombreux sites de vente en ligne de nourriture o
 
 J'ai ensuite commencé par faire le design de la barre d'outils, qui sera la même sur toutes les pages (quand je l'aurai choisie):
 
-![figma](barre_outils.png)
+![figma](barre_outils.webp)
 
 ### Premières maquettes 
 
 Puis j'ai fait une première maquette simple de la page principale et d'une autre page avant de les mettre en forme. Je me suis rendue compte que la police d'écriture fixée par le porteur de projet n'était pas adéquat pour la totalité de la page. J'ai donc  essayé différents designs et police d'écriture dont certains résultats sont ci-dessous
 
 <div style="display:flex">
-<div><img src="maquette1.png"></div>
-<div><img src="maquette2.png"></div>
-<div><img src="maquette3.png"></div>
+<div><img src="maquette1.webp"></div>
+<div><img src="maquette2.webp"></div>
+<div><img src="maquette3.webp"></div>
 </div>
 
 J'ai également fait varier le code couleur 
 
 <div style="display:flex">
-<div><img src="maquette4.png"></div>
-<div><img src="maquette5.png"></div>
+<div><img src="maquette4.webp"></div>
+<div><img src="maquette5.webp"></div>
 </div>
 
 Je ne suis pas emballée par les images (trouvées sur internet) mais je sais qu'à l'avenir nous utiliserons nos propres photos et plats. 
@@ -131,22 +131,22 @@ L'objectif de ce second sprint était de retravailler et fixer la police d'écri
 - j'ai donc revu mes variants : 
 
 <div style="display:flex">
-<div><img src="composant1.png"></div>
-<div><img src="composant2.png"></div>
-<div><img src="composant3.png"></div>
+<div><img src="composant1.webp"></div>
+<div><img src="composant2.webp"></div>
+<div><img src="composant3.webp"></div>
 </div>
 
 ##### Logo 
 
 Pour ce qui est du logo, après de nouveaux essais j'ai préféré revenir sur une de mes premieres idées : 
 
-![figma](logofinal.png)
+![figma](logofinal.webp)
   
 ##### La barre d'outils 
 
 Pour finir avec la barre d'outils, j'ai réalisé d'autres essais et ajouté la bonne typographie ce qui donne le résulat suivant : 
 
-![figma](finalbarreoutil.png)
+![figma](finalbarreoutil.webp)
 
 ### Suite du maquettage 
 
@@ -158,7 +158,7 @@ Pour ce second sprint, j'ai continué le maquettage simple et détaillé des dif
 <div><img src="maquettemenu.pdf"></div>
 <div><img src="menu.pdf"></div>
 <div><img src="maquettefranchise.pdf"></div>
-<div><img src="franchise.png"></div>
+<div><img src="franchise.webp"></div>
 </div>
 
 Il faut noter que j'ai volontairement utilisé les mêmes photos en plusieurs fois car a terme nous utiliserons nos photos. Qui plus est, je n'ai pas trouvé les photos que je souhaitais sur internet.
@@ -168,7 +168,7 @@ Par la suite j'ai continué le maquettage en faisant notamment le composant de b
 
 Avec tous les éléments réunis, j'ai commencé à rendre la maquette interactive a l'aide des variants. Sur figma, la fonctionnalité prototype permet de visualiser le site et les différentes pages et de donner suite aux boutons cliquables.
 
-![figma](design.png)
+![figma](design.webp)
 
 j'ai ensuite apporté des modifications aux différentes pages et composants.
 

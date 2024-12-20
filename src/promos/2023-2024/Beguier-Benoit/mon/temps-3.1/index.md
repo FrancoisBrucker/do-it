@@ -41,17 +41,17 @@ Pour la réalisation de ce cours, je me réfèrerais aux sources listées ci-des
 
 *CNC machines*, que l'on appelle machine CNC en français, est une machine contrôlée par ordinateur qui va usiner une pièce (en général un bloc de matière appelé **brut**). CNC est l'abréviation de *Computer Numerical Control* , c'est-à-dire commande numérique par ordinateur. Les machines CNC les plus répandues sont les fraiseuses, qui permettent d'usiner la pièce fixée par rotation des outils sur les axes de la machine, ou les tours, qui cette fois font tourner la pièce par rapport aux outils fixés. Les CNC sont en général à 3 axes (et donc travailler la pièce selon 2 plans), mais les plus perfectionnées bénéficient de 4 et 5 axes (avec 2 axes de rotation en plus). En gros, la topologie formée par une 3-axes est un cube, tandis que c'est une sphère par une 5-axes.
 
-![Fraiseuse](Fraiseuse.png)
+![Fraiseuse](Fraiseuse.webp)
 
 Source de l'image : fraiseusecnc.com
 
-![5axe](5-axes.jpg)
+![5axe](5-axes.webp)
 
 Source de l'image : RPWorld.com
 
 L'usinage en CNC permet de jouir d'une grande précision d'usinage, que ce soit en surfaçage ou en alésage. Par exemple, c'est grâce à la CNC que l'on peut usiner convenablement un palier à roulements, surface demandant une très grande précision et admettant une tolérance très faible.
 
-![Palier](Palier.png)
+![Palier](Palier.webp)
 
 {% exercice %}
 Et le G-code dans tout ça ?
@@ -59,7 +59,7 @@ Et le G-code dans tout ça ?
 
 Le G-code est le langage de transmission des consignes de commmandes à la CNC. Cela traduit les consignes de vitesse d'avance, de vitesse de rotation des outils et les points d'arrêts de la machine. Les différentes consignes sont divisées en séquence d'usinage.
 
-![Gcode](gcode.png)
+![Gcode](gcode.webp)
 
 Source de l'image : CNC Kitchen.com
 
@@ -71,7 +71,7 @@ La **nomenclature des phases** est le document qui recense l'ensemble des phases
 
 Exemple de nomenclature des phases :
 
-![nomenclature](nomenclature.png)
+![nomenclature](nomenclature.webp)
 
 ## Gamme d'usinage
 
@@ -79,20 +79,20 @@ La gamme d'usinage est un document qui recense chaque phase de l'usinage, et pou
 
 Exemple d'une gamme d'usinage :
 
-![gamme](gamme.png)
+![gamme](gamme.webp)
 
 ## La Fabrication Assistée par Ordinateur
 
 Actuellement, la création de G-code *ex nihilo* se fait de plus en plus rare. Les ingénieurs fabrication utilisent les outils de Fabrication Assistée par Ordinateur (FAO), tels que les logiciels Delmia (Dassault Système). Ces logiciels permettent de représenter le brut sur l'ordinateur, utiliser un clone numérique de la machine CNC utilisée, simuler les MIP et les MAP, et enfin obtenir la pièce usinée simulée par le logiciel.
 
-![fao](fao.png)
+![fao](fao.webp)
 
 J'ai effectué un test sur le logiciel Delmia sur la pièce suivante que j'ai créé moi-même :
 
-![upright](upright.png)
+![upright](upright.webp)
 
 Voici un extrait du résultat obtenu avec Delmia :
 
-![fao](fao_exemple.jpg)
+![fao](fao_exemple.webp)
 
 Le logiciel permet donc de générer le G-code fonctionnel, et de le tester en amont pour s'assurer que le résultat sera celui que l'on souhaite. Il est tout à fait possible d'écrire tout le G-code soit même, cependant ce n'est plus du tout la manière de faire actuelle et avec une fiabilité plus faible.

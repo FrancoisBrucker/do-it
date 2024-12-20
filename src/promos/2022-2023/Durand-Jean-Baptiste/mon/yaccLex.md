@@ -39,7 +39,7 @@ Comment fonctionne le language machine - binaire - et comment créer un compilat
 Le language machine est un **language informatique reconnu par l'ordinateur** et qu'il peut executer directement sans l'aide d'un intermédiaire (pas besoin d'un interpréteur de language).
 Par exemple, le C est un language informatique compilé, et Python est un language interprété.
 
-<img src="../Image/differencePyC.jpg" alt="Arbre de calcul" style="height: 400px; margin: 0 auto; border: 0" />
+<img src="../Image/differencePyC.webp" alt="Arbre de calcul" style="height: 400px; margin: 0 auto; border: 0" />
 
 |       | Avantage | Inconvénient |
 | ----------- | ----------- | -------- |
@@ -185,7 +185,7 @@ On définit qu'un calcul peut être l'addition de 2 calculs, la différence entr
 L'objectif va être de construire un arbre pour faire les opérations.
 Par exemple pour le calcul suivant **12+4*(7+2)**, l'arbre suivant sera généré :
 
-<img src="../Image/treeYacc.jpg" alt="Arbre de calcul" style="height: 200px; margin: 0 auto; border: 0" />
+<img src="../Image/treeYacc.webp" alt="Arbre de calcul" style="height: 200px; margin: 0 auto; border: 0" />
 
 Cet arbre est ensuite parcouru en Postfixe, ce qui donne :
 

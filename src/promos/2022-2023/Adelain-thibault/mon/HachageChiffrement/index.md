@@ -114,7 +114,7 @@ Voyons d'abord séparément les briques pour construire une connexion sécurisé
 
 **Cryptographie symétrique**
 
-![Cryptographie symétrique](chiffrement_sym.png)
+![Cryptographie symétrique](chiffrement_sym.webp)
 La cryptographie symétrique en image (par [libreCours](https://librecours.net/module/culture/intro-chiffrement/chiffrement-sym.xhtml)).
 
 La [Cryptographie symétrique](https://fr.wikipedia.org/wiki/Cryptographie_sym%C3%A9trique) est connu depuis longtemps (Antiquité). Elle consiste simplement à chiffrer et déchiffrer un message avec une même clé. Le chiffrement symétrique est très rapide tout en permettant une sécurité plus que raisonnable. Par exemple, pour [AES](https://fr.wikipedia.org/wiki/Advanced_Encryption_Standard), l'algorithme le plus utilisé, la clé est stockée sur 128 bits (donc $2^{128}$ clés possibles). Il peut être considéré comme *sûr* tant qu'il n'y a pas de meilleure attaque que par force brute.
@@ -140,7 +140,7 @@ La procédure pour transmettre une clé de chiffrement **symétrique** à l'aide
    1. Avec votre clé privée : elle permettra de vous authentifier,
    2. Avec la clé publique du serveur : elle permettra à ce que seul le serveur puisse déchiffrer le message à l'aide de sa clé privée.
 
-![Chiffrement asymétrique](Chiffrement_asymétrique.jpg)
+![Chiffrement asymétrique](Chiffrement_asymétrique.webp)
 La cryptographie asymétrique en image (par Jp.simon.manz sur [wikipedia](https://fr.wikipedia.org/wiki/Cryptographie_asym%C3%A9trique)). Le condensat est simplement une manière de vérifier que le message n'a pas été modifié après l'envoi (c'est le résultat de la [*checksum*](https://fr.wikipedia.org/wiki/Somme_de_contr%C3%B4le)). En pratique, vous n'avez pas besoin de transmettre votre clé publique au serveur, car vous authentifier n'est pas nécessaire pour lui. Pour la communication, il suffit que vous lui transmettez votre clé de chiffrement symétrique chiffrée avec sa clé publique. Vous pourrez ensuite discuter de façon sécurisée.
 
 Aujourd'hui, on utilise principalement le [chiffrement RSA](https://fr.wikipedia.org/wiki/Chiffrement_RSA) comme algorithme de cryptographie asymétrique. Les clés utilisées font de 1024 à 2048 bits (beaucoup plus que les 128 bits de [AES](https://fr.wikipedia.org/wiki/Advanced_Encryption_Standard)). Les communications restent rapide car on se contente seulement de transmettre la clé de chiffrement symétrique. On ne sécurise pas seulement les connexions https avec RSA, mais aussi les terminaux de paiement par exemple. Nous devons donc nous assurer de la sûreté de cette algorithme. Le temps pour *craquer* la clé privée du chiffrement RSA croit exponentiellement avec la longueur de la clé. En 2020, le plus long message *craqué* faisait 829 bits. Les clés utilisées aujourd'hui sont encore considérées comme *sûres*, ce qui pourrait être remis en question avec les [ordinateurs quantiques](https://fr.wikipedia.org/wiki/Calculateur_quantique), qui ont des [algorithmes de factorisation](https://fr.wikipedia.org/wiki/Algorithme_de_Shor) beaucoup plus efficaces que les ordinateurs classiques (mais pas d'inquiétude, d'autres ont pensé à des méthodes de [cryptographie quantique](https://fr.wikipedia.org/wiki/Cryptographie_quantique)...).
@@ -153,7 +153,7 @@ Enfin bref, avec ce procédé, vous pouvez enfin commencer à communiquer (et pl
 
  En supposant que le serveur est Alice, le *hacker* est Êve et que vous êtes Bob :
 
-![*man in the middle*](MITM.png)
+![*man in the middle*](MITM.webp)
 
 Man in the middle (image par [Liu Tao](http://tao93.top/2020/03/31/Secure%20communication%20basics/)).
 
@@ -165,7 +165,7 @@ Pour éviter ce type d'attaque, on utilise des certificats pour établir une con
 
 Voici ce que contient un [certificat](https://fr.wikipedia.org/wiki/Certificat_%C3%A9lectronique) :
 
-![Certificat](Cerificat.png)
+![Certificat](Cerificat.webp)
 
 Cerficat en image (par [Yann Bidon](https://www.youtube.com/watch?v=FSq-FXx5dxU&t=1s&ab_channel=YannBidon)).
 

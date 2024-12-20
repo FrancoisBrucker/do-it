@@ -104,7 +104,7 @@ SELECT * FROM villes_france_free WHERE ville_departement=84;
 Ce code permet de créer un table temporaire des villes vauclusiennes dans l'odre alphabétique.
 
 **Résultats**
-![Villes Vaucluse Triées](<Images/Villes Vaucluse Triées.png>)
+![Villes Vaucluse Triées](<Images/Villes Vaucluse Triées.webp>)
 
 {%enddetails%}
 
@@ -129,7 +129,7 @@ LIMIT 10;
 Ce code permet d'extraire les 10 villes les moins peuplées, dans l'ordre croissant du nombre d'habitants.
 
 **Résultats**
-![TOP 10 villes les moins peuplées](<Images/TOP 10 des villes les moins peuplées en 2010.png>)
+![TOP 10 villes les moins peuplées](<Images/TOP 10 des villes les moins peuplées en 2010.webp>)
 
 {%enddetails%}
 
@@ -194,7 +194,7 @@ ORDER BY COUNT(ville_nom) DESC;
 ````
 
 **Résultats**
-![Doublons noms de villes](<Images/Doublon noms de ville.png>)
+![Doublons noms de villes](<Images/Doublon noms de ville.webp>)
 
 La première colonne donne les noms de ville donnés plusieurs fois et la seconde fait apparaître combien de fois le nom a été donné.
 
@@ -228,7 +228,7 @@ SELECT * FROM villes_france_free;
 ````
 
 **Résultats**
-![Ajout NY](<Images/Ajout NEW YORK.png>)
+![Ajout NY](<Images/Ajout NEW YORK.webp>)
 
 On remarque qu'une ligne a été ajouté à la fin de la table, pour la ville de New-York.
 
@@ -275,7 +275,7 @@ Il existe différents types de jointure :
 -   FULL (OUTER) JOIN : renvoie toutes les lignes quand il y a une correspondance dans la table de gauche ou de droite
 -   SELF JOIN : réalise une jointure d’une table avec elle-même
 
-![Types de jointures](<Images/types de jointures.png>)
+![Types de jointures](<Images/types de jointures.webp>)
 *[Source : w3schools](https://www.w3schools.com/sql/sql_join.asp)*
 
 **Dans notre exemple, nous avons dans la table *villes_france_free* les départements uniquement renseignés par numéro. Nous allons tenter de réaliser une jointure avec la table *departement* pour renseigner également le nom du département.**
@@ -292,7 +292,7 @@ ORDER BY t1.ville_nom;
 ````
 
 **Résultats**
-![Jointure départements](<Images/Jointure département.png>)
+![Jointure départements](<Images/Jointure département.webp>)
 Le résultat ci-dessus montre que nous pouvons à présent, grâce à la jointure réalisée entre les deux tables, faire apparaître le nom complet du département auquel appartient la ville et non plus seulement son numéro.
 
 {%enddetails%}
@@ -416,7 +416,7 @@ Les lignes sont quant à elles classées en fonction du nombre de médailles d'o
 {%enddetails%}
 
 Le résultat de la requête est donc le tableau des médailles suivant, réalisé sur l'ensemble des médailles reçues lors des éditions de 1924 à 2010 : 
-![Tableau des médailles](<Images/Tableau des médailles.png>)
+![Tableau des médailles](<Images/Tableau des médailles.webp>)
 
 ###### Question 2 : Quel pays est en tête du classement des médailles par édition ?
 
@@ -455,7 +455,7 @@ En réalisant une jointure sur les années, on obtient ainsi le résultat ci-des
 {%enddetails%}
 
 On obtient ainsi le table suivante, donnant le meilleur pays par année en nombre de titre (médailles d'or) :
-![Meilleur pays par année](<Images/Meilleur payspar année.png>)
+![Meilleur pays par année](<Images/Meilleur payspar année.webp>)
 *Remarque : On pourrait être plus précis en prenant en compte égalelement le nombre de médailles d'argent et de bronze*
 
 ###### Question 3 : Quel est le classement dans le tableau des médailles de chaque pays par édition ?
@@ -492,7 +492,7 @@ Le résultat obtenu, trié par Pays et par Année, est ci-dessous.
 {%enddetails%}
 
 Le résultat obtenu est le suivant :
-![Classement par année](<Images/Classement des médailles par année.png>)
+![Classement par année](<Images/Classement des médailles par année.webp>)
 
 ###### Question 4 : Sur l'ensemble des éditions entre 1924 et 2010, quel pays est le meilleur dans chaque discipline ?
 
@@ -527,7 +527,7 @@ La méthode utilisée pour cette question est la même que pour la question 2, e
 {%enddetails%}
 
 On obtient ainsi la table suivante : 
-![Meilleur par discipline](<Images/Meilleure pays dans chaque discipline.png>)
+![Meilleur par discipline](<Images/Meilleure pays dans chaque discipline.webp>)
 
 ###### Question 5 : La performance du pays organisateur (en termes de nombre de médailles) est-elle supérieur que lorsque le même pays n'est pas organisateur ?
 
@@ -618,7 +618,7 @@ FROM(
 {%enddetails%}
 
 Le résultat obtenu est la table suivante : 
-![Moyenne médailles](<Images/Moyenne Médailles dom-ext.png>)
+![Moyenne médailles](<Images/Moyenne Médailles dom-ext.webp>)
 
 On remarque à l'aide de cette table que pour la totalité des pays ayant organisé les JO d'hiver (excepté pour la Suisse et l'Allemagne), les performances à domicile sont, au pire, égales à celles à l'extérieur, mais pour la plupart, les performances à domicile sont significativement meilleures (en termes de nombre total de médailles obtenues).
 
@@ -641,11 +641,11 @@ spotify_tracks=pd.read_csv('/Users/charlescook/Desktop/spotify_tracks.csv')
 
 print(spotify_tracks.head())
 ````
-![Base de données](<Images/Capture d’écran 2024-12-12 à 15.31.45.png>)
+![Base de données](<Images/Capture d’écran 2024-12-12 à 15.31.45.webp>)
 
 Les explications et types de données de chacune des colonnes sont données ci-après : 
 
-![Type de données](<Images/Capture d’écran 2024-12-12 à 15.42.41.png>)
+![Type de données](<Images/Capture d’écran 2024-12-12 à 15.42.41.webp>)
 
 - track_id: Spotify ID pour le morecau.
 - track_name: Nom du morceau.
@@ -693,7 +693,7 @@ plt.show()
 
 Le résultat obtenu est le suivant : 
 
-![Popularité moyenne par langue V1](<Images/Capture d’écran 2024-12-12 à 16.33.56.png>)
+![Popularité moyenne par langue V1](<Images/Capture d’écran 2024-12-12 à 16.33.56.webp>)
 
 On remarque que le Coréen est la langue avec le plus grand indice de popularité moyen, suivi par le Hindi. Pourtant, l’anglais étant la langue la plus parlé au monde, il est surprenant de voir ce résultat. Nous allons donc approfondir la recherche afin de s'assurer de la cohérence du résultat.
 
@@ -717,7 +717,7 @@ plt.show()
 
 On obtient les résultats suivants : 
 
-![Nombre de morceaux par langue](<Images/Capture d’écran 2024-12-12 à 17.16.30.png>)
+![Nombre de morceaux par langue](<Images/Capture d’écran 2024-12-12 à 17.16.30.webp>)
 
 On observe alors que les morceaux en anglais sont beaucoup plus nombreux que les morceaux en Coréen ou Hindi. Il peut y aoir ainsi une fausseté dans la représentativité des données (la présence que de morceaux coréens populaires par exemple). Analysons ainsi l'écart type pour vérifier cette théorie : 
 
@@ -741,7 +741,7 @@ plt.show()
 
 On obtient le graphe suivant : 
 
-![Ecart type popularité langue](<Images/Capture d’écran 2024-12-12 à 17.07.33.png>)
+![Ecart type popularité langue](<Images/Capture d’écran 2024-12-12 à 17.07.33.webp>)
 
 On remarque ainsi au travers de l’écart type des musiques coréennes par exemple que les musiques sélectionnées ont toutes un niveau de popularité assez élevé. Ceci fausse l’analyse. Nous allons donc explorer deux hypothèses afin de minimiser cet effet sur les résultats. 
 
@@ -764,7 +764,7 @@ plt.show()
 ````
 {%enddetails%}
 
-![Hypothèse 1 popularité](<Images/Capture d’écran 2024-12-12 à 17.29.48.png>)
+![Hypothèse 1 popularité](<Images/Capture d’écran 2024-12-12 à 17.29.48.webp>)
 
 On note alors des résultats différents dans lesquels, parmi les morceaux ayant déjà un indice de popularité assez élevé, les morceaux en anglais sont les plus populaires.
 
@@ -789,7 +789,7 @@ plt.show()
 ````
 {%enddetails%}
 
-![Hypothèse 2 popularité](<Images/Capture d’écran 2024-12-12 à 17.44.12.png>)
+![Hypothèse 2 popularité](<Images/Capture d’écran 2024-12-12 à 17.44.12.webp>)
 
 Cette seconde hypothèse corrobore les résultats de l'hypothèse 1, en montrant que parmi les musiques les plus populaires par langue, les musiques en anglais ont un indice moyen de popularité plus élevé que les autres langues.
 
@@ -819,7 +819,7 @@ Ce code est écrit avec Seaborn, car je trouve la rédaction plus intuitive. Dan
 
 Le résultat obtenu est le suivant : 
 
-![Lien entre la positivité et la dansabilité](<Images/Capture d’écran 2024-12-12 à 18.13.00.png>)
+![Lien entre la positivité et la dansabilité](<Images/Capture d’écran 2024-12-12 à 18.13.00.webp>)
 
 On remarque une tendance avec ce graphique : l'indice de positivité semble augmenter avec l'indice de dansabilité. Ainsi, on peut admettre qu'un morceaux positif est de manière générale plus dansant. 
 
@@ -844,7 +844,7 @@ plt.show()
 
 Le résultat obtenu est le suivant :
 
-![Lien entre dansabilité et popularité](<Images/Capture d’écran 2024-12-12 à 18.19.33.png>)
+![Lien entre dansabilité et popularité](<Images/Capture d’écran 2024-12-12 à 18.19.33.webp>)
 
 Le graphe précédent ne permet pas de mettre en lumière un lien évident entre l'indice de dansabilité d'un morceau et son indice de popularité. 
 
@@ -879,7 +879,7 @@ plt.show()
 
 Le résultat obtenu est le suivant :
 
-![Répartition modes V1](<Images/Capture d’écran 2024-12-13 à 14.30.52.png>)
+![Répartition modes V1](<Images/Capture d’écran 2024-12-13 à 14.30.52.webp>)
 
 Cependant, on remarque que pour les langues ayant peu de morceaux répertoriés dans la base de données, les résultats sont difficilement lisibles. On peut donc réaliser le même graphique en pourentage pour une meilleure lisibilité : 
 
@@ -903,7 +903,7 @@ plt.show()
 ````
 {%enddetails%}
 
-![repartition modes V2](<Images/Capture d’écran 2024-12-13 à 14.39.52.png>)
+![repartition modes V2](<Images/Capture d’écran 2024-12-13 à 14.39.52.webp>)
 
 On remarque beaucoup plus aisément ainsi qu'il n'y a pas d'évolution de la répartition entre les modes majeurs et mineurs en fonction de la langue.
 
@@ -934,7 +934,7 @@ plt.show()
 
 On obtient ainsi les évolutions suivantes : 
 
-![Evolutions au cours des ans](<Images/Capture d’écran 2024-12-13 à 15.13.35.png>)
+![Evolutions au cours des ans](<Images/Capture d’écran 2024-12-13 à 15.13.35.webp>)
 
 On remarque une tendance de la valence (indice de joie) à la baisse depuis les années 1990. Ce n’est cependant pas le cas de l’indice d’énergie et de dansabilité. 
 
@@ -987,7 +987,7 @@ plt.show()
 
 On obtient ainsi les 5 artistes les plus populaires par langue : 
 
-![Top 5 artistes](<Images/Capture d’écran 2024-12-13 à 16.30.23.png>)
+![Top 5 artistes](<Images/Capture d’écran 2024-12-13 à 16.30.23.webp>)
 
 {%details "Analyse tempo" %}
 De la même manière, j'ai voulu étudier le tempo par langue, mais le résultat ne donne rien de concluant permettant d'être utilisable.
@@ -1020,7 +1020,7 @@ for i, langue in enumerate(langues):
 plt.tight_layout()
 plt.show()
 ````
-![Tempos](<Images/Capture d’écran 2024-12-15 à 14.31.44.png>)
+![Tempos](<Images/Capture d’écran 2024-12-15 à 14.31.44.webp>)
 {%enddetails%}
 
 #### Conclusion Second Sprint

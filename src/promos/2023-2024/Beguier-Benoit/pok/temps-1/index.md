@@ -66,7 +66,7 @@ Je décide de m'orienter vers le package *MATLAB and Simulink Racing Lounge: Veh
 #### Prise en main de la bibliothèque
 J'ai commencé par me mettre à jour sur le contenu de la bibliothèque. Celle-ci étant très fournie, j'effectue alors des petits tests pour visualiser des données simples, telles que l'angle du volant.
 
-![Biblio Simulink](Bibliothèque.png)
+![Biblio Simulink](Bibliothèque.webp)
 
 J'ai visualisé la vidéo de présentation d'une trentaine de minutes afin de mieux me familiariser avec le package.
 
@@ -85,17 +85,17 @@ Vous pourrez trouver plus d'informations sur le cycle EPA US06 [ici](https://www
 Pour ma modélisation, le pilote applique une force de traction (opérée par la pédale d'accélérateur) sur le véhicule pour que le véhicule ait la vitesse la plus proche possible de celle exigée par le cycle de référence. Le pilote agit donc comme un correcteur.
 Le véhicule est quant à lui modélisé à partir des lois physiques auxquelles il obéit, et que je ne détaillerai pas dans ce POK. Je les ajouter cependant dans l'Annexe en fin de document pour les intéressés.
 
-![Premier modèle](Simulink1.png)
+![Premier modèle](Simulink1.webp)
 
 
 #### Résultats
 Après avoir exécuté la modélisation Simulink, j'obtiens un graphique comparant la vitesse exigée par le cycle et la vitesse réelle de la monoplace. Nous constatons que ces deux courbes sont **très proches** et qu'il faut zoomer pour voir une différence. 
 
-![graphe1](Graphe1.png)
+![graphe1](Graphe1.webp)
 
 L'écart le plus important que j'ai noté est de 0.2 mph (comprenez *miles per hour*), soit en comparant à la vitesse demandée un **écart de 0.3%**. 
 
-![graphe2](Graphe2.png)
+![graphe2](Graphe2.webp)
 
 Nous pouvons affirmer que nous respectons ce cycle de conduite, et que la force de traction ainsi que la puissance utilisées pour cette masse sont tout à fait adéquates pour le respecter.
 
@@ -129,11 +129,11 @@ Les paramètres suivants sont ainsi ajoutés :
 La transmission est assez simple. Elle doit simplement transmettre le couple du moteur au modèle de point matériel. Elle prend en entrée le couple moteur, la force de freinage provenant de notre sous-système de conduite et la vitesse du véhicule. Les sorties de la chaîne cinématique sont la force de traction que nous envoyons au point matériel et la vitesse du moteur.
 
 La chaîne dans son entièreté est représentée ci-dessous :
-![chaine](Simulink.png)
+![chaine](Simulink.webp)
 
 #### Résultats
 Je décide de lancer la modélisation avec la même "stimulation" en entrée, c'est-à-dire le cycle de vitesse de référence US06. Voici le résultat en sortie du bloc du véhicule :
-![resultat](Graphe2-1.png)
+![resultat](Graphe2-1.webp)
 
 Dans l'ensemble, la courbe bleue est moins proche de la courbe jaune (ici la référence). Je rajoute un bloc qui permet d'afficher les écarts moyens, j'obtiens en moyenne un écart de **0.4 mph** là ou il représentait 0.05 mph pour le modèle précédent.
 
@@ -141,11 +141,11 @@ Il est aussi utile de s'intéresser aux résultats locaux, c'est-à-dire aux  r�
 
 - Lors des consignes d'accélération vive, la réponse est très en retard, de l'ordre de **2 secondes**, ce qui se traduit par une différence de vitesse instantanée par rapport à la référence de **10 mph** soit environ **16%**!
 
-![forte accel](Graphe2-2.png)
+![forte accel](Graphe2-2.webp)
 
 - Lors des consignes constantes avec une petite oscillation, on constate un écart de vitesse par rapport à la référence d'environ **0.25 mph**.
 
-![CONSTANCE](Graphe2-3.png)
+![CONSTANCE](Graphe2-3.webp)
 
 #### Conclusion sur le modèle
 Il m'est assez difficile de conclure sur la pertinence de mon modèle et sur sa précision. En rajoutant plus de paramètres, les courbes semblent montrer que le modèle est plus difficilement maniable et adaptable par rapport au cycle de référence. 
@@ -167,20 +167,20 @@ La première fonction MATLAB prend en argument un fichier Excel à remplir. Celu
 J'ai rempli le fichier à partir des données techniques et du règlement technique 2022 de la Formule 1 (disponible [ici](https://www.fia.com/sites/default/files/2022-2023_season_9_formula_e_techregs_wmsc_07.12.2022_eng_fr_marked_up.pdf)). J'ai néanmoins du faire quelques approximations, notamment sur les rayons des disques de frein ainsi que celui des roues. En effet, la structure du fichier ne permet de rentrer qu'un seul rayon en supposant qu'il est identique pour les quatres roues, cependant celui-ci varie entre l'essieu avant et l'essieu arrière. J'ai à chaque fois indiqué dans le document le rayon le plus petit (celui de l'essieu AR)
 J'ai extrait les rapport de boîte en me basant sur ceux provenant de la Redbull RB18 (*[Source](https://answers.ea.com/t5/General-Discussion/Gear-ratios-ERS/m-p/12443280)*).
 
-![excel](EXCEL.png)
+![excel](EXCEL.webp)
 <p style="text-align: center;">Extrait du fichier Excel recensant les paramètres du véhicule à partir du règlement FIA 2022.</p>
 
 
 
 
-![regime](Couple%20vs%20RPM.png)
+![regime](Couple%20vs%20RPM.webp)
 <p style="text-align: center;">Détail du couple moteur associé à chaque régime moteur.</p>
 
 
 
 J'obtiens la visualisation ci-dessous une fois le programme exécuté :
 
-![image](PrintVehicle.png)
+![image](PrintVehicle.webp)
 
 - La courbe **Engine Curve** affiche la puissance (en chevaux, *hp*) et le couple disponibles en fonction du régime moteur. Le couple maximal de 350 N.M est disponible à 13 000 tr/min, tandis que la puissance maximale de 750 hp est disponible à 18 000 tr/min.
 Il est nécessaire d'ajouter que les Formule 1 actuelles (y compris celles de 2022 comme notre modélisation) génèrent plus de 1000 hp dans la réalité mais à l'aide d'un système électrique additionnel (ERS, composé de MGU-H et MGU-K, plus d'infos [ici](https://www.info-auto-moto.fr/qu-est-ce-que-ers-en-f1/)).
@@ -670,11 +670,11 @@ end
 
 #### OpenTRACK
 De la même manière, OpenTRACK fonctionne en prenant en argument un fichier Excel contenant les informations de piste comme la distance, l'inclinaison de la piste, les virages, etc. Il est aussi possible de générer ses propres circuits. J'ai pour ma part choisi de représenter mon circuit favori, le circuit de Spa-Francorchamps (situé à Francorchamps, Belgique). Le fichier ressemble à ça :
-![piste](Spa.png)
+![piste](Spa.webp)
 
 Une fois le code exécuté, on obtient alors une visualisation de la carte de la piste :
 
-![print](PrintSpa.png)
+![print](PrintSpa.webp)
 
 Nous pouvons observer les trois secteurs (respectivement en violet, bleu et jaune). A droite, le programme trace le graphe des courbures du circuit (c'est-à-dire le rayon des virages), l'altitude et l'inclinaison (par rapport au Nord) selon le kilométrage. 
 Nous ne nous intéresserons pas au banking et facteur d'adhérence dans ce POK. 
@@ -1478,7 +1478,7 @@ Le but de cette partie est de simuler le comportement de notre modélisation eff
 
 Nous obtenons les résultats suivants :
 
-![resultat](PrintDrag.png)
+![resultat](PrintDrag.webp)
 
 Compilation des résultats :
 - **16 s** pour parcourir 1000 m
@@ -2094,7 +2094,7 @@ Nous obtenons un temps de **1'39"196**. Celui-ci mets une raclée au record éta
 
 Le rapport suivant est obtenu :
 
-![rapport](printLap.png)
+![rapport](printLap.webp)
 
 Je suis plus que satisfait par le résultat obtenu. Voici les principaux points sur lesquels je m'attarde :
 - La première courbe affiche la vitesse du véhicule en fonction de la distance sur le circuit. La courbe seule n'est qu'indicative, mais en combinant plusieurs simulations (par exemple en changeant la charge aéro de la voiture), nous pourrons constater instantanément les différences (dans notre cas, en vitesse de pointe par exemple).
@@ -3203,22 +3203,22 @@ Je suis très satisfait de ce que j'ai pu expérimenter durant ce POK. J'aurais 
 ## Annexe
 #### Annexe 1
 Modélisation physique du problème :
-![forces](forces.png)
+![forces](forces.webp)
 
 Source : Mathworks.
 
 #### Annexe 2
 Voici les équations qui régissent le mouvement de la monoplace dans la partie 3 :
-![Equations](equations.png)
+![Equations](equations.webp)
 
 Source : Zongxuan Sun, Guoming G. Zhu, *Design and Control of Automotive Propulsion Systems*, e-Book.
 
 #### Annexe 3
 Voici le détail du bloc Monoplace dans la partie 3 :
 
-![GLIDER](modeleglider.png)
+![GLIDER](modeleglider.webp)
 
 #### Annexe 4
 Voici le détail du bloc Pilote dans la partie 3 :
 
-![DRIVER](modeledriver.png)
+![DRIVER](modeledriver.webp)

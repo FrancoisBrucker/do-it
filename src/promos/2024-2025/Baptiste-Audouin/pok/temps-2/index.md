@@ -48,13 +48,13 @@ Après ce cours j'ai réalisé une "maquette" afin de définir un premier visuel
 
 {% details "Maquette" %}
 
-![Maquette](./images/maquette_snake.png)
+![Maquette](./images/maquette_snake.webp)
 
 {% enddetails %}
 
 Après cette maquette j'ai commencé à réaliser le visuel, en voici le résultat :
 
- <div><img src="./images/snake_visuel_1.png"></div>
+ <div><img src="./images/snake_visuel_1.webp"></div>
 
 Pour le reste du temps de ce premier sprint j'ai regardé les anciens projets similaires sur le site do_it et notamment le [memory](https://francoisbrucker.github.io/do-it/promos/2023-2024/William%20Lalanne/pok/temps-1/). J'ai ensuite commencé à découvrir et m'exercer sur JavaScript notamment avec le site web [developer mozilla](https://developer.mozilla.org/en-US/).
 
@@ -86,7 +86,7 @@ Ce qui signifie que quand le score est de 1 la boucle s'effectue toutes les 119,
 
 {% details "Vitesse" %}
 
-![Code de l'évolution de la vitesse](./images/code_vitesse.png)
+![Code de l'évolution de la vitesse](./images/code_vitesse.webp)
 
 {% enddetails %}
 
@@ -96,7 +96,7 @@ Pour implémenter le calcul et l'affichage du record il fallait créer une fonct
 
 {% details "Record" %}
 
-![Code du Record](./images/code_record.png)
+![Code du Record](./images/code_record.webp)
 
 {% enddetails %}
 
@@ -108,7 +108,7 @@ Pour des questions de jouabilité, j'ai choisi de faire apparaître un obstacle 
 
 {% details "Obstacles" %}
 
-![Code des obstacles](./images/code_obstacles.png)
+![Code des obstacles](./images/code_obstacles.webp)
 
 {% enddetails %}
 
@@ -119,12 +119,12 @@ J'ai également ajouté un visuel au début pour que l'utilisateur puisse choisi
 
 {% details "Modes" %}
 
-![Code du choix des modes](./images/code_mode.png)
+![Code du choix des modes](./images/code_mode.webp)
 
 {% enddetails %}
 {% details "Visuel" %}
 
-![Visuel du choix des modes](./images/choix_mode.png)
+![Visuel du choix des modes](./images/choix_mode.webp)
 
 {% enddetails %}
 

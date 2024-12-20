@@ -155,7 +155,7 @@ Pour être efficace, il faut donc savoir répondre aux besoins du client en **le
 
 On construit la **matrice d'efficience** en trouvant le juste milieu entre **l'optimisation des ressources** et **l'optimisation des flux**.
 
-<img width="350" src="matrice_efficience.png" >
+<img width="350" src="matrice_efficience.webp" >
 > Source :"Lean à 540° : D’abord faire un virage de pensée à 180° puis explorer à 360°", Gaudichau, Matsumoto, Magnani (2019)
 
 |Optimisation des ressources|Optimisation des flux|
