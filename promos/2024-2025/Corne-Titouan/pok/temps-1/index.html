@@ -311,7 +311,7 @@ Voici quelques recommandations du guide de style :</p>
 <h3>2. Mise en place de l'environnement de travail <a id="section2"></a></h3>
 <p>Il faut télécharger l'IDE <a href=".">Android Studio</a> qui permet d'écrire du code mais aussi d'avoir un appercu de l'application et un émulateur (appareil Android fictif).</p>
 <p>Une fois téléchargé, j'ai créé un nouveau projet avec les propriétés suivantes :</p>
-<p><img src="img/initialisationProjet.png" alt="Initialisation Projet"> <em>Capture d'écran personnelle</em></p>
+<p><img src="img/initialisationProjet.webp" alt="Initialisation Projet"> <em>Capture d'écran personnelle</em></p>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
@@ -322,7 +322,7 @@ Voici quelques recommandations du guide de style :</p>
 <p>Il faut veiller à choisir une &quot;Minimum SDK&quot; pas trop récent afin que l'application puisse fonctionner sur une grande majorité d'appareils Android (99,7% des appareils pourront faire fonctionner mon application si on se réfère à la version choisie sur la capture d'écran précédente)</p>
 </div></div>
 <p>Un projet est alors créé, voici sa structure :</p>
-<p><img src="img/structureProjetAndroid.png" alt="Structure Projet"> <em>Capture d'écran commentée</em></p>
+<p><img src="img/structureProjetAndroid.webp" alt="Structure Projet"> <em>Capture d'écran commentée</em></p>
 <div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -331,11 +331,11 @@ Voici quelques recommandations du guide de style :</p>
 <p>Pour avoir exactement la même fenêtre avec la même structure de projet, il faut veiller à sélectionner &quot;Android&quot; en haut à gauche!</p>
 </div></div>
 <p>Cette structure d'application permet de centraliser certains éléments (dans <em>res</em>) qui seront présents à plusieurs endroits dans l'application. Prenons l'exemple d'un style texte qui peut être défini par sa police, sa taille et sa couleur. Bien que ce qui est écrit diffère d'une page à l'autre de l'application, le style du texte lui reste inchangé. Ainsi, la pratique à adopter est de créer un style pour ces textes dans le dossier ressources (<em>res</em>) dans le fichier <em>themes.xml</em></p>
-<p><img src="img/defaultText.png" alt="Texte par défaut"> <em>Capture d'écran commentée</em></p>
+<p><img src="img/defaultText.webp" alt="Texte par défaut"> <em>Capture d'écran commentée</em></p>
 <h3>3. Créer un émulateur (machine virtuelle) <a id="section3"></a></h3>
 <p>Pour tester son application, il est possible de connecter via USB un appareil Android. Mais il est également possible de créer une machine virtuelle dont on choisit les caractéristiques (type de machine, taille d'écran, résolution, version d'Android, ...).
 C'est cette dernière option que j'ai choisie d'utiliser :</p>
-<p><img src="img/machineVirtuelle.png" alt="Machine Virtuelle"> <em>Capture d'écran depuis Android Studio</em></p>
+<p><img src="img/machineVirtuelle.webp" alt="Machine Virtuelle"> <em>Capture d'écran depuis Android Studio</em></p>
 <h3>4. Apprendre à coder sur Android Studio <a id="section4"></a></h3>
 <p>Les chaînes de caractères ne sont pas codées en dur dans la page xml dédiée à l'activité (activity_main.xml). Les chaînes sont définies dans /res/values/strings.xml puis sont appelées à partir du layout. Ainsi dans le fichier strings.xml on retrouve la définition de notre string :</p>
 <pre class="language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>choose_number<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> Choisis un nombre entre 1 et 10 :<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">></span></span></code></pre>
@@ -349,7 +349,7 @@ C'est cette dernière option que j'ai choisie d'utiliser :</p>
 </ul>
 <p>Le premier tutoriel m'a été utile pour comprendre comment ajouter des éléments de base sur la page principale de l'application (textes, boutons, ...). Cependant pour la logique de l'application, qui doit être codée pour ma part dans le fichier <em>MainActivity.kt</em>, j'ai dû adapter ce qui est expliqué dans le tuto car le developpeur code son application en java et non en Kotlin. Bien que cela m'ait fin un rappel intéressant sur le langage java, j'ai dû chercher une aide pour coder correctement en Kotlin. C'est pour cela que le deuxième tuto est intéressant.</p>
 <p>Voici l'aperçu l'application (très) basique sur laquelle j'ai abouti :</p>
-<p><img src="img/appliBasique.png" alt="Apllication Android Basique">
+<p><img src="img/appliBasique.webp" alt="Apllication Android Basique">
 <em>Captures d'écran depuis Android Studio</em></p>
 <p>Cette petite application est un jeu d'estimation. Il faut trouver un nombre entre 1 et 100 en un nombre d'essais limité (10 max). Une barre de progression représente le nombre de tentatives. Une zone de texte (<em>TextView</em>) permet de donner des indications sur le nombre à trouver : plus petit ou plus grand !</p>
 <h3>Sources utiles - Sprint 1</h3>
@@ -378,17 +378,17 @@ C'est cette dernière option que j'ai choisie d'utiliser :</p>
 <p>Au cours de mon stage de césure, j'ai été amené à développer une application web de la phase de conception à celle de mise en production. Le besoin client n'avait pas bien été défini ce qui a provoqué une grosse perte de temps de mon côté pour revoir certaines fonctionnalités voire en ajouter d'autres auxquelles les clients n'avaient pas pensé initialement.</p>
 <p>Pour ce POK, la situation est un peu particulière, je suis à la fois le client et le développeur, mais ça ne fait rien. Dorénavant, je m'efforcerai toujours à recueillir correctement le besoin client dans un premier temps pour avoir une bonne feuille de route. Puis, dans un second temps, je commencerai les phases de conception et de réalisation.</p>
 <p>Voici le cahier des charges consacré à l'application <em>EVASION</em> que j'ai décidée de développer dans le cadre de ce POK :</p>
-<p><img src="img/CahierDesCharges-client-1.jpg" alt="Cahier des charges - client (partie 1)">
-<img src="img/CahierDesCharges-client-2.jpg" alt="Cahier des charges - client (partie 1)"></p>
+<p><img src="img/CahierDesCharges-client-1.webp" alt="Cahier des charges - client (partie 1)">
+<img src="img/CahierDesCharges-client-2.webp" alt="Cahier des charges - client (partie 1)"></p>
 <h3>6. Réaliser des wireframes <a id="section6"></a></h3>
 <p>Pour réaliser des wireframes, j'ai décidé d'utiliser le logiciel d'UI design <a href="https://www.figma.com">Figma</a>. Ce logiciel permet de créer des prototypes de sites web ou d'application.</p>
 <p>Après avoir découvert l'outil Figma, voici les wireframes créées :</p>
-<p><img src="img/figma-global.png" alt="Figma - global"></p>
-<p><img src="img/figma-details.png" alt="Figma - détails"></p>
+<p><img src="img/figma-global.webp" alt="Figma - global"></p>
+<p><img src="img/figma-details.webp" alt="Figma - détails"></p>
 <p>Ces wireframes peuvent encore grandement être améliorés mais, par manque de temps, je ne pouvais pas m'attarder dessus... Dans une situation professionnelle, il aurait été intéressant de montrer ces wireframes au client pour qu'il donne un feedback avant le lancement de la phase de développement.</p>
 <h3>7. Ajout des ressources de l'application <a id="section7"></a></h3>
 <p>Une fois la vision du futur rendu de notre application établie (grâce aux wireframes), j'ai commencé à coder le visuel de l'application. J'ai ainsi commencé par définir toutes les couleurs utilisées dans mes wireframes :</p>
-<p><img src="img/definitionCouleurs.png" alt="Définition couleurs"></p>
+<p><img src="img/definitionCouleurs.webp" alt="Définition couleurs"></p>
 <p>De même, j'ai saisi le contenu textuel (dans le fichier ./res/values/string.xml)   :</p>
 <pre class="language-kotlin"><code class="language-kotlin"><span class="token operator">&lt;</span>resources<span class="token operator">></span>
     <span class="token operator">&lt;</span>string name<span class="token operator">=</span><span class="token string-literal singleline"><span class="token string">"app_name"</span></span><span class="token operator">></span>Evasion<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">></span>
@@ -462,9 +462,9 @@ C'est cette dernière option que j'ai choisie d'utiliser :</p>
 <p>C'est à ce moment qu'on relève l'importance du temps passé à réaliser des wireframes qui permettent de ne pas se perdre et d'organiser au mieux son espace de travail.</p>
 </div></div>
 <p>Ensuite, j'ai importé tous les icons présents dans mes wireframes (dans le dossier ./res/drawable). J'ai également ajouté une photo pour l'afficher à l'emplacement prévu pour un retour d'expérience.</p>
-<p><img src="img/drawable.png" alt="Drawable"></p>
+<p><img src="img/drawable.webp" alt="Drawable"></p>
 <p>Enfin, après avoir créé un <em>Android Ressource Directory</em> pour stocker les différentes polices que je veux utiliser, j'ai défini les différents styles de textes souhaités dans le fichier ./res/values/themes/themes.xml :</p>
-<p><img src="img/textStyle.png" alt="Styles de textes"></p>
+<p><img src="img/textStyle.webp" alt="Styles de textes"></p>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>

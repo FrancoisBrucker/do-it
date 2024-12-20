@@ -140,11 +140,11 @@
 <p>Pour mettre en pratique ces apprentissages, j'ai voulu utiliser une API externe et implémenter quelques composants pour afficher les informations exposées par cette API. J'ai choisi une API sur l'univers des Pokémon. <a href="https://api-pokemon-fr.vercel.app/">https://api-pokemon-fr.vercel.app/</a>.</p>
 <h3>Design de la carte info</h3>
 <p>J'ai commencé par créer un composant visant à afficher les informations relatives à un pokémon. Mes compétences en design étant très mauvaises, je suis resté sur quelque chose de simple esthétiquement.</p>
-<img src="../images/feurisson.png" style="border-width: 0;">
+<img src="../images/feurisson.webp" style="border-width: 0;">
 <p>Ici vous pouvez voir le nom du pokémon, son type, ses caractéristiques représentées sous forme de graphique avec <a href="https://www.chartjs.org/">chart.js</a>, etc...  Le bouton &quot;Click !&quot; permet d'afficher un autre pokémon de manière aléatoire. Lors de l'affichage d'un pokémon, l'appel API pour le pokémon suivant est également effectué et l'image est préchargée afin de gagner en fluidité. Ainsi lorsque l'on appuie sur le bouton &quot;Click !&quot;, le pokémon préalablement chargé devient le pokémon affiché et un autre pokémon est de nouveau préchargé dans le but d'un nouvel appui sur le bouton.</p>
 <h3>Fonctionnalité de recherche par nom</h3>
 <p>J'ai également implémenté une deuxième carte permettant cette fois-ci de rechercher un pokémon par son nom puis d'afficher ses caractéristiques.</p>
-<img src="../images/metalosse+search.png" style="border-width: 0;">
+<img src="../images/metalosse+search.webp" style="border-width: 0;">
 <p>Ici, vous avez la possibilité d'écrire le nom d'un pokémon puis de cliquer dessus parmi les choix proposés pour afficher ses informations dans la carte à gauche. Les suggestions sous la barre de saisie sont actualisées automatiquement en fonction de ce que vous écrivez.</p>
 <p>Ce mini-projet a également été pour moi l'occasion de me remettre un peu au CSS (fini TailwindCSS...). Tout ça dans l'optique de me familiariser davantage avec l'environnement de développement que je vais utiliser en TFE.</p>
 <p>Le lien du dépôt Github : <a href="https://github.com/nbert71/pokemon-react">https://github.com/nbert71/pokemon-react</a></p>

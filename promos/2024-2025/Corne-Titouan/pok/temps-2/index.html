@@ -332,13 +332,13 @@
 Il est alors possible de choisir les configurations souhaitées pour le projet.</p>
 <p>Le projet est alors créé. Une fois dans le dossier du projet, vous pouvez lancer votre site en local en utilisant la commande <code>ng serve</code>.</p>
 <p>Voici l'arborescence de fichiers obtenue :</p>
-<p><img src="img/organisation-projet.png" alt="organisation projet Angular"> <em>Illustration personnelle (2024)</em></p>
+<p><img src="img/organisation-projet.webp" alt="organisation projet Angular"> <em>Illustration personnelle (2024)</em></p>
 <h3>2. Les composants <a id="section2"></a></h3>
 <p>Un composant ou <strong>component</strong> est une unité modulaire de code qui combine un template (structure HTML), du code TypeScript (logique), et des styles CSS pour représenter et gérer une partie de l'interface utilisateur.</p>
 <p>Chaque composant Angular est associé à une partie spécifique de l'interface de l'application, et ces composants peuvent être imbriqués les uns dans les autres pour construire des interfaces complexes.</p>
 <p>Pour créer un composant, il existe la commande : <code>ng generate component &lt;nom-composant&gt;</code>.</p>
 <p>Par exemple, lorsqu'on crée un composant <em>hello</em>, on obtient un nouveau dossier comme suit :</p>
-<p><img src="img/creation-component.png" alt="création d'un composant hello"> <em>Capture d'écran personnelle (2024).</em></p>
+<p><img src="img/creation-component.webp" alt="création d'un composant hello"> <em>Capture d'écran personnelle (2024).</em></p>
 <p>Pour définir le comportement d'un composant ou encore ses données, on utilise l'<strong>état</strong> ou <strong>state</strong>. Ce state représente tout ce que le composant &quot;sait&quot; à un moment donné et qui est susceptible de changer au fil du temps, en réponse à des événements utilisateur, des interactions avec des services, ou d'autres actions.
 Voici, un exemple avec les deux propriétés <em>taskTitle</em> et <em>isComplete</em> :</p>
 <pre><code>@Component({ ... })
@@ -459,8 +459,8 @@ class AppComponent {
   &lt;/form&gt;
 </code></pre>
 <h3>3. Cahier des charges du site de cuisine <strong>Miam'Miam</strong> <a id="section3"></a></h3>
-<p><img src="img/cahier-charges1.png" alt="Cahier des charges - 1">
-<img src="img/cahier-charges2.png" alt="Cahier des charges - 2"></p>
+<p><img src="img/cahier-charges1.webp" alt="Cahier des charges - 1">
+<img src="img/cahier-charges2.webp" alt="Cahier des charges - 2"></p>
 <h3>4. Choix des différents composants à créer <a id="section4"></a></h3>
 <p>Pour choisir quel composants créer, il faut se poser les bonnes questions :</p>
 <ul>
@@ -482,10 +482,10 @@ class AppComponent {
 </li>
 </ul>
 <h3>5. Ne plus utiliser de NgModules <a id="section5"></a></h3>
-<p><img src="img/nomorengmodules.png" alt="Ne plus utiliser de modules"></p>
+<p><img src="img/nomorengmodules.webp" alt="Ne plus utiliser de modules"></p>
 <p>Comme le montre la capture d'écran, l'équipe Angular recommande d'utiliser des composants autonomes (standalone components) plutôt que les traditionnels NgModule pour tout nouveau code.</p>
 <p>Un <strong>NgModule</strong> permet d'organiser et de structurer le code d'une application en regroupant des composants, des services, des directives et des pipes afin de les rendre disponibles à différents endroits de l'application.</p>
-<p><img src="img/exemplengmodule.png" alt="Exemple NgModule"></p>
+<p><img src="img/exemplengmodule.webp" alt="Exemple NgModule"></p>
 <p>Avant, la bonne pratique était d'utiliser des NgModule pour organiser le code en sections logiques. En général, chaque fonctionnalité de l'application correspondait à un module distinct, par exemple, on avait : un module de gestion des utilisateurs, un module de gestion des produits, etc.</p>
 <p>Les NgModule permettaient d'optimiser le chargement de l'application en utilisant le <em>lazy loading</em> (on charge uniquement les modules nécessaires à un moment donné).</p>
 <p>Depuis Angular 14 (i.e. depuit juin 2022), la bonne pratique change et devient d'utiliser essentiellement  des <strong>standalone components</strong>. Ces composants sont plus autonomes, ils n'ont pas besoin d'être inclus dans un NgModule. Cela simplifie le développement et réduit la complexité des applications Angular, surtout pour les petites applications ou pour des composants réutilisables.</p>

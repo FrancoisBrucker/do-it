@@ -141,7 +141,7 @@ Le VBA est un langage de programation qui sert notamment à automatiser certaine
 <h2>Ma première VBA</h2>
 <p>J'ai tout d'abords appris à générer une VBA grâce au bouton d'enregistrement : avec cette méthode, il n'y a pas besoin de savoir coder car nos actions sont directement enregistrées créant ainsi une macro.</p>
 <p>Dans l'éditeur, la VBA se présente ainsi :</p>
-<p><img src="Exemple_macro.png" alt="Capture d'écran d'un exemple de macro"></p>
+<p><img src="Exemple_macro.webp" alt="Capture d'écran d'un exemple de macro"></p>
 <p>On y retrouve la structure d'une macro qui commence par <code>Sub nomDeLaMacro()</code> et qui fini par <code>End Sub()</code>. <br>
 Les commentaires sont écrit entre appostrophes et sont repérables par leur couleur verte. \</p>
 <p>On peut voir sur la capture d'écran que j'ai selectionné puis supprimé la colonne A puis la C et mis la colonne B à la place de la A et la D à la place de la C. \</p>
@@ -170,7 +170,7 @@ Et si cette feuille est sur un autre classeur ouvert, il faut en plus ajouter <s
   maVariable <span class="token operator">=</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span></code></pre>
 <p>Cette variable est utilisable uniquement dans la procédure où elle est déclarée.
 Il existe de nombreux types de variables :</p>
-<p><img src="type.png" alt="Types de variables"></p>
+<p><img src="type.webp" alt="Types de variables"></p>
 <p>Et si l'utilisateur veut créer son propre type, il peut :</p>
 <pre class="language-vba"><code class="language-vba"><span class="token keyword">Type</span> Utilisateur
   Nom <span class="token keyword">As</span> <span class="token keyword">String</span>
@@ -248,14 +248,14 @@ Il existe de nombreux types de variables :</p>
 <strong>Date</strong> renvoit la Date du jour <br>
 <strong>&quot;expression&quot; Like &quot;...&quot;</strong> vérifie si l'ensemble de caratère est présent dans l'expression <br>
 Voici un exemple de test que l'on peut effectuer avec la fonction Like :</p>
-<p><img src="Like.png" alt="Correspondance avec Like"></p>
+<p><img src="Like.webp" alt="Correspondance avec Like"></p>
 <h2>Boites de dialogue</h2>
 <p>Avec le VBA, on peut afficher des boites de dialogue pour interragir avec l'utilisateur:</p>
 <pre class="language-vba"><code class="language-vba">MsgBox<span class="token punctuation">(</span>[Texte]<span class="token punctuation">,</span> [Boutons]<span class="token punctuation">,</span> [Titre]<span class="token punctuation">)</span></code></pre>
 <p>Les choix de boutons sont les suivants :
-<img src="option.png" alt="Option de boutons">
+<img src="option.webp" alt="Option de boutons">
 Lorsque l'utilisateur clique sur un bouton, une valeur et renvoyée et nous pouvons filtrer celle-ci:
-<img src="response.png" alt="Réponse de boutons"></p>
+<img src="response.webp" alt="Réponse de boutons"></p>
 <p>Il est aussi possible d'afficher des boites de dialogue dans lesquelles l'utilisateur peut écrire :</p>
 <pre class="language-vba"><code class="language-vba">InputBox<span class="token punctuation">(</span>[Texte]<span class="token punctuation">,</span> [Titre]<span class="token punctuation">,</span> [Valeur par défaut]<span class="token punctuation">)</span></code></pre>
 <h2>Conclusion</h2>

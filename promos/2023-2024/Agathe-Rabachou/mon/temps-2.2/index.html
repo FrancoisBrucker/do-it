@@ -152,7 +152,7 @@
 <h2>2. La notion d'API</h2>
 <p>Pour mieux appréhender la suite, il est important de comprendre que dans une application web, le front communique avec le back via des <strong>requêtes HTTP</strong>. En bref, chaque action de l'utilisateur sur le front envoie une requête au back, et le back est une sorte de programme qui lit ces requêtes et renvoie au front la réponse correspondante.</p>
 <p>Dans ce cadre, on parle souvent d'<strong>API</strong>. Une API (pour <em>Application Programming Interface</em>) est l'interface qui permet la communication entre les différentes parties d'une application, ici principalement le front, le back et la potentielle base de données, via ces requêtes HTTP et différentes routes que l'on verra plus loin. Le schéma suivant explique simplement le but de cette interface :</p>
-<img src="schema_API.png">
+<img src="schema_API.webp">
 <p>Plus largement et même si ce n'est pas l'utilisation que nous en ferons ici dans un premier temps, une API permet la communication et l'échange de données entre deux applications qui peuvent être distinctes. Un exemple classique : l'application météo d'un téléphone portable ne fait pas elle même une recherche et une analyse de données pour afficher la météo. Elle utilise une API qui se connecte à une base de données qui contient déjà ces informations.
 Une API permet donc à un utilisateur de récupérer et d'intégrer à son application des fonctionnalités ou des données issues d'un programme externe, même si il n'en connaît pas exactement le fonctionnement.</p>
 <h2>3. Création et initialisation du back-end avec Node</h2>
@@ -287,7 +287,7 @@ app<span class="token punctuation">.</span><span class="token function">get</spa
   res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span>stuff<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//retourne les articles et le code d'état de requête réussie</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>On effectue ensuite une requête GET sur Postman, et on obtient comme prévu le résultat suivant :
-<img src="requete_GET_postman.png"></p>
+<img src="requete_GET_postman.webp"></p>
 <ul>
 <li><strong>Les headers</strong></li>
 </ul>

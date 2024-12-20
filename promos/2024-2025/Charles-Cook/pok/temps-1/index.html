@@ -414,7 +414,7 @@ Cette bas de donnée doit contenir les éléments suivants :</p>
 <li>Commandes manufacture. Il s'agit des commandes passées pour le stock central, mais qui n'ont pas encore été livré. Ces quantités n'apparaissent donc pas encore dans le physique en stock.</li>
 <li>Commandes marchés. Il s'agit des commandes passées par les différents marchés et qui n'ont pas encore été expédiées. Ces quantités apparaissent donc encore dans le stock central physique.</li>
 </ul>
-<p><img src="Images/BDPOK1.png" alt="alt text"></p>
+<p><img src="Images/BDPOK1.webp" alt="alt text"></p>
 <h4>Lead Time</h4>
 <p>Les bons de commande contiennent également une date de livraison demandée. Cette date de livraison dépend du fournisseur, une seconde feuille dans le classeur recense donc Lead Time en fonction du fournisseur (en mois).</p>
 <h3>Calcul des <em>quantités recommandées</em></h3>
@@ -535,7 +535,7 @@ for k in range(1,11):
 wb.save('/Users/charlescook/Desktop/DO IT/fichier_modifié.xlsx') 
 </code></pre>
 <p>Ce code permet d'obtenir une feuille par manufacture qui permet de une order review par l'utilisateur chargé du processus de la commande mensuelle.</p>
-<p><img src="Images/Feuille%20Order%20Review.png" alt="alt text"></p>
+<p><img src="Images/Feuille%20Order%20Review.webp" alt="alt text"></p>
 <h4>Pistes d'amélioration du code</h4>
 <p>Il est possible d'améliorer le code en mettant en place un code couleur en fonction de l'importance de la commande, si cette commande résulte d'un besoin marché (un besoin client), la ligne pourrait être en rouge afin de souligner son importance. C'est une piste à étudier en second sprint.</p>
 <h2>Point d'avancement au second Sprint</h2>
@@ -550,7 +550,7 @@ Ainsi, le code suivant permet de surligner en jaune les lignes qui concernent de
 <p>Ce code vérifie pour chaque commande passée la valeur du Physique_Dispo. Si celui-ci est négatif, cela signifie que la somme du Stock physique dans le stok central et des commandes déjà passées à la manufacture est inférieure aux quantités passées par les marchés. Ainsi il est urgent de repasser une commande manufacture afin de répondre au besoin client.
 Dans ce cas, le code couleur &quot;FFFF00&quot; est attribué à la ligne, soit la couleur jaune.
 Le résultat obtenu est le suivant :
-<img src="Images/Code%20couleur.png" alt="alt text"></p>
+<img src="Images/Code%20couleur.webp" alt="alt text"></p>
 <h3>Création du fichier des bon de commande finaux</h3>
 <h4>Objectif</h4>
 <p>L'objectif de cette partie est d'avoir un fihcier Excel comprenant tous les bons de commande par manufacture. Ceux-ci doivent contenir les informations suivantes :</p>
@@ -581,14 +581,14 @@ for i in range(2,indice_CHT):
 <p>Les colonnes restantes qui ne sont pas nécessaires dans le bon de commande sont ensuite supprimées, et un total par manufacture est calculé (un total en nombre de pièces et un total en terme financier).</p>
 <h4>Résultat des bons de commande</h4>
 <p>Le résultat obtenu en faisant tourner le code est donc le suivant.</p>
-<p><img src="Images/Bon%20de%20commande.png" alt="alt text"></p>
+<p><img src="Images/Bon%20de%20commande.webp" alt="alt text"></p>
 <h3>Historisation des commandes mensuelles</h3>
 <p>Il peut être intéressant, au niveau de l'analyse et de la vérification avant d'envoyer le bon de commande, d'avoir une vision globale sur les quantités qui ont été commandées lors des précédentes commeandes mensuelles. Pour cela, nous allons tenter de mettre en place un suivi de l'hitorique sur l'année.
 Nous considererons que les commandes mensuelles de janvier à octobre ont été passées. La commande en cours est la commande mensuelle de novembre.</p>
 <p>Cette partie historisation permet notamment de pouvoir comparer les quantités afin de détecter d'éventuelles erreur dans la saisie des commandes des marchés par exemple.</p>
 <h4>Création d'une feuille <em>Suivi Historique Fournisseur</em></h4>
 <p>Afin de pouvoir suivre de manière précise l'historique des commandes mensuelles, nous avons créé une feuille Historique :
-<img src="Images/Historique%20BD.png" alt="alt text"></p>
+<img src="Images/Historique%20BD.webp" alt="alt text"></p>
 <p>La cellule <em>P2</em> doit être modifiée de manière manuelle par l'utilisateur, afin de renseigner le commande mensuelle de quelle mois va être passée. Ainsi, cela permet au moment de la génération des bons de commande finaux d'avoir une simulation des quantités par rapport aux précédentes.</p>
 <h4>Synthèse des historiques dans la création des bons de commande</h4>
 <p>Au moment de la génération des bons de commande, le code suibvant permet d'entrer les quantités afin de compléter le tableau de suivi :</p>
@@ -596,7 +596,7 @@ Nous considererons que les commandes mensuelles de janvier à octobre ont été 
 wb2['Suivi Historique Four'].cell(row=3,column=hst+1).value = total
 </code></pre>
 <p>On obtient ainsi le tableau complété suivant :
-<img src="Images/Historique%20completed.png" alt="alt text"></p>
+<img src="Images/Historique%20completed.webp" alt="alt text"></p>
 <p>Afin d'avoir une présentation plus visuelle de l'évolution des quantités de commande, le code suivant permet de présenter les données sous forme de graphique en barres, par manufacture :</p>
 <pre><code># Graphe Historique CHT
 refObj=openpyxl.chart.Reference(wb2['Suivi Historique Four'], min_col=2, min_row=3, max_col=13,max_row=3)
@@ -607,7 +607,7 @@ chartObj.append(seriesObj)
 wb2['Suivi Historique Four'].add_chart(chartObj, 'B12')
 </code></pre>
 <p>Le résultat obtenu est le suivant :
-<img src="Images/Tableaux%20historiuqes.png" alt="alt text"></p>
+<img src="Images/Tableaux%20historiuqes.webp" alt="alt text"></p>
 <h2>Pistes d'amélioration</h2>
 <p>Le code, dont la version complète se trouve ci-après, fonctionne. Cependant, de nombreuses lignes se répètent. Dans un objectif d'efficacité et de clareté dans la lecture de celui-ci, il serait intéressant de le simplifier en utilisant des boucles. En effet, chacune des étapes est répétée 6 fois pour chacune des manufactures. Or, si un changement doit être apporté dans le code, il peut être chronophage de répéter ce changement 6 fois à chaque fois. De plus, cela peut également permettre d'améliorer la rapidité d'exécution du code.
 Ainsi, la solution est de créer une liste avec les identifiants de chaque manufacture, et d'utiliser une boucle <em>for</em> pour répéter l'opération pour chacun des éléments de la liste. Cette technique permet également d'ajouter facilement de nouvelle manufacture.</p>

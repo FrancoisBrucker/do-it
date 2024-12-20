@@ -162,16 +162,16 @@ Pour se faire :
 <strong>- le sprint 1</strong> consistera en la <strong>compréhension</strong> du projet, sa <strong>description</strong> ainsi qu'en <strong>l'analyse préliminaire</strong> des données.
 <strong>- le sprint 2</strong> consistera à effectuer un pré-traitement qualitatif des données pour qu'elles soient prêtes à faire passer dans un algorithme de classification.</p>
 <h2>3. Analyse préliminaire des données</h2>
-<h3>3.1 Conversion automatisée des images du format ..ndpi au format .jpg</h3>
+<h3>3.1 Conversion automatisée des images du format ..ndpi au format .webp</h3>
 <p>Les images sur lesquelles je travaille proviennent de microscopes numériques. Elles sont extraites au format .ndpi &quot;NanoZoomer Digital Pathology Image&quot; et sont de très hautes résolutions.</p>
 <p>L'échantillon dont je dispose <strong>propose des images allant de 100Mo à 1Go.</strong></p>
 <p>Il est possible de les lire en utilisant le NDPI Viewer &quot;NDP.wiew2&quot; développé par le fabricant japonais d'instruments scientifiques Hamamatsu Photonics K.K..</p>
 <p>Ce logiciel est téléchargeable gratuitement sur <a href="https://www.hamamatsu.com/eu/en/product/life-science-and-medical-systems/digital-slide-scanner/U12388-01.html">le site d'Hamamatsu</a></p>
 <p>Voici son interface :</p>
-<p><img src="NDP_view2.jpg" alt="NDP Viewer2"></p>
+<p><img src="NDP_view2.webp" alt="NDP Viewer2"></p>
 <p>Afin de pouvoir utiliser ces images dans un algorithme de machine learning, <strong>il faudrait les convertir dans un format plus propice à la programmation et permettant de réduire leur taille.</strong></p>
 <p>Toutefois, depuis NDP Viewer2, cette conversion ne peut se faire qu'image par image et serait trop chronophage pour convertir des 100aines d'images.</p>
-<p>La première problématique de ce POK consiste alors à <strong>automatiser une conversion des images au format .ndpi vers .jpg.</strong></p>
+<p>La première problématique de ce POK consiste alors à <strong>automatiser une conversion des images au format .ndpi vers .webp.</strong></p>
 <h4>Tentative d'automatisation avec NDPview2</h4>
 <p>Ayant téléchargé NDPview2, ma première idée consiste alors à créer un algorithme Python convertissant les différents fichiers en faisant appel à ce NDP viewer.</p>
 <pre class="language-python"><code class="language-python"><span class="token keyword">import</span> os
@@ -186,8 +186,8 @@ output_folder <span class="token operator">=</span> <span class="token string">'
 test_file <span class="token operator">=</span> <span class="token string">'test.ndpi'</span>
 test_file_path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>input_folder<span class="token punctuation">,</span> test_file<span class="token punctuation">)</span>
 
-<span class="token comment"># Génération du chemin de sortie avec le même nom de fichier mais en extension .jpg</span>
-output_file_path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>output_folder<span class="token punctuation">,</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>splitext<span class="token punctuation">(</span>test_file<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">'.jpg'</span><span class="token punctuation">)</span>
+<span class="token comment"># Génération du chemin de sortie avec le même nom de fichier mais en extension .webp</span>
+output_file_path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>output_folder<span class="token punctuation">,</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>splitext<span class="token punctuation">(</span>test_file<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">'.webp'</span><span class="token punctuation">)</span>
 
 <span class="token comment"># Commande pour appeler le viewer NDPI et effectuer la conversion</span>
 command <span class="token operator">=</span> <span class="token punctuation">[</span>viewer_path<span class="token punctuation">,</span> <span class="token string">'-i'</span><span class="token punctuation">,</span> test_file_path<span class="token punctuation">,</span> <span class="token string">'-o'</span><span class="token punctuation">,</span> output_file_path<span class="token punctuation">]</span>
@@ -204,7 +204,7 @@ output<span class="token punctuation">,</span> error <span class="token operator
 <p>Hélas le programme se contente de lancer le viewer sans effectuer la conversion. Il semblerait donc que le viewer ne puisse servir de façon automatisée mais nécessite des actions manuelles pour effectuer la conversion.</p>
 <h4>Tentative d'automatisation avec OpenSlide</h4>
 <p>Le programme ci-dessous n'est pas abouti...
-Il semble théoriquement possible de convertir les fichiers .ndpi vers .jpg grâce à la bibliothèque Python or en sortie ce programme renvoie une erreur indiquant que la bibliothèque ne peut lire les fichiers .ndpi.</p>
+Il semble théoriquement possible de convertir les fichiers .ndpi vers .webp grâce à la bibliothèque Python or en sortie ce programme renvoie une erreur indiquant que la bibliothèque ne peut lire les fichiers .ndpi.</p>
 <p>cf <a href="https://openslide.org/api/python/">Documentation OpenSlyde Python</a></p>
 <pre class="language-python"><code class="language-python">!pip install openslide<span class="token operator">-</span>python
 
@@ -241,7 +241,7 @@ input_ndpi_path <span class="token operator">=</span> <span class="token string"
 output_jpg_folder <span class="token operator">=</span> <span class="token string">'C:\\Test-TER\\DATA-JPG'</span>
 
 <span class="token comment"># Construire le chemin de sortie pour le fichier JPG</span>
-output_jpg_path <span class="token operator">=</span> output_jpg_folder <span class="token operator">+</span> <span class="token string">'\\test.jpg'</span>
+output_jpg_path <span class="token operator">=</span> output_jpg_folder <span class="token operator">+</span> <span class="token string">'\\test.webp'</span>
 
 <span class="token comment"># Appeler la fonction pour convertir le fichier NDPI en JPG</span>
 convert_ndpi_to_jpg<span class="token punctuation">(</span>input_ndpi_path<span class="token punctuation">,</span> output_jpg_path<span class="token punctuation">)</span>
@@ -253,7 +253,7 @@ convert_ndpi_to_jpg<span class="token punctuation">(</span>input_ndpi_path<span 
 <span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>image <span class="token keyword">as</span> mpimg
 
 <span class="token comment"># Liste des chemins d'accès aux images</span>
-image_paths <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'C:\\TER\\visu1.png'</span><span class="token punctuation">,</span> <span class="token string">'C:\\TER\\visu3.png'</span><span class="token punctuation">,</span> <span class="token string">'C:\\TER\\visu2.png'</span><span class="token punctuation">,</span> <span class="token string">'C:\\TER\\visu4.png'</span><span class="token punctuation">]</span>
+image_paths <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'C:\\TER\\visu1.webp'</span><span class="token punctuation">,</span> <span class="token string">'C:\\TER\\visu3.webp'</span><span class="token punctuation">,</span> <span class="token string">'C:\\TER\\visu2.webp'</span><span class="token punctuation">,</span> <span class="token string">'C:\\TER\\visu4.webp'</span><span class="token punctuation">]</span>
 
 <span class="token comment"># Créer une figure avec 2x2 sous-graphiques</span>
 plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
@@ -270,10 +270,10 @@ plt<span class="token punctuation">.</span>figure<span class="token punctuation"
 plt<span class="token punctuation">.</span>tight_layout<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
 plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
-<p><img src="Visualisation.jpg" alt="Exemples d'images"></p>
+<p><img src="Visualisation.webp" alt="Exemples d'images"></p>
 <p>Ces différentes images sont à l'heure actuelle peu exploitables.
 On y remarque beaucoup de bruit, des tâches qui pourraient tromper l'algorithme quant à la détection du carcinome...</p>
-<p><img src="Visualisation_annotee.jpg" alt="Annotations">
+<p><img src="Visualisation_annotee.webp" alt="Annotations">
 En noir, la zone où se trouve le carcinome.
 En rouge, du bruit pour l'algorithme</p>
 <p>Il va donc être nécessaire d'effectuer un pré-traitement de ces données pour réaliser la segmentation &quot;zone cancéreuse vs zone non cancéreuse&quot;.</p>
@@ -283,7 +283,7 @@ En rouge, du bruit pour l'algorithme</p>
 <span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
 
 <span class="token comment"># Chemin de l'image</span>
-image_path <span class="token operator">=</span> <span class="token string">"D:/Master_SID/projet_TER/data/tumeur/9.jpg"</span>
+image_path <span class="token operator">=</span> <span class="token string">"D:/Master_SID/projet_TER/data/tumeur/9.webp"</span>
 
 <span class="token comment"># Lecture de l'image et conversion BGR2RGB</span>
 image <span class="token operator">=</span> cv2<span class="token punctuation">.</span>imread<span class="token punctuation">(</span>image_path<span class="token punctuation">)</span>
@@ -310,21 +310,21 @@ segmented_image <span class="token operator">=</span> segmented_image<span class
 
 
 <span class="token comment"># Chemin de sortie</span>
-cv2<span class="token punctuation">.</span>imwrite<span class="token punctuation">(</span><span class="token string">"D:/Master_SID/projet_TER/data/pretraitement_tumeur/9.jpg"</span><span class="token punctuation">,</span> cv2<span class="token punctuation">.</span>cvtColor<span class="token punctuation">(</span>segmented_image<span class="token punctuation">,</span> cv2<span class="token punctuation">.</span>COLOR_RGB2BGR<span class="token punctuation">)</span><span class="token punctuation">)</span>
+cv2<span class="token punctuation">.</span>imwrite<span class="token punctuation">(</span><span class="token string">"D:/Master_SID/projet_TER/data/pretraitement_tumeur/9.webp"</span><span class="token punctuation">,</span> cv2<span class="token punctuation">.</span>cvtColor<span class="token punctuation">(</span>segmented_image<span class="token punctuation">,</span> cv2<span class="token punctuation">.</span>COLOR_RGB2BGR<span class="token punctuation">)</span><span class="token punctuation">)</span>
 
 <span class="token comment"># Affichage</span>
 
 plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">121</span><span class="token punctuation">)</span><span class="token punctuation">,</span> plt<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span>image<span class="token punctuation">)</span><span class="token punctuation">,</span> plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'Original Image'</span><span class="token punctuation">)</span>
 plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">122</span><span class="token punctuation">)</span><span class="token punctuation">,</span> plt<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span>segmented_image<span class="token punctuation">)</span><span class="token punctuation">,</span> plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'Segmented Image'</span><span class="token punctuation">)</span>
 plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
-<p><img src="pretraitement.jpg" alt="Image d'origine vs Image segmentée"></p>
+<p><img src="pretraitement.webp" alt="Image d'origine vs Image segmentée"></p>
 <h2>4. Pré-traitement des données</h2>
 <p>Le pré-traitement précédent est une première avancée pour par la suite optimiser la classification. Cependant, il <strong>reste encore un peu de bruit</strong> risquant d'abaisser les performances de l'algorithme.
 Il est alors nécessaire d'accoître la performance du pré-traitement.</p>
 <h3>4.1 Délimitation du contour</h3>
 <p>Une première chose à faire consiste à <strong>délimiter le contour</strong> des membranes, cela permettra à l'algorithme de se focaliser uniquement sur la membrane et non pas sur les corps étrangers présents sur la lame.</p>
 <p>Voici une membrane :</p>
-<p><img src="celulle.png" alt="Celulle avant extraction du contour" width="50%"></p>
+<p><img src="celulle.webp" alt="Celulle avant extraction du contour" width="50%"></p>
 <p>Et le 1er code testé pour extraire le contour :</p>
 <pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">extraire_contour</span><span class="token punctuation">(</span>image_entree<span class="token punctuation">,</span> image_sortie<span class="token punctuation">,</span> seuil_canny<span class="token punctuation">,</span> taille_dilatation<span class="token punctuation">,</span> superficie_min<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token comment"># Charger l'image en niveaux de gris</span>
@@ -352,7 +352,7 @@ Il est alors nécessaire d'accoître la performance du pré-traitement.</p>
     
     <span class="token keyword">return</span> contours</code></pre>
 <p>Ce 1er code hélas n'est pas suffisament robuste. Le bruit perturbe le découpage et toutes les formes et contour à l'intérieur de la membrane sont découpés.</p>
-<p><img src="celulle_contour_v1.png" alt="Celulle après extraction du contour" width="50%"></p>
+<p><img src="celulle_contour_v1.webp" alt="Celulle après extraction du contour" width="50%"></p>
 <p>Pour y remédier, j'ai donc décidé d'apporter de la <strong>dilatation :</strong> concrètement, la dilatation consiste à élargir les régions d'une image qui contiennent des pixels blancs. Elle va permettre ainsi de connecter les régions blanches qui sont proches les unes des autres et ainsi combler les lacunes.</p>
 <pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">decouper_image</span><span class="token punctuation">(</span>image_entree<span class="token punctuation">,</span> contours<span class="token punctuation">,</span> dossier_sortie<span class="token punctuation">,</span>fichier<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token comment"># Charger l'image originale</span>
@@ -372,7 +372,7 @@ Il est alors nécessaire d'accoître la performance du pré-traitement.</p>
 
         petite_image <span class="token operator">=</span> image_originale<span class="token punctuation">[</span>y<span class="token punctuation">:</span>y<span class="token operator">+</span>h<span class="token punctuation">,</span> x<span class="token punctuation">:</span>x<span class="token operator">+</span>w<span class="token punctuation">]</span>
 
-        cv2<span class="token punctuation">.</span>imwrite<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>dossier_sortie<span class="token punctuation">,</span> <span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>fichier<span class="token punctuation">}</span></span><span class="token string">image_</span><span class="token interpolation"><span class="token punctuation">{</span>i<span class="token punctuation">}</span></span><span class="token string">.jpg"</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span> petite_image<span class="token punctuation">)</span></code></pre>
+        cv2<span class="token punctuation">.</span>imwrite<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>dossier_sortie<span class="token punctuation">,</span> <span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>fichier<span class="token punctuation">}</span></span><span class="token string">image_</span><span class="token interpolation"><span class="token punctuation">{</span>i<span class="token punctuation">}</span></span><span class="token string">.webp"</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span> petite_image<span class="token punctuation">)</span></code></pre>
 <pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">pre_traitement_1_contour_dilatation</span><span class="token punctuation">(</span>dossier_E<span class="token punctuation">,</span>dossier_S<span class="token punctuation">,</span>dossier_C<span class="token punctuation">)</span><span class="token punctuation">:</span>
     
     seuil_canny <span class="token operator">=</span> <span class="token number">100</span>
@@ -383,7 +383,7 @@ Il est alors nécessaire d'accoître la performance du pré-traitement.</p>
     fichiers <span class="token operator">=</span> os<span class="token punctuation">.</span>listdir<span class="token punctuation">(</span>dossier_E<span class="token punctuation">)</span>
     
     <span class="token keyword">for</span> fichier <span class="token keyword">in</span> fichiers<span class="token punctuation">:</span>
-        <span class="token keyword">if</span> fichier<span class="token punctuation">.</span>lower<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>endswith<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token string">'.png'</span><span class="token punctuation">,</span> <span class="token string">'.jpg'</span><span class="token punctuation">,</span> <span class="token string">'.jpeg'</span><span class="token punctuation">,</span> <span class="token string">'.bmp'</span><span class="token punctuation">,</span> <span class="token string">'.gif'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> fichier<span class="token punctuation">.</span>lower<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>endswith<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token string">'.webp'</span><span class="token punctuation">,</span> <span class="token string">'.webp'</span><span class="token punctuation">,</span> <span class="token string">'.webp'</span><span class="token punctuation">,</span> <span class="token string">'.bmp'</span><span class="token punctuation">,</span> <span class="token string">'.gif'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
             
             chemin_entree <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>dossier_E<span class="token punctuation">,</span> fichier<span class="token punctuation">)</span>
             chemin_contour <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>dossier_C<span class="token punctuation">,</span> fichier<span class="token punctuation">)</span>
@@ -395,10 +395,10 @@ Il est alors nécessaire d'accoître la performance du pré-traitement.</p>
 
 pre_traitement_1_contour_dilatation<span class="token punctuation">(</span><span class="token string">'D:/Master_SID/projet_TER/data/tumeur'</span><span class="token punctuation">,</span><span class="token string">'D:/Master_SID/projet_TER/data/pretraitement_1'</span><span class="token punctuation">,</span><span class="token string">'D:/Master_SID/projet_TER/data/contour'</span><span class="token punctuation">)</span></code></pre>
 <p>Le résultat est tout de suite plus satisfaisant, la forme globale de la membrane est respectée et plus aucun contour n'apparaît à l'intérieur.</p>
-<p><img src="celulle_contour_v2.png" alt="Extraction du contour après dilatation" width="50%"></p>
+<p><img src="celulle_contour_v2.webp" alt="Extraction du contour après dilatation" width="50%"></p>
 <p>Seul un problème persiste, lorsque plusieurs membranes sont présents sur une même lame, le programme risque de fusionner certaines membranes. Dans un premier temps, je décide de ne pas m'attarder sur ce problème et débuterai la classification avec des lames ne présentant qu'une seule membrane.</p>
-<p><img src="plusieurs_celulles.png" alt="Plusieurs membranes sur une même lame" width="50%"></p>
-<p><img src="plusieurs_celulles_contour.png" alt="Plusieurs membranes sur une même lame" width="50%"></p>
+<p><img src="plusieurs_celulles.webp" alt="Plusieurs membranes sur une même lame" width="50%"></p>
+<p><img src="plusieurs_celulles_contour.webp" alt="Plusieurs membranes sur une même lame" width="50%"></p>
 <h3>4.2 Amélioration de la segmentation</h3>
 <p>Les contours délimités, je décide de revoir l'opération de segmentation des images avec l'algorithme de k-means.</p>
 <pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">pre_traitement_2_segmentation</span><span class="token punctuation">(</span>dossier_E<span class="token punctuation">,</span>dossier_S<span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -407,7 +407,7 @@ pre_traitement_1_contour_dilatation<span class="token punctuation">(</span><span
     fichiers <span class="token operator">=</span> os<span class="token punctuation">.</span>listdir<span class="token punctuation">(</span>dossier_E<span class="token punctuation">)</span>
     
     <span class="token keyword">for</span> fichier <span class="token keyword">in</span> fichiers<span class="token punctuation">:</span>
-        <span class="token keyword">if</span> fichier<span class="token punctuation">.</span>lower<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>endswith<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token string">'.png'</span><span class="token punctuation">,</span> <span class="token string">'.jpg'</span><span class="token punctuation">,</span> <span class="token string">'.jpeg'</span><span class="token punctuation">,</span> <span class="token string">'.bmp'</span><span class="token punctuation">,</span> <span class="token string">'.gif'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> fichier<span class="token punctuation">.</span>lower<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>endswith<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token string">'.webp'</span><span class="token punctuation">,</span> <span class="token string">'.webp'</span><span class="token punctuation">,</span> <span class="token string">'.webp'</span><span class="token punctuation">,</span> <span class="token string">'.bmp'</span><span class="token punctuation">,</span> <span class="token string">'.gif'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
             
             chemin_entree <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>dossier_E<span class="token punctuation">,</span> fichier<span class="token punctuation">)</span>
             chemin_sortie <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>dossier_S<span class="token punctuation">,</span> fichier<span class="token punctuation">)</span>
@@ -436,13 +436,13 @@ pre_traitement_1_contour_dilatation<span class="token punctuation">(</span><span
 
 pre_traitement_2_segmentation<span class="token punctuation">(</span><span class="token string">'D:/Master_SID/projet_TER/data/pretraitement_1'</span><span class="token punctuation">,</span><span class="token string">'D:/Master_SID/projet_TER/data/pretraitement_2'</span><span class="token punctuation">)</span></code></pre>
 <p>Avant segmentation
-<img src="avant_pre-trait.png" alt="Avant pré-traitement" width="50%"></p>
+<img src="avant_pre-trait.webp" alt="Avant pré-traitement" width="50%"></p>
 <p>Après segmentation
-<img src="apres_pre-trait.png" alt="Après pré-traitement" width="50%"></p>
+<img src="apres_pre-trait.webp" alt="Après pré-traitement" width="50%"></p>
 <p>Le résultat semble tout à fait satisfaisant, je décide donc dans un dernier temps d'effectuer de l'annotation avec le logiciel QuPath pour aider le futur algorithme de classification à détecter la zone de la tumeur.</p>
 <h3>4.3 Annotation</h3>
-<p><img src="annotation.png" alt="Annotation" width="50%"></p>
-<p><img src="logiciel.png" alt="Logiciel QuPath" width="50%"></p>
+<p><img src="annotation.webp" alt="Annotation" width="50%"></p>
+<p><img src="logiciel.webp" alt="Logiciel QuPath" width="50%"></p>
 <h2>5. Conclusion</h2>
 <p><strong>Timing Sprint 1</strong></p>
 <table>

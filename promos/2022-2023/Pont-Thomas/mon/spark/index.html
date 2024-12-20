@@ -158,7 +158,7 @@
 <li>Etape <strong>Reduce</strong> : l'opération reduce, qui dépend du problème notre problème, est appliqué à chaque clé. Elle permet d'obtenir le résultat final.</li>
 </ul>
 <p>Tout ceci peut être résumé par le schéma suivant :</p>
-<p><img src="../image/Sch%C3%A9ma.jpg" alt="Schéma du MapReduce" title="Schéma explicatif MapReduce">
+<p><img src="../image/Sch%C3%A9ma.webp" alt="Schéma du MapReduce" title="Schéma explicatif MapReduce">
 <em>Source : Openclassrooms</em></p>
 <h3>Exemples</h3>
 <h4>Word count</h4>
@@ -199,7 +199,7 @@
 <p>Pour effectuer du MapReduce dans un contexte de Big Data, il faut une <strong>infrastructure logicielle</strong>. Cette dernière permettra de faire tourner des fonctions de manière <strong>massivement développée</strong> en s'assurant qu'il n'y ait pas de problèmes liés à la localité des données, à la puissance et aux pannes.
 Le framework <strong>Hadoop</strong> permet ceci. Celui-ci est composé d'un <strong>système de fichiers</strong> où ceux-ci sont distribués, répliqués et optimisés et d'une <strong>architecture pour faire tourner MapReduce</strong>. Vous pouvez trouver plus d'informations sur Hadoop <a href="https://hadoop.apache.org/">ici</a>.</p>
 <p>Globalement, l'utilisateur peut déposer des fichiers qui sont découpés sur des Datas Node. Toutes les informations sont dupliqués pour faire face aux potentielles pannes. Il peut ensuite donner le travail à effectuer au job tracker. Celui-ci communique avec le name node pour savoir où sont les données et pouvoir lancer les calculs de la manière la plus efficace possible. Tous les résultats sont sauvegardés au fur et à mesure.</p>
-<p><img src="../image/Sch%C3%A9ma2.jpg" alt="Schéma de Hadoop" title="Schéma explicatif Hadoop">
+<p><img src="../image/Sch%C3%A9ma2.webp" alt="Schéma de Hadoop" title="Schéma explicatif Hadoop">
 <em>Source : Openclassrooms</em></p>
 <p>Ainsi l'utilisateur a juste à déposer ses données et à écrire les fonctions Map et Reduce.</p>
 <p>En suivant ce lien, on peut télécharger et tester une <a href="https://www.cloudera.com/downloads/cdp-private-cloud-trial.html">machine virtuelle Hadoop</a>. Il est donc possible de tester la fonction <em>Count Word</em> sur Hadoop.</p>

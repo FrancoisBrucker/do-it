@@ -244,17 +244,17 @@
 </div></div>
 <p>Une fois obtenu, il a fallu procéder à l'embedding (vectorisation numérique du vocabulaire constituant les tokens) de ces tokens pour qu'ils soit utilisable par mon réseau de neurones.</p>
 <p>Tout d'abord, après avoir découvert PyTorch, j'ai essayé d'entraîner un réseau de neurones naïf que j'avais construit mais comme vous pouvez le voir, les résultats n'étaient pas très concluants.</p>
-<p><img src="NaiveNetResults.png" alt="NaiveNetResults"></p>
+<p><img src="NaiveNetResults.webp" alt="NaiveNetResults"></p>
 <p>Je me suis renseigné davantage sur le domaine du NLP et j'ai appris qu'une architecture spécifique de réseau de neurones existait : les &quot;Recurrent Neural Network&quot; (RNN).</p>
 <p>Un RNN est conçu pour prendre en compte les relations séquentielles entre les entrées, en stockant une mémoire interne qui leur permet de prendre en compte les entrées précédentes.</p>
-<p><img src="rnn-vs-fnn.png" alt="Différence entre un RNN et un réseau classique"></p>
+<p><img src="rnn-vs-fnn.webp" alt="Différence entre un RNN et un réseau classique"></p>
 <p>Les avantages des RNN par rapport aux réseaux classiques incluent leur capacité à traiter des données séquentielles de longue durée, leur flexibilité en termes de taille d'entrée et leur capacité à prendre en compte les relations de dépendance temporelle dans les données.</p>
 <p>Et les résultats étaient bien meilleurs:</p>
-<p><img src="RNNetResults.png" alt="RNNetResults"></p>
+<p><img src="RNNetResults.webp" alt="RNNetResults"></p>
 <p>J'ai voulu alors voir si je pouvais améliorer ces résultats en réglant le taux d'apprentissage (hyper-paramètre clé dans l'étude de réseau de neurones.)</p>
-<p><img src="LRcomparison.png" alt="LRcomparison"></p>
+<p><img src="LRcomparison.webp" alt="LRcomparison"></p>
 <p>Ensuite, avec le modèle RNN entrainé avec le meilleur LR, j'ai codé une fonction de prédiction de sentiment et j'ai tenté de piéger mon algorithme des phrases un peu sarcastiques</p>
-<p><img src="sentiment_prediction.png" alt="Sentiment Prediction"></p>
+<p><img src="sentiment_prediction.webp" alt="Sentiment Prediction"></p>
 <p>Enfin, j'ai entendu parlé de &quot;Transfer Learning&quot; vers la fin de mon POK. Il s'agit d'utiliser un réseau de neurone pré-entrainé, puis d'entraîner sa couche de classification sur notre problème spécifique.</p>
 <p>J'ai essaié d'implémenter le modèle de Bert mais comme il fallait avoir recours à un tokenizer différent de celui que j'avais codé, je n'ai pas réussi à régler les problèmes de dimensions d'inputs.</p>
 

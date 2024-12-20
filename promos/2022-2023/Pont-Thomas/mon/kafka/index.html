@@ -158,7 +158,7 @@
 </ul>
 <p>Cette dernière solution permet de ne <strong>pas perdre l'information</strong> que l'on souhaite collecter sur l'utilisateur tout en lui permettant d'<strong>accéder à notre site</strong>.
 Cependant, si les appels au serveur externes sont faits avant que la page s'affiche (donc de manière <strong>asynchrone</strong>), le <strong>temps d'attente</strong> pour le client peut être <strong>très long</strong>. Une solution est donc d'effectuer ces calculs de manière <strong>asynchrone</strong>.</p>
-<p><img src="../image/Sch%C3%A9ma6.1.png" alt="Schéma de l'asynchronicité" title="Schéma explicatif asynchronicité"></p>
+<p><img src="../image/Sch%C3%A9ma6.1.webp" alt="Schéma de l'asynchronicité" title="Schéma explicatif asynchronicité"></p>
 <p><em>Source : Openclassrooms</em></p>
 <p>De manière à ce que ce système permette d'effectuer les actions en <strong>quasi temps instantané</strong> tout en étant <strong>tolérant aux pannes</strong> du serveur du service externe, deux éléments ont été ajouté. La <strong>file d'attente de message</strong> permet de stocker tous les messages et de les faire passer les uns après les autres. Le <strong>traitement de flux de données</strong> permet de traiter les messages les uns à la suite des autres.</p>
 <p>Ainsi, les <strong>points importants</strong> d'un système de gestion de données en temps réel sont :</p>
@@ -172,7 +172,7 @@ Cependant, si les appels au serveur externes sont faits avant que la page s'affi
 <p>Le but principal d'Apache Kafka est de fournir une <strong>plateforme de streaming de données</strong> distribuée, tolérante aux pannes et hautement évolutive pour les applications qui ont besoin de traiter des <strong>flux de données en temps réel</strong>. Kafka permet aux producteurs de publier des messages sur des topics et aux consommateurs de s'abonner à des topics pour consommer ces messages en temps réel.</p>
 <p>Kafka est souvent utilisé pour du <strong>traitement en temps réel</strong>, du <strong>traitement d'événements</strong>, de l'<strong>analyse de données</strong> en continu, de la <strong>surveillance</strong> des infrastructures, de la <strong>collecte de données de capteurs</strong> ou encore de la <strong>messagerie</strong>.</p>
 <p>Cela correspond à la partie <strong>file de messages</strong> détaillée précédemment. Kafka reçoit tous les messages et les redistribue aux bons services. Il fait office de &quot;centre de distribution de messages&quot;.</p>
-<p><img src="../image/Sch%C3%A9ma6.2.png" alt="Schéma de Kafka" title="Schéma explicatif Kafka"></p>
+<p><img src="../image/Sch%C3%A9ma6.2.webp" alt="Schéma de Kafka" title="Schéma explicatif Kafka"></p>
 <p><em>Source : Openclassrooms</em></p>
 <h3>Installation et commandes de base</h3>
 <p>L'installation est un peu compliqué sur Windows et pas toujours forcément bien détaillé dans les articles. Je recommande se plutôt regarder une vidéo comme <a href="https://www.youtube.com/watch?v=BwYFuhVhshI">celle-ci</a>. Toute la suite du cours OpenClassroom est fait pour un Linux. Je détaillerai ici comment faire avec un Windows.</p>
@@ -207,7 +207,7 @@ Le code que j'ai réalisé est disponible sur <a href="https://github.com/Thomas
 Un site peut par exemple transmettre des logs sur ses visites (date et heure, url de la page visitée, ...). Tout ceci peut permettre de tirer beaucoup d'informations utiles (nombre de visite de chaque page, ...). Mais, ceci nécessite un travail préalable : décomposition de chaque ligne pour en <strong>extraire les données</strong> et <strong>transmission</strong> de ces données pour effectuer les calculs. A grande échelle, cela nécessite une <strong>architecture distribuée</strong> afin d'être résistant aux pannes.</p>
 <h3>Présentation</h3>
 <p>Storm possède une architecture comme suit :</p>
-<p><img src="../image/Sch%C3%A9ma6.3.png" alt="Schéma de Storm" title="Schéma explicatif Storm"></p>
+<p><img src="../image/Sch%C3%A9ma6.3.webp" alt="Schéma de Storm" title="Schéma explicatif Storm"></p>
 <p><em>Source : Openclassrooms</em></p>
 <p>Les messages ou <strong>tuples</strong> sont <strong>créés</strong> par des composants appelés <em>spouts</em>, qui sont configurés pour <strong>lire les données</strong>.
 Une fois les tuples créés, ils sont envoyés à différents <em>bolts</em> pour être traités. Les <em>bolts</em> sont les composants de traitement de Storm, qui effectuent des <strong>opérations sur les tuples</strong> tels que des filtrages, des agrégations, des jointures, etc. Ils peuvent être configurés pour exécuter des tâches spécifiques en parallèle, afin de permettre le traitement de flux de données massifs.

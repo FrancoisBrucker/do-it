@@ -168,7 +168,7 @@
 <p>Tout DevOps qui se respecte est amené à travailler avec un orchestrateur de conteneurs: <strong>Kubernetes</strong>. Il doit être capable de naviguer dans les ressources de son cluster afin de débugger, déployer, ou simplement observer ce qui s'y passe.
 La CLI <strong>kubectl</strong> est très puissante, mais elle n'est pas forcément la plus ergonomique pour toutes les opérations du quotidien. On y passe beaucoup de temps dès qu'il faut faire quoi que ce soit. Afin de gagner en productivité, il existe un outil formidable d'interface graphique en CLi pour Kubernetes : <strong>k9s</strong>.</p>
 <p>Dans ce MON, nous allons voir comment devenir un maître de <strong>k9s</strong>, afin de ne plus jamais perdre de temps pour nos opérations de tous les jours.</p>
-<p><img src="images/k9s.png" alt="k9s default view"></p>
+<p><img src="images/k9s.webp" alt="k9s default view"></p>
 <h2>Cas d'usage</h2>
 <p>Nous allons nous baser sur un exemple concret de déploiement de service (<strong>SonarQube</strong>) sur un cluster Kubernetes, en passant par une helm chart. L'idée est de suivre le workflow de déploiement complet afin de s'assurer que le déploiement fonctionne sans encombre. En cas de problème, nous devrons être capables de débugger rapidement et efficacement, uniquement avec <strong>k9s</strong>.</p>
 <p>Nous allons supposer que <u>k9s est déjà installé</u> sur votre machine <u>sans plugins</u>. Si ce n'est pas le cas, vous pouvez suivre les instructions sur le <a href="https://k9scli.io/">site officiel</a>.<br>
@@ -192,24 +192,24 @@ Pour cela, on va suivre 3 ressources principales:</p>
 <p><code>SHIFT + 1</code> pour filtrer sur le namespace <code>workspace-test</code></p>
 <h4>Events au déploiement, tout va bien</h4>
 <p><code>:events</code> pour afficher les évènements du namespace <code>workspace-test</code>
-<img src="images/events_start.png" alt="Events déploiement SonarQube"></p>
+<img src="images/events_start.webp" alt="Events déploiement SonarQube"></p>
 <h4>Pods en cours de démarrage</h4>
 <p><code>:pods</code> pour afficher les pods du namespace <code>workspace-test</code>
-<img src="images/missing_pods.png" alt="Pods démarrage SonarQube"></p>
+<img src="images/missing_pods.webp" alt="Pods démarrage SonarQube"></p>
 <p>On voit une première anomalie (classique), un des pods est prêt, l'autre est en <code>Pending</code>. Cela peut être normal dans le cas où le pod attend quelque chose pour démarrer. Cependant cela ne doit pas durer trop longtemps.</p>
 <h4>Malheureusement, un pod ne démarre pas</h4>
 <p><code>ENTER</code> sur le pod en <code>Pending</code> pour voir les détails
-<img src="images/pods_fail.png" alt="Failing containers"></p>
+<img src="images/pods_fail.webp" alt="Failing containers"></p>
 <p>Catastrophe, tous nos conteneurs du pod SonarQube sont en erreur ! Il va falloir débugger ça.</p>
 <h4>Logs du pod</h4>
 <p><code>L</code> pour afficher les logs du pod
-<img src="images/pod_logs.png" alt="Logs pod SonarQube"></p>
+<img src="images/pod_logs.webp" alt="Logs pod SonarQube"></p>
 <p>Oh misère de misère ! Les logs sont complètement vides ! Que faire capitaine ?</p>
 <h4>Events</h4>
 <p><code>:events</code> pour afficher les évènements du namespace <code>workspace-test</code>
-<img src="images/events_error.png" alt="Events pod SonarQube"></p>
+<img src="images/events_error.webp" alt="Events pod SonarQube"></p>
 <p><code>ENTER</code> sur l'évènement pour voir les détails
-<img src="images/error_detail.png" alt="Event pod SonarQube"></p>
+<img src="images/error_detail.webp" alt="Event pod SonarQube"></p>
 <p>Enfin une information ! Le pod n'arrive pas à démarrer car il n'a pas assez de mémoire sur aucune des nodes à sa disposition. Il va falloir trafiquer notre cluster pour lui donner plus de mémoire. Il s'agit d'un cluster construit rapidement pour le MON à l'aide de Minikube. Il est donc normal que les ressources par défaut soient faibles.</p>
 <pre class="language-bash"><code class="language-bash">minikube stop
 minikube delete
@@ -217,23 +217,23 @@ minikube config <span class="token builtin class-name">set</span> memory <span c
 minikube start <span class="token parameter variable">--memory</span><span class="token operator">=</span><span class="token number">6000</span> <span class="token parameter variable">--cpus</span><span class="token operator">=</span><span class="token number">4</span></code></pre>
 <h4>Problème résolu</h4>
 <p><code>:pods</code> pour afficher les pods du namespace <code>workspace-test</code>
-<img src="images/pods_up.png" alt="Pods up"></p>
+<img src="images/pods_up.webp" alt="Pods up"></p>
 <p>Cette fois-ci, plus de problème, on peut voir que nos pods sont vivants et ont fini de démarrer</p>
 <h4>Accès au service</h4>
 <ol>
 <li><code>:services</code> pour afficher les services du namespace <code>workspace-test</code></li>
 <li><code>SHIFT + F</code> pour effectuer un port forward entre le service et votre machine (pour pouvoir y accéder sur navigateur)
-<img src="images/portforward.png" alt="Port forward"></li>
+<img src="images/portforward.webp" alt="Port forward"></li>
 </ol>
 <p><code>localhost:9000</code> sur un navigateur quelconque pour accéder à SonarQube
-<img src="images/service_up.png" alt="SonarQube"></p>
+<img src="images/service_up.webp" alt="SonarQube"></p>
 <p>Et voilà, votre SonarQube est accessible sur <code>localhost:9000</code> !</p>
 <h4>Accès à la console</h4>
 <ol>
 <li><code>:pods</code> pour afficher les pods du namespace <code>workspace-test</code></li>
 <li><code>/sonarqube</code> pour filtrer sur les pods de SonarQube</li>
 <li><code>S</code> pour ouvrir un shell dans le pod
-<img src="images/shell_k9s.png" alt="Shell SonarQube"></li>
+<img src="images/shell_k9s.webp" alt="Shell SonarQube"></li>
 </ol>
 <p>Au besoin, vous avez accès à la console du conteneur pour effectuer des opérations de maintenance (en tant qu'administrateur bien sûr)</p>
 <h2>Conclusion</h2>

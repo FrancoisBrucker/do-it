@@ -153,7 +153,7 @@ Dans ce MON, je voulais approfondir mes connaissances en CSS et particulièremen
 <h3>Qu'est ce que c'est et à quoi ça sert ?</h3>
 <p>Lorsque l'on veut coder une page web, il faut que chaque élément de la page soit à la bonne place. La disposition des éléments dans la page est difficile à gérer, mais plusieurs outils permettent de nous faciliter la vie. Par exemple, il peut être utile d'utiliser une grid, ou un tableau en français. Un tableau est un ensemble de lignes et de colonnes de différentes tailles dans lequel on peut mettre des éléments de la page.
 Le plus simple pour comprendre est de prendre un exemple :
-<img src="exemple-grid.png" alt="Exemple de grid dans une page web"></p>
+<img src="exemple-grid.webp" alt="Exemple de grid dans une page web"></p>
 <p>Dans l'image précédente, on peut voir que la page web est constituée d'un tableau qui permet de disposer de manière simple les différents éléments voulus.</p>
 <h3>Créé un tableau</h3>
 <p>Pour créer un tableau, il faut d'abord créer un <em>container</em> c'est un élément HTML qui va contenir d'autres éléments, comme c'est le cas dans l'exemple suivant :</p>
@@ -185,13 +185,13 @@ Examinons l'exemple suivant avec quelques propriétés du container :</p>
 <p>On peut aussi parler de la propriété <em><strong>justify-content</strong></em>. Lorsque le container est plus grand que le tableau, cette propriété permet de contrôler l'alignement du tableau dans le container. Voyons ce que cela peut donner :</p>
 <ul>
 <li>justify-content: <strong>start</strong>
-<img src="Grid-exemple-start.png" alt="Exemple grid start">
+<img src="Grid-exemple-start.webp" alt="Exemple grid start">
 Le tableau se positionne au début du container.</li>
 <li>justify-content: <strong>end</strong>
-<img src="Grid-exemple-end.png" alt="Exemple grid end">
+<img src="Grid-exemple-end.webp" alt="Exemple grid end">
 Le tableau se positionne à la fin du container.</li>
 <li>justify-content: <strong>center</strong>
-<img src="Grid-exemple-centre.png" alt="Exemple grid center">
+<img src="Grid-exemple-centre.webp" alt="Exemple grid center">
 Le tableau se positionne au milieu du container.</li>
 </ul>
 <p>La propriété <em><strong>align-content</strong></em> permet de faire la même chose verticalement.</p>
@@ -208,10 +208,10 @@ Le tableau se positionne au milieu du container.</li>
 <h3>Qu'est ce que c'est ?</h3>
 <p>Tout comme les Grid, les Flexbox sont des outils qui vont faciliter l'aménagement de la page web. Mais contrairement aux Grid, les Flexbox ne vont pas permettre une mise en place bidimensionnelle, mais seulement unidimensionnelle. Les Grid permettaient de faire des lignes et des colonnes en même temps, les Flexbox sont comme des boîtes, donc on ne peut faire soit que des colonnes soit que des lignes.</p>
 <p>Avec une Grid :
-<img src="grid-exemple.png" alt="Exemple de mise en page avec une grid"></p>
+<img src="grid-exemple.webp" alt="Exemple de mise en page avec une grid"></p>
 <p>Avec une Flexbox :</p>
-<p><img src="exemple-flexbox.png" alt="Exemple de mise en page avec une flexbox">
-<img src="flex-exemple.png" alt="Exemple de mise en page avec une flexbox"></p>
+<p><img src="exemple-flexbox.webp" alt="Exemple de mise en page avec une flexbox">
+<img src="flex-exemple.webp" alt="Exemple de mise en page avec une flexbox"></p>
 <h2>Créer une Flexbox</h2>
 <p>Voyons maintenant comment créer une Flexbox. D'abord, dans le fichier HTML, il faut créer un container dans lequel on ajoute les différents éléments qui constitueront la Flexbox. Pour cela on entre les lignes suivantes :</p>
 <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -236,14 +236,14 @@ Si on souhaite en créer une en ligne il faudra écrire :
 <em><strong>flex-direction: row;</strong></em>.</p>
 <p>Ensuite, les éléments à l'intérieur du container, comme <strong><code>&lt;div&gt;1&lt;/div&gt;</code></strong> ont eux aussi des propriétés. On peut par exemple parler de la propriété <em><strong>justify-content</strong></em>.
 On peut attribuer à chaque élément du container une taille. Mais il se peut que la somme totale de ces tailles soit plus petite que la taille du container. Il y a donc de l'espace disponible comme ici par exemple :
-<img src="flexbox-freespace.png" alt="Exemple flexbox disponible">
+<img src="flexbox-freespace.webp" alt="Exemple flexbox disponible">
 Avec <em><strong>justify-content</strong></em> on peut préciser comment on souhaite que nos éléments occupent l'espace dans le container.</p>
 <ul>
 <li>justify-content: <strong>start</strong> les éléments s'aligneront les uns à la suite des autres en commençant par le début du container, comme sur l'image ci-dessus.</li>
 <li>justify-content: <strong>end</strong> les éléments s'aligneront les une à la suite des autres en commençant par la fin du container.
-<img src="flexbox-end.png" alt="Exemple flexbox end"></li>
+<img src="flexbox-end.webp" alt="Exemple flexbox end"></li>
 <li>justify-content: <strong>center</strong> les éléments seront centrés par rapport à la largeur du container.
-<img src="flexbox-center.png" alt="Exemple flexbox center"></li>
+<img src="flexbox-center.webp" alt="Exemple flexbox center"></li>
 </ul>
 <p>Il existe beaucoup d'autres propriétés qui peuvent être appliquées aux éléments de la Flexbox, mais je ne vais pas toutes les énumérer.</p>
 <h2>4. Ajustement manuel de la position d'un élément</h2>
@@ -264,9 +264,9 @@ Cette dernière peut prendre plusieurs valeurs :</p>
      <span class="token property">bottom</span><span class="token punctuation">:</span> 3px<span class="token punctuation">;</span> 
 <span class="token punctuation">}</span></code></pre>
 <p>Permet de passer de cette disposition :
-<img src="position-static.png" alt="Exemple position static"></p>
+<img src="position-static.webp" alt="Exemple position static"></p>
 <p>A celle ci où il y a eu un décalage de 100 pixels vers la droite et de 30 pixels vers le haut :
-<img src="position-relative1.png" alt="Exemple position relative"></p>
+<img src="position-relative1.webp" alt="Exemple position relative"></p>
 <h4>Fixed</h4>
 <p>On peut parfois vouloir qu'une image ou un texte reste au même endroit sur la page même si l'on scrolle, c'est le cas notamment pour les pubs.
 Pour faire cela, on donne à la propriété <em>position</em> l'attribut <em><strong>fixed</strong></em>.</p>

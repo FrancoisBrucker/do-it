@@ -152,7 +152,7 @@
 <p>Il est découpé en 11 chapitres ponctués d’exercices d’application. J’ai parcouru sans difficulté les 6 premiers et la première partie du 7ème, qui étaient majoritairement des révisions pour moi. Ils reprenaient les bases d’Excel, les options de mise en forme, les concepts de tableaux, objets, incrémentations, formules et fonctions, et graphiques. La suite contenait plus de nouveautés, et voici un condensé de ce que j’y ai appris (ou revu pour certaines parties) :</p>
 <h3>A. Graphique Sparkline</h3>
 <p>C’est un graphique miniature qui s’insère dans une cellule (depuis le menu insertion), par exemple au bout d’une ligne d’un tableau pour représenter simplement les données de cette ligne. Il en existe 3 types : la courbe, l’histogramme et le graphique conclusions et pertes. Le style de chacun est personnalisable. Ils sont représentés pour exemple dans le cas ci-dessous :</p>
-<img src="graphique sparkline.png">
+<img src="graphique sparkline.webp">
 <h3>B. Mise en forme conditionnelle</h3>
 <p>Cette fonctionnalité permet de modifier certaines caractéristiques d’une cellule (couleur de fond, police du texte, bordures ou format des données) en fonction de son contenu. Il existe des règles proposées par Excel, et il est également possible d’en créer des personnalisées.
 Avec les mises en forme conditionnelles existantes dans Excel, on peut modifier une cellule si sa valeur se trouve dans un certain intervalle, si elle contient un certain mot ou encore si elle fait partie des 10% de valeurs les plus (ou moins) élevées par exemple. On peut également ajouter dans les cellules d’un tableau des barres de longueur proportionnelle à leur valeur, créer un nuancier de couleurs qui suit l’évolution des valeurs ou encore insérer des icônes selon les valeurs et leurs changements.</p>
@@ -168,15 +168,15 @@ Avec les mises en forme conditionnelles existantes dans Excel, on peut modifier 
 <h3>E. Tableau croisé dynamique</h3>
 <p>C’est un moyen très pratique de synthétiser des données. Ci-dessous un exemple de ce que cela peut donner, qui s’appuie sur le tableau proposé pour s’entraîner dans le cours.</p>
 <p>La table de données initiale :</p>
-<img src="TCD initial.png">
+<img src="TCD initial.webp">
 <p>Le tableau croisé dynamique associé :</p>
-<img src="TCD resultat.png">
+<img src="TCD resultat.webp">
 <p>C’est ici un exemple très simple, mais dans le cas de nombreuses données cette synthèse est particulièrement utile. Bien sûr, il est possible de changer les données en ligne et en colonne, l’ordre des catégories, de trier ou de filtrer à partir de données choisies, de calculer d’autres valeurs remarquables comme la somme ou le produit des données par exemple ou encore de personnaliser les couleurs et la mise en page.</p>
 <h2>3. VBA</h2>
 <p>Comme la formation Excel d’Excel-pratique était plutôt bien faite, j’ai décidé de rester sur la même plateforme et de suivre le <a href="https://www.excel-pratique.com/fr/vba">cours de VBA</a> qui y était proposé. Il se découpe également en 11 chapitres, et de même que précédemment je vais résumer ce que j’en ai retenu afin de garder une synthèse que je pourrai utiliser comme pense-bête à l’avenir.</p>
 <p>Le VBA est un langage de programmation orientée objet qui permet d’automatiser des tâches dans les différentes applications Microsoft. Ici, nous verrons donc uniquement l’utilisation de VBA appliquée à Excel.</p>
 <p>Voici pour commencer le bandeau d’outils nécessaire pour ce cours :</p>
-<img src="bandeau VBA.png">
+<img src="bandeau VBA.webp">
 <p>Si l’onglet n’apparaît pas automatiquement à l’ouverture d’Excel, il faut le rajouter depuis les options.</p>
 <h3>A. Enregistreur de macro</h3>
 <p>Un moyen très simple d’automatiser une tâche ou une suite de tâches est d’utiliser l’enregistreur de macro. Il enregistre l’ensemble des clics et des frappes de clavier sur la durée choisie, et transforme ces actions en code VBA. On peut alors voir ce code dans l’éditeur (que l’on ouvre en cliquant sur Visual Basic ou grâce au raccourci Alt+F11), le modifier, le renommer ou encore le commenter. Pour l’utiliser, il suffit d’insérer un bouton et de lui affecter la macro. Chaque clic sur ce bouton lancera alors la suite de tâches enregistrée au préalable.</p>
@@ -245,7 +245,7 @@ Avec les mises en forme conditionnelles existantes dans Excel, on peut modifier 
 <p>On peut ensuite afficher cette variable dans une boîte de dialogue grâce à la commande :</p>
 <pre class="language-vba"><code class="language-vba">MsgBox Nom_variable</code></pre>
 <p>Ainsi, on peut par exemple afficher une phrase contenant plusieurs informations extraites d’une base de données. A noter que, comme en Excel, on utilise &amp; pour concaténer du texte et des valeurs de variables. Voici une illustration :</p>
-<img src="variables tab.png">
+<img src="variables tab.webp">
 <pre class="language-vba"><code class="language-vba"><span class="token keyword">Sub</span> variables<span class="token punctuation">(</span><span class="token punctuation">)</span>
     <span class="token keyword">Dim</span> Nom <span class="token keyword">As</span> <span class="token keyword">String</span><span class="token punctuation">,</span> Prenom <span class="token keyword">As</span> <span class="token keyword">String</span><span class="token punctuation">,</span> Numero <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">,</span> Poste <span class="token keyword">As</span> <span class="token keyword">Integer</span><span class="token punctuation">,</span> Ligne <span class="token keyword">As</span> <span class="token keyword">Integer</span>
     Ligne <span class="token operator">=</span> Range<span class="token punctuation">(</span><span class="token string">"G6"</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span>
@@ -256,7 +256,7 @@ Avec les mises en forme conditionnelles existantes dans Excel, on peut modifier 
     Poste <span class="token operator">=</span> Cells<span class="token punctuation">(</span>Ligne<span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span>
     MsgBox <span class="token string">"La joueuse "</span> <span class="token operator">&amp;</span> Nom <span class="token operator">&amp;</span> <span class="token string">" "</span> <span class="token operator">&amp;</span> Prenom <span class="token operator">&amp;</span> <span class="token string">" porte le numéro "</span> <span class="token operator">&amp;</span> Numero <span class="token operator">&amp;</span> <span class="token string">" et évolue au poste "</span> <span class="token operator">&amp;</span> Poste
 <span class="token keyword">End</span> <span class="token keyword">Sub</span></code></pre>
-<img src="variables boite dialogue.png">
+<img src="variables boite dialogue.webp">
 <p>Une variable est utilisable dans l’environnement dans lequel elle a été définie. Dans une procédure (Sub) si elle est définie au début de cette procédure, dans tout un module si elle est initiée au début du module ou même dans l’ensemble des modules si l’on remplace Dim par Public.</p>
 <p>Pour conserver la valeur d’une variable d’une procédure après la fin de cette procédure il faut remplacer <code>Dim</code> par <code>Static</code>, et pour conserver la valeur de toutes les variables d’une procédure il faut ajouter Static devant Sub.</p>
 <p>Il est également possible pour des cas particuliers de créer son propre type de variable.</p>
@@ -393,7 +393,7 @@ Avec les mises en forme conditionnelles existantes dans Excel, on peut modifier 
     <span class="token keyword">End</span> <span class="token keyword">If</span>
 <span class="token keyword">End</span> <span class="token keyword">Sub</span></code></pre>
 <p>On obtient alors à l’exécution :</p>
-<img src="boite dialogue.png">
+<img src="boite dialogue.webp">
 <p>Puis l’action s’effectue ou non selon la réponse à la boîte de dialogue. Il existe de nombreux boutons qui permettent des interactions différentes telles que Ok, Annuler, Recommencer…, qui ajoutent une icône ou encore qui forcent à répondre avant de continuer. Il est possible de mettre plusieurs valeurs dans le deuxième argument de la MsgBox, séparés par des <code>+</code>.</p>
 <p>Enfin, on peut demander à l’utilisateur de remplir une valeur dans la boîte de dialogue grâce à la fonction <code>InputBox(«texte», «titre», «valeur par défaut»)</code>, et la comparer à un résultat pour générer une action. La valeur par défaut est un argument optionnel.</p>
 <h3>C. Pour aller plus loin</h3>
@@ -401,7 +401,7 @@ Avec les mises en forme conditionnelles existantes dans Excel, on peut modifier 
 <p>Premièrement, nous avons lancé des macros uniquement en cliquant sur un bouton. Il existe des commandes qui permettent de les lancer selon plein d’autres actions telles qu’à l’ouverture d’un classeur ou d’une feuille, avant la fermeture, à l’enregistrement, à l’impression, au clic droit, à chaque sélection etc.</p>
 <p>Ensuite, il est possible de créer ce que l'on appelle un UserForm. C'est un objet qui se présente sous la forme d'une boîte de dialogue, et que l'on peut personnaliser avec de très nombreuses fonctionnalités appelées contrôles. On peut entre autres y ajouter des boutons, du texte, des cases à cocher, des listes déroulantes... Certains aspects du design sont également modifiables. Lorsque l'UserForm est appelé, tout comme pour une macro classique, les interactions avec celui-ci induisent des actions sur le fichier Excel associé. Ainsi, un UserForm peut être un point d'entrée pour remplir des informations dans un tableau par exemple.</p>
 <p>Voici un exemple de rendu :</p>
-<img src="userform.png">
+<img src="userform.webp">
 <p><em>(<a href="https://faqword.com/index.php">source de l'image</a>)</em></p>
 <p>Enfin, il existe une multitude de fonctions pré-définies que l'on peut utiliser dans un code VBA, et en particulier toutes les fonctions Excel, que l'on appelle grâce à la commande <code>WorksheetFunction.nom_fonction_excel</code>. Si toutefois ce n'est pas suffisant, il est possible de créer une fonction personnalisée pour réaliser une tâche spécifique.</p>
 <h2>4. Conclusion</h2>

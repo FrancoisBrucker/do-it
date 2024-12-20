@@ -195,16 +195,16 @@ Il définit ce concept comme un <em>&quot;processus artistique qui repose sur l'
 </div></div>
 <h2 id="exemples"> Présentation de quelques oeuvres de Data Art </h2>
 <h3>Love Will Tear Us Apart Again - Peter Crnokrak - 2007</h3>
-<img src="exemple1.png">
+<img src="exemple1.webp">
 <p><a href="https://www.petercrnokrak.com/love-will-tear-us-apart-again/">Source</a></p>
 <p>Cette oeuvre représente toutes les reprises connues de la chanson de Joy Division. Le graphique montre les 168 reprises ultérieures à la sortie de l'album dans le sens chronologique des aiguilles d'une montre. Au centre, on peut voir un anneau extérieur et un anneau intérieur. Ce sont des comparaisons des formes d'ondes : pour le premier, de 3 versions studio enregistrées par le groupe original, et pour le second des 2 remix postmortem de 1995.
 <em>On peut souligner cette façon de représenter ces données met en evidence la variation propre de la structure de la chanson, qui est identique d'un enregistrement à un autre, et montre ainsi l'émotion et le son que voulaient transmettre le groupe lors de l'enregistrement de la chanson.</em></p>
 <h3>Flight patterns - Aaron Koblin - 2005</h3>
-<img src="exemple2.jpg">
+<img src="exemple2.webp">
 <p><a href="https://www.aaronkoblin.com/work/flightpatterns/">Source</a></p>
 <p>Dans cette oeuvre, l'artiste propose de visualiser, le trafic aérien américain, pour mieux rendre compte des mobilités des individus au XXIème siècle.</p>
 <h3>Mountains out of Molehills - David McCandless - 2007</h3>
-<img src="exemple3.png">
+<img src="exemple3.webp">
 <p><a href="https://informationisbeautiful.net/visualizations/mountains-out-of-molehills/">Source</a></p>
 <p>David McCandless explique dans <a href="https://www.youtube.com/watch?v=5Zg-C8AAIGg">ce TEDx Talks</a> très intéressant le data art, et se penche plus particulièrement sur cette oeuvre.
 C'est une chronologie des plus grandes peurs du monde, telles qu'elles sont attisées par les médias <em>(où l'ordonnée représente l'intensité de la couverture médiatique (nombre de mentions))</em></p>
@@ -266,7 +266,7 @@ Le choix du logiciel à utiliser m'a alors paru évident.</p>
 <li><strong>draw()</strong> est lancée à intervalle régulier (<em>par défaut 60 fois par seconde</em>)</li>
 </ul>
 <p>Voici un exemple présenté par Processing lors du lancement de l'application, qui permet de voir ce que l'on peut réaliser facilement :</p>
-<img width="350" src="test2.png">
+<img width="350" src="test2.webp">
 <pre class="language-java"><code class="language-java"><span class="token keyword">void</span> <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token function">size</span><span class="token punctuation">(</span><span class="token number">480</span><span class="token punctuation">,</span> <span class="token number">480</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
@@ -291,7 +291,7 @@ Le choix du logiciel à utiliser m'a alors paru évident.</p>
 <p>Dans sa vidéo Youtube, John park explique comment visualiser des données importées depuis Excel, sur Processing. Avec un cas d'application, il explique ses paroles. Sa BDD représentait des noms de personnes qu'il associait avec différentes caractéristiques, dont leur âge. Il essayait de représenter ensuite de manière plus parlante cette donnée au travers de cercles de tailles proportionnelles à la donnée.</p>
 <p>De mon côté, j'ai construit une BDD qui répertoriait 11 espèces d'oiseaux, la taille de l'oiseau, la taille de leurs oeufs, et la fréquence de ponte. <em>(informations trouvées principalement <a href="https://www.mnhn.fr/fr/actualites/tout-savoir-sur-les-oeufs">ici</a> <a href="https://www.oiseaux.net/oiseaux/goeland.argente.html">là</a> et <a href="https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal">un petit peu là</a>)</em>.</p>
 <p>Voici ce que représente l'application de son exercice à ma base de données :</p>
-<img src="birds.png">
+<img src="birds.webp">
 <ul>
 <li>La taille de la police d'écriture de l'espèce d'oiseau est proportionnelle à la taille de l'oiseau : <em>plus l'oiseau est grand, plus la police est épaisse</em>.</li>
 <li>La taille de l'ellipse est proportionnelle, quant à elle, a la taille de l'oeuf pondu par l'oiseau.</li>
@@ -363,7 +363,7 @@ Le choix du logiciel à utiliser m'a alors paru évident.</p>
     <span class="token comment">//2 correspond à la colonne contenant la taille de l'oeuf de l'oiseau (en cm)</span>
     <span class="token function">ellipse</span><span class="token punctuation">(</span><span class="token number">400</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token operator">+</span> i<span class="token operator">*</span><span class="token number">40</span><span class="token punctuation">,</span> <span class="token function">sqrt</span><span class="token punctuation">(</span>table<span class="token punctuation">.</span><span class="token function">getFloat</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">9</span><span class="token punctuation">,</span> <span class="token function">sqrt</span><span class="token punctuation">(</span>table<span class="token punctuation">.</span><span class="token function">getFloat</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
-  <span class="token function">save</span><span class="token punctuation">(</span><span class="token string">"birds.png"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">save</span><span class="token punctuation">(</span><span class="token string">"birds.webp"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
 </div>
 </details>     
@@ -372,7 +372,7 @@ Le choix du logiciel à utiliser m'a alors paru évident.</p>
 <p>Après tout cet apprentissage, il était temps pour moi de mettre à profit tout ce que j'avais vu pour créer ma première oeuvre.</p>
 <p>Je vous présente donc le premier chef d'oeuvre de Sarah Sebastien, intitulé
 <strong>&quot;Une année toute en couleur&quot;</strong></p>
-<img src="TheColorsOfTheYear.png">
+<img src="TheColorsOfTheYear.webp">
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
 <summary class="list-none py-0.5">
@@ -406,7 +406,7 @@ Le choix du logiciel à utiliser m'a alors paru évident.</p>
 <li>J'ai d'abord trié les données pour les classer par ordre chronologique.</li>
 <li>Ensuite, je savais que je voulais un dégradé de couleurs qui serait proportionnel au degré de température. Pour ça, j'ai utilisé une <em>&quot;mise en forme conditionnelle&quot;</em>, avec un dégradé à 3 couleurs (bleu - pour les températures les plus froides - jaune, et rouge - pour les températures les plus chaudes) en indiquant le min et le max selon les valeurs déterminées plus haut.</li>
 </ul>
-<img width="350" src="exploitation_donnees_1.png">
+<img width="350" src="exploitation_donnees_1.webp">
 <p>Pour renseigner une couleur de remplissage dans <em>Processing</em>, il faut utiliser la méthode <em>fill</em> qui prend en argument le code RGB d'une couleur. Il me fallait donc récupérer ce code pour chaque couleur générée par la mise en forme conditionnelle. Seule solution (trouvée) : <em>utiliser une macro.</em></p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
@@ -457,7 +457,7 @@ End Sub
 <li>Puis on vient utiliser ce code couleur que l'on divise selon les formules expliquées <a href="https://excel-downloads.com/threads/resolu-obtenir-code-couleur-rgb-ou-hexadecimal.20022616/">ici</a> pour obtenir le <strong>code RGB</strong> de la couleur de la ligne.</li>
 <li>On inscrit ces 3 composantes dans <strong>3 colonnes distinctes</strong> et le tour est joué.</li>
 </ul>
-<img width="350" src="exploitation_donnees_2.png">
+<img width="350" src="exploitation_donnees_2.webp">
 <h3>Etape 3 : Mise en forme des données</h3>
 <p>Le fichier CSV enregistré ne consiste alors plus qu'en 365 lignes, correspondant aux jours de l'année, et 3 colonnes,correspondant au composantes RGB de la température du jour en question.</p>
 <p>Le codage de la mise en forme sur processing devenait alors très simple :</p>
@@ -510,7 +510,7 @@ End Sub
     <span class="token function">fill</span><span class="token punctuation">(</span>table3<span class="token punctuation">.</span><span class="token function">getInt</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span>table3<span class="token punctuation">.</span><span class="token function">getInt</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>table3<span class="token punctuation">.</span><span class="token function">getInt</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token function">rect</span><span class="token punctuation">(</span>i<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">400</span><span class="token punctuation">,</span><span class="token number">0.5</span><span class="token punctuation">,</span><span class="token number">600</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
-  <span class="token function">save</span><span class="token punctuation">(</span><span class="token string">"une_annee_toute_en_couleurs.png"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">save</span><span class="token punctuation">(</span><span class="token string">"une_annee_toute_en_couleurs.webp"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
 </div>
 </details>     

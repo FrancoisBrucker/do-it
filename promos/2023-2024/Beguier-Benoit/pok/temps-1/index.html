@@ -186,7 +186,7 @@ J'ai ensuite consulté sans m'attarder les deux documents .pdf, qui donnent les 
 <h2>Première modélisation du comportement dynamique d'une monoplace</h2>
 <h4>Prise en main de la bibliothèque</h4>
 <p>J'ai commencé par me mettre à jour sur le contenu de la bibliothèque. Celle-ci étant très fournie, j'effectue alors des petits tests pour visualiser des données simples, telles que l'angle du volant.</p>
-<p><img src="Biblioth%C3%A8que.png" alt="Biblio Simulink"></p>
+<p><img src="Biblioth%C3%A8que.webp" alt="Biblio Simulink"></p>
 <p>J'ai visualisé la vidéo de présentation d'une trentaine de minutes afin de mieux me familiariser avec le package.</p>
 <h4>Réalisation d'une première modélisation</h4>
 <p><strong>Objectif  :</strong> Modéliser une monoplace par un point matériel et vérifier la cohérence du modèle</p>
@@ -201,12 +201,12 @@ J'ai ensuite consulté sans m'attarder les deux documents .pdf, qui donnent les 
 </div></div>
 <p>Pour ma modélisation, le pilote applique une force de traction (opérée par la pédale d'accélérateur) sur le véhicule pour que le véhicule ait la vitesse la plus proche possible de celle exigée par le cycle de référence. Le pilote agit donc comme un correcteur.
 Le véhicule est quant à lui modélisé à partir des lois physiques auxquelles il obéit, et que je ne détaillerai pas dans ce POK. Je les ajouter cependant dans l'Annexe en fin de document pour les intéressés.</p>
-<p><img src="Simulink1.png" alt="Premier modèle"></p>
+<p><img src="Simulink1.webp" alt="Premier modèle"></p>
 <h4>Résultats</h4>
 <p>Après avoir exécuté la modélisation Simulink, j'obtiens un graphique comparant la vitesse exigée par le cycle et la vitesse réelle de la monoplace. Nous constatons que ces deux courbes sont <strong>très proches</strong> et qu'il faut zoomer pour voir une différence.</p>
-<p><img src="Graphe1.png" alt="graphe1"></p>
+<p><img src="Graphe1.webp" alt="graphe1"></p>
 <p>L'écart le plus important que j'ai noté est de 0.2 mph (comprenez <em>miles per hour</em>), soit en comparant à la vitesse demandée un <strong>écart de 0.3%</strong>.</p>
-<p><img src="Graphe2.png" alt="graphe2"></p>
+<p><img src="Graphe2.webp" alt="graphe2"></p>
 <p>Nous pouvons affirmer que nous respectons ce cycle de conduite, et que la force de traction ainsi que la puissance utilisées pour cette masse sont tout à fait adéquates pour le respecter.</p>
 <h4>Conclusion</h4>
 <p>Cet écart pourrait paraître négligeable, et la modélisation jugée suffisante. Cependant, le sport automobile reposant sur l'optimisation permanente, je décide de continuer mon travail et de fournir une modélisation plus poussée. J'espère pouvoir en tirer un modèle plus proche de la réalité, ce qui ne se traduira pas pour autant par un gain de temps ou de vitesse.</p>
@@ -236,20 +236,20 @@ Les paramètres suivants sont ainsi ajoutés :</p>
 </ul>
 <p>La transmission est assez simple. Elle doit simplement transmettre le couple du moteur au modèle de point matériel. Elle prend en entrée le couple moteur, la force de freinage provenant de notre sous-système de conduite et la vitesse du véhicule. Les sorties de la chaîne cinématique sont la force de traction que nous envoyons au point matériel et la vitesse du moteur.</p>
 <p>La chaîne dans son entièreté est représentée ci-dessous :
-<img src="Simulink.png" alt="chaine"></p>
+<img src="Simulink.webp" alt="chaine"></p>
 <h4>Résultats</h4>
 <p>Je décide de lancer la modélisation avec la même &quot;stimulation&quot; en entrée, c'est-à-dire le cycle de vitesse de référence US06. Voici le résultat en sortie du bloc du véhicule :
-<img src="Graphe2-1.png" alt="resultat"></p>
+<img src="Graphe2-1.webp" alt="resultat"></p>
 <p>Dans l'ensemble, la courbe bleue est moins proche de la courbe jaune (ici la référence). Je rajoute un bloc qui permet d'afficher les écarts moyens, j'obtiens en moyenne un écart de <strong>0.4 mph</strong> là ou il représentait 0.05 mph pour le modèle précédent.</p>
 <p>Il est aussi utile de s'intéresser aux résultats locaux, c'est-à-dire aux  réponses du véhicule aux singularités de la courbe de référence.</p>
 <ul>
 <li>Lors des consignes d'accélération vive, la réponse est très en retard, de l'ordre de <strong>2 secondes</strong>, ce qui se traduit par une différence de vitesse instantanée par rapport à la référence de <strong>10 mph</strong> soit environ <strong>16%</strong>!</li>
 </ul>
-<p><img src="Graphe2-2.png" alt="forte accel"></p>
+<p><img src="Graphe2-2.webp" alt="forte accel"></p>
 <ul>
 <li>Lors des consignes constantes avec une petite oscillation, on constate un écart de vitesse par rapport à la référence d'environ <strong>0.25 mph</strong>.</li>
 </ul>
-<p><img src="Graphe2-3.png" alt="CONSTANCE"></p>
+<p><img src="Graphe2-3.webp" alt="CONSTANCE"></p>
 <h4>Conclusion sur le modèle</h4>
 <p>Il m'est assez difficile de conclure sur la pertinence de mon modèle et sur sa précision. En rajoutant plus de paramètres, les courbes semblent montrer que le modèle est plus difficilement maniable et adaptable par rapport au cycle de référence.
 Cependant, est-ce uniquement dû aux nouveaux paramètres pris en compte, je ne saurais le dire.</p>
@@ -267,12 +267,12 @@ Cependant, est-ce uniquement dû aux nouveaux paramètres pris en compte, je ne 
 <p>La première fonction MATLAB prend en argument un fichier Excel à remplir. Celui-ci permet de décrire à MATLAB nos contraintes techniques, telles que la masse du véhicule, le nombre de rapport de la boîte de vitesse, la dimension des disques de frein...</p>
 <p>J'ai rempli le fichier à partir des données techniques et du règlement technique 2022 de la Formule 1 (disponible <a href="https://www.fia.com/sites/default/files/2022-2023_season_9_formula_e_techregs_wmsc_07.12.2022_eng_fr_marked_up.pdf">ici</a>). J'ai néanmoins du faire quelques approximations, notamment sur les rayons des disques de frein ainsi que celui des roues. En effet, la structure du fichier ne permet de rentrer qu'un seul rayon en supposant qu'il est identique pour les quatres roues, cependant celui-ci varie entre l'essieu avant et l'essieu arrière. J'ai à chaque fois indiqué dans le document le rayon le plus petit (celui de l'essieu AR)
 J'ai extrait les rapport de boîte en me basant sur ceux provenant de la Redbull RB18 (<em><a href="https://answers.ea.com/t5/General-Discussion/Gear-ratios-ERS/m-p/12443280">Source</a></em>).</p>
-<p><img src="EXCEL.png" alt="excel"></p>
+<p><img src="EXCEL.webp" alt="excel"></p>
 <p style="text-align: center;">Extrait du fichier Excel recensant les paramètres du véhicule à partir du règlement FIA 2022.</p>
-<p><img src="Couple%20vs%20RPM.png" alt="regime"></p>
+<p><img src="Couple%20vs%20RPM.webp" alt="regime"></p>
 <p style="text-align: center;">Détail du couple moteur associé à chaque régime moteur.</p>
 <p>J'obtiens la visualisation ci-dessous une fois le programme exécuté :</p>
-<p><img src="PrintVehicle.png" alt="image"></p>
+<p><img src="PrintVehicle.webp" alt="image"></p>
 <ul>
 <li>
 <p>La courbe <strong>Engine Curve</strong> affiche la puissance (en chevaux, <em>hp</em>) et le couple disponibles en fonction du régime moteur. Le couple maximal de 350 N.M est disponible à 13 000 tr/min, tandis que la puissance maximale de 750 hp est disponible à 18 000 tr/min.
@@ -780,9 +780,9 @@ end
 </div>
 <h4>OpenTRACK</h4>
 <p>De la même manière, OpenTRACK fonctionne en prenant en argument un fichier Excel contenant les informations de piste comme la distance, l'inclinaison de la piste, les virages, etc. Il est aussi possible de générer ses propres circuits. J'ai pour ma part choisi de représenter mon circuit favori, le circuit de Spa-Francorchamps (situé à Francorchamps, Belgique). Le fichier ressemble à ça :
-<img src="Spa.png" alt="piste"></p>
+<img src="Spa.webp" alt="piste"></p>
 <p>Une fois le code exécuté, on obtient alors une visualisation de la carte de la piste :</p>
-<p><img src="PrintSpa.png" alt="print"></p>
+<p><img src="PrintSpa.webp" alt="print"></p>
 <p>Nous pouvons observer les trois secteurs (respectivement en violet, bleu et jaune). A droite, le programme trace le graphe des courbures du circuit (c'est-à-dire le rayon des virages), l'altitude et l'inclinaison (par rapport au Nord) selon le kilométrage.
 Nous ne nous intéresserons pas au banking et facteur d'adhérence dans ce POK.</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
@@ -1596,7 +1596,7 @@ end
 <h4>OpenDRAG</h4>
 <p>Le but de cette partie est de simuler le comportement de notre modélisation effectuée plus tôt sur une ligne droite. Je souhaite obtenir le temps nécessaire à notre modèle pour atteindre certaines vitesses (100 km/h, 200 km/h et 300 km/h), ainsi que la vitesse atteignable sur 1 km.</p>
 <p>Nous obtenons les résultats suivants :</p>
-<p><img src="PrintDrag.png" alt="resultat"></p>
+<p><img src="PrintDrag.webp" alt="resultat"></p>
 <p>Compilation des résultats :</p>
 <ul>
 <li><strong>16 s</strong> pour parcourir 1000 m</li>
@@ -2221,7 +2221,7 @@ Sector 3: 29.516 [s]
 <li>la simulation ne prend pas en compte les paramètres météorologiques (vent, température de piste)</li>
 </ul>
 <p>Le rapport suivant est obtenu :</p>
-<p><img src="printLap.png" alt="rapport"></p>
+<p><img src="printLap.webp" alt="rapport"></p>
 <p>Je suis plus que satisfait par le résultat obtenu. Voici les principaux points sur lesquels je m'attarde :</p>
 <ul>
 <li>La première courbe affiche la vitesse du véhicule en fonction de la distance sur le circuit. La courbe seule n'est qu'indicative, mais en combinant plusieurs simulations (par exemple en changeant la charge aéro de la voiture), nous pourrons constater instantanément les différences (dans notre cas, en vitesse de pointe par exemple).</li>
@@ -3347,18 +3347,18 @@ end
 <h2>Annexe</h2>
 <h4>Annexe 1</h4>
 <p>Modélisation physique du problème :
-<img src="forces.png" alt="forces"></p>
+<img src="forces.webp" alt="forces"></p>
 <p>Source : Mathworks.</p>
 <h4>Annexe 2</h4>
 <p>Voici les équations qui régissent le mouvement de la monoplace dans la partie 3 :
-<img src="equations.png" alt="Equations"></p>
+<img src="equations.webp" alt="Equations"></p>
 <p>Source : Zongxuan Sun, Guoming G. Zhu, <em>Design and Control of Automotive Propulsion Systems</em>, e-Book.</p>
 <h4>Annexe 3</h4>
 <p>Voici le détail du bloc Monoplace dans la partie 3 :</p>
-<p><img src="modeleglider.png" alt="GLIDER"></p>
+<p><img src="modeleglider.webp" alt="GLIDER"></p>
 <h4>Annexe 4</h4>
 <p>Voici le détail du bloc Pilote dans la partie 3 :</p>
-<p><img src="modeledriver.png" alt="DRIVER"></p>
+<p><img src="modeledriver.webp" alt="DRIVER"></p>
 
 
 </article>

@@ -152,13 +152,13 @@
 <h3>Du C++ au WebAssembly</h3>
 <p>J'ai donc décidé d'essayer wasm. J'ai commencé par un autre langage que Rust car je ne le connaissais pas encore assez. Il est cependant possible de cibler le WebAssembly depuis plusieurs langages comme le C et le C++ par exemple, j'ai donc commencé par là.</p>
 <p>Pour créer un code wasm avec du C++, il faut utiliser <a href="https://emscripten.org">emscripten</a>. Emscripten va prendre les fichiers sources et sortir un fichier en WebAssembly (.wasm), un fichier javascript et un fichier en HTML. Le javascript va automatiquement appelé le WebAssembly et définir les fonctions nécessaires pour que nos méthodes puissent être appelées depuis le javascript. Le HTML est alors une page générée automatiquement pour appeler ce javascript (en tout cas sa fonction main). J'ai pu obtenir le résultat suivant en utilisant emscripten sur un programme en C++/SDL :
-<img src="emscripten.png" alt="Affichage avec emscripten"></p>
+<img src="emscripten.webp" alt="Affichage avec emscripten"></p>
 <h3>Rust et WebAssembly</h3>
 <p>J'ai ensuite suivi le tutoriel fournit par Rust sur le WebAssembly accessible <a href="https://rustwasm.github.io/docs/book/introduction.html">ici</a>.</p>
 <p>Après cette étape, la majorité de mes questions sur le WebAssembly avaient trouvées leur réponses.</p>
 <h3>Des équations croisées</h3>
 <p>Ensuite, il me fallait appliquer ce que je venais d'apprendre sur le WebAssembly et produire un livrable pour mon POK. Je me suis donc lancé le défi de réaliser un jeu d'équations croisées. Le résultat final, ressemblerait à ça :
-<img src="crossmath.png" alt="Crossmath">
+<img src="crossmath.webp" alt="Crossmath">
 <em>Cette image a été tirée du jeu Crossmath</em></p>
 <p>Je n'ai pas d'affichage pour l'instant, cependant voici ma progression jusqu'à présent :</p>
 <ul>
@@ -177,7 +177,7 @@
 <li>Gérer la validation de la grille remplie par le joueur <em>(difficulté estimée : 1)</em></li>
 </ul>
 <h2>Ce que j'ai fait à la fin du temps 1</h2>
-<p><img src="crossmath_final.png" alt="Le résultat après 20h de travail"></p>
+<p><img src="crossmath_final.webp" alt="Le résultat après 20h de travail"></p>
 <p><a href="https://crossmath.assanediouf.com/">Jouez au jeu en cliquant ici !</a></p>
 <h3>Les péripéties</h3>
 <p>Comme je l'avais estimé, le plus difficile a été l'algorithme de génération de la grille. Je l'ai fait un bon coup un soir puis j'ai commencé à mettre en place le js pour l'afficher. Seulement, cet affichage m'a juste montrer à quelle point je passais à côté de plein de cas : mon implémentation n'allait pas. J'ai donc modifié mon algorithme, pour ensuite m'apercevoir que j'avais encore oublié quelque chose. Ca a continuer comme ça encore une ou deux fois avant que j'ai quelque chose qui fonctionne pour de bon !</p>

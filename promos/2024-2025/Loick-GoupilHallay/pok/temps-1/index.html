@@ -273,7 +273,7 @@ Il ajoute également une couche de sécurité en masquant les services déployé
 <h3>Executable</h3>
 <p><a href="https://github.com/BoxBoxJason/svcadm/releases/">L'exécutable (binaire) de svcadm</a> est généré à partir du code source et est utilisé pour déployer l'environnement de développement.
 Pour qu'il puisse fonctionner, la seule condition est que la machine hôte ait installé le moteur d'éxécution de conteneurs qu'elle souhaite utiliser (docker ou podman).</p>
-<p><img src="images/help.png" alt="svcadm help"></p>
+<p><img src="images/help.webp" alt="svcadm help"></p>
 <h3>Comment ça marche ?</h3>
 <pre class="mermaid" style="background-color: transparent">
 %%{init: {'theme': 'forest'}}%%
@@ -320,11 +320,11 @@ architecture-beta
 <li>Il décide des services à activer, des ports à utiliser, des volumes à monter, des variables d'environnement à définir,...</li>
 <li>Il choisit le moteur de conteneurisation à utiliser (docker ou podman) et le réseau à utiliser.</li>
 <li>Il définit le TLS certificat et la clé privée à utiliser pour sécuriser les connexions (s'il utilise nginx)
-<img src="images/svcadm.png" alt="svcadm.yaml"></li>
+<img src="images/svcadm.webp" alt="svcadm.yaml"></li>
 </ul>
 </li>
 <li>L'utilisateur remplit un fichier de configuration <code>access.yaml</code> pour définir les utilisateurs à créer et leurs rôles.
-<img src="images/access.png" alt="access.yaml"></li>
+<img src="images/access.webp" alt="access.yaml"></li>
 <li>L'utilisateur lance la commande <code>svcadm setup</code> pour déployer les services.</li>
 <li>Les services sont déployés dans des conteneurs, sur le même réseau et sont accessibles depuis le reverse proxy Nginx (s'il est activé) sur la machine hôte, sur les ports 80 (HTTP) et 443 (HTTPS).</li>
 <li>Les utilisateurs sont créés avec les rôles définis dans le fichier de configuration <code>access.yaml</code>.</li>

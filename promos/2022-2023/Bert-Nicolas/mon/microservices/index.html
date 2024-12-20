@@ -164,7 +164,7 @@
 <li><strong>La duplication des données</strong> : Un des objectifs de la SOA est de permettre à l'application d'avoir accès à toutes les données de manière synchrone et direct. En microservices, dans l'idéal, chaque service a accès seulement à toutes les données dont il a besoin même si cela implique de dupliquer les données et donc rajoute de la complexité.</li>
 </ul>
 <p>On peut schématiser les différentes architectures de la manière suivante :</p>
-<img src="../images/schema_comp_archi.png" style="width: 100%;">
+<img src="../images/schema_comp_archi.webp" style="width: 100%;">
 <h2>Quels sont les avantages et inconvénients d'une architecture en microservices ?</h2>
 <ul>
 <li>✅ <strong>Développement indépendant</strong> : Le découpage en service permet à chaque équipe d'utiliser les technologies qu'ils préfèrent et qui conviennent à la fonctionnalité gérée par le service et ne sont donc pas limités aux technologies imposés en début de projet.</li>
@@ -187,13 +187,13 @@
 <p>Dans une architecture microservices, de nombreux services peuvent être présents et certains ont besoin de communiquer entre eux pour s'échanger des informations. Cette communication doit être encadrée et elle peut se faire de deux façons : l'orchestration et la chorégraphie.</p>
 <h3>L'orchestration 🎼</h3>
 <p>La première idée qui nous vient pour faire communiquer des services entre eux est d'utiliser des API REST.</p>
-<img src="../images/orch-1.png" style="width: 100%">
+<img src="../images/orch-1.webp" style="width: 100%">
 <p>Cette façon de faire est assez simple à mettre en place mais le système devient rapidement complexe et fastidieux et maintenir puisque l'on crée des dépendances entre les services. Pour éviter cela, une meilleure façon est d'introduire une couche supplémentaire avec un nouveau service que l'on appelle l'<strong>orchestrateur</strong> :</p>
-<img src="../images/orch-2.png" style="width: 100%">
+<img src="../images/orch-2.webp" style="width: 100%">
 <p>L'orchestrateur est le seul service qui a connaissance de tous les autres. Ainsi si un service est mis à jour, la seul dépendance à mettre à jour également est l'orchestrateur, on réduit grandement le niveau de dépendances. Cependant, en introduisant un orchestrateur, on va indirectement introduire de la latence et une mauvaise tolérance aux pannes.</p>
 <h3>La chorégraphie 🕺🏻</h3>
 <p>La chorégraphie est une approche différente qui permet de pallier certains inconvénients de l'orchestration : la dépendance et la latence. Cette approche consiste à utiliser des événements avec un modèle <em>publish-subscribe</em> :</p>
-<img src="../images/chore-1.png" style="width: 100%">
+<img src="../images/chore-1.webp" style="width: 100%">
 <p>Ici, lorsqu'une action est effectuée, le service en question va publier un événement indiquant qu'il a effectué cette action. Les autres services quant à eux peuvent souscrire à cet événement de manière asynchrone pour effectuer les modifications nécessaires de l'événement. Les services n'ont pas connaissances des autres, le système est donc performant reste simple à maintenir à plus grande échelle. Si un service tombe en panne, le système continue de fonctionner mais l'on peut cependant perdre la cohérence des données.</p>
 <h2>Conseils et bonnes pratiques</h2>
 <ul>
@@ -205,7 +205,7 @@
 </ul>
 <h2>Exemple de microservices</h2>
 <p>Il existe de nombreuses façons de découper un projet en microservices. Pour l'exemple uniquement, voici comment Amazon pourrait organiser une partie de son application en microservice. <em>(Amazon fonctionne très probablement en microservices, mais le découpage que je propose est purement fictif)</em></p>
-<img src="../images/amazon.png" style="width: 100%;">
+<img src="../images/amazon.webp" style="width: 100%;">
 <p>Ici j'ai pris l'exemple de la recherche d'un article et de son achat sur Amazon. Chaque fonctionnalité représenté par un rectangle rouge pourrait être organisé comme un microservice.</p>
 <ul>
 <li>La barre de recherche</li>
@@ -217,7 +217,7 @@
 <p>Toutes ces fonctionnalités, qui sont externes au site (dans le sens où elles vont faire appel à des algorithmes externes et afficher seulement le résultat sur le site), peuvent être découpées et séparées en microservices. On peut évidemment pensez à d'autre fonctionnalités : paiement, évaluations des produits ...</p>
 <h2>Preuve de concept</h2>
 <p>L'auteur de l'<a href="https://github.com/SebastienBtr/Micro-express">article</a> Sébastien Bouttier, nous mets à disposition une preuve de concept avec l'architecture suivante sous Docker :</p>
-<img src="../images/sdd-diagram.png" style="width: 100%;">
+<img src="../images/sdd-diagram.webp" style="width: 100%;">
 <p>What you can do:</p>
 <ul>
 <li>Create/update/get articles</li>

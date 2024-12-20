@@ -219,11 +219,11 @@
 <p>Tout ça pour dire que j'ai bidouillé dans tous les sens, gaffé beaucoup, appris et compris beaucoup par la même occasion.</p>
 <p>Photo montage de mon aventure :</p>
 <p>L'envers du décor avec la VM :</p>
-<p><img src="server.png" alt=""></p>
+<p><img src="server.webp" alt=""></p>
 <p>Le pont qui dessert ma VM :</p>
-<p><img src="routeur.png" alt=""></p>
+<p><img src="routeur.webp" alt=""></p>
 <p>J'accède au site depuis mon téléphone en 5G :</p>
-<p><img src="youpi.jpg" alt=""></p>
+<p><img src="youpi.webp" alt=""></p>
 <h2>Sprint 2</h2>
 <p>A la fin du sprint 1, en réalisant que j'étais plus rapide que prévu sur les objectifs fixés au départ, je me suis dit qu'il pourrait être intéressant de mettre en place une sorte de sonde sur le serveur, qui analyserait les tentatives d'accès et afficherait des stats sur un site. Il me paraît aussi plus judicieux et instructif de faire cela que de simplement copier-coller un site déjà prêt.</p>
 <p>Voici donc les objectifs du sprint 2 redéfinis.</p>
@@ -260,12 +260,12 @@
 <h3>C'est parti</h3>
 <p>Pour pouvoir voir qui se connecte sur le site, il faut configurer la récupération des données dans Apache. Comme je ne suis pas encore une vraie admin système, et que j'en ai marre de tout coder sur un terminal avec Nano et sans souris, j'ai mis en place une connexion SSH-remote sur mon serveur pour pouvoir faire des manipulations sur mon serveur à partir : d'un IDE, et possiblement d'un autre ordinateur.</p>
 <p>Je peux maintenant me connecter sur mon serveur à partir de n'importe quel ordinateur et avoir une vue d'ensemble des fichiers en quelques clics, sans avoir à &quot;ls&quot; dans tous les coins.</p>
-<p><img src="saveas.png" alt=""></p>
+<p><img src="saveas.webp" alt=""></p>
 <p>Mais un problème apparaît : Modifier et sauvegarder le fichier avec les commandes de l'IDE ne l'effectue pas en tant que 'sudo' (membre avec tous les droits). J'ai trouvé une extension VSCode qui permet de &quot;Save as root&quot;, que j'ai lié à un shortcut au clavier. Pratique !</p>
 <p>Cette étape n'était pas nécessaire et a ajouté une vulnérabilité à mon serveur en ouvrant un nouveau port pour la connexion SSH. Mais ce genre de pratique reste courante et réaliste.</p>
 <h3>Configurer les logs</h3>
 <p>Configurer les logs s'est fait en quelques lignes seulement dans les fichiers .conf d'Apache. Il fallait déterminer le format des informations qu'on récupère, ainsi que le fichier de sortie. Cette configuration a été rapide, mais la mise en place correcte des droits d'écriture et de lecture corrects pour les fichiers et dossiers de logs a été compliquée (pour moi en tout cas).</p>
-<p><img src="conf.png" alt=""></p>
+<p><img src="conf.webp" alt=""></p>
 <h3>Création de la CGI pour afficher les logs</h3>
 <p>Je me suis ensuite renseignée rapidement sur les CGIs puisque celà me semblait être une solution viable pour afficher des statistiques en direct à partir de mes documents .log. J'ai alors écrit un programme Python qui renvoie un html avec les IPs présents dans les logs. C'EST PAS TRES RGPD. Après 5 secondes de réflexion, j'ai réalisé que ça ne semblait pas très éthique. J'ai finalement masqué environ 75% des IPs pour pas qu'ils ne soient lisibles.</p>
 <h3>GeoLite</h3>
@@ -318,9 +318,9 @@ Sans rentrer dans trop de détails, il a fallu :</p>
 <h2>Résultats</h2>
 <p>J'ai laissé tourner mon détecteur pendant :</p>
 <p><strong>1 heure</strong></p>
-<p><img src="1heure.png" alt=""></p>
+<p><img src="1heure.webp" alt=""></p>
 <p><strong>4 heures</strong></p>
-<p><img src="4heures.png" alt=""></p>
+<p><img src="4heures.webp" alt=""></p>
 <p>J'ai filtré quelques adresses telles que 127.0.0.1 ou autre mais je n'ai pas enlevé ma propre adresse, ce qui fausse le total. NEANMOINS ! On remarque que dès la première heure, il y a eu relativement beaucoup de visites sur le site (alors qu'il n'est pas référencé, et que je n'ai envoyé mon IP à personne). Notamment une IP irlandaise qui a tenté 100 accès, probablement pour &quot;mapper&quot; le site et voir les URLs disponibles, mais j'avoue que je n'ai pas approfondi les recherches.</p>
 <h2>Conclusion</h2>
 <p>La mise en place du serveur a été vraiment différente de ce que j'ai pu imaginer au départ. Certaines choses ont été beaucoup plus rapides que prévues et à l'inverse, d'autre ont pris beaucoup plus de temps par manque de connaissances. Le cours Réseaux me paraît absolument nécessaire pour réaliser ce travail. Quelques notions de pentest peuvent aussi aider à se représenter la nature et la forme des dangers, pour éviter de faire n'importe quoi dans les réglages.</p>

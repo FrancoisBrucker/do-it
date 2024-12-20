@@ -239,14 +239,14 @@ build
       <span class="token key atrule">driver</span><span class="token punctuation">:</span> bridge</code></pre>
 <p>J'ai lancé <code>docker-compose build</code> dans mon terminal et dans un premier temps ça prenait beaucoup trop de temps tout simplement car j'ai oublié le .dockerignore donc j'étais en train de créer des images Docker des modules Node... Dans un second temps j'ai donc créé ce fichier là et relancé ma commande.</p>
 <p>Docker va alors construire les images pour chaque service. L'image pour le frontend s'appelle &quot;nom-du-projet-frontend&quot; et est très lourde (3,5 Go), ça doit être parce qu'elle contient tous les modules Node qu'on a installé précédemment.</p>
-<p><img src="image-3.png" alt="alt text"></p>
+<p><img src="image-3.webp" alt="alt text"></p>
 <p>Pour démarrer les conteneurs pour ces services, je lance <code>docker-compose up</code>.</p>
-<p><img src="image.png" alt="alt text"></p>
+<p><img src="image.webp" alt="alt text"></p>
 <p>On voit dans Docker Desktop que 2 conteneurs sont créés : un pour le frontend et un pour le backend. On peut aussi voir les logs en temps réel pour chaque service.</p>
-<p><img src="image-1.png" alt="alt text">
-<img src="image-5.png" alt="alt text"></p>
+<p><img src="image-1.webp" alt="alt text">
+<img src="image-5.webp" alt="alt text"></p>
 <p>J'accède à <code>http://localhost:3000</code> dans mon navigateur pour voir l'application React puis à <code>http://localhost:8000</code> pour tester l'API FastAPI. J'ai eu quelques problèmes avec mon conteneur backend mais le frontend fonctionne.</p>
-<p><img src="image-2.png" alt="alt text"></p>
+<p><img src="image-2.webp" alt="alt text"></p>
 <p>J'utilise l'interface de <strong>Docker Desktop</strong> pour :</p>
 <ul>
 <li><strong>Voir les conteneurs</strong> : Sur l'interface Docker Desktop, on peut voir l'état de tous nos conteneurs (en cours d'exécution, arrêtés, etc.).</li>

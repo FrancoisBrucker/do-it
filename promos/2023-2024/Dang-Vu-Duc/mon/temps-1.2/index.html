@@ -170,7 +170,7 @@
 <p>Tout d'abord, il faut installer openpyxl. Pour cela, il faut rentrer la commande suivante dans une invite de commande:</p>
 <pre class="language-python"><code class="language-python">pip install openpyxl</code></pre>
 <p>Une fois la bibliothèque installée, il faut l'importer au début du code python, et nous sommes prêts! Nous allons dans la suite expliquer les méthodes principales qui permettent de lire et modifier des données dans des fichiers Excel. Dans la suite, les fichiers manipulés doivent se trouver dans le même repertoire que le fichier python exécuté. Le fichier Excel que nous allons manipuler en exemple se nomme <em>test.xlsx</em> et contient le simple tableur suivant:</p>
-<p><img src="Image1.png" alt="Image test"></p>
+<p><img src="Image1.webp" alt="Image test"></p>
 <p>La feuille qui est remplie se nomme <em>Feuille 1</em>.</p>
 <h3>Lecture de données</h3>
 <p>Dans un premier temps, nous allons expliquer comment lire des données. La première classe qui est importante à connaître est la classe <strong>Workbook</strong>. Pour créer un objet de cette classe, on utilise la méthode <em>openpyxl.load_workbook</em>. Les objets de cette classe correspondent au fichier Excel renseigné en paramètre de la méthode. Ils contiennent toutes les informations du fichier: lignes, colonnes, cellules etc... Par exemple, on peut récupérer les noms des feuilles du fichier Excel avec la méthode <em>sheetnames</em>.
@@ -213,7 +213,7 @@ cell<span class="token punctuation">.</span>value <span class="token operator">=
 
 wb<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">'test_copy.xlsx'</span><span class="token punctuation">)</span></code></pre>
 <p>Voici à quoi ressemble le fichier <em>test_copy.xlsx</em>, qui a été enregistré dans le même repertoire que le code python exécuté:</p>
-<p><img src="Image2.png" alt="Image test2"></p>
+<p><img src="Image2.webp" alt="Image test2"></p>
 <p>La cellule A1 a bien été modifiée, ainsi que le nom de la feuille.</p>
 <p>On peut également modifier la hauteur et la largeur des cellules en modifiant les attributs <em>row_dimensions.height</em> et <em>column_dimensions.width</em> des objets de la classe <strong>Worksheet</strong>. Les valeurs indiquées sont en &quot;pt&quot;.</p>
 <pre class="language-python"><code class="language-python">cell <span class="token operator">=</span> sheet<span class="token punctuation">[</span><span class="token string">'A2'</span><span class="token punctuation">]</span>
@@ -222,7 +222,7 @@ sheet<span class="token punctuation">.</span>column_dimensions<span class="token
 
 wb<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">'test_copy.xlsx'</span><span class="token punctuation">)</span></code></pre>
 <p>Le fichier <em>test_copy.xlsx</em> produit est le suivant:</p>
-<p><img src="Image3.png" alt="Image test3"></p>
+<p><img src="Image3.webp" alt="Image test3"></p>
 <p>La largeur de la colonne A s'est bien modifiée.</p>
 <p>On peut aussi centrer horizontalement et verticalement le contenu d'une cellule avec la classe <strong>Alignment</strong>, changer le style de police du contenu d'une cellule avec la classe <strong>Font</strong> ou encore changer la couleur de fond d'une cellule avec la classe <strong>PatternFill</strong>. Ces classes doivent être importées de la bibliothèque <em>openpyxl.styles</em>. Enfin, il est possible de créer des bordures sur les cellules en modifiant leurs attributs <em>border</em> de la classe <strong>Cell</strong>. Encore une fois, il faut importer la classe <strong>Border</strong> depuis la bibliothèque <em>openpyxl.styles.borders</em>.</p>
 <pre class="language-python"><code class="language-python"><span class="token keyword">from</span> openpyxl<span class="token punctuation">.</span>styles <span class="token keyword">import</span> Font<span class="token punctuation">,</span> PatternFill<span class="token punctuation">,</span> Alignment
@@ -241,7 +241,7 @@ cell<span class="token punctuation">.</span>border <span class="token operator">
 
 wb<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">'test_copy.xlsx'</span><span class="token punctuation">)</span></code></pre>
 <p>Le résultat est le suivant:</p>
-<p><img src="Image4.png" alt="Image"></p>
+<p><img src="Image4.webp" alt="Image"></p>
 <p>Le texte &quot;Pomme de rainette&quot; est bien centré horizontalement et verticalement dans sa cellule et il est bien en gras et de taille 15. De plus, la couleur de la cellule a bien changé et la cellule a bien des bordures épaisses.</p>
 <div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -251,7 +251,7 @@ wb<span class="token punctuation">.</span>save<span class="token punctuation">(<
 <p>La couleur renseignée en paramètres de la classe <strong>PatternFill</strong> est sous la forme d'un code hex. Ce code peut être déterminé grâce au site suivant: <a href="https://htmlcolorcodes.com/">htmlcolorcode.com</a></p>
 </div></div>
 <p>Enfin, il est possible de fusionner des cellules ou de les séparer, grâce aux méthodes <em>merge_cells</em> et <em>unmerge_cells</em>. Par exemple, si l'on ajoute au code précédent la commande <code>sheet.merge_cells('A3:A4')</code>, on obtient le résultat suivant:</p>
-<p><img src="Image5.png" alt="Image merge"></p>
+<p><img src="Image5.webp" alt="Image merge"></p>
 <div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -282,7 +282,7 @@ wb<span class="token punctuation">.</span>save<span class="token punctuation">(<
 <pre class="language-python"><code class="language-python">test <span class="token operator">=</span> Create_timetable<span class="token punctuation">(</span><span class="token punctuation">)</span>
 test<span class="token punctuation">.</span>create_timetable_automatic<span class="token punctuation">(</span><span class="token string">"Dang Vu"</span><span class="token punctuation">,</span> <span class="token string">"Duc"</span><span class="token punctuation">)</span></code></pre>
 <p>L'exécution de ces lignes produit le fichier Excel suivant:</p>
-<p><img src="Image6.png" alt="edt Duc"></p>
+<p><img src="Image6.webp" alt="edt Duc"></p>
 <div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -299,11 +299,11 @@ test<span class="token punctuation">.</span>create_timetable_automatic<span clas
 </ul>
 <p>La méthode <em>remove_course</em> suit des étapes similaires.</p>
 <p>Voici ce que produit la méthode <em>add_course</em> quand on exécute la commande <code>test.add_course(&quot;edt de Duc Dang Vu.xlsx&quot;)</code>, après avoir rentré les informations du cours à rajouter:</p>
-<p><img src="Image7.png" alt="Image commande"></p>
-<p><img src="Image8.png" alt="Image edt modifié"></p>
+<p><img src="Image7.webp" alt="Image commande"></p>
+<p><img src="Image8.webp" alt="Image edt modifié"></p>
 <p>Et voici ce que produit la méthode <em>remove_course</em> quand on exécute la commande <code>test.remove_course(&quot;edt de Duc Dang Vu.xlsx&quot;)</code>, après avoir rentré les informations du cours à supprimer:</p>
-<p><img src="Image9.png" alt="Image commande 2"></p>
-<p><img src="Image10.png" alt="Image edt modifié 2"></p>
+<p><img src="Image9.webp" alt="Image commande 2"></p>
+<p><img src="Image10.webp" alt="Image edt modifié 2"></p>
 <p>Le cours a bien été ajouté, puis supprimé comme on le voulait.</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">

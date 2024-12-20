@@ -229,14 +229,14 @@ Celle-ci permet de visualiser un résumé de chaque donnée, ainsi que le nombre
 <p>Ici il n'y a aucun problème d'import.</p>
 </div></div>
 <p>Ce MOOC s'est ensuite terminé sur un petit test que j'ai validé.
-<img src="Mooc.png" alt="MOOC">
+<img src="Mooc.webp" alt="MOOC">
 Source : Open Classrooms</p>
 <h2>4. Application sur des données de Formule 1</h2>
 <h4>Objectif</h4>
 <p>Je vais dans cette partie appliquer ce que j'ai appris dans le MOOC pour visualiser et analyser rapidement des données issues de la Formule 1. Je fais d'abord des recherches pour déterminer le type de données auxquelles je pourrais avoir accès.</p>
 <h4>Générer un graphique des positions des pilotes à chaque tour</h4>
 <p>J'ai trouvé sur Internet plusieurs bases de données mettant à disposition des données de chaque Grand Prix, telles que les positions d'arrivées, les écarts avec les autres pilotes, les positions à chaque tour... C'est cette dernière donnée qui va m'intéresser, et je vais d'abord essayer de générer un graphique des positions de chaque pilote à chaque tour, comme montré ci-dessous :</p>
-<p><img src="graphique.png" alt="Graphique">
+<p><img src="graphique.webp" alt="Graphique">
 Source : Pitwall</p>
 <p>Cela me paraît assez accessible mais relève d'un bon entraînement d'utilisation de la fonction <code>plot()</code> .</p>
 <h4>Récupérer les données</h4>
@@ -257,7 +257,7 @@ axis<span class="token punctuation">(</span><span class="token number">2</span>,
 <span class="token comment"># Légendes</span>
 legend<span class="token punctuation">(</span><span class="token string">"topright"</span>, <span class="token assign-left variable">legend</span><span class="token operator">=</span>c<span class="token punctuation">(</span><span class="token string">"Lando Norris"</span>, <span class="token string">"Max Verstappen"</span><span class="token punctuation">)</span>, <span class="token assign-left variable">col</span><span class="token operator">=</span>c<span class="token punctuation">(</span><span class="token string">"blue"</span>, <span class="token string">"red"</span><span class="token punctuation">)</span>, <span class="token assign-left variable">lty</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span></code></pre>
 <p>On obtient alors ce graphique :</p>
-<p><img src="graphique1.png" alt="Graphique1"></p>
+<p><img src="graphique1.webp" alt="Graphique1"></p>
 <p>Afin d'améliorer l'esthétisme de ce graphique, j'y apporte quelques modifications pour obtenir le résultat suivant :</p>
 <pre class="language-python"><code class="language-python">setwd<span class="token punctuation">(</span><span class="token string">"C:/Users/Beguier/Desktop"</span><span class="token punctuation">)</span>
 Lando  <span class="token operator">&lt;</span><span class="token operator">-</span> read<span class="token punctuation">.</span>csv<span class="token punctuation">(</span><span class="token string">"Norris.csv"</span><span class="token punctuation">,</span> header <span class="token operator">=</span> TRUE<span class="token punctuation">,</span> sep <span class="token operator">=</span> <span class="token string">";"</span><span class="token punctuation">)</span>
@@ -288,7 +288,7 @@ mtext<span class="token punctuation">(</span><span class="token string">"Positio
 legend<span class="token punctuation">(</span><span class="token string">"bottomright"</span><span class="token punctuation">,</span> legend<span class="token operator">=</span>c<span class="token punctuation">(</span><span class="token string">"Lando Norris"</span><span class="token punctuation">,</span> <span class="token string">"Max Verstappen"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> col<span class="token operator">=</span>c<span class="token punctuation">(</span><span class="token string">"blue"</span><span class="token punctuation">,</span> <span class="token string">"red"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> lty<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> text<span class="token punctuation">.</span>col<span class="token operator">=</span><span class="token string">"black"</span><span class="token punctuation">,</span> bty<span class="token operator">=</span><span class="token string">"n"</span><span class="token punctuation">)</span> <span class="token comment"># Texte en noir, position en bas à droite</span>
 <span class="token comment"># Titre du graphique avec retour à la ligne au milieu</span>
 title<span class="token punctuation">(</span>main<span class="token operator">=</span><span class="token string">"Position des pilotes par rapport \n au tour dans lequel ils se situent"</span><span class="token punctuation">,</span> col<span class="token punctuation">.</span>main<span class="token operator">=</span><span class="token string">"black"</span><span class="token punctuation">)</span> <span class="token comment"># Titre en noir avec retour à la ligne au milieu</span></code></pre>
-<p><img src="graphique2.png" alt="Graphique2"></p>
+<p><img src="graphique2.webp" alt="Graphique2"></p>
 <p>J'ai donc réussi mon cas pratique. J'aimerais poursuivre plus loin l'utilisation de R, peut-être dans un prochain MON ou de mon côté.</p>
 
 

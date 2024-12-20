@@ -161,7 +161,7 @@ D'abord, pour installer Expo il faut ouvrir un terminal et entrer la commande :<
 <pre class="language-shell"><code class="language-shell"><span class="token function">npm</span> start</code></pre>
 <p>Quand on fait ça, un qr code apparaît dans le terminal comme ci-dessous :</p>
 <div style="display:flex">
-<div><img src="start_expo.png"></div>
+<div><img src="start_expo.webp"></div>
 </div>
 <p>En téléchargeant l'application Expo sur son téléphone et en étant connecté sur le même réseau wifi que son ordinateur, on peut scanner le qrcode et visualiser l'application directement sur son téléphone.</p>
 <h2>3. Les bases de React Native</h2>
@@ -185,7 +185,7 @@ Comme pour React, React Native utilise des composants (components en anglais) qu
         <span class="token operator">&lt;</span>Text<span class="token operator">></span>Bienvenue sur l'application de William<span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
         <span class="token operator">&lt;</span>StatusBar style<span class="token operator">=</span><span class="token string">"auto"</span> <span class="token operator">/</span><span class="token operator">></span>
         <span class="token operator">&lt;</span>Image 
-          source<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./logo.png'</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+          source<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./logo.webp'</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
           style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>logo<span class="token punctuation">}</span>
         <span class="token operator">/</span><span class="token operator">></span>
         <span class="token operator">&lt;</span>TextInput style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>textInput<span class="token punctuation">}</span> placeholder<span class="token operator">=</span><span class="token string">"Entrez votre texte ici"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>TextInput<span class="token operator">></span>
@@ -212,7 +212,7 @@ Comme pour React, React Native utilise des composants (components en anglais) qu
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <div style="display:flex">
-<div><img src="demo_app.jpg" width="300" height="600"></div>
+<div><img src="demo_app.webp" width="300" height="600"></div>
 </div>
 <p>On va améliorer un peu cette page pour qu'elle ressemble à une page de connexion sur un site web. Il faut donc des input pour que l'utilisateur puisse entrer son prenom, so nom et un bouton pour se connecter.</p>
 <pre class="language-js"><code class="language-js"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -220,7 +220,7 @@ Comme pour React, React Native utilise des composants (components en anglais) qu
       <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>container<span class="token punctuation">}</span><span class="token operator">></span>
         <span class="token operator">&lt;</span>Text<span class="token operator">></span>Bienvenue sur l'application de William<span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
         <span class="token operator">&lt;</span>Image 
-          source<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./logo.png'</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+          source<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./logo.webp'</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
           style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>logo<span class="token punctuation">}</span>
         <span class="token operator">/</span><span class="token operator">></span>
         <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>userInput<span class="token punctuation">}</span><span class="token operator">></span>
@@ -236,7 +236,7 @@ Comme pour React, React Native utilise des composants (components en anglais) qu
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
 <div style="display:flex">
-<div><img src="amelioration_app.jpg" width="300" height="600"></div>
+<div><img src="amelioration_app.webp" width="300" height="600"></div>
 </div>
 <p>Pour faire cela j'ai du créer un component <strong>CustomButton</strong> car le component <strong><Button></Button></strong> de base n'est pas modifiable. Voici le fichier CustomButton.js :</p>
 <pre class="language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token function-variable function">CustomButton</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span>title<span class="token punctuation">,</span> onPress<span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>

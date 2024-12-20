@@ -127,14 +127,14 @@ Gabriel : Jeu de Pierre, Feuille, Ciseaux en 1vs1 pour commencer puis contre l'o
 Timothé : Réalisation d'une roulette permettant de faire des choix au hasard.</p>
 <p><a href="https://github.com/gabrielbarbe00/POK-de-Gabriel.git">lien du projet</a></p>
 <!-- Fin Résumé -->
-<img src="Images/Accueil.png">
+<img src="Images/Accueil.webp">
 <h3>Partie Gabriel</h3>
 <p>Dans un premier temps, construction du site web en lui même, page accueil reliée à 2 autres pages, dévelopemment du CSS en collaboration avec Timothée. <br>
 Réalisation du CSS de la page du POK, réussir à situer mon bouton où je le voulais etc.</p>
 <p>Dans un second temps, focus sur le petits jeu Pierre, Feuille, Ciseaux.
 Sans avoir besoin de rentrer dans les détails de ce jeu, le but était plutot de développer une interface graphique et un peu stylysé de quelque chose, ce jeu étant globalementassez facile à programmer. <br></p>
 <p>La partie plus technique est d'afficher les boutons et les liens effectuant ce que l'on veut au bon moment ainsi que les faire disparaitre. Une fois que cela sera fait j'aimerais généraliser ce jeu afin de pouvoir jouer contre l'ordinateur qui donne un coup aléatoire ; l'enjeu étant là encore d'avoir un graphisme cohérent avec différents boutons etc.</p>
-<img src="Images/Page_Gaby.png">
+<img src="Images/Page_Gaby.webp">
 <p>J'ai donc commencé par une fonction se déclanchant après l'appui d'un bouton simple. Cette fonction demande quel coup veut effectuer chaque joueur :</p>
 <pre class="language-bash"><code class="language-bash">             <span class="token keyword">function</span> <span class="token function-name function">choixCoups</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
                 var <span class="token assign-left variable">bool</span><span class="token operator">=</span>false<span class="token punctuation">;</span>
@@ -211,8 +211,8 @@ J'ai ensuite développé une autre méthode permettant cette fois-ci de jouer co
             <span class="token punctuation">}</span></code></pre>
 <p>J'ai ensuite adapté ma page afin que les deux options de jeu soit possible. Ce changement m'a pris du temps car je n'arrivais pas à identifier mes deux boutons séparément. <br>
 J'ai ensuite corriger tous les bugs mineurs notamment la fonction choixCoups1 afin que l'on puisse sortir du &quot;prompt&quot;, j'avais aussi mon élèment &quot;panel&quot; qui aparaissait à des moments non nécessaire et qui ne partait plus après, j'avais aussi quelques problèmes de boucles. De même, le &quot;resetbutton&quot; n'aparaissait pas comme je le souhaitais. <br></p>
-<img src="Images/Choix.png">
-<img src="Images/Reset.png">
+<img src="Images/Choix.webp">
+<img src="Images/Reset.webp">
 Le reste du code est bien sur disponible via le lien en haut de page. 
 <h2> Partie Timothée</h2>
 <p>Pour ma part, j'ai choisi de créer une roulette qui permet de sélectionner aléatoirement entre 2 à 4 choix (c'est ensuite facile d'ajouter plus de choix cela demande juste un peu plus de temps).</p>
@@ -295,7 +295,7 @@ nbr_choice <span class="token operator">=</span> <span class="token number">3</s
     <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"Remplissez les 2 choix"</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span></code></pre>
 <p>J'arrive donc à cette page :
-<img src="Images/Index_sans_css.jpg"></p>
+<img src="Images/Index_sans_css.webp"></p>
 <p>Il me reste donc la mise en page afin d'avoir une page qui ressemble un peu à quelque chose.</p>
 <h4> Mise en page</h4>
 <p>Pour cela j'ai ajouté un <em>header</em> en accord avec celui que Gabriel a mis dans sa partie.</p>
@@ -304,7 +304,7 @@ nbr_choice <span class="token operator">=</span> <span class="token number">3</s
 <p>J'ai créé des classes afin d'appliquer un style à mes différents éléments.</p>
 <p>J'ai enfin utilisé la caractéristiques <em>placeholder</em> afin d'écrire les numéros des choix dans les input au lieu de les mettre au dessus.</p>
 <p>Je suis donc arrivé à ce résultat là:</p>
-<img src="Images/index_avec_css.jpg">
+<img src="Images/index_avec_css.webp">
 <h3 id="2"> Page pour chaque roulette</h3>
 <p>J'ai procédé de la même façon pour les différentes roulettes. Je vais donc détailler pour une seule.</p>
 <p>J'ai tout d'abord créé une image de roulette que j'ai ensuite importé dans la page.
@@ -335,7 +335,7 @@ Grâce aux caractéristiques <em>position:absolute</em>, <em>rotate</em> et <em>
 <p>Cette fonction se lance lorsque l'on clique sur le bouton start.</p>
 <p>Lorsque la roue a fini de tourner un bouton retour apparait qui nous permet de retourner à la page des choix.</p>
 <p>J'ai donc obtenu cette page :
-<img src="Images/roulette.jpg"></p>
+<img src="Images/roulette.webp"></p>
 
 
 </article>

@@ -177,8 +177,8 @@
 <h2>1. React : qu'est ce que c'est ? <a id="section1"></a></h2>
 <p>React est une bibliothèque JavaScript open source utilisée pour créer des interfaces utilisateurs. Cette bibliothèque a vu le jour en 2013. Elle est actuellement maintenue par Meta. React est utilisé en développement web, côté front.</p>
 <p>Parmi les applications connues développées en utilisant React, on retrouve notamment Netflix et Airbnb.</p>
-<p><img src="img/interface-netflix.png" alt="Interface Netflix"> <em>Capture d'écran (2024)</em></p>
-<p><img src="img/interface-airbnb.png" alt="Interface Airbnb"> <em>Capture d'écran (2024)</em></p>
+<p><img src="img/interface-netflix.webp" alt="Interface Netflix"> <em>Capture d'écran (2024)</em></p>
+<p><img src="img/interface-airbnb.webp" alt="Interface Airbnb"> <em>Capture d'écran (2024)</em></p>
 <h2>2. Synthèse de balisage <em>JSX</em> <a id="section2"></a></h2>
 <p>La synthèse de balisage <em>JSX</em> (JavaScript XML) n'est pas obligatoire, mais elle est très courante dans les projets React pour des raisons de confort.</p>
 <p>JSX permet de produire des 'éléments' dans React. À la place de séparer les éléments visuels et la logique en différents fichiers, JSX utilise des <strong>components</strong> (bouts de code réutilisables qui représentent une partie de l’interface utilisateur) qui contiennent à la fois la partie visuelle (HTML) et la logique (fonction JavaScript par exemple).</p>
@@ -210,7 +210,7 @@ const element = (
 <p>Pour créer un nouveau projet en utilisant <em>Node.js</em>, il suffit d'exécuter la commande <code>npx create-react-app nom-du-projet</code>.</p>
 <p>Une fois le projet créé, on peut lancer l'application avec la commande <code>npm start</code></p>
 <p>Le projet créé a l'architecture suivante :</p>
-<p><img src="img/organisation-fichiers-react.png" alt="organisation-fichiers-react">
+<p><img src="img/organisation-fichiers-react.webp" alt="organisation-fichiers-react">
 <em>Capture d'écran personnelle (2024)</em></p>
 <h2>4. Variables d'état <a id="section4"></a></h2>
 <p>Les variables d'état (<strong>state</strong>), sont des données qui permettent de gérer et de suivre les informations dynamiques d'un composant. Elles sont essentielles car elles permettent de rendre les composants interactifs et réactifs aux changements.</p>
@@ -231,7 +231,7 @@ function Counter() {
 </code></pre>
 <p>Il est important de comprendre où placer l'état... Parfois des composants partagent le même état, dans ce cas, il faut déplacer cet état depuis les composants &quot;vers le haut&quot;, c'est-à-dire vers le composant parent qui les contient tous. Cette notion est bien expliquée sur le site officiel de React, dans la partie <em>Démarrage rapide (<a href="https://fr.react.dev/learn">Partager des données entre composants</a>)</em>.</p>
 <p>Voici une capture d'écran qui permet de comprendre la hiérarchie entre les différents composants :</p>
-<p><img src="img/hierarchie-components.png" alt="Hierarchie des composants">
+<p><img src="img/hierarchie-components.webp" alt="Hierarchie des composants">
 <em>Exemple repris du site officiel de <a href="https://fr.react.dev/learn/thinking-in-react">React</a> (2024)</em></p>
 <p>Lorsqu'on développe une application il est donc important de savoir comment structurer l'état au sein de cette application. Il faut alors considérer l'état comme étant le jeu minimum de données susceptibles de changer dont l'application doit mémoriser. Il est important de ne pas se perdre avec un trop grand nombre d'états, c'est pourquoi on utilise le principe DRY (<em>Don't Repeat Yourself</em>). Pour déterminer si une donnée constitue de l'état, il faut se poser les bonnes questions :</p>
 <ul>
@@ -253,7 +253,7 @@ function Counter() {
 </ul>
 <h2>5. Mise en pratique <a id="section5"></a></h2>
 <p>Pour une mise en pratique des points étudiés jusqu'à présent, j'ai décidé de développer une interface web assez simple. Cette interface web permet de lister des courses (running) à venir et d'en sélectionner quelques unes en tant que favoris. Voici la maquette du site auquel j'aimerais aboutir :</p>
-<p><img src="img/maquette-site.png" alt="maquette site"><em>Maquette personnelle réalisée sur Figma (2024)</em></p>
+<p><img src="img/maquette-site.webp" alt="maquette site"><em>Maquette personnelle réalisée sur Figma (2024)</em></p>
 <p>Pour ce qui concerne les données, j'ai voulu faire au plus simple en créant un tableau d'objet JavaScript regroupant toutes les informations nécessaires. Voici à quoi ressemble le tableau :</p>
 <pre><code>const COURSES = [
   { name: &quot;Marathon des Géants&quot;, place: &quot;Toulouse&quot;, date: &quot;10 novembre 2024&quot;, price: &quot;50€&quot;, img: &quot;./img/marathondesgeants&quot;, commitment: true},
@@ -262,10 +262,10 @@ function Counter() {
 ];
 </code></pre>
 <p>Ensuite, j'ai identifié le nombre de composants et leur hierarchie :</p>
-<p><img src="img/mes-composants.png" alt="mes composants"><em>Capture d'écran personnelle (2024)</em></p>
+<p><img src="img/mes-composants.webp" alt="mes composants"><em>Capture d'écran personnelle (2024)</em></p>
 <p>Ensuite, j'ai construit une première version statique, c'est-à-dire que la logique de l'application n'est pas présente dans cette première version (impossibilité d'ajouter des éléments dans sa liste de courses).</p>
 <p>Voici le rendu visuel de cette première version :</p>
-<p><img src="img/version-statique.png" alt="version statique"><em>Capture d'écran personnelle (2024)</em></p>
+<p><img src="img/version-statique.webp" alt="version statique"><em>Capture d'écran personnelle (2024)</em></p>
 <p>Le style du site est adapté à ma maquette pour que ce soit plus facile de comprendre où se trouve chaque composant. Le design final viendra en fin de projet, lorsque la logique de l'interface sera implémentée.</p>
 <p>Le code du site en statique est disponible sur mon GitHub, le commit s'appelle <a href="https://github.com/TitouanCorne/ReactCoursesRunning/commit/36c58423cac59e687a7e0869c2ae683489612ccf"><em>&quot;Première version statique, avec un peu de CSS&quot;</em></a></p>
 <p>La prochaine étape consiste à intégrer la logique de l'application.</p>

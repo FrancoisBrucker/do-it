@@ -159,7 +159,7 @@
 <p>LXC est une technologie de conteneurisation sous Linux qui est apparue autour de 2008. LXC repose sur des technologies du noyau Linux comme les <code>namespaces</code> et les  <code>cgroups</code> pour isoler les environnements d'exécution et permettre à chaque conteneur de fonctionner de manière indépendante, bien qu'il partage le même noyau. Il est populaire pour les applications qui nécessitent une isolation légère (telles que des environnements de développement ou des services web), mais ne nécessitent pas la lourdeur d'une machine virtuelle. LXC est également utilisé comme une base pour des solutions plus complètes comme Docker et LXD.</p>
 <h2>Comment faire son propre conteneur LXC : Linux Containers</h2>
 <p>Alors, cette étape fut plus compliquée que prévue mais après visionnage d'une vidéo qui explique le pourquoi du comment LXC ne fonctionne pas vraiment sur les distributions Ubuntu 20.04 et 22.04, j'ai pu lancer mon propre premier conteneur sous la distribution Ubuntu 18.04 avec WSL.</p>
-<p><img src="image.png" alt="alt text"></p>
+<p><img src="image.webp" alt="alt text"></p>
 <p>Tout d'abord, j'avais simplement suivi la documentation en installant lxc avec sudo sur mon terminal Ubuntu 22.04 mais au moment de démarrer mon conteneur, j'enchaînais les erreurs, quelles soient liées à systemd, snap, un pont réseau qui n'est pas initialisé etc etc. Après avoir essayé de débugger toutes ces erreurs à la main pendant 2h, j'ai pris l'air et je suis tombée par hasard sur la vidéo miracle qui va changer la tournure de ce MON. Le monsieur chargé de nous expliquer les méandres de LXC sous Ubuntu 22.04 m'informe déjà que je n'ai pas systemd d'activé sur ma machine. Il nous fournit les lignes de commande pour activer systemd :</p>
 <pre><code>ACTIVATE SYSTEMD
 
@@ -177,7 +177,7 @@ Ce que j'ai fait :</p>
 <ul>
 <li>copier tous les fichiers de mon application (sauf les node_modules) avec la commande <code>sudo lxc file push -r /home/egonin2/portfolio-art/ saving-doberman/portfolio-art/</code></li>
 <li>vérifier le contenu de mon conteneur avec ls
-<img src="image-2.png" alt="ls"></li>
+<img src="image-2.webp" alt="ls"></li>
 <li><code>npm install</code> pour installer les dépendances de mon projet</li>
 <li>run mon application avec <code>npm start</code> comme je le fais dans mon PowerShell
 Cela m'a rendu une erreur car npm start souhaite lancer un powershell, j'aurais du build mon application en local et copier le dossier de build sur mon conteneur. Ce n'est pas grave ! J'ai pu installer nodejs, npm et nginx sur mon conteneur, cela me servira pour la deuxième partie de mon POK2. J'ai pu copier des fichiers de ma machine hôte à mon conteneur et me servir du conteneur comme d'une machine virtuelle classique.</li>

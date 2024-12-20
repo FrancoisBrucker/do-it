@@ -148,7 +148,7 @@
 </div></div>
 <h2>Introduction</h2>
 <p><strong>Find The Key</strong> est un jeu que j'ai développé durant mon S7. Le but est de trouver la clé placée aléatoirement sur un plateau puis de la ramener à la base en évitant les monstres.</p>
-<p><img src="FindTheKey.png" alt="Image Find The Key"></p>
+<p><img src="FindTheKey.webp" alt="Image Find The Key"></p>
 <p>Find The Key a été d'abord designé à l'aide du logiciel de maquettage Adobe XD. J'ai ensuite utilisé un plugin pour transformer ce design en fichiers HTML et CSS. J'ai enfin dû adapter ces fichiers afin de les rendres utilisables pour communiquer avec le fichier JavaScript devant gérer le jeu.</p>
 <p>Néanmoins, le projet a rencontré des <strong>problèmes</strong>, dont la plupart liés à l'exportation au format HTML/CSS depuis Adobe XD :</p>
 <ul>
@@ -165,7 +165,7 @@
 </ul>
 <h3>To-Do List</h3>
 <p>N'ayant pas les compétences nécessaires au développement full stack, j'ai décidé de consacrer mes MON à l'apprentissage du développement full stack et de me concentrer uniquement sur la refonte du <strong>front pour le temps 1</strong>. Le <strong>temps 2</strong> sera consacré à l'<strong>implémentation du back</strong>.</p>
-<p><img src="planning.png" alt="Planning"></p>
+<p><img src="planning.webp" alt="Planning"></p>
 <ul>
 <li><strong>Temps 1</strong>
 <ul>
@@ -201,7 +201,7 @@
 </ul>
 <h2>Progression</h2>
 <h3>Ajout de la police d'écriture au site</h3>
-<p><img src="police.png" alt="Problème police"></p>
+<p><img src="police.webp" alt="Problème police"></p>
 <p>Lors de la création de mon site, j'avais oublié d'importer la police d'écriture que j'utilisais. Résultat : une application toute moche lors de la présentation (qui ne fonctionnait d'ailleurs plus, voir la partie suivante).</p>
 <p>Afin d'importer une police, un outil très utile est <a href="https://fonts.google.com/specimen/Barlow"><strong>Google Font</strong></a> qui fournit directement le code à ajouter dans le <code>&lt;head&gt;</code> du fichier HTML pour chaque police.</p>
 <p>Voici un exemple de code pour importer la police <strong>Barlow</strong>, la fière police de la charte graphique de Centrale Méditerranée (le code est à ajouter dans le <code>&lt;head&gt;</code> du fichier HTML) :</p>
@@ -209,11 +209,11 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>preconnect<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://fonts.gstatic.com<span class="token punctuation">"</span></span> <span class="token attr-name">crossorigin</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&amp;display=swap<span class="token punctuation">"</span></span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre>
 <h3>Résolution des problèmes de compatibilité</h3>
-<p><img src="firefox.png" alt="Bug Firefox"></p>
+<p><img src="firefox.webp" alt="Bug Firefox"></p>
 <p>Afin de résoudre les problèmes de compatibilité rencontrés, j'ai tenté de débugger mon code dans Firefox afin d'identifier ce qui n'allait pas. J'ai découvert qu'<strong>une ligne de code CSS n'était pas exécutée par le navigateur Firefox alors qu'elle l'était sur Chrome</strong>, ce qui créait ce problème sur un navigateur et pas l'autre.</p>
 <p><strong>Le problème</strong> : J'avais simplement <strong>oublié un &quot;px&quot;</strong> en définissant une position. Chrome corrigeait lui-même l'erreur lors de son interprétation du code, ce que Firefox ne faisait pas. Ajouter le &quot;px&quot; a donc résolu le problème.</p>
 <h3>Refonte du CSS</h3>
-<p><img src="css.png" alt="Structure de la refonte responsive du code"></p>
+<p><img src="css.webp" alt="Structure de la refonte responsive du code"></p>
 <p>L'un des objectifs principaux de ce POK était également de <strong>traiter la responsivité du site</strong>. En effet, le site initial étant été généré à partir d'une maquette Adobe XD aux dimensiosn fixes, il n'est pas responsive, c'est à dire qu'il ne s'adapte pas selon à la taille de l'écran de l'utilisateur. Cela rend l'<strong>utilisation de l'application impossible sur un petit écran</strong>.</p>
 <p>J'ai ainsi voulu recréer le site Web d'une manière responsive. Pour cela, j'ai <strong>repris tout le code HTML/CSS à zéro</strong>. Un des <em>points faibles</em> de ma démarche à été, je pense, de ne pas utiliser d'outil (comme des frameworks ou des librairies) pour créer mon code, ce qui ne correspond pas forcément à ce qui est fait en réalité et a pu ralentir mon projet. Néanmoins, même si ce n'était pas la manière la plus optimale, je pense que cet exercice m'a permis de <strong>mieux saisir le fonctionnement et la structure des languages HTML et CSS</strong>.</p>
 <p>Pendant cette refonte du code, j'ai ainsi pu découvir plusieurs fonctionnalités du language CSS. Je me suis également retrouvé face à deux outils principaux qui pouvait m'être utiles pour structurer mes différents composants :</p>

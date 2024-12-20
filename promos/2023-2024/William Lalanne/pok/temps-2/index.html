@@ -143,30 +143,30 @@
 </ul>
 <h2>Sprint 1 - Reprise du Front</h2>
 <p>Certaines choses que j'avais faites la dernière fois doivent être modifié. D'abord je dois ajouter des boutons pour la connexion et l'inscription. De plus, j'ai modifié les boutons pour paramétrer la partie sur la page d'accueil, voici ce que ça donne:</p>
-<p><img src="Page_Accueil.png" alt="Page accueil modifié"></p>
+<p><img src="Page_Accueil.webp" alt="Page accueil modifié"></p>
 <p>Ensuite sur les pages de jeux, je trouvais que tous les éléments étaient trop gros, on ne voyait donc pas tous les éléments sur la page sans scrollé. J'ai fait en sorte de tout réduire:</p>
-<p><img src="Page_Jeu.png" alt="Page de jeu"></p>
+<p><img src="Page_Jeu.webp" alt="Page de jeu"></p>
 <p>Comme on peut le voir en bas à gauche, j'ai aussi rajouté un système pour compter le nombre de coups effectués pendant la partie. Cela permet au joueur de comparer ses parties.</p>
 <h2>Popup pour s'inscrire et se connecter</h2>
 <p>Pour s'incrire, l'utilisateur doit appuyer sur le bouton inscription, puis un formulaire s'affiche pour collecter les informations nécessaires :</p>
-<p><img src="Inscription.png" alt="Inscription"></p>
+<p><img src="Inscription.webp" alt="Inscription"></p>
 <p>Pour s'inscrire l'utilisateur doit rentrer obligatoirement son prénom, son nom, son adresse mail, son mot de passe et confirmer son mot de passe. Il peut aussi, s'il le souhaite, ajouter une photo de profil.</p>
 <p>Pour que l'utilisateur se connecte, j'ai créé la fenêtre suivante :</p>
-<p><img src="Connexion.png" alt="Connexion"></p>
+<p><img src="Connexion.webp" alt="Connexion"></p>
 <p>Il doit entrer son adresse mail et son mot de passe, il peut aussi cliquer sur &quot;Créer un nouveau compte&quot; pour ouvrir la fenêtre précédente.</p>
 <h2>Création de la base de données</h2>
 <p>Pour créer la base de données avec la table et les colonnes voulues après l'installation de MySQL, j'ai d'abord du créer une table grâce à la requête suivante :</p>
 <pre class="language-sql"><code class="language-sql"><span class="token keyword">CREATE</span> <span class="token keyword">DATABASE</span> <span class="token keyword">IF</span> <span class="token operator">NOT</span> <span class="token keyword">EXISTS</span> mydb</code></pre>
 <p>&quot;mydb&quot; est le nom de la base de données créés.
 Quand on regarde la liste des bases de données crées, on voit que mydb existe :
-<img src="databases.png" alt="databases"></p>
+<img src="databases.webp" alt="databases"></p>
 <p>Ensuite au sein de la base de données on crée une table qui va contenir les informations des utilisateurs du Memory, cette table s'appelera <strong>users</strong>. Pour faire cela il faut utiliser la commande :</p>
 <pre class="language-sql"><code class="language-sql"><span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> <span class="token keyword">IF</span> <span class="token operator">NOT</span> <span class="token keyword">EXISTS</span> users <span class="token punctuation">(</span>     
   id <span class="token keyword">INT</span> <span class="token keyword">AUTO_INCREMENT</span> <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span><span class="token punctuation">,</span>     
   name <span class="token keyword">VARCHAR</span><span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<p><img src="table.png" alt="table"></p>
+<p><img src="table.webp" alt="table"></p>
 <p>On précise que dans la table on veut 2 colonnes, une première qui s'appelle <strong>id</strong> qui contient des int et qui est la clé primaire de la table. La clé primaire permet d'identifier de manière unique chaque objet. Le mot clé <em>AUTO_INCREMENT</em> permet d'augmenter automatiquement la valeur de l'id à chaque ajout. Il y a une seconde colonne qui s'appelle <strong>name</strong> qui contiendra le nom des utilisateurs, c'est un string limité à 255 caractères :
-<img src="colonnes.png" alt="colonnes"></p>
+<img src="colonnes.webp" alt="colonnes"></p>
 <p>Pour utiliser notre base de données avec Node plus tard, il faut aussi configurer un profil utilisateur, on aura besoin de plusieurs informations pour se connecter à la base de donnée:</p>
 <pre class="language-js"><code class="language-js">  <span class="token literal-property property">host</span><span class="token operator">:</span> <span class="token string">'localhost'</span><span class="token punctuation">,</span>
   <span class="token literal-property property">user</span><span class="token operator">:</span> <span class="token string">'your_username'</span><span class="token punctuation">,</span>
@@ -318,13 +318,13 @@ La route renvoie des data que l'on utilise dans notre requête coté client. En 
 <p>Les valeurs du prenom, nom, email et mot de passe entrées par l'utilisateur dans le form d'inscription sont récupérées et utilisées comme body de la requête. Or, comme on a l'a précisé dans la route créée, req.body est utilisé pour attribuer les valeurs de first_name, last_name, email et mot_de_passe.
 Donc la requête sql devient : <strong>INSERT INTO users (first_name, last_name, email, mot_de_passe) VALUES (prenom entré par l'utilisateur, nom entré par l'utilisateur, email entré par l'utilisateur, mot de passe entré par l'utilisateur)</strong>.</p>
 <p>On peut faire le test et essayer d'inscrire Nicolas Ouzouliasse à la base de données.</p>
-<p><img src="Exemple_Inscription.png" alt="Exemple d'inscription"></p>
+<p><img src="Exemple_Inscription.webp" alt="Exemple d'inscription"></p>
 <p>Lorsqu'on appuie sur le bouton &quot;S'inscrire&quot;, la requête est envoyée au serveur. On peut voir le résultat de la requête :</p>
-<p><img src="Requete_Get.png" alt="Serveur"></p>
+<p><img src="Requete_Get.webp" alt="Serveur"></p>
 <p>On voit que la requête GET a fonctionné et qu'elle a renvoyé un status 200, donc l'utilisateur entré n'a pas de compte.</p>
-<p><img src="Requete_Post.png" alt="Serveur"></p>
+<p><img src="Requete_Post.webp" alt="Serveur"></p>
 <p>La requête POST pour l'inscription a elle aussi fonctionné, elle a renvoyé un status 200 donc les informations de l'utilisateur ont été enregistrées dans la base de données :</p>
-<p><img src="Donnee.png" alt="Exemple de donnee"></p>
+<p><img src="Donnee.webp" alt="Exemple de donnee"></p>
 <p>Tout a bien fonctionné, Nicolas a bien été ajouté à la base de données comme il le fallait.</p>
 <h2>Route qui gère la connexion</h2>
 <p>Une fois que l'utilisateur est inscrit, il faut qu'il puisse se connecter au site. J'ai donc créer une route qui gère la connexion. Il faut que dans cette route on compare le mot de passe rentré par l'utilisateur dans le form de connexion et celui stocké dans la base de données. Pour cela, lorsque que l'email est rentré dans le form on s'en sert pour faire une requête SQL à la base de données. On demande à la base de nous donner le mot de passe de l'utilisateur ayant l'adresse mail utilisé plus haut. Ensuite on compare le mot de passe rentré dans le form et celui que l'on vient de récupérer. Si ce sont les mêmes alors on renvoie un status 200 et on affiche &quot;Mot de passe correct, connexion réussie&quot;. Si les mots de passe sont différents, on renvoie un status 401 et on affiche : &quot;Mot de passe incorrect&quot;. Si l'adresse mail rentré dans le form n'est pas présente dans la base de données on renvoie un status 404 et on affiche : &quot;Utilisateur non trouvé&quot;.</p>

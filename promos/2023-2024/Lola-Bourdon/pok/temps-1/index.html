@@ -226,16 +226,16 @@ Idée : proposer une application où les utilisateurs pourraient acheter une ou 
 </ul>
 <p>Design de la d'accueil (je ne vais pas détailler tous les étapes de design de chaque page au risque d'être trop redondant):</p>
 <p>J'ai commencé par faire l'entête avec le logo  à gauche et un menu à droite.
-<img src="screen_pok1.png" alt="bubble">
+<img src="screen_pok1.webp" alt="bubble">
 Puis j'ai ajouté un lien cliquable et ai donné un premier visage à la page de garde.
-<img src="screen_pok2.png" alt="bubble">
+<img src="screen_pok2.webp" alt="bubble">
 J'ai ajouté deux boutons cliquables pour se connecter/enregistrer et un menu déroulant. Puis, l'idée principale de mon application web étant de trouver un montre, j'ai modifié l'esprit de la page pour donner le résultat suivant : (en terme de design)
-<img src="screen_accueil.png" alt="bubble"></p>
+<img src="screen_accueil.webp" alt="bubble"></p>
 <p>Design de la page listant les montres :
 En ce qui concerne la page où l'utilisateur peut visualiser les montres, le premier design assez simple est fonctionnel mais vraiment pas très esthétique.
-<img src="screen_liste_montre.png" alt="bubble"></p>
+<img src="screen_liste_montre.webp" alt="bubble"></p>
 <p>Pour la page sign In, Bubble propose un composant déjà prêt que j'ai utilisé :
-<img src="scree_signup.png" alt="bubble">
+<img src="scree_signup.webp" alt="bubble">
 Ce composant est pratique mais pas très esthétique, je vais l'améliorer et le compléter par la suite.</p>
 <h3>La Base de donnée</h3>
 <p>Pour la base de donnée de ce projet, je vais avoir besoin de trois <em>&quot;Data types&quot;</em> : les Utilisateur &quot;<strong>User</strong> (par défaut)&quot;, les <strong>montres</strong> et les <strong>paniers</strong>, avec pour chacun différents <em>&quot;files&quot;</em> (nom, prénom, modèle, année de fabrication, etc.) :</p>
@@ -244,41 +244,41 @@ Ce composant est pratique mais pas très esthétique, je vais l'améliorer et le
 <li>la page <strong>Vendre_montre</strong> implémente la base de donnée <strong>montre</strong> ainsi que la page <strong>vendre_montre</strong>.</li>
 <li>La base de donnée <strong>panier</strong> est implémentée par le bouton <strong>&quot;ajouter au panier&quot;</strong> de la page liste_montre, détaillé plus tard.</li>
 </ul>
-<p><img src="screen_BDD2.png" alt="bubble">
+<p><img src="screen_BDD2.webp" alt="bubble">
 Dans l'onglet Data &gt; App Data, on peut voir les éléments de chaque <em>&quot;Data types&quot;</em> déjà implémentés ou ajoutés manuellement.
-<img src="screen_BDD.png" alt="bubble"></p>
+<img src="screen_BDD.webp" alt="bubble"></p>
 <h3>Workflow</h3>
 <p>Un workflow représente une série d'actions automatisées qui se déclenchent en réponse à un événement donné, comme un clic sur un bouton.
 Par exemple, sur la page d'accueil, il y a 5 boutons cliquables (sign up, log in, icône personnel et trouver sa montre deux fois). L'idée est que ces boutons envoient vers d'autres pages ou pop up. Cela représente des workflow simples.
 Le design de la page d'accueil finale est le suivant :
-<img src="screen_accueil_t.png" alt="bubble"></p>
+<img src="screen_accueil_t.webp" alt="bubble"></p>
 <h5>Header</h5>
 <p>L'entête de toutes les pages du site offre les disponibilités suivantes :</p>
 <ul>
 <li><strong>Log In</strong> j'ai décidé que le bouton log in afficherai un <em>popup</em>, cela donne le résultat suivant:
-<img src="screen_login.png" alt="bubble"></li>
+<img src="screen_login.webp" alt="bubble"></li>
 <li><strong>Sign Up</strong> envoie à la page Sign_up, capable elle même d'afficher le pop up log In
-<img src="screen_signup_t.png" alt="bubble"></li>
+<img src="screen_signup_t.webp" alt="bubble"></li>
 <li>Les deux boutons <strong>Trouver Montre</strong> envoient directement à la page liste_montre
-<img src="screen_liste_montre2.png" alt="bubble"></li>
+<img src="screen_liste_montre2.webp" alt="bubble"></li>
 <li><strong>Icon personnel</strong> renvoie quant à lui un menu déroulant à l'aide d'un <em>GroupFocus</em> qui permet d'accéder à son profil, ses favoris, son panier et donnera la possibilité de proposer une montre à la plateforme ou bien de se déconnecter.
-<img src="screen_accueil_t.png" alt="bubble">
+<img src="screen_accueil_t.webp" alt="bubble">
 Actuellement, je n'ai pas donné suite aux boutons panier et favoris.</li>
 </ul>
 <h5>Accès aux autres pages</h5>
 <p>La page <strong>Mon profil</strong> affiche les données de l'utilisateur connecté et permet de modifier certaines informations. Pour cela, il faut utiliser des <em>Dynamic data</em> dans le design comme suit :
-<img src="screen_builder_profil.png" alt="bubble">
+<img src="screen_builder_profil.webp" alt="bubble">
 ce qui donne le résultat suivant sur le site :
-<img src="screen_profil_user.png" alt="bubble">
+<img src="screen_profil_user.webp" alt="bubble">
 Les informations peuvent être modifiées en temps réel sur le site lorsque l'utilisateur entre la donnée à modifier puis clique sur <strong>Actualiser</strong>.
 La page <strong>Vendre une montre</strong> affiche un formulaire qui permet de renseigner une montre que l'on souhaite vendre. On y entre diverses informations et une photo, qui vont directement implémenter la base de donnée <strong>montre</strong> et la page liste_montre après avoir cliqué sur le bouton <strong>soumettre</strong>.
-<img src="screen_formulaire_vendre.png" alt="bubble">
+<img src="screen_formulaire_vendre.webp" alt="bubble">
 L'action de cliquer sur le bouton <strong>soumettre</strong> qui ajoute une montre à la base de donnée est traduite par le workflow suivant :
-<img src="screen_workflow.png" alt="bubble">
+<img src="screen_workflow.webp" alt="bubble">
 Une fois le formulaire rempli, le bouton <strong>soumettre</strong> amène a la page suivante, avec  des boutons fonctionnels :
-<img src="scree_felicitations.png" alt="bubble">
+<img src="scree_felicitations.webp" alt="bubble">
 Sur la page Liste_montre, l'utilisateur a la possibilité d'ajouter au panier en cliquant sur le bouton correspondant. Cela apporte une alerte <em>Ajouté au panier</em> et  implémente la base de donnée <strong>panier</strong>.
-<img src="screen_panier.png" alt="bubble">
+<img src="screen_panier.webp" alt="bubble">
 Malheureusement, je ne trouve actuellement pas la solution pour afficher le panier.</p>
 <h3>Remarques sprint 2</h3>
 <p>Lors de ce second sprint, j'ai réussi à mieux m'organiser et répartir les tâches à réaliser. L'état actuel de mon application web répond aux fonctionnalités nécessaires, à savoir :</p>

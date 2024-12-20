@@ -164,7 +164,7 @@
 <p>Pour la constitution de cette base de données, j'ai choisi de commencer par demander à ChatGPT un exemple de ce que pourrait donner une base sans aucune contrainte de remplissage. Pour cela, j'ai utilisé le prompt suivant :</p>
 <p><em>Can you fill this data base with french information that could be not well formatted like a wrong email or different phone number format etc. The data base use this fields and there is for now no rules on how to fill it : Name, Surname, email, phone number, phone number 2, Street number,	Street, City, Postal Code, Country, Birth date,	City of Birth, Nationality</em></p>
 <p>Je suis ensuite parti de sa réponse en corrigeant légèrement certaine abération afin d'aboutir à ceci :</p>
-<p><img src="Picture1.png" alt="image de la base de données non formatées"></p>
+<p><img src="Picture1.webp" alt="image de la base de données non formatées"></p>
 <p>On peut bien observer sur cette base que certains emails sont faux et ne peuvent pas marcher. Les numéros de téléphone ont absolument tous les formats possibles et imaginables, tout comme les dates de naissance. Certains champs ne sont pas remplis et l'information se trouve ailleurs. Il faut donc remettre tout cela en ordre afin de pouvoir faire du reporting efficace. Mais, avant cela, il faut faire en sorte que ce genre d'erreurs ne se reproduise pas en mettant des règles en place.</p>
 <h2>Les nouvelles règles sur la base</h2>
 <p>En suivant les bonnes pratiques que l'on retrouve dans le  <a href="https://francoisbrucker.github.io/do-it/promos/2024-2025/Matthieu-Dufort/pok/temps-1/">POK 1</a>, nous allons fixer des règles pour chacun des objets.</p>
@@ -209,7 +209,7 @@
 <pre><code>=IF(AND(NOT(ISNUMBER(SEARCH(&quot;@&quot;;N2)));ISNUMBER(SEARCH(&quot;.&quot;;N2)));&quot;ok&quot;;&quot;Wrong&quot;)
 </code></pre>
 <p>Ce qui donne :</p>
-<p><img src="Picture2.png" alt="Analyse de la base sur les emails"></p>
+<p><img src="Picture2.webp" alt="Analyse de la base sur les emails"></p>
 <p>Et on peut donc maintenant supprimer tous ceux qui sont mauvais et passer à la suite.</p>
 <h3>Les numéros de téléphone</h3>
 <p>Pour s'aligner sur le format nouvellement imposé, nous allons commencer par supprimer tout ce qui n'est pas un chiffre. Puis, nous changerons les nombres en fonction des besoins restants.</p>
@@ -242,24 +242,24 @@
 <pre><code>=IF(LEN(N2)=11;N2;IF(LEN(N2)=10;&quot;33&quot; &amp; TEXT(RIGHT(N2;9);&quot;0&quot;);&quot;33&quot; &amp; N2))
 </code></pre>
 <p>Et on obtient :</p>
-<p><img src="Picture3.png" alt="Analyse de la base sur les emails"></p>
+<p><img src="Picture3.webp" alt="Analyse de la base sur les emails"></p>
 <p>On applique ceci au numéro 2 aussi pour passer ensuite au numéro de rue et à l'adresse.</p>
 <h3>Adresse</h3>
 <p>Pour l'adresse, comme observé dans les règles précédemment, on ne peut que fixer le choix du code postal. Nous allons donc aligner les codes postaux. Pour cela, nous réutilisons uniquement des fonctions vues précédemment de la façon suivante :</p>
 <pre><code>=IF(LEN(I2)=4;&quot;0&quot;&amp;TEXT(I2;&quot;0&quot;);IF(LEN(I2)=2;TEXT(I2;&quot;0&quot;)&amp;&quot;000&quot;;I2))
 </code></pre>
 <p>Et cela donne :</p>
-<p><img src="Picture4.png" alt="Analyse de la base sur l'adresse"></p>
+<p><img src="Picture4.webp" alt="Analyse de la base sur l'adresse"></p>
 <h3>Nationalité</h3>
 <p>Pour la nationalité, nous allons homogénéiser en passant par une liste de choix avec les abréviations des pays.</p>
 <pre><code>=IF(LEFT(M2;4)=&quot;Fran&quot;;&quot;FR&quot;; &quot;Other&quot;)
 </code></pre>
-<p><img src="Picture5.png" alt="Analyse de la base sur la nationalité"></p>
+<p><img src="Picture5.webp" alt="Analyse de la base sur la nationalité"></p>
 <h3>Date de naissance</h3>
 <p>Pour la date de naissance, il suffit de substituer tout ce qui n'est pas un chiffre par un / afin d'obtenir le format voulu. On utilise donc la fonction <strong>SUBSTITUTE</strong></p>
 <pre><code>=IF(ISNUMBER(SEARCH(&quot;/&quot;;TEXT(K2; &quot;jj/mm/aaaa&quot;)))=TRUE;TEXT(K2;&quot;jj/mm/aaaa&quot;);SUBSTITUTE(SUBSTITUTE(K2;&quot;.&quot;;&quot;/&quot;);&quot;-&quot;;&quot;/&quot;))
 </code></pre>
-<p><img src="Picture6.png" alt="Analyse de la base sur la date de naissance"></p>
+<p><img src="Picture6.webp" alt="Analyse de la base sur la date de naissance"></p>
 <p>Et on obtient alors une base de données propre et alignée sur les nouveaux critères afin de repartir sur de bonnes bases pour faire du reporting.</p>
 <h2>Bonus : Doublon</h2>
 <p>En base de données, il y a souvent des doublons. Pour traiter cela dans Excel, on utilise une fonction très pratique :</p>
@@ -282,7 +282,7 @@
 <pre><code>=VLOOKUP(C2;C3:C10;1;FALSE)
 </code></pre>
 <p>Ce qui donne :
-<img src="Picture7.png" alt="Analyse de la base sur les doublons"></p>
+<img src="Picture7.webp" alt="Analyse de la base sur les doublons"></p>
 <p>Il ne reste plus ensuite qu'a combiner les informations des doublons pour les supprimer.</p>
 
 

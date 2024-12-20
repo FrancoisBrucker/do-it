@@ -150,8 +150,8 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center"><img src="editor.JPG" alt=""></td>
-<td style="text-align:center"><img src="console.JPG" alt=""></td>
+<td style="text-align:center"><img src="editor.webp" alt=""></td>
+<td style="text-align:center"><img src="console.webp" alt=""></td>
 </tr>
 </tbody>
 </table>
@@ -193,7 +193,7 @@
 <p>En gras les tâches ajoutées en cours de route. Le backlog prévoit 2h parmi les 20 dédiées à la correction de bugs.</p>
 <h2>Résumé du Sprint 1</h2>
 <p>Bonne nouvelle : les objectifs du sprint 1 ont été fait en la moitié du temps. Mauvaise nouvelle : je n'ai pas pu avancer plus à cause d'imprévus. Pour le moment, on a un jeu très rudimentaire : un cube pouvant seulement sauter par dessus des obstacles s'avançant vers lui à des intervalles aléatoires. Le score augmente à chaque seconde où le joueur encore en vie, et le jeu recommence si le joueur touche un obstacle. C'est un jeu très simple, mais déjà fonctionnel, par dessus lequel je pourrai construire et ajouter des fonctionnalités.</p>
-<p><img src="basegame.jpg" alt="Capture en jeu" title="Capture d'écran du jeu"></p>
+<p><img src="basegame.webp" alt="Capture en jeu" title="Capture d'écran du jeu"></p>
 <h2>Ajustements et objectifs pour le Sprint 2</h2>
 <p>En plus des objectifs déjà établis pour le sprint 2 :</p>
 <ul>
@@ -205,7 +205,7 @@
 <p>Le 2e sprint a été consacré à l'ajout de fonctionnalités pour rendre le jeu un tout petit peu plus intéressant, et de la correction de bugs. Les principaux ajouts sont le mouvement en 2 dimensions, et les bonus. En effet, les obstacles arrivent maintenant aussi sur les couloirs de gauche et de droite ainsi qu'au milieu, et le joueur peut se déplacer à droite, à gauche, ou sauter pour les esquiver.</p>
 <p>2 bonus ont été ajoutés, qui apparaissent aléatoirement sur un des couloirs et qui octroient un avantage au joueur quand il en ramasse un : soit 10 points sont rajoutés à son score, soit tous les obstacles à l'écran sont détruits. La partie la plus difficile était de faire fonctionner le bonus de score, car il fallait faire interagir plusieurs objets à la fois : le joueur (qui entre en contact avec le bonus), le bonus, et le compteur de score, qui doit être incrémenté de 10.</p>
 <p>L'écran de jeu ressemble finalement à ça :</p>
-<p><img src="exemple1.jpg" alt="Jeu en action"></p>
+<p><img src="exemple1.webp" alt="Jeu en action"></p>
 <p>On a plusieurs éléments qui se détachent : le joueur, en noir, dont on a le contrôle, l'obstacle, en rouge, qu'il ne faut absolument pas toucher, et un bonus, et c'est un bleu donc il donne 10 de score. Le meilleur score est affiché en personnage, une façon de constamment rappeler de donner le meilleur de soi-même. Le meilleur score est conservé sur la mémoire du téléphone, c'est à dire que même si on ferme/tue l'appli, le jeu se souviendra toujours du score le plus haut, à moins de désinstaller l'appli.
 Lorsqu'on perd, on a un écran indiquant qu'on a perdu, affichant notre score final, et un bouton qui nous remet au tout début.</p>
 <p>Vu que je testais l'application sur mon ordinateur, j'avais donc codé des déplacements par rapport à des appuis de bouton sur mon clavier. Au moment de l'exporter, j'ai donc dû recoder les mouvements du joueur pour qu'il réponde à des appuis d'écran, et tout le problème était là. Alors que sur un clavier, on a un bouton différent = une commande différente, alors que sur un téléphone, tout provient d'une tape sur l'écran ! Il faut donc prévoir les différences subtiles entre les manières de taper son écran pour sortir le mouvement approprié (tape rapide = saut, glissement vers la gauche = déplacement vers la gauche et inversement). C'était un challenge de devoir prendre conscience de tous ses mouvements sur un écran de téléphone; combien de temps dure une tape ou un glissement, quelle distance le doigt parcourt sur l'écran,...</p>
@@ -219,7 +219,7 @@ Lorsqu'on perd, on a un écran indiquant qu'on a perdu, affichant notre score fi
 <h2>Bilan et Ouverture</h2>
 <p>Ce POK a été très instructif sur Unity et le développement de jeux mobiles en général. C'est un moteur à la fois extrêmement dense et complet, mais aussi intuitif par le fait que la documentation est très riche, les forums sont actifs, et le langage principal est le C#. C'est un projet que je continuerai probablement pendant mon temps libre, notamment pour rajouter les fonctionnalités que je n'ai pas réussi à implémenter pendant le POK, mais aussi pour y faire des améliorations mineures et peut-être même le déployer sur le Play Store si je vais assez loin.</p>
 <p>Le Github du projet se trouve <a href="https://github.com/VlaadimirJ/parcours-obstacles-kubique">ici</a> et le jeu peut s'installer depuis <a href="https://drive.google.com/file/d/1PiJLEEll2Knoigbu2sob3Rf1GkHs_0Ns/view?usp=sharing">ici</a> ou à partir du QR Code ci-dessous. (Android seulement, désolé !).</p>
-<img src="qr-code.png" alt="qr code" width="200">
+<img src="qr-code.webp" alt="qr code" width="200">
 <h2>Bibliographie</h2>
 <ul>
 <li>Documentation Unity : <a href="https://docs.unity.com">https://docs.unity.com</a></li>

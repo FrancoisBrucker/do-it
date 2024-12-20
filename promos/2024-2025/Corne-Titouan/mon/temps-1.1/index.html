@@ -192,15 +192,15 @@ Il existe quatre différents types de couches :</p>
 <p><code>npm create ol-app my-app</code> pour créer un projet avec l'architecture adaptée à OpenLayers</p>
 <p><code>cd my-app</code> pour rentrer dans le dossier du projet</p>
 <p><code>npm start</code> pour lancer le projet.</p>
-<p><img src="img/initialisation.png" alt="Initialisation du projet"> <em>Capture d'écran personnelle (2024)</em></p>
+<p><img src="img/initialisation.webp" alt="Initialisation du projet"> <em>Capture d'écran personnelle (2024)</em></p>
 <p>Les trois fichiers qui vont nous intéresser pour la suite sont index.html, style.css et surtout main.js.</p>
 <p>A ce stade lorsqu'on lance le projet (<code>npm start</code>), un serveur local se lance et la page web suivante apparaît :</p>
-<p><img src="img/cartev0.png" alt="Page web initialisée"> <em>Capture d'écran personnelle (2024)</em></p>
+<p><img src="img/cartev0.webp" alt="Page web initialisée"> <em>Capture d'écran personnelle (2024)</em></p>
 <p>Nous voilà maintenant avec un fond de carte. On peut facilement depuis le javascript ajuster le centre de la carte, et le zoom.</p>
 <h2>5. Prise en main d'OpenLayers <a id="section5"></a></h2>
 <p>A présent pour prendre en main OpenLayers, j'ai décidé de &quot;jouer&quot; avec les différentes fonctionnalités proposées en personnalisant la carte et les vecteurs que je souhaite représenter. J'ai ainsi décidé de représenter l'Australie, et d'ajouter quelques vecteurs qui retracent le voyage que j'ai pu réaliser en césure.</p>
 <p>Tout d'abord, j'ai centré la carte sur l'Australie et j'ai ajusté le zoom pour avoir une vision du pays entier.</p>
-<p><img src="img/cartev1.png" alt="Carte centrée sur l'Australie"> <em>Capture d'écran personnelle (2024)</em></p>
+<p><img src="img/cartev1.webp" alt="Carte centrée sur l'Australie"> <em>Capture d'écran personnelle (2024)</em></p>
 <p>Pour réaliser cela, il a fallu que je m'intéresse au système de projection. Le fond de carte OSM est en projection Mercator Web (EPSG:3857) qui est la projection standard utilisée pour la cartographie web. C'est cette projection que Google Maps a adopté à partir de 2005. D'autres systèmes de projections peuvent être utilisés en SIG. Pour ma part je me suis également servi le système EPSG:4326, également connu sous le nom de WGS84, qui est un système de coordonnées utilisé dans les systèmes Google Earth et GPS. En effet, il m'a été plus facile de trouver les coordonnées GPS (longitude, latitude) des différentes villes australiennes que j'ai dans un second temps converties en coordonnées Web Mercator.</p>
 <p>Pour transformer les coordonnées du centre de l'Australie de la projection EPSG:3857 à la projection EPSG:4326, j'ai utilisé <em>Proj4</em> et <em>fromLonLat</em>. <em>Proj4</em> est une bibliothèque JavaScript utilisée pour la conversion entre différents systèmes de projection cartographique. Elle permet de transformer des coordonnées d'une projection à une autre. <em>fromLonLat</em> est une fonction fournie par OpenLayers qui facilite la conversion de coordonnées géographiques (exprimée en longitude et latitude dans le système EPSG:4326) en coordonnées projetées dans le système EPSG:3857.</p>
 <pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> proj4 <span class="token keyword">from</span> <span class="token string">'proj4'</span><span class="token punctuation">;</span> <span class="token comment">//pour convertir les coordonnées d'une projection à une autre</span>
@@ -223,7 +223,7 @@ proj4<span class="token punctuation">.</span><span class="token function">defs</
 <p>GeoJson est un format de fichier qui utilise la norme JSON pour représenter des entités géographiques simples et leurs attributs non spatiaux.</p>
 </div></div>
 <p>J'ai modifié le fichier GeoJson pour ajouter des informations personnelles. J'ai par exemple ajouté une propriété booléenne &quot;VISITED&quot; pour les états dans lesquels je suis allé (représentés en vert).</p>
-<p><img src="img/cartev2.png" alt="Australie &amp; ses états"> <em>Capture d'écran personnelle (2024)</em></p>
+<p><img src="img/cartev2.webp" alt="Australie &amp; ses états"> <em>Capture d'écran personnelle (2024)</em></p>
 <p>Pour aller plus loin, j'ai créé mon propre fichier GeoJson reprennant d'autres informations telles que les villes visitées, les hôtes qui m'ont accueilli, etc. Voici une partie du fichier créé :</p>
 <pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
     <span class="token property">"type"</span><span class="token operator">:</span> <span class="token string">"FeatureCollection"</span><span class="token punctuation">,</span>
@@ -234,7 +234,7 @@ proj4<span class="token punctuation">.</span><span class="token function">defs</
           <span class="token property">"CITY_NAME"</span><span class="token operator">:</span> <span class="token string">"Sydney"</span><span class="token punctuation">,</span>
            <span class="token property">"TYPE"</span> <span class="token operator">:</span> <span class="token string">"City"</span><span class="token punctuation">,</span>
            <span class="token property">"PERIOD"</span><span class="token operator">:</span> <span class="token string">"du 09/09/23 au 12/09/23"</span><span class="token punctuation">,</span>
-           <span class="token property">"IMG"</span> <span class="token operator">:</span> <span class="token string">"/img/sydney.JPG"</span>
+           <span class="token property">"IMG"</span> <span class="token operator">:</span> <span class="token string">"/img/sydney.webp"</span>
         <span class="token punctuation">}</span><span class="token punctuation">,</span>
         <span class="token property">"geometry"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
           <span class="token property">"type"</span><span class="token operator">:</span> <span class="token string">"Point"</span><span class="token punctuation">,</span>
@@ -247,7 +247,7 @@ proj4<span class="token punctuation">.</span><span class="token function">defs</
            <span class="token property">"TYPE"</span> <span class="token operator">:</span> <span class="token string">"City"</span><span class="token punctuation">,</span>
            <span class="token property">"HOST"</span> <span class="token operator">:</span> <span class="token string">"Mickey &amp; Steve"</span><span class="token punctuation">,</span>
            <span class="token property">"PERIOD"</span><span class="token operator">:</span> <span class="token string">"du 25/12/23 au 03/01/24"</span><span class="token punctuation">,</span>
-           <span class="token property">"IMG"</span> <span class="token operator">:</span> <span class="token string">"/img/bondi.JPG"</span>
+           <span class="token property">"IMG"</span> <span class="token operator">:</span> <span class="token string">"/img/bondi.webp"</span>
         <span class="token punctuation">}</span><span class="token punctuation">,</span>
         <span class="token property">"geometry"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
           <span class="token property">"type"</span><span class="token operator">:</span> <span class="token string">"Point"</span><span class="token punctuation">,</span>
@@ -261,7 +261,7 @@ proj4<span class="token punctuation">.</span><span class="token function">defs</
           <span class="token property">"TYPE"</span> <span class="token operator">:</span> <span class="token string">"City"</span><span class="token punctuation">,</span>
           <span class="token property">"HOST"</span> <span class="token operator">:</span> <span class="token string">"Fran"</span><span class="token punctuation">,</span>
           <span class="token property">"PERIOD"</span><span class="token operator">:</span> <span class="token string">"du 09/09/23 au 12/09/23"</span><span class="token punctuation">,</span>
-           <span class="token property">"IMG"</span> <span class="token operator">:</span> <span class="token string">"/img/melbourne.JPG"</span>
+           <span class="token property">"IMG"</span> <span class="token operator">:</span> <span class="token string">"/img/melbourne.webp"</span>
         <span class="token punctuation">}</span><span class="token punctuation">,</span>
         <span class="token property">"geometry"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
           <span class="token property">"type"</span><span class="token operator">:</span> <span class="token string">"Point"</span><span class="token punctuation">,</span>
@@ -276,7 +276,7 @@ proj4<span class="token punctuation">.</span><span class="token function">defs</
           <span class="token property">"TYPE"</span> <span class="token operator">:</span> <span class="token string">"City"</span><span class="token punctuation">,</span>
            <span class="token property">"HOST"</span> <span class="token operator">:</span> <span class="token string">"Brook &amp; Mike"</span><span class="token punctuation">,</span>
           <span class="token property">"PERIOD"</span><span class="token operator">:</span> <span class="token string">"du 19/12/23 au 23/12/23"</span><span class="token punctuation">,</span>
-           <span class="token property">"IMG"</span> <span class="token operator">:</span> <span class="token string">"/img/lithgow.JPG"</span>
+           <span class="token property">"IMG"</span> <span class="token operator">:</span> <span class="token string">"/img/lithgow.webp"</span>
         <span class="token punctuation">}</span><span class="token punctuation">,</span>
         <span class="token property">"geometry"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
           <span class="token property">"type"</span><span class="token operator">:</span> <span class="token string">"Point"</span><span class="token punctuation">,</span>
@@ -293,9 +293,9 @@ proj4<span class="token punctuation">.</span><span class="token function">defs</
 <p>Pour structurer de manière lisible un fichier GeoJson, il est possible d'utiliser l'extension <strong>Prettier - Code formatter</strong> sur vscode.</p>
 </div></div>
 <p>J'ai également ajouté du code javascript pour pouvoir afficher des informations concernant les différents éléments affichés de manière dynamique. Voici un appercu de la carte sur laquelle j'ai abouti avec ce MON :</p>
-<p><img src="img/cartevf1.png" alt="Australie"> <em>Capture d'écran personnelle (2024)</em></p>
+<p><img src="img/cartevf1.webp" alt="Australie"> <em>Capture d'écran personnelle (2024)</em></p>
 <p>Lorsqu'on zoome vers Sydney et qu'on clique sur le point le plus à l'ouest (Lithgow), on obtient ceci :</p>
-<p><img src="img/cartevf2.png" alt="Australie zoom sur Sydney"> <em>Capture d'écran personnelle (2024)</em></p>
+<p><img src="img/cartevf2.webp" alt="Australie zoom sur Sydney"> <em>Capture d'écran personnelle (2024)</em></p>
 <h2>Sources utiles</h2>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">

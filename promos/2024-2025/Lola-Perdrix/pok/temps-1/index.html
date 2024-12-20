@@ -245,8 +245,8 @@
 </thead>
 <tbody>
 <tr>
-<td><img src="Conversion_dataset.jpg" alt="image"></td>
-<td><img src="Dataset_converti.jpg" alt="image"></td>
+<td><img src="Conversion_dataset.webp" alt="image"></td>
+<td><img src="Dataset_converti.webp" alt="image"></td>
 </tr>
 </tbody>
 </table>
@@ -296,7 +296,7 @@
 <p>J'ai dû faire un copier-coller de <a href="https://www.pokepedia.fr/Liste_des_Pok%C3%A9mon_dans_l%27ordre_du_Pok%C3%A9dex_National">cette page internet</a>  à défaut de trouver un dataset en français, puis ai utilisé la fonction <code>RECHERCHEV</code> pour faire correspondre les noms anglais avec les noms français dans mon tableau principal.</p>
 <p><code>=RECHERCHEV(&quot;B2&quot;;'fr-en'!A:B:;2;FAUX)</code></p>
 <h4>Dataset prêt pour l'analyse</h4>
-<p><img src="Dataset_pret.jpg" alt="image"></p>
+<p><img src="Dataset_pret.webp" alt="image"></p>
 <div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -324,9 +324,9 @@
 <p>J'ai utilisé la formule :</p>
 <p><code>= NB.SI($D$2:$E$152;C157)</code></p>
 <p>avec la liste des types dans la colonne C, le type 1 en colonne D, et le type 2 en colonne E.</p>
-<p><img src="Tableau_repartition.jpg" alt="image"></p>
+<p><img src="Tableau_repartition.webp" alt="image"></p>
 <p>Ce qui donne visuellement :</p>
-<p><img src="Graphe_repartition_type.jpg" alt="image"></p>
+<p><img src="Graphe_repartition_type.webp" alt="image"></p>
 <p>graphe dans lequel je souhaite intégrer encore la proportion de légendaires ainsi que la proportion de pokémon à un seul type.</p>
 <ul>
 <li><strong>Caractéristiques par type</strong></li>
@@ -334,7 +334,7 @@
 <p>J'ai calculé pour chaque type la moyenne de chaque attribut de combat avec la formule :</p>
 <p><code>=(SOMME.SI($D$2:$D$152;$C172;F$2:F$152)+SOMME.SI($E$2:$E$152;$C172;F$2:F$152))/$D172</code></p>
 <p>qui je l'admets n'est pas très compréhensible telle quelle, mais je peux faire néanmoins la remarque que le bon positionnement des dollars dans ma formule m'a permis de l'étirer dans tous les sens pour remplir ce tableau avec seulement celle-ci :</p>
-<p><img src="Tableau_carac_type.jpg" alt="image"></p>
+<p><img src="Tableau_carac_type.webp" alt="image"></p>
 <p>Ce qui peut donner visuellement ceci bien que je me concentrerai sur la visualisation au prochain sprint :</p>
 <table>
 <thead>
@@ -346,9 +346,9 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center"><img src="Graphe_carac_type.jpg" alt="image"></td>
-<td style="text-align:center"><img src="Graphe_carac_type_filtre.jpg" alt="image"></td>
-<td style="text-align:center"><img src="Graphe_dynamique.jpg" alt="image"></td>
+<td style="text-align:center"><img src="Graphe_carac_type.webp" alt="image"></td>
+<td style="text-align:center"><img src="Graphe_carac_type_filtre.webp" alt="image"></td>
+<td style="text-align:center"><img src="Graphe_dynamique.webp" alt="image"></td>
 </tr>
 </tbody>
 </table>
@@ -367,7 +367,7 @@
 <p><code>=INDEX(Mes_Pokémons;EQUIV(MIN(F1:F152);F1:F152;0);3)</code>
 <code>=INDEX(Mes_Pokémons;EQUIV(MAX(F1:F152);F1:F152;0);3)</code></p>
 <p>et j'ai finalement regroupé ces résultats dans ces tableaux.</p>
-<p><img src="Tableaux_sup.jpg" alt="image"></p>
+<p><img src="Tableaux_sup.webp" alt="image"></p>
 <div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -443,7 +443,7 @@
 <p>A noter que si la formule dans la cellule contient des conditions matricielles (ce qui était le cas ici pour inclure un filtre avancé), il faut valider en appuyant sur les touches <code>CTRL + Maj + Entrée</code> pour ne pas avoir d'erreur <code>VALEUR?</code> qui s'affiche (j'aurais aimé trouver cette information plus tôt...).</p>
 </div></div>
 <p>Ce qui donne ceci pour la génération 1 :</p>
-<p><img src="fin_analyse.jpg" alt="records"></p>
+<p><img src="fin_analyse.webp" alt="records"></p>
 <h3>Macro VBA</h3>
 <p>Mon idée ici était d'apprendre à coder en VBA tout en créant une automatisation de mon analyse pour chaque génération de pokémon souhaitée.</p>
 <p>J'ai conscience que dans mon cas d'étude, ce n'était pas forcément utile car un simple copier-coller des formules aurait rapidement fait l'affaire, mais j'ai appris à travers ce travail les bases du langages et me suis familiarisée avec certaines manipulations donc je pense que ce fut quand même très utile !</p>
@@ -504,8 +504,8 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center"><img src="inputbox.jpg" alt="image"></td>
-<td style="text-align:center"><img src="gen2.jpg" alt="image"></td>
+<td style="text-align:center"><img src="inputbox.webp" alt="image"></td>
+<td style="text-align:center"><img src="gen2.webp" alt="image"></td>
 </tr>
 </tbody>
 </table>
@@ -644,7 +644,7 @@
 </div>
 </details>     
 </div>
-<p><img src="tableau_types_gen2.jpg" alt="image"></p>
+<p><img src="tableau_types_gen2.webp" alt="image"></p>
 <h4>Automatisation 5 : Création d'un graphe</h4>
 <p>Ne me restant plus beaucoup de temps à accorder à la visualisation de mes données dans la macro, j'ai décidé d'écourter l'analyse des données incomplète pour avoir au moins un résultat de graphique avec VBA.</p>
 <p>J'ai tenté la réalisation du graphique radar représentant les comparaisons des différents types sur chaque atribut, mais me suis rendue compte que ce graphe était d'une complexité trop grande (du moins pour commencer), et me suis vite retrouvée dans l'impasse. J'ai donc décidé de faire uniquement le graphe de la répartition des types :</p>
@@ -678,7 +678,7 @@
 </details>     
 </div>
 <p>Ce graphique comporte les paramètres élémentaires dont j'avais besoin mais je pourrais le peaufiner plus tard pour le rendre plus joli.</p>
-<p><img src="Graphe_rep_auto.jpg" alt="image"></p>
+<p><img src="Graphe_rep_auto.webp" alt="image"></p>
 <h4>Réunion de toutes les procédures en une</h4>
 <p>J'ai simplement regroupé toutes les procédures créés en une seule pour n'avoir à cliquer que sur un seul bouton pour avoir toute l'analyse :</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
@@ -1040,8 +1040,8 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center"><img src="exemple_macro.jpg" alt="image"></td>
-<td style="text-align:center"><img src="resultat_macro.jpg" alt="image"></td>
+<td style="text-align:center"><img src="exemple_macro.webp" alt="image"></td>
+<td style="text-align:center"><img src="resultat_macro.webp" alt="image"></td>
 </tr>
 </tbody>
 </table>
@@ -1055,7 +1055,7 @@
 <h4>Assemblage</h4>
 <p>Pour cette étape finale j'ai donc usé de ma créativité afin de faire quelque chose de joli avec tous les éléments à ma disposition.</p>
 <p>Voici le résultat final pour la génération 1 :</p>
-<p><img src="feuille1.jpg" alt="image"> <img src="feuille2.jpg" alt="image"></p>
+<p><img src="feuille1.webp" alt="image"> <img src="feuille2.webp" alt="image"></p>
 <h2>Conclusion POK</h2>
 <p>Ce fut un POK beaucoup plus long à faire que prévu mais j'y ai pris <strong>beaucoup de plaisir</strong> ce qui m'a permis de rester <strong>investie</strong> tout du long même si les résultats vis-à-vis du planning étaient <strong>décevants</strong>.</p>
 <p>Il y a encore du travail, des fonctions qui ne marchent pas, des visualisations à automatiser, des codes à optimiser...</p>

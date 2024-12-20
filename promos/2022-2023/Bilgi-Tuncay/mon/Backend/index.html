@@ -500,19 +500,19 @@ Ainsi, si un navigateur envoie à l'adresse <a href="http://localhost:3000/accou
 <p>Le contrôleur va récupérer ce body, le transformer en account grâce au dto, et l'envoyer dans le service des accounts pour lancer une procédure de création de compte.</p>
 <p>Envoyons des requêtes au serveur grâce au logiciel Insominia et observons les réponses :</p>
 <p>On voit que si on envoie notre requête GET, le backend répond :</p>
-  <img src="../images/get.png" alt="oops">
+  <img src="../images/get.webp" alt="oops">
 <p>Le mot de passe n'est pas dans la réponse, c'est ce que l'on veut.</p>
 <p>Si on essaie de créer un compte qui existe déjà, le backend répond :</p>
-  <img src="../images/post.png" alt="oops">
+  <img src="../images/post.webp" alt="oops">
 <h3>Création d'un account.</h3>
 <p>Nous faisons alors une <a href="https://github.com/TuncayBilgi/cybersecenv/tree/main/cyberenv-front">page frontend</a> qui permet justement d'envoyer ce genre de requête au backend.
 Pour cela, nous utilisons un formulaire. L'utilisateur rempli le formulaire et le frontend récupère les informations rentrées, puis créer une requête appropriée et l'envoie au backend.</p>
 <p>il faut faire attention à ce que le frontend ne puisse pas avoir accès a des informations confidentielles, comme des mot de passe. On peut voir par exemple que si on essaie de créer un account dont le login existe déjà dans la base de donnée, le backend envoie au front l'account qui existe déjà, il n'envoie cependant que le login et non pas le mot de passe.</p>
 <p>Notre frontend ne donc qu'une interface qui permet d'envoyer facilement les requêtes au bon format, ainsi, on peut y faire exactement ce que l'on faisait quand on écrivait nos requêtes à la main, et recevoir les mêmes réponses :</p>
 <div style=" display: grid;grid-template-columns: repeat(3, minmax(0, 1fr))">
-<img src="../images/account1.png" alt="oops">
-<img src="../images/account2.png" alt="oops">
-<img src="../images/account3.png" alt="oops">
+<img src="../images/account1.webp" alt="oops">
+<img src="../images/account2.webp" alt="oops">
+<img src="../images/account3.webp" alt="oops">
 </div>
 <h3>Lancer le projet :</h3>
 <p>Pour lancer le projet, il faut executer</p>

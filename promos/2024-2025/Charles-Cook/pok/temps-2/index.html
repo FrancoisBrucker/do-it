@@ -322,7 +322,7 @@
 </code></pre>
 <p>Ce code permet de créer un table temporaire des villes vauclusiennes dans l'odre alphabétique.</p>
 <p><strong>Résultats</strong>
-<img src="Images/Villes%20Vaucluse%20Tri%C3%A9es.png" alt="Villes Vaucluse Triées"></p>
+<img src="Images/Villes%20Vaucluse%20Tri%C3%A9es.webp" alt="Villes Vaucluse Triées"></p>
 </div>
 </details>     
 </div>
@@ -381,7 +381,7 @@ LIMIT 10;
 </code></pre>
 <p>Ce code permet d'extraire les 10 villes les moins peuplées, dans l'ordre croissant du nombre d'habitants.</p>
 <p><strong>Résultats</strong>
-<img src="Images/TOP%2010%20des%20villes%20les%20moins%20peupl%C3%A9es%20en%202010.png" alt="TOP 10 villes les moins peuplées"></p>
+<img src="Images/TOP%2010%20des%20villes%20les%20moins%20peupl%C3%A9es%20en%202010.webp" alt="TOP 10 villes les moins peuplées"></p>
 </div>
 </details>     
 </div>
@@ -513,7 +513,7 @@ HAVING COUNT(ville_nom)&gt;1
 ORDER BY COUNT(ville_nom) DESC;
 </code></pre>
 <p><strong>Résultats</strong>
-<img src="Images/Doublon%20noms%20de%20ville.png" alt="Doublons noms de villes"></p>
+<img src="Images/Doublon%20noms%20de%20ville.webp" alt="Doublons noms de villes"></p>
 <p>La première colonne donne les noms de ville donnés plusieurs fois et la seconde fait apparaître combien de fois le nom a été donné.</p>
 </div>
 </details>     
@@ -566,7 +566,7 @@ Afin d'ajouter une ligne pour la ville de New-York dans la table <em>villes_fran
 SELECT * FROM villes_france_free;
 </code></pre>
 <p><strong>Résultats</strong>
-<img src="Images/Ajout%20NEW%20YORK.png" alt="Ajout NY"></p>
+<img src="Images/Ajout%20NEW%20YORK.webp" alt="Ajout NY"></p>
 <p>On remarque qu'une ligne a été ajouté à la fin de la table, pour la ville de New-York.</p>
 </div>
 </details>     
@@ -654,7 +654,7 @@ WHERE ville_nom='NEW YORK';
 <li>FULL (OUTER) JOIN : renvoie toutes les lignes quand il y a une correspondance dans la table de gauche ou de droite</li>
 <li>SELF JOIN : réalise une jointure d’une table avec elle-même</li>
 </ul>
-<p><img src="Images/types%20de%20jointures.png" alt="Types de jointures">
+<p><img src="Images/types%20de%20jointures.webp" alt="Types de jointures">
 <em><a href="https://www.w3schools.com/sql/sql_join.asp">Source : w3schools</a></em></p>
 <p><strong>Dans notre exemple, nous avons dans la table <em>villes_france_free</em> les départements uniquement renseignés par numéro. Nous allons tenter de réaliser une jointure avec la table <em>departement</em> pour renseigner également le nom du département.</strong></p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
@@ -682,7 +682,7 @@ ON t1.ville_departement = t2.departement_code
 ORDER BY t1.ville_nom;
 </code></pre>
 <p><strong>Résultats</strong>
-<img src="Images/Jointure%20d%C3%A9partement.png" alt="Jointure départements">
+<img src="Images/Jointure%20d%C3%A9partement.webp" alt="Jointure départements">
 Le résultat ci-dessus montre que nous pouvons à présent, grâce à la jointure réalisée entre les deux tables, faire apparaître le nom complet du département auquel appartient la ville et non plus seulement son numéro.</p>
 </div>
 </details>     
@@ -893,7 +893,7 @@ Cette requête crée une table en faisant apparaître 5 colonnes :</p>
 </details>     
 </div>
 <p>Le résultat de la requête est donc le tableau des médailles suivant, réalisé sur l'ensemble des médailles reçues lors des éditions de 1924 à 2010 :
-<img src="Images/Tableau%20des%20m%C3%A9dailles.png" alt="Tableau des médailles"></p>
+<img src="Images/Tableau%20des%20m%C3%A9dailles.webp" alt="Tableau des médailles"></p>
 <h6>Question 2 : Quel pays est en tête du classement des médailles par édition ?</h6>
 <p>Nous avons réalisé un tableau des médailles sur l'ensemble des éditions entre 1924 et 2010, mais il est intéressant d'extraire le pays en tête du classement lors de chacune des éditions.</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
@@ -944,7 +944,7 @@ Ce code réalise la jointure de deux sous tables :</p>
 </details>     
 </div>
 <p>On obtient ainsi le table suivante, donnant le meilleur pays par année en nombre de titre (médailles d'or) :
-<img src="Images/Meilleur%20payspar%20ann%C3%A9e.png" alt="Meilleur pays par année">
+<img src="Images/Meilleur%20payspar%20ann%C3%A9e.webp" alt="Meilleur pays par année">
 <em>Remarque : On pourrait être plus précis en prenant en compte égalelement le nombre de médailles d'argent et de bronze</em></p>
 <h6>Question 3 : Quel est le classement dans le tableau des médailles de chaque pays par édition ?</h6>
 <p>Toujours afin d'étudier les performances des pays par édition, nous pouvons essayer d'extraire le classement dans le tableau des médailles par année.</p>
@@ -990,7 +990,7 @@ Cette requête crée une sous-table <em>classement</em> créant un classement de
 </details>     
 </div>
 <p>Le résultat obtenu est le suivant :
-<img src="Images/Classement%20des%20m%C3%A9dailles%20par%20ann%C3%A9e.png" alt="Classement par année"></p>
+<img src="Images/Classement%20des%20m%C3%A9dailles%20par%20ann%C3%A9e.webp" alt="Classement par année"></p>
 <h6>Question 4 : Sur l'ensemble des éditions entre 1924 et 2010, quel pays est le meilleur dans chaque discipline ?</h6>
 <p>La base de données nous permet également de pouvoir réaliser une étude sur le pays le meilleur (en nombre de titre) en fonction du sport.</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
@@ -1036,7 +1036,7 @@ La méthode utilisée pour cette question est la même que pour la question 2, e
 </details>     
 </div>
 <p>On obtient ainsi la table suivante :
-<img src="Images/Meilleure%20pays%20dans%20chaque%20discipline.png" alt="Meilleur par discipline"></p>
+<img src="Images/Meilleure%20pays%20dans%20chaque%20discipline.webp" alt="Meilleur par discipline"></p>
 <h6>Question 5 : La performance du pays organisateur (en termes de nombre de médailles) est-elle supérieur que lorsque le même pays n'est pas organisateur ?</h6>
 <p>Lors de différents évènements sportifs, il existe un match aller, et un match retour. Ceci est organisé car lorsqu'une équipe joue à domicile, ses performances sont souvent meilleures. Il est donc intéressant de regarder si ce phénomène est visible dans les résultats des différents pays aux JO d'hiver.</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
@@ -1132,7 +1132,7 @@ FROM(
 </details>     
 </div>
 <p>Le résultat obtenu est la table suivante :
-<img src="Images/Moyenne%20M%C3%A9dailles%20dom-ext.png" alt="Moyenne médailles"></p>
+<img src="Images/Moyenne%20M%C3%A9dailles%20dom-ext.webp" alt="Moyenne médailles"></p>
 <p>On remarque à l'aide de cette table que pour la totalité des pays ayant organisé les JO d'hiver (excepté pour la Suisse et l'Allemagne), les performances à domicile sont, au pire, égales à celles à l'extérieur, mais pour la plupart, les performances à domicile sont significativement meilleures (en termes de nombre total de médailles obtenues).</p>
 <h3>Conclusion Sprint 1</h3>
 <p>Ce premier sprint nous a permis de comprendre comment créer une base de données relationnelles et comment extraire des tables afin de réaliser les prémices d'une analyse de données en SQL. Cependant, le langage SQL n'est pas le plus adapté pour réaliser de l'analyse de données. Nous explorerons plus en profondeur ceci lors du second sprint.</p>
@@ -1151,9 +1151,9 @@ spotify_tracks=pd.read_csv('/Users/charlescook/Desktop/spotify_tracks.csv')
 
 print(spotify_tracks.head())
 </code></pre>
-<p><img src="Images/Capture%20d%E2%80%99%C3%A9cran%202024-12-12%20%C3%A0%2015.31.45.png" alt="Base de données"></p>
+<p><img src="Images/Capture%20d%E2%80%99%C3%A9cran%202024-12-12%20%C3%A0%2015.31.45.webp" alt="Base de données"></p>
 <p>Les explications et types de données de chacune des colonnes sont données ci-après :</p>
-<p><img src="Images/Capture%20d%E2%80%99%C3%A9cran%202024-12-12%20%C3%A0%2015.42.41.png" alt="Type de données"></p>
+<p><img src="Images/Capture%20d%E2%80%99%C3%A9cran%202024-12-12%20%C3%A0%2015.42.41.webp" alt="Type de données"></p>
 <ul>
 <li>track_id: Spotify ID pour le morecau.</li>
 <li>track_name: Nom du morceau.</li>
@@ -1212,7 +1212,7 @@ plt.show()
 </details>     
 </div>
 <p>Le résultat obtenu est le suivant :</p>
-<p><img src="Images/Capture%20d%E2%80%99%C3%A9cran%202024-12-12%20%C3%A0%2016.33.56.png" alt="Popularité moyenne par langue V1"></p>
+<p><img src="Images/Capture%20d%E2%80%99%C3%A9cran%202024-12-12%20%C3%A0%2016.33.56.webp" alt="Popularité moyenne par langue V1"></p>
 <p>On remarque que le Coréen est la langue avec le plus grand indice de popularité moyen, suivi par le Hindi. Pourtant, l’anglais étant la langue la plus parlé au monde, il est surprenant de voir ce résultat. Nous allons donc approfondir la recherche afin de s'assurer de la cohérence du résultat.</p>
 <p>Penchons nous sur le nombre de morceaux par langue :</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
@@ -1248,7 +1248,7 @@ plt.show()
 </details>     
 </div>
 <p>On obtient les résultats suivants :</p>
-<p><img src="Images/Capture%20d%E2%80%99%C3%A9cran%202024-12-12%20%C3%A0%2017.16.30.png" alt="Nombre de morceaux par langue"></p>
+<p><img src="Images/Capture%20d%E2%80%99%C3%A9cran%202024-12-12%20%C3%A0%2017.16.30.webp" alt="Nombre de morceaux par langue"></p>
 <p>On observe alors que les morceaux en anglais sont beaucoup plus nombreux que les morceaux en Coréen ou Hindi. Il peut y aoir ainsi une fausseté dans la représentativité des données (la présence que de morceaux coréens populaires par exemple). Analysons ainsi l'écart type pour vérifier cette théorie :</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
@@ -1285,7 +1285,7 @@ plt.show()
 </details>     
 </div>
 <p>On obtient le graphe suivant :</p>
-<p><img src="Images/Capture%20d%E2%80%99%C3%A9cran%202024-12-12%20%C3%A0%2017.07.33.png" alt="Ecart type popularité langue"></p>
+<p><img src="Images/Capture%20d%E2%80%99%C3%A9cran%202024-12-12%20%C3%A0%2017.07.33.webp" alt="Ecart type popularité langue"></p>
 <p>On remarque ainsi au travers de l’écart type des musiques coréennes par exemple que les musiques sélectionnées ont toutes un niveau de popularité assez élevé. Ceci fausse l’analyse. Nous allons donc explorer deux hypothèses afin de minimiser cet effet sur les résultats.</p>
 <p><strong>Hypothèse 1 :</strong> prendre seulement les morceaux avec un indice de popularité supérieur à 50 :</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
@@ -1321,7 +1321,7 @@ plt.show()
 </div>
 </details>     
 </div>
-<p><img src="Images/Capture%20d%E2%80%99%C3%A9cran%202024-12-12%20%C3%A0%2017.29.48.png" alt="Hypothèse 1 popularité"></p>
+<p><img src="Images/Capture%20d%E2%80%99%C3%A9cran%202024-12-12%20%C3%A0%2017.29.48.webp" alt="Hypothèse 1 popularité"></p>
 <p>On note alors des résultats différents dans lesquels, parmi les morceaux ayant déjà un indice de popularité assez élevé, les morceaux en anglais sont les plus populaires.</p>
 <p><strong>Hypothèse 2 :</strong> prendre les 2000 musiques les plus populaires par langue :</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
@@ -1359,7 +1359,7 @@ plt.show()
 </div>
 </details>     
 </div>
-<p><img src="Images/Capture%20d%E2%80%99%C3%A9cran%202024-12-12%20%C3%A0%2017.44.12.png" alt="Hypothèse 2 popularité"></p>
+<p><img src="Images/Capture%20d%E2%80%99%C3%A9cran%202024-12-12%20%C3%A0%2017.44.12.webp" alt="Hypothèse 2 popularité"></p>
 <p>Cette seconde hypothèse corrobore les résultats de l'hypothèse 1, en montrant que parmi les musiques les plus populaires par langue, les musiques en anglais ont un indice moyen de popularité plus élevé que les autres langues.</p>
 <h5>Quel est le rapport entre la valence (positivité) et la dansabilité ?</h5>
 <p>En tant qu'artiste, on souhaite savoir si un morceau dansable est forcément positif.</p>
@@ -1399,7 +1399,7 @@ plt.show()
 </details>     
 </div>
 <p>Le résultat obtenu est le suivant :</p>
-<p><img src="Images/Capture%20d%E2%80%99%C3%A9cran%202024-12-12%20%C3%A0%2018.13.00.png" alt="Lien entre la positivité et la dansabilité"></p>
+<p><img src="Images/Capture%20d%E2%80%99%C3%A9cran%202024-12-12%20%C3%A0%2018.13.00.webp" alt="Lien entre la positivité et la dansabilité"></p>
 <p>On remarque une tendance avec ce graphique : l'indice de positivité semble augmenter avec l'indice de dansabilité. Ainsi, on peut admettre qu'un morceaux positif est de manière générale plus dansant.</p>
 <h5>Existe-il un rapport entre la dansabilité et la popularité d’un morceau de musique ?</h5>
 <p>On cherche alors à savoir s'il est plus intéressant de composer un morceau dansant pour devenir populaire.</p>
@@ -1435,7 +1435,7 @@ plt.show()
 </details>     
 </div>
 <p>Le résultat obtenu est le suivant :</p>
-<p><img src="Images/Capture%20d%E2%80%99%C3%A9cran%202024-12-12%20%C3%A0%2018.19.33.png" alt="Lien entre dansabilité et popularité"></p>
+<p><img src="Images/Capture%20d%E2%80%99%C3%A9cran%202024-12-12%20%C3%A0%2018.19.33.webp" alt="Lien entre dansabilité et popularité"></p>
 <p>Le graphe précédent ne permet pas de mettre en lumière un lien évident entre l'indice de dansabilité d'un morceau et son indice de popularité.</p>
 <h5>Quelle est la répartition des modes majeurs (1) et mineurs (0) dans les morceaux par langue ?</h5>
 <p>En tant qu'auteur-compositeur-interprète, on peut également se demander s'il existe une tendance dans la répartition des modes majeurs et mineurs en fonction de la culture.</p>
@@ -1479,7 +1479,7 @@ plt.show()
 </details>     
 </div>
 <p>Le résultat obtenu est le suivant :</p>
-<p><img src="Images/Capture%20d%E2%80%99%C3%A9cran%202024-12-13%20%C3%A0%2014.30.52.png" alt="Répartition modes V1"></p>
+<p><img src="Images/Capture%20d%E2%80%99%C3%A9cran%202024-12-13%20%C3%A0%2014.30.52.webp" alt="Répartition modes V1"></p>
 <p>Cependant, on remarque que pour les langues ayant peu de morceaux répertoriés dans la base de données, les résultats sont difficilement lisibles. On peut donc réaliser le même graphique en pourentage pour une meilleure lisibilité :</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
@@ -1517,7 +1517,7 @@ plt.show()
 </div>
 </details>     
 </div>
-<p><img src="Images/Capture%20d%E2%80%99%C3%A9cran%202024-12-13%20%C3%A0%2014.39.52.png" alt="repartition modes V2"></p>
+<p><img src="Images/Capture%20d%E2%80%99%C3%A9cran%202024-12-13%20%C3%A0%2014.39.52.webp" alt="repartition modes V2"></p>
 <p>On remarque beaucoup plus aisément ainsi qu'il n'y a pas d'évolution de la répartition entre les modes majeurs et mineurs en fonction de la langue.</p>
 <h5>Comment les caractéristiques musicales (valence, energy, danceability) ont-elles évolué au fil des années ?</h5>
 <p>On s'intéresse également à l'évolution des caractéristiques que nous avons vu précédemment au fil des années, afin de pouvoir donner une influence à notre futur composition en fonction des tendances d'aujourd'hui :</p>
@@ -1559,7 +1559,7 @@ plt.show()
 </details>     
 </div>
 <p>On obtient ainsi les évolutions suivantes :</p>
-<p><img src="Images/Capture%20d%E2%80%99%C3%A9cran%202024-12-13%20%C3%A0%2015.13.35.png" alt="Evolutions au cours des ans"></p>
+<p><img src="Images/Capture%20d%E2%80%99%C3%A9cran%202024-12-13%20%C3%A0%2015.13.35.webp" alt="Evolutions au cours des ans"></p>
 <p>On remarque une tendance de la valence (indice de joie) à la baisse depuis les années 1990. Ce n’est cependant pas le cas de l’indice d’énergie et de dansabilité.</p>
 <h5>Quels sont les artistes avec la plus grande popularité moyenne dans chaque langue ?</h5>
 <p>Nous cherchons également à nous inspirer de grands artistes. Pour cela, nous souhaitons obtenir les artistes les plus populaires par langue.</p>
@@ -1624,7 +1624,7 @@ plt.show()
 </details>     
 </div>
 <p>On obtient ainsi les 5 artistes les plus populaires par langue :</p>
-<p><img src="Images/Capture%20d%E2%80%99%C3%A9cran%202024-12-13%20%C3%A0%2016.30.23.png" alt="Top 5 artistes"></p>
+<p><img src="Images/Capture%20d%E2%80%99%C3%A9cran%202024-12-13%20%C3%A0%2016.30.23.webp" alt="Top 5 artistes"></p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
 <summary class="list-none py-0.5">
@@ -1671,7 +1671,7 @@ for i, langue in enumerate(langues):
 plt.tight_layout()
 plt.show()
 </code></pre>
-<p><img src="Images/Capture%20d%E2%80%99%C3%A9cran%202024-12-15%20%C3%A0%2014.31.44.png" alt="Tempos"></p>
+<p><img src="Images/Capture%20d%E2%80%99%C3%A9cran%202024-12-15%20%C3%A0%2014.31.44.webp" alt="Tempos"></p>
 </div>
 </details>     
 </div>

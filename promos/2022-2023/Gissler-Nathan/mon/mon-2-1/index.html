@@ -144,7 +144,7 @@
 <p>tar -Jxvf archive_dossier.tar.xz</p>
 <p>On peut désormais accéder aux fichiers du site de cette manière : <code>http://mon_herbe.ovh1.ec-m.fr/dossier_du_site/chemin</code>.</p>
 <h2>Utilisation de Node.js et Express pour son site</h2>
-<p><img src="express.png" alt="Logo Express"></p>
+<p><img src="express.webp" alt="Logo Express"></p>
 <p>Création du fichier de configuration package.json</p>
 <p>npm init</p>
 <p>Ajout du module Express</p>
@@ -183,7 +183,7 @@ console.log(<code>Server running at http://${hostname}:${port}/</code>);</p>
 <p>const router = require('chemin_vers_le_router');</p>
 <p>app.use('/requetes_concernees', router);</p>
 <h2>Gestion de la modification en temps réel d'un document collaboratif</h2>
-<p><img src="meteor.png" alt="Logo Meteor"></p>
+<p><img src="meteor.webp" alt="Logo Meteor"></p>
 <p>Pour la réalisation de notre POK, il faudrait que nous puissions, dans l'idéal, faire en sorte que les partitions du site &quot;Mon sheet c'est moi&quot; soient collaboratives et que les modifications d'un utilisateur soient visibles en temps réel par les autres utilisateurs. Cela fonctionnerait à la manière d'un Google Docs mais pour des partitions musicales.</p>
 <p>Cela est possible avec des frameworks comme Firebase ou Meteor. Le principe est que chaque utilisateur soit authentifié et que les modifications qu'il apporte à un document soient enregistrées dans sa session sur le serveur. Dès qu'une modification est apportée par un utilisateur, une notification est envoyée aux autres utilisateurs puis leur version du document est actualisée en temps réel.</p>
 <p>Nous pensons utiliser Meteor pour cela, il faudra se documenter plus en détail lors de la réalisation du POK.</p>

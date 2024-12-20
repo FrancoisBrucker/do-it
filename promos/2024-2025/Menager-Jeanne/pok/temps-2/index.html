@@ -196,20 +196,20 @@ Je me suis donc tournée vers LookerStudio qui vient de la suite google et que j
 J'ai commencé par récuppérer le nombre de joueurs qui jouent en équipe nationale et le nombre d'étrangers par club car on dit souvent que le PSG n'a pas ou peu de francais dans son équipe et j'ai pu ainsi voir que ce n'était pas la pire équipe. Dans la data visualisation, j'ai choisi de representer un nuage de points avec en abscisse le nombre de joueurs dans l'équipe. On peut y voir que Monaco est l'équipe avec le plus d'étrangers, mais c'est à nuancer car ils ont 29 joueurs non monegasque sur 29 joueurs au total. <br>
 J'ai ensuite recupéré le nombre de place dans les différents stade pour les représenter sur une carte avec des cercles plus gros et plus foncé si la capacité du stade est plus élevée. Ceci permet dez voir en un clin d'oeil que le plus gros stade est dans le sud et en passant la souris dessus, on voit que c'est le velodrome.<br>
 Enfin, j'ai voulu mettre le classement de la ligue 1 de la saison en cours.</p>
-<p><img src="ligue1.png" alt="Statistique de la Ligue 1"></p>
+<p><img src="ligue1.webp" alt="Statistique de la Ligue 1"></p>
 <p>Avec les filtres, on peut choisir de ne voir que certains club :</p>
-<p><img src="ligue1_filtre.png" alt="Statistique du PSG et de l'OM"></p>
+<p><img src="ligue1_filtre.webp" alt="Statistique du PSG et de l'OM"></p>
 <p>(On y voit que l'OM a plus de joueurs étrangers que Paris)</p>
 <h3>Datavisualisation pour une équipe de Ligue 1</h3>
 <p>Pour ce scraping, j'ai utilisé les données de <a href="https://www.transfermarkt.fr/">transfermarkt</a>. Je me suis d'abord entrainée sur quelques joueurs du PSG et une fois que j'avais réussi à récupérer les données qui m'interréssaient, j'ai rajouté à la main les liens des autres joueurs et je me suis rendue compte que les informations n'étaient pas toujours les mêmes pour tous les joueurs, j'ai donc du adapter mon code qui est maintenant plus performant. <br>
 J'ai utilisé lookerStudio pour créer un visuel pour ces données là.<br>
 Je voulais faire la même chose pour les joueurs des autres équipes et pour cela, il me fallait un dictionnaire avec les noms des joueurs et le lien de leur page transfertMarkt. Cette tache etant fastidueuse et peu interressante, j'ai demandé à chatGPT de me le construire, mais il n'en est pas capable il m'a donc fournit un script pour scraper les lien et construire le dictionnaire. J'ai du modifier ce script car il ne fonctionnait pas.<br>
 Lorsque je fais tourner le script, l'utilisateur peut choisir l'équipe dont il veut voir les statistiques, le script récupère ensuite les données et les écrivent dans le googleSheet, il ne reste qu'à actualiser les données de lookerStudio pour avoir les statistiques voulues.</p>
-<p><img src="psg.png" alt="Statistique du PSG"></p>
+<p><img src="psg.webp" alt="Statistique du PSG"></p>
 <p>En refaisant tourner le script mais en demandant les statistiques de lille et en actualisant lookerStudio, on obtient :</p>
-<p><img src="lille.png" alt="Statistique du LOSC"></p>
+<p><img src="lille.webp" alt="Statistique du LOSC"></p>
 <p>De même, on peut utiliser les filtres, pour par exemple ne voir que les défenseurs centraux :</p>
-<p><img src="lille_filtre.png" alt="Statistique du LOSC filtrées"></p>
+<p><img src="lille_filtre.webp" alt="Statistique du LOSC filtrées"></p>
 <h3>Horodatage</h3>
 <p>Toutes les séances et le nombre d'heure que l'on y a passé.</p>
 <table>

@@ -219,7 +219,7 @@
 <p>Si le serveur ne répond pas au message ICMP ECHO_REQUEST, la machine n'est pas atteignable / n'a pas répondu. Le ping est utilisé pour diagnostiquer les problèmes de réseau et tester la connectivité entre les systèmes.</p>
 <h4>Dans Wireshark</h4>
 <p>On lance la capture de paquets. Avec la commande <code>ping google.com</code> :</p>
-<p><img src="capture_icmp.png" alt="Capture ICMP"></p>
+<p><img src="capture_icmp.webp" alt="Capture ICMP"></p>
 <p>Pour trouver les paquets en question, on peut utiliser des filtres. Je vous renvoie à <a href="https://www.youtube.com/watch?v=aEss3CG49iI&amp;ab_channel=DavidBombal">cette vidéo</a> pour avoir plus de détails. Par exemple, on peut filtrer avec :</p>
 <p><code>ip.addr == 192.168.1.21 &amp;&amp; icmp</code></p>
 <p>Ensuite, on peut prendre un paquet et faire [clique droit &gt; conversation filter &gt; ethernet] pour avoir son contexte.</p>
@@ -253,7 +253,7 @@
 <h4>Dans Wireshark</h4>
 <p><a href="https://www.youtube.com/watch?v=rmFX1V49K8U&amp;list=PLW8bTPfXNGdCR0RjCBwHM0EzfVKQfpn1m&amp;ab_channel=DavidBombal">Ressource</a>.</p>
 <p>On lance la capture de paquets. Avec la commande <code>curl google.com</code> :</p>
-<p><img src="capture_tcp.png" alt="capture_tcp"></p>
+<p><img src="capture_tcp.webp" alt="capture_tcp"></p>
 <p>Pour avoir la capture en question, on peut appliquer le filtre <code>http</code>. Ensuite, [clique droit &gt; follow TCP stream] sur le paquet.</p>
 <p><em>Note</em> : pour ajouter des colonnes : dans le cadre en bas à gauche, clique droit sur la donnée et apply as a column</p>
 <p>Les trois premiers paquets correspondent à l'établissement de la connexion : SYN, SYN-ACK, ACK. Je vous invite à étudier ces paquets.</p>
@@ -300,7 +300,7 @@
 <div class="mx-8 pb-2 cursor-auto select-text">
 <p><code>nmap -sT 192.168.1.1</code>
 En regardant paquet par paquet, c'est difficile à remarquer... Chaque paquet TCP est normal et comporte toutes les options classiques d'un paquet TCP. Le comportement global est cependant étrange (SYN, SYN-ACK, ACK, RST-ACK), on établit une connection pour la fermer brutalement ensuite (flag RESET : &quot;Le bit de réinitialisation a été prévu pour des situations comme celle où un ordinateur A « plante » ou est éteint alors qu'une connexion TCP était en cours avec un ordinateur B.&quot; <a href="https://fr.wikipedia.org/wiki/Attaque_TCP_reset">wikipedia</a>). On aurait pu aussi préciser le port pour éviter de tout scanner et d'éveiller les soupçons. Finalement, on comprend facilement qu'un scan comme ça est facile à détecter par les IDS.
-<img src="capture_nmap_full_tcp.png" alt="capture nmap full tcp"></p>
+<img src="capture_nmap_full_tcp.webp" alt="capture nmap full tcp"></p>
 </div>
 </details>     
 </div>
@@ -325,7 +325,7 @@ En regardant paquet par paquet, c'est difficile à remarquer... Chaque paquet TC
 <div class="mx-8 pb-2 cursor-auto select-text">
 <p><code>sudo nmap -sS 192.168.1.1</code>
 Si on a réussi à établir une connexion, on a ceci dans wireshark :
-<img src="capture_nmap_syn_scan.png" alt="capture syn scan">
+<img src="capture_nmap_syn_scan.webp" alt="capture syn scan">
 On voit que le client envoie un SYN, le server revoie un SYN-ACK pour établir une connexion TCP, et ensuite... plus de réponse. Le serveur retransmet alors son SYN-ACK, en supposant qu'il n'a pas été reçu, et recommence toutes les <code>~ 2 * delta</code>.
 Le SYN scan envoie un paquet SYN et attend un SYN-ACK en retour, mais ne renvoie pas de ACK au serveur. Il est donc normal d'avoir ce genre de stream. Mais du point de vue du serveur, c'est difficile à détecter, car tout se passe comme si le paquet réponse s'était perdu en chemin (d'où la retransmission).
 Cependant, en regardant attentivement, on voit que le premier SYN envoyé par le client n'est pas identique à ceux de tout à l'heure. Et oui, regardez dans les options TCP... que 4 octets. C'est très étrange, normalement un paquet TCP SYN a au moins une vingtaine d'octets d'options. Finalement, On voit qu'un <em>stealth scan</em> n'est pas si <em>stealth</em> que ça...</p>

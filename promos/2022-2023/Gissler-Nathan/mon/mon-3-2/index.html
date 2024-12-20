@@ -137,14 +137,14 @@
 <h2>Leetcode</h2>
 <p><a href="https://leetcode.com">Leetcode</a> est une plateforme sur laquelle on trouve de nombreux problèmes d'algorithmie classés par difficulté (Easy, Medium ou Hard), qui peuvent être résolus avec un code relativement court. Il y a notamment des problèmes très demandés en entretien d'embauche et l'un des buts de la plateforme est de préparer à ces entretiens.</p>
 <p>On peut choisir dans quel langage on veut résoudre les problèmes, pour ma part j'ai choisi Java pour m'y réhabituer avant mon stage. De nombreuses solutions sont également proposées par les utilisateurs pour chaque problème, ce qui permet de mieux comprendre les problèmes que l'on n'arrive pas à résoudre et de voir les astuces qui permettent d'obtenir des algorithmes plus efficaces en terme de temps et/ou de mémoire.</p>
-<img src="leetcode.png" alt="Leetcode" width="800">
+<img src="leetcode.webp" alt="Leetcode" width="800">
 <h2>Quelques algorithmes sur lesquels j'ai travaillé</h2>
 <h3>Conversion de chiffres romains en nombres entiers (Easy)</h3>
 <p>Ce problème consiste à convertir un chiffre romain donné sous forme de chaîne de caractères en entier. Pour le résoudre j'ai additionné dans l'ordre la valeur de chaque caractère. La seule exception est lorsqu'un caractère est suivi d'un caractère d'une valeur supérieur (comme &quot;IV&quot;), auquel cas il faut le retrancher (- 1 + 5 = 4).</p>
 <h3>Calcul de la partie entière de la racine carrée d'un entier (Easy)</h3>
 <p>Comme pour certains problèmes de niveau Medium sur lesquels j'ai travaillé, ce problème montre l'importance du temps de calcul en plus de la correction de l'algorithme : la solution que j'ai fournie tient en 4 lignes et fonctionne, mais elle est nettement moins rapide que les meilleures solutions qui sont proposées. J'ai écrit cet algorithme en Python car l'équivalent écrit en Java n'était pas accepté, pour une raison qui m'échappe.</p>
-<img src="code_sqrt.png" alt="Code sqrt" width="300">
-<img src="temps_exec_sqrt.png" alt="Temps d'exécution sqrt" width="1000">
+<img src="code_sqrt.webp" alt="Code sqrt" width="300">
+<img src="temps_exec_sqrt.webp" alt="Temps d'exécution sqrt" width="1000">
 <h3>Recherche d'un nombre premier palindrome (Medium)</h3>
 <p>Ce problème consiste à chercher le premier nombre premier palindrome (qui se lit de la même manière dans les deux sens) supérieur à un entier donnée. La première version du code que j'ai écrite testait chaque nombre un par un. Elle n'a pas été accepté à cause d'un &quot;Time Limit Exceeded&quot;, sans surprise.</p>
 <p>J'ai ensuite essayé d'affiner la recherche en ne regardant que les nombres finissant par 1, 3, 7 ou 9 et en passant certaines plages de nombres en se basant sur la fréquence des palindromes par rapport à l'ordre de grandeur des nombres (par exemple pour des nombres de 4 chiffres, on a généralement des palindromes tous les 100 environ, sauf quelques cas particuliers comme 1991-2002). Mais cela n'a pas suffit à faire accepter mon code.</p>

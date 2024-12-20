@@ -176,14 +176,14 @@ Enfin, si le site à mettre en ligne contient une base de données, il faut réa
 <h2>3. La mise en ligne du site</h2>
 <p>Après avoir fait des recherches sur le fonctionnement des outils présentés ci-dessus, j'ai donc procédé à la mise en ligne d'un site web afin de tester tout le processus par moi-même. J'ai utilisé pour cela mon site web réalisé lors du POK du temps 1, ainsi que le client FTP Cyberduck. Pour ce qui est de l'hébergement, je me suis servie de mon site perso sur les serveurs de Centrale, accessible à l'URL <a href="https://agathe.rabachou.perso.centrale-marseille.fr/">https://agathe.rabachou.perso.centrale-marseille.fr/</a>.</p>
 <p>J'ai donc crée une connexion vers l'un des serveurs de l'école :
-<img src="images/connexion_serveur.png">
+<img src="images/connexion_serveur.webp">
 Puis j'y ai ajouté mes fichiers (html, css, javascript et les images). J'ai dû faire quelques modifications pour corriger des problèmes de liens (il faut faire attention à ce que les liens relatifs naviguent correctement dans les dossiers), et mon CV en ligne est maintenant disponible et fonctionnel sur mon site.</p>
 <h2>4. Pour aller plus loin</h2>
 <p>Après discussion avec Monsieur Brucker, il m'a conseillé pour approfondir le sujet d'essayer d'ajouter l'utilisation d'un framework à mon site, et ensuite de déployer le tout. J'ai donc découvert Bootstrap en lisant la documentation sur le site, et je l'ai ajouté à mon projet. Afin de tester les deux méthodes, j'ai utilisé Bootstrap via CDN (un lien qui appelle Bootstrap en ligne) et j'ai également installé le package complet via la commande</p>
 <pre class="language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> bootstrap</code></pre>
 <p>J'ai ensuite modifié mon code de base afin de rendre les boutons et le formulaire plus responsive ou encore de mieux gérer l'affichage des photos, ce qui m'a permis de tester certaines fonctionnalités du framework telles que le système de classes ou de grille. J'ai également ajouté un bouton test uniquement designé avec Bootstrap afin d'avoir un objet évident pour pouvoir vérifier que la mise en ligne du site avec le framework fonctionnait bien.
 J'ai donc déployé comme précédemment la version modifiée de mon site sur le serveur de l'école en utilisant Cyberduck, et on peut bien constater que le site accessible sur mon adresse perso est la version utilisant Bootstrap (notamment grâce à l'alerte <em>Test..</em>) :
-<img src="images/site_deploye_vf.png"></p>
+<img src="images/site_deploye_vf.webp"></p>
 <p>Enfin, également à la suite de l'échange avec Monsieur Brucker, je me suis renseignée sur l'automatisation de la mise en ligne d'un site. En effet, pour l'instant avec la méthode vue précédemment, il faut retéléverser les fichiers du site sur le serveur par le client FTP à chaque modification du code, ce qui peut être un peu lourd dans le cas de gros projets. Il existe donc plusieurs méthodes pour automatiser cette tâche :</p>
 <ul>
 <li>Il est possible d'écrire des scripts de déploiement (en Bash ou en Python par exemple), que l'on personnalise selon nos besoins et qui peuvent compiler les fichiers et les copier sur un serveur distant.</li>

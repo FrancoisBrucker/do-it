@@ -148,7 +148,7 @@
 <h2>Présentation</h2>
 <p>Depuis un certain temps maintenant, je travaille sur un projet de conception d'entreprise. Le but de cette entreprise est de vendre des <strong>Escape Game portatifs</strong>. J'ai bientôt fini la conception de mon premier produit et je souhaite pouvoir le vendre sur un site web.</p>
 <p>Pour vous donner une idée plus claire de ce que je fait, voici un modèle 3D de mon premier objet.</p>
-<img src="modele1.PNG">
+<img src="modele1.webp">
 <p>Je souhaite donc utiliser les <strong>POK</strong> pour developper le site web qui permettra de découvrir l'entreprise et acheter ses produits.</p>
 <h2>Objectif du sprint 1</h2>
 <p>L'objectif global du sprint 1 est d'avoir une page d'acceuil fonctionnelle et jolie. Plus precisement, cette page aura :</p>
@@ -163,8 +163,8 @@
 <p>Avant de me lancer dans le developpement, j'ai décidé de creer un wireframe. Cela me permet de poser mes idées.
 J'ai réalisé ce wireframe sur Figma. Ensuite, j'ai créé une maquette sur <strong>Illustrator</strong> en me basant sur le wireframe.</p>
 <div style=" display: flex; justify-content: center">
-<img src="wireframe.PNG" alt="Wireframe" style=" margin : 10px; ">
-<img src="maquette.PNG" alt="Maquette" style="margin : 10px;">
+<img src="wireframe.webp" alt="Wireframe" style=" margin : 10px; ">
+<img src="maquette.webp" alt="Maquette" style="margin : 10px;">
 </div>
 <p>J'ai choisi de ne pas surcharger le site d'information. Je préfère quelque chose de sobre avec peu d'information à l'écran.
 Dans l'espace blanc, en haut, je veux mettre le modèle 3d de mon objet.</p>
@@ -172,8 +172,8 @@ Dans l'espace blanc, en haut, je veux mettre le modèle 3d de mon objet.</p>
 <p>Maintenant que la maquette est faite, je peux attaquer le développement.
 J'ai essayé d'être fidèle à la maquette en reflechissant à un site responsive.
 Voici le resultat du sprint 1 :</p>
-<img src="site1.PNG">
-<img src="site2.PNG">
+<img src="site1.webp">
+<img src="site2.webp">
 <p>La première étape était d'implementer la barre de navigation. J'ai ajouté un effet lorsque la souris passe sur un élement. Lorsque la souris passe sur un élement, une sous-section s'affiche avec différentes catégories.</p>
 <p>Ensuite j'ai utilisé un SVG pour la partie principale qui donne cet effet de vague. J'ai exporté le fichier SVG depuis la maquette.</p>
 <p>La partie qui m'a le plus posé de problème est l'importation du modèle 3D. J'ai eu des soucis de format car Three.js ne peut importer que des fichier .glb. Comme j'ai fait le modèle 3D sur Solidworks, j'ai dû passer par Blender pour convertir le fichier. Cependant, je n'ai pas réussi à importer les textures.</p>
@@ -199,19 +199,19 @@ Voici le resultat du sprint 1 :</p>
 <h3>Retour sur la maquette</h3>
 <p>Je n’étais pas  satisfait de ma première maquette. Je n’arrivais pas à me projeter et avancer dans le code car je trouvais le design moyen. J’ai donc fait le choix de retravailler la maquette.</p>
 <p>Je suis donc retourné sur Figma pour réaliser une maquette plus fidèle à mes envies.</p>
-<img src="maquette2.png">
+<img src="maquette2.webp">
 <p>L’objectif est de rajouter le modèle 3d en haut de la page produit et en haut de la page accueil.</p>
 <p>Une fois la maquette réalisée, j’ai pu continuer le code.</p>
 <h3>Page d’accueil</h3>
 <p>Pour cette page, je n’ai pas eu beaucoup de travail à faire car j’avais déjà quasiment fini lors du sprint 1. J’ai simplement modifié la deuxième section pour inclure une présentation succincte de l’entreprise.</p>
-<img src="page1.png">
-<img src="page12.PNG">
+<img src="page1.webp">
+<img src="page12.webp">
 <p>La texture de la boîte m’a posé encore beaucoup de problème. Toutes les textures de Blender ne sont pas importable dans Three.js. Je n’ai pas encore trouvé de solution à ce problème, mais je compte me pencher dessus plus sérieusement lorsque j’aurai fini la conception de ma boîte.</p>
 <p>Le bouton “en savoir plus” n’est pas fonctionnel car je n’ai pas crée la page présentant l’entreprise.</p>
 <h3>Page Produit</h3>
-<img src="page2.png">
-<img src="page22.png">
-<img src="page23.png">
+<img src="page2.webp">
+<img src="page22.webp">
+<img src="page23.webp">
 <p>Voilà le résultat de ma page <strong>Produit.</strong></p>
 <p><strong>Le modèle 3D</strong> est interactif. On peut tourner autour avec la souris. En plus, j’ai rajouté des particules qui gravitent autour de la boîte. Pour cela, j’ai utilisé <a href="https://www.youtube.com/watch?v=Uh7yvnBnLj0&amp;t=606s">ce tuto</a>.</p>
 <p>J’ai un petit soucis de lumière. Quand on tourne l’objet, on ne distingue plus ses formes car la scène devient trop sombre</p>
@@ -266,7 +266,7 @@ Voici le resultat du sprint 1 :</p>
 <span class="token punctuation">]</span></code></pre>
 <p>L’attribut “Ressource” désigne le dossier qui contient les images de la boîte et le modèle 3d. Pour l’instant, toutes les boîtes désignent le même dossier.</p>
 <p>Ainsi, cette page est dynamique et affiche les données en fonction de ce tableau JSON.</p>
-<img src="pagebis.png">
+<img src="pagebis.webp">
 <p>Voilà la page si on affiche <strong>“Truc Box”</strong>.</p>
 <h2>Bilan du sprint 2</h2>
 <p>Globalement, je suis content du résultat. J’ai pu découvrir beaucoup de notion de frontend grâce à ce projet mais ce projet m’a pris plus de 20h.</p>

@@ -144,8 +144,8 @@ Ce serveur suit le protocole http c'est à dire une suite de requête de l'utils
 <h3>Création du premier projet grâce à Node/Express</h3>
 <p>Express est un framework de node, lui-même environnement de développement, permettant de coder des sites côtés serveurs. Tout l'intéret de l'apprentissage de ce MON est de basculer le site créer avec le premier POK : &quot;Mon site chez moi&quot; coté serveur.<br>
 Le framework Express crée tout le &quot;squelette&quot; de notre site web et l'importe sur un serveur local. Ce serveur est localisé à <a href="http://localhost:3000/">http://localhost:3000/</a>.
-Nous obtenons donc notre premier site web sur serveur : <img src="../Images/Express.png">
-Nous avons pour le moment les dossiers suivants dans notre environnement de programmation : <img src="../Images/Dossiers.PNG"></p>
+Nous obtenons donc notre premier site web sur serveur : <img src="../Images/Express.webp">
+Nous avons pour le moment les dossiers suivants dans notre environnement de programmation : <img src="../Images/Dossiers.webp"></p>
 <ul>
 <li>le dossier &quot;bin&quot; contient un fichier &quot;www&quot; qui représente l'hébergement de notre site</li>
 <li>les dossiers &quot;models&quot; ainsi que &quot;public&quot; sont vides pour le moment : &quot;models&quot; nous servira pour la base de données et &quot;public&quot; pour les images et les styles.</li>
@@ -262,7 +262,7 @@ PersonSchema.virtual<span class="token punctuation">(</span><span class="token s
 
 // Export model
 module.exports <span class="token operator">=</span> mongoose.model<span class="token punctuation">(</span><span class="token string">"Person"</span>, PersonSchema<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<p>Nous pouvons retrouver cette base de données à tout moment sur mangodb : <img src="../Images/database.PNG"></p>
+<p>Nous pouvons retrouver cette base de données à tout moment sur mangodb : <img src="../Images/database.webp"></p>
 <h3>Routes</h3>
 <p>Définition : Une route est une section de code qui associe un HTTP, un chemin URL et une fonction qui les associe sur le site. <br>
 Express possède un middleware (sorte de pont entre différentes applications web) permettant de créer des routes directement. Ce middleware permet de créer des routes pour les requêtes : &quot;get&quot;, &quot;post&quot;, &quot;delete&quot;, &quot;copy&quot;, &quot;subscribe&quot;... et bien d'autres. Ainsi, pour chaque filtre de notre base de données, nous créons un fichier où l'on code toutes les requêtes souhaitées. Nous plaçons ces fonctions dans un dossier &quot;controller&quot;.<br>

@@ -171,7 +171,7 @@ matrice_exemple <span class="token operator">&lt;-</span> matrix<span class="tok
 <li>...</li>
 </ul>
 <p>On structure donc un projet sous forme de  <em><strong>Working directory</strong></em>. Cela permet de communiquer avec d'autres fichiers plus facilement sans avoir à préciser les emplacements complets de ces derniers. De plus cela permet de lier un projet R avec <em><strong>Github</strong></em> plus facilement car il ne va pas dépendre de l'ordinateur utilisé.</p>
-<p><img src="Images/structure_projet.png" alt="structuration projet"></p>
+<p><img src="Images/structure_projet.webp" alt="structuration projet"></p>
 <p><em>from</em> <a href="https://openclassrooms.com/fr/courses/8248096-initiez-vous-a-r-pour-lanalyse-de-donnees/8309117-creez-votre-premier-projet-dans-r">https://openclassrooms.com/fr/courses/8248096-initiez-vous-a-r-pour-lanalyse-de-donnees/8309117-creez-votre-premier-projet-dans-r</a></p>
 <ul>
 <li>
@@ -227,7 +227,7 @@ mixite_groupe_edf_fr <span class="token operator">&lt;-</span> mixite_groupe_edf
 <h2>Application</h2>
 <p>A travers les cours j'ai suivi des petits exemples et exercice mais j'ai voulu appliquer la théorie à un autre groupe de données pour manipuler moi même. J'ai donc choisi de travailler sur un sujet que j'apprécie particulièrement : l'esport de <em>League of Legends</em> et plus particulièrement le plus grand joueur au monde <strong>Faker</strong>.</p>
 <p>J'ai ainsi trouvé en ligne une data base <em>csv</em> qui regroupait toutes les parties professionnelles qui ont été jouées depuis 2014 à travers les ligues et tournois principaux.</p>
-<p><img src="Images/projetdataLoL.png" alt="projet data LoL"></p>
+<p><img src="Images/projetdataLoL.webp" alt="projet data LoL"></p>
 <p>Il y avait un <em>data frame</em> par an, je les ai donc tous importés puis filtrés pour ne garder que les parties du joueur qui m'intéresse avant de concaténer les <em>data frames</em> filtrées en un seul.</p>
 <p>A partir de là j'ai pu manipuler les data et afficher moi-même diverses statistiques comme le taux de victoire, l'avantage en or, ...</p>
 <p>Je met ici quelques exemples sans trop m'attarder dans les détails et les explications.</p>
@@ -239,7 +239,7 @@ kill_year <span class="token operator">&lt;-</span> aggregate<span class="token 
 barplot<span class="token punctuation">(</span>kill_year<span class="token operator">$</span>kills<span class="token punctuation">,</span> names.arg <span class="token operator">=</span> kill_year<span class="token operator">$</span>year<span class="token punctuation">,</span> 
         col <span class="token operator">=</span> <span class="token string">"skyblue"</span><span class="token punctuation">,</span> main <span class="token operator">=</span> <span class="token string">"Nombre de kills de Faker par an"</span><span class="token punctuation">,</span> 
         xlab <span class="token operator">=</span> <span class="token string">"Année"</span><span class="token punctuation">,</span> ylab <span class="token operator">=</span> <span class="token string">"Kills"</span><span class="token punctuation">)</span></code></pre>
-<p><img src="Images/kill_an_faker.png" alt="kill par an"></p>
+<p><img src="Images/kill_an_faker.webp" alt="kill par an"></p>
 <h3>K/D/A global et par champion</h3>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-orange-500 bg-orange-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -281,7 +281,7 @@ top_3_champions <span class="token operator">&lt;-</span> merge<span class="toke
   arrange<span class="token punctuation">(</span>desc<span class="token punctuation">(</span>winrate<span class="token punctuation">)</span><span class="token punctuation">)</span>
 
 print<span class="token punctuation">(</span>top_3_champions<span class="token punctuation">)</span></code></pre>
-<p><img src="Images/top3winrate.png" alt="resultat print top_3_champions"></p>
+<p><img src="Images/top3winrate.webp" alt="resultat print top_3_champions"></p>
 <h2>Conclusion</h2>
 <p>R est un très bon outil pour l'analyse de data en très grand nombre, pour l'appication aux matchs compétitifs de <em>League of Legends</em> les data en <em>csv</em> s'étendaient sur des dizaines de milliers de lignes et pourtant les calculs et l'affichage de résultats se sont fait très rapidement.</p>
 <p>La prise en main est également assez facile si on a déjà des bases en python car je trouve que les langages se ressemblent beaucoup.</p>

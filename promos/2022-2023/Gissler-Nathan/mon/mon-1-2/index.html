@@ -153,14 +153,14 @@
 <p>---
 title: Giffleball
 images:
-- ???.jpg
-- ….jpg
+- ???.webp
+- ….webp
 - parrot.gif
 ---</p>
 <p>Ces données peuvent ensuite être utilisée au sein du fichier (ici en HTML) de cette manière :</p>
-<p><img src="utilisation_titre.png" alt="Utilisation du titre"></p>
+<p><img src="utilisation_titre.webp" alt="Utilisation du titre"></p>
 <p>Ou encore comme ceci pour la liste d'images :</p>
-<p><img src="liste_images.png" alt="Liste d'images"></p>
+<p><img src="liste_images.webp" alt="Liste d'images"></p>
 <p>De cette manière les données doivent seulement être modifiées dans l'en-tête et plus dans chaque élément de la page.</p>
 <p><code>url_encode</code> est un filtre d'Eleventy qui permet d'éviter des erreurs avec les caractères spéciaux dans les noms de fichier, c'est un autre avantage des templates.</p>
 <p>Remarque : attention quand on parle d'Eleventy sur un site qui fonctionne avec Eleventy, les textes entre doules accolades sont remplacés même si on les met entre `` ou dans un bloc de code (je n'ai pas trouvé d'autre moyen que de mettre des images).</p>
@@ -173,13 +173,13 @@ return &quot;valeur retournée&quot;;
 });
 });</p>
 <p>Ils s'utilisent ensuite dans un fichier HTML comme ceci :</p>
-<p><img src="utilisation_filtre.png" alt="Utilisation d'un filtre"></p>
+<p><img src="utilisation_filtre.webp" alt="Utilisation d'un filtre"></p>
 <h3>Layouts</h3>
 <p>Un layout est un fichier Nunjucks que l'on crée de cette manière : <code>src/_includes/nom_du_layout.njk</code></p>
 <p>Ce fichier est constitué comme le fichier HTML d'une page de notre site, excepté que l'on peut par exemple remplacer le titre par :</p>
-<p><img src="title.png" alt="Title"></p>
+<p><img src="title.webp" alt="Title"></p>
 <p>Et le contenu de la page par :</p>
-<p><img src="content.png" alt="Content"></p>
+<p><img src="content.webp" alt="Content"></p>
 <p>Ces informations seront ensuite renseignées dans un fichier Markdown situé dans <code>/src</code> : <code>/src/index.md</code>.</p>
 <p>---
 layout: nom_du_layout.njk
@@ -198,15 +198,15 @@ title: Titre de la page
 <ul>
 <li>Fichier JSON contenant les données à utiliser (placé dans <code>_data</code>)</li>
 </ul>
-<p><img src="fichier_json.png" alt="Fichier JSON"></p>
+<p><img src="fichier_json.webp" alt="Fichier JSON"></p>
 <ul>
 <li>Fichier Nunjucks qui définit le format des fichiers à générer</li>
 </ul>
-<p><img src="fichier_nunjucks.png" alt="Fichier Nunjucks"></p>
+<p><img src="fichier_nunjucks.webp" alt="Fichier Nunjucks"></p>
 <ul>
 <li>Résultat (créé dans un dossier <code>portraits</code> avec les pages correspondant aux autres données du JSON)</li>
 </ul>
-<p><img src="portrait.png" alt="Page affichée"></p>
+<p><img src="portrait.webp" alt="Page affichée"></p>
 <p>On remarque que l'on peut choisir le lien auquel on trouvera les pages générées.</p>
 <h2>4. Création d'un site</h2>
 <p>On peut commencer par saisir ces commandes dans le dossier du projet :</p>

@@ -191,7 +191,7 @@
     .addToUi(); // Ajoute le menu à l'interface
 }</code></pre>
 <p>On peut ainsi se faire par exemple des automatismes de formating de la feuille Excel pour formater toutes les feuilles de la même façon :</p>
-<p><img src="FormatingSheet.png" alt="Ajustement du format d'une feuille de calcul"> <em>Screen d'une feuille de calcul formaté avec google app script</em></p>
+<p><img src="FormatingSheet.webp" alt="Ajustement du format d'une feuille de calcul"> <em>Screen d'une feuille de calcul formaté avec google app script</em></p>
 <h3>Interaction entre plusieurs document</h3>
 <p>Il est possible de récupérer des données d'un document pour faire des actions dans un autre :</p>
 <pre class="language-Javascript"><code class="language-Javascript">var bookSS = SpreadsheetApp.openById(1651); // récupère le sheet grace à l'id
@@ -202,7 +202,7 @@ var bookListValues = bookRange.getValues(); // récupère les valeurs</code></pr
 <p>Dans cette partie, je vais m'attaquer à un automatisme qui a pour but d'être utiliser dans mon équipe de voile.</p>
 <p>Le but de cet automatisme est de créer un programme qui ajoutera un onglet sur google sheet afin de déclencher un rappel automatique pour envoyer des mails à tous les équipiers qui n'ont pas rempli leur présence quand on le souhaite.</p>
 <p>Pour cela, il faut récupérer les informations sur le nom des équipier et sur ce qu'ils ont rempli dans le premier sheet qui ressemble à ceci :</p>
-<p><img src="SheetPresence.png" alt="Forme du sheet de présence"> <em>Exemple d'un google sheet pour confirmer la présence des équipiers sur une régate</em></p>
+<p><img src="SheetPresence.webp" alt="Forme du sheet de présence"> <em>Exemple d'un google sheet pour confirmer la présence des équipiers sur une régate</em></p>
 <p>Ainsi, la fonction va devoir regarder pour chaque ligne du tableau :</p>
 <ul>
 <li>Le nom de l'équipier</li>
@@ -281,9 +281,9 @@ function sendEmailAlertForCalendar() {
   }
 } // Utilise les fonctions précédentes afin de savoir si il faut ou non envoyer un mail ou non</code></pre>
 <p>On retrouver maintenant l'onglet :</p>
-<p><img src="SheetReminderOnglet.png" alt="Sheet de présence avec Automatisme"> <em>Google sheet avec l'alerte disponible</em></p>
+<p><img src="SheetReminderOnglet.webp" alt="Sheet de présence avec Automatisme"> <em>Google sheet avec l'alerte disponible</em></p>
 <p>Et en déclanchant l'automatisme (dès qu'on clique sur le <em>Reminder</em> de l'onglet <em>Alert</em>) on obtient le mail suivant :</p>
-<p><img src="EmailRappel.png" alt="Email de Rappel"> <em>Email d'alert que l'on reçoit si l'on ne rempli pas toutes les cases</em></p>
+<p><img src="EmailRappel.webp" alt="Email de Rappel"> <em>Email d'alert que l'on reçoit si l'on ne rempli pas toutes les cases</em></p>
 <p>Ceci va permetre de gagner énormément de temps en évitant d'avoir à faire un rappel en privé à chaque personne une par une.</p>
 <p>Je n'ai malheureusement pas eu le temps de faire le 2ème automatisme consistant à créer à la fin de chaque régate un sheet afin de rassembler les retours et l'envoyer par mail a tous les participants mais c'est bien sur quelque chose que je ferais plus tard personnellement 🙂.</p>
 

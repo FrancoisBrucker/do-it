@@ -164,7 +164,7 @@ Eh bien, je me suis souvenu que j'étais nul au vélo. Heureusement, le site est
 J'ai utilisé MySQL, car c'était ce que j'utilisais en classes préparatoires.</p>
 <p>Voici à quoi ressemble la base de données qu'on extrait à l'aide de la commande SELECT.
 <strong>Base de données sur les villes françaises</strong>
-<img src="Capture1.PNG"></p>
+<img src="Capture1.webp"></p>
 <p>Ci-dessous, la syntaxe classique :</p>
 <pre><code>SELECT *
 FROM table
@@ -202,7 +202,7 @@ ORDER BY surfacetotale DESC
 </details>     
 </div>
 <p><strong>Résultat sur la table</strong>
-<img src="ex1_Q6.PNG"></p>
+<img src="ex1_Q6.webp"></p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
 <summary class="list-none py-0.5">
@@ -228,7 +228,7 @@ LEFT(valeur, nombre de lettres en partant de la gauche) = &quot;Ce qu'on cherche
 </details>     
 </div>
 <p><strong>Résultat sur la table</strong>
-<img src="ex1_Q7.PNG"></p>
+<img src="ex1_Q7.webp"></p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
 <summary class="list-none py-0.5">
@@ -255,7 +255,7 @@ ORDER BY COUNT(ville_nom) DESC
 </details>     
 </div>
 <p><strong>Résultat sur la table</strong>
-<img src="ex1_Q8.PNG"></p>
+<img src="ex1_Q8.webp"></p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
 <summary class="list-none py-0.5">
@@ -281,7 +281,7 @@ REPLACE(valeur, 'ce qu'on veut remplacer', 'par quoi on veut le remplacer') - Ap
 </details>     
 </div>
 <p><strong>Résultat sur la table</strong>
-<img src="ex1_Q11.PNG"></p>
+<img src="ex1_Q11.webp"></p>
 <h2>3. SQL intermédiaire <a id="section-3"></a></h2>
 <p>Les questions niveau intermédiaire étaient moins claires, dans le sens où je n'avais pas l'impression de comprendre parfaitement ce qu'ils attendaient.
 J'ai fait ce que je pensais qu'il fallait faire.</p>
@@ -289,12 +289,12 @@ J'ai fait ce que je pensais qu'il fallait faire.</p>
 <table>
 <tbody>
 <tr>
-<td style="text-align:center"><img src="Capture2_1.PNG" width="350" height="350"></td>
-<td style="text-align:center"><img src="Capture2_2.PNG" width="350" height="350"></td>
+<td style="text-align:center"><img src="Capture2_1.webp" width="350" height="350"></td>
+<td style="text-align:center"><img src="Capture2_2.webp" width="350" height="350"></td>
 </tr>
 </tbody>
 </table>
-<img src="Capture2_3.PNG" width="350" height="350">
+<img src="Capture2_3.webp" width="350" height="350">
 <p>Une remarque, il m'a fallu désactiver le &quot;Safe mode&quot; pour pouvoir changer les lignes de mon tableau à la question 4 par exemple, il est conseillé de le réactiver après pour éviter des bêtises.</p>
 <pre><code>SET SQL_SAFE_UPDATES = 0;
 Désactivation du safe mode
@@ -355,7 +355,7 @@ GROUP BY client.nom, client.prenom, commande.date_achat (Pour résoudre les prob
 </details>     
 </div>
 <p><strong>Résultat</strong>
-<img src="ex2_Q5.PNG"></p>
+<img src="ex2_Q5.webp"></p>
 <p>La question 10 nous apprend à ajouter et modifier une colonne.</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
@@ -446,7 +446,7 @@ INSERT INTO commande_category (descriptif)
 </div>
 </details>     
 </div>
-<img src="Capture2_4.PNG" width="350" height="350">
+<img src="Capture2_4.webp" width="350" height="350">
 <h2>4. Un cas pour reprendre l'analyse de données avec Python <a id="section-4"></a></h2>
 <p>Pour reprendre mes connaissances en analyse de données avec Python, j'ai fait le choix de reprendre à zéro un début d'étude de cas que j'avais fait l'an dernier. Le but étant de réapprendre, explorer et améliorer.</p>
 <p>La base de données provient de Kaggle et s'appelle <a href="https://www.kaggle.com/datasets/annavictoria/speed-dating-experiment">Speed Dating Experiment</a> et a été faite à partir d'une expérience conduite par Columbia Business School entre 2002 et 2004. Durant ces événements de &quot;Speed Dating&quot;, chaque participant a quatre minutes avec chaque personne du sexe opposé, les participants étant tous soit un homme soit une femme, et hétérosexuels.
@@ -455,31 +455,31 @@ L'idée de cette base de données est de comprendre quels facteurs influencent l
 Je vous laisse les images, le code étant organisé et détaillé dans le jupyter notebook ! Il ne faut pas cependant oublier qu'une analyse de données est toujours biaisée, que ce soit par la qualité des données et par la façon de l'analyser et de la faire visualiser.</p>
 <h3>Qui a participé à l'événement ?</h3>
 <p><strong>Genre des participants</strong>
-<img src="gender_distrib.PNG" width="350" height="350"></p>
+<img src="gender_distrib.webp" width="350" height="350"></p>
 <p><strong>Origine des participants, car aux Etats-Unis, ça a de l'importance...</strong>
-<img src="race_distribution.PNG" width="500" height="500"></p>
+<img src="race_distribution.webp" width="500" height="500"></p>
 <p><strong>Domaine d'étude/de travail des participants</strong>
-<img src="job_distrib.PNG" width="500" height="500"></p>
+<img src="job_distrib.webp" width="500" height="500"></p>
 <h3>Avant l'événement</h3>
 <p>On a posé des questions aux participants avant l'événement.</p>
 <p><strong>1ère question : Que cherchent les hommes et les femmes chez leurs partenaires ?</strong>
-<img src="m_w_look_for.PNG" width="500" height="500"></p>
+<img src="m_w_look_for.webp" width="500" height="500"></p>
 <p><strong>Superposition de 3 questions, que cherchent les hommes chez leurs partenaires ? Que cherchent les autres hommes chez leurs partenaires d'après eux ? Que cherchent les femmes chez leurs partenaires d'après eux ? Dans l'ordre.</strong>
-<img src="men_3_attr.PNG" width="500" height="500"></p>
+<img src="men_3_attr.webp" width="500" height="500"></p>
 <p><strong>Superposition de 3 questions, que cherchent les femmes chez leurs partenaires ? Que cherchent les autres femmes chez leurs partenaires d'après eux ? Que cherchent les hommes chez leurs partenaires d'après eux ? Dans l'ordre.</strong>
-<img src="women_3_attr.PNG" width="500" height="500"></p>
+<img src="women_3_attr.webp" width="500" height="500"></p>
 <h3>Au milieu de, et après l'événement</h3>
 <p>D'autres questions ont été posées au milieu et après l'événement.</p>
 <p><strong>Superposition de 3 questions, que cherchent les hommes chez leurs partenaires (posée avant l'événement) ? Quel est l'importance des différents critères en réalité dans leurs décisions (posée au milieu de l'événement) ? De même, importance des critères en réalité (posée à la fin de l'événement) ? Dans l'ordre.</strong>
-<img src="men_reality.PNG" width="500" height="500"></p>
+<img src="men_reality.webp" width="500" height="500"></p>
 <p><strong>Superposition de 3 questions, que cherchent les femmes chez leurs partenaires (posée avant l'événement) ? Quel est l'importance des différents critères en réalité dans leurs décisions (posée au milieu de l'événement) ? De même, importance des critères en réalité (posée à la fin de l'événement) ? Dans l'ordre.</strong>
-<img src="women_reality.PNG" width="500" height="500"></p>
+<img src="women_reality.webp" width="500" height="500"></p>
 <p><strong>Superposition de 2 questions, importance des différents critères en réalité dans leurs décisions (posée à la fin de l'événement) chez les hommes et chez les femmes ?</strong>
-<img src="m_w_after.PNG" width="500" height="500"></p>
+<img src="m_w_after.webp" width="500" height="500"></p>
 <p><strong>Comparaison attentes/réalité - Ce que cherchent les femmes chez leurs partenaires d'après les hommes (posée au début de l'événement) et l'importance des critères dans les décisions des femmes (posée à la fin de l'événement)</strong></p>
-<img src="compar_w.PNG" width="500" height="500">
+<img src="compar_w.webp" width="500" height="500">
 <p><strong>Comparaison attentes/réalité - Ce que cherchent les hommes chez leurs partenaires d'après les femmes (posée au début de l'événement) et l'importance des critères dans les décisions des hommes (posée à la fin de l'événement)</strong></p>
-<img src="compar_m.PNG" width="500" height="500">
+<img src="compar_m.webp" width="500" height="500">
 <h2>5. Conclusion <a id="section-5"></a></h2>
 <p>J'ai passé un peu plus que 10h sur le MON, mais c'était un pur plaisir. Les graphes parlent d'eux-mêmes. Ce n'est pas tous les jours qu'on a une démonstration empirique de la superficialité de notre espèce en quelques graphes super jolis.</p>
 <h2>6. Sources <a id="section-6"></a></h2>

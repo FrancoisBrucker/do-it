@@ -267,8 +267,8 @@ CentraleMarseille
 </details>     
 </div>
 <p>Voici un exemple de l'utilisation de ce code. Si on crée un objet de la classe PDF_Tools (<code>test = PDF_Tools()</code>) et que l'on rentre la ligne de code <code>test.rotate_pages(&quot;PDF test 1.pdf&quot;, [0,1,3], 180, &quot;Nouveau PDF.pdf&quot;)</code>, on obtient le fichier PDF suivant:</p>
-<p><img src="Image1.png" alt="Image1"></p>
-<p><img src="Image2.png" alt="Image2"></p>
+<p><img src="Image1.webp" alt="Image1"></p>
+<p><img src="Image2.webp" alt="Image2"></p>
 <p>Seules les pages numéro 1, 2 et 4 (indexées 0, 1 et 3) ont été tournées, ce qui est bien ce qu'on voulait.</p>
 <h4>Création de la méthode pour superposer des pages</h4>
 <p>Cette méthode prend argument un nom de fichier à modifier et un autre nom de fichier contenant l'image à superposer. Un autre paramètre est une liste contenant les numéros des pages que l'on veut modifier. On utilise la méthode <em>mergePage</em> de la classe <em>PageObject</em>, qui prend en argument un autre objet de la classe <em>PageObject</em> et qui superpose les deux pages.</p>
@@ -311,8 +311,8 @@ CentraleMarseille
 </details>     
 </div>
 <p>Pour tester cette fonction, on rentre la commande suivante: <code>test.overlay_pages(&quot;PDF test 2.pdf&quot;, &quot;Logo Centrale.pdf&quot;, [1, 2, 3, 4, 5], &quot;Nouveau PDF3.pdf&quot;)</code>, et le fichier suivant est produit:</p>
-<p><img src="Image3.png" alt="Image3"></p>
-<p><img src="Image4.png" alt="Image4"></p>
+<p><img src="Image3.webp" alt="Image3"></p>
+<p><img src="Image4.webp" alt="Image4"></p>
 <p>Le logo a bien été placé sur les pages qu'il fallait.</p>
 <h4>Création de la méthode pour protéger un PDF par un mot de passe</h4>
 <p>Cette méthode permet de crypter un fichier pdf avec un mot de passe, renseigné en argument de la méthode. Cette dernière utilise la méthode <em>encrypt</em> de la classe <strong>PdfFileWriter</strong>.</p>
@@ -382,9 +382,9 @@ CentraleMarseille
 <h2>Utilisation de python-docx</h2>
 <p>Nous allons à présent explorer les possibilités qu'offre le module Python-docx. Pour charger un fichier Word avec ce module, il faut utiliser la commande: <code>doc = docx.Document(&quot;Word test 1.docx&quot;)</code>. On pourra ensuite manipuler cet objet et utiliser ses attributs.</p>
 <p>Le texte d'un document Word est décomposé en paragraphes, qui se terminent à un retour à la ligne. Dans ces paragraphes, on y trouve des objets de la classe <strong>Runs</strong> qui correspondent à du texte de la même police. Par exemple, dans le texte suivant:</p>
-<p><img src="Image5.png" alt="Image5"></p>
+<p><img src="Image5.webp" alt="Image5"></p>
 <p>on y trouve 6 objets de la classe <strong>Runs</strong>. Chacun de ces objets ont des attributs que l'ont peut modifier. En voici une liste:</p>
-<p><img src="Image6.png" alt="Image6">
+<p><img src="Image6.webp" alt="Image6">
 <em>Source: <a href="https://automatetheboringstuff.com/2e/chapter15/">Automate the boring stuff with Python</a></em></p>
 <p>On peut changer chacun de ces attributs en True ou False.</p>
 <p>L'attribut <em>paragraphs</em> de la classe <strong>Document</strong> permet de récupérer une liste de tout les paragraphes du documents. Chaque objet de la classe <strong>Paragraphs</strong> a un attribut <em>runs</em>, qui est une liste d'objets de la classe <strong>Runs</strong>.</p>

@@ -278,7 +278,7 @@ J'ai alors compris que Sheet n'était pas <strong>DU TOUT</strong> fait pour ça
 Il est assez intuitif et simple à utiliser alors 12mins47 étaient largement suffisantes pour savoir comment procéder.
 Je ne suis pas extrêmement rentrée dans les détails des options qu'offraient Looker Studio, car ce n'était pas le but ici, mais il a l'air assez complet <em>(ex: possibilité de créer des champs personnalisés calculés très pointus)</em>.</p>
 <p>Alors finalement, après 1h30 de dur labeur, je vous présente mon tableau de bord, avec lequel vous pouvez jouer <a href="https://lookerstudio.google.com/reporting/3a53aba0-98ac-4a1d-aa94-3af36f8d6195">ici</a></p>
-<img src="looker_studio.png">
+<img src="looker_studio.webp">
 <h2 id="googleAppscript"> Focus sur Google Apps Scripts</h2>
 <h3>Ressources</h3>
 <p>Après avoir lu autant d’encensements des vidéos youtube de <a href="https://www.youtube.com/playlist?list=PLozmtcO5OqdqZZ6sP6faU18jIdyCiiYvS">cette playlist youtube</a>, j'ai regardé toutes les vidéos. Et je dois dire qu'elle méritait les éloges, les vidéos étaient très complètes et très bien expliquées. <em>Je la recommande, moi aussi !</em> Mais je la complèterai quand même avec les explications de <a href="https://www.sheets-pratique.com/">sheets-pratique.com</a> qui abordent des points cruciaux qui n'apparaissent pas dans les vidéos <em>(ex : comment créer un bouton sur Sheet et y affecter une macro, ou comment enregistrer un script directement depuis Sheet,...)</em></p>
@@ -305,8 +305,8 @@ En cherchant plus globalement sur internet, j'ai trouvé <a href="https://www.ka
 </thead>
 <tbody>
 <tr>
-<td><img src="json_excel1.png"></td>
-<td><img src="json_excel2.png"></td>
+<td><img src="json_excel1.webp"></td>
+<td><img src="json_excel2.webp"></td>
 </tr>
 <tr>
 <td>Permet d'avoir un ingrédient par ligne</td>
@@ -315,7 +315,7 @@ En cherchant plus globalement sur internet, j'ai trouvé <a href="https://www.ka
 </tbody>
 </table>
 <h5>BEMOL n°2 :</h5>
-<img align="right" width="150" src="API_chatGPT.png">
+<img align="right" width="150" src="API_chatGPT.webp">
 <p>L'outil idéal pour trouver le nom d'une recette facilement à partir de l'origine de la recette et de ses ingrédients était évident : <strong>ChatGPT</strong>. Mais lui poser la question pour chaque ligne était trop fastidieux. Après quelques recherches, j'ai vu qu'il était possible de connecter facilement <strong>l'API de ChatGPT</strong> à <strong>Sheet</strong>. <em>Processus très bien expliqué dans <a href="https://www.youtube.com/watch?v=2OukmKPCW1I">cette vidéo</a></em></p>
 <p>Ni une ni deux, je m'y atèle.</p>
 <ul>
@@ -332,7 +332,7 @@ En cherchant plus globalement sur internet, j'ai trouvé <a href="https://www.ka
 <pre><code>=GPT(&quot;peux tu me donner le nom de la recette seulement dont &quot;;F2)
 </code></pre>
 <p>On obtient alors en résultat :
-<img src="nom_recette.png"></p>
+<img src="nom_recette.webp"></p>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
@@ -457,7 +457,7 @@ En cherchant plus globalement sur internet, j'ai trouvé <a href="https://www.ka
 <h4>Test du script</h4>
 <p>Aujourd'hui, j'avais envie de manger <strong>italien</strong>. Mais je n'avais chez moi que des <strong>cacahuètes grillées</strong> et de la <strong>canneberge séchée</strong>.
 <em>Qu'est ce que j'allais bien pouvoir cuisiner?</em></p>
-<img width="350" src="resultat_recette.png">
+<img width="350" src="resultat_recette.webp">
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
@@ -677,7 +677,7 @@ d'un utilisateur. Il se base sur les réponses d'un <strong>Form</strong> rempli
 <li>Je modifie à la main les lignes qui n'ont pas un format adapté.</li>
 </ul>
 <p>On obtient alors une BDD exploitable :</p>
-<img src="BDD.png">
+<img src="BDD.webp">
 <h3>Etape 2 : Obtenir une liste exhaustive des possibilités/choix parmi lesquelles l'utilisateur devra choisir</h3>
 <p>Il y avait en tout <strong>3 grosses variables</strong> à prendre en compte :</p>
 <ul>
@@ -686,18 +686,18 @@ d'un utilisateur. Il se base sur les réponses d'un <strong>Form</strong> rempli
 <li>la <strong>composition</strong> des compléments <em>(qui permettra de savoir quels types d'ingrédients vont être à risque pour un consommateur)</em></li>
 </ul>
 <p>Pour ce faire, il me fallait <strong>récupérer le contenu de chaque cellule</strong> des colonnes concernées, et de réussir à <strong>extraire chaque item</strong> des cellules, de sorte à ce qu'une <strong>cellule corresponde à une item</strong>. Mon idée était d'ensuite pouvoir <strong>supprimer les doublons</strong>, mais il me fallait réussir, pour cela, à placer toutes ces cellules les unes à la suite des autres sur une <strong>même colonne</strong>.</p>
-<img width="350" src="extraction_données.png">
+<img width="350" src="extraction_données.webp">
 <p><strong>Petit problème :</strong> vu comment s'était déroulé la première partie de ce POK sur le traitement de données avec Sheet, réaliser toutes ces actions sur ce logiciel allait être compliqué.
 Je me suis alors tournée vers mon ancien ami Excel, et plus particulièrement <strong>Power Query</strong>.</p>
 <p>J'ai alors réalisé les actions suivantes pour parvenir au résultat :</p>
 <ul>
 <li><strong>Split column</strong> by <strong>Delimiters</strong> : qui permet de séparer le contenu des cellules de la colonne en fonction des <em>virgules</em></li>
 </ul>
-<img width="450" src="extraction_données_2.png">
+<img width="450" src="extraction_données_2.webp">
 <ul>
 <li><strong>Unpivot columns</strong>: qui permet de transformer des colonnes de valeurs en lignes</li>
 </ul>
-<img width="250" src="extraction_données_3.png">
+<img width="250" src="extraction_données_3.webp">
 <p>Ensuite, il suffit de <strong>Supprimer les doublons</strong> sur Excel, et puis le tour est joué.</p>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-yellow-500 bg-yellow-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -723,7 +723,7 @@ Je me suis alors tournée vers mon ancien ami Excel, et plus particulièrement <
 <li>si la personne cochait <strong>allergique/intolérante au lactose</strong>: il fallait rajouter <em>&quot;lact&quot;</em>,<em>&quot;yaourt&quot;</em>, aux ingrédients interdits</li>
 </ul>
 <h3>Problème de formatage des choix de réponses</h3>
-<img align="right" width="138" src="pop_a_risques_ex.png">
+<img align="right" width="138" src="pop_a_risques_ex.webp">
 <p>Si on reprend les données bruts de <strong>toutes les populations à risques</strong>, on distingue 2 catégories:</p>
 <ul>
 <li>les <strong>catégories de population</strong></li>
@@ -965,9 +965,9 @@ Ex : un <strong>enfant (de moins de 6 ans)</strong> c'est aussi un <strong>enfan
 <p>Je m'appelle Raphaël. Je suis en 3/2 et je passe mes concours le mois prochain. Alors je me dit qu'un petit complément alimentaire pour booster ma <strong>mémoire</strong> ne serait pas de refus.
 Il faut faire attention parce que je suis <strong>végétarien</strong>, et allergique à <strong>l'arachide</strong> et aux <strong>crustacés</strong>. Et également, sinon c'est pas drôle, j'ai quelques <strong>problèmes de foie</strong> et <strong>problèmes cardiaques</strong>...
 Je fais le test pour savoir quel complément alimentaire je peux prendre :</p>
-<img src="mail1.png">
+<img src="mail1.webp">
 <p>Ah zut, c'est vrai que j'oubliais que je suis sous anti-coagulants. Je refais le test :</p>
-<img src="mail2.png">
+<img src="mail2.webp">
 <p><em>En espérant que Raphaël puisse réussir ses concours avec ça !</em></p>
 <h2 id="retex"> Retour sur le sprint 2 et retour d'expérience</h2>
 <p>Si on reprend le backlog du sprint 2 que je m'étais fixé :</p>

@@ -172,13 +172,13 @@
 <p>Alors, dans cette démarche, la recherche d’inspiration et le maquettage sont centraux et tous les supports de communication doivent être concernés, du site vitrine (portfolio) à lettre de motivation en passant par le CV.</p>
 <h2>Expression du besoin</h2>
 <p>Pour illustrer le type d’évolution souhaitable dans un tel projet, voici le bandeau supérieur de mon CV actuel, qui est aussi ma photo de bannière Linkedin :</p>
-<img src="assets/lk-banner.jpg" alt="Bannière LinkedIn">
+<img src="assets/lk-banner.webp" alt="Bannière LinkedIn">
 <p>Un peu austère ? Le bleu n’est pas assez profond ? La police n’est pas adaptée ? Ces questions sont parfaitement subjectives mais me trottent dans la tête depuis un moment. Nous allons donc les adresser durant le projet.</p>
 <h2>Gestion de projet</h2>
 <p>Pour la gestion de projet, j’ai choisi l’outil Notion que j’utilise depuis quelques années et qui intègre des templates de gestion de projet notamment en mode agile.</p>
 <p>Une critique que l’on peut formuler à l’égard de l’utilisation de cette outil est que l’on perd dans un premier temps beaucoup de temps à mettre en place un environnement de travail stable et compréhensible. En revanche, une fois mis en place, la façon de structurer l’information est claire et limpide, ce qui permet de se concentrer sur le contenu du projet avec un suivi clair des tâches à effectuer.</p>
 <p>Voilà par exemple comment se présente ma toute première vision du suivi des tâches :</p>
-<img src="assets/vue-notion.png" alt="Vision d'un projet Notion">
+<img src="assets/vue-notion.webp" alt="Vision d'un projet Notion">
 <p>Un dernier point extrêmement positif est que la prise de note dans l’application Notion s’effectue directement en Markdown, ce qui fluidifie énormément la mise en ligne sur le site internet de l’option sans avoir à rédiger toutes ces notes dans un IDE.</p>
 <h2>Méthodologie de projet</h2>
 <h3>Product Backlog</h3>
@@ -293,12 +293,12 @@
 <li>Mettre une petite ombre discrète et estompée aux éléments à l’avant-plan</li>
 </ol>
 <h2>Initialisation Figma et recueil des assets existants</h2>
-<img src="assets/figma-init.png" alt="Initialisation du Figma et test d'un gradient de couleurs">
+<img src="assets/figma-init.webp" alt="Initialisation du Figma et test d'un gradient de couleurs">
 <p style="text-align:center;font-style:italic;">Initialisation du Figma et test d'un gradient de couleurs.</p>
 <h2>Première version de la page, avec de nouvelles couleurs et des polices.</h2>
 <p>Le choix des polices s’est fait sur <a href="https://fontjoy.com/">Fontjoy</a>, un outil qui utilise du deep learning pour associer des polices de titre, sous titre et corps de texte. Un autre outil intéressant pour choisir des couleurs est <a href="https://coolors.co/">Coolors</a>.</p>
 <p>Voici le résultat de la mise en application des principes cités précédemment. Pour les polices, nous utilisons ici Poppins avec une graisse de 600 pour le titre et Inconsolata Regular pour le sous-titre. J’ai par ailleurs aussi décliné ce design dans sa première version en mode sombre, plus professionnel à mon gout. Nous y reviendrons car c’est le premier que nous allons implémenter dans le site web.</p>
-<img src="assets/light-design.png" alt="Première version du design">
+<img src="assets/light-design.webp" alt="Première version du design">
 <p style="text-align:center;font-style:italic;">Première version du design clair.</p>
 <h1>Initialisation du code du portfolio</h1>
 <p>J’utiliserai une stack technique assez simple pour initialiser ce projet, dans la mesure où j’aimerais apprendre le Sass en programmant ce portfolio. J’avais par le passé suivi <a href="https://openclassrooms.com/fr/courses/8069761-simplifiez-vous-le-css-avec-sass">un cours en ligne</a> sur ce sujet mais jamais mis en application ses grands principes (nesting, mixins, etc.).</p>
@@ -329,8 +329,8 @@
 <a href="https://help.figma.com/hc/en-us/articles/360056440594-Create-and-use-variants">https://help.figma.com/hc/en-us/articles/360056440594-Create-and-use-variants</a></p>
 </div></div>
 <p>Et voici comment j’ai créé un bouton dont on peut choisir le type et la couleur, comme on pourrait le faire en CSS avec des classes.</p>
-<img src="assets/variants.png" alt="Création d'un bouton avec des variants">
-<img src="assets/variant-select.png" alt="Sélection des variants">
+<img src="assets/variants.webp" alt="Création d'un bouton avec des variants">
+<img src="assets/variant-select.webp" alt="Sélection des variants">
 <p>Voici finalement le rendu de la première version du design, achevant la partie Design du Backlog.</p>
 <img src="assets/dark-design.svg" alt="Première version du design sombre">
 <p>J’en suis satisfait car la version sombre correspond bien au style professionnel que j’avais en tête avec un design moderne auquel nous pourrions adresser quelques critiques comme la lisibilité de la police de titre en rouge. Nous verrons lors de l’intégration de cette maquette si nous pouvons résoudre simplement ces problèmes. Quoiqu’il en soit, il est désormais facile de passer au code puisque tout est fixé : couleurs, gradients, polices, disposition et même contraintes des éléments les uns par rapport aux autres. Nous pouvons passer Figma en mode développeur pour obtenir toutes ces informations et les intégrer au code. En particulier, Figma possède une option permettant de lire le css d’un élément.</p>

@@ -193,7 +193,7 @@ module.exports <span class="token operator">=</span> mongoose.model<span class="
 <li><a href="http://localhost:3000/catalog/joueurs">http://localhost:3000/catalog/joueurs</a></li>
 <li><a href="http://localhost:3000/users">http://localhost:3000/users</a>
 Ici, la route &quot;catalogue&quot; n'a pas de sens en soi, j'ai simplement utilisé des fichiers similaires à mon cours afin de ne pas me perdre. Les routes pays et joueurs sont pour le moment vide car on n'y a pas encore implenté la base de données.
-<img src="../Images/routes.png" alt="routes"></li>
+<img src="../Images/routes.webp" alt="routes"></li>
 </ul>
 <h3>Etablissement des premières pages</h3>
 <p>On arrive donc à une partie plus intéressante, celle de la liaison entre ma première partie, le front-end, et mon site actuellement hébérgé sur un serveur.
@@ -262,8 +262,8 @@ block content
 
   <span class="token keyword">else</span>
     li There are no authors.</code></pre>
-<p>Ma page historique ressemble alors à cela : <img src="../Images/Historique.png" alt="routes">
-En y appliquant le design de mon site et quelques touches de CSS en plus, on obtient : <img src="../Images/Data.png" alt="routes"></p>
+<p>Ma page historique ressemble alors à cela : <img src="../Images/Historique.webp" alt="routes">
+En y appliquant le design de mon site et quelques touches de CSS en plus, on obtient : <img src="../Images/Data.webp" alt="routes"></p>
 <h3>Mise à jour de la base de données</h3>
 <p>Il me reste maintenant à actualiser l'historique à chaque coup jouer, c'est une manipulation qui me prend beaucoup de temps et que je n'ai toujours pas réussi à l'heure actuelle. En effet, le problème est que mon script utilise la fonction &quot;appenchild&quot; pour faire apparaitre la liste de coups et que mes variables &quot;pierre&quot;, &quot;feuille&quot; et &quot;ciseaux&quot; ne semblent pas être déclarées. Ainsi, lorsque je veux mettre ma base de données à jour avec une fonction dans le fichier &quot;coup.js&quot;, le terminal me renvoi que la variable &quot;pierre&quot; n'est pas déclarée :</p>
 <pre class="language-bash"><code class="language-bash">pierre.addEventListener<span class="token punctuation">(</span><span class="token string">'click'</span>, <span class="token function-name function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>

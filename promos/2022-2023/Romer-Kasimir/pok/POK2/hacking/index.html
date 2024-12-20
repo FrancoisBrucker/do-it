@@ -207,10 +207,10 @@ lovely</code></pre>
 <h3>Outils intégrés</h3>
 <p>Il existe plusieurs outils d'analyse légale de base qui sont couramment utilisés sur les systèmes Linux pour analyser et étudier les données. Certains de ces outils incluent :</p>
 <p><strong>file</strong> : Cet outil est utilisé pour identifier le type de fichier en fonction de son contenu. Il peut être utilisé pour déterminer si un fichier est une image, un document texte ou un exécutable, par exemple.</p>
-<pre class="language-bash"><code class="language-bash">$ <span class="token function">file</span> ~/Downloads/flag.png
-~/Downloads/flag.png: PNG image data, <span class="token number">800</span> x <span class="token number">600</span>, <span class="token number">8</span>-bit/color RGB, non-interlaced</code></pre>
+<pre class="language-bash"><code class="language-bash">$ <span class="token function">file</span> ~/Downloads/flag.webp
+~/Downloads/flag.webp: PNG image data, <span class="token number">800</span> x <span class="token number">600</span>, <span class="token number">8</span>-bit/color RGB, non-interlaced</code></pre>
 <p><strong>strings</strong> : Cet outil est utilisé pour extraire des chaînes de caractères imprimables d'un fichier. Il peut être utile pour identifier des mots-clés ou du texte dans un fichier qui peuvent être pertinents pour une enquête.</p>
-<pre class="language-bash"><code class="language-bash">$ strings ~/Downloads/flag.png
+<pre class="language-bash"><code class="language-bash">$ strings ~/Downloads/flag.webp
 libc.so.6
 puts
 /<span class="token operator">=</span>*"H
@@ -225,8 +225,8 @@ Cette commande va créer une copie exacte de l'ensemble du disque dur /dev/sda e
 example text found on line <span class="token number">10</span></code></pre>
 <p><strong>hexdump</strong> : Cet outil est utilisé pour afficher le contenu d'un fichier au format hexadécimal. Il peut être utile pour identifier des modèles hexadécimaux dans un fichier qui peuvent être pertinents pour une enquête.</p>
 <p><strong>md5sum</strong> : Cet outil est utilisé pour vitement calculer le hachage MD5 d'un fichier. Un hachage est une représentation unique du contenu d'un fichier, et peut être utilisé pour vérifier l'intégrité d'un fichier ou pour identifier si deux fichiers sont identiques.</p>
-<pre class="language-bash"><code class="language-bash">$ md5sum ~/Downloads/flag.png
-a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4  /home/user/Downloads/flag.png</code></pre>
+<pre class="language-bash"><code class="language-bash">$ md5sum ~/Downloads/flag.webp
+a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4  /home/user/Downloads/flag.webp</code></pre>
 <h3>Wireshark</h3>
 <p>Wireshark est un logiciel de capture de paquets et d'analyse réseau. Il permet aux utilisateurs de capturer les paquets réseau en utilisant les protocoles de la couche 2 et 3 du modèle OSI, et de les analyser pour identifier les erreurs, les anomalies et les attaques. Wireshark est capable de capturer des paquets en utilisant différents protocoles de réseau tels que TCP, UDP, HTTP, FTP, SSH, etc. Il est également capable d'analyser des fichiers de capture de paquets (.pcap) pour identifier les anomalies et les attaques. Les fichiers pcap sont souvent utilisés dans les CTF (Capture the Flag) pour tester les compétences en sécurité des participants et pour analyser les captures de paquets réseau.</p>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-orange-500 bg-orange-100">

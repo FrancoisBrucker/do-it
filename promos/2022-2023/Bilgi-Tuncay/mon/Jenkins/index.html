@@ -345,12 +345,12 @@ Par exemple, dans le container, je reçois une erreur de React que je n'avais pa
 <p>Un fois sur Jenkins :
 On passe d'abord la langue en anglais car la traduction est désastreuse, pour cela, il faut installer le plugin <strong>Local</strong>. Ensuite, on installe le plugin <strong>Blue Ocean</strong> puis <strong>Pipeline</strong> on restart jenkins. ( C'est long ). Finalement on bascule sur <strong>Blue Ocean</strong>.</p>
 <p>Voici le résultat :</p>
-<img src="../images/blueocean1.png" alt="Composer" style="height: 200px; margin: 0 auto; border: 0">
+<img src="../images/blueocean1.webp" alt="Composer" style="height: 200px; margin: 0 auto; border: 0">
 <p>La suite de la doc est <a href="https://www.jenkins.io/doc/book/blueocean/creating-pipelines/">ici</a>.</p>
 <h4>Classic UI Pipeline :</h4>
 <p>Après avoir installé <strong>Pipeline</strong>, on à accès à ce nouveau type de workflow. On suit la doc <a href="https://www.jenkins.io/doc/book/pipeline/getting-started/">ici</a>.</p>
 <p>On crée notre premiere pipeline en suivant la doc et on l'execute :</p>
-<img src="../images/jenkins1.png" alt="Composer" style="height: 200px; margin: 0 auto; border: 0">
+<img src="../images/jenkins1.webp" alt="Composer" style="height: 200px; margin: 0 auto; border: 0">
 <h4>Les Jenkinsfile :</h4>
 <p>Ici je crée une Pipeline qui se connecte à mon Github et qui execute un echo hello world.</p>
 <pre><code>Started by user unknown or anonymous
@@ -420,7 +420,7 @@ Pour cela on génère une paire de clé dans notre projet Artblog avec <code>ssh
 <p>Il est impératif d'inclure le dossier qui contient vos clés dans le fichier <code>.gitignore</code> sinon vos clés seront dévoilée publiquement et c'est un gros risque de sécurité.</p>
 </div></div>
 <p>Ensuite, on entre cette nouvelle clé dans le repository github en tant que clé de déploiement.</p>
-<img src="../images/github1.png" alt="Composer" style="height: 200px; margin: 0 auto; border: 0">
+<img src="../images/github1.webp" alt="Composer" style="height: 200px; margin: 0 auto; border: 0">
 <p>Coté Jenkins on met en place les <strong>credentials</strong>, c'est à dire notre clé privée SSH dans une pipeline qui va permettre de modifier notre Repository github.</p>
 <h4>Permettre à Jenkins de repérer des pull request :</h4>
 <p>Pour cela on installe des plugins notamment <strong>Github API</strong> qui permet de gérer des webhooks. Les webhooks sont des requêtes envoyées par Github à une adresse quand un certain évènement à lieu.</p>

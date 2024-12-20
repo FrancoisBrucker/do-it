@@ -152,7 +152,7 @@
 <p>En 1883, Auguste Kerckhoffs publie l'article &quot;La cryptographie militaire&quot; dans lequel il énonce plusieurs principes dont celui qui se fait appeler LE principe de Keerckhoffs :
 &quot;Il faut que le système de chiffrement n'exige pas le secret et qu'il puisse sans inconvénient tomber entre les mains de l'ennemi.&quot;</p>
 <h3>Cryptographie symétrique/à clé privée</h3>
-<p><img src="image.png" alt="symétrique">
+<p><img src="image.webp" alt="symétrique">
 Un système de chiffrement à clé privée est composé de trois algorithmes : le générateur de clé, l'algorithme qui chiffre le message à l'aide de la clé générée et l'algorithme qui le déchiffe à l'aide de cette même clé. Il y a deux grandes familles de procédés de chiffrement symétrique :</p>
 <h4>Le chiffrement à flot</h4>
 <p>Le chiffrement à flot, en anglais appelé <em>stream cipher</em>, consiste à combiner chaque symbole du message avec un symbole d'une séquence pseudo-aléatoire. Cette séquence désordonnée est reproduite à l'identique par l'émetteur et le destinataire. Le message en clair est une suite de symboles binaires transmis 1 à 1, chaque symbole est additionné modulo 2 avec un terme de la suite aléatoire de symboles binaires.</p>
@@ -167,7 +167,7 @@ Un système de chiffrement à clé privée est composé de trois algorithmes : l
 Le chiffrement par blocs comprend une fonction de transformation simple opérée sur un bloc et un générateur de sous-clés à partir de la clé, ces sous-clés servent de paramètres pour la transformation.</p>
 <p>L'algorithme de chiffrement DES (Data Encryption Standard) est un algorithme basé sur du chiffrement par blocs. Il a été remplacé par du triple DES à cause de la taille initiale de la clé devenue insuffisante (56 symboles binaires =&gt; 112 symboles binaires avec triple DES). L'algorithme AES (Advanced Encryption Standard) est devenu le standard avec une clé à 128 symboles binaires.</p>
 <h3>Cryptographie assymétrique/à clé publique</h3>
-<p><img src="image-1.png" alt="assymétrique">
+<p><img src="image-1.webp" alt="assymétrique">
 L'émetteur peut calculer le cryptogramme d'un message donné mais pour inverser le calcul il faut disposer de la clé privée. La cryptographie à clé publique est utilisée pour résoudre les problèmes d'<a href="https://francoisbrucker.github.io/cours_informatique/cours/syst%C3%A8me-et-r%C3%A9seau/cryptographie/authentification/">authentification</a>.</p>
 <h4>Factorisation grand entier</h4>
 <p>Le chiffrement de Rabin utilise la factorisation d'un grand entier. La clé privée est un couple d'entiers premiers p et q tandis que la clé publique est n le produit de p et q. p et q doivent être choisis suffisamment grands. Le message est élevé au carré modulo n et le déchiffrement est une racine carrée du cryptogramme modulo p et q.</p>
@@ -177,7 +177,7 @@ La clé publique est donc le résultat d'une fonction (à sens unique) appliqué
 <p>Une courbe elliptique est une courbe $$<code>y^2=x^3+ax+b</code>$$. a et b sont ici des entiers modulo un grand nombre entier. Ce type de courbe est utilisée en cryptographie grâce à l'existence d'une façon de composer 2 points pour en obtenir un troisième : trois points alignés sur la courbe ont une somme nulle. Les courhes elliptiques remplacent les nombres entiers dans de multiples procédés cryptographiques !</p>
 <h3>Hachage</h3>
 <p>La fonction de hachage transforme un fichier en un nombre de taille fixe. Elle permet de signer un document. Le hachage peut aussi servir à fabriquer des clés cryptographiques à partir d'une <em>semence</em>, c'est-à-dire une clé de base. Le hash produit une &quot;empreinte digitale&quot; du document, qui se veut unique : pas de collisions ! Les fonctions de hashage MD5 et SHA-1 sont standardisées, pourtant en 2004 une chercheuse nommée Xiaoyun Wang a mis en lumière une collision sur MD5, ce qui a rendu la fonction de hachage obsolète.</p>
-<p><img src="image-2.png" alt="cryptographie">
+<p><img src="image-2.webp" alt="cryptographie">
 Infographie de la <a href="https://www.cnil.fr/fr/cybersecurite/comprendre-les-grands-principes-de-la-cryptologie-et-du-chiffrement">CNIL</a> sur la cryptographie</p>
 <h2>Cryptanalyse</h2>
 <p>La cryptanalyse est l'attaque d'un tiers d'un procédé de cryptographie dans le but de retrouver le sens caché d'un message ou de trouver des failles dans le procédé et de les exploiter.</p>
@@ -199,7 +199,7 @@ Infographie de la <a href="https://www.cnil.fr/fr/cybersecurite/comprendre-les-g
 <p>Comment s'assurer de la véracité de la clé publique reçu par mon correspondant ? Grâce à un tiers de confiance, ici nommé l'infrastructure de gestion des clés publiques (<em>Public Key Infrastructure (PKI) en anglais</em>) qui est une autorité de certification. Lorsqu'on effectue un paiement en ligne avec notre carte bancaire, notre banque fait guise d'autorité de certification pour vérifier la signature présente dans le certicat de la clé publique de la carte. VeriSign ou Entrust sont des entreprises reconnues comme autorités de certification.</p>
 <h3>Carte bancaire</h3>
 <p>La carte bancaire envoie ses données signées par la banque émettrice de la carte au terminal bancaire. La signature de la carte est chiffrée à l'aide de l'algo RSA. Le terminal bancaire contient la clé publique de l'autorité de certification (la banque) et va vérifier la validité du certificat de la clé publique de la carte et vérifie la signature des données à l'aide de la clé publique se trouvant dans le certificat de la carte.
-<img src="image-3.png" alt="carte bancaire">
+<img src="image-3.webp" alt="carte bancaire">
 ©P. Guillot</p>
 <h2>Ressources</h2>
 <ul>

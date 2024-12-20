@@ -303,7 +303,7 @@ aux ressources d'un utilisateur sans divulguer les identifiants de celui-ci.
 OAuth est souvent utilisé pour permettre des connexions via des services comme Google, Facebook, etc.,
 tout en renforçant la sécurité.</p>
 <p>Voici une image pour illustrer rapidement le rôle du serveur d'authentification (Dropbox dans le cas ci-dessous)
-<img src="basic-auth-flow.png" alt="Illustration de l'authentification"></p>
+<img src="basic-auth-flow.webp" alt="Illustration de l'authentification"></p>
 <p>L'objectif premier du protocole OAuth est simple : transmettre un token (~équivalent à une clé numérique)
 à une application tierce pour que celle-ci puisse faire des actions en tant que l'utilisateur qui
 a consenti à lui donner certains droits. Par exemple, sur l'image d'au-dessus, l'application à le
@@ -330,7 +330,7 @@ comme les applications s'exécutant dans un navigateur ou sur un appareil mobile
 <h4>Protocole avec code autorisation et PKCE</h4>
 <p>Ce <a href="https://www.oauth.com/playground/authorization-code.html">playground</a> est une petite merveille pour mieux comprendre
 le protocole utilisé, je conseille de faire une tour dessus avant la lecture des paragraphes suivants.</p>
-<p><img src="authorization-code-flow.png" alt="Authorization Code Flow">
+<p><img src="authorization-code-flow.webp" alt="Authorization Code Flow">
 Ici, okta est le serveur d'authentification et le 'resource server' peut être utilisé pour récupérer des données à partir des tokens fournis par okta.
 <em>Tout à l'heure Dropbox était responsable à la fois de l'authentification et de ressources, ce n'est pas toujours le cas.</em></p>
 <p>Le flow du code d'autorisation comprend plusieurs étapes clés :</p>
@@ -559,7 +559,7 @@ chemin. J'avais un peu perdu la motivation et trouvant le process un peu fastidi
 Ce qu'on met en place, c'est un proxy, un programme qui va servir d'intermédiaire, on bloque notre site de l'extérieur
 et on oblige toutes les requêtes à passer par le proxy lui en HTTPS (on verra comment plus tard) qui va relayer les
 requêtes à notre site en HTTP tout simple puis transmettre les réponses du site au client en HTTPS.</p>
-<p><img src="proxy.png" alt="Un serveur proxy"></p>
+<p><img src="proxy.webp" alt="Un serveur proxy"></p>
 <p>J'ai décidé d'utiliser <a href="https://caddyserver.com/">Caddy</a> un proxy ~relativement simple à mettre en place, disponible
 en image docker et surtout qui gère le SSL (protocole qui garantie la sécurité d'HTTPS) tout seul à ma place.
 Une fois la configuration faite et Caddy lancé, magie !, mon site est disponible en HTTPS <em>même si mon navigateur reste suspicieux</em>.</p>
@@ -617,7 +617,7 @@ un compose déjà commencé.</p>
 <h3>CSS</h3>
 <p>Pour le CSS, j'ai décidé de m'entraîner un peu en touchant à pas mal des concepts que j'ai vu dans la vidéo dont je
 parle dans la rétro :</p>
-<p><img src="authorize.png" alt="Page d'autorisation"></p>
+<p><img src="authorize.webp" alt="Page d'autorisation"></p>
 <ul>
 <li><code>position: absolute</code> - Logo</li>
 <li><code>display: flex</code> - Position centrée de la carte blanche</li>

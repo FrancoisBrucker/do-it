@@ -200,9 +200,9 @@
 <h2>Implémentation d'un jeu de Blackjack avec Qt sur Python</h2>
 <p>La première étape de ce POK est de recréer ce jeu sur Python grâce au module Qt. Toutes les méthodes et classes utilisées dans le code sont expliquées dans mon <a href="../../mon/temps-1.1">MON 1.1</a>.</p>
 <p>J'ai utilisé l'outil Qt Designer pour designer l'aspect de l'interface utilisateur. J'ai opté pour un simple fond vert, pour représenter le tapis de jeu, ainsi que 7 images de dos de carte pour le joueur et le dealer. Au-dessus de ces cartes, on voit le compte des points et en-dessous, il y a les boutons correspondant aux actions que le joueur peut effectuer à chaque tour. Il faut bien s'assurer de renommer chaque objet avec un nom logique, pour pouvoir s'y retrouver dans le code. Voici à quoi ressemble la fenêtre sur Qt Designer:</p>
-<p><img src="Image1.png" alt="Image main_window"></p>
+<p><img src="Image1.webp" alt="Image main_window"></p>
 <p>Cette fenêtre est enregistrée sous le nom de <em>main_window</em>. On crée une autre fenêtre que l'on nomme <em>split_window</em>. En effet, il faut une autre disposition des éléments dans le cas où le joueur décide de séparer ses cartes. Voici à quoi ressemble cette fenêtre sur Qt Designer:</p>
-<p><img src="Image2.png" alt="Image split_window"></p>
+<p><img src="Image2.webp" alt="Image split_window"></p>
 <p>Maintenant qu'on a les deux fichiers .ui de chaque fenêtre, on commence à implémenter le jeu. Pour organiser correctement le code et le rendre plus lisible, on crée trois fichiers .py:</p>
 <ul>
 <li>Un fichier <em>blackjack_methods.py</em> qui va contenir la classe <strong>Blackjack_methods</strong> contenant les méthodes relatives à la manipulation du deck de cartes et des mains (création du deck, calcul du compte des mains),</li>
@@ -436,20 +436,20 @@
         self<span class="token punctuation">.</span>DealerCount<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string">"1/11"</span><span class="token punctuation">)</span>
     <span class="token keyword">else</span><span class="token punctuation">:</span>
         self<span class="token punctuation">.</span>DealerCount<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>self<span class="token punctuation">.</span>sum_hand<span class="token punctuation">(</span>self<span class="token punctuation">.</span>dealer_hand<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
-    pixmap <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'PNG-cards/</span><span class="token interpolation"><span class="token punctuation">{</span>card<span class="token punctuation">.</span>name<span class="token punctuation">}</span></span><span class="token string">.png'</span></span><span class="token punctuation">)</span>
+    pixmap <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'PNG-cards/</span><span class="token interpolation"><span class="token punctuation">{</span>card<span class="token punctuation">.</span>name<span class="token punctuation">}</span></span><span class="token string">.webp'</span></span><span class="token punctuation">)</span>
     self<span class="token punctuation">.</span>label_dealercard1<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
     self<span class="token punctuation">.</span>player_spot <span class="token operator">=</span> <span class="token number">2</span>
     self<span class="token punctuation">.</span>player_spot_split_1 <span class="token operator">=</span> <span class="token number">1</span>
     self<span class="token punctuation">.</span>player_spot_split_2 <span class="token operator">=</span> <span class="token number">1</span>
     card1 <span class="token operator">=</span> self<span class="token punctuation">.</span>draw<span class="token punctuation">(</span><span class="token punctuation">)</span>
     card2 <span class="token operator">=</span> self<span class="token punctuation">.</span>draw<span class="token punctuation">(</span><span class="token punctuation">)</span>
-    pixmap1 <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'PNG-cards/</span><span class="token interpolation"><span class="token punctuation">{</span>card1<span class="token punctuation">.</span>name<span class="token punctuation">}</span></span><span class="token string">.png'</span></span><span class="token punctuation">)</span>
-    pixmap2 <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'PNG-cards/</span><span class="token interpolation"><span class="token punctuation">{</span>card2<span class="token punctuation">.</span>name<span class="token punctuation">}</span></span><span class="token string">.png'</span></span><span class="token punctuation">)</span>
+    pixmap1 <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'PNG-cards/</span><span class="token interpolation"><span class="token punctuation">{</span>card1<span class="token punctuation">.</span>name<span class="token punctuation">}</span></span><span class="token string">.webp'</span></span><span class="token punctuation">)</span>
+    pixmap2 <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'PNG-cards/</span><span class="token interpolation"><span class="token punctuation">{</span>card2<span class="token punctuation">.</span>name<span class="token punctuation">}</span></span><span class="token string">.webp'</span></span><span class="token punctuation">)</span>
     self<span class="token punctuation">.</span>player_hand <span class="token operator">=</span> <span class="token punctuation">[</span>card1<span class="token punctuation">,</span> card2<span class="token punctuation">]</span>
     self<span class="token punctuation">.</span>label_playercard1<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap1<span class="token punctuation">)</span>
     self<span class="token punctuation">.</span>label_playercard2<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap2<span class="token punctuation">)</span>
     self<span class="token punctuation">.</span>display_player_count<span class="token punctuation">(</span><span class="token punctuation">)</span>
-    pixmap <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'PNG-cards/dos.png'</span></span><span class="token punctuation">)</span>
+    pixmap <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'PNG-cards/dos.webp'</span></span><span class="token punctuation">)</span>
     self<span class="token punctuation">.</span>label_playercard3<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
     self<span class="token punctuation">.</span>label_playercard4<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
     self<span class="token punctuation">.</span>label_playercard5<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
@@ -525,7 +525,7 @@
     self<span class="token punctuation">.</span>splitButton<span class="token punctuation">.</span>setEnabled<span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">)</span>
     card <span class="token operator">=</span> self<span class="token punctuation">.</span>draw<span class="token punctuation">(</span><span class="token punctuation">)</span>
     self<span class="token punctuation">.</span>player_hand<span class="token punctuation">.</span>append<span class="token punctuation">(</span>card<span class="token punctuation">)</span>
-    pixmap <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'PNG-cards/</span><span class="token interpolation"><span class="token punctuation">{</span>card<span class="token punctuation">.</span>name<span class="token punctuation">}</span></span><span class="token string">.png'</span></span><span class="token punctuation">)</span>
+    pixmap <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'PNG-cards/</span><span class="token interpolation"><span class="token punctuation">{</span>card<span class="token punctuation">.</span>name<span class="token punctuation">}</span></span><span class="token string">.webp'</span></span><span class="token punctuation">)</span>
     <span class="token keyword">if</span> self<span class="token punctuation">.</span>player_spot <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
         self<span class="token punctuation">.</span>label_playercard1<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
         self<span class="token punctuation">.</span>player_spot <span class="token operator">+=</span> <span class="token number">1</span>
@@ -594,7 +594,7 @@
     <span class="token keyword">while</span> self<span class="token punctuation">.</span>sum_hand<span class="token punctuation">(</span>self<span class="token punctuation">.</span>dealer_hand<span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">17</span><span class="token punctuation">:</span>
         card <span class="token operator">=</span> self<span class="token punctuation">.</span>draw<span class="token punctuation">(</span><span class="token punctuation">)</span>
         self<span class="token punctuation">.</span>dealer_hand<span class="token punctuation">.</span>append<span class="token punctuation">(</span>card<span class="token punctuation">)</span>
-        pixmap <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'PNG-cards/</span><span class="token interpolation"><span class="token punctuation">{</span>card<span class="token punctuation">.</span>name<span class="token punctuation">}</span></span><span class="token string">.png'</span></span><span class="token punctuation">)</span>
+        pixmap <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'PNG-cards/</span><span class="token interpolation"><span class="token punctuation">{</span>card<span class="token punctuation">.</span>name<span class="token punctuation">}</span></span><span class="token string">.webp'</span></span><span class="token punctuation">)</span>
         <span class="token keyword">if</span> self<span class="token punctuation">.</span>dealer_spot <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
             self<span class="token punctuation">.</span>label_dealercard1<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
             self<span class="token punctuation">.</span>dealer_spot <span class="token operator">+=</span> <span class="token number">1</span>
@@ -681,7 +681,7 @@
   <span class="token keyword">if</span> self<span class="token punctuation">.</span>IsFirst<span class="token punctuation">:</span>
       card <span class="token operator">=</span> self<span class="token punctuation">.</span>draw<span class="token punctuation">(</span><span class="token punctuation">)</span>
       self<span class="token punctuation">.</span>player_hand_split_1<span class="token punctuation">.</span>append<span class="token punctuation">(</span>card<span class="token punctuation">)</span>
-      pixmap <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'PNG-cards/</span><span class="token interpolation"><span class="token punctuation">{</span>card<span class="token punctuation">.</span>name<span class="token punctuation">}</span></span><span class="token string">.png'</span></span><span class="token punctuation">)</span>
+      pixmap <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'PNG-cards/</span><span class="token interpolation"><span class="token punctuation">{</span>card<span class="token punctuation">.</span>name<span class="token punctuation">}</span></span><span class="token string">.webp'</span></span><span class="token punctuation">)</span>
       <span class="token keyword">if</span> self<span class="token punctuation">.</span>player_spot_split_1 <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
           self<span class="token punctuation">.</span>label_split_playercard1_1<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
           self<span class="token punctuation">.</span>player_spot_split_1 <span class="token operator">+=</span> <span class="token number">1</span>
@@ -725,7 +725,7 @@
   <span class="token keyword">else</span><span class="token punctuation">:</span>
       card <span class="token operator">=</span> self<span class="token punctuation">.</span>draw<span class="token punctuation">(</span><span class="token punctuation">)</span>
       self<span class="token punctuation">.</span>player_hand_split_2<span class="token punctuation">.</span>append<span class="token punctuation">(</span>card<span class="token punctuation">)</span>
-      pixmap <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'PNG-cards/</span><span class="token interpolation"><span class="token punctuation">{</span>card<span class="token punctuation">.</span>name<span class="token punctuation">}</span></span><span class="token string">.png'</span></span><span class="token punctuation">)</span>
+      pixmap <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'PNG-cards/</span><span class="token interpolation"><span class="token punctuation">{</span>card<span class="token punctuation">.</span>name<span class="token punctuation">}</span></span><span class="token string">.webp'</span></span><span class="token punctuation">)</span>
       <span class="token keyword">if</span> self<span class="token punctuation">.</span>player_spot_split_2 <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
           self<span class="token punctuation">.</span>label_split_playercard2_1<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
           self<span class="token punctuation">.</span>player_spot_split_2 <span class="token operator">+=</span> <span class="token number">1</span>
@@ -779,7 +779,7 @@
   <span class="token keyword">while</span> self<span class="token punctuation">.</span>sum_hand<span class="token punctuation">(</span>self<span class="token punctuation">.</span>dealer_hand<span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">17</span><span class="token punctuation">:</span>
       card <span class="token operator">=</span> self<span class="token punctuation">.</span>draw<span class="token punctuation">(</span><span class="token punctuation">)</span>
       self<span class="token punctuation">.</span>dealer_hand<span class="token punctuation">.</span>append<span class="token punctuation">(</span>card<span class="token punctuation">)</span>
-      pixmap <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'PNG-cards/</span><span class="token interpolation"><span class="token punctuation">{</span>card<span class="token punctuation">.</span>name<span class="token punctuation">}</span></span><span class="token string">.png'</span></span><span class="token punctuation">)</span>
+      pixmap <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'PNG-cards/</span><span class="token interpolation"><span class="token punctuation">{</span>card<span class="token punctuation">.</span>name<span class="token punctuation">}</span></span><span class="token string">.webp'</span></span><span class="token punctuation">)</span>
       <span class="token keyword">if</span> self<span class="token punctuation">.</span>dealer_spot_split <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
           self<span class="token punctuation">.</span>label_split_dealercard1<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
           self<span class="token punctuation">.</span>dealer_spot_split <span class="token operator">+=</span> <span class="token number">1</span>
@@ -817,7 +817,7 @@
 <span class="token keyword">def</span> <span class="token function">restart_split</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
   self<span class="token punctuation">.</span>main_window<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
   self<span class="token punctuation">.</span>split_window<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
-  pixmap <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'PNG-cards/dos.png'</span></span><span class="token punctuation">)</span>
+  pixmap <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'PNG-cards/dos.webp'</span></span><span class="token punctuation">)</span>
   self<span class="token punctuation">.</span>label_split_playercard1_2<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
   self<span class="token punctuation">.</span>label_split_playercard1_3<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
   self<span class="token punctuation">.</span>label_split_playercard1_4<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
@@ -848,11 +848,11 @@
 <pre class="language-python"><code class="language-python">app <span class="token operator">=</span> QApplication<span class="token punctuation">(</span>sys<span class="token punctuation">.</span>argv<span class="token punctuation">)</span>
 window <span class="token operator">=</span> Blackjack<span class="token punctuation">(</span><span class="token punctuation">)</span>
 app<span class="token punctuation">.</span><span class="token keyword">exec</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
-<p><img src="Image3.png" alt="Image démo1"></p>
+<p><img src="Image3.webp" alt="Image démo1"></p>
 <p>On voit bien l'interface que l'on a créé plus tôt sur Qt Designer. Voici ce à quoi ressemble la fenêtre à la fin d'un tour:</p>
-<p><img src="Image4.png" alt="Image demo2"></p>
+<p><img src="Image4.webp" alt="Image demo2"></p>
 <p>De plus, voici à quoi ressemble l'interface après la fin d'un tour où le joueur a split:</p>
-<p><img src="Image5.png" alt="Image demo3"></p>
+<p><img src="Image5.webp" alt="Image demo3"></p>
 <h2>Bilan du premier sprint et prévision du deuxième sprint</h2>
 <p>Tout les objectifs du premier sprint ont été réalisés, sauf la réalisation de l'interface de mise. En effet, l'implémentation des autres fonctionnalités m'ont pris plus de temps que prévu, de nombreux problèmes de programmation et de débogage ont été très chronophage. Cependant, l'interface de mise devrait être plus rapide à coder.</p>
 <p>Ainsi, l'objectif pour le deuxième sprint est de coder les simulations pour obtenir des statistiques autour du jeu de Blackjack (et de finir l'interface de mise). Voici les différents objectifs du deuxième sprint:</p>
@@ -863,7 +863,7 @@ app<span class="token punctuation">.</span><span class="token keyword">exec</spa
 </ul>
 <h2>Implémentation de l'interface de mise</h2>
 <p>Pour finaliser l'implémentation du jeu sur Python, il ne manque plus qu'à réaliser l'interface de mise, où le joueur pourra saisir sa mise. On utilise encore une fois l'outil Qt Designer pour faire l'aspect de l'interface:</p>
-<p><img src="Image6.png" alt="Qt Designer bet_window"></p>
+<p><img src="Image6.webp" alt="Qt Designer bet_window"></p>
 <p>Il faut ensuite assigner chaque objet ainsi créé à des attributs de la classe <strong>Blackjack</strong> dans l'initialisation, et assigner les méthodes correspondantes à chaque bouton.</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
@@ -1219,7 +1219,7 @@ Notons que ce bouton est désactivé lorsque la mise est égale à 0.</p>
 </div>
 <h3>Démonstration de l'interface de mise</h3>
 <p>Lorsque l'on exécute le code avec ces nouvelles lignes de code, on obtient bien l'interface voulue. On peut bouger le curseur à notre guise, et on peut également rentrer la mise dans le champ. Dans les deux cas, la valeur change dans le champ ou le curseur bouge en adéquation avec l&quot;action réalisée.</p>
-<p><img src="Image7.png" alt="Image Démo bet_window"></p>
+<p><img src="Image7.webp" alt="Image Démo bet_window"></p>
 <div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -1230,7 +1230,7 @@ Notons que ce bouton est désactivé lorsque la mise est égale à 0.</p>
 <h2>Implémentation des simulations autour du jeu de Blackjack</h2>
 <p>Maintenant que l'implémentation de l'interface graphique du jeu de Blackjack est fonctionnelle, il faut implémenter le code nécessaire aux simulations pour obtenir des statistiques autour du jeu de Blackjack.
 Pour rappel, d'après les règles du jeu, le dealer pioche tant qu'il n'a pas 16 points mais s'arrête quand il a 17 points ou plus. Sur cette base, il est connu qu'il existe une stratégie nommée &quot;stratégie de base&quot;. Cette stratégie se présente sous forme de tableau, qui indique quelle action doit réaliser le joueur en fonction de sa main et de la première carte du dealer.</p>
-<p><img src="Image8.png" alt="Stratégie de base">
+<p><img src="Image8.webp" alt="Stratégie de base">
 <em>Source: <a href="https://www.guide-blackjack.com/strategie-base-las-vegas.html">Guide-Blackjack.com</a></em></p>
 <div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -1865,10 +1865,10 @@ Pour rappel, d'après les règles du jeu, le dealer pioche tant qu'il n'a pas 16
 </div></div>
 <h3>Résultats et analyse de la simulation</h3>
 <p>Voici les (jolis) graphiques que produit cette simulation. Cette simulation a été réalisée sur 10 millions de parties, afin d'avoir un echantillon suffisamment grand pour tendre vers les probabilités réélles. Les valeurs infiquées dans les graphiques en couleur indiquent le taux de réussite du joueur ayant la main indiquée en abscisses face à la première carte du dealer indiquée en ordonnée. Pour le premier graphique en couleur, les valeurs indiquées en abscisses sont les sommes des deux premières cartes du joueur. Par exemple, l'abscisse 10 se réfère à une des mains suivantes: 2-8, 3-7, 4-6 (les mains 5-5 et A-9 ne sont pas dans cette liste car elles sont prises en compte dans les tables des doubles et des As).</p>
-<p><img src="Image9.png" alt="Figure1"></p>
-<p><img src="Image10.png" alt="Figure2"></p>
-<p><img src="Image11.png" alt="Figure3"></p>
-<p><img src="Image12.png" alt="Figure4"></p>
+<p><img src="Image9.webp" alt="Figure1"></p>
+<p><img src="Image10.webp" alt="Figure2"></p>
+<p><img src="Image11.webp" alt="Figure3"></p>
+<p><img src="Image12.webp" alt="Figure4"></p>
 <div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -1920,7 +1920,7 @@ Pour rappel, d'après les règles du jeu, le dealer pioche tant qu'il n'a pas 16
 </div>
 <p>Il faut maintenant déterminer à partir de quelle valeur du true count le joueur commencer à changer sa mise, et à quel point il change sa mise. Plusieurs valeurs sont possibles, j'ai choisi pour le test de mettre la valeur seuil à 3 et le facteur multiplicatif de la mise égal au true count plus quatre. Ce facteur est proportionnel au compte; en effet plus le compte est elevé, plus il y a de chances de gagner, et donc plus il faut miser.
 Ainsi, avant de jouer, le programme compare le true count au seuil fixé et si ce seuil est dépassé, la mise est plus grande. L'éxecution de cet algorithme sur 10 millions de parties   avec le comptage des cartes activé donne ce graphique en barre:</p>
-<p><img src="Image13.png" alt="Image count"></p>
+<p><img src="Image13.webp" alt="Image count"></p>
 <p>On remarque que le taux de réussite moyen et les taux de réussite face à chaque main du dealer ne changent pas comparé au graphique obtenu quand le joueur ne compte pas. Ceci est logique, puisque l'on change seulement la mise. Cependant, on remarque que l'avantage au casino n'est plus que de <strong>0,75%!</strong> C'est plus de deux fois moins que précédemment. Le comptage des cartes est donc bien efficace, mais ne permet cependant pas d'avoir une espérance positive: le casino sera donc toujours gagnant!</p>
 <div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">

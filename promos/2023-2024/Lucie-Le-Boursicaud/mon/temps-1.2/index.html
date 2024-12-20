@@ -201,7 +201,7 @@ Chaque colonne correspond à une information. On indique en haut de chaque colon
 <p><strong>Designer les colonnes</strong>
 La première colonne sera toujours l'ID de l'enregistrement. Les en-tête de colonnes sont uniques, courts et clairs. On peux rajouter si on le souhaite des en-tête supplémentaire pour définir des parties afin d'améliorer la lisibilité de la BDD.</p>
 <p>Exemple : mini-BDD de peintures</p>
-<div style="display:flex"><img src="bdd.png"></div>
+<div style="display:flex"><img src="bdd.webp"></div>
 Grace à la fonctionnalité de filtre il sera plus simple de naviguer dans des BDD plus imposantes.
 <h4>Principes de bases</h4>
 <ul>
@@ -215,7 +215,7 @@ Nommer une plage de cellules permet de <strong>gagner du temps sur l'entrée et 
 Pour ce faire il suffit de sélectionner la plage des cellules à nommer et d'entrer le nom voulu dans la plage associée.</p>
 </li>
 </ul>
-<div stype="display:flex"><img src="plage.png"></div>
+<div stype="display:flex"><img src="plage.webp"></div>
 <h2>3. Nettoyage de données sur Excel</h2>
 <p>Maintenant que l'on sait créer une BDD sous Excel nous allons voir comment nettoyer des données c'est à dire à <strong>analyser la cohérence des données</strong> et à effectuer une <strong>triangulation</strong> avec d'autres informations.
 Le nettoyage de données permet d'avoir une base de données à jour sans risquer des erreurs d'analyse.</p>
@@ -240,7 +240,7 @@ Pour cela on peut utiliser l'outil de <strong>Mise en forme conditionelle</stron
 On trouve alors facilement les valeur extrême en utilisant <em>Supérieur à ...</em> ou <em>Inférieur à...</em> et les doublons à l'aide de <em>Valeurs en double...</em>.</li>
 </ul>
 <p>Exemples : Nettoyage de la mini-BDD peintures avec des erreurs et des doublons intégrés exprès</p>
-<div stype="display:flex"><img src="nettoyage.png"></div>
+<div stype="display:flex"><img src="nettoyage.webp"></div>
 Sur cet exemple, pour toute la colonne durée j'ai demandé à ce que les cellules inférieures à 6à soit mis en rouge et pour toute la colonne représentation que les cellule en doublons soit mise en rouge.
 <p>Ces méthodes mettent en exerbe des comportements étrange sur les données néanmoins cela ne veut pas focément signifier qu'il y a une erreure. Il est tout à fait possible que deux peinture représente la même chose ou qu'une peinture soit bien plus longue à réaliser que la moyenne, il est important de <strong>garder un esprit critique</strong> lors du nettoyage des données.</p>
 <p>Pour en savoir plus sur les outils disponibles pour le nettoyage des données : <a href="https://cartong.pages.gitlab.cartong.org/learning-corner/fr/3_nettoyage_page">Nettoyer ses données</a>.</p>
@@ -261,7 +261,7 @@ Beaucoup de calculs sont possibles pour les variables de type nombre (<em>effect
 L'objectif est de pouvoir compter l'effectif d'une donnée au sein d'une série statistique. La fonction <em><a href="http://NB.SI">NB.SI</a></em> permet de compter le nombre de cellules qui répondent à un critère donné.</li>
 </ul>
 <p>Exemple : <em>Nombre de peintures qui ont nécessités plus de 2H de travail</em></p>
-<div stype="display:flex"><img src="denomb.png"></div>
+<div stype="display:flex"><img src="denomb.webp"></div>
 <p>Avec cette fonction les données manquantes sont automatiquement exclues de l'anlyse. Pour savoir combien de données manquent on peut utiliser la fonction <em>NB</em> qui permet de compter le nombre de cellules remplies. Il suffira donc de soustraire ce nombre au nombre total d'enregistrement dans la base de données.</p>
 <ul>
 <li>
@@ -294,13 +294,13 @@ Afin d'utiliser une représentation adéquate il faut se poser deux questions:</
 </ul>
 <p>Dans chacune en fonction du type et du nombre de variables que l'on souhaite réalisée différents sous-modèle sont plus ou moins appropriés.</p>
 <p>Exemples : <em>Il y a-t-il une corrélation entre le temps passé sur une peinture et son appréciation ?</em></p>
-<div stype="display:flex"><img src="correlation.png"></div>
+<div stype="display:flex"><img src="correlation.webp"></div>
 <p>Pour déterminer si il y'a une corrélation entre les deux données on peut tracer le nuage de points d'une variable par rapport à l'autre. On se rend compte qu'il n'y a pas nécessairement de tendance mise en lumière mais comme il s'agit d'un tout petit échantillon de données c'est plutôt normal surtout que les données ont été inventé. Sur de vraie jeux de données il est très utile d'analyse ce genre de comportement.</p>
 <h2>6. Mise en application par l'analyse complète d'un jeu de données</h2>
 <p>Afin d'appliquer les différentes notions vu précédemment j'ai décidé de télécharger une base de données à partir du site <a href="https://data.ampmetropole.fr">M DATA</a>. Je me suis penchée sur une BDD sur la fréquentation des musées : <a href="https://data.ampmetropole.fr/explore/dataset/mod-frequentation-des-musees-metropolitains/export/">Fréquentation des musées</a> que j'ai téléchargé en format Excel.</p>
 <h4>Etape 1 : Mise en forme des données</h4>
 <p>Lorsqu'on ouvre le fichier voici ce que l'on obtient :</p>
-<div stype="display:flex"><img src="bddmusee.png"></div>
+<div stype="display:flex"><img src="bddmusee.webp"></div>
 <p><a href="fr%C3%A9quentationsmus%C3%A9es.zip">Télécharger le fichier Excel</a></p>
 <h4>Etape 2 : Analyse des données</h4>
 <p>J'ai travaillé sur plusieurs thématiques pour répondre aux questions suivantes :</p>
@@ -351,29 +351,29 @@ J'utilise alors la formule <strong>=EQUIV</strong></li>
 J'utilise alors la formule <strong>=INDEX</strong></li>
 </ul>
 <p>On obtient alors ce type de données pour les premières réponses :</p>
-<div stype="display:flex"><img src="analyse.png"></div>
+<div stype="display:flex"><img src="analyse.webp"></div>
 <p>Pour les quatres questions j'ai utilisé des feuilles de calculs à part car il s'agit de renvoyer plusieurs lignes et non pas une seule.</p>
 <h5>Q5 : Quel est le pourcentage de la fréquentation totale attribuable aux visiteurs payants pour chaque musée ?</h5>
-<div stype="display:flex"><img src="qpourcentage.png"></div>
-<div stype="display:flex"><img src="qpourcentagevisu.png"></div>
+<div stype="display:flex"><img src="qpourcentage.webp"></div>
+<div stype="display:flex"><img src="qpourcentagevisu.webp"></div>
 <h5>Q6 : Quels musées ont eu une fréquentation gratuite supérieure à leur fréquentation payante en 2006 ?</h5>
-<div stype="display:flex"><img src="qgplusquep.png"></div>
+<div stype="display:flex"><img src="qgplusquep.webp"></div>
 <p>On peut visualiser l'évolution de cette variable au fil des années :</p>
-<div stype="display:flex"><img src="qgplusquepvisu.png"></div>
+<div stype="display:flex"><img src="qgplusquepvisu.webp"></div>
 <h5>Q7 : Quels musées ont enregistré une baisse de la fréquentation totale de l'année 2015 à 2016 ?</h5>
-<div stype="display:flex"><img src="qbaisse.png"></div>
+<div stype="display:flex"><img src="qbaisse.webp"></div>
 <p>Je me suis demandé si on pouvait trouver les musées gratuits de la région en filtrant la colonne <em>PAYANT</em> sur la valeur 0. Et voici ce que j'ai obtenu :</p>
-<div stype="display:flex"><img src="museegratuit.png"></div>
+<div stype="display:flex"><img src="museegratuit.webp"></div>
 <h4>Etape 3 : Visualisation des données</h4>
 <p>Maintenant j'ai envie de rendre mes données plus interprétables pour des personnes n'ayant pas travaillé sur la BDD.</p>
-<div><div stype="display:flex"><img src="fglobale.png"></div><div stype="display:flex"><img src="fannées.png"></div></div>
-<div stype="display:flex"><img src="fparannées.png"></div>
+<div><div stype="display:flex"><img src="fglobale.webp"></div><div stype="display:flex"><img src="fannées.webp"></div></div>
+<div stype="display:flex"><img src="fparannées.webp"></div>
 <p>Grâce à ces visualisations on peut remarquer qu'il y a une une augmentation significative de la fréquentation des musées entre l'année 2012 et 2013 : elle a quasiment triplé ! J'ai voulu me renseigner pour savoir à quoi cela était dû et j'ai trouveé cet article du Figaro <a href="https://www.lefigaro.fr/arts-expositions/2014/01/02/03015-20140102ARTFIG00383-musees-un-millesime-2013-riche-en-frequentation">Musées : un millésime 2013 riche en fréquentation</a>. L'article parle d'une hausse de fréquentation dans toute la France et pas que dans les Bouches-Du-Rhônes. Un événément qui a sûrement permis de faire grimper les fréquentations cette année là c'est l'inauguration du MuCem à Marseille le 4 juin 2013. Comme le montre ce graphique, le MuCem était le musée le plus fréquenté cette année là et de loin:</p>
-<div stype="display:flex"><img src="f2013.png"></div>
+<div stype="display:flex"><img src="f2013.webp"></div>
 Il représente à lui tout seul 51,64% des fréquentations de l'année.
 <p>On peut aussi constater l'impact de la crise du COVID qui a engendré une brutale chute des fréquentations des musées à partir de 2020.</p>
 <p>J'ai aussi voulu comprendre le pic de 2006. Et voilà le graphique de cette année là :</p>
-<div stype="display:flex"><img src="f2006.png"></div>
+<div stype="display:flex"><img src="f2006.webp"></div>
 Le <strong>Musée Granet</strong> a été réouvert cette année là après sa rénovation et son agrandissement ce qui a engendré une hausse significative des fréquentations. 
 <h2>7. Pour aller plus loin</h2>
 <p>Après avoir réaliser l'application sur la fréquentation des musées j'ai voulu voir ce qui était possible de réaliser en allant plus loin dans l'utilisation d'Excel. Pour ce faire je me suis appuyée sur la ressource de <a href="https://zestedesavoir.com/tutoriels/pdf/601/analysez-des-donnees-avec-excel.pdf">Zeste de savoir</a> et plus particulièrement sur la partie <strong>Analyse des données et dynamisme du classeur</strong>. Je suis repassée très rapidement sur tout ce que j'avais déjà vu pour m'attarder sur une nouveauté : <em>les tableaux dynamiques croisés</em>.</p>

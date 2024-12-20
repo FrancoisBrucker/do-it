@@ -154,10 +154,10 @@ En lisant ce dataset sous forme de dataframe pandas, il va être possible en une
 <pre class="language-python"><code class="language-python">chemin <span class="token operator">=</span> <span class="token string">'C:\MOOC_Data_Sciences\Machine_Learnia\iris.csv'</span>
 iris <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span>chemin<span class="token punctuation">)</span>
 sns<span class="token punctuation">.</span>pairplot<span class="token punctuation">(</span>iris<span class="token punctuation">)</span></code></pre>
-<p><img src="pairplot.png" alt="Figure des relations entre variables du dataset iris"></p>
+<p><img src="pairplot.webp" alt="Figure des relations entre variables du dataset iris"></p>
 <p>Pour aller plus loin, il va même être possible d'analyser les sépales et pétales par variété de fleur grâce à l'ajout d'un seul paramètre.</p>
 <pre class="language-python"><code class="language-python">sns<span class="token punctuation">.</span>pairplot<span class="token punctuation">(</span>iris<span class="token punctuation">,</span> hue <span class="token operator">=</span> <span class="token string">'variety'</span><span class="token punctuation">)</span></code></pre>
-<p><img src="pairplot_variety.png" alt="Distinction par variété"></p>
+<p><img src="pairplot_variety.webp" alt="Distinction par variété"></p>
 <p>Les possibilités de seaborn sont multiples, <a href="https://seaborn.pydata.org/">la documentation officielle</a> répertorie les différents graphiques réalisables en fonction des besoins :</p>
 <ul>
 <li>distributions</li>
@@ -169,15 +169,15 @@ sns<span class="token punctuation">.</span>pairplot<span class="token punctuatio
 <pre class="language-python"><code class="language-python">titanic <span class="token operator">=</span> sns<span class="token punctuation">.</span>load_dataset<span class="token punctuation">(</span><span class="token string">'titanic'</span><span class="token punctuation">)</span>
 sns<span class="token punctuation">.</span>catplot<span class="token punctuation">(</span>x<span class="token operator">=</span><span class="token string">'pclass'</span><span class="token punctuation">,</span> y<span class="token operator">=</span><span class="token string">'age'</span><span class="token punctuation">,</span> data<span class="token operator">=</span>titanic<span class="token punctuation">,</span> hue<span class="token operator">=</span><span class="token string">'sex'</span><span class="token punctuation">)</span>
 sns<span class="token punctuation">.</span>boxplot<span class="token punctuation">(</span>x<span class="token operator">=</span><span class="token string">'pclass'</span><span class="token punctuation">,</span> y<span class="token operator">=</span><span class="token string">'age'</span><span class="token punctuation">,</span> data<span class="token operator">=</span>titanic<span class="token punctuation">,</span> hue<span class="token operator">=</span><span class="token string">'sex'</span><span class="token punctuation">)</span></code></pre>
-<p><img src="catplot_titanic.png" alt="Répartition des passagers"></p>
-<p><img src="boxplot_titanic.png" alt="Répartition des passagers"></p>
+<p><img src="catplot_titanic.webp" alt="Répartition des passagers"></p>
+<p><img src="boxplot_titanic.webp" alt="Répartition des passagers"></p>
 <p>On va également pouvoir visualiser la relation entre 2 distributions.</p>
 <pre class="language-python"><code class="language-python">sns<span class="token punctuation">.</span>jointplot<span class="token punctuation">(</span>x<span class="token operator">=</span><span class="token string">'age'</span><span class="token punctuation">,</span> y<span class="token operator">=</span><span class="token string">'fare'</span><span class="token punctuation">,</span> data<span class="token operator">=</span>titanic<span class="token punctuation">,</span> kind<span class="token operator">=</span><span class="token string">'hex'</span><span class="token punctuation">)</span></code></pre>
-<p><img src="jointplot_titanic.png" alt="Tarif en fonction de l'âge"></p>
+<p><img src="jointplot_titanic.webp" alt="Tarif en fonction de l'âge"></p>
 <p>Ou encore visualiser les matrices de corrélation sous forme de heatmap.</p>
 <p><strong>NB :</strong> Attention, il s'avère au préalable nécessaire de supprimer les colonnes contenant autre chose que des int ou float ou de convertir des colonnes. <em>(cf partie 3.3 Préparation des données)</em></p>
 <pre class="language-python"><code class="language-python">sns<span class="token punctuation">.</span>heatmap<span class="token punctuation">(</span>titanic<span class="token punctuation">.</span>corr<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
-<p><img src="heatmap_titanic.png" alt="Heatmap de corrélation"></p>
+<p><img src="heatmap_titanic.webp" alt="Heatmap de corrélation"></p>
 <h2>3. Bibliothèque Scikit Learn</h2>
 <p>La bibliothèque Scikit Learn va permettre d'<strong>effectuer du Machine Learning.</strong></p>
 <p>C'est cette bibliothèque qui répertorie toutes les méthodes d'apprentissage et prêtes à l'emploi. <a href="https://scikit-learn.org/stable/#">La documentation Scikit-Learn</a> va alors être très utile. Elle répertorie ces différentes méthodes : classification, régression, clustering... et explique leur fonctionnement. Ainsi, il n'y aura plus qu'à appeler les différentes fonctions déjà codées en python orienté objet pour effectuer du Machine Learning.</p>
@@ -206,7 +206,7 @@ predictions <span class="token operator">=</span> model<span class="token punctu
 <span class="token comment">## Visualisation</span>
 plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>X<span class="token punctuation">,</span> Y<span class="token punctuation">)</span>
 plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>X<span class="token punctuation">,</span>predictions<span class="token punctuation">,</span> c<span class="token operator">=</span><span class="token string">'r'</span><span class="token punctuation">)</span></code></pre>
-<p><img src="regression_lineaire.png" alt="Régression linéaire"></p>
+<p><img src="regression_lineaire.webp" alt="Régression linéaire"></p>
 <p>Pour s'adapter à un cas où la relation entre les données ne serait plus linéaire, il ne suffira que de changer de modèle. Nous pourrions envisager le modèle SVR <em>(Support Vector Regression)</em>.</p>
 <p><strong>NB :</strong> En regardant la <a href="https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html">documentation de ce modèle</a>, on comprend que pour ce modèle, seuls 2 hyperparamètres peuvent être ajustés :</p>
 <ul>
@@ -221,7 +221,7 @@ Y <span class="token operator">=</span> X<span class="token operator">**</span><
 model <span class="token operator">=</span> SVR<span class="token punctuation">(</span>C<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">)</span>
 <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span></code></pre>
 <p>Et voici notre nouvelle régression.</p>
-<p><img src="SVR.png" alt="Régression SVR"></p>
+<p><img src="SVR.webp" alt="Régression SVR"></p>
 <h3>3.2 Classification</h3>
 <p>Basons nous une nouvelle fois le dataset titanic pour effectuer de la classification et ainsi déterminer les chances de survie d'un passager.</p>
 <p>Un modèle approprié pourrait être le <a href="https://scikit-learn.org/stable/modules/neighbors.html#nearest-neighbors-classification">KNeighborsClassifier</a>. Celui-ci va analyser les K plus proches voisins d'un élément et tirer la classification la plus probable qui en ressort.</p>
@@ -276,7 +276,7 @@ plt<span class="token punctuation">.</span>xlabel<span class="token punctuation"
 plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">'score'</span><span class="token punctuation">)</span>
 plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span><span class="token punctuation">)</span>
 plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
-<p><img src="cross_validation.png" alt="Recherche du meilleur nombre de plus proches voisins"></p>
+<p><img src="cross_validation.webp" alt="Recherche du meilleur nombre de plus proches voisins"></p>
 <p>L'écart entre la courbe train et celle validation est très important lorsqu'on ne sélectionne qu'un seul plus proche voisin, il y a de l'<strong>overfitting</strong>. Le modèle essaye trop de se rapprocher des données qu'il apprend et en déforme la réalité. Cet écart diminue plus le nombre de plus proches voisins augmente. Cependant, lorsque l'on choisit trop de plus proches voisins, la performance de la courbe validation diminue puisque certains plus proches voisins sont en réalité éloignés de l'élément à analyser.</p>
 <p><strong>Une dizaine de plus proches voisins semble être la solution la plus appropriée</strong>, il s'agit de celle maximisant la précision des données de validation et minimisant l'écart avec le train.</p>
 <p>Vérifions désormais cette supposition grâce aux fonctions de la bibliothèque Scikit-Learn.</p>
@@ -493,7 +493,7 @@ conf_matrix <span class="token operator">=</span> confusion_matrix<span class="t
 <span class="token comment"># affichage de la matrice de confusion</span>
 sns<span class="token punctuation">.</span>heatmap<span class="token punctuation">(</span>conf_matrix<span class="token punctuation">,</span> annot<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> fmt<span class="token operator">=</span><span class="token string">'d'</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'Blues'</span><span class="token punctuation">,</span> cbar<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span>
             xticklabels<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'Not Survived'</span><span class="token punctuation">,</span> <span class="token string">'Survived'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> yticklabels<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'Not Survived'</span><span class="token punctuation">,</span> <span class="token string">'Survived'</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
-<p><img src="combinaison.png" alt="Matrice de confusion"></p>
+<p><img src="combinaison.webp" alt="Matrice de confusion"></p>
 <p>On remarque ainsi que la performance est de 81%, alors que pour un modèle sans pré-traitement :</p>
 <pre class="language-python"><code class="language-python">titanic <span class="token operator">=</span> sns<span class="token punctuation">.</span>load_dataset<span class="token punctuation">(</span><span class="token string">'titanic'</span><span class="token punctuation">)</span> <span class="token comment"># import du dataset</span>
 

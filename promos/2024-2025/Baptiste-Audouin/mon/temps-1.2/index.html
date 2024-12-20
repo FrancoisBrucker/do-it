@@ -231,7 +231,7 @@ plt<span class="token punctuation">.</span>title<span class="token punctuation">
 plt<span class="token punctuation">.</span>grid<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># Ajout d'une grille pour faciliter la lecture</span>
 plt<span class="token punctuation">.</span>tight_layout<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># Ajuste la mise en page pour éviter le chevauchement</span>
 plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
- <div><img src="curry_points.png"></div>
+ <div><img src="curry_points.webp"></div>
 <p>Le graphe suivant permet de faire une distinction entre les performances à domicile et à l'exterieur afin de savoir si ce paramètre à une influence sur le joueur.</p>
 <pre class="language-python"><code class="language-python">home_games <span class="token operator">=</span> merged_data<span class="token punctuation">[</span>merged_data<span class="token punctuation">[</span><span class="token string">'team_abbreviation_home'</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'GSW'</span><span class="token punctuation">]</span>
 away_games <span class="token operator">=</span> merged_data<span class="token punctuation">[</span>merged_data<span class="token punctuation">[</span><span class="token string">'team_abbreviation_away'</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'GSW'</span><span class="token punctuation">]</span>
@@ -250,7 +250,7 @@ comparison<span class="token punctuation">.</span>plot<span class="token punctua
 plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">"Performance de Curry à domicile vs extérieur"</span><span class="token punctuation">)</span>
 plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">"Moyenne"</span><span class="token punctuation">)</span>
 plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
- <div><img src="home_away_curry.png"></div>
+ <div><img src="home_away_curry.webp"></div>
 <p>Au vu de ces derniers résultats, on peut conclure que les statistiques du joueurs ont été constante cette saison et surtout les lieux de matchs n'ont eux aucun impacte sur lui.</p>
 <h2>4. Influence de Curry sur les performances de son équipe</h2>
 <p>Nous allons visualiser dans cette partie la matrice de corrélation entre les performances de Stephen Curry (points, passes décisives, rebonds, minutes jouées) et les résultats des Warriors (victoires ou défaites)</p>
@@ -260,7 +260,7 @@ plt<span class="token punctuation">.</span>figure<span class="token punctuation"
 sns<span class="token punctuation">.</span>heatmap<span class="token punctuation">(</span>correlation<span class="token punctuation">,</span> annot<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">"coolwarm"</span><span class="token punctuation">)</span>
 plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">"Corrélation entre performances de Poole et résultats des Warriors"</span><span class="token punctuation">)</span>
 plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
- <div><img src="matrix_curry.png"></div>
+ <div><img src="matrix_curry.webp"></div>
 <h4>Analyse des corrélations :</h4>
 <ul>
 <li><strong>Points (PTS) et Victoires (result)</strong> : La corrélation entre les points de Curry et les victoires des Warriors est faible (0.069), ce qui indique que le nombre de points marqués par Curry n'a pas un impact direct sur les résultats de l'équipe.</li>
@@ -271,8 +271,8 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
 <p>Dans la suite, nous allons comparer ces résultats avec ceux de deux autres joueurs clés des Warriors pour mieux comprendre l'impact des différentes contributions individuelles sur les victoires de l'équipe. Cela permettra de voir comment les performances collectives influencent les résultats.</p>
 <h2>5. Comparaison avec d'autres joueurs</h2>
 <p>Après avoir récupéré les données de deux autres joueurs majeurs de l'équipe (Jordan Poole et Klay Thompson) sur le même site <a href="https://www.basketball-reference.com">Basketball Reference</a>, j'ai effectué les mêmes manipulations sur leurs statistiques et voici les matrices obtenues :</p>
- <div><img src="matrix_poole.png"></div>
- <div><img src="matrix_thompson.png"></div>
+ <div><img src="matrix_poole.webp"></div>
+ <div><img src="matrix_thompson.webp"></div>
 <h4>Analyse</h4>
 <p>Poole et Thompson, montrent des corrélations plus importantes (surtout Thompson) dans des aspects du jeu qui impactent directement les résultats des matchs, notamment les points de Thompson et les passes de Poole. Curry, en tant que joueur constant semble moins &quot;déterminant&quot; dans les victoires ce qui s'explique par le fait que son niveau est toujours élevé.</p>
 <p>En résumé, bien que Curry soit essentiel pour la stabilité de l’équipe, les victoires des Warriors semblent davantage liées aux performances de Poole et surtout Thompson.</p>

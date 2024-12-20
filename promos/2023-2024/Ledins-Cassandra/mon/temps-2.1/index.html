@@ -149,10 +149,10 @@
 <p>Une Prefab, dans l'univers d'Unity, représente un modèle ou un prototype d'objet. C'est une sorte de version préconfigurée d'un GameObject, comprenant tous les détails comme les composants, les propriétés, et les scripts nécessaires. Les Prefabs sont utiles pour créer des objets de manière efficace, les utilisant comme des modèles que l'on peut reproduire plusieurs fois dans une scène.</p>
 <h3>GameObject</h3>
 <p>Le GameObject est la pierre angulaire dans Unity. Il symbolise toute entité visualisable dans la scène, qu'il s'agisse de personnages, d'objets, de lumières, de caméras, et plus encore. Ces GameObjects sont constitués de divers composants tels que des transformateurs, des mesh renderers, ou des scripts. Ils forment ainsi la structure de base de toute scène Unity.</p>
-<p><img src="image.png" alt=""></p>
+<p><img src="image.webp" alt=""></p>
 <h3>Instance</h3>
 <p>Une Instance est une occurrence particulière d'un Prefab dans la scène. Lorsqu'on place un Prefab dans la scène, il devient une Instance unique avec ses propres caractéristiques. Chaque Instance peut être manipulée individuellement sans impacter les autres. En illustrant, si un Prefab représente un arbre, chaque arbre spécifique placé dans la scène est considéré comme une Instance de ce Prefab. On parle aussi d'instances quand on créé une instance particulière d'un type plus général. Par exemple, j'ai défini une classe Item, et les ItemsInstances étaient des définitions de pierre, morceau de bois, chapeaux...</p>
-<p><img src="image-2.png" alt=""></p>
+<p><img src="image-2.webp" alt=""></p>
 <h2>Syntaxe C#</h2>
 <p>La syntaxe C# n'était pas particulièrement choquante à adopter, ayant fait un peu de C et de Java, ça m'a rappelé comme un mélange des deux. J'ai utilisé Microsoft Visual Studio comme IDE, et l'intégration avec Unity était très bien. L'autocomplétion était assez intelligente. Les noms de méthode commencent par contre par une majuscule. Ce qui est assez pratique visuellement je dois l'admettre.</p>
 <p>La grosse nouveauté pour moi ça a été les variables en SerializeField. Pour résumer, on peut indiquer une variable en private, donc pas accessible depuis d'autres scripts, mais le fait de l'initialiser en SerializeField va nous permettre de Drag&amp;Drop dans Unity même la valeur qu'on veut lui associer (un gameobject, un autre script, un float...)</p>
@@ -188,23 +188,23 @@
 <p>Le volet animation, audio et gestion des évènements a été une étape satisfaisante dans le développement du jeu. Pour certaines actions comme le minage ou le ramassage d'objets, j'ai intégré des éléments sonores et des animations pour renforcer l'immersion du joueur. Les évènements ont été utilisés pour déclencher des actions en fonction des interactions dans le jeu, créant ainsi une expérience plus dynamique. Unity permet d'associer un évènement à une certaine Frame de l'animation.</p>
 <p>Par exemple, on a rajouté un bruit de pioche qui s'active grâce à un script, et on l'a attaché à un évènement à la frame où l'animation de minage touche la pierre.</p>
 <p>On a aussi traité la spatialisation audio et le mixage.</p>
-<p><img src="image-8.png" alt=""></p>
+<p><img src="image-8.webp" alt=""></p>
 <h2>Box Collider, RigidBody</h2>
 <p>La gestion des collisions a été réalisée grâce aux composants Box Collider et RigidBody d'Unity. Le Box Collider a été utilisé pour définir les zones de détection des collisions, tandis que le RigidBody a permis de simuler les interactions physiques, offrant une expérience de jeu plus réaliste. On a pu changer la masse des objets, les rendre fixes, atteints par la gravité...</p>
 <h2>Layers et RayCast</h2>
 <p>L'organisation des éléments dans le jeu a été facilitée par l'utilisation de Layers, permettant de catégoriser les GameObjects et d'optimiser les interactions. Différents Layers ont été utilisés comme le layer Item, Harvestable, UI... Les RayCast ont été employés pour gérer les scripts de pickUp et de l'IA ennemie. Les RayCast sont commes des lasers ou des fils qu'on tire depuis un objet dans une direction et on peut détecter par exemple si le joueur regarde un objet, ou s'il est près d'un ennemi.</p>
-<p><img src="image-5.png" alt=""></p>
+<p><img src="image-5.webp" alt=""></p>
 <h2>UI - Game Menus</h2>
 <p>J'ai été surprise par la manière de créer des Menus dans une scène, on dirait que le Menu est affiché en géant dans la scène, à côté du terrain qui a l'air minuscule.
 J'ai galéré à personnaliser cette partie, j'ai trouvé que le UI était difficile à gérer dynamiquement, car il y a beaucoup de choses et de paramètres à prendre en contre. Par exemple l'inventaire c'est un *panel dans un *canvas qui contient un *content, et ce content et composé de *slots qui contiennent une *image dont on configure le *sprite.</p>
 <p>Il y avait des layout grids, des alignements dynamiques dans tous les sens, et j'ai pas vraiment la fibre front donc pour moi c'était un peu de la magie noire mais heureusement le tutoriel est bien fait.</p>
-<p><img src="image-6.png" alt=""></p>
+<p><img src="image-6.webp" alt=""></p>
 <h2>Unity Terrain</h2>
 <p>La création du terrain de jeu a été simplifiée grâce à l'outil Terrain d'Unity. J'ai pu sculpter le relief, peindre les textures et intégrer des éléments naturels pour donner vie à l'environnement du jeu. Je n'ai pas été très créative ou pointilleuse sur cette partie bien qu'elle soit amusante. Le level design est un métier en soi et il n'est pas facile de s'improviser maestro dans ce sujet.</p>
 <h2>AI et NavMesh</h2>
 <p>L'intégration de l'intelligence artificielle (AI) dans le jeu a été très intéressant. L'utilisation de NavMesh a simplifié la navigation des entités dans l'environnement du jeu. Il a suffit d'ajouter un script de déplacement aléatoire à notre Ours, d'ajouter un component NavMesh sur sa Prefab, et cliquer sur le bouton Bake NavMesh, en sélectionnant les Layers affectés (Terrain, etc...). C'est un gros raccourci mais ça a été surprenamment pas si long à mettre en place, Unity mâche bien le travail.</p>
 <p>L'ours se délace aléatoirement et librement sur le NavMesh, et peut se mettre à nous courser et nous attaquer si on est trop près.</p>
-<p><img src="image-7.png" alt=""></p>
+<p><img src="image-7.webp" alt=""></p>
 <h2>Fonctionnalités Finales</h2>
 <p>Les fonctionnalités finales du jeu sont:</p>
 <ul>

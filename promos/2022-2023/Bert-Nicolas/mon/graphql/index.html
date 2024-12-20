@@ -155,20 +155,20 @@
 <p>Qu'est-ce qu'une <strong>API</strong> ?</p>
 </div><div class="pl-8 mr-8">
 <p>Selon la CNIL, une <strong>API</strong> (<em>application programming interface</em> ou « interface de programmation d’application ») est une interface logicielle qui permet de « connecter » un logiciel ou un service à un autre logiciel ou service afin d’échanger des données et des fonctionnalités.</p>
-<img src="../images/api.png" style="border-width: 0;">
+<img src="../images/api.webp" style="border-width: 0;">
 <p>Une API va alors exposer des <strong>routes</strong> (que l'on appelle aussi <strong>endpoints</strong> en anglais) afin que le client puisse dialoguer avec les services. Il existe différentes manières de structurer les routes: ici nous allons parler des API REST et des API GraphQL.</p>
 </div></div>
 <h3>Les API REST</h3>
 <p>Une API REST (<em>Representational State Transfer</em>) est une architecture de développement d'API qui utilise les différentes méthodes HTTP (GET, POST, PUT, DELETE, PATCH ...) pour interagir avec les autres services (généralement les bases de données). Ces différentes méthodes vont être exposées sur une même route ou sur des routes distinctes et vont répondre au client avec des <a href="http://http.cat">status code</a> afin d'indiquer si la requête c'est bien passée ou s'il y a eu des erreurs. Les API REST sont très utilisées pour construire des applications web et mobiles car elles sont simples à utiliser et mettre en place. Les données transmises au client sont souvent au format JSON.</p>
-<img src="../images/api_rest.png" style="border-width: 0; width: 100%;">
+<img src="../images/api_rest.webp" style="border-width: 0; width: 100%;">
 <p>Chaque méthode HTTP permet d'effectuer des actions bien particulières. Voilà un exemple pour expliquer les méthodes les plus utilisées.</p>
-<img src="../images/rest_methods.png">
+<img src="../images/rest_methods.webp">
 <p>Ainsi, en suivant les routes de l'image ci-dessus, en appelant <em>&quot;/posts&quot;</em> en méthode GET, l'API nous répondra en nous donnant la liste de tous les posts. Si j'envoie une requête POST à <em>&quot;/posts&quot;</em> en mettant des données dans ma requête je vais créer dans la base de données un post...</p>
 <p>Pour plus d'informations, je vous invite à consulter <a href="https://phauer.com/2015/restful-api-design-best-practices/">https://phauer.com/2015/restful-api-design-best-practices/</a>.</p>
 <h3>Les API GraphQL</h3>
 <p>Le modèle d'API GraphQL est une autre manière de structurer les routes. Il n'y a en général qu'<strong>un seul endpoint</strong> qui est de type <strong>POST</strong> et c'est le client qui, en paramètres de la requête POST va définir les données qu'il souhaite obtenir. On gagne ainsi en flexibilité en permettant au client d'obtenir ce qu'il a besoin sans être figé par un modèle REST.</p>
-<img src="../images/rest_graphql.png" style="border-width: 0;">
-<img src="../images/REST-and-GraphQL.png" style="border-width: 0;">
+<img src="../images/rest_graphql.webp" style="border-width: 0;">
+<img src="../images/REST-and-GraphQL.webp" style="border-width: 0;">
 <h3>REST ou GraphQL ? Avantages et inconvénients</h3>
 <p>Il s'agit donc d'un autre paradigme pour la construction d'API qui a ses avantages et ses inconvénients par rapport aux API REST :</p>
 <ul>
@@ -205,7 +205,7 @@
 </ul>
 </div></div>
 <p>Pour utiliser GraphQL, j'ai décidé d'utiliser un backend réalisé avec Express, connecté à une base de données PostgreSQL via l'ORM (Object Relation Mapping) <a href="https://www.prisma.io/">Prisma</a>. Il y aura ensuite une route statique renvoyant une page HTML afin d'indiquer la structure de la base de données (relations, entités ...) et une unique route d'API qui sera servie par GraphQL. Voici un petit schéma d'explications :</p>
-<img src="../images/graphql-archi.png">
+<img src="../images/graphql-archi.webp">
 <p>Nous allons désormais voir pas à pas comment créer un tel projet.</p>
 <h3>Initialisation du projet Express</h3>
 <p>Nous allons donc initialiser un projet <strong>npm</strong> puis installer quelques librairies dont <code>express</code>.</p>
@@ -330,7 +330,7 @@ model User {
 </ul>
 </div></div>
 <p>A ce stade en lançant la commande <code>npx prisma studio</code>nous devrions voir nos tables avec les différents champs.</p>
-<img src="../images/prisma-studio.png">
+<img src="../images/prisma-studio.webp">
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>

@@ -158,9 +158,9 @@
 <p>Dans cette première partie, j'ai revu les bases d'excel que je connaissais mais qui avait besoin d'être étudiées à nouveau. Pour cela, je vais simplement faire une fiche méthode à utiliser la prochaine fois que j'aurai besoin d'excel. La formation sur <a href="http://excel.pratique.com">excel.pratique.com</a> étant très synthétique, je vais juste énumérer les points importants pour moi.</p>
 <ul>
 <li>L'utilisation du <code>$</code> permet de fixer une cellule/colonne/ligne lorsque nous utilisons des formules, par exemple :
-<img src="EXCEL2.png" alt="excel">
+<img src="EXCEL2.webp" alt="excel">
 Dans cette exemple, on divise par la valeur <strong>3</strong>, qui apparaît dans la cellule <strong>B8</strong>. Seulement on veut pouvoir diviser à chaque fois par cette <strong>même valeur</strong> de cellule <strong>B8</strong> lors de la recopie. Corrigeons:
-<img src="EXCEL3.png" alt="excel">
+<img src="EXCEL3.webp" alt="excel">
 Pour cela; le premier <code>$</code> de <code>$B$8</code> fixe la <strong>colonne</strong> lors de la recopie et le second <code>$</code> fixe la <strong>ligne</strong>. Ici, on aurait pu simplement fixer la ligne</li>
 <li>L'opérarteur <strong>&lt;&gt;</strong> signifie est <strong>différent de</strong></li>
 <li>L'opérateur <strong>&lt;=</strong> signifie est <strong>inférieur ou égal à</strong></li>
@@ -179,10 +179,10 @@ Pour cela; le premier <code>$</code> de <code>$B$8</code> fixe la <strong>colonn
 <p>La <strong>fonction SI</strong> ou <strong>IF</strong> en anglais : <strong>=SI(test logique, valeur si vrai, valeur si faux)</strong>
 Elle permet de retourner une valeur ou une autre en fonction d'une condition et nécessite 3 arguments.
 Prenons l'exemple suivant, dans lequel on se demande si les personnes sont majeures selon leur âge :
-<img src="screen_SI_1.png" alt="excel">
+<img src="screen_SI_1.webp" alt="excel">
 Il suffit de rentrer dans la cellule D36: <strong>=SI(C36&gt;=18 (qui explique la condition); &quot;majeur&quot;;&quot;mineur&quot;)</strong> et de faire une recopie sur les cellules souhaitées.
 Si on essaye dans un cas plus complexe, comme dans cet exercice proposé par la formation:
-<img src="screen_SI_2.png" alt="excel"></p>
+<img src="screen_SI_2.webp" alt="excel"></p>
 <p>Ici, on souhaite calculer dans la cellule <strong>D3</strong> la valeur du <em>rabais</em> en fonction de la <em>quantité d'article</em>. Pour cela il faut <strong>imbriquer</strong> une fonction SI dans une autre.
 Dans ce cas, on demande d'abort si la quantité est inférieure à 50:</p>
 <ol>
@@ -194,7 +194,7 @@ Dans ce cas, on demande d'abort si la quantité est inférieure à 50:</p>
 </li>
 <li>Si <strong>Faux</strong> on revoie le prix <strong>C3</strong> multiplié par le rabais <strong>H5</strong> sans oublier de fixer <strong>H3</strong> avec des '$'
 Cela donne la formule suivante, non unique:
-<img src="formule1.png" alt="excel"></li>
+<img src="formule1.webp" alt="excel"></li>
 </ol>
 </li>
 <li>
@@ -210,7 +210,7 @@ Cela donne la formule suivante, non unique:
 Pour l'insérer il suffit de faire :</p>
 <p><strong>insertion &gt; graphique sparkline &gt; choisir</strong> entre <em>courbe</em>, <em>histogramme</em> et <em>conclusion et perte</em> <strong>&gt; choisir la ligne ou colonne de données à utiliser &gt; recopie possible &gt; personnalisation possible.</strong>
 Cela donne par exemple:</p>
-<p><img src="screen_sparkline.png" alt="excel"></p>
+<p><img src="screen_sparkline.webp" alt="excel"></p>
 <h3>Chapitres 8 à 11 - Apprendre</h3>
 <p>Dans cette deuxième partie de formation, j'ai simplement appris à utiliser des fonctionnalités basiques d'excel que je ne connaissais pas. J'ai ici réalisé une nouvelle fiche méthode encore plus synthétique que la formation suivie, qui me sera probablement utile plus tard.</p>
 <h4>La mise en forme conditionnelle</h4>
@@ -229,7 +229,7 @@ On pourra ensuite faire:</p>
 <li>créer nouvelle règle &gt; Valeur de la cellule égale à =&quot;x&quot; &gt; remplissage vert avec texte vert foncé</li>
 </ul>
 <p>Cela donne le résultat suivant :</p>
-<p><img src="screen_MFC.png" alt="excel"></p>
+<p><img src="screen_MFC.webp" alt="excel"></p>
 <p>Pour gérer/modifier les MFC ajoutées il faut :</p>
 <p><strong>Mise en forme conditionnelle &gt; gérer mes règles</strong> - comme c'est affiché sur la photo ci-dessus.
 Le gestionnaire affiché à droite permet de :</p>
@@ -251,14 +251,14 @@ Le gestionnaire affiché à droite permet de :</p>
 <li>Un tri en fonction de plusieurs colonnes ou d'une colonne qui n'est pas forcément la première se fera par de la manière : <strong>sélectionner la plage de cellule à trier &gt; tri personnalisé &gt; remplir</strong> la fenêtre qui s'affiche.</li>
 </ul>
 <p>Il est également possible d'ajouter des niveaux de tri à partir de cette fenêtre, par exemple :</p>
-<p><img src="screen_tri2.png" alt="excel"></p>
+<p><img src="screen_tri2.webp" alt="excel"></p>
 <p>La fonctionnalité <strong>filtrer des données</strong> permet <strong>d'afficher</strong> les données en fonction d'un ou de plusieurs critères, pour cela il faut : <strong>onglet données &gt; filtre &gt; remplir</strong> la fenêtre qui s'affiche.</p>
 <p>La fonctionnalité <strong>validation de données</strong> s'assure de la <strong>validité</strong> des données entrées et affiche un message d'erreur et refuse l'entrée si les données ne sont pas valides, pour cela :</p>
 <p><strong>Sélectionner la plage qui contiendra les données valides &gt; onglet données &gt; Validation des données &gt; remplir</strong> la fenêtre qui s'affiche.
 Par exemple, on souhaite pourvoir entrer seulement des nombres entiers entre 1 et 100
-<img src="screen_valisation.png" alt="excel"></p>
+<img src="screen_valisation.webp" alt="excel"></p>
 <p>Cette fenêtre permet aussi de valider selon d'autres critères (liste, date, heure, etc.) et de personnaliser le message d'entrée, par exemple :
-<img src="screen_valisation3.png" alt="excel"></p>
+<img src="screen_valisation3.webp" alt="excel"></p>
 <h4>Tableaux croisés dynamiques</h4>
 <p>Les <em>pivot table</em> (en anglais) permettent de structurer des informations à partir d'un tableau brut de données, pour analyser, présenter ou resumer.</p>
 <p>Pour insérer un tableau dynamique, il faut : <strong>sélectionner les données/tableau &gt; insertion &gt; tableau croisé dynamique &gt; valeurs par défaut &gt; ok &gt; cocher les champs à intégrer au tableau &gt; les glisser dans 1 des 4 onglets souhaité</strong> parmi <em>lignes</em>, <em>colonnes</em>, <em>valeurs</em> et <em>lignes</em> <strong>&gt; modifier si nécessaire</strong></p>

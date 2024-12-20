@@ -165,11 +165,11 @@
 <h2>Création du design</h2>
 <p>D'abord il fallait créer la page d'accueil, sur cette page il faut le logo du site, un bouton pour se connecter, un bouton pour s'inscrire. Il faut aussi une petite présentation du site. Voilà ce que je fais avec mes talents de designer :</p>
 <div style="display:flex">
-<div><img src="accueil.png" width="300" height="600"></div>
+<div><img src="accueil.webp" width="300" height="600"></div>
 </div>
 <p>Lorsqu'on clique sur le bouton &quot;Connexion&quot;, une nouvelle fenêtre s'ouvre et permet à l'utilisateur de se connecter. Il faut qu'il puisse rentrer son email, son mot de passe et cliquer sur le bouton. J'ai aussi rajouté un lien <strong>Mot de passe oublié</strong> au cas où l'utilisateur veuille changer son mot de passe.</p>
 <div style="display:flex">
-<div><img src="connexion.png" width="300" height="600"></div>
+<div><img src="connexion.webp" width="300" height="600"></div>
 </div>
 <p>Ensuite il faut faire la même chose mais pour l'inscription, cette fois-ci on aura plus d'input car on va demander à l'utilisateur plusieurs choses :</p>
 <ul>
@@ -180,12 +180,12 @@
 <li>la confirmation du mot de passe</li>
 </ul>
 <div style="display:flex">
-<div><img src="inscription.png" width="300" height="600"></div>
+<div><img src="inscription.webp" width="300" height="600"></div>
 </div>
-![inscription](inscription.png)
+![inscription](inscription.webp)
 <p>Enfin, une fois que l'utilisateur est connecté, il a accès à la page principale sur laquelle se trouve les annonces. Il doit pouvoir faire une recherche parmi les annonces présentes et il doit pouvoir en ajouter s'il le souhaite.</p>
 <div style="display:flex">
-<div><img src="principale.png" width="300" height="600"></div>
+<div><img src="principale.webp" width="300" height="600"></div>
 </div>
 <h2>Frontend de la page d'accueil en React Native</h2>
 <p>Pour le frontend des pages, il faut que l'on puisse naviguer entre chacune d'entre elles, je vais donc créer un component pour la page d'accueil, un component pour le pop-up de connexion et un component pour le pop-up de connexion.</p>
@@ -194,7 +194,7 @@
 <span class="token keyword">const</span> <span class="token function-variable function">Accueil</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> <span class="token punctuation">(</span>
     <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">[</span>styles<span class="token punctuation">.</span>container<span class="token punctuation">,</span> <span class="token punctuation">{</span> backgroundColor <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token operator">></span>
-      <span class="token operator">&lt;</span>Image source<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./logo.png'</span><span class="token punctuation">)</span><span class="token punctuation">}</span> style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>logo<span class="token punctuation">}</span><span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>Image source<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./logo.webp'</span><span class="token punctuation">)</span><span class="token punctuation">}</span> style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>logo<span class="token punctuation">}</span><span class="token operator">/</span><span class="token operator">></span>
       <span class="token operator">&lt;</span>Text style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>presentation<span class="token punctuation">}</span><span class="token operator">></span>Bienvenue sur l<span class="token string">'application Centrale M'</span>Aide<span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
       <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>userInput<span class="token punctuation">}</span><span class="token operator">></span>
         <span class="token operator">&lt;</span>CustomButton title<span class="token operator">=</span><span class="token string">"CONNEXION"</span> onPress<span class="token operator">=</span><span class="token punctuation">{</span>ouvertureModal<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
@@ -205,7 +205,7 @@
    <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
 <div style="display:flex">
-<div><img src="accueil.jpg" width="300" height="600"></div>
+<div><img src="accueil.webp" width="300" height="600"></div>
 </div>
 <p>Maintenant ce qu'il faudrait c'est que quand on clique sur les boutons <strong>CONNEXION</strong> et <strong>INSCRIPTION</strong>, les fenêtres s'ouvrent pour que l'utilisateur puisse se connecter ou s'inscrire comme vu sur les design précédent. J'ai créé la fenêtre de connexion de la manière suivante :</p>
 <pre class="language-js"><code class="language-js"><span class="token operator">&lt;</span>Modal animationType<span class="token operator">=</span><span class="token string">"slide"</span> transparent<span class="token operator">=</span><span class="token punctuation">{</span><span class="token boolean">true</span><span class="token punctuation">}</span> visible<span class="token operator">=</span><span class="token punctuation">{</span>modalVisible<span class="token punctuation">}</span> onRequestClose<span class="token operator">=</span><span class="token punctuation">{</span>ouvertureModal<span class="token punctuation">}</span><span class="token operator">></span>
@@ -245,11 +245,11 @@
 <p>La fonction permet de changer la visibilité de la fenêtre à chaque fois qu'elle est utilisée. Donc quand on appuie sur inscription la fenêtre est visible.</p>
 <p>Voilà ce que ça donne :</p>
 <div style="display:flex">
-<div><img src="fenetre_connexion.jpg" width="300" height="600"></div>
+<div><img src="fenetre_connexion.webp" width="300" height="600"></div>
 </div>
 <p>Ensuite on fait la même chose mais avec l'inscription :</p>
 <div style="display:flex">
-<div><img src="inscription.jpg" width="300" height="600"></div>
+<div><img src="inscription.webp" width="300" height="600"></div>
 </div>
 <p>Voici le code associé :</p>
 <pre class="language-js"><code class="language-js"><span class="token operator">&lt;</span>Modal animationType<span class="token operator">=</span><span class="token string">"slide"</span> transparent<span class="token operator">=</span><span class="token punctuation">{</span><span class="token boolean">true</span><span class="token punctuation">}</span> visible<span class="token operator">=</span><span class="token punctuation">{</span>inscriptionModalVisible<span class="token punctuation">}</span> onRequestClose<span class="token operator">=</span><span class="token punctuation">{</span>ouvertureInscriptionModal<span class="token punctuation">}</span><span class="token operator">></span>
@@ -308,7 +308,7 @@
 <p>Je devais lors de mon deuxième sprint finir la création des pages de l'application, j'en ai profité pour modifier légèrement celles que j'avais créé avant.</p>
 <p>Je devais ensuite créer la page sur laquelle figure les annonces, c'est aussi la page qui apparaîtra après que l'utilisateur se soit connecté. Voici à quoi je suis arriver :</p>
 <div style="display:flex">
-<div><img src="Page_Annonce.jpg" width="300" height="600"></div>
+<div><img src="Page_Annonce.webp" width="300" height="600"></div>
 </div>
 <p>Voici le code qui permet d'arriver à cette page:</p>
 <pre class="language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token function-variable function">Annonces</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
@@ -317,7 +317,7 @@
         <span class="token operator">&lt;</span>View<span class="token operator">></span>
             <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>header<span class="token punctuation">}</span><span class="token operator">></span>
                 <span class="token operator">&lt;</span>Image 
-                    source<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../logo.png'</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+                    source<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../logo.webp'</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
                     style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>logo<span class="token punctuation">}</span>
                 <span class="token operator">/</span><span class="token operator">></span>
             <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
@@ -332,11 +332,11 @@
                 <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>annonce<span class="token punctuation">}</span><span class="token operator">></span>
                     <span class="token operator">&lt;</span>Text style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>titre<span class="token punctuation">}</span><span class="token operator">></span>Appartement libre <span class="token constant">R</span>éformés<span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
                     <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>date<span class="token punctuation">}</span><span class="token operator">></span>
-                        <span class="token operator">&lt;</span>Image style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>dateImage<span class="token punctuation">}</span> source<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./date.png'</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>Image<span class="token operator">></span>
+                        <span class="token operator">&lt;</span>Image style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>dateImage<span class="token punctuation">}</span> source<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./date.webp'</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>Image<span class="token operator">></span>
                         <span class="token operator">&lt;</span>Text style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>dateText<span class="token punctuation">}</span><span class="token operator">></span>Octobre <span class="token number">2023</span><span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
                     <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
                     <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>adresse<span class="token punctuation">}</span><span class="token operator">></span>
-                        <span class="token operator">&lt;</span>Image style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>adresseImage<span class="token punctuation">}</span> source<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./adresse.png'</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>Image<span class="token operator">></span>
+                        <span class="token operator">&lt;</span>Image style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>adresseImage<span class="token punctuation">}</span> source<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./adresse.webp'</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>Image<span class="token operator">></span>
                         <span class="token operator">&lt;</span>Text style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>adresseText<span class="token punctuation">}</span><span class="token operator">></span><span class="token number">8</span> rue Lafayette <span class="token number">13001</span><span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
                     <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
                 <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
@@ -344,11 +344,11 @@
                 <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>annonce<span class="token punctuation">}</span><span class="token operator">></span>
                     <span class="token operator">&lt;</span>Text style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>titre<span class="token punctuation">}</span><span class="token operator">></span>Donne table <span class="token number">4</span> personnes<span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
                     <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>date<span class="token punctuation">}</span><span class="token operator">></span>
-                        <span class="token operator">&lt;</span>Image style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>dateImage<span class="token punctuation">}</span> source<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./date.png'</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>Image<span class="token operator">></span>
+                        <span class="token operator">&lt;</span>Image style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>dateImage<span class="token punctuation">}</span> source<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./date.webp'</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>Image<span class="token operator">></span>
                         <span class="token operator">&lt;</span>Text style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>dateText<span class="token punctuation">}</span><span class="token operator">></span>Mai 2O24<span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
                     <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
                     <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>adresse<span class="token punctuation">}</span><span class="token operator">></span>
-                        <span class="token operator">&lt;</span>Image style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>adresseImage<span class="token punctuation">}</span> source<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./adresse.png'</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>Image<span class="token operator">></span>
+                        <span class="token operator">&lt;</span>Image style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>adresseImage<span class="token punctuation">}</span> source<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./adresse.webp'</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>Image<span class="token operator">></span>
                         <span class="token operator">&lt;</span>Text style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>adresseText<span class="token punctuation">}</span><span class="token operator">></span><span class="token number">45</span> Allée <span class="token constant">L</span>éon Gambetta<span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
                     <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
                 <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>

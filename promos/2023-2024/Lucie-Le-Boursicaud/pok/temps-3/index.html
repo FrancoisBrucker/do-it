@@ -161,7 +161,7 @@
 Ce jeu s'est beaucoup inspiré du mécanisme de 2048 qui a été un gros succès il y a déjà quelques années.
 Voici une capture d'écran du jeu qui est disponible sur téléphone :</p>
 <div style="display:flex">
-<div><img src="jeu_de_pasteque.png"></div>
+<div><img src="jeu_de_pasteque.webp"></div>
 </div>
 <h5>Objectif du POK</h5>
 <p>L'objectif ici est de reproduire ce jeu sur un navigateur en déplaçant le fruit avec les flèche de l'ordinateur et en le lachant avec la barre espace.</p>
@@ -189,14 +189,14 @@ npm install matter-js </code></pre>
 <p>J'ajoute un fichier main.js dans lequel je vais coder les différentes fonctions pour le jeu.</p>
 <p>J'ai eu beaucoup de difficultés en suivant cette méthode dont une que j'ai pas réussi à corriger :</p>
 <div style="display:flex">
-<div><img src="erreur_matter.png"></div>
+<div><img src="erreur_matter.webp"></div>
 </div>
 <p>J'ai donc utilisé <a href="https://vitejs.dev/">Vite</a> pour créer mon projet (ce qu'un des tutos Matter.js utilisé comme environnement) et cela à très bien marché en suivant la documentation.</p>
 <h3>3. Créer la boite du jeu</h3>
 <p>Maintenant que j'ai mon environnement je peux commencer à coder le jeu.
 La première chose à créer est donc une boite, pour ça j'ai juste suivi la <a href="https://brm.io/matter-js/">documentation</a> qui explique comment ajouter des corps aux mondes ce qui m'a donné cela :</p>
 <div style="display:flex">
-<div><img src="boite.png"></div>
+<div><img src="boite.webp"></div>
 </div>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
@@ -262,7 +262,7 @@ Runner.run(engine);</code></pre>
 <h2>4. Créer un rond qui tombe</h2>
 <p>De la même façon j'ai juste suivi la <a href="https://brm.io/matter-js/">documentation</a>. Et j'ai obtenu cela :</p>
 <div style="display:flex">
-<div><img src="boitefruit.png"></div>
+<div><img src="boitefruit.webp"></div>
 </div>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
@@ -541,8 +541,8 @@ window.onkeyup = (event) => {
 </div>
 <p>Alors notre fruit est bloqué sur les deux côté du mur :</p>
 <div style="display:flex">
-<div><img src="déplacementetmur.png"></div>
-<div><img src="déplacementetmur2.png"></div>
+<div><img src="déplacementetmur.webp"></div>
+<div><img src="déplacementetmur2.webp"></div>
 </div>
 <h2>7. Faire tomber le fruit avec la barre espace</h2>
 <p>L'ojectif est clair : lorsque l'on appuie sur la barre espace, le fruit &quot;se réveille&quot; et tombe.
@@ -635,7 +635,7 @@ Sauf que l'on a qu'un seul fruit... Il faudrait qu'un autre fruit apparaisse lor
     World.add(world,body);
 };</code></pre>
 <div style="display:flex">
-<div><img src="plusieursTailleetAléatoire.png"></div>
+<div><img src="plusieursTailleetAléatoire.webp"></div>
 </div>
 <h1>Sprint 2</h1>
 <h6>Objectifs du second sprint</h6>
@@ -663,8 +663,8 @@ Sauf que l'on a qu'un seul fruit... Il faudrait qu'un autre fruit apparaisse lor
   })
 })</code></pre>
 <div style="display:flex">
-<div><img src="disparition.png"></div>
-<div><img src="disparition2.png"></div>
+<div><img src="disparition.webp"></div>
+<div><img src="disparition2.webp"></div>
 </div>
 <p>Lorsque deux fruits identiques se touchent ils disparaisent.
 Maintenant il faut faire apparaitre le fruit d'après à l'endroit de la collision. Comment savoir le fruit prochain ? Et bien le tableau <strong>FRUITS</strong> doit être ordonné par croissance des fruits pour nous faciliter la tâche. On va donc récupérer l'<strong>index</strong> du fruit qui est rentré en collision et l'incrémenter de 1 pour obtenir l'index du nouveau fruit et extraire ses propriétés du tableau.</p>
@@ -691,8 +691,8 @@ Maintenant il faut faire apparaitre le fruit d'après à l'endroit de la collisi
   });
 })</code></pre>
 <div style="display:flex">
-<div><img src="colission1.png"></div>
-<div><img src="colission2.png"></div>
+<div><img src="colission1.webp"></div>
+<div><img src="colission2.webp"></div>
 </div>
 <p>Désormais quand deux fruits se rencontrent, le fruit suivant apparait !
 Par contre il faut que l'on fasse attention au cas ou deux derniers fruits se rencontrent. Dans le jeu les deux pastèques disparaisent mais rien ne réapparait. On va donc rajouter cette règle dans notre fonction.</p>
@@ -761,22 +761,22 @@ World.add(world, [sol,murgauche,murdroite,lignehaut]);</code></pre>
 <h2>3. Ajouter des images pour remplacer les ronds</h2>
 <p>Pour ça je me suis rendue sur Canva et j'ai cherché des images de légumes/fruits qui iront bien dans le jeu, voici ceux que j'ai sélectioné :</p>
 <div style="display:flex">
-<div><img src="radish.png"></div>
-<div><img src="garlic.png"></div>
-<div><img src="onionw.png"></div>
-<div><img src="lemon.png"></div>
-<div><img src="orange.png"></div>
-<div><img src="tomato.png"></div>
-<div><img src="onion.png"></div>
-<div><img src="paprika.png"></div>
+<div><img src="radish.webp"></div>
+<div><img src="garlic.webp"></div>
+<div><img src="onionw.webp"></div>
+<div><img src="lemon.webp"></div>
+<div><img src="orange.webp"></div>
+<div><img src="tomato.webp"></div>
+<div><img src="onion.webp"></div>
+<div><img src="paprika.webp"></div>
 </div>
 <div style="display:flex">
-<div><img src="eggplant.png"></div>
-<div><img src="artichoke.png"></div>
-<div><img src="pumpkin.png"></div>
+<div><img src="eggplant.webp"></div>
+<div><img src="artichoke.webp"></div>
+<div><img src="pumpkin.webp"></div>
 </div>
 <p>Le set n'est pas parfait et il y a les filligrames de Canva mais si j'ai le temps j'essaierais de trouver quelque chose de mieux à la fin.
-On va ajouter toutes ces images dans le dossier public et les ajouter dans le code. On fera attention de nommer les images avec le label du fruit correspondant. Par exemple <em>garlic.png</em> pour notre ail. Au lieu d'ajouter une couleur à nos fruits on va leur rajouter une image avec <strong>sprite</strong>.</p>
+On va ajouter toutes ces images dans le dossier public et les ajouter dans le code. On fera attention de nommer les images avec le label du fruit correspondant. Par exemple <em>garlic.webp</em> pour notre ail. Au lieu d'ajouter une couleur à nos fruits on va leur rajouter une image avec <strong>sprite</strong>.</p>
 <pre class="language-html"><code class="language-html">function ajouterFruit(){
     const randomFruit = randomFruit();
 
@@ -785,7 +785,7 @@ On va ajouter toutes ces images dans le dossier public et les ajouter dans le co
         isSleeping: true,
         render : {
             fillStyle: randomFruit.color,
-            sprite: {texture : '/${randomFruit.label}.png'}
+            sprite: {texture : '/${randomFruit.label}.webp'}
         },
     });
     monFruit = body;
@@ -793,8 +793,8 @@ On va ajouter toutes ces images dans le dossier public et les ajouter dans le co
 };</code></pre>
 <p>Il faut faire la même modification lorsque deux fruits se rencontrent et que le prochain fruit apparait.</p>
 <div style="display:flex">
-<div><img src="avecfruit.png"></div>
-<div><img src="avecfruit2.png"></div>
+<div><img src="avecfruit.webp"></div>
+<div><img src="avecfruit2.webp"></div>
 </div>
 <h2>4. Ajout d'un score pour la partie</h2>
 <p>On va rajouter un tableau de score pour notre jeu. D'abord j'ajoute une nouvelle variable <strong>score</strong> qui ajoutera les points à chaque fois que l'on ajout un fruit dans notre boite.</p>
@@ -920,7 +920,7 @@ function updateScore(points) {
                 newfruit.radius,
                 {render: {
                     fillStyle: newfruit.color,
-                    sprite: { texture: `/${newfruit.label}.png` },
+                    sprite: { texture: `/${newfruit.label}.webp` },
                 },
             label : newfruit.label,
         });
@@ -935,8 +935,8 @@ function updateScore(points) {
 });</code></pre>
 <p>J'améliore un peu l'hmtl et j'obtiens ça :</p>
 <div style="display:flex">
-<div><img src="amelioration.png"></div>
-<div><img src="ameliorationavecscore.png"></div>
+<div><img src="amelioration.webp"></div>
+<div><img src="ameliorationavecscore.webp"></div>
 </div>
 <p>Ensuite j'ai changé les couleurs de la boite et du fond et j'ai rajouté un bouton pour lancer une nouvelle partie. Pour cela j'ai supprimé tous les corps autre que les constituants de la boite et mis le score à zero lorsque le joueur clique sur le bouton.</p>
 <pre class="language-html"><code class="language-html">document.getElementById('newGameButton').addEventListener('click', () => {
@@ -948,7 +948,7 @@ function updateScore(points) {
     ajouterFruit();
  } );</code></pre>
 <div style="display:flex">
-<div><img src="nouvellescouleuretnouvellepartie.png"></div>
+<div><img src="nouvellescouleuretnouvellepartie.webp"></div>
 </div>
 <h3>Conclusion et améliorations possibles</h3>
 <p>Le jeu final est très proche du jeu auquel on joue sur téléphone, néanmoins de nombreux choses peuvent être améliorés.</p>

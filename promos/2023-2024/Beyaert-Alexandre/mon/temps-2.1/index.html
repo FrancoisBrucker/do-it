@@ -330,9 +330,9 @@ A<span class="token punctuation">[</span>A <span class="token operator">></span>
 plt<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span>A<span class="token punctuation">,</span> cmap<span class="token operator">=</span>plt<span class="token punctuation">.</span>cm<span class="token punctuation">.</span>gray<span class="token punctuation">)</span>
 plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 <p>Voici l'image d'origine :
-<img src="image_origine.jpg" alt="Image d'origine">
+<img src="image_origine.webp" alt="Image d'origine">
 Et ici l'image traitée :
-<img src="zoom_et_blanc.jpg" alt="Image zoomée et éclaircié"></p>
+<img src="zoom_et_blanc.webp" alt="Image zoomée et éclaircié"></p>
 <h3>Algèbre linéaire avec les tableaux</h3>
 <p>A+B : addition classique
 A*B : produit terme à terme
@@ -401,8 +401,8 @@ plt<span class="token punctuation">.</span>legend<span class="token punctuation"
 plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
 <span class="token comment"># sauvegarde dans le répertoire</span>
-plt<span class="token punctuation">.</span>savefig<span class="token punctuation">(</span><span class="token string">'figure_type.png'</span><span class="token punctuation">)</span></code></pre>
-<p><img src="figure_type.jpg" alt="Figure type"></p>
+plt<span class="token punctuation">.</span>savefig<span class="token punctuation">(</span><span class="token string">'figure_type.webp'</span><span class="token punctuation">)</span></code></pre>
+<p><img src="figure_type.webp" alt="Figure type"></p>
 <p>Il est également possible d'afficher plusieurs graphique avec subplot.</p>
 <pre class="language-python"><code class="language-python">plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
@@ -422,7 +422,7 @@ plt<span class="token punctuation">.</span>plot<span class="token punctuation">(
 plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span>
 plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token punctuation">,</span> np<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span>
 plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token punctuation">,</span> np<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
-<p><img src="subplot.jpg" alt="Utilisation de subplot"></p>
+<p><img src="subplot.webp" alt="Utilisation de subplot"></p>
 <h3>Différents graphiques</h3>
 <p>Afin de visualiser les différents graphiques que l'on peut tracer avec matlpolib, nous allons nous servir du dataset iris flower qui contient 150 exemples de fleurs d'iris répartis en 3 classes.
 4 variables permettent alors de classer la fleur :</p>
@@ -450,12 +450,12 @@ il y a <span class="token number">3</span> classes</code></pre>
 <pre class="language-python"><code class="language-python">plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>x<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> x<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> c<span class="token operator">=</span>y<span class="token punctuation">,</span> alpha<span class="token operator">=</span><span class="token number">0.5</span><span class="token punctuation">,</span> s<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">)</span>
 plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">'longueur sépale'</span><span class="token punctuation">)</span>
 plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">'largeur sépale'</span><span class="token punctuation">)</span></code></pre>
-<p><img src="scatter.jpg" alt="Classification avec scatter"></p>
+<p><img src="scatter.webp" alt="Classification avec scatter"></p>
 <p><strong>Visualisation 3D avec mpl_toolkits</strong></p>
 <pre class="language-python"><code class="language-python"><span class="token keyword">from</span> mpl_toolkits<span class="token punctuation">.</span>mplot3d <span class="token keyword">import</span> Axes3D
 ax <span class="token operator">=</span> plt<span class="token punctuation">.</span>axes<span class="token punctuation">(</span>projection<span class="token operator">=</span><span class="token string">'3d'</span><span class="token punctuation">)</span>
 ax<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>x<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> x<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> x<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> c<span class="token operator">=</span>y<span class="token punctuation">)</span></code></pre>
-<p><img src="visu3D.jpg" alt="Visualisation 3D"></p>
+<p><img src="visu3D.webp" alt="Visualisation 3D"></p>
 <pre class="language-python"><code class="language-python">f <span class="token operator">=</span> <span class="token keyword">lambda</span> x<span class="token punctuation">,</span> y<span class="token punctuation">:</span> np<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token operator">+</span> np<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>x<span class="token operator">+</span>y<span class="token punctuation">)</span>
 X <span class="token operator">=</span> np<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span>
 Y <span class="token operator">=</span> np<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span>
@@ -464,7 +464,7 @@ Z <span class="token operator">=</span> f<span class="token punctuation">(</span
 
 ax <span class="token operator">=</span> plt<span class="token punctuation">.</span>axes<span class="token punctuation">(</span>projection<span class="token operator">=</span><span class="token string">'3d'</span><span class="token punctuation">)</span>
 ax<span class="token punctuation">.</span>plot_surface<span class="token punctuation">(</span>X<span class="token punctuation">,</span> Y<span class="token punctuation">,</span> Z<span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'plasma'</span><span class="token punctuation">)</span></code></pre>
-<p><img src="surface.jpg" alt="Visualisation 3D d'une surface"></p>
+<p><img src="surface.webp" alt="Visualisation 3D d'une surface"></p>
 <p><strong>Contour plots</strong></p>
 <pre class="language-python"><code class="language-python">f <span class="token operator">=</span> <span class="token keyword">lambda</span> x<span class="token punctuation">,</span> y<span class="token punctuation">:</span> np<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token operator">+</span> np<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>x<span class="token operator">+</span>y<span class="token punctuation">)</span><span class="token operator">*</span>np<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
 X <span class="token operator">=</span> np<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span>
@@ -475,8 +475,8 @@ plt<span class="token punctuation">.</span>contour<span class="token punctuation
 
 plt<span class="token punctuation">.</span>contourf<span class="token punctuation">(</span>X<span class="token punctuation">,</span> Y<span class="token punctuation">,</span> Z<span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'RdGy'</span><span class="token punctuation">)</span>
 plt<span class="token punctuation">.</span>colorbar<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
-<p><img src="contour_plot.jpg" alt="Contour plot">
-<img src="contour_plotv2.jpg" alt="Contour plot V2"></p>
+<p><img src="contour_plot.webp" alt="Contour plot">
+<img src="contour_plotv2.webp" alt="Contour plot V2"></p>
 <p><strong>Histogramme</strong></p>
 <pre class="language-python"><code class="language-python">plt<span class="token punctuation">.</span>hist<span class="token punctuation">(</span>x<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> bins<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">)</span>
 plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">'longueur sépale'</span><span class="token punctuation">)</span>
@@ -486,8 +486,8 @@ plt<span class="token punctuation">.</span>hist2d<span class="token punctuation"
 plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">'longueur sépale'</span><span class="token punctuation">)</span>
 plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">'largeur sépale'</span><span class="token punctuation">)</span>
 plt<span class="token punctuation">.</span>colorbar<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
-<p><img src="histogramme.jpg" alt="Histogramme des longueurs de sépale">
-<img src="histogramme2d.jpg" alt="Histogramme 2D des longueurs et largeurs de sépale"></p>
+<p><img src="histogramme.webp" alt="Histogramme des longueurs de sépale">
+<img src="histogramme2d.webp" alt="Histogramme 2D des longueurs et largeurs de sépale"></p>
 <h2>4. Bibliothèque Pandas</h2>
 <pre class="language-python"><code class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd</code></pre>
 <p>La bibliothèque Pandas permet de d'effectuer de l'analyse de données de manière simple et intuitive.
@@ -500,7 +500,7 @@ Pour mettre en lumière les possibilités de la bibliothèque Pandas, je vous pr
 <span class="token comment"># .csv : pd.read_csv()</span>
 <span class="token comment"># .json : pd.read_json()</span>
 <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span></code></pre>
-<p><img src="titanic.jpg" alt="Aperçu du dataset Titanic"></p>
+<p><img src="titanic.webp" alt="Aperçu du dataset Titanic"></p>
 <p><strong>Fonctions utiles</strong></p>
 <pre class="language-python"><code class="language-python">df<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># Afficher le début du DataFrame</span>
 df<span class="token punctuation">.</span>describe<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># Statistiques sur le DataFrame</span>
@@ -529,8 +529,8 @@ Index<span class="token punctuation">(</span><span class="token punctuation">[</
 <span class="token comment"># cf image retournée ci-dessous</span>
 <span class="token operator">>></span><span class="token operator">></span>df_bis<span class="token punctuation">.</span>describe<span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token comment"># cf image retournée ci dessous</span></code></pre>
-<p><img src="dataset_bis.jpg" alt="Nouveau dataset">
-<img src="describe.jpg" alt="Describe"></p>
+<p><img src="dataset_bis.webp" alt="Nouveau dataset">
+<img src="describe.webp" alt="Describe"></p>
 <p>On peut remarquer via le &quot;describe&quot; que 1309 lignes sont présentes dans les 2 premières colonnes contre 1046 dans la troisième.
 Il manque des données concernant l'âge de certains passagers, 2 options sont alors envisageable pour palier ce problème :</p>
 <ul>
@@ -545,7 +545,7 @@ pclass
 <span class="token number">2</span>    <span class="token number">261</span>
 
 <span class="token operator">>></span><span class="token operator">></span>df_bis<span class="token punctuation">.</span>groupby<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'sex'</span><span class="token punctuation">,</span> <span class="token string">'pclass'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span>mean<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">#cf image retournée ci-dessous</span></code></pre>
-<p><img src="groupby.jpg" alt="Utilité de la fonction groupby"></p>
+<p><img src="groupby.webp" alt="Utilité de la fonction groupby"></p>
 <p><strong>Combinaison Matplotlib et Pandas</strong>
 Pandas fonctionne en collaboration avec Matplotlib, il va donc être possible de réaliser des graphiques simples sur le dataframe.</p>
 <pre class="language-python"><code class="language-python">df<span class="token punctuation">.</span>plot<span class="token punctuation">(</span><span class="token punctuation">)</span>
@@ -557,7 +557,7 @@ pd<span class="token punctuation">.</span>plotting<span class="token punctuation
 
 <span class="token comment"># répartition des âges du DataFrame</span>
 <span class="token operator">>></span><span class="token operator">></span>df_bis<span class="token punctuation">[</span><span class="token string">'age'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>hist<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
-<p><img src="histo_ages.jpg" alt="Répartition des âges"></p>
+<p><img src="histo_ages.webp" alt="Répartition des âges"></p>
 <h2>5. Conclusion</h2>
 <p>En somme, l'utilisation des bibliothèques NumPy, Matplotlib et Pandas s'avère essentielle pour l'analyse de données.
 NumPy facilite la manipulation des données, Matplotlib offre des outils graphiques puissants, et Pandas simplifie le traitement des données tabulaires.</p>

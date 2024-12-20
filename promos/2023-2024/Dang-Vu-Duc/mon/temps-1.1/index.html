@@ -175,7 +175,7 @@ window<span class="token punctuation">.</span>show<span class="token punctuation
 app<span class="token punctuation">.</span><span class="token keyword">exec</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 </code></pre>
 <p>L'exécution de ce premier code ouvre cette fenêtre:</p>
-<p><img src="Image1.png" alt="Fenêtre basique"></p>
+<p><img src="Image1.webp" alt="Fenêtre basique"></p>
 <p>Comme on peut le voir, la classe <strong>QMainWindow</strong> permet de créer une fenêtre, qui va contenir tout les autres éléments que l'on veut.</p>
 <h3>QPushButton</h3>
 <p>Cette classe permet de créer des boutons avec lesquels l'utilisateur peut interagir. Dans l'exemple suivant, on va faire apparaître une fenêtre avec un bouton au milieu:</p>
@@ -190,7 +190,7 @@ window<span class="token punctuation">.</span>setCentralWidget<span class="token
 window<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
 app<span class="token punctuation">.</span><span class="token keyword">exec</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 <p>L'execution de ce code affiche la fenêtre suivante:</p>
-<p><img src="Image2.png" alt="Fenêtre basique avec un bouton"></p>
+<p><img src="Image2.webp" alt="Fenêtre basique avec un bouton"></p>
 <p>Pour l'instant, il ne se passe rien lorsque l'on clique sur ce bouton. C'est parce que on n'a pas associé d'action à ce bouton. Pour se faire, on va utiliser la méthode <em>clicked.connect</em> de la classe <strong>QPushButton</strong>. Cette méthode permet d'associer une autre méthode au bouton: lorsque l'utilisateur va cliquer sur ce bouton, ce dernier va envoyer un signal au programme et va exécuter la méthode que l'on a renseigné en argument:</p>
 <pre class="language-python"><code class="language-python"><span class="token keyword">from</span> PySide6<span class="token punctuation">.</span>QtWidgets <span class="token keyword">import</span> QApplication<span class="token punctuation">,</span> QMainWindow<span class="token punctuation">,</span> QPushButton
 <span class="token keyword">import</span> sys
@@ -242,7 +242,7 @@ app<span class="token punctuation">.</span><span class="token keyword">exec</spa
     <span class="token keyword">def</span> <span class="token function">button_clicked</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Le bouton a été cliqué!"</span><span class="token punctuation">)</span></code></pre>
 <p>Ce code fait apparaître la fenêtre suivante:</p>
-<p><img src="Image3.png" alt="Test boutons cliquables"></p>
+<p><img src="Image3.webp" alt="Test boutons cliquables"></p>
 <p>La classe <strong>QVBoxLayout</strong> permet de créer un layout vertical où tout les éléments sont centrés verticalement.</p>
 <h3>MenuBar</h3>
 <p>La différence entre <strong>QWidget</strong> et <strong>QMainWindow</strong> est qu'avec cette dernière classe, il est possible d'ajouter plusieurs éléments, notamment une barre de menu en haut de la fenêtre. Pour cela, nous allons utiliser la méthode <strong>MenuBar</strong>. Cette classe a de nombreuses méthodes, par exemple la méthode addMenu qui permet d'ajouter des onglets dans la barre de menu, ou bien encore la méthode addAction qui permet d'associer des actions à un onglet. A l'image des boutons, on peut également associer des méthodes pour que ces actions produisent quelque chose, grâce à la méthode triggered.connect:</p>
@@ -279,7 +279,7 @@ app<span class="token punctuation">.</span><span class="token keyword">exec</spa
         <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Le fichier a été enregistré"</span><span class="token punctuation">)</span>
 </code></pre>
 <p>Ce code ouvre la même fenêtre que précédemment, mais avec un onglet &quot;Fichier&quot;. Lorsque l'on passe la souris dessus, un menu déroulant apparaît et lorque l'on clique sur &quot;enregistrer&quot;, un voit print &quot;Le fichier a été enregistré&quot;:</p>
-<p><img src="Image4.png" alt="Image menu déroulant"></p>
+<p><img src="Image4.webp" alt="Image menu déroulant"></p>
 <div class="quote relative drop-shadow  py-2 pr-2 rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-amber-800 bg-amber-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-amber-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -299,7 +299,7 @@ app<span class="token punctuation">.</span><span class="token keyword">exec</spa
         message<span class="token punctuation">.</span>setDefaultButton<span class="token punctuation">(</span>QMessageBox<span class="token punctuation">.</span>Ok<span class="token punctuation">)</span>
         message<span class="token punctuation">.</span><span class="token keyword">exec</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 <p>Lorsque l'on clique sur un des deux boutons, le popup suivant apparaît:</p>
-<p><img src="Image5.png" alt="Popup"></p>
+<p><img src="Image5.webp" alt="Popup"></p>
 <p>Encore une fois, il est possible de faire bien plus de choses avec cette fenêtre popup, tout est documenté sur le site de Qt.</p>
 <h3>QLabel et QLineEdit</h3>
 <p>La classe <strong>QLabel</strong> permet de mettre des labels (c'est-à-dire du texte) dans la fenêtre, et la classe <strong>QLineEdit</strong> permet d'afficher un champ où l'utilisateur peut rentrer du texte. Ce texte peut être récupéré grâce à la méthode <em>text</em> de la classe <strong>QLineEdit</strong>. Voici un exemple d'utilisation de ces deux classes (on ajoute le code suivant dans l'initialisation de la classe <em>Test_button</em>):</p>
@@ -323,13 +323,13 @@ self<span class="token punctuation">.</span>show<span class="token punctuation">
 <span class="token keyword">def</span> <span class="token function">valider</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
   <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Nom:"</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>line_edit<span class="token punctuation">.</span>text<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
 <p>L'exécution de ce code fait apparaître notre fenêtre test, mais avec en plus un champ à remplir. Quand on clique sur le bouton valider, on voit que l'information du nom a bien été print:</p>
-<p><img src="Image6.png" alt="Image QLabel et QLineEdit"></p>
+<p><img src="Image6.webp" alt="Image QLabel et QLineEdit"></p>
 <p>On remarque l'utilisation de la classe <strong>QHBoxLayout</strong> pour mettre le label, le champ à remplir et le bouton valider côte-à-côte. Ensuite, on a rajouté ce layout au layout vertical principal.</p>
 <h2>Utilisation de Qt Designer</h2>
 <h3>Création d'une interface graphique sur Qt Designer</h3>
 <p>Il existe bien plus de classes disponibles avec Qt. Il peut-être difficile de se retrouver parmi tout cela, et trouver les bonnes méthodes pour faire ce que l'on veut. Il existe ainsi un outil pour pallier à ce problème: <strong>Qt Designer</strong>. Ce logiciel est disponible en open source sur le <a href="https://qt.io">site de Qt</a>. Grâce à cet outil, on peut placer tout les éléments possibles comme on le souhaite dans une fenêtre.
 Pour illustrer l'utilisation de cet outil, nous allons créer une fenêtre pour jouer à un jeu de carte basique: la bataille. Pour cela, on doit télécharger un dossier avec des images de cartes à jouer. Ensuite, on créé une <strong>MainWindow</strong> sur Qt Designer.</p>
-<p><img src="Image7.png" alt="Image QT Deigner"></p>
+<p><img src="Image7.webp" alt="Image QT Deigner"></p>
 <p>On peut voir ci-dessus à quoi ressemble le terminal de QT Designer. Sur le côté droit, il y a l'endroit pour modifier les propriétés de chaque objet; sur la gauche, il y a tout les objets que l'on peut utiliser. Il suffit de les cliquer-glisser sur l'interface. On peut également changer les couleurs, on encore assigner des images aux objets (dans notre cas, les images de cartes).
 J'ai choisi un fond vert pour représenter le tapis de jeu. Pour charger une image sur un label (par exemple ici, une image de dos de carte), il faut cliquer sur cet élément et changer la &quot;pixmap&quot; dans les options du label (sur le côté gauche).</p>
 <h3>Utilisation de l'interface dans un programme</h3>
@@ -399,11 +399,11 @@ J'ai choisi un fond vert pour représenter le tapis de jeu. Pour charger une ima
     <span class="token keyword">def</span> <span class="token function">play</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
         card_dealer <span class="token operator">=</span> random<span class="token punctuation">.</span>choice<span class="token punctuation">(</span>self<span class="token punctuation">.</span>deck<span class="token punctuation">)</span>
         self<span class="token punctuation">.</span>deck<span class="token punctuation">.</span>remove<span class="token punctuation">(</span>card_dealer<span class="token punctuation">)</span>
-        pixmap_dealer <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'PNG-cards/</span><span class="token interpolation"><span class="token punctuation">{</span>card_dealer<span class="token punctuation">.</span>name<span class="token punctuation">}</span></span><span class="token string">.png'</span></span><span class="token punctuation">)</span>
+        pixmap_dealer <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'PNG-cards/</span><span class="token interpolation"><span class="token punctuation">{</span>card_dealer<span class="token punctuation">.</span>name<span class="token punctuation">}</span></span><span class="token string">.webp'</span></span><span class="token punctuation">)</span>
         self<span class="token punctuation">.</span>DealerCard<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap_dealer<span class="token punctuation">)</span>
         card_player <span class="token operator">=</span> random<span class="token punctuation">.</span>choice<span class="token punctuation">(</span>self<span class="token punctuation">.</span>deck<span class="token punctuation">)</span>
         self<span class="token punctuation">.</span>deck<span class="token punctuation">.</span>remove<span class="token punctuation">(</span>card_player<span class="token punctuation">)</span>
-        pixmap_player <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'PNG-cards/</span><span class="token interpolation"><span class="token punctuation">{</span>card_player<span class="token punctuation">.</span>name<span class="token punctuation">}</span></span><span class="token string">.png'</span></span><span class="token punctuation">)</span>
+        pixmap_player <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'PNG-cards/</span><span class="token interpolation"><span class="token punctuation">{</span>card_player<span class="token punctuation">.</span>name<span class="token punctuation">}</span></span><span class="token string">.webp'</span></span><span class="token punctuation">)</span>
         self<span class="token punctuation">.</span>PlayerCard<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap_player<span class="token punctuation">)</span>
         self<span class="token punctuation">.</span>CardsLeft<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>deck<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string"> cartes restantes"</span></span><span class="token punctuation">)</span>
 
@@ -428,7 +428,7 @@ J'ai choisi un fond vert pour représenter le tapis de jeu. Pour charger une ima
         self<span class="token punctuation">.</span>dealer_count <span class="token operator">=</span> <span class="token number">0</span>
         self<span class="token punctuation">.</span>PlayerCount<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string">"Le joueur a 0 points"</span><span class="token punctuation">)</span>
         self<span class="token punctuation">.</span>DealerCount<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string">"Le dealer a 0 points"</span><span class="token punctuation">)</span>
-        pixmap <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string">'PNG-cards/dos.png'</span><span class="token punctuation">)</span>
+        pixmap <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span><span class="token string">'PNG-cards/dos.webp'</span><span class="token punctuation">)</span>
         self<span class="token punctuation">.</span>DealerCard<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
         self<span class="token punctuation">.</span>PlayerCard<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
         self<span class="token punctuation">.</span>newdeck<span class="token punctuation">(</span><span class="token punctuation">)</span>
@@ -438,8 +438,8 @@ J'ai choisi un fond vert pour représenter le tapis de jeu. Pour charger une ima
         self<span class="token punctuation">.</span>value <span class="token operator">=</span> value
         self<span class="token punctuation">.</span>name <span class="token operator">=</span> name</code></pre>
 <p>L'exécution de ce code fait apparaître dans un premier temps une fenêtre demandant au joueur de rentrer son nom. Une fois que le joueur a validé son nom, la méthode &quot;valider&quot; change le Label du joueur pour y mettre son nom, avec la méthode setText.</p>
-<p><img src="Image8.png" alt="Fenêtre nom joueur"></p>
-<p><img src="Image9.png" alt="Fenêtre bataille"></p>
+<p><img src="Image8.webp" alt="Fenêtre nom joueur"></p>
+<p><img src="Image9.webp" alt="Fenêtre bataille"></p>
 <p>Ce jeu de bataille est donc bien fonctionnel. Il compte les points à chaque tour et met bien à jour chaque texte.</p>
 <h2>Conclusion</h2>
 <p>Comme on a pu le voir, Qt permet de faire des interfaces graphiques de tout genre. Il existe une multitude de classes et de méthodes, je n'ai ici que présenté une infime partie de ce qui est possible. Cependant, avec ces principales classes, il est possible de faire les applications les plus basiques, comme par exemple le jeu de bataille que j'ai implémenté en application de ce MON (ce code python se trouve dans le dossier GitHub). De plus, si l'on veut découvrir encore plus de choses sur Qt, il peut être intéressant de parcourir le site de la documentation de Qt, ainsi que le Qt Designer pour voir tout les éléments possibles.</p>

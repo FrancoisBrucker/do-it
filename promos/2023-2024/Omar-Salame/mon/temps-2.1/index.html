@@ -147,7 +147,7 @@
 <pre class="language-js"><code class="language-js"><span class="token comment">// Exemple de JSX</span>
 <span class="token keyword">const</span> element <span class="token operator">=</span> <span class="token operator">&lt;</span>h1<span class="token operator">></span>Bonjour<span class="token punctuation">,</span> React <span class="token operator">!</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span><span class="token punctuation">;</span></code></pre>
 <p>On commence par créer une page simple avec deux composants Header et Main. qui intègre deux composants, à savoir Header et Main. Le composant Header englobe une barre de navigation, et le composant Main comporte un titre accompagné d'une liste non ordonnée.
-<img src="tuto1.png" width="500" height="550"></p>
+<img src="tuto1.webp" width="500" height="550"></p>
 <p>Maintenant que je me suis familiarisé avec ces notions basiques de React, il est temps de mettre en place une application React. Pour cela il faut executer cette commande dans le terminal pour créer et ce déplacer dans le répertoire créé:</p>
 <pre class="language-bash"><code class="language-bash">npx create-react-app nom-du-projet
 <span class="token builtin class-name">cd</span> nom-du-projet</code></pre>
@@ -178,12 +178,12 @@
 <h2>Props <a id="section-3"></a></h2>
 <p>Une fois que l'infrastructure de base de ton application React est en place, il est crucial de comprendre le concept de &quot;props&quot; (propriétés). Les props sont un mécanisme essentiel dans React qui permet de transmettre des données d'un composant parent à un composant enfant. Cela facilite la communication entre les différents composants de ton application.</p>
 <p>En React, chaque composant peut accepter des props en tant que paramètres. Ces props sont définies dans le composant parent et peuvent être passées aux composants enfants pour influencer leur comportement ou affichage. Les props sont immuables, ce qui signifie qu'une fois qu'elles sont définies, elles ne peuvent pas être modifiées par le composant qui les reçoit.
-<img src="tuto2.png" width="200" height="550"></p>
+<img src="tuto2.webp" width="200" height="550"></p>
 <h2>Résultats <a id="section-4"></a></h2>
 <p>J'ai consacré du temps à explorer cette fonctionnalité, car elle m'a offert une certaine souplesse dans le processus de développement, évitant ainsi la nécessité de coder en dur chaque élément de la page. Je peux simplement créer une fonction telle que celle-ci :</p>
 <pre class="language-js"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> Star <span class="token keyword">from</span> <span class="token string">"../images/star.png"</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> Euro <span class="token keyword">from</span> <span class="token string">"../images/euro.png"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Star <span class="token keyword">from</span> <span class="token string">"../images/star.webp"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Euro <span class="token keyword">from</span> <span class="token string">"../images/euro.webp"</span><span class="token punctuation">;</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">Joueurs</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
     <span class="token keyword">return</span><span class="token punctuation">(</span>
@@ -202,7 +202,7 @@
     <span class="token punctuation">)</span>
 <span class="token punctuation">}</span></code></pre>
 <p>Et en integrant les données je peux avoir ce résultat:
-<img src="tuto3.png" width="600" height="550"></p>
+<img src="tuto3.webp" width="600" height="550"></p>
 
 
 </article>

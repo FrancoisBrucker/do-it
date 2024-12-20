@@ -161,7 +161,7 @@ Le prototypage permet d'hériter des attributs et des méthodes d'autres objets 
         this.interets <span class="token operator">=</span> interets<span class="token punctuation">;</span>
 
     <span class="token builtin class-name">let</span> personne1 <span class="token operator">=</span> new Personne<span class="token punctuation">(</span><span class="token string">'Jean'</span>, <span class="token string">'Biche'</span>, <span class="token number">32</span>, <span class="token string">'neutre'</span>, <span class="token punctuation">[</span><span class="token string">'musique'</span>, <span class="token string">'tricot'</span>, <span class="token string">'boxe'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> //personne1 hérite des attributs de Personne<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
-<p>Nous avons aussi vu comment modifier ce prototypage selon la chaine de prototypage. Tous les objets hérite des prototypes de 'Object()' qui est l'objet original disons.  <img src="../Images/Chaine_prototypage.png"><br>
+<p>Nous avons aussi vu comment modifier ce prototypage selon la chaine de prototypage. Tous les objets hérite des prototypes de 'Object()' qui est l'objet original disons.  <img src="../Images/Chaine_prototypage.webp"><br>
 Nous pouvons aussi rajouter des méthodes à notre constructeur 'Personne' avec la structure :</p>
 <pre class="language-bash"><code class="language-bash">Personne.prototype.aurevoir <span class="token operator">=</span> <span class="token function-name function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   alert<span class="token punctuation">(</span>this.nom.prenom + <span class="token string">' est sorti. Au revoir !'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -201,7 +201,7 @@ Nous voyons aussi une méthode de récupération de JSON sur github grâce à l'
 var request <span class="token operator">=</span> new XMLHttpRequest<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 request.open<span class="token punctuation">(</span><span class="token string">'GET'</span>, requestURL<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>Nous voyons aussi un exemple permettant de créer une page web grâce aux données récoltées sous format JSON, cet exemple est particulièrement intéressant pous son mélange CSS et JS dans la structure &quot;document.createElement&quot;<br>
-<img src="../Images/json-superheroes.png"></p>
+<img src="../Images/json-superheroes.webp"></p>
 <ol start="5">
 <li>Pratique de construction d'objets</li>
 </ol>
@@ -301,7 +301,7 @@ Nous voyons finalement un exemple de récupération et d'utilisation des donnée
         :D 
     <span class="token operator">&lt;</span>/p<span class="token operator">></span></code></pre>
 <p>Voici à quoi ressemble mon site : <br>
-<img src="../Images/Premier_site.png"></p>
+<img src="../Images/Premier_site.webp"></p>
 
 
 </article>

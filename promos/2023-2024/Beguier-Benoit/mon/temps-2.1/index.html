@@ -193,7 +193,7 @@
 </ul>
 <p>Ces exercices représentaient selon moi le meilleur moyen de me remettre dans la syntaxe Python. Bien que Python soit assez intutif, certains mots-clés m'échappaient (<em>dir</em>, <em>break</em>, <em>continue</em>, ...). Les exercices sont d'abord très simples ce qui permet de se refaire la main, puis ils se corsent (très légèrement) pour aborder quelques détails, commandes et méthodes. J'ai aussi consulté en profondeur la documentation sur les listes car j'utilise fréquemment ce type d'objets.
 Je recommande à tous de faire ces exercices. Ils m'ont pris deux heures, car j'ai systématiquement survolé la documentation des types et des commandes que je maîtrisais mal.</p>
-<p><img src="W3.png" alt="W3"></p>
+<p><img src="W3.webp" alt="W3"></p>
 <h3>Échauffement (2 heures 30)</h3>
 <p>J'ai ensuite effectué le cours de Python de M. Brucker accessible <a href="https://francoisbrucker.github.io/cours_informatique/cours/coder-en-python/">ici</a>. Je me suis attardé sur les parties Variables, Fonctions, Listes et Notebook.
 Je retiens notamment la partie sur les listes en compréhension (dont la documentation est disponible <a href="https://docs.python.org/fr/3/tutorial/datastructures.html#list-comprehensions">ici</a>), les arrays (dont la documentation est disponible <a href="https://numpy.org/doc/stable/reference/generated/numpy.array.html">ici</a>), les Notebook et la partie <em>Pour aller plus loin</em>.
@@ -210,7 +210,7 @@ J'ai effectué l'ensemble des exercices proposés par M. Brucker sur les pages q
 <p>Suite aux recommandations d'<a href="https://www.facebook.com/olivier.bastide.902">Olivier Bastide</a>, qui, après avoir suivi ses semaines de filières métier en ADAD, m'a chanté les louanges de la bibliothèque <a href="https://seaborn.pydata.org/">Seaborn</a>, je décide de lui faire confiance et d'apprendre à utiliser cette bibliothèque. Basée sur matplotlib, cette bibliothèque bénéficie donc de l'intégration sur tous les environnements supportés par matplotlib, ce qui est très pratique. Seaborn est plutôt orientée statistique et analyse des données, ce qui me convient parfaitement pour ce que je veux en faire. Il ne suffit que d'un</p>
 <pre class="language-python"><code class="language-python">pip install seaborn</code></pre>
 <p>pour installer la bibliothèque.</p>
-<p><img src="Seaborn.png" alt="Seaborn"></p>
+<p><img src="Seaborn.webp" alt="Seaborn"></p>
 <h3>Analyse de la documentation fournie sur le site Seaborn (2 heures)</h3>
 <p>J'ai d'abord fait un tour sur la page <a href="https://seaborn.pydata.org/tutorial/introduction">Introduction</a> de Seaborn. Une rapide présentation des possibilités permises par la bibliothèque sont montrées et on a une première approche avec les méthodes de la bibliothèque.</p>
 <p>L'ensemble des exemples fournis par Seaborn utilisent des <em>datasets</em> pré-existants. Il est possible de les consulter avec la commande</p>
@@ -240,7 +240,7 @@ J'ai effectué l'ensemble des exercices proposés par M. Brucker sur les pages q
  <span class="token string">'titanic'</span><span class="token punctuation">]</span></code></pre>
 <p>Je m'attarde ensuite sur la partie <a href="https://seaborn.pydata.org/tutorial/distributions.html">Visualizing distributions of data</a> car c'est ce que j'aimerais effectuer dans la suite de ce MON.
 J'apprends d'abord à paramétrer l'affichage des histogrammes, dans les cas simples et dans les cas de données multiples. Seaborn permet par exemple de sélectionner <strong>très facilement</strong> le mode d'affichage de données multiples sur un même graphique. En jouant sur deux paramètres, on peut alors empiler (<em>stack</em>) les barres des données au lieu de les superposer, les faire afficher en <em>step</em>, ou encore les afficher côte-à-côte.</p>
-<p><img src="histo.png" alt="histo"></p>
+<p><img src="histo.webp" alt="histo"></p>
 <p>Nous abordons aussi le cas des distributions à deux variables. J'ai trouvé cette partie très intéressante car elle lie statistiques et programmation. J'ai légèrement survolé la partie sur les distributions marginales, qui ne m'intéressent pas spécialement dans mon étude.</p>
 <p>Je retiens les fonctions suivantes :</p>
 <ul>
@@ -253,7 +253,7 @@ J'apprends d'abord à paramétrer l'affichage des histogrammes, dans les cas sim
 <pre class="language-python"><code class="language-python">penguins <span class="token operator">=</span> sns<span class="token punctuation">.</span>load_dataset<span class="token punctuation">(</span><span class="token string">"penguins"</span><span class="token punctuation">)</span>
 sns<span class="token punctuation">.</span>pairplot<span class="token punctuation">(</span>penguins<span class="token punctuation">)</span></code></pre>
 <p><strong>Output :</strong>
-<img src="pairplot.png" alt="pairplot"></p>
+<img src="pairplot.webp" alt="pairplot"></p>
 <h4>Vidéos Youtube (1 heure)</h4>
 <p>J'ai ensuite décidé de regarder plusieurs vidéos Youtube sur la bibliothèque Seaborn, car en général il y a souvent des applications ou des pratiques que je n'aurais pas soupconnées en lisant uniquement la documentation.</p>
 <p>J'ai d'abord regardé la vidéo de Gaelim Holland : <a href="https://www.youtube.com/watch?v=LnGz20B3nTU"><em>How to Visualize Data in Python Using Seaborn | Seaborn Tutorial.</em></a>. Honnêtement je ne la recommande pas, car le contenu n'est pas très différent de la documentation, et il commet quelques imprécisions malvenues (par exemple dans <code>import seaborn as sb</code>, il affirme que <code>sb</code> est une variable alors que c'est un alias).</p>
@@ -263,7 +263,7 @@ sns<span class="token punctuation">.</span>pairplot<span class="token punctuatio
 <p>J'ai ensuite regardé la vidéo <a href="https://www.youtube.com/watch?v=6GUZXDef2U0"><em>Seaborn Tutorial : Seaborn Full Course</em></a> de Derek Banas. Claire et directe, elle permet de revoir toutes les possibilités offertes par Seaborn. Bonus : son notebook qu'il rend disponible dans la description.</p>
 <h2>Mise en pratique en reprenant l'exemple du MON 1.1</h2>
 <p>Dans mon <a href="https://francoisbrucker.github.io/do-it/promos/2023-2024/Beguier-Benoit/mon/temps-1.1/">MON 1.1</a>, j'avais utilisé le langage R pour analyser les données issues du Grand Prix du Japon et afficher un graphique montrant la position de deux pilotes en foction du tour de la course.</p>
-<p><img src="MON_R.png" alt="MON"></p>
+<p><img src="MON_R.webp" alt="MON"></p>
 <p>Je souhaite cette fois améliorer le graphique obtenu et le temps machine grâce à Seaborn. Je vais pour ce MON me baser sur les données du dernier Grand Prix de la saison qui s'est déroulé à Abu Dhabi le 26/11/2023. J'ai récupéré les données sur le site <a href="https://pitwall.app/analysis/compare-lap-times">Pitwall</a> et je crée un fichier .csv avec les données.</p>
 <p>J'ai réalisé tout ce travail dans un Notebook que vous pourrez trouver ci-dessous.</p>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-purple-500 bg-purple-100">
@@ -274,7 +274,7 @@ sns<span class="token punctuation">.</span>pairplot<span class="token punctuatio
 <p><a href="https://github.com/FrancoisBrucker/do-it/blob/main/src/promos/2023-2024/Beguier-Benoit/mon/temps-2.1/MON2_1.ipynb">Lien du Notebook</a></p>
 </div></div>
 <p>Je suis satisfait de la finalité de mon MON et de la bibliothèque Seaborn. Je n'ai fait ici qu'effleurer les possibilités qu'elle offre car je n'ai pas fait d'études statistiques, mais il en résulte une très grande facilité d'utilisation.</p>
-<p><img src="final.png" alt="final"></p>
+<p><img src="final.webp" alt="final"></p>
 
 
 </article>

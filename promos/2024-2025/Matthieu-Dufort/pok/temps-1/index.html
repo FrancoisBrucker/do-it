@@ -231,7 +231,7 @@
 <h2>Présentation de l'entreprise exemple fictive</h2>
 <p>L'entreprise exemple fictive que nous allons utiliser tout au long de l'exercice se nomme <strong>BatiBase</strong>. C'est une entreprise qui travaille dans le secteur du bâtiment en faisant du génie civil. Elle intervient sur de grands chantiers partout en France et ne possède actuellement pas de système digital 🥵. En effet, elle s'est développée très vite après sa création et n'a pas eu le temps de mettre à jour ses systèmes. Il faut donc urgemment y remédier !</p>
 <p>Pour cela, BatiBase a fait appel à nous afin de construire leur base de données. Ils ne connaissent pas bien les bases de données et nous laissent donc libre choix sur tout, tant que cela couvre leur activité et que la base est scalable. Nous allons donc devoir choisir un modèle d'architecture et le construire en suivant les recommandations d'experts.</p>
-<p><img src="logoBatiBase.png" alt="logo BatiBase"><em>(ChatGPT)</em></p>
+<p><img src="logoBatiBase.webp" alt="logo BatiBase"><em>(ChatGPT)</em></p>
 <h2>Utilisation d'une base de données</h2>
 <p>Elle est utilisée dans le monde digital pour conserver des données sur des personnes physiques, morales, ainsi que sur des objets, etc.</p>
 <p>Elle permet à la personne qui collecte les données d'analyser des comportements, de savoir qui sont ses clients, etc. Les exemples d'utilisation sont infinis.</p>
@@ -265,19 +265,19 @@
 <p>On utilise essentiellement le SQL pour exploiter ces données, car le SQL est basé sur l'algèbre relationnelle, qui permet d'effectuer des jonctions entre les objets à l'aide de clés.</p>
 <p>Ce système atteint cependant ses limites pour les très grandes entreprises, car il se base sur les propriétés ACID <em>(voir structure transactionnelle)</em>.</p>
 <p>Voici un schéma de cette représentation :</p>
-<p><img src="RDBMS_structure.png" alt="Schéma de la base relationnelle"><em>(File : RDBMS structure.png - Wikimedia Commons, 2010)</em></p>
+<p><img src="RDBMS_structure.webp" alt="Schéma de la base relationnelle"><em>(File : RDBMS structure.webp - Wikimedia Commons, 2010)</em></p>
 <p>On observe bien le procédé de stockage sous forme de tableau. On peut aussi voir le fonctionnement plus classique d'une base de données avec les processus qui se déroulent dans une instance et qui sont ensuite reportés sur le disque de la base tout en conservant des logs.</p>
 <h3>Base de données NoSQL</h3>
 <p>Cette architecture est née suite à un problème de quantité de données et de gestion multiple. En effet, certaines entreprises (Google, Facebook, Amazon, etc.) ont commencé à avoir des besoins de gestion de données en quantité astronomique, et un modèle de données relationnelles sur un serveur ne peut pas répondre à ces besoins en raison de limites comme les règles ACID ou le besoin de travailler sur de nombreux serveurs en même temps. Il en est alors résulté ce modèle qui se base davantage sur la quantité de données que sur leur organisation. On retrouve donc un modèle à une dimension avec souvent des tableaux associatifs (une clé et une valeur) et des millions d'entrées par jour.</p>
 <p>On peut citer les systèmes de base de données de Google : BigTable ; Amazon : Dynamo ; LinkedIn : Voldemort ; Facebook : HBase.</p>
 <p>Si l'on se penche sur le fonctionnement de LinkedIn, par exemple, on retrouve un système de clé qui s'associe à un index, lui-même associé à la clé et à la valeur, comme sur le schéma ci-dessous :</p>
-<p><img src="tableHachage.png" alt="Table de Hachage"><em>(File : HASHTB08.svg — Wikimedia Commons, s. d.)</em></p>
+<p><img src="tableHachage.webp" alt="Table de Hachage"><em>(File : HASHTB08.svg — Wikimedia Commons, s. d.)</em></p>
 <p>Le tableau n'a alors pas d'ordre et l'on retrouve l'index très rapidement pour ensuite accéder au reste. Ceci permet de gagner en efficacité et en temps tout en permettant la répartition des données sur différents serveurs. Pour constituer ce genre de tableau, on utilise des fonctions de hachage que l'on doit définir de sorte à éviter les duplicats et à garantir que deux clés n'aient pas le même index.</p>
 <h3>Base de données orientée document</h3>
 <p>Une base de données orientée document est une base de données semi-structurée qui stocke les données par collection présentant des propriétés et des types différents. Les données sont donc organisées par groupe, et le principal désavantage est qu'elles ne sont pas organisées entre elles. Cependant, la flexibilité de cette base la rend très utile pour stocker des données hétérogènes. Ce modèle répond donc très bien aux demandee d'agilité actuelles.</p>
 <h3>Base de données orientée Graph</h3>
 <p>Cette base a une organisation sous la forme de graphique où chaque entité correspond à un nœud, et les entités sont liées entre elles par des branches. Le but de ce type de base de données est de représenter les données de façon interconnectée. L'avantage principal de ce modèle est qu'il permet de fouiller en profondeur dans des bases sans avoir à utiliser une infinité de jointures. Cette base permet aux utilisateurs de se promener dans le graphique facilement pour passer d'un enregistrement à un autre. On peut associer cela aux connexions des réseaux sociaux où les personnes se connectent entre elles.</p>
-<p><img src="BDDorientegraph.png" alt="Base de donnée orientée graph"><em>(Vauquier, 2022)</em></p>
+<p><img src="BDDorientegraph.webp" alt="Base de donnée orientée graph"><em>(Vauquier, 2022)</em></p>
 <h2>Structure transactionnelle</h2>
 <p>Une transaction est l'action de passer une donnée d'un endroit à l'autre (cela comprend l'envoi, le trajet, la réception et la création de la donnée au nouvel endroit).</p>
 <h3>ACID</h3>
@@ -305,16 +305,16 @@
 <h3>Diagramme entité-relation</h3>
 <p>Dans ce type de diagramme, il existe les objets, leurs associations et les attributs. Il peut être utilisé pour représenter une base de données, mais aussi une organisation d'entreprise ou autre. Les objets sont sous forme de carrés, et leur façon d'interagir ensemble passe par un losange représentant leur lien. On peut ensuite ajouter des attributs sur les objets en utilisant des ronds.</p>
 <p>On précise dans ce modèle le type de lien entre les objets (1, n), (n, 1), (n, n).</p>
-<p><img src="ER_Diagram.png" alt="Diagramme entité relation"><em>(Database-design — Diagrammes de Modèle D’entité-relation Dans Visio, s. d.)</em></p>
+<p><img src="ER_Diagram.webp" alt="Diagramme entité relation"><em>(Database-design — Diagrammes de Modèle D’entité-relation Dans Visio, s. d.)</em></p>
 <h3>Diagramme de structure de données</h3>
 <p>Ce diagramme est apparenté au modèle entité-association, mais il est plus focalisé sur la représentation des bases de données. Ce diagramme se concentre sur les liens entre les éléments à l'intérieur des entités, et non plus sur les entités en général.</p>
 <p>Il utilise une convention bien précise pour définir les liens entre les éléments. Il est possible de personaliser ces liens en simplifiant en utilisant la convention précédente de (1, n), (n, 1), (n, n) :</p>
-<p><img src="FlecheType.png" alt="Lien entre les éléments"><em>(Qu’est-ce Qu’un Diagramme Entité-association ? , s. d.)</em></p>
+<p><img src="FlecheType.webp" alt="Lien entre les éléments"><em>(Qu’est-ce Qu’un Diagramme Entité-association ? , s. d.)</em></p>
 <p>Ce qui permet d'aboutir à des diagrammes très précis qui permettent de bien comprendre la conception de la base de données. Il peut être intéressant de commencer par un diagramme entité-relation avant de passer à ce type de diagramme pour bien illustrer tous les procédés et liens facilement, puis se pencher ensuite sur le côté plus technique.</p>
-<p><img src="DiagrammeStructure.png" alt="Diagramme de Strucure de donnée"><em>(Qu’est-ce Qu’un Diagramme Entité-association ? , s. d.)</em></p>
+<p><img src="DiagrammeStructure.webp" alt="Diagramme de Strucure de donnée"><em>(Qu’est-ce Qu’un Diagramme Entité-association ? , s. d.)</em></p>
 <h3>Arbre de données</h3>
 <p>Cette représentation permet de montrer la hiérarchie qu'il existe entre des objets. On peut l'utiliser pour représenter tout ce qui découle d'un certain objet des diagrammes précédents ou plus directement pour une base particulièrement centrée sur un objet.</p>
-<p><img src="arbre_1.png" alt="Diagramme en arbre"><em>(Structures de Données Hiérarchiques : Les Arbres, s. d.)</em></p>
+<p><img src="arbre_1.webp" alt="Diagramme en arbre"><em>(Structures de Données Hiérarchiques : Les Arbres, s. d.)</em></p>
 <h2>Bonnes pratiques pour la réalisation d'un base</h2>
 <p>Pour une base de données bien réalisée, il est essentiel d'éviter les données erronées qui falsifient par la suite l'utilisation de la base. Il faut donc garantir la fiabilité des données avec les méthodes du paragraphe suivant.</p>
 <p>Pour une bonne conception d'architecture, il est recommandé de se centrer sur les objets afin d'organiser proprement les informations. Il faut ensuite bien considérer et créer tous les liens nécessaires aux utilisateurs entre les objets en utilisant une clé unique. En effet, une base bien conçue doit permettre aux utilisateurs d'accéder à toutes les informations dont ils ont besoin à tout moment. Il est donc important de bien comprendre tous les processus d'une entreprise avant de concevoir leur base de données.</p>
@@ -376,14 +376,14 @@
 <p>Enfin, les compétences permettront de choisir les employés nécessaires en fonction de leurs expériences, pour la bonne réalisation d'un chantier. Chaque matériau et machine nécessitent des compétences pour pouvoir les utiliser. Tous ces objets seront donc liés entre eux.</p>
 <p>Ainsi, nous allons pouvoir créer une première représentation de la base sous forme de diagramme entité-relation, puis de diagramme de structure de données.</p>
 <h2>Représentation en diagramme entité relation</h2>
-<p><img src="ERBati.png" alt="BatiBase entité relation"><em>(Diagramme entité relation de la société BatiBase)</em></p>
+<p><img src="ERBati.webp" alt="BatiBase entité relation"><em>(Diagramme entité relation de la société BatiBase)</em></p>
 <p>Ce diagramme permet d'avoir déjà un premier bon aperçu du fonctionnement de la base de données pour ensuite entrer dans le détail.</p>
 <p>Réaliser ce diagramme permet aussi de prendre conscience des manquements ou des erreurs potentiels dans les liens. C'est en faisant ce diagramme que j'ai pu observer l'absence d'un objet liant les machines aux employés pour savoir quel ouvrier peut conduire quelle machine. L'objet compétence permet donc de créer ce lien.</p>
 <p>Nous allons maintenant pouvoir entrer dans le détail.</p>
 <h2>Représentation en diagramme de structure de données</h2>
 <p>Pour réaliser ce diagramme, nous allons commencer à réfléchir a tous les champs de chaque objet.</p>
 <p>Pour faire cela, j'ai décidé d'utiliser le site <a href="https://dbdiagram.io/d">dbdiagram</a>. Je n'ai jamais utilisé ce site. Cependant grâce à la <a href="https://dbml.dbdiagram.io/docs">documentation</a> et aux exemples en ligne j'ai pu le prendre en main rapidement. Il permet de faire un rendu propre d'une base de données afin de pouvoir la construire ensuite rapidement.</p>
-<p><img src="SDBati.png" alt="BatiBase structure de données"><em>(Diagramme de structure de données de la société BatiBase)</em></p>
+<p><img src="SDBati.webp" alt="BatiBase structure de données"><em>(Diagramme de structure de données de la société BatiBase)</em></p>
 <p>Le code de ce schéma est retrouvable <a href="DataBaseFile.zip">ici</a>.</p>
 <p>Le but de ce schéma est de pouvoir visualiser tous les liens, les clés et les champs de la base de données afin de pouvoir la construire. Ce schéma permet aussi de transmettre au futur équipe qui travailleront dessus un plan clair du fonctionnement de la base afin de pouvoir la faire évoluer en cas de besoin.</p>
 <h2>Construction de la base de données</h2>

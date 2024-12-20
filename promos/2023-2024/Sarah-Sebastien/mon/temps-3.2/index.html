@@ -182,10 +182,10 @@ Voilà donc comment ce MON a vu le jour.</p>
 <div class="pl-8 mr-8">
 <p>Le protocole http est <strong>sans état</strong>, ie : il ne conserve ni ne stocke les sessions des clients. Donc, le client est responsable du stockage des informations de session pour les demandes ultérieures. Ainsi, lorsque le client fait une requête, il doit inclure ses informations de session au serveur pour l'authentification ou la validation.</p>
 </div></div>
-<img width="350" src="def_cookies.png">
+<img width="350" src="def_cookies.webp">
 <p><a href="https://blog.larapulse.com/web/protect-cookies">Source</a></p>
 <h3>Les attributs d'un cookie</h3>
-<img width="400" src="info_cookie.png">
+<img width="400" src="info_cookie.webp">
 <ul>
 <li><strong>ID de session</strong> : un <strong>long</strong> string <strong>aléatoire</strong> utilisé for la gestion d'une session, qui sert à identifier de manière <strong>unique</strong> un client qui essaie d'accéder à un serveur</li>
 <li><strong>date d'expiratiion</strong> : plus ou moins longue
@@ -303,21 +303,21 @@ En théorie, un cookie associé à un site web <strong>ne peut pas être envoyé
 <h3>Récupérer un ID de session : tentative 1</h3>
 <p>Il faut se rendre sur cette adresse : <strong><a href="https://altoromutual.com">altoromutual.com</a></strong>, via <strong>Chrome</strong> (je n'ai pas réussi sur Mozilla).</p>
 <p>Une fois arrivé sur la page, on fait <em>clique droit &gt; inspecter</em>.
-<img width="350" src="inspecter.png"></p>
+<img width="350" src="inspecter.webp"></p>
 <p>On ouvre l'onglet <em>Application</em> pour accéder aux cookies, et on clique sur l'URL du site.
 On voit alors qu'il n'y a qu'une ligne.</p>
-<img src="pasidentifier.png">
+<img src="pasidentifier.webp">
 <p>Il faut ensuite se connecter <em>(identifiant : admin, et mot de passe : admin)</em>. Si on regarde le chemin de la page, on voit qu'on arrive sur la page :</p>
 <pre><code>https://altoromutual.com/bank/main.jsp
 </code></pre>
 <p>On voit bien que cette page est une page <strong>réservée aux utilisateurs</strong>, où est écrit <em>&quot;Hello Admin User&quot;</em>.</p>
 <p>Si on se penche maintenant sur les cookies du site, on voit alors apparaître le cookie de connexion qui vient d'être envoyé par le serveur, comme on s'est connecté.</p>
-<img src="identifier.png">
+<img src="identifier.webp">
 <p>Maintenant, si on ouvre un onglet de <em>Navigation privée</em>, et qu'on revient sur <a href="https://altoromutual.com">cette page</a> et qu'on essaie de se connecter à cette page :</p>
 <pre><code>https://altoromutual.com/bank/main.jsp
 </code></pre>
 <p>On voit que c'est impossible, car je n'ai pas les droits pour accéder à cette page, comme je ne suis pas identifiée. <strong>MAIS</strong>, si je recopie les cookies de session que j'avais obtenus au début en me connectant, dans les cookies de la page privée, et que j'essaie à nouveau d'accéder à la page administrateur, la magie opère ...</p>
-<img src="page_administrateur.png">
+<img src="page_administrateur.webp">
 <h3>Récupérer un ID de session : tentative 2</h3>
 <p>En continuant mes recherches, je suis tombée sur la méthode du <strong>Cross site scripting</strong>(ou XXS).En fait, cette technique part d'une question simple : <em>et si on a accès au Java Script d'un site, qu'est ce qu'on pourrait faire ?</em> XSS consiste donc à injecter un code JavaScript malveillant, dans une autre page web. Ce code est exécuté par les victimes et permet aux attaquants de contourner les contrôles d'accès et d'usurper l'identité des utilisateurs. Il permet notamment facilement, d'extraire des informations et <strong>des cookies</strong>.</p>
 <p>Il existe normalement une politique qui empêche un site Web de lire ou d'écrire des données sur un autre site, c'est la <strong>SOP</strong> (same origin policy). Elle vérifie <strong>3 conditions</strong> dans l'origine du site web :</p>
@@ -387,14 +387,14 @@ Pour mon chemin de navigation, j'ai varié les plaisirs :</p>
 <p>Au final j'ai navigué sur près de <strong>9 sites</strong>, en revenant sur <em>Google</em> entre chaque recherche, mais aucune des recherches que j'ai faites n'avait de lien avec la précédente.</p>
 <h3>Expérience 1 : on accepte tous les cookies</h3>
 <h4>Résultats au global</h4>
-<img width="350" src="diagramme_cookie_1.png">
+<img width="350" src="diagramme_cookie_1.webp">
 <p>Si on regarde les statistiques annoncées par le logiciel sur <strong>ma navigation</strong> :</p>
 <ul>
 <li>Sur les <strong>9 sites visités</strong>, <strong>76%</strong> d'entre eux ont déposé au moins un cookie.</li>
 <li>Ces cookies échangent potentiellement des informations avec <strong>28 domaines tiers</strong></li>
 </ul>
 <p>Si on se penche maintenant sur <strong>l'usage des cookies</strong>:
-<img width="350" src="diagramme_usage_cookies_1.png"></p>
+<img width="350" src="diagramme_usage_cookies_1.webp"></p>
 <div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
@@ -413,14 +413,14 @@ Pour mon chemin de navigation, j'ai varié les plaisirs :</p>
 </ul>
 <h3>Expérience 2: on refuse tous les cookies</h3>
 <h4>Résultats au global</h4>
-<img width="350" src="diagramme_cookie_2.png">
+<img width="350" src="diagramme_cookie_2.webp">
 <p>Si on regarde les statistiques annoncées par le logiciel sur <strong>ma navigation</strong> :</p>
 <ul>
 <li>Sur les <strong>9 sites visités</strong>, <strong>89%</strong> d'entre eux ont déposé au moins un cookie.</li>
 <li>Ces cookies échangent potentiellement des informations avec <strong>13 domaines tiers</strong></li>
 </ul>
 <p>Si on se penche maintenant sur <strong>l'usage des cookies</strong>:
-<img width="350" src="diagramme_usage_cookies_2.png"></p>
+<img width="350" src="diagramme_usage_cookies_2.webp"></p>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-red-500 bg-red-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>

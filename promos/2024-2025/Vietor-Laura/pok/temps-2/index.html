@@ -332,18 +332,18 @@
 <p>Ensuite, je dois gérer certaines données pour lesquelles un modèle relationnel m'a semblé idéal, j'ai donc cherché un ORM en Rust. J'ai trouvé en gros deux possibilités : Diesel et <a href="https://www.sea-ql.org/SeaORM/">SeaORM</a>. J'ai choisi Diesel parce qu'il supporte SQLite et parce que SeaORM utilise de la programmation asynchrone, avec laquelle je n'avais pas envie de m'embêter.</p>
 <h4>Maquette de l'interface graphique</h4>
 <p>Pour l'interface graphique, j'ai donc réalisé une maquette sur Figma :</p>
-<p><img src="recherches_edition.png" alt="">
-<img src="recherches_list.png" alt="">
-<img src="compteurs.png" alt=""></p>
+<p><img src="recherches_edition.webp" alt="">
+<img src="recherches_list.webp" alt="">
+<img src="compteurs.webp" alt=""></p>
 <h3>Second Sprint</h3>
 <h4>Base de données</h4>
 <p>J'ai commencé par définir mes entités pour la base de données : les recherches et les shinies. Diesel propose deux options : on peut soit choisir d'écrire les migrations en SQL, que Diesel &quot;traduit&quot; en Rust pour définir l'interface Rust utilisée pour interagir avec la base de données, soit choisir de définir cette interface et laisser Diesel traduire ça en SQL. J'ai choisi d'écrire du SQL :</p>
-<p><img src="sql_entites.png" alt=""></p>
+<p><img src="sql_entites.webp" alt=""></p>
 <p>Ce qui donne, une fois traduit par Diesel :</p>
-<p><img src="rust_tables.png" alt=""></p>
+<p><img src="rust_tables.webp" alt=""></p>
 <p>Ce sont ces deux représentations que l'on peut choisir d'écrire, et que Diesel peut générer pour nous.</p>
 <p>Cependant, il faut encore définir les objets Rust correspondants :</p>
-<p><img src="rust_structs.png" alt=""></p>
+<p><img src="rust_structs.webp" alt=""></p>
 <p>Rien de bien compliqué, mais il faut avouer que c'est assez verbeux puisqu'il faut essentiellement définir nos entités deux fois, alors que d'autres ORM tels que Doctrine en PHP sont capables de tout de tout générer à partir des objets définis dans le langage de programmation directement. De plus, on remarque que quand il y a des relations entres entités, Diesel ne les récupère pas automatiquement de la base de données à l'initialisation des objets Rust, donc on est obligé de le faire soi-même.</p>
 <h4>Interface graphique</h4>
 <p>Iced est basé sur l'architecture Elm, qui est une architecture pour créer des application interactives qui a initiallement émergé dans le langage Elm, un langage pour créer des applications web. Elle consiste à définir 4 choses :</p>
@@ -355,10 +355,10 @@
 </ul>
 <p>À cela s'ajoute une notion de tâches, qui seront exécutées de façon asynchrones et peuvent permettre d'aller récupérer des informations d'une API, interagir avec une base de données... mais je n'en ai pas utilisé dans mon application.</p>
 <p>De plus, Iced offre évidemment la possibilité de définir le style des éléments, mais j'ai trouvé la documentation très lacunaire sur ce point dès que l'on cherche à faire quelque chose de complexe donc je n'ai pas réussi à complètement implémenter la maquette Figma, même si j'ai réussi à bien m'en rapprocher :</p>
-<p><img src="recherches_impl_detail.png" alt="">
-<img src="recherches_impl_2col.png" alt="">
-<img src="recherches_impl_3col.png" alt="">
-<img src="compteurs_impl.png" alt=""></p>
+<p><img src="recherches_impl_detail.webp" alt="">
+<img src="recherches_impl_2col.webp" alt="">
+<img src="recherches_impl_3col.webp" alt="">
+<img src="compteurs_impl.webp" alt=""></p>
 <p>Au final j'ai trouvé Iced assez facile d'utilisation, à condition de bien comprendre les concepts que l'on retrouve en Rust : j'ai quelques fois eu du mal à implémenter certaines choses à cause des notions de propriété et des durées de vie qui m'empêchaient parfois d'utiliser la méthode qui me paraissait la plus intuitive.</p>
 <p>Cependant, comme pour le style, mais pas que, la documentation est parfois peu verbeuse et l'apprentissage se fait majoritairement au travers des exemples et des informations de types, et j'aurais apprécié des widgets un peu plus complexes tels qu'un sélecteur de date, qui est une fonctionnalité que j'ai finalement dû abandonner dans les 20h allouées à ce projet.</p>
 

@@ -214,8 +214,8 @@ On écrit un Dockerfile qui cherche l'image node de dockerhub, qui va chercher l
 <p>CMD [ &quot;npm&quot;,&quot;start&quot; ]</p>
 <p>On lance ensuite un container de cette image en spécifiant le port 3000 et voila, on peut aller voir notre front sur localhost:3000.</p>
 <div style=" display: grid;grid-template-columns: repeat(2, minmax(0, 1fr))">
-  <img src="../images/container.png" alt="DockerDeskop" style="height: 200px; margin: 0 auto; border: 0;grid-column : 1 ;grid-row : 1">
-  <img src="../images/front.png" alt="Front" style="height: 200px; margin: 0 auto; border: 0;grid-column : 2;grid-row : 1">
+  <img src="../images/container.webp" alt="DockerDeskop" style="height: 200px; margin: 0 auto; border: 0;grid-column : 1 ;grid-row : 1">
+  <img src="../images/front.webp" alt="Front" style="height: 200px; margin: 0 auto; border: 0;grid-column : 2;grid-row : 1">
 </div>
 <h3>DockerCompose</h3>
 <p>Pour containériser une application, il est plus utile de découper l'applications en différentes parties et de containériser chacune des composantes et de les faire communiquer. Pour cela, on utilise un fichier Dockercompose, qui construit plusieurs containers à partir de plusieurs images et qui les relies, d'une traite.</p>
@@ -270,7 +270,7 @@ driver : local</p>
 </ul>
 <p>Ensuite, il relie les ports entre eux et fait passer les variables d'environnement, qui sont par défaut stockées dans le .env</p>
 <p>Le résultat :</p>
-<img src="../images/front+back.png" alt="Composer" style="height: 200px; margin: 0 auto; border: 0">
+<img src="../images/front+back.webp" alt="Composer" style="height: 200px; margin: 0 auto; border: 0">
 <p>Le Front communique avec le back et donc notre page Todo n'est plus toute blanche mais elle fetch les tasks présentes dans le back flask et sa base de données sqlite.</p>
 
 

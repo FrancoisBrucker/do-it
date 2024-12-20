@@ -217,7 +217,7 @@ Les tables sont constituées de différentes colonnes que l'on appelle <strong>c
 <p>Le cours que je souhaite réaliser sur Kaggle repose sur l'utilisation de BigQuery avec Python pour permettre de faire des requêtes SQL sur de grands datasets (Google Cloud).</p>
 <p>Il faut donc commencer par comprendre comment faire des requêtes avec BigQuery.</p>
 <p><em><strong>Schéma de la structure de bigquery</strong></em>
-<img src="bigquery_schema.jpg" alt="schema"></p>
+<img src="bigquery_schema.webp" alt="schema"></p>
 <p>Les premières étapes à suivre sont celles pour aller chercher son dataset choisi au préalable :</p>
 <ul>
 <li>Importer <code>bigquery</code></li>
@@ -327,7 +327,7 @@ client<span class="token punctuation">.</span>list_rows<span class="token punctu
 </svg>
 </summary>
 <div class="mx-8 pb-2 cursor-auto select-text">
-<p><img src="list_rows.jpg" alt="rows"></p>
+<p><img src="list_rows.webp" alt="rows"></p>
 </div>
 </details>     
 </div>
@@ -374,11 +374,11 @@ titles <span class="token operator">=</span> query_job<span class="token punctua
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center" rowspan="2"><img src="pet_records.jpg" alt="table"></td>
-<td style="text-align:center"><img src="select_from.jpg" alt="query"></td>
+<td style="text-align:center" rowspan="2"><img src="pet_records.webp" alt="table"></td>
+<td style="text-align:center"><img src="select_from.webp" alt="query"></td>
 </tr>
 <tr>
-<td style="text-align:center"><img src="select_from_where.jpg" alt="query"></td>
+<td style="text-align:center"><img src="select_from_where.webp" alt="query"></td>
 </tr>
 </tbody>
 </table>
@@ -604,14 +604,14 @@ query <span class="token operator">=</span> <span class="token triple-quoted-str
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center" rowspan="3"><img src="pet_records.jpg" alt="table"></td>
-<td style="text-align:center"><img src="count.jpg" alt="query"></td>
+<td style="text-align:center" rowspan="3"><img src="pet_records.webp" alt="table"></td>
+<td style="text-align:center"><img src="count.webp" alt="query"></td>
 </tr>
 <tr>
-<td style="text-align:center"><img src="count_groupby.jpg" alt="query"></td>
+<td style="text-align:center"><img src="count_groupby.webp" alt="query"></td>
 </tr>
 <tr>
-<td style="text-align:center"><img src="count_groupby_having.jpg" alt="query"></td>
+<td style="text-align:center"><img src="count_groupby_having.webp" alt="query"></td>
 </tr>
 </tbody>
 </table>
@@ -732,11 +732,11 @@ deleted_query<span class="token operator">=</span><span class="token triple-quot
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center" rowspan="2"><img src="pet_records.jpg" alt="table"></td>
-<td style="text-align:center"><img src="orderby.jpg" alt="query"></td>
+<td style="text-align:center" rowspan="2"><img src="pet_records.webp" alt="table"></td>
+<td style="text-align:center"><img src="orderby.webp" alt="query"></td>
 </tr>
 <tr>
-<td style="text-align:center"><img src="orderby_desc.jpg" alt="query"></td>
+<td style="text-align:center"><img src="orderby_desc.webp" alt="query"></td>
 </tr>
 </tbody>
 </table>
@@ -752,8 +752,8 @@ deleted_query<span class="token operator">=</span><span class="token triple-quot
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center"><img src="pet_records2.jpg" alt="table"></td>
-<td style="text-align:center"><img src="extract.jpg" alt="query"></td>
+<td style="text-align:center"><img src="pet_records2.webp" alt="table"></td>
+<td style="text-align:center"><img src="extract.webp" alt="query"></td>
 </tr>
 </tbody>
 </table>
@@ -770,25 +770,25 @@ deleted_query<span class="token operator">=</span><span class="token triple-quot
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center" rowspan="2"><img src="pet_records3.jpg" alt="table"></td>
-<td style="text-align:center"><img src="CTE.jpg" alt="query"></td>
+<td style="text-align:center" rowspan="2"><img src="pet_records3.webp" alt="table"></td>
+<td style="text-align:center"><img src="CTE.webp" alt="query"></td>
 </tr>
 <tr>
-<td style="text-align:center"><img src="with_as.jpg" alt="query"></td>
+<td style="text-align:center"><img src="with_as.webp" alt="query"></td>
 </tr>
 </tbody>
 </table>
 <h3>JOIN... ON</h3>
 <p>Enfin, la dernière fonctionnalité que l'on voit dans la formation, est le INNER JOIN. Cette fonction permet de faire des <strong>jointure de tables</strong> lorsque l'information que l'on recherche se trouve non pas dans une seule table mais dans plusieurs à la fois.</p>
 <p>Une jointure est une opération qui a pour but de relier deux tables en faisant correspondre des champs entre eux, comme sur l'illustration ci-dessous.</p>
-<p><img src="jointure.jpg" alt="jointure"></p>
+<p><img src="jointure.webp" alt="jointure"></p>
 <p>Pour récupérer le nom du propriétaire ET le nom de son animal, on fait une requête utilisant une jointure de cette manière :</p>
 <ul>
 <li><strong>Dans le FROM</strong>, on mentionne les deux tables en les séparant par le <strong>INNER JOIN</strong></li>
 <li>On fait un <strong>aliasing</strong> (&quot;AS&quot;) pour chaque table pour indiquer plus facilement à quelle table appartiennent les champs que l'on mentionne (bonne pratique qui sert notamment lorsque les deux tables contiennent les mêmes noms de champs)</li>
 <li>On indique après le <strong>ON</strong> les <strong>champs que l'on fait correspondre</strong></li>
 </ul>
-<p><img src="join.jpg" alt="join"></p>
+<p><img src="join.webp" alt="join"></p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
 <summary class="list-none py-0.5">
@@ -861,7 +861,7 @@ deleted_query<span class="token operator">=</span><span class="token triple-quot
 <div class="pl-8 mr-8">
 <p>Il existe plusieurs types de jointures, ici on utilise le INNER JOIN qui récupère uniquement les lignes où il y a une correspondance des champs dans les deux tables, car c'est peut-être le plus utile / le plus intuitif pour débuter (mais ce n'est pas toujours le cas). Pour mieux comprendre, c'est illustré sur le schéma ci-dessous.</p>
 </div></div>
-<p><img src="types_join.jpg" alt="schema"></p>
+<p><img src="types_join.webp" alt="schema"></p>
 <p><em><strong>Source : <a href="http://LearnSQL.fr">LearnSQL.fr</a></strong></em></p>
 <h3>Bilan</h3>
 <p>Et voilà ! Après avoir fait le tour de toutes ces fonctionnalités, on est déjà capables de faire tout un tas de requêtes plus ou moins complexes, ce qui était le but pour ce MON.</p>
@@ -1122,7 +1122,7 @@ num_trips_query <span class="token operator">=</span> <span class="token triple-
                                ) AS cumulative_trips
                       FROM trips_by_day
                   """</span></code></pre>
-<p><img src="cumul.jpg" alt="result"></p>
+<p><img src="cumul.webp" alt="result"></p>
 </div>
 </details>     
 </div>
@@ -1146,7 +1146,7 @@ num_trips_query <span class="token operator">=</span> <span class="token triple-
 </svg>
 </summary>
 <div class="mx-8 pb-2 cursor-auto select-text">
-<p><img src="nested.jpg" alt="nested"></p>
+<p><img src="nested.webp" alt="nested"></p>
 </div>
 </details>     
 </div>
@@ -1169,7 +1169,7 @@ num_trips_query <span class="token operator">=</span> <span class="token triple-
 </svg>
 </summary>
 <div class="mx-8 pb-2 cursor-auto select-text">
-<p><img src="repeated.jpg" alt="repeated"></p>
+<p><img src="repeated.webp" alt="repeated"></p>
 </div>
 </details>     
 </div>
@@ -1191,7 +1191,7 @@ num_trips_query <span class="token operator">=</span> <span class="token triple-
 </svg>
 </summary>
 <div class="mx-8 pb-2 cursor-auto select-text">
-<p><img src="combined.jpg" alt="combined"></p>
+<p><img src="combined.webp" alt="combined"></p>
 </div>
 </details>     
 </div>

@@ -132,7 +132,7 @@
 <p>Notre idée initiale est de créer un site web qui permettrait d'écrire de la musique sur une partition intéractive, et de collaborer à plusieurs sur une même partition. L'utilisateur pourrait créer sa partition, la modifier, et la partager à d'autres utilisateurs qui pourraient la modifier à leur tour (en temps réel ou non, cela dépend de la difficulté de l'implémentation et du temps que nous aurons pour le faire).</p>
 <h2>2. Première version de partition interactive</h2>
 <p>Nous avons utilisé un canvas HTML pour créer une première version de la partition, qui est composée pour le moment d'une portée de 5 lignes et d'une clé de sol.</p>
-<p><img src="partition_premiere_version.png" alt="Première version de la partition"></p>
+<p><img src="partition_premiere_version.webp" alt="Première version de la partition"></p>
 <p>Il est possible d'ajouter des notes en cliquant sur la portée, grâce à un <code>EventListener</code> lié au canvas qui détecte les clics. Les notes ont pour le moment toutes la même durée (ce sont des rondes) mais peuvent être placées à différentes hauteurs. Elles se placent les unes à la suite des autres et ne peuvent pas encore être supprimées.</p>
 <h2>3. To-do list pour la suite</h2>
 <ul>
@@ -175,13 +175,13 @@
 <h2>4. Avancées de la partition</h2>
 <h3>Ajouts à la partition</h3>
 <p>Nous avons ajouté de nouveaux symboles à la partition, et il est désormais possible de changer de mode d'édition avec les touches <code>a</code> (add note) et <code>d</code> (delete note). En mode suppression, il suffit de cliquer sur une note pour la supprimer et les notes restantes se repositionnent correctement.</p>
-<p><img src="partition_deuxieme_version.png" alt="Partition deuxième version"></p>
+<p><img src="partition_deuxieme_version.webp" alt="Partition deuxième version"></p>
 <p>Il reste à modifier la manière de saisir les notes pour que celles-ci puissent se placer à la place des symboles de silence et non pas en fin de partition.</p>
 <h3>Modification de la saisie des notes</h3>
 <p>Les notes peuvent désormais être placées uniquement à la place des silences ou à la place d'autres notes. On ne peut plus supprimer que les notes et elles sont alors remplacées par des silences.</p>
 <p>Les symboles de la portée peuvent être enregistrés et chargés à partir d'un format JSON grâce à des méthodes implémentées dans l'objet <code>Staff</code> (la portée).</p>
 <p>Dernière version de la partition :</p>
-<p><img src="partition_derniere_version.png" alt="Partition dernière version"></p>
+<p><img src="partition_derniere_version.webp" alt="Partition dernière version"></p>
 <h3>Difficultés rencontrées</h3>
 <ul>
 <li>Note grisée au survol de la partition</li>
@@ -235,15 +235,15 @@
 <p>En attendant de pouvoir faire des requêtes API sur un serveur, on va mettre les pages en ordre et faire initialiser le LocalStorage à chaque nouvelle page par le LocalStorage de la page précédente pour tester les fonctionnalités. On va considérer donc tout le temps les mêmes conditions.</p>
 <h2>6. Présentation du site et parcours des données</h2>
 <p>Tout d'abord, la première page est le login : ici, on va récupérer l'identifiant de l'utilisateur et son mot de passe, et vérifier qu'il correspond à la base de données.</p>
-<p><img src="page_login.png" alt="Page de login"></p>
+<p><img src="page_login.webp" alt="Page de login"></p>
 <p>Si les identifiants ne sont pas corrects, un message d'alerte s'affiche. S'ils sont corrects, on passe à la page suivante en conservant le nom de l'utilisateur et son Id. Cet Id nous permettra de savoir à quelles partitions l'utilisateur à accès.</p>
 <p>Ensuite on arrive sur la page d'accueil du site
-<img src="page_daccueil_premiere_version.png" alt="Page d'accueil première version">
+<img src="page_daccueil_premiere_version.webp" alt="Page d'accueil première version">
 On peut ici choisir si l'on veut créer une nouvelle partition ou accéder aux anciennes.</p>
 <p>Dans le deuxième cas, on est dirigé vers les partitions sauvegardées et qui sont accessibles à l'utilisateur connecté. Les partitions contiennent dans la sauvegarde l'Id des personnes qui y ont accès, et en particulier l'auteur. On peut aussi dans cette page chosir de finalement créer une nouvelle partition.</p>
-<p><img src="partitions_sauvegardees.png" alt="Partitions sauvegardées"></p>
+<p><img src="partitions_sauvegardees.webp" alt="Partitions sauvegardées"></p>
 <p>Si l'utilisateur a choisi sur la page précédente ou sur celle-ci, il se retrouve face à une partition vierge. Sinon il arrive directement sur la partition sauvegardée au préalable.</p>
-<p><img src="partition_derniere_version.png" alt="Partition dernière version"></p>
+<p><img src="partition_derniere_version.webp" alt="Partition dernière version"></p>
 <h3>Améliorations possibles</h3>
 <p>La plupart des améliorations concernant les données seront applicables lorsque l'on mettra le site sur un serveur, dans le second temps.</p>
 <ul>

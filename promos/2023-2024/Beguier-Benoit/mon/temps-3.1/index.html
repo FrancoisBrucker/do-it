@@ -155,36 +155,36 @@
 </ul>
 <h2>Introduction</h2>
 <p><em>CNC machines</em>, que l'on appelle machine CNC en français, est une machine contrôlée par ordinateur qui va usiner une pièce (en général un bloc de matière appelé <strong>brut</strong>). CNC est l'abréviation de <em>Computer Numerical Control</em> , c'est-à-dire commande numérique par ordinateur. Les machines CNC les plus répandues sont les fraiseuses, qui permettent d'usiner la pièce fixée par rotation des outils sur les axes de la machine, ou les tours, qui cette fois font tourner la pièce par rapport aux outils fixés. Les CNC sont en général à 3 axes (et donc travailler la pièce selon 2 plans), mais les plus perfectionnées bénéficient de 4 et 5 axes (avec 2 axes de rotation en plus). En gros, la topologie formée par une 3-axes est un cube, tandis que c'est une sphère par une 5-axes.</p>
-<p><img src="Fraiseuse.png" alt="Fraiseuse"></p>
+<p><img src="Fraiseuse.webp" alt="Fraiseuse"></p>
 <p>Source de l'image : <a href="http://fraiseusecnc.com">fraiseusecnc.com</a></p>
-<p><img src="5-axes.jpg" alt="5axe"></p>
+<p><img src="5-axes.webp" alt="5axe"></p>
 <p>Source de l'image : <a href="http://RPWorld.com">RPWorld.com</a></p>
 <p>L'usinage en CNC permet de jouir d'une grande précision d'usinage, que ce soit en surfaçage ou en alésage. Par exemple, c'est grâce à la CNC que l'on peut usiner convenablement un palier à roulements, surface demandant une très grande précision et admettant une tolérance très faible.</p>
-<p><img src="Palier.png" alt="Palier"></p>
+<p><img src="Palier.webp" alt="Palier"></p>
 <div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-orange-500 bg-orange-100">
 <svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
 <div class="pl-8 mr-8">
 <p>Et le G-code dans tout ça ?</p>
 </div></div>
 <p>Le G-code est le langage de transmission des consignes de commmandes à la CNC. Cela traduit les consignes de vitesse d'avance, de vitesse de rotation des outils et les points d'arrêts de la machine. Les différentes consignes sont divisées en séquence d'usinage.</p>
-<p><img src="gcode.png" alt="Gcode"></p>
+<p><img src="gcode.webp" alt="Gcode"></p>
 <p>Source de l'image : CNC <a href="http://Kitchen.com">Kitchen.com</a></p>
 <h2>Nomenclature des phases</h2>
 <p>Pour remettre les choses dans son contexte, l'usinage CNC est majoritairement utilisé en industrie. Cela permet d'usiner une pièce précise à partir d'un bloc de matière, appelé <strong>brut</strong>, par exemple un bloc d'aluminium. Il est nécessaire de définir en amont les différentes étapes de l'usinage, appelées <strong>phases</strong>. Une phase correspond à l'ensemble des étapes que peut réaliser la machine sans que l'homme intervienne. En effet, l'homme est quand même nécessaire dans l'usinage par ordinateur afin d'effectuer la <strong>MIse en Position (MIP)</strong> et le <strong>MAintien en Position (MAP)</strong> da la pièce en cours d'usinage. Afin que la pièce soit correctement usinée, elle doit être isostatique (6 degrés de libertés dans l'espace restreints) et bien positionnée ; c'est toujours le fruit du travail d'un opérateur.</p>
 <p>La <strong>nomenclature des phases</strong> est le document qui recense l'ensemble des phases de l'usinage, ainsi que les outils utilisés.</p>
 <p>Exemple de nomenclature des phases :</p>
-<p><img src="nomenclature.png" alt="nomenclature"></p>
+<p><img src="nomenclature.webp" alt="nomenclature"></p>
 <h2>Gamme d'usinage</h2>
 <p>La gamme d'usinage est un document qui recense chaque phase de l'usinage, et pour chaque phase les MIP et MAP nécessaires au bon déroulement.</p>
 <p>Exemple d'une gamme d'usinage :</p>
-<p><img src="gamme.png" alt="gamme"></p>
+<p><img src="gamme.webp" alt="gamme"></p>
 <h2>La Fabrication Assistée par Ordinateur</h2>
 <p>Actuellement, la création de G-code <em>ex nihilo</em> se fait de plus en plus rare. Les ingénieurs fabrication utilisent les outils de Fabrication Assistée par Ordinateur (FAO), tels que les logiciels Delmia (Dassault Système). Ces logiciels permettent de représenter le brut sur l'ordinateur, utiliser un clone numérique de la machine CNC utilisée, simuler les MIP et les MAP, et enfin obtenir la pièce usinée simulée par le logiciel.</p>
-<p><img src="fao.png" alt="fao"></p>
+<p><img src="fao.webp" alt="fao"></p>
 <p>J'ai effectué un test sur le logiciel Delmia sur la pièce suivante que j'ai créé moi-même :</p>
-<p><img src="upright.png" alt="upright"></p>
+<p><img src="upright.webp" alt="upright"></p>
 <p>Voici un extrait du résultat obtenu avec Delmia :</p>
-<p><img src="fao_exemple.jpg" alt="fao"></p>
+<p><img src="fao_exemple.webp" alt="fao"></p>
 <p>Le logiciel permet donc de générer le G-code fonctionnel, et de le tester en amont pour s'assurer que le résultat sera celui que l'on souhaite. Il est tout à fait possible d'écrire tout le G-code soit même, cependant ce n'est plus du tout la manière de faire actuelle et avec une fiabilité plus faible.</p>
 
 

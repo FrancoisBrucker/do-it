@@ -673,7 +673,7 @@
 </details>     
 </div>
 <p>Le résultat de cette simulation pour 10 millions de simulations est le suivant:</p>
-<p><img src="Image1.png" alt="Image1"></p>
+<p><img src="Image1.webp" alt="Image1"></p>
 <p>Ces résultats concordent presque parfaitement aux résultats théoriques que l'on peut retrouver sur cette <a href="https://en.wikipedia.org/wiki/Poker_probability">page Wikipédia dédiée</a>.</p>
 <h3>Classement des mains</h3>
 <p>On peut ensuite utiliser la méthode <em>get_all_average_winrates</em> pour avoir les taux de réussite associés à chacune des 169 mains distinctes possibles. Cette simulation est très lourde en calcul, puisqu'il faut confronter N fois chacune des 169 mains aux 1326 mains possibles. J'ai donc fait tourner le programme avec N = 5000 (ce qui fait plus d'1 milliard de simulations) et j'ai stocké ces résultats dans un fichier json qui sera chargé dans l'initialisation de la classe <strong>Poker_methods</strong>. Cette simulation a tourné pendant presque 8 heures. On crée donc une méthode pour afficher ces résultats. Il faut préciser le premier ran à afficher ainsi que le dernier, car il est impossible d'afficher les 169 mains sur un même graphique en barre sans que cela ne soit illisible.</p>
@@ -712,12 +712,12 @@
 </details>     
 </div>
 <p>Voici le classement des 20 meilleures mains obtenues:</p>
-<p><img src="Image2.png" alt="Image2"></p>
+<p><img src="Image2.webp" alt="Image2"></p>
 <p>La lettre T correspond au 10. La lettre &quot;s&quot; signifie que les deux cartes sont de la même couleur (de l'anglais &quot;suited&quot;) et la lettre &quot;o&quot; signifie que les deux cartes ne sont pas de la même couleur (de l'anglais &quot;offsuit&quot;). On retrouve bien la paire d'As qui est la meilleure main de départ, suivie de près les paires de Rois et de Dames.</p>
 <h2>Création des interfaces graphiques</h2>
 <p>Maintenant que l'on a tout les outils pour faire des simulations, on va à présent implémenter des interfaces graphiques pour interagir avec ces méthodes. Nous allons utiliser le module Qt de Python.</p>
 <p>Il faut tout d'abord designer les différentes fenêtres que l'utilisateur pourra utiliser. On utilise pour cela le logiciel Qt Designer, et on opte pour des designs simples. Voici un aperçu des 4 fenêtres dans le logiciel:</p>
-<p><img src="Image3.png" alt="Image3"></p>
+<p><img src="Image3.webp" alt="Image3"></p>
 <p>On créé ensuite une nouvelle classe <strong>UI_stats</strong> qui contiendra toutes les méthodes pour afficher les interfaces graphiques. Cette classe hérite des classes <strong>Poker_methods</strong> et <strong>Plot_stats</strong>. L'initialisation de cette classe permet de récupérer tout les éléments des interfaces designées (boutons, textes, barres de progression etc...) afin de les assigner à des attributs de notre classe. Les noms de ces attributs doivent être bien distinctes.</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
@@ -833,10 +833,10 @@
 </div>
 <h3>Fenêtre principale</h3>
 <p>La première fenêtre à faire est la fenêtre principale, qui agira comme un menu pour l'utilisateur. Cette fenêtre comporte pour l'instant 4 boutons qui mèneront chacun sur une autre fenêtre, en fonction de la statistique à afficher.</p>
-<p><img src="Image4.png" alt="Image4"></p>
+<p><img src="Image4.webp" alt="Image4"></p>
 <h3>Affichage des fréquences d'apparition des combinaisons</h3>
 <p>Ensuite, on crée la fenêtre pour afficher les fréquences d'apparition des combinaisons. Pour cela, on reprend simplement le code présenté précédemment, en rajoutant une variable qui suit la progression de la boucle, pour actualiser la barre de progression. Voici la fenêtre qui apparaît lorsque l'on clique sur le bouton &quot;Afficher les fréquences d'apparition des combinaisons&quot;:</p>
-<p><img src="Image5.png" alt="Image5"></p>
+<p><img src="Image5.webp" alt="Image5"></p>
 <p>L'utilisateur peur renseigner le nombre de simulations qu'il souhaite effectuer, ensuite la barre de progression évolue puis le graphique est affiché.</p>
 <h3>Affichage du classement des meilleures mains</h3>
 <p>Cette fenêtre permet à l'utilisateur de visualiser le classement des meilleures mains. Encore une fois, on réutilise le code précédemment réalisé, et on récupère les informations renseignées par l'utilisateur dans les champs textuels grâce aux méthodes <em>line_edit_plot_hands_ranking_first_rank_changed</em> et <em>line_edit_plot_hands_ranking_last_rank_changed</em>.</p>
@@ -880,7 +880,7 @@
 </details>     
 </div>
 <p>La fenêtre affichée est donc la suivante:</p>
-<p><img src="Image6.png" alt="Image6"></p>
+<p><img src="Image6.webp" alt="Image6"></p>
 <p>L'utilisateur peut rentrer le premier rang qu'il veut afficher et le dernier rang.</p>
 <h3>Affichage du taux de réussite d'une main face à une autre</h3>
 <p>La dernière fenêtre implémentée est celle qui permet au joueur d'obtenir le taux de réussite d'une main face à une autre. La sélection des 4 cartes se fait grâce à des menus déroulants. On doit vérifier que plusieurs cartes n'ont pas été choisies deux fois, sinon on affiche un message d'erreur. Enfin, l'utilisateur choisit un nombre de simulations souhaité, et on réutilise la méthode précédente en suivant la progression de la boucle.</p>
@@ -984,7 +984,7 @@
 </div>
 </details>     
 </div>
-<p><img src="Image7.png" alt="Image7"></p>
+<p><img src="Image7.webp" alt="Image7"></p>
 <h2>Bilan du premier sprint et prévisions du deuxième sprint</h2>
 <p>Les éléments du backlog du premier sprint ont été tous réalisés, sauf un élément qu'il faut ajouter à l'interface graphique (&quot;Obtenir un taux de réussite global d'une main&quot;). Voici un résumé du temps passé sur chaque item du backlog (temps réel effectué après la flèche -&gt;):</p>
 <ul>
@@ -1102,7 +1102,7 @@
 </details>     
 </div>
 <p>L'exécution de ce code donne le graphique suivant:</p>
-<p><img src="Image8.png" alt="Image8"></p>
+<p><img src="Image8.webp" alt="Image8"></p>
 <p>On observe un dégradé de couleurs: plus on augmente sur l'axe des abscisses et sur celui des ordonnées, plus le taux de réussite est important. De plus, on remarque que les paires servies, situées sur la diagonale, sont clairement des meilleures mains que les autres. Enfin, les mains associées ont un taux de réussite légèrement supérieur aux mains dépareillées.
 Il ne manque plus qu'à ajouter un bouton sur la fenêtre principale associé à l'affichage de cette image.</p>
 <h2>Création d'une aide à la décision</h2>
@@ -1138,7 +1138,7 @@ Il ne manque plus qu'à ajouter un bouton sur la fenêtre principale associé à
             self<span class="token punctuation">.</span>range_selected<span class="token punctuation">.</span>append<span class="token punctuation">(</span>combination<span class="token punctuation">)</span>
     self<span class="token punctuation">.</span>color_buttons<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 <p>La fin de la méthode fait appel à la méthode <em>color_buttons</em>, qui colore en vert ou en blanc les boutons correspondants aux combinaisons présentes dans la liste <em>range_selected</em>. Voici à quoi ressemble la fenêtre:</p>
-<p><img src="Image9.png" alt="Image9"></p>
+<p><img src="Image9.webp" alt="Image9"></p>
 <p>On arrive bien à sélectionner les mains unes par unes, ou bien une colonne ou une ligne entière d'un coup.</p>
 <p>D'autres éléments sont présents sur cette fenêtre:</p>
 <ul>

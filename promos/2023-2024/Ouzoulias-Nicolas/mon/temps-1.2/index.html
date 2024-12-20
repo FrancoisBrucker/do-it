@@ -193,9 +193,9 @@ valeur2 <span class="token operator">=</span> cell2<span class="token punctuatio
 <p>Maintenant que nous savons comment lire efficacement un tableau Excel nous allons chercher à le modifier depuis Python.</p>
 <p>La modification de la valeur d'une cellule se fait très facilement à l'aide une nouvelle fois de <code>.value</code>.</p>
 <p>Pour l'exemple nous avons initialement ce tableau :</p>
-<p><img src="excel_avant_modif.png" alt="Excel initial"></p>
+<p><img src="excel_avant_modif.webp" alt="Excel initial"></p>
 <p>Nous pouvons donc en utilisant la méthode précédent modifier une cellule en particulier comme par exemple la B2 et ainsi avoir :</p>
-<p><img src="excel_apres_modif.png" alt="Excel modifié"></p>
+<p><img src="excel_apres_modif.webp" alt="Excel modifié"></p>
 <p>Cependant notre valeur est désormais écrite en gras, comment cela se fait-il ?</p>
 <p>En effet en plus de simplement modifier la valeur nous pouvons modifier le style. Le code utilisé pour passer d'un tableau à l'autre a ici été :</p>
 <pre class="language-python"><code class="language-python"><span class="token keyword">import</span> openpyxl
@@ -231,7 +231,7 @@ cellule_somme<span class="token punctuation">.</span>value <span class="token op
 <p>Afin d'utiliser les différentes méthodes vues précédemment je vais reprendre le code sur lequel je travaillais lors de mon stage et pour lequel j'ai à peine utilisé <em>openpyxl</em>.</p>
 <p>Mon code sert à étudier des relevés de pression dans des canalisations, les données initiales que j'avais étaient donc un tableau Excel avec une colonne de dates et une autre de pressions.</p>
 <p>Après avoir importé les données dans Python et après de nombreux calculs j'obtenais un tableau correspondant à une matrice que j'affichais grâce à la bibliothèque <em>matplotlib.pyplot</em>.</p>
-<p><img src="graphe_python.png" alt="Graphe Python"></p>
+<p><img src="graphe_python.webp" alt="Graphe Python"></p>
 <p>Le tableau derrière cette matrice est rangé sous forme d'<em>array</em> dans mon code mais il peut être utile de l'avoir en Excel pour visualiser et le manipuler plus facilement pour les clients.</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
@@ -281,7 +281,7 @@ cellule_somme<span class="token punctuation">.</span>value <span class="token op
 </details>     
 </div>
 <p>On obtient alors le tableau Excel suivant :</p>
-<p><img src="matrice_excel1.png" alt="matrice Excel 1"></p>
+<p><img src="matrice_excel1.webp" alt="matrice Excel 1"></p>
 <p>Afin de le rendre plus visuel nous allons recréer une mise en page conditionnelle afin de recréer la matrice colorée obtenue sur Python.</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
@@ -358,7 +358,7 @@ cellule_somme<span class="token punctuation">.</span>value <span class="token op
 </div>
 </details>     
 </div>
-<p><img src="matrice_excel2.png" alt="matrice Excel 2"></p>
+<p><img src="matrice_excel2.webp" alt="matrice Excel 2"></p>
 <h2>IV. Conclusion</h2>
 <p>A travers ce MON j'ai pu mieux comprendre la bibliothèque <em>openpyxl</em> de Python et ainsi être plus apte à utilier facilement ce langage pour automatiser les tableaux Excel qui sont extrêmement présents dans le monde professionel.</p>
 <p>J'en ai profité pour améliorer le code de mon précédent stage et plonger plus en détail dans l'affichage des résultats.</p>

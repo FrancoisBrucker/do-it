@@ -164,9 +164,9 @@ Il faut d'abord faire la différence entre Power BI Desktop et Power BI Service 
 On va s'intéresser plus à Power BI Desktop en premier lieu.</p>
 <p><strong>Pour commencer</strong>
 Vous avez 3 fenêtres sur la colonne de gauche qui correspondent de haut en bas à votre page de rapport (Report View), votre base de données (Table View) et les liens entre les différentes tables et colonnes (Model View).
-<img src="fenetre.PNG"></p>
+<img src="fenetre.webp"></p>
 <p>Pour <strong>extraire</strong> une base de données qu'on va étudier, analyser puis visualiser, il suffit d'aller dans &quot;Get Data&quot;, puis de choisir ce qui vous intéresse.
-<img src="getdata.PNG"></p>
+<img src="getdata.webp"></p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
 <details class="group">
 <summary class="list-none py-0.5">
@@ -196,7 +196,7 @@ Vous avez 3 fenêtres sur la colonne de gauche qui correspondent de haut en bas 
 <h3>Table View</h3>
 <p><strong>Transformer avec Power Query Editor</strong>
 On peut d'abord consulter les profils des colonnes en faisant un clic droit sur les colonnes et en sélectionnant Column Quality (Valid - Error- Empty) et Column Distribution (Répartition des données entrées dans la colone) ou en allant dans View &gt; Cocher ces mêmes cases.</p>
-<img src="profile_distrib.PNG">
+<img src="profile_distrib.webp">
 <p>Puis changer la première ligne en titre si ce n'est pas fait avec &quot;Use First Row as Headers&quot;.
 En faisant ça, une ligne apparaît avec <strong>Promoted Headers</strong> sur la droite dans Query Settings (Si vous ne voyez pas cette fenêtre, il suffit d'aller dans View &gt; Cliquer sur Query Settings). Cette fenêtre fournit un suivi des opérations effectuées sur la table.
 Si vous cliquez sur une opération par exemple, vous pouvez voir la formule utilisée écrite en M (langage de PBI) que vous pouvez modifier.</p>
@@ -207,7 +207,7 @@ Si vous cliquez sur une opération par exemple, vous pouvez voir la formule util
 </code></pre>
 <p>On vient donc d'appliquer Table.RemoveRowsWithErrors à la table précédente nommée &quot;Promoted Headers&quot; à cause de notre transformation (on peut la renommer dans la fenêtre Querry Settings).</p>
 <p>Pour aller plus loin, vous pouvez utiliser l'éditeur avancé : View &gt; Advanced Editor
-<img src="advanced_editor.PNG"></p>
+<img src="advanced_editor.webp"></p>
 <p>Pour créer d'autres colonnes, vous pouvez utiliser Add Column :</p>
 <ul>
 <li>Merge Columns pour concaténer des colonnes de la table ou d'autres tables</li>
@@ -243,16 +243,16 @@ Si vous cliquez sur une opération par exemple, vous pouvez voir la formule util
 <h3>Report View</h3>
 <p>Au-delà de tous les visuels qu'on peut créer que ce soit grâce aux visuels déjà intégrés dans Power BI ou aux visuels qu'on peut télécharger, une chose que je trouve importante à relever est la &quot;mesure&quot;.
 Cette fonctionnalité permet de faire des opérations (en DAX) avec des colonnes sans changer la base de données et avoir d'autres attributs intéressants à exploiter comme par exemple la somme du nombre d'employés.
-<img src="mesure.PNG"></p>
+<img src="mesure.webp"></p>
 <p>Ce qui est aussi intéressant dans Power BI est l'interactivité, on peut soit utiliser un &quot;slicer&quot; qui est en fait un filtre intelligent ou par exemple ici cliquer sur un département et les &quot;cards&quot; vont s'adapter.
-<img src="departement.PNG"></p>
+<img src="departement.webp"></p>
 <h3>Model View</h3>
 <p>C'est ici qu'on va définir les relations entre les différentes tables (ou queries) qu'on a. L'idée est de pouvoir après utiliser les liens entre ses tables pour créer des filtres ou des mesures intéressantes, etc. Il faut évidemment qu'elles aient une clé (attribut) en commun.</p>
 <p>Dans cette partie, on peut aussi explorer la notion de cardinalité et de directionnalité, c'est-à-dire qu'une table va avoir un élément qui va avoir plusieurs liens avec les éléments de l'autre table par exemple, donc une relation &quot;one-to-many&quot; de gauche à droite. Cas concret, un client a plusieurs commandes attribuées à son nom. Ceci doit normalement vous rappeler les notions d'injection, surjection et bijection.</p>
 <h2>3. Power BI Service <a id="section-3"></a></h2>
 <p>Il s'agit de la plateforme en ligne pour pouvoir partager et concevoir vos dashboards.</p>
 <p>Avant de s'attaquer à tout ça, récapitulons à quoi ressemble le flux de données (schéma inspiré par le cours Skillsoft) :
-<img src="dataflow.PNG"></p>
+<img src="dataflow.webp"></p>
 <p>Power BI Service va donc nous accompagner pendant tout ce processus. On peut y créer des visuels (qu'on créera plutôt sur Power BI Desktop d'habitude, car plus pratique, pas besoin de connexion), créer des rapports, des métriques et surtout des dashboards (et les alertes, informations intéressantes à exploiter associées) à partir de datasets.
 De plus, il y a aussi des fonctions BI IA (qui sont aussi sur Power BI Desktop d'une façon ou d'une autre) super intéressantes, comme la &quot;QA&quot; sur les visuels, les &quot;Get Insights&quot;, etc.</p>
 <div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">

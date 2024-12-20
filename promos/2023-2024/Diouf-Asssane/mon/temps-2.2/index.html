@@ -142,7 +142,7 @@
 <p>Lorsqu'on crée un projet par défaut d'application Web, on a un peu de code généré automatiquement pour aider les développeurs. Le projet de base utilise des Razor Pages et intègre Bootstrap par exemple.</p>
 <p>Le dossier wwwroot contient les fichiers js, css  et autres.</p>
 <p>Le dossier Pages contient toutes les pages et définis aussi les différents url accessibles depuis notre site; par exemple si vous avez un fichiers Pages/About.cshtml, alors cette page s'affiche lorsque le client va sur l'url /about. Il est rempli de fichiers .cshtml qui permettent de faire de templates html avec C# et d'utiliser Razor. C'est fichiers sont en fait comme des dossiers comme le montre l'image ci-dessous.
-<img src="penduExempleRazorPage.png" alt="Exemple Razor Page"></p>
+<img src="penduExempleRazorPage.webp" alt="Exemple Razor Page"></p>
 <p>Le fichier cshtml contient du code qui ressemble à ça:</p>
 <pre class="language-c#"><code class="language-c#">// Pages/Index.cshtml
 @page
@@ -197,10 +197,10 @@ builder.Services.AddTransient<IWordProvider, WordFromFileProvider="">();</IWordP
 <p>Pour ce petit projet, je voulais qu'un utilisateur puisse jouer à une partie du pendu, puis en refaire autant qu'il le souhaite. Pour faire cela, je ne voulais cependant pas créer de classe utilisateur et mettre en place l'authentification. J'ai donc utiliser la session. Lorsqu'un joueur arrive pour la première fois sur la page du pendu, on lui crée un Jeu. Ensuite on enregistre les informations importantes momentanément (nombre d'erreurs, mot à trouver, etc...) grace à la session et on efface ce qui est inutile lorsque le joueur a terminé.</p>
 <p>J'y étais réticent mais j'ai dû utiliser une base de données pour rendre le tout possible. Pour créer une base de données avec les Razor Pages, on utilise EF Framework. Il s'agit d'un ORM. Je vous renvoie vers les pages en sources pour voir plus en détail les étapes à suivre.</p>
 <h3>Le résultat</h3>
-<img src="penduPage.png" alt="Page du jeu" style="height: 400px">
-<img src="penduError.png" alt="Le pendu se dessine petit à petit à chaque erreur" style="height: 400px">
-<img src="PenduPerdu.png" alt="On peut perdre" style="height: 400px">
-<img src="PenduWon.png" alt="On peut gagner" style="height: 400px">
+<img src="penduPage.webp" alt="Page du jeu" style="height: 400px">
+<img src="penduError.webp" alt="Le pendu se dessine petit à petit à chaque erreur" style="height: 400px">
+<img src="PenduPerdu.webp" alt="On peut perdre" style="height: 400px">
+<img src="PenduWon.webp" alt="On peut gagner" style="height: 400px">
 <p><em>Retrouvez mon code sur <a href="https://github.com/assanediouf18/PenduWeb">github</a></em></p>
 <h2>Sources</h2>
 <ul>

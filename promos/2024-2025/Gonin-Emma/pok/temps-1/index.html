@@ -237,7 +237,7 @@
 <pre><code>{
     &quot;paintings&quot;: [
         {
-            &quot;img_url&quot;: &quot;../data/paintings/NAME.jpg&quot;,
+            &quot;img_url&quot;: &quot;../data/paintings/NAME.webp&quot;,
             &quot;date&quot;:&quot;MONTH YEAR&quot;,
             &quot;title&quot;:&quot;TITLE&quot;,
             &quot;artist&quot;: &quot;Emma Casagrande&quot;,
@@ -261,7 +261,7 @@
 └── /public
   ├── /data
   ├── index.html
-  ├── logo.png
+  ├── logo.webp
 └── ./node_modules
 </code></pre>
 <p>J'ai également installé les librairies dont j'avais besoin pour le design de mon projet, à savoir les librairies mui/material et emotion/styled. La librairie mui/material me permet d'avoir accès à des composants React qui sont interactifs, qui ont déjà un design avec une certaine charte graphique et dont je peux modifier le style grâce à emotion/styled.</p>
@@ -271,27 +271,27 @@
 <p>A la fin de ce premier sprint, j'ai donc produit ces quatre pages :</p>
 <ol>
 <li>En attendant d'avoir les pages gallery et contact, j'affiche ceci :
-<img src="wip.png" alt="work in progress">
+<img src="wip.webp" alt="work in progress">
 <br></li>
 <li>La page d'accueil &quot;home&quot; ressemble à ceci :
-<img src="home.png" alt="home">
+<img src="home.webp" alt="home">
 <br></li>
 <li>Le rendu de quelques vues du portfolio-carousel est le suivant :
-<img src="portfolio-1.png" alt="flores">
-<img src="portfolio-2.png" alt="flash">
-<img src="portfolio-3.png" alt="porte divine">
+<img src="portfolio-1.webp" alt="flores">
+<img src="portfolio-2.webp" alt="flash">
+<img src="portfolio-3.webp" alt="porte divine">
 J'ai créé un composant StackCarousel qui contient la mise en page image/texte et un Carousel qui affiche deux StackCarousel simultanément afin de montrer deux peintures à la fois. Pour l'instant la mise en forme est faite pour des peintures de format portrait, il faudra que je change le code pour inclure des peintures de format paysage afin de visualiser un seul paysage à la fois.
 <br></li>
 <li>La dernière page effectuée lors de ce sprint, une description du contexte de ce site et brève description de moi (avec un pseudonyme, ce nom de famille est celui de mon grand-père maternel)
-<img src="about-me.png" alt="About me"></li>
+<img src="about-me.webp" alt="About me"></li>
 </ol>
 <h3>Second Sprint</h3>
 <p>J'ai démarré ce second sprint par la page galerie photo qui fût fort rapide à mettre en place à l'aide d'un composant React qui s'appelle <a href="https://mui.com/material-ui/react-image-list/">ImageList</a>. Voici des photos du rendu final :</p>
-<p><img src="image.png" alt="galerie-1">
-<img src="image-1.png" alt="galerie-2">
-<img src="image-2.png" alt="galerie-3"></p>
+<p><img src="image.webp" alt="galerie-1">
+<img src="image-1.webp" alt="galerie-2">
+<img src="image-2.webp" alt="galerie-3"></p>
 <p>Pour la page Contact, je crée un formulaire grâce à la mise en page <a href="https://www.copycat.dev/blog/material-ui-form/">https://www.copycat.dev/blog/material-ui-form/</a>. Pour éviter pour l'instant de faire un système back-end avec des API etc, j'ai suivi le tutoriel <a href="https://medium.com/@thomasaugot/create-a-react-contact-form-with-email-js-cad2c8606f33">React Contact Form w/ EmailJS</a> pour apprendre à utiliser EmailJS de manière temporaire afin de recevoir les messages via cette plateforme.</p>
-<p><img src="contact.png" alt="Contact"></p>
+<p><img src="contact.webp" alt="Contact"></p>
 <p>J'ai travaillé sur la navigation avec les flèches du clavier pour le portfolio. J'ai eu des problèmes avec la gestion des keyEvent et de la gestion du state de l'item courant.</p>
 <p><video controls="" src="demo.mp4" title="Demo"></video></p>
 
