@@ -1,0 +1,565 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Scaling et CI/CD du site Do-It</title>
+
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [
+                [
+                '$', '$'
+                ],
+                [
+                '\\(', '\\)'
+                ]
+            ]
+            },
+            svg: {
+            fontCache: 'global'
+            }
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
+
+        <header class="border-b-2 border-gray-200 mb-4">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="min-h-[50px] flex justify-between items-center">
+                <a class="mx-2" href="/do-it/">Home</a>
+                <div class="flex items-center gap-4 sm:gap-6 ">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                        </svg>
+                    </a>
+                    <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
+                        <svg class="h-5 aspect-square" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
+            
+<article class="relative">
+<h1 class="mb-1">Scaling et CI/CD du site Do-It</h1>
+<div class="mb-4">
+    
+        <div class="px-4 flex flex-wrap items-center">
+            
+                <div class="font-bold">Tags : </div>
+            
+            <ul class="flex flex-wrap overflow-auto not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">POK</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">2024-2025</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 3</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">devops</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">scaling</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">gitops</li>
+                
+
+            </ul>
+            
+            
+            <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="px-4 flex flex-wrap items-center">
+            <div class="font-bold">Auteurs : </div>
+            <ul class="flex flex-wrap not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Loïck Goupil-Hallay</li>
+                
+            </ul>
+        </div>
+    
+
+    
+</div>
+
+        <p class="mb-4 text-lg">
+
+                Rework du site Do-It pour apporter la possibilité de scaling et l'utilisation de GitHub Actions pour le CI/CD.
+
+        </p>
+
+
+
+    
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-purple-500 bg-purple-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>
+</svg>
+<div class="pl-8 mr-8">
+
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Loick-GoupilHallay/">Loïck Goupil-Hallay</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Loick-GoupilHallay/pok/">POKs Loïck Goupil-Hallay</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Loick-GoupilHallay/pok/temps-3/">Scaling et CI/CD du site Do-It</a>
+
+</div></div>
+
+
+
+
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8 mb-2 mr-8">
+<p><strong>POK avancé</strong></p>
+</div><div class="pl-8 mr-8">
+<ul>
+<li><a href="https://git-scm.com/">Git</a></li>
+<li><a href="https://www.11ty.dev/">Eleventy</a></li>
+<li><a href="https://www.gnu.org/software/bash/">Bash</a></li>
+<li><a href="https://www.nginx.com/">Nginx</a></li>
+</ul>
+</div></div>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
+</svg>
+<div class="pl-8 mb-2 mr-8">
+<p><strong>Liens utiles</strong></p>
+</div><div class="pl-8 mr-8">
+<ul>
+<li><a href="https://francoisbrucker.github.io/do-it/promos/2024-2025/Louradou-Arthur/pok/temps-1bis/creation_sous_repo_git/">POK Arthur Louradou Git Submodules pour Do-It</a></li>
+</ul>
+</div></div>
+
+<h2>Introduction</h2>
+<p>Après 3 ans de bons et loyaux services, le site Do-It arrive à saturation. Il est en effet gangréné par les <strong>mauvaises pratiques</strong> qui se sont <strong>accumulées</strong> au fil des POK &amp; MON. Il est temps de reprendre les choses en main et de revoir l'architecture du site pour le rendre scalable et plus facile à maintenir.</p>
+<p>Le build a dépassé la taille du Giga, le <strong>déploiement</strong> via GitHub Actions <strong>ne passe plus entièrement</strong> à cause de cela, et les pauvres élèves se font engueuler par nos chers professeurs car ils ne peuvent pas consulter leurs rendus.</p>
+<h2>Problèmes actuels</h2>
+<h3>Taille du build</h3>
+<p>Le site Do-It est construit avec Eleventy, et au fil des POK &amp; MON, <strong>la taille du build a explosé</strong>. Il est maintenant impossible de déployer le site en entier via GitHub Actions, car <strong>le build dépasse la taille maximale supportée par GitHub Pages</strong>. Cela est dû au contenu multimédia (images, vidéos, sons, diaporamas, zip, code source,...) qui a été ajouté au fil des années en les plaçant directement dans le dossier <code>src</code>.</p>
+<p>La limite de taille du build est de <strong>1 Go</strong> pour GitHub Pages, et le site Do-It dépasse largement cette taille.</p>
+<h3>Scaling</h3>
+<p>Le repository Git servant à build le site est <strong>monolithique</strong>. Tous les élèves ont leur propre dossier dans le dossier <code>src</code>, et le site est construit en entier à chaque modification. Cela pose plusieurs problèmes :</p>
+<ul>
+<li><strong>Pas de séparation des préoccupations</strong> : les élèves peuvent modifier n'importe quel fichier du site, ce qui peut entraîner des conflits et des erreurs</li>
+<li><strong>Pas de gestion fine des droits</strong> : les élèves ont accès à tout le site, ce qui peut entraîner des modifications non désirées</li>
+<li><strong>Temps de build trop long</strong> : plus il y a d'élèves, plus le temps de build augmente</li>
+<li><strong>Performances Git dégradées</strong>: GitHub recommande de ne pas excéder 5Gb de données par repository sous peine de faire face à de sérieux problèmes de performance, celui de Do-It atteint les 4.1Gb à l'heure actuelle. La siuation est critique.</li>
+</ul>
+<h3>Mauvaises pratiques</h3>
+<p>Le site Do-It est victime de <strong>mauvaises pratiques</strong> en cascade:</p>
+<ul>
+<li><strong>Les médias sont directement au niveau des markdown</strong> : cela augmente la taille du build et rend le site difficile à maintenir</li>
+<li><strong>Les promos ne respectent pas toutes le même format</strong>: la nomenclature des directories et des fichiers n'est pas vérouillée. Cela rend pénible la maintenance du site</li>
+<li><strong>Les chemins des médias sont en dur dans les fichiers HTML</strong> : cela rend difficile la migration des médias vers un autre emplacement</li>
+<li><strong>Les noms de directories et de fichiers comportent des caractères spéciaux</strong> : cela peut poser des problèmes de compatibilité avec certains systèmes de fichiers et avec les scripts de build</li>
+<li><strong>Les élèves ont accès à tout le site</strong> : cela peut entraîner des modifications non désirées et des conflits</li>
+<li><strong>Personne ne sait utiliser Git</strong>: Les élèves ne savent pas utiliser Git, tout le monde push sur la branche <code>main</code> et je reçois régulièrement des messages pour résoudre des problèmes de conflits.</li>
+</ul>
+<h2>Objectifs</h2>
+<ul>
+<li><strong>Résoudre le problème de taille de build</strong> pour que toutes les actions de déploiement passent</li>
+<li><strong>Permettre le scaling du site</strong> pour supporter un nombre croissant d'élèves</li>
+<li><strong>Mettre en place GitOps</strong> pour faciliter le déploiement et la maintenance du site</li>
+<li><strong>Imposer des bonnes pratiques</strong> pour éviter de retomber dans les travers actuels</li>
+<li><strong>Migrer le site sur notre propre serveur aioli</strong> pour éviter les limitations de GitHub Pages</li>
+</ul>
+<h2>Résolution</h2>
+<h3>Résolution de la taille du build</h3>
+<p>Le problème d'échec de déploiement étant urgent, j'ai décidé de le résoudre immédiatement en <strong>réencodant</strong> toutes les images du site en <strong>WebP</strong> et toutes les vidéos en <strong>MP4</strong> avec le <strong>codec H.264</strong>. Cela a permis de <strong>diviser par 2 la taille du build</strong> et de permettre le déploiement complet du site via GitHub Actions.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block group-open:select-text">
+<p>Script bash d'optimisation des médias</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2 cursor-auto select-text">
+<p>Ce script permet de réencoder les images en WebP, les vidéos en MP4 et les audios en Opus. Il permet également de mettre à jour les références des médias dans les fichiers HTML et de réécrire l'historique Git pour supprimer les médias originaux.</p>
+<pre class="language-bash"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token string">"<span class="token variable">$1</span>"</span> <span class="token operator">==</span> <span class="token string">"--rewrite-git-history"</span> <span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+    <span class="token assign-left variable">REWRITE_GIT_HISTORY</span><span class="token operator">=</span>true
+    <span class="token builtin class-name">shift</span>
+<span class="token keyword">fi</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token string">"<span class="token variable">$1</span>"</span> <span class="token operator">==</span> <span class="token string">"-h"</span> <span class="token operator">||</span> <span class="token string">"<span class="token variable">$1</span>"</span> <span class="token operator">==</span> <span class="token string">"--help"</span> <span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">"Usage: optimizer.bash &lt;image|video|audio>"</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">"Optimize media files in the current directory."</span>
+    <span class="token builtin class-name">exit</span> <span class="token number">0</span>
+<span class="token keyword">fi</span>
+
+<span class="token assign-left variable">temp_file</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span>mktemp<span class="token variable">)</span></span> <span class="token comment"># Temporary file to store paths for git filter-repo</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token string">"<span class="token variable">$1</span>"</span> <span class="token operator">==</span> <span class="token string">"image"</span> <span class="token operator">||</span> <span class="token string">"<span class="token variable">$2</span>"</span> <span class="token operator">==</span> <span class="token string">"image"</span> <span class="token operator">||</span> <span class="token string">"<span class="token variable">$3</span>"</span> <span class="token operator">==</span> <span class="token string">"image"</span> <span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+    <span class="token comment"># Process image files (JPG, JPEG, PNG)</span>
+    <span class="token function">find</span> src <span class="token parameter variable">-type</span> f <span class="token punctuation">\</span><span class="token punctuation">(</span> <span class="token parameter variable">-name</span> <span class="token string">"*.jpg"</span> <span class="token parameter variable">-o</span> <span class="token parameter variable">-name</span> <span class="token string">"*.jpeg"</span> <span class="token parameter variable">-o</span> <span class="token parameter variable">-name</span> <span class="token string">"*.png"</span> <span class="token parameter variable">-o</span> <span class="token parameter variable">-name</span> <span class="token string">"*.JPG"</span> <span class="token parameter variable">-o</span> <span class="token parameter variable">-name</span> <span class="token string">"*.JPEG"</span> <span class="token parameter variable">-o</span> <span class="token parameter variable">-name</span> <span class="token string">"*.PNG"</span> <span class="token punctuation">\</span><span class="token punctuation">)</span> <span class="token parameter variable">-print0</span> <span class="token operator">|</span> <span class="token keyword">while</span> <span class="token assign-left variable"><span class="token environment constant">IFS</span></span><span class="token operator">=</span> <span class="token builtin class-name">read</span> <span class="token parameter variable">-r</span> <span class="token parameter variable">-d</span> <span class="token string">''</span> img<span class="token punctuation">;</span> <span class="token keyword">do</span>
+        ffmpeg <span class="token parameter variable">-y</span> <span class="token parameter variable">-i</span> <span class="token string">"<span class="token variable">$img</span>"</span> <span class="token parameter variable">-q:v</span> <span class="token number">75</span> <span class="token string">"<span class="token variable">${img<span class="token operator">%</span>.*}</span>.webp"</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">\</span>
+        <span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable">$img</span>"</span> <span class="token operator">>></span> <span class="token string">"<span class="token variable">$temp_file</span>"</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">\</span>
+        <span class="token function">rm</span> <span class="token string">"<span class="token variable">$img</span>"</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token string">"<span class="token variable">$REWRITE_GIT_HISTORY</span>"</span> <span class="token operator">==</span> <span class="token string">"true"</span> <span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+             <span class="token function">git</span> <span class="token function">rm</span> <span class="token parameter variable">--cached</span> <span class="token string">"<span class="token variable">$img</span>"</span>
+        <span class="token keyword">fi</span>
+    <span class="token keyword">done</span>
+
+    <span class="token comment"># Update image references in HTML files</span>
+    <span class="token function">find</span> src <span class="token parameter variable">-type</span> f <span class="token parameter variable">-name</span> <span class="token string">"*.md"</span> <span class="token parameter variable">-exec</span> <span class="token function">sed</span> <span class="token parameter variable">-i</span> <span class="token punctuation">\</span>
+        <span class="token parameter variable">-e</span> <span class="token string">'/http/! s/\.png/\.webp/g'</span> <span class="token punctuation">\</span>
+        <span class="token parameter variable">-e</span> <span class="token string">'/http/! s/\.PNG/\.webp/g'</span> <span class="token punctuation">\</span>
+        <span class="token parameter variable">-e</span> <span class="token string">'/http/! s/\.jpg/\.webp/g'</span> <span class="token punctuation">\</span>
+        <span class="token parameter variable">-e</span> <span class="token string">'/http/! s/\.JPG/\.webp/g'</span> <span class="token punctuation">\</span>
+        <span class="token parameter variable">-e</span> <span class="token string">'/http/! s/\.jpeg/\.webp/g'</span> <span class="token punctuation">\</span>
+        <span class="token parameter variable">-e</span> <span class="token string">'/http/! s/\.JPEG/\.webp/g'</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> +
+
+<span class="token keyword">elif</span> <span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token string">"<span class="token variable">$1</span>"</span> <span class="token operator">==</span> <span class="token string">"video"</span> <span class="token operator">||</span> <span class="token string">"<span class="token variable">$2</span>"</span> <span class="token operator">==</span> <span class="token string">"video"</span> <span class="token operator">||</span> <span class="token string">"<span class="token variable">$3</span>"</span> <span class="token operator">==</span> <span class="token string">"video"</span> <span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+    <span class="token comment"># Process video files (MP4, MOV, MKV)</span>
+    <span class="token function">find</span> src <span class="token parameter variable">-type</span> f <span class="token punctuation">\</span><span class="token punctuation">(</span> <span class="token parameter variable">-name</span> <span class="token string">"*.mp4"</span> <span class="token parameter variable">-o</span> <span class="token parameter variable">-name</span> <span class="token string">"*.mov"</span> <span class="token parameter variable">-o</span> <span class="token parameter variable">-name</span> <span class="token string">"*.mkv"</span> <span class="token punctuation">\</span><span class="token punctuation">)</span> <span class="token parameter variable">-print0</span> <span class="token operator">|</span> <span class="token keyword">while</span> <span class="token assign-left variable"><span class="token environment constant">IFS</span></span><span class="token operator">=</span> <span class="token builtin class-name">read</span> <span class="token parameter variable">-r</span> <span class="token parameter variable">-d</span> <span class="token string">''</span> video<span class="token punctuation">;</span> <span class="token keyword">do</span>
+        ffmpeg <span class="token parameter variable">-y</span> <span class="token parameter variable">-i</span> <span class="token string">"<span class="token variable">$video</span>"</span> <span class="token parameter variable">-c:v</span> libx264 <span class="token parameter variable">-preset</span> veryslow <span class="token parameter variable">-c:a</span> aac <span class="token parameter variable">-b:a</span> 96k <span class="token string">"<span class="token variable">${video<span class="token operator">%</span>.*}</span>.compressed.mp4"</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">\</span>
+        <span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable">$video</span>"</span> <span class="token operator">>></span> <span class="token string">"<span class="token variable">$temp_file</span>"</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">\</span>
+        <span class="token function">rm</span> <span class="token string">"<span class="token variable">$video</span>"</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">\</span>
+        <span class="token function">mv</span> <span class="token string">"<span class="token variable">${video<span class="token operator">%</span>.*}</span>.compressed.mp4"</span> <span class="token string">"<span class="token variable">${video<span class="token operator">%</span>.*}</span>.mp4"</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token string">"<span class="token variable">$REWRITE_GIT_HISTORY</span>"</span> <span class="token operator">==</span> <span class="token string">"true"</span> <span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+             <span class="token function">git</span> <span class="token function">rm</span> <span class="token parameter variable">--cached</span> <span class="token string">"<span class="token variable">$video</span>"</span>
+        <span class="token keyword">fi</span>
+    <span class="token keyword">done</span>
+
+    <span class="token comment"># Update video references in HTML files</span>
+    <span class="token function">find</span> src <span class="token parameter variable">-type</span> f <span class="token parameter variable">-name</span> <span class="token string">"*.md"</span> <span class="token parameter variable">-exec</span> <span class="token function">sed</span> <span class="token parameter variable">-i</span> <span class="token punctuation">\</span>
+        <span class="token parameter variable">-e</span> <span class="token string">'/http/! s/\.mp4/\.compressed\.mp4/g'</span> <span class="token punctuation">\</span>
+        <span class="token parameter variable">-e</span> <span class="token string">'/http/! s/\.mov/\.compressed\.mp4/g'</span> <span class="token punctuation">\</span>
+        <span class="token parameter variable">-e</span> <span class="token string">'/http/! s/\.mkv/\.compressed\.mp4/g'</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> +
+
+
+<span class="token keyword">elif</span> <span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token string">"<span class="token variable">$1</span>"</span> <span class="token operator">==</span> <span class="token string">"audio"</span> <span class="token operator">||</span> <span class="token string">"<span class="token variable">$2</span>"</span> <span class="token operator">==</span> <span class="token string">"audio"</span> <span class="token operator">||</span> <span class="token string">"<span class="token variable">$3</span>"</span> <span class="token operator">==</span> <span class="token string">"audio"</span> <span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+    <span class="token comment"># Process audio files (WAV, FLAC, MP3, OGG)</span>
+    <span class="token function">find</span> src <span class="token parameter variable">-type</span> f <span class="token punctuation">\</span><span class="token punctuation">(</span> <span class="token parameter variable">-name</span> <span class="token string">"*.wav"</span> <span class="token parameter variable">-o</span> <span class="token parameter variable">-name</span> <span class="token string">"*.flac"</span> <span class="token parameter variable">-o</span> <span class="token parameter variable">-name</span> <span class="token string">"*.mp3"</span> <span class="token parameter variable">-o</span> <span class="token parameter variable">-name</span> <span class="token string">"*.ogg"</span> <span class="token punctuation">\</span><span class="token punctuation">)</span> <span class="token parameter variable">-print0</span> <span class="token operator">|</span> <span class="token keyword">while</span> <span class="token assign-left variable"><span class="token environment constant">IFS</span></span><span class="token operator">=</span> <span class="token builtin class-name">read</span> <span class="token parameter variable">-r</span> <span class="token parameter variable">-d</span> <span class="token string">''</span> audio<span class="token punctuation">;</span> <span class="token keyword">do</span>
+        ffmpeg <span class="token parameter variable">-y</span> <span class="token parameter variable">-i</span> <span class="token string">"<span class="token variable">$audio</span>"</span> <span class="token parameter variable">-c:a</span> libopus <span class="token parameter variable">-b:a</span> 96k <span class="token string">"<span class="token variable">${audio<span class="token operator">%</span>.*}</span>.opus"</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">\</span>
+        <span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable">$audio</span>"</span> <span class="token operator">>></span> <span class="token string">"<span class="token variable">$temp_file</span>"</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">\</span>
+        <span class="token function">rm</span> <span class="token string">"<span class="token variable">$audio</span>"</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token string">"<span class="token variable">$REWRITE_GIT_HISTORY</span>"</span> <span class="token operator">==</span> <span class="token string">"true"</span> <span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+             <span class="token function">git</span> <span class="token function">rm</span> <span class="token parameter variable">--cached</span> <span class="token string">"<span class="token variable">$audio</span>"</span>
+        <span class="token keyword">fi</span>
+    <span class="token keyword">done</span>
+
+    <span class="token comment"># Update audio references in HTML files</span>
+    <span class="token function">find</span> src <span class="token parameter variable">-type</span> f <span class="token parameter variable">-name</span> <span class="token string">"*.md"</span> <span class="token parameter variable">-exec</span> <span class="token function">sed</span> <span class="token parameter variable">-i</span> <span class="token punctuation">\</span>
+        <span class="token parameter variable">-e</span> <span class="token string">'/http/! s/\.wav/\.opus/g'</span> <span class="token punctuation">\</span>
+        <span class="token parameter variable">-e</span> <span class="token string">'/http/! s/\.flac/\.opus/g'</span> <span class="token punctuation">\</span>
+        <span class="token parameter variable">-e</span> <span class="token string">'/http/! s/\.mp3/\.opus/g'</span> <span class="token punctuation">\</span>
+        <span class="token parameter variable">-e</span> <span class="token string">'/http/! s/\.ogg/\.opus/g'</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> +
+
+<span class="token keyword">else</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">"Usage: optimizer.bash &lt;image|video|audio>"</span>
+    <span class="token builtin class-name">exit</span> <span class="token number">1</span>
+<span class="token keyword">fi</span>
+
+<span class="token comment"># Rewrite git history for all stored paths</span>
+<span class="token keyword">if</span> <span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token parameter variable">-s</span> <span class="token string">"<span class="token variable">$temp_file</span>"</span> <span class="token operator">&amp;&amp;</span> <span class="token string">"<span class="token variable">$REWRITE_GIT_HISTORY</span>"</span> <span class="token operator">==</span> <span class="token string">"true"</span> <span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+    <span class="token function">git</span> filter-repo --invert-paths --paths-from-file <span class="token string">"<span class="token variable">$temp_file</span>"</span> <span class="token parameter variable">--force</span>
+<span class="token keyword">fi</span>
+
+<span class="token comment"># Cleanup temporary file</span>
+<span class="token function">rm</span> <span class="token string">"<span class="token variable">$temp_file</span>"</span></code></pre>
+</div>
+</details>     
+</div>
+<p>Ce script a permis de réduire la taille du build à <strong>600Mo</strong>, ce qui était suffisant pour permettre le déploiement complet du site.<br>
+<strong>Cependant</strong>, laisser perdurer la situation actuelle <strong>condamnerait</strong> la promotion suivante à subir les mêmes problèmes. Il est donc nécessaire de <strong>revoir l'architecture du site</strong> pour le rendre viable.</p>
+<p>La solution perenne est de <strong>sortir les médias du build</strong> et de les stocker dans un <strong>serveur dédié</strong>.<br>
+Comme ni vous, ni moi n'avons envie de payer ou de maintenir un serveur, la solution la plus simple est de <strong>continuer d'utiliser GitHub</strong> pour stocker les médias, mais de <strong>ne plus les inclure dans le build</strong>. Nous allons simplement <strong>référencer les médias</strong> dans les fichiers HTML et les laisser <strong>accessibles via GitHub</strong>.</p>
+<h3>Scaling</h3>
+<p>Pour permettre le scaling du site, il faut impérativement <strong>séparer les promotions</strong>. Chaque promotion doit avoir son propre repository Git, et le site doit être construit à partir de <strong>repositories séparés</strong>. Cela permettra de <strong>réduire le temps de build</strong> et de <strong>séparer les droits et les préoccupations</strong>.</p>
+<p>Concrètement, chaque promotion aura son propre repository Git, et le site Do-It sera construit à partir de <strong>submodules Git</strong>.<br>
+Les submodules Git permettent d'inclure un repository Git dans un autre repository Git. Cela permet de <strong>garder les repositories séparés</strong> tout en <strong>les incluant dans un repository parent</strong>.</p>
+<p>Cela passe par plusieurs étapes clés:</p>
+<ul>
+<li><strong>Création d'une organisation GitHub Do-It</strong> pour stocker les repositories des promotions et le repository du site Do-It</li>
+<li><strong>Création de teams GitHub</strong> pour gérer les droits des élèves sur les repositories</li>
+<li><strong>Création d'un repository par promotion</strong> pour stocker les fichiers des élèves (réalisé par Arthur)</li>
+<li><strong>Création d'un repository pour le site Do-It</strong> pour référencer les repositories des promotions et stocker la logique de build</li>
+<li><strong>Mise en place de submodules Git</strong> pour inclure les repositories des promotions dans le repository du site Do-It</li>
+<li><strong>Migration du site vers notre propre serveur aioli</strong></li>
+</ul>
+<h3>Mauvaises pratiques</h3>
+<p>Pour résoudre les problèmes de mauvaise pratiques, j'ai décidé de mettre en place une <strong>pipeline CI/CD</strong> GitHub Actions qui va <strong>vérifier</strong> que chacune des nouvelles pratiques est respectée, et dans le cas contraire, le <strong>build échouera</strong>.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block group-open:select-text">
+<p>Pipeline CI/CD Compliance GitHub Actions</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2 cursor-auto select-text">
+<p>Cette pipeline GitHub Actions utilise du caching pour accélérer le build et lance tous nos tests de conformité.<br>
+Elle ne se lance que lorsqu'une merge request est acceptée ou lorsqu'un submodule est mis à jour. Finito les push sur <code>main</code>!</p>
+<pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">name</span><span class="token punctuation">:</span> check<span class="token punctuation">-</span>compliance
+
+<span class="token key atrule">on</span><span class="token punctuation">:</span>
+  <span class="token key atrule">repository_dispatch</span><span class="token punctuation">:</span>
+    <span class="token key atrule">types</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>submodule<span class="token punctuation">-</span>update<span class="token punctuation">]</span>
+  <span class="token key atrule">pull_request</span><span class="token punctuation">:</span>
+    <span class="token key atrule">types</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> closed
+    <span class="token key atrule">branches</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> main
+
+<span class="token key atrule">env</span><span class="token punctuation">:</span>
+  <span class="token key atrule">NODE_VERSION</span><span class="token punctuation">:</span> <span class="token string">"20.7"</span> <span class="token comment"># Define the Node.js version here</span>
+
+<span class="token key atrule">jobs</span><span class="token punctuation">:</span>
+  <span class="token key atrule">check-compliance</span><span class="token punctuation">:</span>
+    <span class="token key atrule">if</span><span class="token punctuation">:</span> github.event.pull_request.merged == true
+    <span class="token key atrule">runs-on</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">-</span>latest
+    <span class="token key atrule">steps</span><span class="token punctuation">:</span>
+      <span class="token comment"># Checkout code without initializing submodules</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/checkout@v4
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">submodules</span><span class="token punctuation">:</span> <span class="token boolean important">false</span> <span class="token comment"># Defer submodule initialization</span>
+
+      <span class="token comment"># Restore Git Submodules Cache</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Restore Git Submodules Cache
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/cache@v4
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">path</span><span class="token punctuation">:</span> .git/modules
+          <span class="token key atrule">key</span><span class="token punctuation">:</span> submodules<span class="token punctuation">-</span>$
+          <span class="token key atrule">restore-keys</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+            submodules-$
+            submodules-</span>
+
+      <span class="token comment"># Git Submodule Update</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Git Submodule Update
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          git submodule sync
+          git submodule update --init --recursive</span>
+
+      <span class="token comment"># Cache Git Submodules</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Cache Git Submodules
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/cache@v4
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">path</span><span class="token punctuation">:</span> .git/modules
+          <span class="token key atrule">key</span><span class="token punctuation">:</span> submodules<span class="token punctuation">-</span>$
+
+      <span class="token comment"># Restore Node.js Modules Cache</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Restore Node.js Modules Cache
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/cache@v4
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">path</span><span class="token punctuation">:</span> ~/.npm
+          <span class="token key atrule">key</span><span class="token punctuation">:</span> npm<span class="token punctuation">-</span>cache<span class="token punctuation">-</span>$<span class="token punctuation">-</span>$
+          <span class="token key atrule">restore-keys</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+            npm-cache-$-$
+            npm-cache-$-
+            npm-cache-</span>
+
+      <span class="token comment"># Use Node.js</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Use Node.js $
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/setup<span class="token punctuation">-</span>node@v4
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">node-version</span><span class="token punctuation">:</span> $
+
+      <span class="token comment"># Install dependencies</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Install dependencies
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> npm ci
+
+      <span class="token comment"># Save Node.js Modules Cache</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Save Node.js Modules Cache
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/cache@v4
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">path</span><span class="token punctuation">:</span> ~/.npm
+          <span class="token key atrule">key</span><span class="token punctuation">:</span> npm<span class="token punctuation">-</span>cache<span class="token punctuation">-</span>$<span class="token punctuation">-</span>$
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Check Compliance
+        <span class="token key atrule">run</span><span class="token punctuation">:</span>  npm run check<span class="token punctuation">-</span>compliance</code></pre>
+</div>
+</details>     
+</div>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block group-open:select-text">
+<p>Pipeline CI/CD Build GitHub Actions</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2 cursor-auto select-text">
+<p>Cette pipeline GitHub Actions construit le site Do-It à partir des submodules Git et applique les changements sur la branche <code>gh-pages</code> pour déployer le site. Elle ne conserve que la dernière version du build pour éviter de faire grossir le repository Git inutilement.</p>
+<pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">name</span><span class="token punctuation">:</span> build
+
+<span class="token key atrule">on</span><span class="token punctuation">:</span>
+  <span class="token key atrule">workflow_run</span><span class="token punctuation">:</span>
+    <span class="token key atrule">workflows</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"check-compliance"</span><span class="token punctuation">]</span>
+    <span class="token key atrule">types</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> completed
+
+<span class="token key atrule">env</span><span class="token punctuation">:</span>
+  <span class="token key atrule">NODE_VERSION</span><span class="token punctuation">:</span> <span class="token string">"20.7"</span> <span class="token comment"># Define the Node.js version here</span>
+
+<span class="token key atrule">jobs</span><span class="token punctuation">:</span>
+  <span class="token key atrule">build</span><span class="token punctuation">:</span>
+    <span class="token key atrule">runs-on</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">-</span>latest
+    <span class="token key atrule">steps</span><span class="token punctuation">:</span>
+      <span class="token comment"># Checkout code without initializing submodules</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/checkout@v4
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">submodules</span><span class="token punctuation">:</span> <span class="token boolean important">false</span> <span class="token comment"># Defer submodule initialization</span>
+
+      <span class="token comment"># Restore Git Submodules Cache</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Restore Git Submodules Cache
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/cache@v4
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">path</span><span class="token punctuation">:</span> .git/modules
+          <span class="token key atrule">key</span><span class="token punctuation">:</span> submodules<span class="token punctuation">-</span>$
+          <span class="token key atrule">restore-keys</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+            submodules-$
+            submodules-</span>
+
+      <span class="token comment"># Git Submodule Update</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Git Submodule Update
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          git submodule sync
+          git submodule update --init --recursive</span>
+
+      <span class="token comment"># Cache Git Submodules</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Cache Git Submodules
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/cache@v4
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">path</span><span class="token punctuation">:</span> .git/modules
+          <span class="token key atrule">key</span><span class="token punctuation">:</span> submodules<span class="token punctuation">-</span>$
+
+      <span class="token comment"># Restore Node.js Modules Cache</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Restore Node.js Modules Cache
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/cache@v4
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">path</span><span class="token punctuation">:</span> ~/.npm
+          <span class="token key atrule">key</span><span class="token punctuation">:</span> npm<span class="token punctuation">-</span>cache<span class="token punctuation">-</span>$<span class="token punctuation">-</span>$
+          <span class="token key atrule">restore-keys</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+            npm-cache-$-$
+            npm-cache-$-
+            npm-cache-</span>
+
+      <span class="token comment"># Use Node.js</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Use Node.js $
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/setup<span class="token punctuation">-</span>node@v4
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">node-version</span><span class="token punctuation">:</span> $
+
+      <span class="token comment"># Install dependencies</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Install dependencies
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> npm ci
+
+      <span class="token comment"># Save Node.js Modules Cache</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Save Node.js Modules Cache
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/cache@v4
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">path</span><span class="token punctuation">:</span> ~/.npm
+          <span class="token key atrule">key</span><span class="token punctuation">:</span> npm<span class="token punctuation">-</span>cache<span class="token punctuation">-</span>$<span class="token punctuation">-</span>$
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Build
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          npm run build-github
+          npm run node-modules-front
+          npm run build-tailwind</span>
+
+    <span class="token key atrule">outputs</span><span class="token punctuation">:</span>
+      <span class="token key atrule">build-dir</span><span class="token punctuation">:</span> ./dist
+
+  <span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+    <span class="token key atrule">runs-on</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">-</span>latest
+    <span class="token key atrule">needs</span><span class="token punctuation">:</span> build
+    <span class="token key atrule">steps</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Deploy
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> peaceiris/actions<span class="token punctuation">-</span>gh<span class="token punctuation">-</span>pages@v4
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">publish_dir</span><span class="token punctuation">:</span> $NaN
+          <span class="token key atrule">github_token</span><span class="token punctuation">:</span> $
+          <span class="token key atrule">force_orphan</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+          <span class="token key atrule">publish_branch</span><span class="token punctuation">:</span> gh<span class="token punctuation">-</span>pages</code></pre>
+</div>
+</details>     
+</div>
+
+
+</article>
+
+        </main>
+
+
+        <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div class="min-h-[50px] flex justify-center items-center">
+                    <p class="text-center">
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développement et Organisation en IT
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        MathJax
+            .startup
+            .document
+            .getMathItemsWithin(document.body);
+        </script>
+        <script src="/do-it/assets/node_modules/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+    </body>
+</html>
