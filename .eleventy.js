@@ -6,11 +6,18 @@ import setupShortcodes from "./config/markdown/shortcodes/index.js";
 import assetsConfig from "./config/assets.js";
 import filtersConfig from "./config/filters.js";
 import postCompilation from "./config/post-build.js";
+import replaceMediaSource from "./config/media-githubusercontent.js";
 
 export default function(eleventyConfig) {
 
   // Compute eleventyNavigationBreadcrumb only in production (significant performance gain)
   eleventyConfig.addGlobalData("navigation", process.env.NODE_ENV === "production" || process.env.NAV === "true");
+
+  if (process.env.GITHUB_ACTIONS) {
+    replaceMediaSource(eleventyConfig, `https://raw.githubusercontent.com/${process.env.GITHUB_REPOSITORY}/${process.env.GITHUB_SHA}`)
+  } else if (process.env.STATIC_MEDIA_LINKS) {
+    replaceMediaSource(eleventyConfig, `https://raw.githubusercontent.com/FrancoisBrucker/do-it/refs/heads/main`)
+  }
 
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
