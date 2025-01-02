@@ -1,32 +1,27 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 3"
+title: "L'impact de la transformation numérique sur les ressources humaines et le recrutement"
 authors:
   - Matthieu Dufort
 
-date: 1971-03-01
+date: 2024-01-02
 tags: 
   - "temps 3"
+  - "Transformation numérique"
+  - "Rssources humaines"
+  - "Recrutement"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Ce MON à pour but d'étudier l'impact du numérique sur les ressources humaines et en particulier sur les nouvelles méthodes de recrutement."
 ---
 
-{% prerequis %}
-
-Liste des prérequis du POK ET/OU MON
-
-{% endprerequis %}
 {% lien %}
 
 Les lien utiles pour la compréhension de celui-ci.
 
 {% endlien %}
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :
-
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
+L'objectif de ce MON est d'analyser les évolutions qui ont lieu dans le domaine des ressources humaines grâce au développement du numérique. Je vais particulièrement m'intéresser aux évolutions en matière de recrutement, avec les nouveaux systèmes de tri de CV, de questionnaires et d'entretiens... Cela va me permettre aussi d'aborder les questions éthiques qui peuvent se poser avec ces nouvelles solutions automatisées.
 
 ## Contenu
 

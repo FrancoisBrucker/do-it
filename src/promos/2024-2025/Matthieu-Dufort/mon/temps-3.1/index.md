@@ -20,8 +20,6 @@ Les lien utiles pour la compréhension de celui-ci.
 
 {% endlien %}
 
-Le contenue de ce mon rassemblera la théorie sur ce type de management ainsi qu'un cas pratique sur une plateforme le mettant en place
-
+Le contenu de ce MON rassemblera la théorie sur ce type de management ainsi qu'un cas pratique sur une plateforme le mettant en place.
 
 ## Contenu
-
