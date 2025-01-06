@@ -14,3 +14,6 @@ authors:
 
 - [POK 2 - Dark Kitchen - BackEnd](./temps-2)
   
+## Temps 3
+
+- [POK 3 - Dark Kitchen - BackEnd Suite](./temps-3)
