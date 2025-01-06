@@ -1,0 +1,389 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Dark Kitchen - BackEnd Suite</title>
+
+        <link href="/do-it/assets/node_modules/prismjs/themes/prism-solarizedlight.min.css" rel="stylesheet">
+        <link href="/do-it/assets/node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+        <link href="/do-it/assets/stylesheets/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [
+                [
+                '$', '$'
+                ],
+                [
+                '\\(', '\\)'
+                ]
+            ]
+            },
+            svg: {
+            fontCache: 'global'
+            }
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" src="/do-it/assets/node_modules/mathjax/es5/tex-svg-full.js"></script>
+
+        <header class="border-b-2 border-gray-200 mb-4">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="min-h-[50px] flex justify-between items-center">
+                <a class="mx-2" href="/do-it/">Home</a>
+                <div class="flex items-center gap-4 sm:gap-6 ">
+                    <a class="" href="/do-it/cs">CS</a>
+                    <a class="" href="/do-it/pok">POK</a>
+                    <a class="" href="/do-it/mon">MON</a>
+                    <a class="" href="/do-it/projets">Projets</a>
+                    <a class="hidden sm:block" href="/do-it/promos">Promos</a>
+                    <a href="/do-it/search">
+                        <svg class="h-5 aspect-square" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                        </svg>
+                    </a>
+                    <a class="hidden sm:block" href="https://github.com/FrancoisBrucker/do-it" target="_blank">
+                        <svg class="h-5 aspect-square" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main class="max-w-[1000px] mx-auto px-4" data-pagefind-body="">
+            
+<article class="relative">
+<h1 class="mb-1">Dark Kitchen - BackEnd Suite</h1>
+<div class="mb-4">
+    
+        <div class="px-4 flex flex-wrap items-center">
+            
+                <div class="font-bold">Tags : </div>
+            
+            <ul class="flex flex-wrap overflow-auto not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Tags">
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">POK</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">2024-2025</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">temps 3</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">BackEnd</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Node.js</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Express.js</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">MongoDB</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">API REST</li>
+                
+                    <li class="bg-yellow-200 rounded-full px-2" data-pagefind-filter="Tags">Dark Kitchen</li>
+                
+
+            </ul>
+            
+            
+            <div class="hidden" data-pagefind-meta="Type">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="px-4 flex flex-wrap items-center">
+            <div class="font-bold">Auteurs : </div>
+            <ul class="flex flex-wrap not-prose list-none my-1 mx-0 px-1 gap-1" data-pagefind-meta="Auteurs">
+                
+                    <li class="bg-blue-200 rounded-full px-2" data-pagefind-filter="Auteurs">Thomas Merle</li>
+                
+            </ul>
+        </div>
+    
+
+    
+</div>
+
+        <p class="mb-4 text-lg">
+
+                Codage du BackEnd du site de ma Dark Kitchen - Passage des commandes et Système de Paiement
+
+        </p>
+
+
+
+    
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-purple-500 bg-purple-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>
+</svg>
+<div class="pl-8 mr-8">
+
+<a href="/do-it/promos/">Promotions</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/">2024-2025</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Merle-Thomas/">Thomas Merle</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Merle-Thomas/pok/">POKs Thomas Merle</a><span class="px-1">/</span><a href="/do-it/promos/2024-2025/Merle-Thomas/pok/temps-3/">Dark Kitchen - BackEnd Suite</a>
+
+</div></div>
+
+
+
+
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-pink-500 bg-pink-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p><strong>Niveau :</strong> Très Technique
+<strong>Pré-requis:</strong></p>
+<ul>
+<li>Connaissances de base en JavaScript.</li>
+<li>Familiarité avec Node.js et npm.</li>
+<li>Familiarités avec les bases de données et leur gestion avec MangoDB.</li>
+<li>Notions d’API REST et endpoints.</li>
+</ul>
+</div></div>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
+</svg>
+<div class="pl-8 mr-8">
+<ul>
+<li><a href="https://github.com/SofianeOuadda/dark-kitchen-v2"><code>GitHub Projet Dark Kitchen v2</code></a></li>
+<li><a href="https://github.com/SofianeOuadda/dark-kitchen-v2">GitHub Backend Dark Kitchen</a></li>
+</ul>
+</div></div>
+
+<p>Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce POK. On oubliera pas de donner :</p>
+<ul>
+<li>le niveau et les prérequis nécessaires en utilisant la balise <a href="/do-it/cs/contribuer-au-site/#prerequis"><code>prerequis</code></a></li>
+<li>les autres POK &amp; MON en rapport en utilisant la balise <a href="/do-it/cs/contribuer-au-site/#lien"><code>lien</code></a></li>
+</ul>
+<h1><span style="color: green">POK3 - Dark Kitchen - BackEnd Suite</span></h1>
+<p>Codage en JS (NodeJS).</p>
+<p>Ce POK décrit les étapes du développement du site web de notre Dark Kitchen de Fried Rice et de Noodles <strong>S&amp;T Goreng</strong>. Il comprend la mise en place d'une <strong>API REST</strong>, la connexion à une base de données <strong>MongoDB</strong> et des fonctionnalités essentielles côté serveur. Ce POK est la suite logique du précédent. Nous ajoutons de nouevlles fonctionnalités comme la possibilité de passer des commandes et l'implémentation d'un système de paiement en ligne.</p>
+<hr>
+<h2>Objectifs principaux</h2>
+<ol>
+<li>Conception des API: construire une API REST avec <strong>Node.js</strong> et <strong>Express.js</strong> pour gérer les produits, commandes et le panier. Création des endpoints et de l'architecture API.</li>
+<li>Modéliser les données : définir les modèles nécessaires avec <strong>MongoDB</strong> comme base de données pour stocker les informations de manière persistante.</li>
+<li>Refactoriser et structurer le code pour une meilleure maintenabilité.</li>
+<li>Rendre le backend fonctionnel pour intégration avec le frontend.</li>
+</ol>
+<h3>1. Initialisation du projet</h3>
+<ul>
+<li><strong>Tâches :</strong>
+<ul>
+<li><a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Initialiser un projet Node.js avec <code>npm init</code>.</li>
+<li><a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Installer les dépendances principales : <code>express</code>, <code>mongoose</code>, <code>dotenv</code>.</li>
+<li><a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Configurer un fichier <code>.env</code> pour stocker les variables sensibles comme le port et l’URI <strong>MongoDB</strong>.</li>
+<li><a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Créer un serveur Express.js fonctionnel qui écoute sur un port donné.</li>
+</ul>
+</li>
+</ul>
+<h3>2. Connexion à MongoDB</h3>
+<ul>
+<li>
+<p><strong>Tâches :</strong></p>
+<ul>
+<li><a href="#">Thomas</a> Créer un cluster MongoDB sur <strong>MongoDB Atlas</strong>.</li>
+<li>[<a href="#">Thomas</a> Configurer la connexion entre le serveur Node.js et MongoDB à l’aide de <code>mongoose</code>.</li>
+<li><a href="#">Thomas</a> Définir les schémas et modèles pour :
+<ul>
+<li><strong>Produits</strong> (nom, description, prix, image).</li>
+<li><strong>Users</strong> (nom, eamil, passwords).</li>
+</ul>
+</li>
+<li><a href="#">Thomas</a> Ajouter des données de test pour les produits.</li>
+</ul>
+<h3>3. Création des routes API REST</h3>
+</li>
+<li>
+<p><strong>Tâches :</strong></p>
+<ul>
+<li><a href="#">Sofiane</a> Implémenter les routes suivantes :
+<ul>
+<li><code>GET /api/products</code> : Liste tous les produits.</li>
+<li><code>GET /api/products/:id</code> : Détaille un produit spécifique.</li>
+<li><code>POST /api/products/</code> : Création un produit spécifique.</li>
+<li><code>PUT /api/products/:id</code> : Update un produit spécifique.</li>
+<li><code>DELETE /api/products/:id</code> : Suprimer un produit spécifique.</li>
+<li><code>POST /api/login</code> : Se connecter</li>
+<li><code>POST /api/register</code> : Créaction d'un nouveau compte</li>
+</ul>
+</li>
+<li>Structurer les routes pour qu'elles utilisent les méthodes <strong>CRUD</strong> associées.</li>
+</ul>
+</li>
+</ul>
+<h3>4. Refactorisation et modularisation du code</h3>
+<ul>
+<li><strong>Tâches :</strong>
+<ul>
+<li><a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Organiser le projet en modules :
+<ul>
+<li><code>routes/</code> : Fichiers pour les routes (<code>products.js</code>, <code>orders.js</code>).</li>
+<li><code>controllers/</code> : Logique métier séparée des routes.</li>
+<li><code>models/</code> : Définition des schémas <strong>Mongoose</strong>.</li>
+</ul>
+</li>
+<li>Ajouter un fichier <code>utils/</code> pour des fonctions utilitaires (exemple : formatage des données).</li>
+</ul>
+</li>
+</ul>
+<h3>5. Ajout des données et validation simple</h3>
+<ul>
+<li><strong>Tâches :</strong>
+<ul>
+<li><a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Ajouter des produits par défaut directement dans MongoDB: données <strong>Product</strong> notamment.</li>
+<li><a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Vérifier que les produits sont bien récupérés via les routes <code>GET /api/products</code> et <code>GET /api/products/:id</code>.</li>
+</ul>
+</li>
+</ul>
+<h3>6. Intégration du Backend avec le Frontend</h3>
+<ul>
+<li><strong>Tâches :</strong>
+<ul>
+<li><a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Connecter le frontend en <strong>Vue.js</strong> avec l'API backend en utilisant <strong>Axios</strong> ou <strong>Fetch</strong> pour effectuer des appels API.</li>
+<li><a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Tester les appels aux différentes routes API (produits, panier, commandes) depuis le frontend pour vérifier que les données sont correctement affichées et manipulées.</li>
+<li><a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Implémenter des actions sur le frontend comme l'ajout de produits au panier via l'API <code>POST /api/cart</code> et l'affichage des produits depuis <code>GET /api/products</code>.</li>
+<li><a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Vérifier que les pages du frontend, comme le panier et le menu, interagissent correctement avec le backend pour mettre à jour les données de manière dynamique.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>Sprints de développement</h2>
+<p>--</p>
+<h3>Sprint 1 : Initialisation et serveur Express</h3>
+<ul>
+<li><strong>Objectif :</strong> Créer un serveur <strong>Express.js</strong> fonctionnel.</li>
+<li><strong>Tâches</strong> :
+<ul>
+<li>[x] <a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Initialisation du projet et installation des dépendances.</li>
+<li>[x] <a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Configuration du serveur avec <strong>express</strong>.</li>
+</ul>
+</li>
+</ul>
+<h2>Sprint 2 : Connexion à MongoDB et création des modèles</h2>
+<ul>
+<li><strong>Objectif :</strong> Configurer MongoDB et définir les schémas des données.</li>
+<li><strong>Tâches</strong> :
+<ul>
+<li>[x] <a href="#">Thomas</a> Création du cluster <strong>MongoDB Atlas</strong>.</li>
+<li>[x] <a href="#">Thomas</a> Connexion avec <strong>mongoose</strong>.</li>
+<li>[x] <a href="#">Thomas</a> Création des modèles <strong>Product</strong>, <strong>Order</strong> et <strong>User</strong>.</li>
+<li>[x] <a href="#">Thomas</a> Ajout de données de test pour les <strong>Product</strong>.</li>
+<li>[x] <a href="#">Sofiane</a> Connexion à MongoDB pour l'authentification : création des données <strong>Users</strong> via script.</li>
+</ul>
+</li>
+</ul>
+<h3>Sprint 3 : Développement des routes API</h3>
+<ul>
+<li><strong>Objectif :</strong> Implémenter les fonctionnalités principales de l’API.</li>
+<li><strong>Tâches</strong> :
+<ul>
+<li>[x] <a href="#">Thomas</a> Création route pour les produits (<code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code>)..</li>
+<li>[x] <a href="#">Sofiane</a> Création routes pour l'authentification.</li>
+<li>[x] <a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Validation basique des données entrantes.</li>
+</ul>
+</li>
+</ul>
+<p>--</p>
+<h3>Sprint 4 : Refactorisation et modularisation</h3>
+<ul>
+<li><strong>Objectif :</strong> Organiser le projet pour faciliter la maintenance et les futures évolutions.</li>
+<li><strong>Tâches</strong> :
+<ul>
+<li>[x] <a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Séparation des routes, contrôleurs et modèles dans des dossiers dédiés.</li>
+<li>[x] <a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Structuration du code en modules clairs (<code>routes/</code>, <code>models/</code>).</li>
+</ul>
+</li>
+</ul>
+<h3>Sprint 5 : Ajout des données et validation simple</h3>
+<ul>
+<li><strong>Objectif :</strong> Ajouter des données de test et vérifier le fonctionnement des routes API.</li>
+<li><strong>Tâches</strong> :
+<ul>
+<li>[x] <a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Ajout manuel des produits par défaut dans la base de données MongoDB.</li>
+<li>[ ] Validation des données récupérées avec <strong>Postman</strong>.</li>
+</ul>
+</li>
+</ul>
+<h3>Sprint 6 : Intégration du Backend avec le Frontend</h3>
+<ul>
+<li><strong>Objectif :</strong> Assurer la communication entre le frontend <strong>Vue.js</strong> et le backend <strong>Node.js</strong> via des API.</li>
+<li><strong>Tâches</strong> :
+<ul>
+<li>[x] <a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Implémentation des appels API pour récupérer les produits et gérer le panier.</li>
+<li>[x] <a href="#">Sofiane</a> Implémentation des appels API pour enregistrer des <strong>User</strong>.</li>
+<li>[x] <a href="#">Sofiane</a> Mise à jour du FrontEnd avec les popups <strong>LogIn</strong> et <strong>SignIn</strong>.</li>
+<li>[x] <a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Vérification de l'affichage dynamique des produits dans le frontend.</li>
+<li>[x] <a href="#">Sofiane</a>&amp;<a href="#">Thomas</a> Tester connexion/l'enregistrement d'un user et ajout à la base de donnée.</li>
+</ul>
+</li>
+</ul>
+<p>--</p>
+<h2>Horodateur</h2>
+<p>Toutes les séances et le nombre d'heure que l'on y a passé.</p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Heures passées</th>
+<th>Indications</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+</article>
+
+        </main>
+
+
+        <footer class="min-h-[50px] border-t-2 border-gray-200 mt-4">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div class="min-h-[50px] flex justify-center items-center">
+                    <p class="text-center">
+                        <span style="font-family: Consolas, sans-serif;">Do_<span style="color: #4a86e8">It</span></span> : Développement et Organisation en IT
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        MathJax
+            .startup
+            .document
+            .getMathItemsWithin(document.body);
+        </script>
+        <script src="/do-it/assets/node_modules/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+    </body>
+</html>
