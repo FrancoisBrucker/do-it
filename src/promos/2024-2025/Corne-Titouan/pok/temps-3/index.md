@@ -1,21 +1,25 @@
 ---
 layout: layout/pok.njk
 
-title: "Titre du POK du temps 3"
+title: "Angular - Front-End Framework (2/2)"
 authors:
   - Titouan Corne
 
-date: 1971-03-01
+date: 2025-01-06
 
 tags: 
   - "temps 3"
+  - "vert"
+  - "Dev"
+  - "Web"
+  - "Angular"
 
-résumé: Un POK traitant d'un sujet.
+résumé: Ce dernier POK est consacré à l'approfondissement des connaissances du language de programmation Angular. C'est la suite de mon POK2. Je vais ainsi continuer de développer le site de cuisine Miam'Miam, j'aimerais implémenter les fonctionnalités manquantes (ajout de recette, ...), mais aussi j'aimerais écrire des tests unitaires et déployer le site sur le serveur aioli (serveur de Do-It).
 ---
 
 {% prerequis %}
 
-Liste des prérequis du POK ET/OU MON
+Des connaissances en développement web sont nécessaires (HTML, CSS, JavaScript/TypeScript), il faut également connaître les principes de base d'Angular.
 
 {% endprerequis %}
 {% lien %}

@@ -1,15 +1,17 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 3"
+title: "Les enjeux du numérique dans le domaine de la santé"
 authors:
   - Titouan Corne
 
-date: 1971-03-01
+date: 2025-01-06
 tags: 
   - "temps 3"
+  - "e-santé"
+  - "vert"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Ce MON traite l'évolution de l'usage du numérique dans le domaine de la santé. Il me permettra d'identifier les limites de la e-santé. Exceptionnellement, ce MON sera constitué de 15 heures de travail."
 ---
 
 {% prerequis %}

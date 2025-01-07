@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "Angular - Front-End Framework"
+title: "Angular - Front-End Framework (1/2)"
 authors:
   - Titouan Corne
 

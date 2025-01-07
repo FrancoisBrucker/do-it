@@ -1,15 +1,19 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du premier MON du temps 3"
+title: "Test-Driven Developpment : les tests au coeur du développement"
 authors:
   - Titouan Corne
 
-date: 1971-02-01
+date: 2025-01-06
 tags: 
   - "temps 3"
+  - "test"
+  - "vert"
+  - "méthodologie"
+  - "Test-Driven Developpment"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Avec ce MON, je compte étudier la méthodologie Test-Driven Developpment qui repose sur l'écriture de test en amont (généralement les tests sont implémentés après le code). Ainsi, je vais me former à l'écriture de tests. Enfin, j'aimerais me familiariser avec un outil de gestion de tests (Jenkins par exemple) et comprendre comment l'intelligence artificielle (Copilot, GPT) peut être un outil privilégié dans l'écriture de tests. Exceptionnellement, ce MON sera constitué de 15 heures de travail. "
 ---
 
 {% prerequis %}
