@@ -153,16 +153,101 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
 </svg>
 <div class="pl-8 mr-8">
-<p>Les lien utiles pour la compréhension de celui-ci.</p>
+<ul>
+<li><a href="https://react.dev/">Site officiel</a></li>
+<li>[GitHub : application pour tester et prendre en main les différents concepts](mettre lien ici)</li>
+</ul>
 </div></div>
 
-<p>Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :</p>
+<h2>Table des matières</h2>
+<ol>
+<li><a href="#section1">Test-Driven Developpment : Comprendre la méthodologie</a></li>
+</ol>
+<h2>1. Test-Driven Developpment : Comprendre la méthodologie <a id="section1"></a></h2>
+<p>La méthodologie Test-Driven Developpment (tdd) consiste à concevoir un logiciel par des itérations successives courtes, telles que chacune de ses itérations correspond à un problème à résoudre formulé sous forme de test.</p>
+<p>Un <strong>test unitaire</strong> est une petite portion de code écrite pour vérifier qu'une partie spécifique de votre application fonctionne comme prévu. Cela aide à identifier rapidement des erreurs ou régressions (bugs ou comportements incorrects introduits dans une fonctionnalité qui fonctionnait correctement auparavant) dans votre code.</p>
+<p>Le tdd suit généralement un cycle en trois étapes :</p>
+<ol>
+<li><strong>Red :</strong> Ecrire un test qui échoue (car le code pour le satisfaire n'existe pas encore, puisqu'on écrit <strong>le test en amont</strong> du code).</li>
+<li><strong>Green :</strong> Ecrire le <strong>minimum</strong> de code nécessaire pour que le test réussisse. On ne s'occupe pas ici de l'algorithme utilisé ou de sa performance.</li>
+<li><strong>Refactor :</strong> Améliorer le code tout en gardant les tests au &quot;vert&quot;, de sorte à ce que sa performance soit optimale.</li>
+</ol>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block group-open:select-text">
+<p>Exemple illustratif simple en python</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2 cursor-auto select-text">
 <ul>
-<li>le niveau et les prérequis nécessaires en utilisant la balise <a href="/do-it/cs/contribuer-au-site/#prerequis"><code>prerequis</code></a></li>
-<li>les autres POK &amp; MON en rapport en utilisant la balise <a href="/do-it/cs/contribuer-au-site/#lien"><code>lien</code></a></li>
+<li><strong>Etape 1 : Ecrire le test (Red)</strong></li>
 </ul>
-<h2>Contenu</h2>
-<p>Le contenu du MON.</p>
+<p>On écrit un test qui vérifie que la fonction <code>add(a,b)</code> renvoie bien la somme de <code>a</code> et de <code>b</code>. Par exemple, add(4,3) devrait retourner 7</p>
+<pre class="language-python"><code class="language-python"><span class="token keyword">import</span> unittest
+
+<span class="token keyword">class</span> <span class="token class-name">TestAddition</span><span class="token punctuation">(</span>unittest<span class="token punctuation">.</span>TestCase<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">test_add_two_numbers</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>assertEqual<span class="token punctuation">(</span>add<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">)</span>  <span class="token comment"># étant donné qu'on écrit le test en amont, la fonction add n'a pas encore été codée</span></code></pre>
+<p>Si on exécute le test à cette étape, on va obtenir une erreur qui est normale et voulue puisque la fonction <code>add</code> n'a pas été codée.</p>
+<div class="quote relative  py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-cyan-500 bg-cyan-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<div class="pl-8 mr-8">
+<p><code>unittest</code> est le module intégré de Python pour créer et exécuter des tests unitaires. Il fournit une infrastructure pour écrire, organiser, et exécuter des tests de manière systématique et automatisée.</p>
+</div></div>
+<ul>
+<li><strong>Etape 2 : Implémenter le code minimal (Green)</strong></li>
+</ul>
+<p>A présent on code la fonction <code>add</code> :</p>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">add</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">return</span> a <span class="token operator">+</span> b</code></pre>
+<p>A ce stade, si on exécute le test, il devrait réussir.</p>
+<ul>
+<li><strong>Etape 3 : Optimiser le code (Refactor)</strong></li>
+</ul>
+<p>Dans ce cas simple, il n'y a pas vraiment de besoin de refactoriser, car la fonction est déjà concise et claire. Cependant, dans des cas plus complexes, cette étape consiste à nettoyer ou optimiser le code tout en gardant les tests au &quot;vert&quot;.</p>
+<p>Ensuite on peut continuer la méthodologie en entammant un nouveau cycle =&gt; nouvelle étape <em>red</em>, avec l'écriture d'un nouveau test.</p>
+</div>
+</details>     
+</div>
+<p>Les <strong>erreurs récurrentes</strong> à ne pas faire en tdd :</p>
+<ul>
+<li>Oublier d'exécuter régulièrement les tests</li>
+<li>Ecrire trop de tests à la fois, ou des tests trop complexes. Il est important d'avancer par petits pas.</li>
+<li>Ecrire des tests qui manquent d'assertions, c'est-à-dire des tests qui ne vérifient pas correctement que le code fonctionne comme souhaité. Exemple d'assertion en Python avec unittest : <code>self.assertEqual(add(2, 3), 5)</code></li>
+</ul>
+<p>Les (nombreux) <strong>avantages</strong> du tdd :</p>
+<ul>
+<li>Amélioration de la qualité du code : code robuste, bien structuré et moins sujet aux bugs.</li>
+<li>Réduction des bugs et régressions : suite de tests automatisée qui garantit que chaque modification du code est validée. Cela aide à prévenir les régressions lorsque de nouvelles fonctionnalités ou des corrections de bugs sont introduites.</li>
+<li>Conception guidée par les tests : cela évite le surdéveloppement ou l'écriture de code inutile, ce qui améliore la clarté et la maintenabilité.</li>
+<li>Conception axée sur les résultats : on se concentre sur les objectifs fonctionnels (ce que le code doit faire) au lieu de se perdre dans les détails de l'implémentation.</li>
+<li>Documentation vivante : les tests eux-mêmes servent de documentation technique vivante qui décrit comment chaque fonctionnalité est censée fonctionner.</li>
+<li>Méthodologie adapté à l'intégration continue : le tdd garantit un flux de développement fluide, avec des livraisons fréquentes et fiables. On avance continuement petit pas par petit pas</li>
+</ul>
+<h2>Sources utiles</h2>
+<div class="quote relative py-2 drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-emerald-500 bg-emerald-100">
+<svg class="absolute w-7 h-7 pl-1 pt-0.5 pb-0.5 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"></path>
+</svg>
+<div class="pl-8 mr-8">
+<ul>
+<li><a href="https://vandangogna.medium.com/a-practical-example-using-test-driven-development-88b4536ac574">A Practical Example using Test Driven Development. Source : Vandan Gogna, an IBM Garage expert, sur Medium (2021)</a></li>
+<li><a href="https://legacy.reactjs.org/docs/introducing-jsx.html">Documentation sur le JSX. Source : Meta Platforms, Inc. (2024)</a></li>
+</ul>
+</div></div>
+
 
 
 </article>
