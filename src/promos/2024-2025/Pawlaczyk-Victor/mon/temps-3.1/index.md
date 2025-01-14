@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du premier MON du temps 3"
+title: "Firebase"
 authors:
   - Victor Pawlaczyk
 
@@ -9,7 +9,7 @@ date: 2025-02-01
 tags: 
   - "temps 3"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Découverte et prise en main de Firebase"
 ---
 
 {% prerequis %}
