@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du premier MON du temps 3"
+title: "Ecologie et IT"
 authors:
   - Alix Duréault
 
@@ -9,7 +9,7 @@ date: 1971-02-01
 tags: 
   - "temps 3"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Comment peux t'on conjuguer IT et écologie ?"
 ---
 
 {% prerequis %}
@@ -23,10 +23,7 @@ Les lien utiles pour la compréhension de celui-ci.
 
 {% endlien %}
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :
-
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
+Ce MON tournera autour de deux problématiques, est il possible de conjuguer les enjeux climatiques et les enjeux de digitalisation ? et Comment les méthodes d'analyse environnementales (analyse cycle de vie, bilan carbone, analyse coût bénéfice, ...) peuvent elles s'appliquer à des produits immatérielles comme les applications webs ?
 
 ## Contenu
 
