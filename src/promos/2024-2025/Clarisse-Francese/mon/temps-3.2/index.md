@@ -1,20 +1,24 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 3"
+title: "MON 3.2 : récap des notions clés sur l'environnement"
 authors:
   - Clarisse Francese
 
 date: 1971-03-01
 tags: 
   - "temps 3"
+  - "ACV"
+  - "Bilan carbone"
+  - "Environnement"
+  - "Economie circulaire"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "MON récapitulant plein de notions clés sur l'environnement (bilan carbone, ACV, norme ISO, CSRD etc) car je serai amener à travailler dans ce secteur en TFE"
 ---
 
 {% prerequis %}
 
-Liste des prérequis du POK ET/OU MON
+MON débutant, aucun prérequis
 
 {% endprerequis %}
 {% lien %}
@@ -23,11 +27,20 @@ Les lien utiles pour la compréhension de celui-ci.
 
 {% endlien %}
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :
+## Sommaire
 
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
+- [Truc](#t)
+- [Bidule](#b)
+- [Conclusion](#ccl)
 
-## Contenu
+<h2 id=t> Truc</h2>
 
-Le contenu du MON.
+<h2 id=ccl> 👍Conclusion</h2>
+
+Blabla
+
+## ⌛Horodatage
+
+| Date | Heures passées | Indications |
+| -------- | -------- |-------- |
+| Mercredi 15/01 | xh | truc |

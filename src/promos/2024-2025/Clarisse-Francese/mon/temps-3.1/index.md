@@ -1,20 +1,24 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du premier MON du temps 3"
+title: "MON 3.1 : l'art de savoir parler"
 authors:
   - Clarisse Francese
 
 date: 1971-02-01
 tags: 
   - "temps 3"
+  - "bleu"
+  - "CNV"
+  - "éloquence"
+  - "discours"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "MON abordant la CNV, l'éloquence, l'art de la négociation, les procédés réthoriques etc afin de savoir bien parler sans blesser et savoir préparer des discours aux petits oignons"
 ---
 
 {% prerequis %}
 
-Liste des prérequis du POK ET/OU MON
+MON débutant, aucun prérequis
 
 {% endprerequis %}
 {% lien %}
@@ -23,11 +27,20 @@ Les lien utiles pour la compréhension de celui-ci.
 
 {% endlien %}
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :
+## Sommaire
 
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
+- [Truc](#t)
+- [Bidule](#b)
+- [Conclusion](#ccl)
 
-## Contenu
+<h2 id=t> Truc</h2>
 
-Le contenu du MON.
+<h2 id=ccl> 👍Conclusion</h2>
+
+Blabla
+
+## ⌛Horodatage
+
+| Date | Heures passées | Indications |
+| -------- | -------- |-------- |
+| Mercredi 15/01 | xh | truc |

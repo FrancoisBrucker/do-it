@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "Titre du POK du temps 3"
+title: "POK 3 : mindmap"
 authors:
   - Clarisse Francese
 
@@ -9,13 +9,16 @@ date: 1971-03-01
 
 tags: 
   - "temps 3"
+  - "saumon"
+  - "vert"
+  - "mindmap"
 
-résumé: Un POK traitant d'un sujet.
+résumé: Ce POK me servira à comprendre comment réaliser de belles mindmap et à mettre sous forme de mindmap mes MON préférés ou d'autres sujets qui m'intéressent
 ---
 
 {% prerequis %}
 
-Liste des prérequis du POK ET/OU MON
+POK débutant : aucun prérequi
 
 {% endprerequis %}
 {% lien %}
@@ -24,43 +27,54 @@ Les lien utiles pour la compréhension de celui-ci.
 
 {% endlien %}
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce POK. On oubliera pas de donner :
+## 📌Tâches
 
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
+{% details "Sprints et horodatage" %}
+### 🏃‍➡️Sprints
 
-## Tâches
-
-### Sprints
-
-But final.
+Objectif général : **apprendre à faire de belles mindmaps** et appliquer la théorie en réalisant des mindmap de mes MON préférés et d'autres sujets qui m'intéressent
 
 #### Sprint 1
 
-Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
+- [] regarder la théorie des mindmap : 1h ()
+- [] regarder les meilleurs logiciels pour faire des mindmap : 1h30 ()
+- [] faire une mindmap sur la gestion de projet : 2h30 ()
+- [] faire une mindmap sur le lean : 2h30 ()
+- [] faire une mindmap sur mon MON 1.1, l'intelligence collective : 2h30 ()
 
-- [ ] Une tâche non réalisée
-- [x] Une tâche réalisée
+**Total d'heures sprint 1 : xh**    
+**Etude post mortem** : blabla
 
 #### Sprint 2
 
-- [ ] Une tâche non réalisée
-- [x] Une tâche réalisée
+- [] faire une mindmap de mon MON 3.2, récap des notions clés sur l'environnement : 2h30 ()
+- [] faire une mindmap des notions LGBTQIA+ : 2h30 ()
+- [] faire une autre mindmap à définir : 2h30 ()
+- [] faire une autre mindmap à définir : 2h30 ()
 
-Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
+**Total d'heures sprint 2 : xh**   
+**Etude post mortem** : blabla
 
-### Horodatage
-
-Toutes les séances et le nombre d'heure que l'on y a passé.
+### ⌛Horodatage
 
 | Date | Heures passées | Indications |
 | -------- | -------- |-------- |
-| Mardi 27/08  | 1H  | Travail sur la trame du site |
+| **Sprint 1**
+Sate  | xh  | Truc |
 
-## Contenu
+| **Sprint 2**
+Date  | xh  | Truc |
 
-Le contenu du POK.
+{% enddetails %}
 
-### Premier Sprint
+## Sommaire
 
-### Second Sprint
+- [POK : sprint 1](#POK1)
+- [POK : sprint 2](#POK2)
+- [Conclusion de ce POK 2](#conclusion)
+
+<h2 id=POK1> 1️⃣POK : sprint 1</h2>
+
+<h2 id=POK2> 2️⃣POK : sprint 2</h2>
+
+<h2 id=conclusion> 👍 Conclusion de ce POK 3</h2>
