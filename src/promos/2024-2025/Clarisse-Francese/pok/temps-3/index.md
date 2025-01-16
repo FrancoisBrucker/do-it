@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "POK 3 : mindmap"
+title: "POK 3 : récap des notions clés sur l'environnement"
 authors:
   - Clarisse Francese
 
@@ -10,10 +10,11 @@ date: 1971-03-01
 tags: 
   - "temps 3"
   - "saumon"
-  - "vert"
-  - "mindmap"
+  - "Bilan Carbone"
+  - "ACV"
+  - "Economie circulaire"
 
-résumé: Ce POK me servira à comprendre comment réaliser de belles mindmap et à mettre sous forme de mindmap mes MON préférés ou d'autres sujets qui m'intéressent
+résumé: Ce POK me servira à faire un récap des notions clés sur l'environnement dont j'aurai besoin lors de mon TFE en conseil dans l'nvironnement
 ---
 
 {% prerequis %}
@@ -32,25 +33,19 @@ Les lien utiles pour la compréhension de celui-ci.
 {% details "Sprints et horodatage" %}
 ### 🏃‍➡️Sprints
 
-Objectif général : **apprendre à faire de belles mindmaps** et appliquer la théorie en réalisant des mindmap de mes MON préférés et d'autres sujets qui m'intéressent
+Objectif général : **avoir une très bonne culture sur l'environnement**
 
 #### Sprint 1
 
-- [] regarder la théorie des mindmap : 1h ()
-- [] regarder les meilleurs logiciels pour faire des mindmap : 1h30 ()
-- [] faire une mindmap sur la gestion de projet : 2h30 ()
-- [] faire une mindmap sur le lean : 2h30 ()
-- [] faire une mindmap sur mon MON 1.1, l'intelligence collective : 2h30 ()
+- [] regarder les cours de TREO pour lister les sujets pertinents : 30min ()
+- [] étudier les sujets et en faire des résumés sur GitHub : 9h30 ()
 
 **Total d'heures sprint 1 : xh**    
 **Etude post mortem** : blabla
 
 #### Sprint 2
 
-- [] faire une mindmap de mon MON 3.2, récap des notions clés sur l'environnement : 2h30 ()
-- [] faire une mindmap des notions LGBTQIA+ : 2h30 ()
-- [] faire une autre mindmap à définir : 2h30 ()
-- [] faire une autre mindmap à définir : 2h30 ()
+- [] étudier les sujets et en faire des résumés sur GitHub : 10h ()
 
 **Total d'heures sprint 2 : xh**   
 **Etude post mortem** : blabla

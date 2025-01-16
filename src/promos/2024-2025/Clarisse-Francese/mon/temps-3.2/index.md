@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "MON 3.2 : récap des notions clés sur l'environnement"
+title: "MON 3.2 : mindmap, lean et gestion de projet"
 authors:
   - Clarisse Francese
 
@@ -13,12 +13,12 @@ tags:
   - "Environnement"
   - "Economie circulaire"
 
-résumé: "MON récapitulant plein de notions clés sur l'environnement (bilan carbone, ACV, norme ISO, CSRD etc) car je serai amener à travailler dans ce secteur en TFE"
+résumé: "MON pour apprendre à faire des mindmap en en réalisant une sur le lean et une autre sur la gestion de projet"
 ---
 
 {% prerequis %}
 
-MON débutant, aucun prérequis
+MON débutant, aucun prérequi
 
 {% endprerequis %}
 {% lien %}
