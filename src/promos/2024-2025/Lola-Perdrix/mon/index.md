@@ -12,5 +12,5 @@ Ensemble des MON réalisés par Lola Perdrix.
 - [MON 1.2 : Fondamentaux de SQL](./temps-1.2)
 - [MON 2.1 : SQL Overview](./temps-2.1)
 - [MON 2.2 : Les enjeux du Cloud](./temps-2.2)
-- [MON 3.1](./temps-3.1)
-- [MON 3.2](./temps-3.2)
+- [MON 3.1 : Analyse de données géographiques](./temps-3.1)
+- [MON 3.2 : Découverte des notions de back-end](./temps-3.2)

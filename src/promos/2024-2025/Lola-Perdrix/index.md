@@ -6,8 +6,6 @@ authors:
     - "Lola Perdrix"
 ---
 
-Étudiant fictif, utilisé pour le template de nouveaux élèves.
-
 ## POK & MON
 
 - [POK](./pok)
