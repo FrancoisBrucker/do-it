@@ -169,9 +169,9 @@ import ace_tools as tools; tools.display_dataframe_to_user(name="Rendements et V
 
 
 ```
-![alt text](image.png)
-![alt text](image-1.png)
-![alt text](image-2.png)
+![alt text](image.webp)
+![alt text](image-1.webp)
+![alt text](image-2.webp)
 
 
 ## 1.3 Optimisation avec la méthode de Markowitz
@@ -372,19 +372,19 @@ plt.axis('equal')
 plt.show()
 ```
 
-![Frontière de Markowitz](image-8.png)
+![Frontière de Markowitz](image-8.webp)
 
 
 
-![alt text](image-4.png)
+![alt text](image-4.webp)
 
-![alt text](image-5.png)
+![alt text](image-5.webp)
 
-![alt text](image-6.png)
+![alt text](image-6.webp)
 
 Ce qui est cohérent du fait que l'action d'APPLE est celle qui a le mieux performé sur cette période, comme on peut le voir dans le tableau suivant :
 
-![alt text](image-7.png)
+![alt text](image-7.webp)
 
 
 Conclusion

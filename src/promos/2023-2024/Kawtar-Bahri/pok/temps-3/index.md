@@ -42,7 +42,7 @@ Le coût moyen d’un budget informatique type, selon WalkMe, est le suivant :
 ## Modèle des coûts informatiques
 Le modèle d'analyse et de benchmarking des coûts informatiques est un outil élaboré par le Cigref, une association regroupant de grandes entreprises françaises, pour aider les organisations à évaluer et comparer leurs coûts liés à l'informatique. Son approche structurée et ses multiples niveaux d'analyse en font un allié précieux pour les organisations cherchant à améliorer leur efficacité et leur rentabilité dans le domaine de l'informatique.
 <figure style="text-align: center;">
-    <img src="1.png" width="550px" alt="Architecture du modèle">
+    <img src="1.webp" width="550px" alt="Architecture du modèle">
     <figcaption style="margin-top: 10px;">Architecture du modèle</figcaption>
 </figure>
 
@@ -111,7 +111,7 @@ Création du dashboard :
 •	Écrire le code VBA pour les macros pour ces deux actions 
 
 L'utilisateur choisit la dépense qu'il souhaite visualiser dans liste déroulante du filtre : 
-<img src="2.png" width="550px">
+<img src="2.webp" width="550px">
 
 {% details "Code du bouton Analyser" %}
 ```
@@ -165,7 +165,7 @@ End Sub
 {% enddetails %}
 
 en cliquant sur le bouton 'Analyser', on peut visualiser l'evolution de la dépense choisie en parallèle de l'évolution de l'activité (mesurée par le taux d'occupation des hôtels par exemple).
-<img src="3.png" width="550px">
+<img src="3.webp" width="550px">
 
 Le bouton 'Rénitialiser' efface le contenue du dashboard, pour pouvoir relancer le code par la suite. 
 

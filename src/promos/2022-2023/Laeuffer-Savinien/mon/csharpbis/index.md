@@ -42,7 +42,7 @@ Le principe d'architecture de microservices est une méthode de développement l
 
 <div style="width:100%;">
   <figure style="text-align:center">
-    <img style="height:800px; margin-left: auto; margin-right: auto" src="../micro1.png">
+    <img style="height:800px; margin-left: auto; margin-right: auto" src="../micro1.webp">
     <figcaption>Architecture de microservices</figcaption>
   </figure>
 </div>
@@ -61,7 +61,7 @@ L'architecture de microservices se différencie du schéma classique, appelé ar
 
 <div style="width:100%;">
   <figure style="text-align:center">
-    <img style="height:500px; margin-left: auto; margin-right: auto" src="../monolith.jpg">
+    <img style="height:500px; margin-left: auto; margin-right: auto" src="../monolith.webp">
     <figcaption>What Is Microservice Architecture?, Tomas Fernandez</figcaption>
   </figure>
 </div>
@@ -78,7 +78,7 @@ Docker est un projet open source qui permet la création de ce types de conteneu
 
 <div style="width:100%;">
   <figure style="text-align:center">
-    <img style="height:400px; margin-left: auto; margin-right: auto" src="../docker.jpg">
+    <img style="height:400px; margin-left: auto; margin-right: auto" src="../docker.webp">
     <figcaption>Docker</figcaption>
   </figure>
 </div>
@@ -133,7 +133,7 @@ Docker Compose est un outil opensource associé à Docker qui permet la gestion 
 
 <div style="width:100%;">
   <figure style="text-align:center">
-    <img style="height:500px; margin-left: auto; margin-right: auto" src="../dockercompose.png">
+    <img style="height:500px; margin-left: auto; margin-right: auto" src="../dockercompose.webp">
     <figcaption>Architecture multi-conteneurs appliquée aux microservices</figcaption>
   </figure>
 </div>

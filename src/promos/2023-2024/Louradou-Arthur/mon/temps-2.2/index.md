@@ -16,7 +16,7 @@ résumé: "Ce MON a pour objectif de se former à l'orchestrateur Kunbernetes po
 ---
 
 <br />
-<img align="center" width="500" src="./assets/kube-logo.png" alt="Logo Kubernetes" />
+<img align="center" width="500" src="./assets/kube-logo.webp" alt="Logo Kubernetes" />
 
 ## Objectifs
 

@@ -23,7 +23,7 @@ Enfin, j'ai complété une [openclassroom](https://openclassrooms.com/fr/courses
 
 Le back-end est la partie invisible de l'iceberg. Concrètement, il s'agit de l'ensemble des rouages côté serveur permettant de faire fonctionner un site web quand le client envoie une requête.
 
-![Back-end illustration](./back-end%20illustration.jpg)
+![Back-end illustration](./back-end%20illustration.webp)
 
 Pour s'occuper de toute ces taches, il nous faut donc un serveur. Ce sera le rôle de Node.js que d'utiliser notre machine comme support pour lancer un serveur local.
 

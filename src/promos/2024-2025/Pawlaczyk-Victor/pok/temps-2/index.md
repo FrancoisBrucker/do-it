@@ -240,9 +240,9 @@ Il présentait cependant quelques défauts visibles avant même de le visiter :
 
 J'ai décidé d'aller le visiter tout de même, l'annonce venait d'être publiée donc le prix serait sûrement négociable, de plus les photos de l'annonce ne me permettaient pas de jauger si l'appartement ne nécessitait qu'un simple rafraîchissement ou s'il fallait quasiment tout casser pour tout refaire.
 
-![Alternate](kouisine.jpg)
+![Alternate](kouisine.webp)
 
-![Alternate](chambreuh.jpg)
+![Alternate](chambreuh.webp)
 
 **La visite** :
 
@@ -252,7 +252,7 @@ La visite fût très instructive. En effet, je me suis rendu compte de l'état g
 
 La première étape a été de constituer mon budget prévisionnel des travaux en définissant quelle partie je choisis de réaliser par moi-même et quelle partie je fais faire par des artisans. Je suis arrivé à une estimation de 25 000 € de travaux (cf le tableau ci-dessous).
 
-![Alternate](Tvx.xlsx.png)
+![Alternate](Tvx.xlsx.webp)
 
 En parallèle de l'établissement de ce budget travaux, j'ai également fait une rapide étude de marché pour définir le loyer auquel je pourrais raisonnablement louer l'appartement. J'ai confirmé mon analyse en publiant le temps d'une soirée une annonce fictive sur LeBonCoin. Au vu du nombre de réponses que j'ai rapidement eu sur mon annonce, mon estimation de loyer était très correcte, voire même peut-être un peu basse, mais ce n'est pas plus mal pour établir un budget prévisionnel. En effet, ce n'est jamais représentatif d'établir son budget prévisionnel sur les estimations les plus optimistes.
 
@@ -260,7 +260,7 @@ Toujours en parallèle, j'ai pris connaissance des différents documents (PV d'A
 
 Une fois toutes ces données compilées dans un fichier excel, en prenant en compte les intérêts du prêt, les impôts, les vacances potentielles de l'appartement, etc, j'ai pu confirmer que le projet était rentable. En revanche, je n'estimais pas le bien à plus de 75 000 €, ainsi ma simulation prenait en compte un prix d'achat à 75 000€.
 
-![Alternate](Simul-St-Lazare.png)
+![Alternate](Simul-St-Lazare.webp)
 
 J'ai décidé de faire une offre à hauteur de 70 000 € à l'agent, qui m'a annoncé avoir reçu une offre à 75 000 € la veille. J'ai souhaité ne pas surenchérir, car 75 000 € était mon prix d'achat maximum que je m'étais fixé sur ce bien. De plus, la personne en face réalisait un achat de résidence principale sur ce bien, son attachement émotionnel était très certainement supérieur au mien et toute surenchère de ma part ne l'aurait que poussée à se saigner un peu plus pour acheter son appartement coûte que coûte, celà n'aurait mené à rien d'autre que 5 000 € supplémentaires dans la poche du vendeur.
 
@@ -274,7 +274,7 @@ Ce bien avait également quelques atouts qui me plaisaient beaucoup :
 - Il s'agit d'un rdc sur cour intérieur. Concrètement, l'appartement n'avait pas d'extérieur propre mais l'entrée de l'appartement se faisait par la cour intérieur de la copropriété, spacieuse et calme, dans laquele il était toléré que l'usufruitier de l'appartement en question installe une petite table ou un banc ainsi que quelques plantes.
 - La localisation entre le métro Baille et Notre-Dame du Mont.
 
-![Alternate](Dewor.jpg)
+![Alternate](Dewor.webp)
 
 Pour autant, quelques aspects me refroidissait de prime abord :
 
@@ -290,11 +290,11 @@ J'ai malgré tout décidé de le visiter afin de lever ou confirmer mes doutes.
 
 J'ai visité l'appartement directement avec son propriétaire actuel qui le vendait. La visite m'a rassuré sur de nombreux point. Par exemple, la copropriété à laquelle appartient cet appartement n'est composée que du bâtiment du fond de la parcelle du cadastre, l'autre bâtiment qui donne sur la rue et qui laisse présager un ravalement de façade intense dans les 5ans est indépendant. C'était un permier point positif. De plus, les copropriétaires investis dans le syndic de copropriété y vivent effectivement, leur bien dans cette copropriété n'est pas en location. C'est toujours rassurant quant à l'entretien général de la copropriété. En revanche, il s'agit d'un syndic bénévole, il faut toujours être vigilant à la rigueur et l'objectivité du syndic dans ce cas. Un autre point rassurant est la luminosité de l'appartement, qui est tout à fait agréable. La salle de bain est petite mais fonctionnelle. Cependant elle nécessite d'être entièrement refaite. Enfin, le propriétaire m'a informé pendant la visite qu'il avait prévu l'installation d'une pompe à chaleur afin de vendre l'appartement avec un DPE en D et non plus en F.
 
-![Alternate](sdb.jpg)
+![Alternate](sdb.webp)
 
 En revanche, la visite m'a aussi permis de me rendre compte de nouveaux défauts, notamment la fenêtre de la chambre qui donne sur un escalier de la copropriété desservant les appartements du dessus mais surtout un énorme ventre dans la façade latérale du bâtiment qui m'a inquiété sur la santé structurelle de la copropriété. Malgré celà, le bien me semblait vriament intéressant et j'ai décidé d'affiner mon étude de ce dossier.
 
-![Alternate](Bidou.jpg)
+![Alternate](Bidou.webp)
 
 **L'étude approfondie** :
 
@@ -306,7 +306,7 @@ Concernant les PV d'AG et autres documents fournis par le propriétaire, plusieu
 
 Par ailleurs, j'ai interrogé quelques professionnels concernant le ventre sur la façade latérale. Il s'agit d'un défaut structurel qui arrive en cas de fuite de la toiture au niveau du mur. L'humidité s'infiltre dans le mur et le fait gonfler de la sorte. Si le problème est traité correctement et dans les temps, il n'y a aucun souci structurel particulier à ce niveau. Au vu des renforts sur la façade, le problème était ancien et avait été traité. Depuis le bâtiment n'a pas rebougé donc ce problème n'en est plus un !
 
-![Alternate](Simul-5e.png)
+![Alternate](Simul-5e.webp)
 
 Après avoir compilé toutes les données avec excel, l'investissement s'est avéré rentable. Moins que la simulation précédente mais le quartier étant plus prometteur, je pouvais compter un peu plus sur la rentabilité foncière de ce bien, ce qui peut compenser la moins bonne rentabilité locative. J'ai décidé de faire une offre à 92 000 € sous deux réserves : l'installation conforme de la pompe à chaleur, facture et garantie à l'appui ainsi que l'obtention effective du DPE en D suite à l'installation. Malheureusement, le lendemain le propriétaire a reçu une offre au prix c'est-à-dire à 95 000 €. Il a donc décliné la mienne. J'étais prêt à monter au prix si besoin mai sj'ai souhaité tenter le coup, comme le propriétaire avait l'air pressé de vendre. J'ai voulu jouer et je n'ai pas gagné sur ce coup, mais le marché est encore débordant d'autres appartements peut-être tout aussi intéressants voire mieux !
 
@@ -323,7 +323,7 @@ Les atouts principaux de ce bien étaient :
 
 Cependant je n'ai même pas souhaité le visiter. En effet, après avoir pris contact avec l'agent immmobilier, ce-dernier m'a envoyé la visite virtuelle de l'appartement. C'est alors que je me suis rendu compte de la présence d'une fissure horizontale particulièrement inquiétante dans un mur porteur (qui plus est mitoyen avec l'immeuble d'à côté). Après quelques recherches, j'ai trouvé un historique de mise en péril sur cet immeuble plus qu'inquiétant : l'immeuble a été évacué et impropre à l'habitation pour cause structurelle pendant une année environ. Par ailleurs, ces recherches m'ont permis de découvrir que deux nouveaux bâtiments allaient sortir de terre rapidement sur le terrain d'en face. Au-delà de menacer la vue dégagée, les travaux de construction et la nouvelle répartirion du poids sur le terrain assez argileux peuvent causer des vibrations et mouvements de sol qui pourraient fragiliser d'autant plus l'immeuble déjà bien amoché structurellement. J'ai donc décidé de ne pas prendre de risque sur ce bien et je ne suis pas allé plus loin sur ce dossier.
 
-![Alternate](Fissure.png)
+![Alternate](Fissure.webp)
 
 ### Horodatage du second sprint
 

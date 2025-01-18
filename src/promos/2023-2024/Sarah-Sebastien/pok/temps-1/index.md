@@ -65,7 +65,7 @@ L'outil aura 2 onglets (1 pour remplir les données et l'autre pour visualiser l
 
 ### Onglet "Données"
 
-<img  src="image_gantt.png" >
+<img  src="image_gantt.webp" >
 
 On peut voir qu'il manque la notion de "nom projet" et de type de "tâche".
 *J'ai de plus remarquer qu'il fallait un bouton pour remettre à zéro le tableau de données (comme la macro va jusqu'à la dernière ligne remplie, "effacer le contenu" l'empêche de fonctionner si des lignes du tableau sont vides)*
@@ -74,14 +74,14 @@ On peut voir qu'il manque la notion de "nom projet" et de type de "tâche".
 
 #### **Après appui sur "Remplir GANTT"**
 
-<img  src="image_gantt_2.png" >
+<img  src="image_gantt_2.webp" >
 
 Le remplissage du GANTT fonctionne mais manque encore de lisibilité au niveau des dates. 
 La macro ne lit pas les cases fusionnées, il faut donc qu'elles aient toutes du contenu pour pouvoir venir effectuer des tests dessus.
 
 #### **Après appui sur "Effacer"**
 
-<img  src="image_gantt_3.png" >
+<img  src="image_gantt_3.webp" >
 
 ### Les objectifs révisés pour le sprint 2
 
@@ -106,7 +106,7 @@ Voici donc ma liste de fonctionnalités revisitées (en italique les nouvelles f
 ### La gestion des données
 
 Dans cette première partie, l'utilisateur vient renseigner les données du ou des projets qu'il a planifiés. 
-![Image tableau données](tableau_projet.png)
+![Image tableau données](tableau_projet.webp)
 > Vue de la feuille "Données" avec un bouton [Valider](#valider) et un bouton [effacer les données](#effacer-les-données)
 
 <h4 id="valider"> Valider </h4>
@@ -188,7 +188,7 @@ End Sub
 
 Puis elle vient récupérer le noms des responsables, cités dans les projets, dans un tableau à part en supprimant les doublons. *Le principe de la procédure est le même que pour celle qui récupère le nom des projets.*
 
-<img width="300" src="tableau_responsable.png" >
+<img width="300" src="tableau_responsable.webp" >
 
 > Tableau : Nom_respo
 
@@ -300,7 +300,7 @@ End Sub
 
 ### Affichage du GANTT
 
-![Image diagramme gantt](diagramme_gantt.png)
+![Image diagramme gantt](diagramme_gantt.webp)
 > Visuel du tableau de Gantt avec les options de [choix du projet et de la date d'affichage](#choix-titre-date), les boutons qui permettent [l'affichage du Gantt](#affichage-gantt) et [d'effacer le contenu du tableau](#effacer-gantt)
 
 <h4 id="choix-titre-date"> Choix du projet et de la date </h4>

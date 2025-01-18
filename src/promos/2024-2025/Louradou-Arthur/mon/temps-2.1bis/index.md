@@ -16,7 +16,7 @@ tags:
 résumé: "Nous découvrirons ensemble le monde de l'Open Source dans le développement logiciel depuis ses contributions à l'industrie jusqu'à la manière d'y prendre part."
 ---
 
-<img src="./assets/summary.png" alt="Planche résumé">
+<img src="./assets/summary.webp" alt="Planche résumé">
 
 ## Introduction
 
@@ -94,7 +94,7 @@ Nous allons explorer la première frange : la communauté du libre. Cette commun
 
 GNU/Linux est un exemple assez emblématique de la puissance de l'*Open Source*. Créé par Linus Torvalds en 1991, le noyau Linux, combiné avec le projet GNU de Richard Stallman, a donné naissance à un **système d'exploitation** complet et libre. Aujourd'hui, GNU/Linux est utilisé dans de nombreux domaines : serveurs web, smartphones, IoT ou même supercalculateurs, démontrant ainsi la force d’impact des modèles de développement collaboratifs.
 
-![image.png](./assets/fig-1.png)
+![image.webp](./assets/fig-1.webp)
 <span class="text-center italic">Fig 1 - Chronologie des systèmes UNIX. Source : Wikipédia</span>
 
 UNIX est une famille de systèmes d’exploitation encadrée par des standards et issue de développements privés. Avant la rédaction de ce MON, j’aurais dit qu’UNIX n’était qu’une base aux systèmes Linux d’aujourd’hui ! Il n’en est rien. En réalité, il s’agit d’un système répondant aux mêmes caractéristiques (multi-utilisateur, multi-programmes, a un système de fichier propre et compatibilité avec de nombreux matériels) mais dérivé de UNIX ou *“**Unix-like**”* [7](#bibliographie). La communauté de hackers rédigeant ainsi le [*GNU Manifesto*](https://www.gnu.org/gnu/manifesto.html) embrassent ainsi pleinement la philosophie du libre et structurent des programmes sous forme de briques logicielles empruntées du fonctionnement de logiciels privés.
@@ -109,7 +109,7 @@ _Extrait du *GNU Manifesto*_
 
 La mention de Linux n’est pas anodine puisqu’elle traduit la domination actuelle du marché par ce système d’exploitation pour une raison étonnante. En effet, en 2024 Windows domine toujours le marché des systèmes pour ordinateurs personnels (PC) mais n’occupe que 20% du marché des serveurs.
 
-![image.png](./assets/fig-2.png)
+![image.webp](./assets/fig-2.webp)
 <p class="text-center italic">Fig 2 - Parts de marché des systèmes d'exploitation pour ordinateur de bureau. Source : <a href="https://gs.statcounter.com/os-market-share/desktop/" target="_blank">Statcounter Global</a></p>
 
 {% exercice %}
@@ -120,7 +120,7 @@ Personne ? Pas si vite.
 
 En réalité, il est probable que vous ayez en ce moment même un appareil sous Linux dans votre poche, et presque certain que vous utilisiez tous les jours un appareil assimilé à Unix. Je veux parler de vos smartphones ! En effet, avec l’essor des télécommunications mobiles dans le monde, on trouve désormais bientôt 50% d’appareils liés au noyau Linux. En effet, Android équipe 70% des smartphones en laissant les derniers 30% à Apple avec iOS.
 
-![image.png](./assets/fig-3.png)
+![image.webp](./assets/fig-3.webp)
 <p class="text-center italic">Fig 3 - Parts de marché des systèmes d'exploitation dans le monde. Source : <a href="https://gs.statcounter.com/os-market-share" target="_blank">Statcounter Global</a></p>
 
 De quoi faire réfléchir…
@@ -133,7 +133,7 @@ Avec l’exemple de l’essor des systèmes d’exploitation basés sur Unix, no
 ### Implication des entreprises dans l’*Open Source*
 
 <figure style="float: right; margin: 0;">
-    <img width="350" src="./assets/fig-4.png" alt="" />
+    <img width="350" src="./assets/fig-4.webp" alt="" />
     <figcaption class="text-center">Fig 4 - Promotion des projets <i>Open Source</i><br />de Google
         <a href="https://opensource.google/">https://opensource.google/</a>
     </figcaption>
@@ -153,7 +153,7 @@ Une partie de la réponse se trouve dans la **vente de services complémentaires
 
 {% info %}
 <figure style="float: right; margin: 0 0 0 10px;">
-    <img width="150" src="./assets/fig-5.jpg" alt="" />
+    <img width="150" src="./assets/fig-5.webp" alt="" />
     <figcaption class="text-center">Fig 5 - Logo Meta</figcaption>
 </figure>
 
@@ -193,14 +193,14 @@ Aux enjeux les plus sérieux, comme la démocratie représentative :
 {% endlien %}
 
 <figure style="float: right; margin: 0 0 0 1rem; width: 150px;">
-    <img width="150" src="./assets/fig-6.png" alt="" />
+    <img width="150" src="./assets/fig-6.webp" alt="" />
     <figcaption class="text-center">Fig 6 - Logo VLC Media Player</figcaption>
 </figure>
 
 Ces projets peuvent prendre plusieurs formes comme des **associations à but non lucratif**, prenons l’exemple français de VideoLAN (portant le projet bien connu **VLC**) ou bien **des entreprises en transition** vers des modèles économiques nouveaux. Pour VLC comme pour d’autres associations, les porteurs du projet ont su développer un modèle économique basé sur le sponsoring et les dons, permettant de maintenir une équipe de développeurs dédiés tout en gardant le logiciel gratuit et *Open Source*. En comptant plus de 400 millions d’utilisateurs, cette approche montre qu'il est possible de concilier les valeurs du logiciel libre avec une structure organisationnelle stable. [13](#bibliographie)
 
 <figure style="float: right; margin: 0 0 0 1rem; width: 150px;">
-    <img width="150" src="./assets/fig-7.png" alt="" />
+    <img width="150" src="./assets/fig-7.webp" alt="" />
     <figcaption class="text-center">Fig 7 - Logo Odoo</figcaption>
 </figure>
 
@@ -213,7 +213,7 @@ Enfin, pour terminer ce MON (ma toute dernière production à Centrale !), j’a
 ## Ma contribution à l’Open Source { #partie-2 }
 
 <figure style="float: right; margin: 0 0 0 1rem; width: 200px;">
-    <img width="200" src="./assets/fig-8.jpg" alt="" />
+    <img width="200" src="./assets/fig-8.webp" alt="" />
     <figcaption class="text-center">Fig 8 - Logo de Tournesol</figcaption>
 </figure>
 

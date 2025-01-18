@@ -150,7 +150,7 @@ L'initiating process group regroupe les étapes d'initiation d'un projet, y comp
 Le Planning process group établit la portée, les objectifs et le plan d'action du projet. Il utilise des boucles de rétroaction pour ajuster le plan en fonction des nouvelles informations et des changements. L'objectif principal est de définir la marche à suivre pour mener à bien le projet. L'implication des parties prenantes est encouragée pour élaborer le plan, qui devient une référence une fois approuvé.
 
 Les différents process du Planning process group sont regroupés ci-dessous: 
-![PMI](planningProcess.png)
+![PMI](planningProcess.webp)
 
 1. **L'élaboration d'un plan de gestion de projet** consiste à définir, préparer et coordonner tous les éléments du plan et à les consolider dans un plan de gestion de projet intégré. Le principal avantage de ce processus est la production d'un document complet qui définit la base de tous les travaux du projet et la manière dont ils seront effectués. 
 Le plan de gestion du projet définit les modalités d'exécution, de suivi, de contrôle et de clôture du projet. Son contenu varie en fonction du domaine d'application et de la complexité du projet.

@@ -76,19 +76,19 @@ Il est important de connaitre <strong>la structure des données</strong> que l'o
 print(data.head())
 ```
 Cette fonction permt de retrouner les informations suivantes : 
-<div stype="display:flex"><img src="datahead.png"></div>
+<div stype="display:flex"><img src="datahead.webp"></div>
 
 ```html 
 print(data.info())
 ```
 Cette fonction permt de retrouner les informations suivantes : 
-<div stype="display:flex"><img src="datainfo.png"></div>
+<div stype="display:flex"><img src="datainfo.webp"></div>
 
 ```html 
 print(data.describe())
 ```
 Cette fonction permet de retrouner les informations suivantes : 
-<div stype="display:flex"><img src="datadescribes.png"></div>
+<div stype="display:flex"><img src="datadescribes.webp"></div>
 
 ##### Traitement des données 
 

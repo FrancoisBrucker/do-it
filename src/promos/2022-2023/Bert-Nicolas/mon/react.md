@@ -36,7 +36,7 @@ Pour mettre en pratique ces apprentissages, j'ai voulu utiliser une API externe 
 
 J'ai commencé par créer un composant visant à afficher les informations relatives à un pokémon. Mes compétences en design étant très mauvaises, je suis resté sur quelque chose de simple esthétiquement.
 
-<img src="./../images/feurisson.png" style="border-width: 0;" />
+<img src="./../images/feurisson.webp" style="border-width: 0;" />
 
 Ici vous pouvez voir le nom du pokémon, son type, ses caractéristiques représentées sous forme de graphique avec [chart.js](https://www.chartjs.org/), etc...  Le bouton "Click !" permet d'afficher un autre pokémon de manière aléatoire. Lors de l'affichage d'un pokémon, l'appel API pour le pokémon suivant est également effectué et l'image est préchargée afin de gagner en fluidité. Ainsi lorsque l'on appuie sur le bouton "Click !", le pokémon préalablement chargé devient le pokémon affiché et un autre pokémon est de nouveau préchargé dans le but d'un nouvel appui sur le bouton.
 
@@ -44,7 +44,7 @@ Ici vous pouvez voir le nom du pokémon, son type, ses caractéristiques représ
 
 J'ai également implémenté une deuxième carte permettant cette fois-ci de rechercher un pokémon par son nom puis d'afficher ses caractéristiques.
 
-<img src="./../images/metalosse+search.png" style="border-width: 0;" />
+<img src="./../images/metalosse+search.webp" style="border-width: 0;" />
 
 Ici, vous avez la possibilité d'écrire le nom d'un pokémon puis de cliquer dessus parmi les choix proposés pour afficher ses informations dans la carte à gauche. Les suggestions sous la barre de saisie sont actualisées automatiquement en fonction de ce que vous écrivez.
 

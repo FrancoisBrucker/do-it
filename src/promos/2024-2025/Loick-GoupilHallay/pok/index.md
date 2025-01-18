@@ -15,3 +15,6 @@ authors:
 
 ## Temps 2
 - [VSCode Extension: Achievements](./temps-2)
+
+## Temps 3
+- [Scaling et GitOps du site Do-It](./temps-3)

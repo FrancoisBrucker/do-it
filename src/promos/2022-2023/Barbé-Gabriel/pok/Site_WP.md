@@ -29,11 +29,11 @@ Rappelons tout de même que WordPress propulse aujourd'hui 40% des sites web dis
 
 ### Premiers pas sur WordPress 
 Après un rapide tuto d'installation de WordPress en local, ce qui n'est pas si aisé, je débute la création de mon propre site web. Je me retrouve tout d'abord sur un dashboard "admin" où j'ai accès à tous les différents éléments de mon site : 
-<img src="./../Images/dashboard.png"/>
+<img src="./../Images/dashboard.webp"/>
 Je crée donc une première page et commence la création de mon site. Après quelques manipulations, je dois dire que je ne trouve pas ça idéale. 
 En effet, le système entier marche par bloc et il faut constamment définir le type de son bloc dans un menu qui ne s'ouvre pas systématiquement ; un clic à coté nous pousse à tout recommencer et la suppression des blocs n'est pas optimisée non plus. De plus, il existe un système qui permet d'utiliser des blocs sur une page puis une autre, notamment les en-tête et pieds de pages, mais ce système en est à sa version bêta et n'est pas optimisé non plus. 
 En revanche, WordPress permet d'utiliser une grande diversité d'informations provenant d'autres sites sans efforts et sans système d'API. C'est bien plus facile d'utilisation et nous pouvons par exemple poster des objets provenant de Youtube, Twitter, Wolfram, Amazon... sans aucun effort. 
-<img src="./../Images/API.png"/>.
+<img src="./../Images/API.webp"/>.
 WordPress permet aussi d'insérer du code directement sur notre site dans un cadre bien-sûr assez restrictif mais qui a le mérite d'exister, bien que je doive encore en tester les possibilités. Enfin, WordPress rend (très) facile d'utilisation tous les composants ou pages stéréotypés notamment grâce à toutes les extensions dont elle dispose (~50000). En d'autres mots tout ce qui est commun à tous les sites web sera forcément présent ou facile à insérer sur votre site web, par exemple : les commentaires utilisateurs (directement inscrit dans la page web) ou une page de connexion. 
 Ces commentaires sont des premières impressions et il se peut que je n'ai tout simplement pas encore assez rodé le système, il me reste encore beaucoup à explorer de l'étendue des possibilités données par ce logiciel.
 
@@ -46,13 +46,13 @@ Ces commentaires sont des premières impressions et il se peut que je n'ai tout 
 Une connexion est directement disponible sur la page d'accueil du site WordPress, chose que je n'avais pas comprise avant. Le problème est que je suis obligé d'être connecté en tant qu'admin pour pouvoir créer d'autres comptes. Pour régler ce problème, on peut télecharger une extension : "Theme My Login" qui en plus de modifier mon interface (ce qui n'améliore pas grandement l'UI pour ma part) me permet aussi de d'avoir accès à la route : localhost/POK_3/register. 
 Cette route permet aux utilisateurs de créer un compte sur le site. 
 Je peux bien sûr très aisément définir les champs nécessaires à cette inscription mais ces champs sont aussi limités (voir ci-dessous) : 
-<img src="./../Images/Login Fields.png"/>
+<img src="./../Images/Login Fields.webp"/>
 Je peux activer ou désactiver chacun de ces champs et ainsi configurer la sécurité allouée aux utilisateurs. 
 
 ### Menu 
 Là encore, tout est extrêmement simple, en trois clicks on obtient un menu intuitif nous dirigeant vers les principales pages de mon site. Le menu est créé en haut ou en bas de la page au choix. J'ai opté pour un menu en haut. 
 Ce menu indique à quelle page nous nous trouvons et quelle page nous pouvons joindre. On peut, là encore, ajouter des éléments CSS de notre propre fait et les attribuer au menu par classe. Ci-dessous le menu créé, on peut voir qu'un mode sombre est aussi disponible pour notre site. 
-<img src="./../Images/Menu.png"/>
+<img src="./../Images/Menu.webp"/>
 
 ### Fin du sprint 1
 C'est la fin de ce premier sprint, j'ai encore de nombreuses taches à effectuer durant le prochain ! L'éditeur n'est pas si facile à prendre en main au début, j'étais un peu perdu entre le dashboard, les différentes pages et surtout la navigation n'est pas réeellement intuitive. 

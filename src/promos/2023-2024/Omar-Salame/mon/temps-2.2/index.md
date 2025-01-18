@@ -43,7 +43,7 @@ Exemple : l'Observatoire de la Transformation Digitale des Écoles de Management
 ## Maturité digitale  <a id="section-3"></a>
 La maturité de la transformation digitale d'une organisation fait référence au niveau de préparation, d'adoption et d'intégration des technologies numériques au sein de ses processus, de sa culture, de sa stratégie et de ses opérations. C'est une mesure de la capacité d'une organisation à tirer pleinement parti des opportunités offertes par la transformation digitale.[[2]](#doc-1)
 ### Pourquoi l’évoluer ?
-<img src="evaluer.png" width="700" height="550">
+<img src="evaluer.webp" width="700" height="550">
 
 ### Comment l'évaluer (critères / démarche) ?
 Divers modèles sont disponibles pour évaluer la maturité digitale, et chaque évaluation selon ces modèles suit généralement une démarche structurée en plusieurs étapes. Malgré leurs spécificités respectives, ces modèles partagent des éléments communs dans leur approche. Les grandes lignes de cette démarche peuvent ainsi être identifiées.[[3]](#doc-2)
@@ -63,7 +63,7 @@ J'ai opté pour des modèles pratiques et éprouvés, principalement issus de ca
 | Capgemini Digital Transformation Framework | Vision et stratégie, expérience client, opérations, culture et leadership            | Analyse approfondie, ateliers, évaluation de la stratégie | Transformation numérique complète                         | Niveaux détaillés de maturité par dimension               | Évaluation détaillée, recommandations pour la transformation |
 [[4]](#doc-3)
 
-<img src="models.png" width="700" height="550">
+<img src="models.webp" width="700" height="550">
 
 ### Critique : 
 1.	Approche Trop Généralisée ou Spécialisée : Certains modèles sont trop spécialisés dans des secteurs comme l'Industrie 4.0, ce qui limite leur applicabilité à d'autres contextes. D'un autre côté, les modèles plus généraux peuvent manquer de spécificité pour fournir des recommandations pertinentes.
@@ -75,11 +75,11 @@ J'ai opté pour des modèles pratiques et éprouvés, principalement issus de ca
 La transformation digitale des PME nécessite une stratégie adaptée à leurs ressources limitées et à leur besoin de résultats rapides. Une approche trop centrée sur la technologie, négligeant les aspects organisationnels et humains, peut nuire à l'identité de la PME.[[5][6]](#doc-4)
 Pour évaluer efficacement la maturité digitale d'une PME, il est crucial de prendre en compte à la fois les capacités organisationnelles et digitales. Le modèle de Borštnar et Pucihar (2021), qui se base sur une méthodologie de design science et inclut 51 sous-dimensions, fournit une analyse approfondie de ces aspects.[[7]](#doc-5)
 
-<img src="dimonsions.png" width="500" height="550">[[7]](#doc-5)
+<img src="dimonsions.webp" width="500" height="550">[[7]](#doc-5)
 
 Ainsi, pour réaliser l'audit de maturité digitale d'une PME, je recommande d'appliquer ce modèle en évaluant les dimensions pertinentes à chaque situation spécifique, permettant ainsi d'obtenir une vue globale et précise de la maturité digitale de l'entreprise. 
 
-<img src="etapes.png" width="700" height="550">
+<img src="etapes.webp" width="700" height="550">
 
 {% prerequis "Documentation :" %}
 - [[1][2]Transformation Digitale/Maturité](https://moodle.centrale-marseille.fr/pluginfile.php/81430/mod_resource/content/0/VIAL-2019-Digital%20Transformation.pdf) <a id="doc-1"></a>

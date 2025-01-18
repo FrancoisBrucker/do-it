@@ -104,7 +104,7 @@ Aujourd'hui, les principes de l’agilité tendent à dépasser le seul cadre de
 
 La transformation Agile est le processus qui consiste à transformer **la structure, la stratégie, le personnel, les processus et la technologie** d'une organisation sur la base des principes de l'entreprise Agile. Elle concerne les petites, moyennes et grandes organisations ayant pour projet de déployer l’agilité à l’ensemble de leur structure : ainsi, **toutes les couches de l’organisation** sont visées, qu’elles soient stratégiques, managériales ou opérationnelles. Cette transformation est un processus à **moyen / long terme** qui pousse forcément à remettre en cause certains fondements de base de l’entreprise.
 
-<img src="./image1/Agile.png" width="50%">
+<img src="./image1/Agile.webp" width="50%">
 
 Mais comprendre ce qu'est la transformation Agile nécessite déjà de bien appréhender ce qu'elle n'est pas : la simple mise en pratique des méthodes de **développement logiciel Agile à l'échelle** de l'entreprise. Si la plupart des organisations commencent leur parcours Agile en adoptant des pratiques de développement logiciel Agile, la transformation Agile ne se limite pas à changer la façon dont les logiciels sont conçus, ni à mettre en place de **nouvelles méthodologies et outils de travail**.
 
@@ -138,7 +138,7 @@ C'est donc une transformation **organisationnelle** et **managériale** qui va i
 
 Les facteurs déclencheurs déterminent deux approches de la transformation agile, **Bottom-up** ou **Top-down**. L'approche Bottom-up vient de l'exigence d’innovation qui crée le besoin d’agilité au niveau des acteurs locaux et le lancement d’initiatives. Alors que le Top-down vient du constat d’inadéquation entre les besoins de l’organisation dans un contexte concurrentiel et les méthodes usuelles et classiques.
 
-<img src="./image1/top.png" width="50%">
+<img src="./image1/top.webp" width="50%">
 
 
 ### Étapes clés
@@ -204,7 +204,7 @@ Lors d'une transformation agile, les entreprises font souvent face aux mêmes di
 
 Depuis sa création en 2006, l’entreprise suédoise Spotify est un leader dans le monde du streaming musical. En 10 ans elle est devenue un géant du net, et domine à l’heure actuelle cette industrie. Elle reste aujourd’hui l’acteur principal qui a su faire du streaming le modèle de référence par l’abandon progressive des supports physiques ou numériques. Aujourd’hui Spotify compte plus de 4000 employés répartis dans 18 pays, possède un catalogue de pus de 100 millions de titres musicaux et podcasts et compte pas moins de 615 millions d’utilisateurs dont 239 millions d’abonnés payants.
 
-<img src="./image1/Spotify.png" width="50%">
+<img src="./image1/Spotify.webp" width="50%">
 
 Pour gérer cette popularité fulgurante et faire face à une croissance exponentielle, avec des effectifs et des utilisateurs toujours en augmentation Spotify a dû trouver un modèle d’organisation souple qui permette à son application de générer de la valeur, de s’adapter en offrant des solutions techniques innovantes dans un secteur très concurrentiel et sans cesse en mutation.
 
@@ -246,7 +246,7 @@ Il faut retenir que les solutions d'aujourd'hui donnent naissance aux problèmes
 
 Dans son siège de Stockholm, des **squads** autogérées de six à douze personnes se concentrent sur un domaine ou fonctionnalité, selon une méthodologie autonome et choisie. Une mission unique, appuyée par un **coach agile** pour le support et un **product owner** pour les conseils. Ensuite, pour maintenir la cohérence globale et le partage des savoirs, les squads sont organisées en grandes **tribus**, gérées par un responsable. En parallèle, les **chapitres** organisent les familles de spécialistes (développeur JavaScript, etc.). Quant aux **guildes**, elles sont des communautés transversales d’intérêts. Enfin, trios et alliances forment d’autres combinaisons, toujours avec le même objectif: favoriser la collaboration et l’alignement.
 
-<img src="./image1/planspotify.png" width="50%">
+<img src="./image1/planspotify.webp" width="50%">
 
 1. **Les squads, l'unité de base du modèle Spotify**
 
@@ -306,7 +306,7 @@ Ensuite, le modèle ne définit pas clairement **la taille critique** nécessair
 
 Leroy Merlin est une enseigne de grande distribution française, spécialisée dans l’amélioration de l’habitat. Leader du bricolage en France, c’est une business unit du groupe ADEO et un membre de l’Association Familiale Mulliez. L’enseigne dispose de plus de 140 magasins et environ 25 000 collaborateurs.
 
-<img src="./image1/LeroyMerlin.png" width="50%">
+<img src="./image1/LeroyMerlin.webp" width="50%">
 
 Tous les 10 ans, Leroy Merlin présente son ambition futur en définissant **une vision stratégique** de ses valeurs et de son modèle de leadership, en tant qu’objectif à atteindre. En 2015, après avoir parcouru deux décennies depuis son lancement en 1995, ils proposent déjà leur troisième vision, celle de 2025. **La Vision 2025** est un regard vers l'avenir construit sur trois piliers essentiels :
 
@@ -353,7 +353,7 @@ L’enjeu était d’imprégner les équipes de retours d’expérience d’entr
 
 Pour faciliter cette mission, l’entreprise a créé en 2018 le CALM, ou **Collectif Agile de Leroy Merlin**. Il se compose de CALMOS, des **coachs agiles**, pour la plupart externe à l’entreprise qui ont pour but d’accompagner toute la structure à évoluer en agilité.
 
-<img src="./image1/calm.png" width="50%">
+<img src="./image1/calm.webp" width="50%">
 
 Le démarrage de la transformation agile remontant à 2014 et la mise en place de la vision 2025, permettent d’avoir un terrain favorable au développement de l’agilité au sein de l’entreprise, car une transformation est **un changement profond** et doit avant tout venir d’une vraie **volonté** et **acceptation** des collaborateurs pour pouvoir réussir. Ici, la transformation agile s’est inscrite dans **la continuité d’une transformation culturelle et managériale** connue depuis plusieurs années. La concurrence digitale de type Mano Mano ou Amazon et l’adaptation des nouveaux usages des clients, tourné vers le digital, en particulier depuis le COVID-19, ont rendu cette transformation urgente et vitale.
 
@@ -363,7 +363,7 @@ Le travail du CALM commence donc en 2018. Les responsables du site Internet soit
 
 Ils commencent par proposer un exercice appelé **bilan de santé** créé pour Leroy Merlin. Cet atelier calqué sur celui du modèle de Spotify, est ludique et interactif. Il permet d’apporter aux équipes **les principes** de l’agile, sans se cantonner **aux pratiques** qui doivent être adaptées à l’entreprise, afin de garantir sa réussite.
 
-<img src="./image1/bilan de santé.png" width="50%">
+<img src="./image1/bilan de santé.webp" width="50%">
 
 De ce bilan de santé ressort **un plan d’accompagnement** qui n’est jamais imposé mais proposé à l’équipe concernée. La restitution de ce bilan n’est ni transmis aux managers ni aux autres équipes afin d’instaurer un climat de **confiance** et de limiter les comparaisons. Seules les problématiques communes sont remontées afin de pouvoir apporter des solutions transverses.
 
@@ -384,7 +384,7 @@ Les leaders d’équipe métier font donc appel aux coachs pour organiser des jo
 
 Pour subvenir aux besoins de l’entreprise le plus fidèlement possible, le CALM a créé son propre exercice appelé "Calme Paradise". Le but était d’aider les équipes métier à travailler en mode agile, de la phase idéation jusqu’à la création par itération du projet, en faisant une île avec des LEGO. De bouche à oreille, de plus en plus de service métier ont contacté le collectif comme le marketing, le Web, les RH mais aussi la relation client est ainsi la transformation globale a commencé à prendre forme. Il faut bien mettre en lumière que le CALM n’est pas venu **s’imposer ou imposer sa vision et ses objectifs** aux équipes. Ce sont elles qui ont fait appel à eux tout au long du processus. L’engagement personnel des employés face au changement est une des clés qui ont mené à la réussite du projet.
 
-<img src="./image1/exo.png" width="50%">
+<img src="./image1/exo.webp" width="50%">
 
 Les équipes métiers ont gagné cohésion d’équipe et collaboration. Elles ont cerné l’importance de la place du client et savent faire simple, en découpant des sujets et en les priorisant.
 
@@ -414,7 +414,7 @@ Les 5 directions des services internes ont développé ensemble **une vision com
 
 L’objectif est de **regrouper de manière transversale les corps de métier au sein de squads plus resserrées** donc plus faciles à gérer. Là où avant il y avait d’un côté l’IT et le business de l’autre, les corps de métier sont aujourd'hui au même endroit.
 
-<img src="./image1/structure.png" width="50%">
+<img src="./image1/structure.webp" width="50%">
 
 Par exemple, au sein d’une squad dont 15 unités composent chaque Team Booster, on retrouve tout un panel d’experts business et plus techniques, mais aussi ceux qui connaissent le produit sur le bout des doigts. Notamment le Business Product Leader, le Digital Product Leader, les représentants techniques de chaque métier (un par squad) ou encore le Product Owner, qui transforme les besoins en solutions produit.
 

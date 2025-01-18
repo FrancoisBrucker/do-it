@@ -96,7 +96,7 @@ variable = variable.méthode()     // on met les arguments nécessaires à la fo
 ```
 
 Une variable ne peut être utilisée que dans l'environnement dans laquelle elle a été déclarée (une boucle, une fonction, une classe...). C'est ce que l'on appelle la **portée** de la variable. En général, on repère cet environnement grâce à des indicateurs d'ouverture et de fermeture. En Java, ce sont des **accolades**. Voici un schéma tiré de la formation suivie qui explique très bien ce principe :
-<img src="schema_portee_variable.png">
+<img src="schema_portee_variable.webp">
 Cependant, une variable déclarée dans une classe peut par défaut être utilisée en dehors de celle-ci. Pour empêcher cela, on peut la restreindre en la précédant de la commande *private* (le contraire est le mot clé *public*). On peut faire de même avec une fonction pour empêcher son accès depuis une autre classe que celle dans laquelle elle a été déclarée. Il existe d'autres commandes pour contrôler de manière plus précise l'accès aux données.
 
 ## 4. Les boucles et les conditions

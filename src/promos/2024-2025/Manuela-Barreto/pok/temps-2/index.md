@@ -94,11 +94,11 @@ Développer une application mobile pour un jeu simple qui met les joueurs au dé
 
 Pour concevoir le design de l’application, j’ai commencé par expliquer à ChatGPT le concept du jeu que je souhaitais créer et je lui ai demandé de réaliser le logo de mon app. Voici le logo qu’il a conçu :
 
-![app_logo](./assets/logo.png)
+![app_logo](./assets/logo.webp)
 
 Ensuite, j’ai commencé à développer l’aspect visuel de l’application sur Figma. La première étape a été de choisir une palette de couleurs, en sélectionnant des tons directement issus du logo. Une fois les couleurs définies, j’ai créé les principaux composants, comme les boutons et le plateau de jeu, tout en avançant dans la conception des écrans. Voici le résultat des composants :
 
-![components_figma](./assets/components_figma.png)
+![components_figma](./assets/components_figma.webp)
 
 Une fois les écrans finalisés, j’ai créé les liens entre eux pour rendre la navigation fonctionnelle. Le produit final peut être vu dans la vidéo ci-dessous :
 
@@ -115,7 +115,7 @@ Pour savoir comment installer Android Studio, consultez mon **MON1.1**.
 
 Une fois Android Studio installé, commencez par créer un nouveau projet. Lors de la configuration initiale, sélectionnez l'option **"Empty Views Activity"**. Cette option génère un projet de base contenant un fichier XML, où vous pourrez concevoir le layout de votre application.  
 
-![empty_views_activity](./assets/empty_views_activity.png)
+![empty_views_activity](./assets/empty_views_activity.webp)
 
 
 ### La Page d'Accueil  
@@ -127,7 +127,7 @@ Pour construire la page d'accueil, j'ai utilisé deux fichiers principaux :
 
 En complément, j'ai également utilisé des fichiers de ressources pour définir les textes affichés, les couleurs, la police et les images utilisées. Voici le résultat final du layout :  
 
-![activity_main](./assets/activity_main.png)  
+![activity_main](./assets/activity_main.webp)  
 
 
 ### La Page du Niveau  
@@ -139,7 +139,7 @@ Pour construire la page du niveau, j'ai utilisé les fichiers suivants :
 
 Comme pour la page d'accueil, des fichiers de ressources ont été utilisés pour gérer les textes, les couleurs, la police et les images. Voici le résultat final du layout :  
 
-![activity_play](./assets/activity_play.png)
+![activity_play](./assets/activity_play.webp)
 
 Il est important de noter que les objets de la voiture à l'écran ont été **hard coded**. Cela signifie que j'ai créé un objet pour chacune de ces voitures avec une image, une taille et un positionnement spécifiques.
 Ce n'est pas idéal, mais c'est le moyen que j'ai trouvé pour me familiariser avec le langage et la logique à mettre en œuvre avant d'améliorer la façon dont ces objets sont généré.

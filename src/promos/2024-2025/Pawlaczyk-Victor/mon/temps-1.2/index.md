@@ -50,7 +50,7 @@ Pour traiter le sujet de la réunion efficace, et plus largement de la performan
 
 Commencer par identifier le type de réunion que l'on organnise nous permet (et nous force !) à s'interroger sur les objectifs de la réunion et le niveau d'implication attendu des participants. Les chercheurs de l'uqam ont répertorié 10 "types" de réunion, résumées dans le tableau ci-dessous.
 
-![Alternate](MON2_Tab.png)
+![Alternate](MON2_Tab.webp)
 
 Notons que certains types de réunion ne sont pas totalement incompatibles. On peut, par exemple, commencer une formation par un point d'information. En revanche, soyez conscients que cette information risque d'être oubliée par la majorité des participants après les ateliers de formation. En clair, **mieux on cible le type de réunion que l'on organise, plus on peut espérer gagner en efficacité.**
 
@@ -121,7 +121,7 @@ Sans en être une définition formelle, les quatre dimensions fondamentales du L
 - le partage (partager la vision/la stratégie, donner du sens, engager des processus collaboratifs)
 - le dépassement de soi (Encourager l'action, exiger des résultats, considérer les erreurs comme des opportunités de progrès, construire la confiance)
 
-![Alternate](Leadership.png)
+![Alternate](Leadership.webp)
 
 En parallèle, pour mener de front ces quatre piliers avec succès, il est nécessaire de garder en tête que l'on **s'adresse à des individus et non pas à un groupe ou une masse.** Chaque personne a des besoins psychologiques différents et il est important d'être suffisamment **agile dans nos interactions** pour que chacun puisse y trouver son compte et susciter ainsi l'engagement de la majorité. C'est pourquoi il n'existe pas de formule magique de la réunion parfaite. Prenons l'exemple d'une formation à un nouvel outil numérique. Si certains profils très cartésiens et structurés vont apprécier une présentation magistrale, powerpoint à l'appui, qui détaille toutes les fonctionnalités de l'outil, la logique des menus et de navigation dans l'outil, d'autres ne vont pas adhérer plus de cinq minutes à cette présentation. Prenez le même public, mettez les face à l'outil sans présentation préalable, vous verrez que les premiers seront désoeuvrés, ne sachant que faire ni par où commencer, tandis que ceux qui n'étaient pas réceptifs à la présentation formelle de l'outil seront cette fois à leur aise, et comprendront très vite comment fonctionne l'outil à force de le manipuler et de l'explorer plus ou moins anarchiquement, en suivant le guidage du formateur ou non. Il est donc très important de prendre en compte le fonctionnement de chacun pour exercer un bon leadership.
 

@@ -84,7 +84,7 @@ Un attribut est une précision que l'on apporte afin de modifier l'identité vis
 | ```texte-align``` | Alignement du texte d'un élément HTML|
 
 Ainsi, le code précédent permet d'obtenir ceci :
-![Titre](Images/Titre.png)
+![Titre](Images/Titre.webp)
 
 #### Liens
 ````
@@ -103,15 +103,15 @@ Ainsi, le code précédent permet d'obtenir ceci :
 | ```class``` | Renvoie à une classe créée eu préalable, permettant de donner l'identité visuelle à l'élément|
 
 Ainsi, le code précédent permet de créer le lien "Bases" suivant : 
-![Liens](Images/Liens.png)
+![Liens](Images/Liens.webp)
 
 #### Images 
 ````
-<img src="Portée cliquable.png" alt="Portée" usemap="#workmap">
+<img src="Portée cliquable.webp" alt="Portée" usemap="#workmap">
     <map name="workmap">
-        <area shape="cercle" coords="433, 124, 20" href="Clé de sol.png">
-        <area shape="cercle" coords="696, 229, 20" href="Clé de fa.png">
-        <area shape="cercle" coords="1047, 177, 20" href="Clé de ut.png">
+        <area shape="cercle" coords="433, 124, 20" href="Clé de sol.webp">
+        <area shape="cercle" coords="696, 229, 20" href="Clé de fa.webp">
+        <area shape="cercle" coords="1047, 177, 20" href="Clé de ut.webp">
     </map>
 ````
 | Element | Explication     |
@@ -131,7 +131,7 @@ Ainsi, le code précédent permet de créer le lien "Bases" suivant :
 | ```height```| Hauteur de l'image|
 
 Ainsi, le code précédent renvoie cette image, dans laquelle chaque note est cliquable : 
-![Map](<Images/Portée cliquable.png>)
+![Map](<Images/Portée cliquable.webp>)
 
 #### Autres éléments 
 
@@ -253,12 +253,12 @@ Nous créons ensuite un éléments *bouton* qui au clique de la souris, fait app
 
 Ainsi, au moment du chargement de la page, celle-ci ressemble à ceci : 
 
-![Page_chargement](<Images/Page accueil initiale.png>)
+![Page_chargement](<Images/Page accueil initiale.webp>)
 *La page est un scroll, permattant d'accéder aux autres sections de cours en dessous, qui sont également accessibles en cliquant sur les boutons jaunes en haut de page*
 
 Une fois que l'on clique sur le bouton *Menu* en haut à gauche, la barre latérale apparaît alors : 
 
-![Page_Menu](<Images/Page Menu.png>)
+![Page_Menu](<Images/Page Menu.webp>)
 *Lorsque l'on scroll, la barre latérale reste en place afin d'y avoir accès tout au long de la page*
 
 ## Code complet 

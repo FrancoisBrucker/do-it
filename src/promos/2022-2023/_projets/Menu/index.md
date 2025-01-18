@@ -56,7 +56,7 @@ Bonus pur :
 
 ## Notre poster :
 
-![Poster](./Poster/poster.png "Poster Menu")
+![Poster](./Poster/poster.webp "Poster Menu")
 
 ## Maquettes :
 
@@ -66,9 +66,9 @@ Nous avons eu un cours sur l'UX qui nous a appris à prendre en compte les diff�
 
 #### Première maquette :
 
-<img src="maquette1a.png">
-<img src="maquette1b.png">
-<img src="maquette1c.png">
+<img src="maquette1a.webp">
+<img src="maquette1b.webp">
+<img src="maquette1c.webp">
 
 #### Retours des étudiants (partie 1) : 
 
@@ -83,35 +83,35 @@ Tout d'abord, nos valeurs sont le fait maison, la convivialité, la créativité
 
 Après une séance de recherches, nous avons construit notre Visual Board, une sorte de brainstorming visuel :
 
-<img src="visual-board.png" alt="Figma, visual board" width="400"/>
+<img src="visual-board.webp" alt="Figma, visual board" width="400"/>
 
 L'élément ci-dessus est ce qui nous a permis de choisir nos couleurs principales pour l'application. De plus, nous avons fait en sorte que ces couleurs reflètent bien nos valeurs. Vous pouvez remarquer que nous avons écrit en noir puis en blanc des textes sur les couleurs, c'était pour vérifier si c'était lisible quelle que soit la couleur du texte. En l'occurance, nous avons déterminé que nous n'allions pas écrire en blanc sur du mimosa.
 
-<img src="couleurs.png" alt="Figma, couleurs" width="300"/>
+<img src="couleurs.webp" alt="Figma, couleurs" width="300"/>
 
 Enfin, il a fallu décider des polices d'écriture pour nos titres, sous-titres et textes. Après des recherches, nous avons choisi ces polices pour une première sélection.
 
-<img src="polices.png">
+<img src="polices.webp">
 
 En pratique, nous avons gardé la Fira Sans pour les titres, la Noto Sans pour les sous-titres et la DM Sans pour les textes.
 
 L'utilisation des "layout grids" est quelque chose qui nous a beaucoup servi. En effet, cela permet d'aligner les éléments entre eux et de créer une harmonie visuelle. Il n'est pas nécessaire de l'appliquer parfaitement pour tous les éléments mais son utilisation générale permet de bien structurer la page. En voici l'exemple :
 
-<img src="layout.png">
+<img src="layout.webp">
 
 #### Deuxième maquette :
 
 Pour la deuxième maquette, nous avons travaillé un peu différemment. Nous avons commencé par créer des pages qui ressemblaient à cela :
 
-<img src="maquette2a.png">
+<img src="maquette2a.webp">
 
 Puis, nous leur avons appliqué le design défini en UI pour donner cela :
 
-<img src="maquette2b.png">
+<img src="maquette2b.webp">
 
 Une nouveauté a été la manière d'accéder aux autres pages de l'application. Au départ, nous avions mis un bandeau en bas de l'écran, mais nous nous sommes tournés vers un menu dépliant sur la gauche. Comme ceci :
 
-<img src="menu-déplié.png">
+<img src="menu-déplié.webp">
 
 #### Retours des étudiants (partie 2) :
 
@@ -128,10 +128,10 @@ Cette fois-ci, nous avons eu des retours beaucoup plus précis. Voici les princi
 Pour cette troisième maquette, nous sommes restés sur Figma et nous avons fait quelques modifications ponctuelles.
 
 Par exemple, nous avons changé l'emplacement du bouton permettant d'accéder au menu dépliant : 
-<img src="emplacement-menu.png" alt="Figma, menu depliant" width="600"/>
+<img src="emplacement-menu.webp" alt="Figma, menu depliant" width="600"/>
 
 Aussi, nous avons mis une double validation pour vider la liste de course :
-<img src="vider-liste.png" alt="Figma, popup vider la liste" width="600"/>
+<img src="vider-liste.webp" alt="Figma, popup vider la liste" width="600"/>
 
 ## L'application sur Bubble :
 
@@ -147,9 +147,9 @@ Nous avons essayé, au fur et à mesure du développement, d'avancer par paliers
 
 Le premier onglet que l'on utilise dans Bubble est l'onglet "Design" qui permet de créer le design de l'application, cette partie est similaire à la création de la maquette Figma.
 
-<img src="bubble_page_planning.png" alt="Bubble, page planning" width="400"/>
+<img src="bubble_page_planning.webp" alt="Bubble, page planning" width="400"/>
 
-<img src="bubble_page_planning_preview.png" alt="Bubble, preview de la page planning" width="400"/>
+<img src="bubble_page_planning_preview.webp" alt="Bubble, preview de la page planning" width="400"/>
 
 #### Base de données :
 
@@ -158,13 +158,13 @@ Bubble permet d'avoir accès à une base de données (onglet "Data") que l'on pe
 - Nous ne pouvions pas importer de fichiers `.csv`, donc nous pouvions uniquement créer des recettes dans la base de données une par une dans Bubble, ou directement via l'application. Nous n'avons donc pas pu créer une base de données de recettes pré-enregistrées d'une taille correcte pour l'application, cela aurait pris beaucoup de temps.
 - La base de données est limitée en nombre d'objets, ce qui nous a poussé à bien gérer la création de nouveaux objets par l'application afin de ne pas avoir une explosion du nombre de données à chaque utilisation.
 
-<img src="bubble_data_recipe.png" alt="Bubble, table recette" width="800"/>
+<img src="bubble_data_recipe.webp" alt="Bubble, table recette" width="800"/>
 
 #### Workflows :
 
 Le côté backend de l'application est gérée principalement dans l'onglet "Workflow". La plupart des workflows que nous avons utilisés se lancent lorsque l'on clique sur un élément de l'application (souvent un bouton). Ils permettent de gérer tous les comportements de l'application, comme la navigation vers une autre page ou encore la création ou la sélection de données dans la base de données, et le tout sans ligne de code.
 
-<img src="bubble_workflows.png" alt="Bubble, workflows" width="800"/>
+<img src="bubble_workflows.webp" alt="Bubble, workflows" width="800"/>
 
 #### Application finale :
 

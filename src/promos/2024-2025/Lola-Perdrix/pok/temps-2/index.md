@@ -69,7 +69,7 @@ Voici à quoi ressemble ce que j'ai pu récupérer du projet, ce qui constituera
 
 | Page d'accueil | Page mémory |
 |----------------|-------------|
-| ![site](html_depart.jpg) | ![site](jeu_depart.jpg) |
+| ![site](html_depart.webp) | ![site](jeu_depart.webp) |
 
 ## Premier Sprint
 
@@ -93,7 +93,7 @@ Après m'être remise la tête dans le cours de 2e année pour me rappeler comme
 
 | Nouvelle page d'accueil | Nouvelle page de jeu |
 |----------------|-------------|
-| ![style](accueil_style.jpg) | ![style](jeu_style.jpg) |
+| ![style](accueil_style.webp) | ![style](jeu_style.webp) |
 
 ### Grille
 
@@ -105,7 +105,7 @@ J'ai procédé avec deux classes de conteneur pour mes tuiles, de type `display 
 
 | 4x4 | 6x6 |
 |----------------|-------------|
-| ![style](4x4.jpg) | ![style](6x6.jpg) |
+| ![style](4x4.webp) | ![style](6x6.webp) |
 
 ### Emplacement des pokémon et affichage des images
 
@@ -121,7 +121,7 @@ J'ai eu des soucis liés à priori au cache de mon ordinateur, problème résolu
 
 Voilà où j'en suis donc à la fin du premier sprint :
 
-![image](affichage_image.jpg)
+![image](affichage_image.webp)
 
 ### Conclusion Sprint 1
 
@@ -189,7 +189,7 @@ Cela m'a donné les guidelines pour réaliser le jeu et j'ai ensuite essayé au 
 
 J'ai aussi ajouté à la fin de la partie une petite animation pour nous féliciter et nous proposer de rejouer.
 
-![image de victoire](congrats.jpg)
+![image de victoire](congrats.webp)
 
 ### Implémentation du niveau initié
 
@@ -208,7 +208,7 @@ Pour le deuxième point j'avais de vagues souvenirs de l'utilisation des **fonct
 
 Je n'ai vraiment pas tout regardé en entier, je recherchais surtout des explications du concept et des exemples de codes (en complétant avec d'autres sites et documentations sur javascript jusqu'à trouver ce qu'il me fallait).
 
-![niveau initiate](initiate.jpg)
+![niveau initiate](initiate.webp)
 
 ### Conclusion Sprint 2
 
@@ -232,7 +232,7 @@ Ensuite, quelques modifications, les règles du jeu ainsi que le header.
 
 | Début de la partie | Version initié | Version expert | Jeu gagné ! |
 |----|----|----|----|
-|![initialisation](final.jpg)|![niveau initiate](final_initiate.jpg)|![niveau expert](final_expert.jpg)|![final](final_congrats.jpg)|
+|![initialisation](final.webp)|![niveau initiate](final_initiate.webp)|![niveau expert](final_expert.webp)|![final](final_congrats.webp)|
 
 C'est seulement à cette étape que j'ai compris qu'il fallait que fasse la partie responsive du site, mais désormais ça marche bien !
 

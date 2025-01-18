@@ -282,7 +282,7 @@ npm install firebase
 On a donc directement la structure de projet suivante : 
 
 <div style = "display : flex; flex-direction: column; align-items : center; margin : 20px">
-  <img src= "/home/guillaumeoliana/Pictures/Screenshots/Screenshot from 2024-11-17 18-11-42.png"></img>
+  <img src= "/home/guillaumeoliana/Pictures/Screenshots/Screenshot from 2024-11-17 18-11-42.webp"></img>
   <h2>Structure du folder créé par Vite</h2>
 </div>
 
@@ -485,13 +485,13 @@ On a ici explorer qu'une infime partie des possibilités offertes par firebase u
 
 
   <div style = "display:flex; flex-direction : column; align-items: center; margin : 20px">
-    <img src = /home/guillaumeoliana/Documents/GitHub/do-it/src/promos/2024-2025/Oliana-Guillaume/mon/temps-2.1/image.png></img>
+    <img src = /home/guillaumeoliana/Documents/GitHub/do-it/src/promos/2024-2025/Oliana-Guillaume/mon/temps-2.1/image.webp></img>
     <h2>Sign up/ Sign in page</h2>
   </div>
 
 
   <div style = "display:flex; flex-direction : column; align-items: center; margin : 20px">
-    <img src = /home/guillaumeoliana/Documents/GitHub/do-it/src/promos/2024-2025/Oliana-Guillaume/mon/temps-2.1/image-1.png></img>
+    <img src = /home/guillaumeoliana/Documents/GitHub/do-it/src/promos/2024-2025/Oliana-Guillaume/mon/temps-2.1/image-1.webp></img>
     <h2>When logged in, it displays the user name from the email adress</h2>
   </div>
 

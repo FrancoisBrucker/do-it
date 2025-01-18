@@ -69,15 +69,15 @@ Concernant les outils de développements, je les avaient déjà utilisés mais i
 
 C'est surtout ce menu que j'avais déjà utilisé donc je connaissais la plupart des informations présentent dans le cours. Mais j'ai tout de même appris que la partie *Console* correspond à l'execution de la partie Javascript du site que l'on inspecte. 
 
-<div><img src="console.png"></div>
+<div><img src="console.webp"></div>
 
 <div id="le-menu-sources"></div>
 
 #### Le menu *Sources*
 
-En ce qui concerne ce menu, j'ai tout découvert. Il s'agit de la présentation de l'arborescence des fichiers du site sur lequel on est. Cela permet notamment d'avoir accès à chaque fichier en particulier, comme par exemple certains fichiers `.png` qui sont utilisés pour la mise en forme du site. 
+En ce qui concerne ce menu, j'ai tout découvert. Il s'agit de la présentation de l'arborescence des fichiers du site sur lequel on est. Cela permet notamment d'avoir accès à chaque fichier en particulier, comme par exemple certains fichiers `.webp` qui sont utilisés pour la mise en forme du site. 
 
-<div><img src="sources.png"></div>
+<div><img src="sources.webp"></div>
 
 <div id="le-menu-network"></div>
 
@@ -86,7 +86,7 @@ En ce qui concerne ce menu, j'ai tout découvert. Il s'agit de la présentation 
 Ici également j'ai tout appris quant à l'utilité de l'onglet. On y voit les informations relatives aux réponses des requêtes faites par le site au serveur. 
 Dans l'image suivante on voit que<span style="background-color:#c59989;">csszengarden.com</span>est un<span style="background-color:#a0acc2;">document</span>de<span style="background-color:#4e5a70;">5.0kB</span>qui a été rendu par le serveur en<span style="background-color:#86b194;">615ms</span>avec un statut de<span style="background-color:#CEC970;">200</span>(ce qui correspond à une réponse sans problème). 
 
-<div><img src="network.png"></div>
+<div><img src="network.webp"></div>
 
 <div id="le-menu-application"></div>
 
@@ -94,7 +94,7 @@ Dans l'image suivante on voit que<span style="background-color:#c59989;">csszeng
 
 Ce menu (dont j'ai aussi découvert l'existence) permet de voir les informations stockées par le site, comme les cookies. 
 
-<div><img src="application.png"></div>
+<div><img src="application.webp"></div>
 
 <div id="2-introduction-à-html"></div>
 
@@ -170,9 +170,9 @@ Dans le cadre d'une page web, cette ressource pourra être :
 Lien vers le cours : [Projet html](https://francoisbrucker.github.io/cours_informatique/cours/web/projet-html/). 
 Dans cette partie, j'ai réalisé un page html basique. 
 Voici un apperçu du haut de la page : 
-<div><img src="page_html1.png"></div>
+<div><img src="page_html1.webp"></div>
 Et un apperçu du bas de la page : 
-<div><img src="page_html2.png"></div>
+<div><img src="page_html2.webp"></div>
 {% details "Contenu du fichier html" %}
 ```
 <!doctype html>
@@ -206,7 +206,7 @@ Et un apperçu du bas de la page :
     </ol>
     <br>
     <h3>HTML</h3>
-    <img src="./html.png"/>
+    <img src="./html.webp"/>
     <p class="partie">Morbi leo mi, nonummy eget, tristique non, rhoncus non, leo. Nullam faucibus mi quis velit. Integer in sapien.
       Fusce tellus odio, dapibus id, fermentum quis, suscipit id, erat. Fusce aliquam vestibulum ipsum. Aliquam erat volutpat.
       Pellentesque sapien. Cras elementum. Nulla pulvinar eleifend sem. Cum sociis natoque penatibus et magnis dis parturient montes,
@@ -230,7 +230,7 @@ Et un apperçu du bas de la page :
     </p>
     <br>
     <h3>CSS</h3>
-    <img src="./css.png"/>
+    <img src="./css.webp"/>
     <p class="partie">Morbi leo mi, nonummy eget, tristique non, rhoncus non, leo. Nullam faucibus mi quis velit. Integer in sapien.
       Fusce tellus odio, dapibus id, fermentum quis, suscipit id, erat. Fusce aliquam vestibulum ipsum. Aliquam erat volutpat.
       Pellentesque sapien. Cras elementum. Nulla pulvinar eleifend sem. Cum sociis natoque penatibus et magnis dis parturient montes,
@@ -254,7 +254,7 @@ Et un apperçu du bas de la page :
     </p>
     <br>
     <h3>JS</h3>
-    <img src="./js.png"/>
+    <img src="./js.webp"/>
     <p class="partie">Morbi leo mi, nonummy eget, tristique non, rhoncus non, leo. Nullam faucibus mi quis velit. Integer in sapien.
       Fusce tellus odio, dapibus id, fermentum quis, suscipit id, erat. Fusce aliquam vestibulum ipsum. Aliquam erat volutpat.
       Pellentesque sapien. Cras elementum. Nulla pulvinar eleifend sem. Cum sociis natoque penatibus et magnis dis parturient montes,
@@ -402,9 +402,9 @@ Ces propriétés sont principalements utilisées pour des balises de comportemen
 Lien vers le cours : [Projet css](https://francoisbrucker.github.io/cours_informatique/cours/web/projet-css/). 
 Pour s'assurer de la bonne aquisition des notions vues, le cours propose de s'entraîner à ajouter du style en css sur le fichier html produit dans la partie [4. Projet html](#4-projet-html). 
 Voici donc à quoi ressemble maintenant la page : 
-<div><img src="page_css1.png"></div>
+<div><img src="page_css1.webp"></div>
 Et le bas de page avec un lien sur lequel passe la souris : 
-<div><img src="page_css2.png"></div>
+<div><img src="page_css2.webp"></div>
 {% details "Contenu du fichier css" %}
 ```
 p {
@@ -446,9 +446,9 @@ C'est donc ce que j'ai mis en place dans mon fichier *html* de mon compte de Cen
 html
 ├── index.html
 ├── Images
-│   ├── css.png
-│   ├── html.png
-│   └── js.png
+│   ├── css.webp
+│   ├── html.webp
+│   └── js.webp
 └── Styles
     └── style.css
 ```

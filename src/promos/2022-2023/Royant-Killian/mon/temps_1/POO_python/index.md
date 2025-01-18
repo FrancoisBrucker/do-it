@@ -36,7 +36,7 @@ Ci-dessous les ressources principales liées à ce MON. Vous y retrouverez le li
 
 {% endchemin %}
 
-![Présentation](./presentation.png)
+![Présentation](./presentation.webp)
 
 ### Objectifs pédagogiques
 

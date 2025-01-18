@@ -65,11 +65,11 @@ Bootstrap répondait parfaitement à mon besoin puisque j'ai pu très facilement
 
 Voici un exemple de mon code :
 
-![exemple_code](./exemple_code.jpg)
+![exemple_code](./exemple_code.webp)
 
 Ce qui donne :
 
-![Nav bar homepage](./nav_bar.jpg)
+![Nav bar homepage](./nav_bar.webp)
 
 
 

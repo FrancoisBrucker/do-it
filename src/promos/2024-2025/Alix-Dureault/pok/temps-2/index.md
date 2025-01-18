@@ -123,13 +123,13 @@ Au moment où j'ai fais les recherches, je ne savais pas encore quelle technolog
 
 Pour cela, j'ai travaillé sur une première visualisation sur les différentes vues élèves (elles dépendent du parcours à Centrale) et sur la vue admin.
 
-![Première maquette](./Maquette_v0.jpg)
+![Première maquette](./Maquette_v0.webp)
 
 Ensuite Ines a pu travaillé sur une deuxième version plus élaboré.
 
 Enfin après les retours de Catherine Musy, j'ai pu reprendre quelques éléments et ajouter la vue administrateur.
 
-![Première maquette](./Maquette_v2.jpg)
+![Première maquette](./Maquette_v2.webp)
 
 ### Initialisation de l'excel côté gestion de la scolarité
 
@@ -163,9 +163,9 @@ Pour le header, j'ai commencé par ajouter les couleurs du background et du text
 
 Pour visualiser :
 - le design Figma
-![Header designé sur Figma](./Header_Figma.jpg)
+![Header designé sur Figma](./Header_Figma.webp)
 - le design React
-![Header codé sur React](./Header_React.jpg)
+![Header codé sur React](./Header_React.webp)
 
 On peut remarquer quelques différences entre les deux designs. Cela est du au travail qu'à pu effectué Inès pendant que j'étais en train de coder et que je n'ai pas encore eu le temps d'intégrer.
 
@@ -187,6 +187,6 @@ Enfin, il s'est agi de designé le contenu de ces boîtes. J'ai commencé pas ut
 
 Poue visualiser :
 - - le design Figma
-![La page élève designée sur Figma](./Vue_eleve_Figma.jpg)
+![La page élève designée sur Figma](./Vue_eleve_Figma.webp)
 - le design React
-![La page élève codée sur React](./Vue_eleves_React.jpg)
+![La page élève codée sur React](./Vue_eleves_React.webp)

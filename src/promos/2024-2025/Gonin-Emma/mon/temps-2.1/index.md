@@ -46,7 +46,7 @@ LXC est une technologie de conteneurisation sous Linux qui est apparue autour de
 
 Alors, cette étape fut plus compliquée que prévue mais après visionnage d'une vidéo qui explique le pourquoi du comment LXC ne fonctionne pas vraiment sur les distributions Ubuntu 20.04 et 22.04, j'ai pu lancer mon propre premier conteneur sous la distribution Ubuntu 18.04 avec WSL.
 
-![alt text](image.png)
+![alt text](image.webp)
 
 Tout d'abord, j'avais simplement suivi la documentation en installant lxc avec sudo sur mon terminal Ubuntu 22.04 mais au moment de démarrer mon conteneur, j'enchaînais les erreurs, quelles soient liées à systemd, snap, un pont réseau qui n'est pas initialisé etc etc. Après avoir essayé de débugger toutes ces erreurs à la main pendant 2h, j'ai pris l'air et je suis tombée par hasard sur la vidéo miracle qui va changer la tournure de ce MON. Le monsieur chargé de nous expliquer les méandres de LXC sous Ubuntu 22.04 m'informe déjà que je n'ai pas systemd d'activé sur ma machine. Il nous fournit les lignes de commande pour activer systemd :
 ```
@@ -68,7 +68,7 @@ Ce que j'ai voulu faire, c'est copier mon application React de mon site web (la 
 Ce que j'ai fait : 
 * copier tous les fichiers de mon application (sauf les node_modules) avec la commande `sudo lxc file push -r /home/egonin2/portfolio-art/ saving-doberman/portfolio-art/`
 * vérifier le contenu de mon conteneur avec ls 
-![ls](<image-2.png>)  
+![ls](<image-2.webp>)  
 * `npm install` pour installer les dépendances de mon projet
 * run mon application avec `npm start` comme je le fais dans mon PowerShell
 Cela m'a rendu une erreur car npm start souhaite lancer un powershell, j'aurais du build mon application en local et copier le dossier de build sur mon conteneur. Ce n'est pas grave ! J'ai pu installer nodejs, npm et nginx sur mon conteneur, cela me servira pour la deuxième partie de mon POK2. J'ai pu copier des fichiers de ma machine hôte à mon conteneur et me servir du conteneur comme d'une machine virtuelle classique. 

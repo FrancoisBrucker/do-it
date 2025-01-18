@@ -117,11 +117,11 @@ Placez les ressources dans le même dossier que votre post. Vos liens auront alo
 #### Images
 
 ```text
-![image à voir](./mon-image.png)`{.fichier}
+![image à voir](./mon-image.webp)`{.fichier}
 ```
 
 {% attention %}
-Si vous nommez votre fichier autrement que `index.md`{.fichier}, il faut mettre `../` devant le chargement de votre ressource (ex : `![image à voir](../mon-image.png)`{.fichier}).
+Si vous nommez votre fichier autrement que `index.md`{.fichier}, il faut mettre `../` devant le chargement de votre ressource (ex : `![image à voir](../mon-image.webp)`{.fichier}).
 
 En effet, si vous utilisez par exemple `mon_fichier.md`{.fichier} comme nom de post, eleventy va :
 
@@ -395,7 +395,7 @@ Par exemple :
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <link rel="icon" href="assets/favicon.png" />
+        <link rel="icon" href="assets/favicon.webp" />
         ...
     </head>
     <body class="language-none">
@@ -416,7 +416,7 @@ Peut s'écrire avec le markdown suivant :
 &lt;html lang="en">
     &lt;head>
         &lt;meta charset="utf-8" />
-        &lt;link rel="icon" href="assets/favicon.png" />
+        &lt;link rel="icon" href="assets/favicon.webp" />
         ...
     &lt;/head>
     &lt;body class="language-none">

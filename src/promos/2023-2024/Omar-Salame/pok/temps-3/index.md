@@ -47,7 +47,7 @@ Total estimé : 11 heures
 **Deloitte Digital Maturity Model**
 Mon choix s'est porté vers le modèle de Deloitte, qui me semble être le plus pertinent pour les raisons suivantes : 
 
-<img src="ddm.png" width="700" height="550">
+<img src="ddm.webp" width="700" height="550">
 
 **Résultat attendu : Situer le cas d'étude dans l'un de ces niveaux puis proposer des recommandations personnalisées.**
 
@@ -149,20 +149,20 @@ Personnes concernées par le questionnaires : DRH , DSI , Shift Leader.
 ### Modélisation et cartographie des processus
 
 {% details "Process 1: Gestion des documents administratifs " %}
-<img src="process1.png" width="700" height="550">
+<img src="process1.webp" width="700" height="550">
 {% enddetails %}
 {% details "Process 2: Gestion de l'envoie des documents" %}
-<img src="process2.png" width="700" height="550">
+<img src="process2.webp" width="700" height="550">
 {% enddetails %}
 {% details "Process 3: Gestion de l'absentéisme" %}
-<img src="process3.png" width="700" height="550">
+<img src="process3.webp" width="700" height="550">
 {% enddetails %}
 
 ### Analyse SWOT des processus
-<img src="swot.png" width="700" height="550">
+<img src="swot.webp" width="700" height="550">
 
 ### Schéma du HRIS existant
-<img src="hris.png" width="700" height="550">
+<img src="hris.webp" width="700" height="550">
 
 ### Niveau de maturité
 Cette organisation se situe dans le deuxième niveau du modèle Deloitte Digital Maturity, c'est-à-dire le niveau émergent. Ils ont déjà une notion de l'importance de la digitalisation de leurs activités et de ce que cela peut apporter en termes de productivité et d'efficacité. Cependant, ils sont toujours au premier stade en termes de technologie. Les processus sont majoritairement manuels et la consolidation des données se fait sur Excel sans aucune communication entre les systèmes et les départements.
@@ -178,10 +178,10 @@ Cette organisation se situe dans le deuxième niveau du modèle Deloitte Digital
 ## Processus optimisés<a id="section-7"></a>
 
 {% details "Process 1: Gestion des documents administratifs " %}
-<img src="process1up.png" width="700" height="550">
+<img src="process1up.webp" width="700" height="550">
 {% enddetails %}
 {% details "Process 2: Gestion de l'envoie des documents" %}
-<img src="process2up.png" width="700" height="550">
+<img src="process2up.webp" width="700" height="550">
 {% enddetails %}
 
 ## Cahier de charge<a id="section-8"></a>

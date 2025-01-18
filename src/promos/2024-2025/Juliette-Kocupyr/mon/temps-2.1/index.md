@@ -38,8 +38,8 @@ Les recommandations de séries sur Netflix, les suggestions de produits sur Amaz
 
 Il réside tout de même un enjeu de libre arbitre car cela enferme l'utilisateur dans un univers de contenus spécifique, en rendant invisible certains contenus.
 
-<img src="./image21/un.png" width="50%">
-<img src="./image21/deux.png" width="50%">
+<img src="./image21/un.webp" width="50%">
+<img src="./image21/deux.webp" width="50%">
 
 ##### 2. Le design inclusif ♿️
 
@@ -51,8 +51,8 @@ Le focus sur un design inclusif et accessible se traduit par une satisfaction cl
 
 Parmi les bonnes pratiques, on retrouve l'utilisation de **texte alternatif** (ALT) pour les images, les **sous-titres** et les **transcriptions** pour les vidéos, les **options de lecture** d'écran, ainsi que des **typographies lisibles et adaptables** aux différentes tailles d'écrans.
 
-<img src="./image21/trois.png" width="50%">
-<img src="./image21/quatre.png" width="50%">
+<img src="./image21/trois.webp" width="50%">
+<img src="./image21/quatre.webp" width="50%">
 
 ##### 3. Green design ♻️
 
@@ -64,7 +64,7 @@ L'éco-conception web passe par **l'optimisation des codes et des images** et **
 
 Les utilisateurs sont de plus en plus à la recherche de produits et de services qui non seulement répondent à leurs besoins mais qui sont aussi en accord avec leurs valeurs environnementales. En intégrant l’éco-responsabilité dans leur UX, les entreprises ne font pas seulement un geste pour la planète, elles construisent également **une relation de confiance et de fidélité** avec leurs clients.
 
-<img src="./image21/cinq.png" width="50%">
+<img src="./image21/cinq.webp" width="50%">
 
 ##### 4. Interaction et animation avancées 💈
 
@@ -76,7 +76,7 @@ Ces petites touches apportent une dimension plus **chaleureuse** à l’interact
 
 Les animations 3D, les animations de réalité augmentée et virtuelle et les animations interactives sont devenues des tendances majeures. Les technologies comme les animations CSS, les transitions et les animations JavaScript sont des outils courants pour créer des animations web. Ces technologies permettent de créer des expériences utilisateur plus immersives et engageantes.
 
-<img src="./image21/six.png" width="50%">
+<img src="./image21/six.webp" width="50%">
 
 ##### 5. Des typographies audacieuses 🖋️
 
@@ -84,7 +84,7 @@ Après une grande vague de "**blanding**", quand de nombreuses marques ont chois
 
 Loin des subtiles serif et sans-serif, les designers préfèrent opter pour des “bold typography” qui font une déclaration forte, **captant instantanément l’attention** de l’utilisateur. Cette nouvelle orientation de style, souligne l’importance de la hiérarchie visuelle tout en guidant l’utilisateur à travers le contenu, de manière intuitive.
 
-<img src="./image21/sept.png" width="50%">
+<img src="./image21/sept.webp" width="50%">
 
 ##### 6. Les interfaces vocales 🔉
 
@@ -94,7 +94,7 @@ Cette prolifération de dispositifs activés par la voix incite de plus en plus 
 
 Les services leaders dans ce domaine sont Apple Siri, Google et Amazon Alexa, et bien que de nouveaux concurrents n'arriveront peut-être pas immédiatement, les designers peuvent déjà envisager d'intégrer ces services existants de manière appropriée dans leurs produits.
 
-<img src="./image21/huit.png" width="50%">
+<img src="./image21/huit.webp" width="50%">
 
 ##### 7. Le Bento design 🔲
 
@@ -106,7 +106,7 @@ Le concept de segmentation et de clarté visuelle avec une touche de satisfactio
 
 Ces 7 exemples font partie des tendances les plus présentes en ligne, mais lors de mes recherches j'en ai trouvé de nombreuses autres avec parfois des contradictions comme la tendance du maximalisme et du minimalisme. Ce qui m'amène à penser que ces tendances peuvent être bénéfiques mais il faut garder un esprit critique.
 
-<img src="./image21/neuf.png" width="50%">
+<img src="./image21/neuf.webp" width="50%">
 
 #### Suivre les tendances : bonne ou mauvaise idée ?
 

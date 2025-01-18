@@ -1,7 +1,7 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 3"
+title: "Freelance et auto-entrepreunariat"
 authors:
   - Victor Pawlaczyk
 
@@ -9,7 +9,7 @@ date: 2025-03-01
 tags: 
   - "temps 3"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Le freelance est un mode de travail qui se développe toujours plus, particulièrement dans le monde de l'informatique. L'objectif est de comprendre au fur et à mesure de ce MON les formalités et les modalités inhérents à ce mode de travail."
 ---
 
 {% prerequis %}

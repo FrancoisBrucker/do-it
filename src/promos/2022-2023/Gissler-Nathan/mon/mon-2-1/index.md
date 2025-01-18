@@ -40,7 +40,7 @@ On peut désormais accéder aux fichiers du site de cette manière : `http://mon
 
 ## Utilisation de Node.js et Express pour son site
 
-![Logo Express](express.png)
+![Logo Express](express.webp)
 
 Création du fichier de configuration package.json
 
@@ -112,7 +112,7 @@ Par exemple, on peut créer un `Router` pour un ensemble de requêtes dans un fi
 
 ## Gestion de la modification en temps réel d'un document collaboratif
 
-![Logo Meteor](meteor.png)
+![Logo Meteor](meteor.webp)
 
 Pour la réalisation de notre POK, il faudrait que nous puissions, dans l'idéal, faire en sorte que les partitions du site "Mon sheet c'est moi" soient collaboratives et que les modifications d'un utilisateur soient visibles en temps réel par les autres utilisateurs. Cela fonctionnerait à la manière d'un Google Docs mais pour des partitions musicales.
 

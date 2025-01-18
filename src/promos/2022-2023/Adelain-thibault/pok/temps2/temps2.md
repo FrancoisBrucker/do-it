@@ -90,8 +90,8 @@ Il vous faut suivre le lien ngrok.io affiché sur le page d'accueil pour pouvoir
 
 Par ce qu'une image vaut mille mots :
 
-![homePage](homePage.png)
-![mapPage](mapPage.png)
+![homePage](homePage.webp)
+![mapPage](mapPage.webp)
 
 #### Tuto :
 

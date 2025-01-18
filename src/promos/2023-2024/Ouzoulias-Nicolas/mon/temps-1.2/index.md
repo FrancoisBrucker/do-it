@@ -101,11 +101,11 @@ La modification de la valeur d'une cellule se fait très facilement à l'aide un
 
 Pour l'exemple nous avons initialement ce tableau : 
 
-![Excel initial](excel_avant_modif.png)
+![Excel initial](excel_avant_modif.webp)
 
 Nous pouvons donc en utilisant la méthode précédent modifier une cellule en particulier comme par exemple la B2 et ainsi avoir : 
 
-![Excel modifié](excel_apres_modif.png)
+![Excel modifié](excel_apres_modif.webp)
 
 Cependant notre valeur est désormais écrite en gras, comment cela se fait-il ? 
 
@@ -157,7 +157,7 @@ Mon code sert à étudier des relevés de pression dans des canalisations, les d
 
 Après avoir importé les données dans Python et après de nombreux calculs j'obtenais un tableau correspondant à une matrice que j'affichais grâce à la bibliothèque *matplotlib.pyplot*. 
 
-![Graphe Python](graphe_python.png)
+![Graphe Python](graphe_python.webp)
 
 Le tableau derrière cette matrice est rangé sous forme d'*array* dans mon code mais il peut être utile de l'avoir en Excel pour visualiser et le manipuler plus facilement pour les clients. 
 
@@ -196,7 +196,7 @@ def convert_excel (matrice, chemin_fichier) :
 
 On obtient alors le tableau Excel suivant : 
 
-![matrice Excel 1](matrice_excel1.png)
+![matrice Excel 1](matrice_excel1.webp)
 
 Afin de le rendre plus visuel nous allons recréer une mise en page conditionnelle afin de recréer la matrice colorée obtenue sur Python. 
 
@@ -261,7 +261,7 @@ def convert_excel (matrice,chemin_fichier) :
 ```
 {% enddetails %}
 
-![matrice Excel 2](matrice_excel2.png)
+![matrice Excel 2](matrice_excel2.webp)
 
 
 ## IV. Conclusion

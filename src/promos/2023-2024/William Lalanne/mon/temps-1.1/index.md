@@ -40,7 +40,7 @@ Dans ce MON, je voulais approfondir mes connaissances en CSS et particulièremen
 ### Qu'est ce que c'est et à quoi ça sert ? 
 Lorsque l'on veut coder une page web, il faut que chaque élément de la page soit à la bonne place. La disposition des éléments dans la page est difficile à gérer, mais plusieurs outils permettent de nous faciliter la vie. Par exemple, il peut être utile d'utiliser une grid, ou un tableau en français. Un tableau est un ensemble de lignes et de colonnes de différentes tailles dans lequel on peut mettre des éléments de la page. 
 Le plus simple pour comprendre est de prendre un exemple :
-![Exemple de grid dans une page web](exemple-grid.png)
+![Exemple de grid dans une page web](exemple-grid.webp)
 
 Dans l'image précédente, on peut voir que la page web est constituée d'un tableau qui permet de disposer de manière simple les différents éléments voulus. 
 
@@ -83,13 +83,13 @@ Examinons l'exemple suivant avec quelques propriétés du container :
 
 On peut aussi parler de la propriété ***justify-content***. Lorsque le container est plus grand que le tableau, cette propriété permet de contrôler l'alignement du tableau dans le container. Voyons ce que cela peut donner : 
 - justify-content: **start**
-![Exemple grid start](Grid-exemple-start.png)
+![Exemple grid start](Grid-exemple-start.webp)
 Le tableau se positionne au début du container.
 - justify-content: **end**
-![Exemple grid end](Grid-exemple-end.png)
+![Exemple grid end](Grid-exemple-end.webp)
 Le tableau se positionne à la fin du container.
 - justify-content: **center**
-![Exemple grid center](Grid-exemple-centre.png)
+![Exemple grid center](Grid-exemple-centre.webp)
 Le tableau se positionne au milieu du container. 
 
 La propriété ***align-content*** permet de faire la même chose verticalement. 
@@ -114,12 +114,12 @@ Les tableaux sont donc un moyen simple permettant de gérer la mise en place de 
 Tout comme les Grid, les Flexbox sont des outils qui vont faciliter l'aménagement de la page web. Mais contrairement aux Grid, les Flexbox ne vont pas permettre une mise en place bidimensionnelle, mais seulement unidimensionnelle. Les Grid permettaient de faire des lignes et des colonnes en même temps, les Flexbox sont comme des boîtes, donc on ne peut faire soit que des colonnes soit que des lignes. 
 
 Avec une Grid :
- ![Exemple de mise en page avec une grid](grid-exemple.png)
+ ![Exemple de mise en page avec une grid](grid-exemple.webp)
 
 Avec une Flexbox :
 
-![Exemple de mise en page avec une flexbox](exemple-flexbox.png)
-![Exemple de mise en page avec une flexbox](flex-exemple.png)
+![Exemple de mise en page avec une flexbox](exemple-flexbox.webp)
+![Exemple de mise en page avec une flexbox](flex-exemple.webp)
 
 ## Créer une Flexbox
 
@@ -154,13 +154,13 @@ Si on souhaite en créer une en ligne il faudra écrire :
 
 Ensuite, les éléments à l'intérieur du container, comme **`<div>1</div>`** ont eux aussi des propriétés. On peut par exemple parler de la propriété ***justify-content***. 
 On peut attribuer à chaque élément du container une taille. Mais il se peut que la somme totale de ces tailles soit plus petite que la taille du container. Il y a donc de l'espace disponible comme ici par exemple : 
-![Exemple flexbox disponible](flexbox-freespace.png)
+![Exemple flexbox disponible](flexbox-freespace.webp)
 Avec ***justify-content*** on peut préciser comment on souhaite que nos éléments occupent l'espace dans le container. 
 - justify-content: **start** les éléments s'aligneront les uns à la suite des autres en commençant par le début du container, comme sur l'image ci-dessus. 
 - justify-content: **end** les éléments s'aligneront les une à la suite des autres en commençant par la fin du container. 
-![Exemple flexbox end](flexbox-end.png)
+![Exemple flexbox end](flexbox-end.webp)
 - justify-content: **center** les éléments seront centrés par rapport à la largeur du container. 
-![Exemple flexbox center](flexbox-center.png)
+![Exemple flexbox center](flexbox-center.webp)
 
 Il existe beaucoup d'autres propriétés qui peuvent être appliquées aux éléments de la Flexbox, mais je ne vais pas toutes les énumérer. 
 
@@ -188,10 +188,10 @@ Cette propriété permet d'attribuer un décalage de position à l'élément con
 ```
 
 Permet de passer de cette disposition : 
-![Exemple position static](position-static.png)
+![Exemple position static](position-static.webp)
 
 A celle ci où il y a eu un décalage de 100 pixels vers la droite et de 30 pixels vers le haut : 
-![Exemple position relative](position-relative1.png)
+![Exemple position relative](position-relative1.webp)
 
 
 #### Fixed

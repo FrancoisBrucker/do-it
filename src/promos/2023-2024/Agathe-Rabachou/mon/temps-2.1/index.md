@@ -33,7 +33,7 @@ Il est découpé en 11 chapitres ponctués d’exercices d’application. J’ai
 
 C’est un graphique miniature qui s’insère dans une cellule (depuis le menu insertion), par exemple au bout d’une ligne d’un tableau pour représenter simplement les données de cette ligne. Il en existe 3 types : la courbe, l’histogramme et le graphique conclusions et pertes. Le style de chacun est personnalisable. Ils sont représentés pour exemple dans le cas ci-dessous :
 
-<img src="graphique sparkline.png">
+<img src="graphique sparkline.webp">
 
 ### B. Mise en forme conditionnelle
 
@@ -64,11 +64,11 @@ C’est un moyen très pratique de synthétiser des données. Ci-dessous un exem
 
 La table de données initiale :
 
-<img src="TCD initial.png">
+<img src="TCD initial.webp">
 
 Le tableau croisé dynamique associé :
 
-<img src="TCD resultat.png">
+<img src="TCD resultat.webp">
 
 C’est ici un exemple très simple, mais dans le cas de nombreuses données cette synthèse est particulièrement utile. Bien sûr, il est possible de changer les données en ligne et en colonne, l’ordre des catégories, de trier ou de filtrer à partir de données choisies, de calculer d’autres valeurs remarquables comme la somme ou le produit des données par exemple ou encore de personnaliser les couleurs et la mise en page.
 
@@ -80,7 +80,7 @@ Le VBA est un langage de programmation orientée objet qui permet d’automatise
 
 Voici pour commencer le bandeau d’outils nécessaire pour ce cours :
 
-<img src="bandeau VBA.png">
+<img src="bandeau VBA.webp">
 
 Si l’onglet n’apparaît pas automatiquement à l’ouverture d’Excel, il faut le rajouter depuis les options.
 
@@ -164,7 +164,7 @@ MsgBox Nom_variable
 ```
 Ainsi, on peut par exemple afficher une phrase contenant plusieurs informations extraites d’une base de données. A noter que, comme en Excel, on utilise & pour concaténer du texte et des valeurs de variables. Voici une illustration :
 
-<img src="variables tab.png">
+<img src="variables tab.webp">
 
 ```vba
 Sub variables()
@@ -179,7 +179,7 @@ Sub variables()
 End Sub
 ```
 
-<img src="variables boite dialogue.png">
+<img src="variables boite dialogue.webp">
 
 Une variable est utilisable dans l’environnement dans lequel elle a été définie. Dans une procédure (Sub) si elle est définie au début de cette procédure, dans tout un module si elle est initiée au début du module ou même dans l’ensemble des modules si l’on remplace Dim par Public. 
 
@@ -336,7 +336,7 @@ End Sub
 ```
 On obtient alors à l’exécution :
 
-<img src="boite dialogue.png">
+<img src="boite dialogue.webp">
 
 Puis l’action s’effectue ou non selon la réponse à la boîte de dialogue. Il existe de nombreux boutons qui permettent des interactions différentes telles que Ok, Annuler, Recommencer…, qui ajoutent une icône ou encore qui forcent à répondre avant de continuer. Il est possible de mettre plusieurs valeurs dans le deuxième argument de la MsgBox, séparés par des `+`. 
 
@@ -352,7 +352,7 @@ Ensuite, il est possible de créer ce que l'on appelle un UserForm. C'est un obj
 
 Voici un exemple de rendu : 
 
-<img src="userform.png">
+<img src="userform.webp">
 
 *([source de l'image](https://faqword.com/index.php))*
 

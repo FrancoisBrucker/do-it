@@ -167,8 +167,8 @@ Pour la phase de développement de notre projet, nous avons continué à travail
 
 Cette approche nous a permis de maintenir une visibilité claire sur le progrès de chaque aspect du projet, facilitant ainsi la communication et assurant que nous sommes alignés sur les priorités et les échéances. Le suivi du statut des tâches via Notion a également contribué à une gestion de projet plus dynamique, permettant des ajustements en temps réel pour répondre aux changements de scope.
 :-------------------------:|:-------------------------:
-<img src="taches.png" width="760" height="650">|<img src="taches2.png" width="700" height="550">
-<img src="taches3.png" width="700" height="550">|<img src="taches4.png" width="760" height="650">
+<img src="taches.webp" width="760" height="650">|<img src="taches2.webp" width="700" height="550">
+<img src="taches3.webp" width="700" height="550">|<img src="taches4.webp" width="760" height="650">
 
 # Evolution de la maquette et du design
 
@@ -178,12 +178,12 @@ Toutefois, après avoir assisté aux cours sur l'UX et l'UI design, nous avons r
 
 L'intégration des enseignements de l'UI/UX design a été source de confusion ; une partie du code était déjà écrite, et modifier le design à ce stade signifiait recommencer une grande partie du travail. Voici quelques exemples des orientations que les cours d'UI design ont inspirées :
 
-<img src="exploration_design.png" width="100%" >
-<img src="choix_couleurs.png" width="100%" >
+<img src="exploration_design.webp" width="100%" >
+<img src="choix_couleurs.webp" width="100%" >
 
 Finalement, après consultation et réflexion avec notre tuteur, M. Préa Pascal, nous avons décidé de conserver la structure originale et la palette de couleurs que nous avions initialement choisies :
 
-<img src="maquette.png" width="100%" >
+<img src="maquette.webp" width="100%" >
 
 Des ajustements ont été apportés progressivement au développement des pages tout au long des deux derniers temps, au fur et à mesure qu'on teste l'application.
 
@@ -216,9 +216,9 @@ La bibliothèque est composée de deux parties : une partie cliente, et une part
 ### Résultat
 
 :-------------------------:|:-------------------------:|:-------------------------:
-<img src="HomeScreen.jpg" width="250" >|<img src="SettingScreen.jpg" width="250" >|<img src="SalonScreen.jpg" width="250" >
-<img src="GameScreen.jpg" width="250" >|<img src="StatPerso.jpg" width="250" >|<img src="Classement.jpg" width="250" >
-<img src="Historique.jpg" width="250" >
+<img src="HomeScreen.webp" width="250" >|<img src="SettingScreen.webp" width="250" >|<img src="SalonScreen.webp" width="250" >
+<img src="GameScreen.webp" width="250" >|<img src="StatPerso.webp" width="250" >|<img src="Classement.webp" width="250" >
+<img src="Historique.webp" width="250" >
 
 # Analyse des écarts et difficultés
 

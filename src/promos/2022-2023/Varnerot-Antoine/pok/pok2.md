@@ -21,7 +21,7 @@ Déployer un site sur un serveur ovh a été partiellement vue dans le cours de 
 L'idée du site à créer est d'avoir un feed de musiques partagées par des utilisateurs et que toute la communauté puisse voter +1/-1 pour les musiques partagées. Je vais donc me concentrer sur la partie backend et les différentes requêtes HTTP. L'objectif est aussi d'utiliser une base de données afin d'avoir un site complet en ligne.
 
 <figure>
-  <img src="../assets/wireframe2.png">
+  <img src="../assets/wireframe2.webp">
   <figcaption>Wireframe de l'app</figcaption>
 </figure>
 
@@ -43,7 +43,7 @@ Plus d'informations : <https://subscription.packtpub.com/book/web-development/97
 J'ai ensuite rempli ces repos, d'abord avec un front assez simple :
 
 <figure>
-  <img src="../../assets/basic-front.png">
+  <img src="../../assets/basic-front.webp">
   <figcaption>Wireframe de l'app</figcaption>
 </figure>
 

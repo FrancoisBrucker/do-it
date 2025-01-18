@@ -48,7 +48,7 @@ onSelectionChange()   | S'exécute lorsqu'un utilisateur modifie la cellule sél
   
 Ce programme va permettre d'afficher la date et l'heure sur la Cellule A1 à chaque fois que le fichier est ouvert comme le montre l'image ci-dessous :
 
-![Optional Text](Image.png)
+![Optional Text](Image.webp)
 
 * onSelectionChange() :
 
@@ -90,11 +90,11 @@ Certainement la fonction la plus intéressante, pour cet exemple, un programme p
 Ce permet donc à chaque qu'une personne saisi son e-mail dans la cellule B3, de vérifier si il s'agit d'un e-mail conforme. Si c'est le cas, la case reste blanche mais si la syntaxe n'est pas bonne, la case se colore en rouge.
 Lorsque l'e-mail est bien noté :
 
-![Optional Text](Image1.png)
+![Optional Text](Image1.webp)
 
 Lorsque qu'il y a une erreur (il manque le ".fr") :
 
-![Optional Text](Image2.png)
+![Optional Text](Image2.webp)
 
 Ce type de vérification peu être étendu par exemple à la vérification du format du numéro de téléphone, la syntaxe de la date de naissance... Peut-être pour un prochain MON, créer tout un formulaire contrôlé avec un programme.
 
@@ -108,11 +108,11 @@ Les triggers temporels permettent l'exécution d'une fonction dans un certain d�
 
 Pour programmer un trigger temporel, après avoir créer une fonction, il faut aller dans l'Apps script, cliquer sur l'horloge à gauche comme sur l'image ci-dessous :
 
-![Optional Text](Image3.png)
+![Optional Text](Image3.webp)
 
 Il faut ensuite cliquer sur "ajouter un déclencheur" en bas à droite et le menu suivant s'affiche :
 
-![Optional Text](Image4.png)
+![Optional Text](Image4.webp)
 
 Pour programmer le déclencheur, il faut dans le menu :
 
@@ -135,11 +135,11 @@ On va créer une fonction qui va nous envoyer un mail tout les matins pour me ra
 
 Après avoir créer la fonction, on va créer le déclencheur temporel et le paramétrer :
 
-![Optional Text](Image6.png)
+![Optional Text](Image6.webp)
 
 Tout est prêt, je vais donc recevoir tous les jours un mail de ce type pour ne pas oublier de signer la feuille à l’accueil :
 
-![Optional Text](Image5.png)
+![Optional Text](Image5.webp)
 
 {% info %}
 Une autre idée de MON, à partir d'un tableau avec des dates d'anniversaire, créer un trigger temporel qui prévient par mail des anniversaires.

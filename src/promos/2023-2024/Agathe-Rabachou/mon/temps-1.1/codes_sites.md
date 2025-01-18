@@ -27,7 +27,7 @@ résumé: Codes de mon MON.
 <body>
     <header>
         <nav>
-            <img src="images/logo.png" alt="Logo Robbie Lens" >
+            <img src="images/logo.webp" alt="Logo Robbie Lens" >
             <div>
                 <a href="index.html">Accueil</a>
                 <a href="a-propos.html">À propos</a>
@@ -46,30 +46,30 @@ résumé: Codes de mon MON.
                 </p>
                 <a href="portfolio.html" class="cta">UN PROJET ? ÉCRIVEZ-MOI</a>
             </div>
-            <img src="images/robbie-lens.png" alt="Portrait avec effet de la photographe Robbie Lens" >
+            <img src="images/robbie-lens.webp" alt="Portrait avec effet de la photographe Robbie Lens" >
         </section>
         <section class="photos_accueil">
             <h2>Mon dernier projet</h2>
                 <div>    
-                    <img src="images/accueil/element-1.png" alt="Twelve apostles - Australie" >
-                    <img src="images/accueil/element-2.png" alt="Wai-O-Tapu - Nouvelle-Zélande" >
-                    <img src="images/accueil/element-3.png" alt="Parc National d’Abel Tasman - Nouvelle-Zélande" >
+                    <img src="images/accueil/element-1.webp" alt="Twelve apostles - Australie" >
+                    <img src="images/accueil/element-2.webp" alt="Wai-O-Tapu - Nouvelle-Zélande" >
+                    <img src="images/accueil/element-3.webp" alt="Parc National d’Abel Tasman - Nouvelle-Zélande" >
                 </div>    
                 <div>    
-                    <img src="images/accueil/element-4.png" alt="Lac Rotorua - Nouvelle-Zélande" >
-                    <img src="images/accueil/element-5.png" alt="Milford Sound - Nouvelle-Zélande" >
-                    <img src="images/accueil/element-6.png" alt="Lac Wanaka - Nouvelle-Zélande" >
+                    <img src="images/accueil/element-4.webp" alt="Lac Rotorua - Nouvelle-Zélande" >
+                    <img src="images/accueil/element-5.webp" alt="Milford Sound - Nouvelle-Zélande" >
+                    <img src="images/accueil/element-6.webp" alt="Lac Wanaka - Nouvelle-Zélande" >
                 </div>
         </section>
     </main>
     <footer>
-        <img src="images/logo.png" alt="Logo Robbie Lens" >
+        <img src="images/logo.webp" alt="Logo Robbie Lens" >
         <div>
             <a target="_blank" href="https://twitter.com/" class="lien-icone">
-                <img src="images/twitter.png" alt="Logo Twitter" >
+                <img src="images/twitter.webp" alt="Logo Twitter" >
             </a>
             <a target="_blank" href="https://www.instagram.com/" class="lien-icone">
-                <img src="images/instagram.png" alt="Logo Instagram" >
+                <img src="images/instagram.webp" alt="Logo Instagram" >
             </a>
         </div>    
     </footer>
@@ -96,7 +96,7 @@ résumé: Codes de mon MON.
     <header>
         <nav>
             <a href="index.html" class="lien-icone">
-                <img src="images/logo.png" alt="Logo Robbie Lens" >
+                <img src="images/logo.webp" alt="Logo Robbie Lens" >
             </a>
             <div>
                 <a href="index.html">Accueil</a>
@@ -132,14 +132,14 @@ résumé: Codes de mon MON.
     </main>
     <footer>
         <a href="index.html" class="lien-icone">
-            <img src="images/logo.png" alt="Logo Robbie Lens" >
+            <img src="images/logo.webp" alt="Logo Robbie Lens" >
         </a>
         <div>
             <a target="_blank" href="https://twitter.com/" class="lien-icone">
-                <img src="images/twitter.png" alt="Logo Twitter" >
+                <img src="images/twitter.webp" alt="Logo Twitter" >
             </a>
             <a target="_blank" href="https://www.instagram.com/" class="lien-icone">
-                <img src="images/instagram.png" alt="Logo Instagram" >
+                <img src="images/instagram.webp" alt="Logo Instagram" >
             </a>
         </div>
     </footer>
@@ -166,7 +166,7 @@ résumé: Codes de mon MON.
     <header>
         <nav>
             <a href="index.html" class="lien-icone">
-                <img src="images/logo.png" alt="Logo Robbie Lens" >
+                <img src="images/logo.webp" alt="Logo Robbie Lens" >
             </a>
             <div>
                 <a href="index.html">Accueil</a>
@@ -182,67 +182,67 @@ résumé: Codes de mon MON.
         <section class="portfolio-section-photos">
             <h2>Voyages</h2>
             <div class="photos_voyages">
-                <a href="images/portfolio/paysage1.jpg" class="lien-conteneur-photo">
-                    <img src="images/portfolio/paysage1.jpg" alt="Mont Aoraki - Nouvelle-Zélande" >
+                <a href="images/portfolio/paysage1.webp" class="lien-conteneur-photo">
+                    <img src="images/portfolio/paysage1.webp" alt="Mont Aoraki - Nouvelle-Zélande" >
                     <div class="photo-hover">Voir la photo</div>
                 </a>
-                <a href="images/portfolio/paysage2.jpg" class="lien-conteneur-photo">
-                    <img src="images/portfolio/paysage2.jpg" alt="Parc National d’Abel Tasman - Nouvelle-Zélande" >
+                <a href="images/portfolio/paysage2.webp" class="lien-conteneur-photo">
+                    <img src="images/portfolio/paysage2.webp" alt="Parc National d’Abel Tasman - Nouvelle-Zélande" >
                     <div class="photo-hover">Voir la photo</div>
                 </a>
-                <a href="images/portfolio/paysage3.jpg" class="lien-conteneur-photo">
-                    <img src="images/portfolio/paysage3.jpg" alt="Lac Rotorua - Nouvelle-Zélande" >
+                <a href="images/portfolio/paysage3.webp" class="lien-conteneur-photo">
+                    <img src="images/portfolio/paysage3.webp" alt="Lac Rotorua - Nouvelle-Zélande" >
                     <div class="photo-hover">Voir la photo</div>
                 </a>
-                <a href="images/portfolio/paysage4.jpg" class="lien-conteneur-photo">
-                    <img src="images/portfolio/paysage4.jpg" alt="Lac Wanaka - Nouvelle-Zélande" >
+                <a href="images/portfolio/paysage4.webp" class="lien-conteneur-photo">
+                    <img src="images/portfolio/paysage4.webp" alt="Lac Wanaka - Nouvelle-Zélande" >
                     <div class="photo-hover">Voir la photo</div>
                 </a>
-                <a href="images/portfolio/paysage5.jpg" class="lien-conteneur-photo">
-                    <img src="images/portfolio/paysage5.jpg" alt="Mont Taranaki - Nouvelle-Zélande" >
+                <a href="images/portfolio/paysage5.webp" class="lien-conteneur-photo">
+                    <img src="images/portfolio/paysage5.webp" alt="Mont Taranaki - Nouvelle-Zélande" >
                     <div class="photo-hover">Voir la photo</div>
                 </a>
-                <a href="images/portfolio/paysage6.jpg" class="lien-conteneur-photo">
-                    <img src="images/portfolio/paysage6.jpg" alt="Milford Sound - Nouvelle-Zélande" >
+                <a href="images/portfolio/paysage6.webp" class="lien-conteneur-photo">
+                    <img src="images/portfolio/paysage6.webp" alt="Milford Sound - Nouvelle-Zélande" >
                     <div class="photo-hover">Voir la photo</div>
                 </a>
-                <a href="images/portfolio/paysage7.jpg" class="lien-conteneur-photo">
-                    <img src="images/portfolio/paysage7.jpg" alt="Twelve Apostle - Australie" >
+                <a href="images/portfolio/paysage7.webp" class="lien-conteneur-photo">
+                    <img src="images/portfolio/paysage7.webp" alt="Twelve Apostle - Australie" >
                     <div class="photo-hover">Voir la photo</div>
                 </a>
-                <a href="images/portfolio/paysage8.jpg" class="lien-conteneur-photo">
-                    <img src="images/portfolio/paysage8.jpg" alt="Wai-O-Tapu - Nouvelle-Zélande" >
+                <a href="images/portfolio/paysage8.webp" class="lien-conteneur-photo">
+                    <img src="images/portfolio/paysage8.webp" alt="Wai-O-Tapu - Nouvelle-Zélande" >
                     <div class="photo-hover">Voir la photo</div>
                 </a>
-                <a href="images/portfolio/paysage9.jpg" class="lien-conteneur-photo">
-                    <img src="images/portfolio/paysage9.jpg" alt="Mont Cook - Nouvelle Zélande" >
+                <a href="images/portfolio/paysage9.webp" class="lien-conteneur-photo">
+                    <img src="images/portfolio/paysage9.webp" alt="Mont Cook - Nouvelle Zélande" >
                     <div class="photo-hover">Voir la photo</div>
                 </a>
             </div>
             <h2>Portraits</h2>
             <div class="photos_portraits">
-                <a href="images/portfolio/portrait1.jpg" class="lien-conteneur-photo">
-                    <img src="images/portfolio/portrait1.jpg" alt="Portrait jeune femme 1" >
+                <a href="images/portfolio/portrait1.webp" class="lien-conteneur-photo">
+                    <img src="images/portfolio/portrait1.webp" alt="Portrait jeune femme 1" >
                     <div class="photo-hover">Voir la photo</div>
                 </a>
-                <a href="images/portfolio/portrait2.jpg" class="lien-conteneur-photo">
-                    <img src="images/portfolio/portrait2.jpg" alt="Portrait jeune femme 2" >
+                <a href="images/portfolio/portrait2.webp" class="lien-conteneur-photo">
+                    <img src="images/portfolio/portrait2.webp" alt="Portrait jeune femme 2" >
                     <div class="photo-hover">Voir la photo</div>
                 </a>
-                <a href="images/portfolio/portrait3.jpg" class="lien-conteneur-photo">
-                    <img src="images/portfolio/portrait3.jpg" alt="Portrait jeune homme 3" >
+                <a href="images/portfolio/portrait3.webp" class="lien-conteneur-photo">
+                    <img src="images/portfolio/portrait3.webp" alt="Portrait jeune homme 3" >
                     <div class="photo-hover">Voir la photo</div>
                 </a>
-                <a href="images/portfolio/portrait4.jpg" class="lien-conteneur-photo">
-                    <img src="images/portfolio/portrait4.jpg" alt="Portrait jeune femme 4" >
+                <a href="images/portfolio/portrait4.webp" class="lien-conteneur-photo">
+                    <img src="images/portfolio/portrait4.webp" alt="Portrait jeune femme 4" >
                     <div class="photo-hover">Voir la photo</div>
                 </a>
-                <a href="images/portfolio/portrait5.jpg" class="lien-conteneur-photo">
-                    <img src="images/portfolio/portrait5.jpg" alt="Portrait jeune femme 5" >
+                <a href="images/portfolio/portrait5.webp" class="lien-conteneur-photo">
+                    <img src="images/portfolio/portrait5.webp" alt="Portrait jeune femme 5" >
                     <div class="photo-hover">Voir la photo</div>
                 </a>
-                <a href="images/portfolio/portrait6.jpg" class="lien-conteneur-photo">
-                    <img src="images/portfolio/portrait6.jpg" alt="Portrait jeune femme 6" >
+                <a href="images/portfolio/portrait6.webp" class="lien-conteneur-photo">
+                    <img src="images/portfolio/portrait6.webp" alt="Portrait jeune femme 6" >
                     <div class="photo-hover">Voir la photo</div>
                 </a>
             </div>
@@ -250,14 +250,14 @@ résumé: Codes de mon MON.
     </main>
     <footer>
         <a href="index.html" class="lien-icone">
-            <img src="images/logo.png" alt="Logo Robbie Lens" >
+            <img src="images/logo.webp" alt="Logo Robbie Lens" >
         </a>
         <div>
             <a target="_blank" href="https://twitter.com/" class="lien-icone">
-                <img src="images/twitter.png" alt="Logo Twitter" >
+                <img src="images/twitter.webp" alt="Logo Twitter" >
             </a>
             <a target="_blank" href="https://www.instagram.com/" class="lien-icone">
-                <img src="images/instagram.png" alt="Logo Instagram" >
+                <img src="images/instagram.webp" alt="Logo Instagram" >
             </a>
         </div>
     </footer>

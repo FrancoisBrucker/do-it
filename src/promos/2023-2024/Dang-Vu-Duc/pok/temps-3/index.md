@@ -452,7 +452,7 @@ def plot_stats_combinations(self, N):
 
 Le résultat de cette simulation pour 10 millions de simulations est le suivant:
 
-![Image1](Image1.png)
+![Image1](Image1.webp)
 
 Ces résultats concordent presque parfaitement aux résultats théoriques que l'on peut retrouver sur cette [page Wikipédia dédiée](https://en.wikipedia.org/wiki/Poker_probability).
 
@@ -483,7 +483,7 @@ def plot_hands_ranking(self, first_rank, last_rank):
 
 Voici le classement des 20 meilleures mains obtenues:
 
-![Image2](Image2.png)
+![Image2](Image2.webp)
 
 La lettre T correspond au 10. La lettre "s" signifie que les deux cartes sont de la même couleur (de l'anglais "suited") et la lettre "o" signifie que les deux cartes ne sont pas de la même couleur (de l'anglais "offsuit"). On retrouve bien la paire d'As qui est la meilleure main de départ, suivie de près les paires de Rois et de Dames.
 
@@ -493,7 +493,7 @@ Maintenant que l'on a tout les outils pour faire des simulations, on va à prés
 
 Il faut tout d'abord designer les différentes fenêtres que l'utilisateur pourra utiliser. On utilise pour cela le logiciel Qt Designer, et on opte pour des designs simples. Voici un aperçu des 4 fenêtres dans le logiciel:
 
-![Image3](Image3.png)
+![Image3](Image3.webp)
 
 On créé ensuite une nouvelle classe **UI_stats** qui contiendra toutes les méthodes pour afficher les interfaces graphiques. Cette classe hérite des classes **Poker_methods** et **Plot_stats**. L'initialisation de cette classe permet de récupérer tout les éléments des interfaces designées (boutons, textes, barres de progression etc...) afin de les assigner à des attributs de notre classe. Les noms de ces attributs doivent être bien distinctes.
 
@@ -600,13 +600,13 @@ class UI_stats(Plot_stats, Poker_methods):
 
 La première fenêtre à faire est la fenêtre principale, qui agira comme un menu pour l'utilisateur. Cette fenêtre comporte pour l'instant 4 boutons qui mèneront chacun sur une autre fenêtre, en fonction de la statistique à afficher.
 
-![Image4](Image4.png)
+![Image4](Image4.webp)
 
 ### Affichage des fréquences d'apparition des combinaisons
 
 Ensuite, on crée la fenêtre pour afficher les fréquences d'apparition des combinaisons. Pour cela, on reprend simplement le code présenté précédemment, en rajoutant une variable qui suit la progression de la boucle, pour actualiser la barre de progression. Voici la fenêtre qui apparaît lorsque l'on clique sur le bouton "Afficher les fréquences d'apparition des combinaisons":
 
-![Image5](Image5.png)
+![Image5](Image5.webp)
 
 L'utilisateur peur renseigner le nombre de simulations qu'il souhaite effectuer, ensuite la barre de progression évolue puis le graphique est affiché.
 
@@ -642,7 +642,7 @@ def line_edit_plot_hands_ranking_last_rank_changed(self, value):
 
 La fenêtre affichée est donc la suivante:
 
-![Image6](Image6.png)
+![Image6](Image6.webp)
 
 L'utilisateur peut rentrer le premier rang qu'il veut afficher et le dernier rang.
 
@@ -737,7 +737,7 @@ def valider_get_winrate(self):
 
 {% enddetails %}
 
-![Image7](Image7.png)
+![Image7](Image7.webp)
 
 ## Bilan du premier sprint et prévisions du deuxième sprint
 
@@ -848,7 +848,7 @@ def plot_heatmap_hands_ranking(self):
 
 L'exécution de ce code donne le graphique suivant:
 
-![Image8](Image8.png)
+![Image8](Image8.webp)
 
 On observe un dégradé de couleurs: plus on augmente sur l'axe des abscisses et sur celui des ordonnées, plus le taux de réussite est important. De plus, on remarque que les paires servies, situées sur la diagonale, sont clairement des meilleures mains que les autres. Enfin, les mains associées ont un taux de réussite légèrement supérieur aux mains dépareillées.
 Il ne manque plus qu'à ajouter un bouton sur la fenêtre principale associé à l'affichage de cette image.
@@ -903,7 +903,7 @@ def select_line_K(self):
 
 La fin de la méthode fait appel à la méthode *color_buttons*, qui colore en vert ou en blanc les boutons correspondants aux combinaisons présentes dans la liste *range_selected*. Voici à quoi ressemble la fenêtre:
 
-![Image9](Image9.png)
+![Image9](Image9.webp)
 
 On arrive bien à sélectionner les mains unes par unes, ou bien une colonne ou une ligne entière d'un coup.
 

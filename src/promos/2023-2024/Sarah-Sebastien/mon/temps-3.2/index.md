@@ -56,13 +56,13 @@ Techniquement parlant, les cookies sont envoyés à l'aide d'en-têtes http *(pr
 Le protocole http est **sans état**, ie : il ne conserve ni ne stocke les sessions des clients. Donc, le client est responsable du stockage des informations de session pour les demandes ultérieures. Ainsi, lorsque le client fait une requête, il doit inclure ses informations de session au serveur pour l'authentification ou la validation.
 {%endfaire%}
 
-<img width=350 src=def_cookies.png>
+<img width=350 src=def_cookies.webp>
 
 [Source](https://blog.larapulse.com/web/protect-cookies)
 
 ### Les attributs d'un cookie 
 
-<img width=400 src=info_cookie.png>
+<img width=400 src=info_cookie.webp>
 
 - **ID de session** : un **long** string **aléatoire** utilisé for la gestion d'une session, qui sert à identifier de manière **unique** un client qui essaie d'accéder à un serveur
 - **date d'expiratiion** : plus ou moins longue 
@@ -170,12 +170,12 @@ En faisant mes recherches, je suis tombée sur [cette vidéo](https://www.youtub
 Il faut se rendre sur cette adresse : **[altoromutual.com](https://altoromutual.com)**, via **Chrome** (je n'ai pas réussi sur Mozilla).
 
 Une fois arrivé sur la page, on fait *clique droit > inspecter*.
-<img width=350 src=inspecter.png>
+<img width=350 src=inspecter.webp>
 
 On ouvre l'onglet *Application* pour accéder aux cookies, et on clique sur l'URL du site.
 On voit alors qu'il n'y a qu'une ligne.
 
-<img src=pasidentifier.png>
+<img src=pasidentifier.webp>
 
 Il faut ensuite se connecter *(identifiant : admin, et mot de passe : admin)*. Si on regarde le chemin de la page, on voit qu'on arrive sur la page :
 
@@ -186,7 +186,7 @@ On voit bien que cette page est une page **réservée aux utilisateurs**, où es
 
 Si on se penche maintenant sur les cookies du site, on voit alors apparaître le cookie de connexion qui vient d'être envoyé par le serveur, comme on s'est connecté.
 
-<img src=identifier.png>
+<img src=identifier.webp>
 
 Maintenant, si on ouvre un onglet de *Navigation privée*, et qu'on revient sur [cette page](https://altoromutual.com) et qu'on essaie de se connecter à cette page :
 ```
@@ -194,7 +194,7 @@ https://altoromutual.com/bank/main.jsp
 ```
 On voit que c'est impossible, car je n'ai pas les droits pour accéder à cette page, comme je ne suis pas identifiée. **MAIS**, si je recopie les cookies de session que j'avais obtenus au début en me connectant, dans les cookies de la page privée, et que j'essaie à nouveau d'accéder à la page administrateur, la magie opère ...
 
-<img src=page_administrateur.png>
+<img src=page_administrateur.webp>
 
 ### Récupérer un ID de session : tentative 2
 
@@ -263,7 +263,7 @@ Au final j'ai navigué sur près de **9 sites**, en revenant sur *Google* entre 
 
 #### Résultats au global 
 
-<img width=350 src=diagramme_cookie_1.png>
+<img width=350 src=diagramme_cookie_1.webp>
 
 Si on regarde les statistiques annoncées par le logiciel sur **ma navigation** :
 
@@ -271,7 +271,7 @@ Si on regarde les statistiques annoncées par le logiciel sur **ma navigation** 
 - Ces cookies échangent potentiellement des informations avec **28 domaines tiers**
 
 Si on se penche maintenant sur **l'usage des cookies**: 
-<img width=350 src=diagramme_usage_cookies_1.png>
+<img width=350 src=diagramme_usage_cookies_1.webp>
 
 {%info%}
 - La **zone orange** indique la couverture de tiers déclarés comme *explicitement publicitaires* dans des fichiers ads.tx ayant déposé des cookies parmi les sites visités.
@@ -289,7 +289,7 @@ On peut voir qu'il y a quand même beaucoup plus de violet que de orange dans ce
 
 #### Résultats au global 
 
-<img width=350 src=diagramme_cookie_2.png>
+<img width=350 src=diagramme_cookie_2.webp>
 
 Si on regarde les statistiques annoncées par le logiciel sur **ma navigation** :
 
@@ -297,7 +297,7 @@ Si on regarde les statistiques annoncées par le logiciel sur **ma navigation** 
 - Ces cookies échangent potentiellement des informations avec **13 domaines tiers**
 
 Si on se penche maintenant sur **l'usage des cookies**: 
-<img width=350 src=diagramme_usage_cookies_2.png>
+<img width=350 src=diagramme_usage_cookies_2.webp>
 
 {%attention "Remarques"%}
 - on passe de 76% à 86% de sites qui ont déposés des cookies en les refusant. *Un résultat qui me semble tout de même drôlement illogique. Même si cette information ne nous renseigne pas sur la réelle nature du cookie...*

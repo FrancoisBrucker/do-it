@@ -376,7 +376,7 @@ Par soucis de temps et afin de construire une maquette fonctionnelle à la fin d
 {% endlien %}
 ### III.1 - Architecture générale
 L'outil sera construit de sorte à limiter le nombre de programmes à utiliser. Cela passera par la mise en place de modèles de type GSheet. Ces différents modèles graviteront autours d'un fichier centrale regroupant les bases de données et les principales fonctionnalités de personnalisation, suivi et modifications. Toutefois, réalisant une V0 de l'outil, nous considérons les collaborateurs regroupés en équipes, elle-mêmes regroupées en services.
- ![Architecture générale](./Architecture%20générale.jpg)
+ ![Architecture générale](./Architecture%20générale.webp)
 
 ### III.2 - Document de suivi général
 Le document de suivi général doit regrouper :
@@ -384,7 +384,7 @@ Le document de suivi général doit regrouper :
 - Les fonctionnalités de création et modification des informations concernant les compétences.
 - Toutes les bases de données.
 Actuellement, ce document comporte les éléments suivants :
-![Fonctions générales](./Fonctions%20générales%20disponibles.png)
+![Fonctions générales](./Fonctions%20générales%20disponibles.webp)
 L'onglet ***New*** correspond, à cet étape du projet, aux fonctionnalités correspondant à la structure.  
 
 {%lien%}
@@ -416,15 +416,15 @@ Une fiche individuelle possède 4 éléments principaux :
 
 Cette séparation en 3 onglets distincts permettra à terme de modifier les compétences métier d'une personne en cas d'évolution de poste, tout en gardant un accès aux compétences plus globales qu'il a acquises (permis, certification, gestion de projet etc...). De plus, réaliser une remise à zéro des compétences métier lors d'un changement de poste poussera le collaborateur et les administrateurs de l'outil à ré-évaluer les compétences déjà détenues par le prisme du nouveau poste.
 
-![Apercçu des compétences](./Apercu%20competences.png)
+![Apercçu des compétences](./Apercu%20competences.webp)
 
 Comme visible sur la figure précédente, une compétence est définie par un N°, un nom et une description. L'utilisateur peut définir un nombre de paliers d'acquisition entre 1 et 5 et visualiser l'avancement.  
 Pour chaque palier, il peut indiquer la date à laquelle il souhaite que le niveau de compétence soit maitrisé, la date à laquelle il est maitrisé ainsi qu'une typologie de preuve d'acquisition (diplôme, certificat ou expérience).
-![Criticite](./Criticite.png)
+![Criticite](./Criticite.webp)
 L'utilisateur peut également saisir une importance et une urgence temporelle pour chaque compétence (Criticité voulue) et vérifier la cohérence des choix des objectifs définis par les paliers (Criticité effective). La criticité effective calcul les temps restant pour l'acquisition des différents niveaux de compétences, et définis l'ugence temporelle porportionnellement à l'écart entre l'échéance la plus courte et l'échéance la plus longue.
 
 Pour se faire, il a été nécessaire de créer des onglets "Back-end", pour réaliser les opérations permettant le calcul évoqué précédemment.
-![Back-end](./Back%20end%20indivi.png)
+![Back-end](./Back%20end%20indivi.webp)
 A terme, il faudra envisager de cacher les feuilles de back-end afin de s'assurer que les utilisateurs ne les modifient pas.
 
 ### IV.3 - Fonctionnalités

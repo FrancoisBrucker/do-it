@@ -40,7 +40,7 @@ Avant d'aborder le sujet, il est important de définir les termes clés.
 
 - **Stratégie :**
   La stratégie peut être définie comme l'ensemble des activités qui renforcent la position concurrentielle de l'entreprise qui entreprend de telles actions, englobant la planification, la surveillance et l'exécution d'opérations préalablement planifiées
-  <img style="float: right;" src="strategie.png" width="200" height="100">
+  <img style="float: right;" src="strategie.webp" width="200" height="100">
   <br/>
 
 - **Stratégie d'entreprise :**
@@ -49,7 +49,7 @@ Avant d'aborder le sujet, il est important de définir les termes clés.
 
 - **Technologies de l'information (TI) :**
   Les technologies de l'information peuvent être définies comme la somme totale de tous les investissements qu'une entreprise a réalisés dans des actifs tels que le matériel informatique, l'informatique, les logiciels, la technologie de communication et les télécommunications
-  <img style="float: right;" src="strategie IT.png" width="200" height="100">
+  <img style="float: right;" src="strategie IT.webp" width="200" height="100">
   <br/><br/>
 
 - **Stratégie IT :**
@@ -58,7 +58,7 @@ Avant d'aborder le sujet, il est important de définir les termes clés.
 
 - **Allignement :**
   L'alignement est le degré auquel les objectifs et la mission présents dans la stratégie d'entreprise sont partagés et renforcés par la stratégie IT
-  <img src="allignement.png" width="700" height="550">
+  <img src="allignement.webp" width="700" height="550">
   <br/>
 
 ### Objectifs et rôles de la stratégie IT <a id="subsection-2"></a>
@@ -79,7 +79,7 @@ La prise de décision dans le cadre du développement de la stratégie informati
 
 L'analyse SWOT (Strengths, Weaknesses, Opportunities, Threats) permet d'évaluer les forces et les faiblesses internes d'une organisation, ainsi que les opportunités et les menaces externes. Elle fournit un cadre structuré pour la prise de décision en mettant en évidence les domaines qui doivent être améliorés ou dans lesquels des avantages stratégiques peuvent être exploités.
 :-------------------------:|:-------------------------:
-<img src="Swot1.png" width="350" height="350"> | <img src="Swot2.png" width="350" height="350">
+<img src="Swot1.webp" width="350" height="350"> | <img src="Swot2.webp" width="350" height="350">
 
 ### Analyse Coût-Avantage(CBA) <a id="subsection-5"></a>
 
@@ -116,10 +116,10 @@ CBA est une technique quantitative utilisée pour évaluer les coûts et les bé
 L'évaluation des risques en informatique implique un processus systématique d'identification, d'analyse et de priorisation des risques potentiels susceptibles d'affecter le succès des projets informatiques, des initiatives ou des stratégies. Ces risques peuvent englober un large éventail de facteurs, notamment technologiques, opérationnels, financiers, réglementaires, voire humains. L'objectif principal de l'évaluation des risques est de comprendre l'impact potentiel de ces risques et de développer des stratégies pour les atténuer ou les gérer efficacement.
 
 Les éléments clés de l'évaluation des risques comprennent plusieurs étapes cruciales. Tout d'abord, l'**identification des risques** consiste à recenser tous les risques potentiels liés à un projet ou à une stratégie informatique, ce qui nécessite souvent des sessions de brainstorming, des entretiens avec les parties prenantes et une analyse approfondie de la documentation du projet. Parmi les risques informatiques courants figurent les pannes matérielles ou logicielles, les violations de la sécurité, les dépassements de budget, les déviations par rapport au périmètre initial du projet et les modifications des exigences réglementaires. Ensuite, l'analyse des risques **évalue leur probabilité et leur impact potentiel**, en quantifiant le niveau de risque en prenant en compte des facteurs tels que la probabilité, la gravité et les conséquences possibles. Cette étape permet de hiérarchiser les risques en fonction de leur impact sur la réussite du projet.
-<img src="likelihood.png" width="450" height="350">
+<img src="likelihood.webp" width="450" height="350">
 
 Une fois les risques analysés, ils sont généralement **classés en fonction de leur priorité**, souvent à l'aide de matrices de risques ou de cartes thermiques, qui offrent une vue visuelle de la probabilité et de l'impact de chaque risque. Les risques sont ainsi catégorisés comme étant de faible, moyenne ou haute priorité en fonction de ces évaluations.
-<img src="risk-heat-map.png" width="300" height="300">
+<img src="risk-heat-map.webp" width="300" height="300">
 
 ## Conclusion <a id="section-4"></a>
 

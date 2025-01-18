@@ -87,7 +87,7 @@ Si le serveur ne répond pas au message ICMP ECHO_REQUEST, la machine n'est pas 
 
 On lance la capture de paquets. Avec la commande `ping google.com` :
 
-![Capture ICMP](capture_icmp.png)
+![Capture ICMP](capture_icmp.webp)
 
 Pour trouver les paquets en question, on peut utiliser des filtres. Je vous renvoie à [cette vidéo](https://www.youtube.com/watch?v=aEss3CG49iI&ab_channel=DavidBombal) pour avoir plus de détails. Par exemple, on peut filtrer avec :
 
@@ -134,7 +134,7 @@ Une fois que le 3-way handshake est terminé, les deux systèmes peuvent commenc
 
 On lance la capture de paquets. Avec la commande `curl google.com` :
 
-![capture_tcp](capture_tcp.png)
+![capture_tcp](capture_tcp.webp)
 
 Pour avoir la capture en question, on peut appliquer le filtre `http`. Ensuite, [clique droit > follow TCP stream] sur le paquet.
 
@@ -153,7 +153,7 @@ Les trois premiers paquets correspondent à l'établissement de la connexion : S
 {%details 'Réponse' %} 
  `nmap -sT 192.168.1.1`
  En regardant paquet par paquet, c'est difficile à remarquer... Chaque paquet TCP est normal et comporte toutes les options classiques d'un paquet TCP. Le comportement global est cependant étrange (SYN, SYN-ACK, ACK, RST-ACK), on établit une connection pour la fermer brutalement ensuite (flag RESET : "Le bit de réinitialisation a été prévu pour des situations comme celle où un ordinateur A « plante » ou est éteint alors qu'une connexion TCP était en cours avec un ordinateur B." [wikipedia](https://fr.wikipedia.org/wiki/Attaque_TCP_reset)). On aurait pu aussi préciser le port pour éviter de tout scanner et d'éveiller les soupçons. Finalement, on comprend facilement qu'un scan comme ça est facile à détecter par les IDS.
- ![capture nmap full tcp](capture_nmap_full_tcp.png)
+ ![capture nmap full tcp](capture_nmap_full_tcp.webp)
  {%enddetails%}
 
 #### SYN ("stealth") scan
@@ -163,7 +163,7 @@ Les trois premiers paquets correspondent à l'établissement de la connexion : S
 {%details 'Réponse' %}
  `sudo nmap -sS 192.168.1.1`
  Si on a réussi à établir une connexion, on a ceci dans wireshark :
- ![capture syn scan](capture_nmap_syn_scan.png)
+ ![capture syn scan](capture_nmap_syn_scan.webp)
  On voit que le client envoie un SYN, le server revoie un SYN-ACK pour établir une connexion TCP, et ensuite... plus de réponse. Le serveur retransmet alors son SYN-ACK, en supposant qu'il n'a pas été reçu, et recommence toutes les `~ 2 * delta`.
  Le SYN scan envoie un paquet SYN et attend un SYN-ACK en retour, mais ne renvoie pas de ACK au serveur. Il est donc normal d'avoir ce genre de stream. Mais du point de vue du serveur, c'est difficile à détecter, car tout se passe comme si le paquet réponse s'était perdu en chemin (d'où la retransmission).
  Cependant, en regardant attentivement, on voit que le premier SYN envoyé par le client n'est pas identique à ceux de tout à l'heure. Et oui, regardez dans les options TCP... que 4 octets. C'est très étrange, normalement un paquet TCP SYN a au moins une vingtaine d'octets d'options. Finalement, On voit qu'un *stealth scan* n'est pas si *stealth* que ça...

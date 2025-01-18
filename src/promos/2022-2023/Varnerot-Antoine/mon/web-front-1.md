@@ -64,7 +64,7 @@ Pour visualiser son site, il faut le lancer sur un serveur. Dans un terminal ouv
 `ng new mon-projet`
 Ensuite rendez-vous à l'adresse http://localhost:4200/ et ceci devrait s'afficher :
 <figure>
-  <img src="../assets/Angular-init.png">
+  <img src="../assets/Angular-init.webp">
   <figcaption>Application Angular basique</figcaption>
 </figure>
 C'est la page qu'Angular génère de base quand on crée un projet.
@@ -75,7 +75,7 @@ C'est la page qu'Angular génère de base quand on crée un projet.
 Angular, comme plusieurs autres framework JS, fonctionne grâce à des <i>components</i> (composants en français). Ce sont des blocs qui vont constituer une page web. Par exemple sur le site https://francoisbrucker.github.io/cours_informatique/cours/ on pourrait identifier plusieurs components :
 
 <figure> 
-  <img src="../assets/ComponentsExplication.png">
+  <img src="../assets/ComponentsExplication.webp">
   <figcaption>Exemple de découpage d'une page web en composant</figcaption>
 </figure>
 Ces composants permettent d'organiser le code et de gagner du temps. En effet, en découpant le code en petits morceaux qui s'occupent seulement d'une fonction, on s'y retrouve plus facilement. De plus, les composants sont réutilisables.
@@ -103,7 +103,7 @@ En se baladant dans le fichier Typescript, on remarque que pour faire appel à l
 On peut alors essayer de l'implémenter dans notre MON. Pour cela, on place cette balise à la place de tout ce qu'il y a dans app.component.html. Sur notre page locale, on peut ainsi voir ceci : 
 
 <figure> 
-  <img src="../assets/navbarWorks.png">
+  <img src="../assets/navbarWorks.webp">
   <figcaption>Implémentation d'un componenent</figcaption>
 </figure>
 
@@ -231,7 +231,7 @@ ngOnInit(): void {
     techs: ["Angular", "PHP"],
     description: "Un petit projet avec Angular",
     keyword: [""],
-    image: "monImage.png"
+    image: "monImage.webp"
   } 
   this.project2 = 
   {
@@ -271,7 +271,7 @@ ngOnInit(): void {
       techs: ["Angular", "PHP"],
       description: "Un petit projet avec Angular",
       keyword: [""],
-      image: "monImage.png",
+      image: "monImage.webp",
     },
     {
       title: "Projet 2",

@@ -34,7 +34,7 @@ Find The Key est un jeu que j'ai développé durant mon S7. Le but est de trouve
 
 **Find The Key** est un jeu que j'ai développé durant mon S7. Le but est de trouver la clé placée aléatoirement sur un plateau puis de la ramener à la base en évitant les monstres.
 
-![Image Find The Key](FindTheKey.png)
+![Image Find The Key](FindTheKey.webp)
 
 Find The Key a été d'abord designé à l'aide du logiciel de maquettage Adobe XD. J'ai ensuite utilisé un plugin pour transformer ce design en fichiers HTML et CSS. J'ai enfin dû adapter ces fichiers afin de les rendres utilisables pour communiquer avec le fichier JavaScript devant gérer le jeu.
 
@@ -56,7 +56,7 @@ Mes objectifs à l'occasion de ce POK sont les suivants :
 
 N'ayant pas les compétences nécessaires au développement full stack, j'ai décidé de consacrer mes MON à l'apprentissage du développement full stack et de me concentrer uniquement sur la refonte du **front pour le temps 1**. Le **temps 2** sera consacré à l'**implémentation du back**.
 
-![Planning](planning.png)
+![Planning](planning.webp)
 
 - **Temps 1**
   - ~~Régler le problème de police~~ *(fait)*
@@ -79,7 +79,7 @@ N'ayant pas les compétences nécessaires au développement full stack, j'ai dé
 
 ### Ajout de la police d'écriture au site
 
-![Problème police](police.png)
+![Problème police](police.webp)
 
 Lors de la création de mon site, j'avais oublié d'importer la police d'écriture que j'utilisais. Résultat : une application toute moche lors de la présentation (qui ne fonctionnait d'ailleurs plus, voir la partie suivante).
 
@@ -95,7 +95,7 @@ Voici un exemple de code pour importer la police **Barlow**, la fière police de
 
 ### Résolution des problèmes de compatibilité
 
-![Bug Firefox](firefox.png)
+![Bug Firefox](firefox.webp)
 
 Afin de résoudre les problèmes de compatibilité rencontrés, j'ai tenté de débugger mon code dans Firefox afin d'identifier ce qui n'allait pas. J'ai découvert qu'**une ligne de code CSS n'était pas exécutée par le navigateur Firefox alors qu'elle l'était sur Chrome**, ce qui créait ce problème sur un navigateur et pas l'autre.
 
@@ -103,7 +103,7 @@ Afin de résoudre les problèmes de compatibilité rencontrés, j'ai tenté de d
 
 ### Refonte du CSS
 
-![Structure de la refonte responsive du code](css.png)
+![Structure de la refonte responsive du code](css.webp)
 
 L'un des objectifs principaux de ce POK était également de **traiter la responsivité du site**. En effet, le site initial étant été généré à partir d'une maquette Adobe XD aux dimensiosn fixes, il n'est pas responsive, c'est à dire qu'il ne s'adapte pas selon à la taille de l'écran de l'utilisateur. Cela rend l'**utilisation de l'application impossible sur un petit écran**.
 

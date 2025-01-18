@@ -228,7 +228,7 @@ Fonctionnalités :
 
 Voici le <strong>GANTT</strong> des tâches à réaliser afin de compléter notre projet, réparti en <strong>sprints</strong> tout au long de l'année. L'enjeu a donc été d'évaluer la durée de chaque tâche ainsi que les moyens techniques à mettre en œuvre afin d'atteindre nos objectifs.
 
-<img src="planning.png">
+<img src="planning.webp">
 
 ### Maquettes
 
@@ -238,14 +238,14 @@ Cette section regroupe donc <strong>les premiers designs et maquettes réalisés
 
 L'intérêt de cette maquette est de mettre à plat les idées et les contraintes de charte graphique et de choisir la disposition d'ensemble du site.
 
-<img src="canva_site_1.png">
-<img src="canva_site_2.png">
+<img src="canva_site_1.webp">
+<img src="canva_site_2.webp">
 
 **Minimum Viable Project - Figma**
 
 Au travers des différents outils que propose Figma nous avons voulu construire <strong>la structure et les fonctionnalités du site web.</strong> De plus, cette maquette nous a permis de réaliser les différents tests pour vérifier que notre interface est intuitive.
 
-<img src="figma.png">
+<img src="figma.webp">
 
 Voici par exemple le parcours utilisateur d'un élève :
 
@@ -257,8 +257,8 @@ Voici par exemple le parcours utilisateur d'un élève :
 
 Suite à cette première maquette, nous l'avions révisé pendant le cours d'UI. Cela nous a donc mené à ce design général sur lequel on s'appuiera lors du développement : 
 
-<img src="canva2.png">
-<img src="canva2-1.png">
+<img src="canva2.webp">
+<img src="canva2-1.webp">
 
 ## Développement
 
@@ -303,22 +303,22 @@ Nous avons un site qui fonctionne en <strong>local</strong> avec un système d'a
 
 Voici les différentes pages : 
 
-<img src="auth.png">
-<img src="carte.png">
+<img src="auth.webp">
+<img src="carte.webp">
 
-<img src="FAQ.png">
-<img src="apropos.png">
+<img src="FAQ.webp">
+<img src="apropos.webp">
 
-<img src="form.png">
-<img src="form2.png">
-<img src="form3.png">
+<img src="form.webp">
+<img src="form2.webp">
+<img src="form3.webp">
 
 
-<img src="form4.png">
-<img src="form5.png">
-<img src="form6.png">
+<img src="form4.webp">
+<img src="form5.webp">
+<img src="form6.webp">
 
-<img src="infomodif.png">
+<img src="infomodif.webp">
 
 ### Ecarts 
 

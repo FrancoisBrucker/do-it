@@ -46,7 +46,7 @@ Voir le [MON de Gabriel](https://francoisbrucker.github.io/do-it/mon/GB/Mons/Bus
 
 On utilise le business model canva :
 
-<img src="BModel.png">
+<img src="BModel.webp">
 
 
 
@@ -106,7 +106,7 @@ Les produits loués seront les suivants :
 
 Contexte: 
 En France,le marché de l’habit enfants représente 5 milliards d’euros de chiffre d’affaire chaque année.
-<img src="chiffres.png">
+<img src="chiffres.webp">
 Le marché des vêtements enfants s'impose de lui-même, puisque les parents sont obligés de s'adapter à la croissance de leurs enfants et donc de renouveler plus fréquemment les vêtements. La taille du marché est fluctuante, suivant une baisse globale induite par la diminution du taux de natalité en France. C’est un marché  très concurrentiel. Le marché de l'occasion est en plein essor sur ce segment, car la perception des articles résiliés a changé dans l'opinion des clients. 
 L'attention portée à la durabilité, à l'éthique et à l'environnement a révolutionné la façon dont les clients perçoivent et choisissent les marques : l'industrie de la mode a donc évolué ces dernières années pour s'adapter à la nouvelle tendance durable. 
 
@@ -124,7 +124,7 @@ https://www.businesscoot.com/fr/etude/le-marche-des-vetements-pour-bebes-france
 
 Concurrence: 
 
-<img src="tbl_conccu.png">
+<img src="tbl_conccu.webp">
 
 
 On observe que les sites proposant la location proposent aussi souvent la vente. Les pièces proposées sont simples, surement ce qui permet d’avoir des prix très bas. (environ 5€/moi la pièce).
@@ -169,7 +169,7 @@ Année 3 : Etude de marché afin d’éventuellement ouvrir une boutique physiq
 
 
 - *Gestion des risques:*
-<img src="tbl_risque.png">
+<img src="tbl_risque.webp">
 
 **Partie financière du business plan:**
 
@@ -180,7 +180,7 @@ L'entreprise sera dans un premier temps gérée par moi seule. Elle sera financ�
 Pour fonctionner il faudra un local et un site internet. La création du site web sera externalisée
 Voici un tableau qui récapitule les différents investissements de départ ainsi que les différentes charges
 
-<img src="tbl_invest.png">
+<img src="tbl_invest.webp">
 
 
 Je n’ai pas inclus de dotation aux amortissements dans mes bilan. Le fait que les habits s’abiment est pris en compte dans les 500€ mensuels dédiés au rachat de nouvelles pièces.
@@ -189,7 +189,7 @@ envoi et retour : payés par le consommateur
 
 - *Bilan prévisionnel :*
 
-<img src="tbl_bilan.png">
+<img src="tbl_bilan.webp">
 
 - *Chiffre d'affaires prévisionnel :*
 Equivalent de 50 pièces/jours louées, à environ 8 euros la journée
@@ -198,14 +198,14 @@ CA annuel prévu de 12 400 x 12= 148 800 €
 
 - *Résultat prévisionnel :*
 
-<img src="tbl_resultat.png">
+<img src="tbl_resultat.webp">
 
 - *Plan de trésorerie:*
-<img src="tbl_tres.png">
+<img src="tbl_tres.webp">
 
 - *seuil de rentabilité :*
 
-<img src="tbl_seuil.png">
+<img src="tbl_seuil.webp">
 
 **Partie juridique du business plan**
 
@@ -264,7 +264,7 @@ Maintenant que nous avons définit nos partenariats, il faut s’attaquer à la 
  Une modélisation des flux nous permet d’éclairer le sujet : 
 
 
- <img src ="flux.png">
+ <img src ="flux.webp">
 
  Lorsque l’article est renvoyé, il passe par la case nettoyage. Ensuite, il y a 3 cas de figures :
 - le vêtement n’est plus utilisable car trop abimé. Il sera recyclé
@@ -273,7 +273,7 @@ Maintenant que nous avons définit nos partenariats, il faut s’attaquer à la 
 
 Ce genre d’échange nécessite une communication efficace et rapide avec les partenaires. Voici les différents flux d’informations :
 
- <img src ="flux.info.png">
+ <img src ="flux.info.webp">
 
  Les défis de cette chaine d’approvisionnement sont les suivants :
     1.  Optimiser le réseau de points de stockage
@@ -374,20 +374,20 @@ https://www.rentle.io/blog/rental-business/inventory-metrics
 
 **Exemple Produit**
 
-<img src="ex_produit.png">
+<img src="ex_produit.webp">
 
 J'ai indiqué une baisse du prix après un certain nombre de réparation ou utilisation. Je ne suis pas encore sûre de comment mettre en place ce système. Cependant je pense qu'on pourrait louer à des prix réduits les pièces un peu plus usées (cela permettra de diversifier l'offre).
 
 Voici une constitution type pour mon stock de départ:
 
-<img src="nb_prod.png">
+<img src="nb_prod.webp">
 
 J'ai essayé de faire un stock équilibré et logique. Par exemple moins de pièces en grand froid pour les plus jeunes car on peut supposer que les parents évitent les vacances au skii avec les tout petits.
 
 
 Voici un tableau type pourles prix de location des produits:
 
-<img src="prix.png">
+<img src="prix.webp">
 
 Attention, le prix d'achat indiqué est celui de notre entreprise. Il sera surement différent des prix de base affichés par les vendeurs de vêtements car pour rappel le but est de faire des partenariats avec les vendeurs (et ainsi obtenir des réductions).
 

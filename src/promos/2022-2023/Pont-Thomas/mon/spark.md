@@ -56,7 +56,7 @@ Les différentes étapes sont les suivantes :
 
 Tout ceci peut être résumé par le schéma suivant :
 
-![Schéma du MapReduce](../image/Schéma.jpg "Schéma explicatif MapReduce")
+![Schéma du MapReduce](../image/Schéma.webp "Schéma explicatif MapReduce")
 *Source : Openclassrooms*
 
 ### Exemples
@@ -122,7 +122,7 @@ Le framework **Hadoop** permet ceci. Celui-ci est composé d'un **système de fi
 
 Globalement, l'utilisateur peut déposer des fichiers qui sont découpés sur des Datas Node. Toutes les informations sont dupliqués pour faire face aux potentielles pannes. Il peut ensuite donner le travail à effectuer au job tracker. Celui-ci communique avec le name node pour savoir où sont les données et pouvoir lancer les calculs de la manière la plus efficace possible. Tous les résultats sont sauvegardés au fur et à mesure.
 
-![Schéma de Hadoop](../image/Schéma2.jpg "Schéma explicatif Hadoop")
+![Schéma de Hadoop](../image/Schéma2.webp "Schéma explicatif Hadoop")
 *Source : Openclassrooms*
 
 Ainsi l'utilisateur a juste à déposer ses données et à écrire les fonctions Map et Reduce.

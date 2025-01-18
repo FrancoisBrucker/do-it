@@ -211,7 +211,7 @@ Toutefois, cette synergie semble nuancée lorsque l'on pousse l'analyse en se pe
 
 À l'opposé, **au niveau opérationnel, l'I4.0 soutient le LSCM car il améliore ses pratiques.** On peut notamment mentionner l'amélioration des techniques lean tel que l'outil 5S en MSP (Maitrîse Statistiques des Procédés) ou en Total Productive Maintenance (TPM) par les technologies de l'I4.0.
 
-![Synergie Lean et I4.0](Lean&I4.0.png)
+![Synergie Lean et I4.0](Lean&I4.0.webp)
 
 **En résumé, au niveau stratégique la LSCM stimule l'intégration durable de l'I4.0 en tenant compte de la diversification des demandes clients alors qu'au niveau opérationnel l'I4.0 améliore les performances de la LSCM en permettant l'accès à un flux continu en temps réel de l'information grâce aux technologies de CloudChain, Big Data, réalité augmentée, Blockchain...**
 
@@ -294,7 +294,7 @@ Pourtant, une **gestion appropriée** de ces risques peut contribuer à renforce
 - les risques liés à la sécurité et à la confidentialité des données peuvent résulter de **violations des accords de sécurité et de confidentialité** par les partenaires de la Supply Chain ou les employés. L'**absence de clarté** concernant la propriété des données peut rendre difficile l'application des lois sur la propriété intellectuelle traditionnelles. De plus, le turnover des employés peut entraîner une incertitude quant à la **propriété des droits** sur le savoir-faire agrégé et les données techniques, ce qui peut également poser des risques. Les partenaires de la SC peuvent extraire des connaissances concurrentielles à partir des données partagées, ce qui soulève des questions juridiques sur l'**utilisation non intentionnelle des données partagées**. Ces défis légaux peuvent conduire à la divulgation non voulue de connaissances concurrentielles, ce qui représente un défi juridique supplémentaire, notamment en ce qui concerne la protection de la propriété intellectuelle (PI).
 - *Les contre-mesures juridiques comprennent* la gestion des **contrats** intégrée dans le réseau de la SC, l'utilisation de contrats de non-divulgation et l'adoption de **mesures formelles et informelles** de protection, telles que les secrets commerciaux, la protection par le droit d'auteur ou les brevets. En résumé, il est essentiel d'élaborer des **contrats formels et des accords de non-divulgation adaptés** aux collaborations centrées sur les données afin de prévenir les risques juridiques associés à l'échange de données au sein de la Supply Chain numérique.
 
-![Challenges et contre-mesures](challenges-countermeasures.png)
+![Challenges et contre-mesures](challenges-countermeasures.webp)
 
 (1) more and more comprehensive data sets are exchanged
 (2) the IT penetration and the dependency on IT systems increased

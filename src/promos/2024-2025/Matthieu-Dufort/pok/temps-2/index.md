@@ -17,7 +17,7 @@ résumé: Un POK ayant pour objectif d'apprendre le langage C.
 
 {% prerequis %}
 
-Pas de prérequis particuliers sont nécessaires mais il peut être intéressant de lire le MON de Cassandra en complément.
+Aucun prérequis particulier n'est nécessaire, mais il peut être intéressant de lire le MON de Cassandra en complément.
 
 {% endprerequis %}
 {% lien %}
@@ -29,28 +29,28 @@ Pas de prérequis particuliers sont nécessaires mais il peut être intéressant
 
 {% endlien %}
 
-Pour ce POK, j'ai décidé d'apprendre un nouveau langage afin d'élargir mes compétences en développement avec un langage un peu moins intuitif que python. Je vais me former sur l'utilisation du langage C. Pour cela je vais partir de la documentation et construire ensuite dans un second temps un petit projet (probablement un morpion ou un mini jeu de ce genre) afin de le prendre un peu plus en main.
+Pour ce POK, j'ai décidé d'apprendre un nouveau langage afin d'élargir mes compétences en développement avec un langage un peu moins intuitif que Python. Je vais me former sur l'utilisation du langage C. Pour cela, je vais partir de la documentation et construire ensuite, dans un second temps, un petit projet (probablement un morpion ou un mini-jeu de ce genre) afin de mieux le prendre en main.
 
 ## Tâches
 
-- Regarder les MON et POK traitant du sujet afin de trouver un bon moyen d'apprendre
-- Suivre un cours pour avoir des bases sur ce langage
-- Construire des programmes pour apprendre
-- Construire un mini jeu pour prendre en main le langage
+- Regarder les MON et POK traitant du sujet afin de trouver un bon moyen d'apprendre.
+- Suivre un cours pour acquérir des bases sur ce langage.
+- Construire des programmes pour apprendre.
+- Construire un mini-jeu pour prendre en main le langage.
 
 ### Sprints
 
-Le but final de ce POK et de parvenir a comprendre du code en C et d'être capable d'écrire des programmes simples.
+Le but final de ce POK est de parvenir à comprendre du code en C et d'être capable d'écrire des programmes simples.
 
 #### Sprint 1
 
-- [x] Se renseigner sur les anciens POK et MON dessus
-- [x] Trouver un cours à suivre
+- [x] Se renseigner sur les anciens POK et MON traitant du sujet
+- [x] Choisir un cours/formation à suivre
 - [x] Suivre le cours pour monter en compétence
 
 #### Sprint 2
 
-- [X] Réaliser un mini projet par moi même
+- [X] Réaliser un mini projet par moi même en langage C.
 
 ### Horodatage
 
@@ -69,13 +69,13 @@ Le but final de ce POK et de parvenir a comprendre du code en C et d'être capab
 
 ## Premier Sprint
 
-Après avoir fait l'inventaire des POK et MON traitant du langage C : j'ai choisi de suivre le cours d'open ClassRoom qui est fortement recommandé par Cassandra et qui lui a permis d'acquérir de bonnes bases. Je vais essayer de compléter son MON en abordant d'autres points du langage C. Je recommande donc au futur personne voulant apprendre ce langage de lire aussi son [MON](https://francoisbrucker.github.io/do-it/promos/2023-2024/Ledins-Cassandra/mon/temps-1.2/).
+Après avoir fait l'inventaire des POK et MON traitant du langage C, j'ai choisi de suivre le cours d'OpenClassrooms qui est fortement recommandé par Cassandra et qui lui a permis d'acquérir de bonnes bases. Je vais essayer de compléter son MON en abordant d'autres points du langage C. Je recommande donc aux futures personnes voulant apprendre ce langage de lire aussi son [MON](https://francoisbrucker.github.io/do-it/promos/2023-2024/Ledins-Cassandra/mon/temps-1.2/).
 
 ## Ecrire du C avec VSCode
 
-J'ai décidé de travailler, comme toujours, avec VSCode et j'ai donc installé une extension spéciale pour le C afin de faire la compilation et de débugger (+ pouvoir écrire avec un style adapté : couleurs etc.). Je recommande donc : [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools). Cependant, elle n'a vite plus marché (pour la compilation) dès que j'ai réparti mon code sur plusieurs fichiers. J'ai du ensuite compiler à chaque fois avec le terminal de commande en compilant chaque fichier .c en objet .o puis en compilant ensemble les objets en .exe.
+J'ai décidé de travailler, comme toujours, avec VSCode et j'ai donc installé une extension spéciale pour le C afin de faire la compilation et de déboguer (+ pouvoir écrire avec un style adapté : couleurs, etc.). Je recommande donc : [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools). Cependant, elle n'a vite plus marché (pour la compilation) dès que j'ai réparti mon code sur plusieurs fichiers. J'ai dû ensuite compiler à chaque fois avec le terminal de commande en compilant chaque fichier .c en objet .o, puis en compilant ensemble les objets en .exe.
 
-Pour la compilation, il est nécessaire aussi d'installer un compilateur, j'ai choisi [MinGW](https://sourceforge.net/projects/mingw/) et de rentrer ensuite son path dans l'ordinateur et dans les options de l'extension de VSCode pour pouvoir l'utiliser.
+Pour la compilation, il est nécessaire aussi d'installer un compilateur, j'ai choisi [MinGW](https://sourceforge.net/projects/mingw/) et de rentrer ensuite son chemin (path) dans l'ordinateur et dans les options de l'extension de VSCode pour pouvoir l'utiliser.
 
 {% details "Utiliser le compilateur installé" %}
 
@@ -96,7 +96,7 @@ Ceci fonctionne sur windows (en tout cas sur le mien 🙂)
 
 {% enddetails %}
 
-J'ai du perdre environ 2h la dessus le temps de configurer VS Code puis mon ordinateur n'ayant jamais vraiment utiliser avant un langage nécessitant une compilation avant d'être lancé. Une fois que tout marchait avec l'extension de VS Code, j'ai de nouveau eu des soucis 3h après quand j'ai utilisé plusieurs fichier. Finalement je n'ai plus pu l'utiliser (ne me demandez pas pourquoi, je ne sais toujours pas) et je suis passé directement par des lignes de code dans le terminal pour compiler avec :
+J'ai dû perdre environ 2 heures là-dessus, le temps de configurer VS Code et mon ordinateur, n'ayant jamais vraiment utilisé auparavant un langage nécessitant une compilation avant d'être lancé. Une fois que tout marchait avec l'extension de VS Code, j'ai de nouveau rencontré des soucis 3 heures après lorsque j'ai utilisé plusieurs fichiers. Finalement, je n'ai plus pu l'utiliser (ne me demandez pas pourquoi, je ne sais toujours pas), et je suis passé directement par des lignes de code dans le terminal pour compiler avec :
 
 ```
 > gcc -c main.c -o main.o
@@ -110,7 +110,7 @@ Finalement, j'ai enfin pu  me concentrer sur le code en parvenant a compiler les
 
 ### Introduction de variable et fonction
 
-Le langage C est plus proche en écriture du Java que du python. C'est un langage ou il faut annoncer le type de chaque variable et de chaque fonction.
+Le langage C est plus proche en écriture de Java que de Python. C'est un langage où il faut déclarer le type de chaque variable et de chaque fonction.
 
 ```C
 int variable ; //Variable pour un entier
@@ -126,12 +126,12 @@ Il faut mettre un point virgule à la fin de chaque ligne d'instruction.
 
 {% endnote %}
 
-Voici les plages d'utilisation maximum de chacun des types étant du à l'espace de mémoire accordé :
-![test](typeLangageC.png)*Tableau des tailles de chiffres possible en fonction du type, Openclassroom*
+Voici les plages d'utilisation maximales de chacun des types, dues à l'espace de mémoire accordé :
+![test](typeLangageC.webp)*Tableau des tailles de chiffres possible en fonction du type, Openclassroom*
 
 ### Calcul
 
-Pour le système de calcul standard, on retrouve les abréviations des autres langages tel que :
+Pour le système de calcul standard, on retrouve les abréviations des autres langages tels que :
 
 ```C
 int variable = 2 ;
@@ -142,16 +142,15 @@ variable *= 4 // multiplie variable par 4
 
 {% info %}
 
-Le nom du langage C++ découle du format de l'incrémentation en C (C=C+1 <=> C++). Ce nom a été choisi pour évoquer l'évolution du langage C mais c'est en réalité deux langages utilisés pour faire des choses différentes.
+Le nom du langage C++ découle du format de l'incrémentation en C (C = C + 1 <=> C++). Ce nom a été choisi pour évoquer l'évolution du langage C, mais en réalité, C++ et C sont deux langages distincts utilisés pour des objectifs différents.
 
 {% endinfo %}
-
 
 ### fonction
 
 Pour une fonction qui ne renvoie rien on utilise l'indicateur *void*.
 
-L'utilisation des fonctions d'affichage dans le terminal est assez différente de ce qui est fait en python ou en Java :
+L'utilisation des fonctions d'affichage dans le terminal est assez différente de ce qui est fait en Python ou en Java :
 
 ```C
 int variable ;
@@ -160,9 +159,9 @@ scanf("%d", &variable);
 printf("Vous avez donnée la valeur %d", variable);
 ```
 
-Ceci permet de demander la valeur puis d'afficher ce que l'utilisateur à écrit. on référence les variables dans l'affichage avec le % suivi du type de variable comme le tableau ci-joint :
+Ceci permet de demander la valeur puis d'afficher ce que l'utilisateur a écrit. On référence les variables dans l'affichage avec le % suivi du type de variable comme le tableau ci-joint :
 
-![test](AffichageEnC.png)*Tableau des format en fonction du type, Openclassroom*
+![test](AffichageEnC.webp)*Tableau des format en fonction du type, Openclassroom*
 
 On peut rajouter le type **%s** pour les chaines de caractères ou **%c** pour un type char.
 
@@ -170,13 +169,13 @@ On peut rajouter le type **%s** pour les chaines de caractères ou **%c** pour u
 
 ### Fonctionnement de la mémoire système
 
-Le cours d'openclassroom m'a permis d'apprendre beaucoup sur le fonctionnement de la mémoire.
+Le cours d'OpenClassrooms m'a permis d'apprendre beaucoup sur le fonctionnement de la mémoire.
 
 Elle fonctionne sous forme de tableau avec une colonne contenant les adresses (des numéros de 1 à X) et une colonne associée contenant les espaces de stockage.
 
-Lorsque l'on définit une variable, on demande à l'ordinateur un espace de stockage et on le réserve pour la valeur de la variable. On peut réserver cet espace en le laissant vide ou en l'initialisant directement avec une valeur mais dans tous les cas, l'espace est reservé dès la ligne de création de variable.
+Lorsque l'on définit une variable, on demande à l'ordinateur un espace de stockage et on le réserve pour la valeur de la variable. On peut réserver cet espace en le laissant vide ou en l'initialisant directement avec une valeur, mais dans tous les cas, l'espace est réservé dès la ligne de création de la variable.
 
-En C, il y a beaucoup de manipulation qui découle de ce fonctionnement. Le système de définition de variable en est un exemple :
+En C, il y a beaucoup de manipulations qui découlent de ce fonctionnement. Le système de définition de variables en est un exemple :
 
 ```C
 int variable;
@@ -189,9 +188,9 @@ Ce fonctionnement permet de définir des pointeurs.
 
 ### Pointeur
 
-Un pointeur conssiste a définir une variable comme étant l'adresse d'une autre variable. Ceci est utilisé pour modifier une variable définie dans une fonction ou dans le main à un autre endroit (autre fonction).
+Un pointeur consiste à définir une variable comme étant l'adresse d'une autre variable. Cela est utilisé pour modifier une variable définie dans une fonction ou dans le main à un autre endroit (autre fonction).
 
-En effet, avec un return à la fin d'une fonction on ne peut modifier qu'une variable mais graçe au pointeur cela n'a plus de limite.
+En effet, avec un return à la fin d'une fonction, on ne peut modifier qu'une seule variable, mais grâce au pointeur, cela n'a plus de limite.
 
 ```C
 int variable;
@@ -201,11 +200,11 @@ printf("%d", pointeur); // affiche l'adresse de stockage de variable
 printf("%d", *pointeur); // affiche la valeur de variable
 ```
 
-C'est en utilisant le *pointeur dans d'autre fonction que l'on peut modifier la variable en dehors de l'endroit ou elle est définie dans avoir besoin de la retourner à la fin de la fonction.
+C'est en utilisant le *pointeur dans d'autres fonctions que l'on peut modifier la variable en dehors de l'endroit où elle est définie, sans avoir besoin de la retourner à la fin de la fonction.
 
 {% details "Bilan Sprint 1" %}
 
-J'ai vraiment bien aimé ce début de pok ou j'ai pu apprendre plein de choses autant sur le fonctionnement général d'un ordianteur que sur le code en C. J'ai découvert de 0 ce langage qui demande beaucoup de rigueur et j'ai bien aimé. J'ai par contre perdu beaucoup trop de temps pour parvenir a faire marcher la compilation du code au début et dès l'utilisation de fichiers multiples. J'espère donc que la première partie de ce compte rendu pourra bien aider les suivants à gagner du temps la dessus. Je n'ai donc pas eu le temps de finir le cours mais j'ai hate de le continuer au prochain sprint pour passer sur du dev de mon coté pour bien appliquer tout ce que j'ai appris.
+J'ai vraiment bien aimé ce début de POK où j'ai pu apprendre plein de choses, autant sur le fonctionnement général d'un ordinateur que sur le code en C. J'ai découvert ce langage depuis zéro, qui demande beaucoup de rigueur, et j'ai bien aimé. J'ai par contre perdu beaucoup trop de temps pour parvenir à faire marcher la compilation du code au début et dès l'utilisation de fichiers multiples. J'espère donc que la première partie de ce compte rendu pourra bien aider les suivants à gagner du temps là-dessus. Je n'ai donc pas eu le temps de finir le cours, mais j'ai hâte de le continuer lors du prochain sprint pour passer sur du développement de mon côté et bien appliquer tout ce que j'ai appris.
 
 {% enddetails %}
 
@@ -255,7 +254,7 @@ typedef struct Coordonnees Coordonnees
 
 {% endnote %}
 
-De la même manière, il est possible de définir une énumération, ce qui reviendrait à définir une liste de choix pour un variable. La variable ne peut alors prendre que les valeurs définies dans l'énumération.
+De la même manière, il est possible de définir une énumération, ce qui revient à définir une liste de choix pour une variable. La variable ne peut alors prendre que les valeurs définies dans l'énumération.
 
 ```C
 enum Status 
@@ -268,11 +267,11 @@ Ces valeurs peuvent être associées à des nombres.
 
 ### Gestion de fichier
 
-Dans cette partie, nous allons travailler sur la gestion de fichiers grâce a la bibliothèque **stdlib** et **stdio**. L'utilisation de fichiers stockés en local dans l'ordinateur permet de conserver les résultats du code après qu'il se soit arrêter.
+Dans cette partie, nous allons travailler sur la gestion de fichiers grâce a la bibliothèque **stdlib** et **stdio**. L'utilisation de fichiers stockés localement dans l'ordinateur permet de conserver les résultats du code après qu'il se soit arrêté.
 
 Il est possible d'ouvrir un fichier de plusieurs façons :
 
-![test](TypeOuvertureFichier.png)*Liste des façons d'ouvrir un fichier possible en C, Openclassroom*
+![test](TypeOuvertureFichier.webp)*Liste des façons d'ouvrir un fichier possible en C, Openclassroom*
 
 Faisons un exercice avec un programme qui recopie des lignes dans un fichier pour nous :
 
@@ -315,7 +314,7 @@ On utilise la fonction *fgets* et non *scanf* pour récupérer une ligne de cara
 
 Attention : la fonction fgets enregistre aussi le saut de ligne créer par la touche entrée lors de la validation de ce que l'on veut écrire.
 
-V*oir la partie suivante pour plus d'explication sur la gestion de la mémoire avec fgets.*
+*Voir la partie suivante pour plus d'explication sur la gestion de la mémoire avec fgets.*
 
 {% endnote %}
 
@@ -327,15 +326,15 @@ Le curseur de lecture ou d'écriture est aussi déplaçable avec la fonction ``f
 
 **Fonctions de demandes d'information à l'utilisateur** :
 
-Lorsque l'on utilise *scanf* ou *fgets*, on demande à l'utilisateur des informations qui seront ensuite stockées sur un espace voulu de taille définie. Les informations sont extraites du buffer, c'est à dire de la zone de mémoire où tout ce qui est tapé sur le clavier est stocké. On y accède avec le pointeur *stdin*.
+Lorsque l'on utilise *scanf* ou *fgets*, on demande à l'utilisateur des informations qui seront ensuite stockées dans un espace de taille définie. Les informations sont extraites du buffer, c'est-à-dire de la zone de mémoire où tout ce qui est tapé sur le clavier est stocké. On y accède avec le pointeur stdin.
 
-*Scanf* est une fonction qui peut créer des soucis de stockage car son fonctionnement consiste à stocker toutes les informations écritent dans le shell et ceci même si l'espace de stockage est trop petit. Si le text écrit est trop grand, la fonction dépace alors son stockage en supprimant ce qui est stocké après pour mettre le texte à la place, ce qui bien sur peut être dangereux pour le programme.
+*scanf* est une fonction qui peut créer des soucis de stockage, car son fonctionnement consiste à stocker toutes les informations écrites dans le shell, même si l'espace de stockage est trop petit. Si le texte écrit est trop grand, la fonction dépasse alors son espace de stockage, en supprimant ce qui est stocké après pour mettre le texte à la place, ce qui, bien sûr, peut être dangereux pour le programme.
 
-*Fgets* se limite bien à la mémoire définie et vide le buffer des caractères qu'elle a lu. Ainsi, si la taille dépasse la mémoire, le buffer aura toutes les informations qui dépassent stockées. Il faut donc penser a bien le vider.
+*fgets* se limite bien à la mémoire définie et vide le buffer des caractères qu'elle a lus. Ainsi, si la taille dépasse la mémoire, le buffer aura toutes les informations qui dépassent stockées. Il faut donc penser à bien le vider.
 
 **Réserver de la mémoire** :
 
-Il est possible de resérver de la place en mémoire à l'aide d'une fonction : ``malloc``. Cette fonction permet de créer par exemple un tableau qui dépend de la taille d'une variable. on peut ainsi poser une question puis réserver de la mémoire en fonction de la réponse :
+Il est possible de réserver de la place en mémoire à l'aide d'une fonction : ``malloc``. Cette fonction permet de créer, par exemple, un tableau qui dépend de la taille d'une variable. On peut ainsi poser une question, puis réserver de la mémoire en fonction de la réponse :
 
 ```C
 int taille = 0;
@@ -352,7 +351,7 @@ On a ainsi un tableau de la taille demandée. Pour libérer cet espace il suffit
 
 **Chaine de caractères** :
 
-Il est impossible de modifier la taille d'un tableau dynamiquement. Cependant, il est possible de faire une chaine qui s'agrandit au fur et a mesure en utilisant les structures :
+Il est impossible de modifier la taille d'un tableau dynamiquement. Cependant, il est possible de créer une chaîne qui s'agrandit au fur et à mesure en utilisant les structures :
 
 ```C
 typedef struct Chaine Chaine
@@ -369,7 +368,7 @@ struct Liste
 }
 ```
 
-Ainsi, avec des structures de cette forme, il est possible de faire une chaine infinie en insérant, supprimant et modifiant les caractères. Il suffit pour cela de bien remplir a chaque fois le pointeur vers l'élement suivant et on optient ainsi une chaine dynamique.
+Ainsi, avec des structures de ce type, il est possible de créer une chaîne infinie en insérant, supprimant et modifiant les caractères. Il suffit pour cela de bien remplir à chaque fois le pointeur vers l'élément suivant, et on obtient ainsi une chaîne dynamique.
 
 ## Création d'un jeu de morpion en C
 
@@ -381,7 +380,7 @@ Pour la réalisation de ce Morpion, j'ai tout d'abord commencé par réfléchir 
 - aux fonctions
 - à la logique
 
-J'ai alors construit le main et le fichier de fonction.h afin de mettre en place précisément la logique pour confirmer que tout allait bien se dérouler. Puis, j'ai construit mes fonctions.
+J'ai alors construit le main et le fichier fonction.h afin de mettre en place précisément la logique pour confirmer que tout allait bien se dérouler. Puis, j'ai construit mes fonctions.
 
 Voici ici le main commenté :
 
@@ -439,7 +438,7 @@ int main(int argc, char *argv[])
 }
 ```
 
-Voici donc la logique de ce jeu de Morpion qui se joue dans le terminal en rentrant les coordonnées de la table (A1, B3, C2 ...) afin de placer ses pions.
+Voici donc la logique de ce jeu de Morpion, qui se joue dans le terminal en rentrant les coordonnées de la table (A1, B3, C2, ...) afin de placer ses pions.
 
 Voici le fonctionnement des différentes fonctions :
 
@@ -453,10 +452,10 @@ Et c'est ainsi que l'on peut rapidement jouer au Morpion une fois que la compila
 
 {% details "Bilan Sprint 2" %}
 
-J'ai beaucoup apprécié continuer ce pok car j'avais hate de finir le cours afin de pouvoir passer à de la pratique en faisant un petit jeu. Mais, j'ai laissé coulé trop de temps entre les deux sprints et j'ai donc eu du mal a me remettre dans le cours. Ceci m'a perdu un peu de temps. Le cours d'openclassroom m'a pris beaucoup plus de temps que le temps indiqué (10h) et j'ai donc dépassé le temps que j'avais prévu dessus. J'ai donc manqué de temps pour optimiser mon morpion qui aurait bien mérité un peu plus de réfléxion.
+J'ai beaucoup apprécié continuer ce POK car j'avais hâte de finir le cours afin de pouvoir passer à de la pratique en faisant un petit jeu. Mais, j'ai laissé trop de temps entre les deux sprints et j'ai donc eu du mal à me remettre dans le cours. Cela m'a fait perdre un peu de temps. Le cours d'OpenClassrooms m'a pris beaucoup plus de temps que celui indiqué (10 h) et j'ai donc dépassé le temps que j'avais prévu dessus. J'ai donc manqué de temps pour optimiser mon morpion, qui aurait bien mérité un peu plus de réflexion.
 
-Dans la globalité, j'ai beaucoup apprécié travailler sur un nouveau langage qui a beaucoup de différences avec ceux que je maitrise plus (python, javascript etc.). La gestion de la mémoire et des pointeurs m'a pris du temps. En écrivant mon code de morpion, je me suis beaucoup emméler entre les pointeurs et les variables. Le C demande beaucoup de rigueur !
+Dans l'ensemble, j'ai beaucoup apprécié travailler sur un nouveau langage qui présente beaucoup de différences avec ceux que je maîtrise davantage (Python, JavaScript, etc.). La gestion de la mémoire et des pointeurs m'a pris du temps. En écrivant mon code de morpion, je me suis beaucoup emmêlé entre les pointeurs et les variables. Le C demande beaucoup de rigueur !
 
-je recommande le cours d'openclassroom aux suivants qui voudront s'aventurer sur le C, en prenant bien le temps de faire des exercices de son coté pour assimiler au lieu de juste le lire.
+Je recommande le cours d'OpenClassrooms aux suivants qui voudront s'aventurer sur le C, en prenant bien le temps de faire des exercices de leur côté pour assimiler, plutôt que de juste le lire.
 
 {% enddetails %}

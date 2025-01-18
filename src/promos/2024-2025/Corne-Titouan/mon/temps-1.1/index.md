@@ -72,13 +72,13 @@ En suivant le tutoriel *["Quick Start"](https://openlayers.org/doc/quickstart.ht
 
 `npm start` pour lancer le projet.
 
-![Initialisation du projet](./img/initialisation.png) *Capture d'écran personnelle (2024)*
+![Initialisation du projet](./img/initialisation.webp) *Capture d'écran personnelle (2024)*
 
 Les trois fichiers qui vont nous intéresser pour la suite sont index.html, style.css et surtout main.js.
 
 A ce stade lorsqu'on lance le projet (`npm start`), un serveur local se lance et la page web suivante apparaît :
 
-![Page web initialisée](./img/cartev0.png) *Capture d'écran personnelle (2024)*
+![Page web initialisée](./img/cartev0.webp) *Capture d'écran personnelle (2024)*
 
 Nous voilà maintenant avec un fond de carte. On peut facilement depuis le javascript ajuster le centre de la carte, et le zoom.
 
@@ -88,7 +88,7 @@ A présent pour prendre en main OpenLayers, j'ai décidé de "jouer" avec les di
 
 Tout d'abord, j'ai centré la carte sur l'Australie et j'ai ajusté le zoom pour avoir une vision du pays entier.
 
-![Carte centrée sur l'Australie](./img/cartev1.png) *Capture d'écran personnelle (2024)*
+![Carte centrée sur l'Australie](./img/cartev1.webp) *Capture d'écran personnelle (2024)*
 
 Pour réaliser cela, il a fallu que je m'intéresse au système de projection. Le fond de carte OSM est en projection Mercator Web (EPSG:3857) qui est la projection standard utilisée pour la cartographie web. C'est cette projection que Google Maps a adopté à partir de 2005. D'autres systèmes de projections peuvent être utilisés en SIG. Pour ma part je me suis également servi le système EPSG:4326, également connu sous le nom de WGS84, qui est un système de coordonnées utilisé dans les systèmes Google Earth et GPS. En effet, il m'a été plus facile de trouver les coordonnées GPS (longitude, latitude) des différentes villes australiennes que j'ai dans un second temps converties en coordonnées Web Mercator.
 
@@ -116,7 +116,7 @@ GeoJson est un format de fichier qui utilise la norme JSON pour représenter des
 
 J'ai modifié le fichier GeoJson pour ajouter des informations personnelles. J'ai par exemple ajouté une propriété booléenne "VISITED" pour les états dans lesquels je suis allé (représentés en vert).
 
-![Australie & ses états](./img/cartev2.png) *Capture d'écran personnelle (2024)*
+![Australie & ses états](./img/cartev2.webp) *Capture d'écran personnelle (2024)*
 
 Pour aller plus loin, j'ai créé mon propre fichier GeoJson reprennant d'autres informations telles que les villes visitées, les hôtes qui m'ont accueilli, etc. Voici une partie du fichier créé :
 
@@ -130,7 +130,7 @@ Pour aller plus loin, j'ai créé mon propre fichier GeoJson reprennant d'autres
           "CITY_NAME": "Sydney",
            "TYPE" : "City",
            "PERIOD": "du 09/09/23 au 12/09/23",
-           "IMG" : "/img/sydney.JPG"
+           "IMG" : "/img/sydney.webp"
         },
         "geometry": {
           "type": "Point",
@@ -143,7 +143,7 @@ Pour aller plus loin, j'ai créé mon propre fichier GeoJson reprennant d'autres
            "TYPE" : "City",
            "HOST" : "Mickey & Steve",
            "PERIOD": "du 25/12/23 au 03/01/24",
-           "IMG" : "/img/bondi.JPG"
+           "IMG" : "/img/bondi.webp"
         },
         "geometry": {
           "type": "Point",
@@ -157,7 +157,7 @@ Pour aller plus loin, j'ai créé mon propre fichier GeoJson reprennant d'autres
           "TYPE" : "City",
           "HOST" : "Fran",
           "PERIOD": "du 09/09/23 au 12/09/23",
-           "IMG" : "/img/melbourne.JPG"
+           "IMG" : "/img/melbourne.webp"
         },
         "geometry": {
           "type": "Point",
@@ -172,7 +172,7 @@ Pour aller plus loin, j'ai créé mon propre fichier GeoJson reprennant d'autres
           "TYPE" : "City",
            "HOST" : "Brook & Mike",
           "PERIOD": "du 19/12/23 au 23/12/23",
-           "IMG" : "/img/lithgow.JPG"
+           "IMG" : "/img/lithgow.webp"
         },
         "geometry": {
           "type": "Point",
@@ -189,11 +189,11 @@ Pour structurer de manière lisible un fichier GeoJson, il est possible d'utilis
 
 J'ai également ajouté du code javascript pour pouvoir afficher des informations concernant les différents éléments affichés de manière dynamique. Voici un appercu de la carte sur laquelle j'ai abouti avec ce MON :
 
-![Australie](./img/cartevf1.png) *Capture d'écran personnelle (2024)*
+![Australie](./img/cartevf1.webp) *Capture d'écran personnelle (2024)*
 
 Lorsqu'on zoome vers Sydney et qu'on clique sur le point le plus à l'ouest (Lithgow), on obtient ceci :
 
-![Australie zoom sur Sydney](./img/cartevf2.png) *Capture d'écran personnelle (2024)*
+![Australie zoom sur Sydney](./img/cartevf2.webp) *Capture d'écran personnelle (2024)*
 
 ## Sources utiles
 

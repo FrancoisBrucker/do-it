@@ -21,7 +21,7 @@ On présentera ici les différentes étapes du projet, de la conception à la r�
 
 ## Architecture de l'application
 
-![architecture du projet](architecture.png)
+![architecture du projet](architecture.webp)
 
 Le stack technologique de l'application web Street Workout Finder est conçue pour offrir aux utilisateurs une expérience dynamique, évolutive et performante. Le stack comprend une combinaison de technologies populaires qui conviennent aux exigences du projet, même si le principal objectif derrière le choix de ce stack a été de se former au développement web à travers des technologies innovantes.
 
@@ -35,7 +35,7 @@ Finalement, les microservices et la passerelle API sont conçus pour être encap
 
 ## Poster
 
-![SWF_Poster](SWF_Poster.png)
+![SWF_Poster](SWF_Poster.webp)
 
 ## Déroulé
 
@@ -95,10 +95,10 @@ Dans le quatrième sprint, nous avons réalisé les étapes suivantes :
 
 Page d'accueil           |  Menu
 :-------------------------:|:-------------------------:
-![page d'accueil](map.png)   |   ![menu](slide_bar.png)
+![page d'accueil](map.webp)   |   ![menu](slide_bar.webp)
 
 **Page de connexion**            |  **Parc Athéna**
-![page de connexion](connect_1.png)  |   ![parc Athéna](parc_athena.png)
+![page de connexion](connect_1.webp)  |   ![parc Athéna](parc_athena.webp)
 
 ## Futures fonctionnalités
 

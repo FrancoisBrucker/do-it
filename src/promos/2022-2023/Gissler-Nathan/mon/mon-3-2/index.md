@@ -26,7 +26,7 @@ Pour ce MON, je vais m'entraîner à résoudre des problèmes d'algorithmie sur 
 
 On peut choisir dans quel langage on veut résoudre les problèmes, pour ma part j'ai choisi Java pour m'y réhabituer avant mon stage. De nombreuses solutions sont également proposées par les utilisateurs pour chaque problème, ce qui permet de mieux comprendre les problèmes que l'on n'arrive pas à résoudre et de voir les astuces qui permettent d'obtenir des algorithmes plus efficaces en terme de temps et/ou de mémoire.
 
-<img src="leetcode.png" alt="Leetcode" width="800"/>
+<img src="leetcode.webp" alt="Leetcode" width="800"/>
 
 ## Quelques algorithmes sur lesquels j'ai travaillé
 
@@ -38,9 +38,9 @@ Ce problème consiste à convertir un chiffre romain donné sous forme de chaîn
 
 Comme pour certains problèmes de niveau Medium sur lesquels j'ai travaillé, ce problème montre l'importance du temps de calcul en plus de la correction de l'algorithme : la solution que j'ai fournie tient en 4 lignes et fonctionne, mais elle est nettement moins rapide que les meilleures solutions qui sont proposées. J'ai écrit cet algorithme en Python car l'équivalent écrit en Java n'était pas accepté, pour une raison qui m'échappe.
 
-<img src="code_sqrt.png" alt="Code sqrt" width="300"/>
+<img src="code_sqrt.webp" alt="Code sqrt" width="300"/>
 
-<img src="temps_exec_sqrt.png" alt="Temps d'exécution sqrt" width="1000"/>
+<img src="temps_exec_sqrt.webp" alt="Temps d'exécution sqrt" width="1000"/>
 
 ### Recherche d'un nombre premier palindrome (Medium)
 

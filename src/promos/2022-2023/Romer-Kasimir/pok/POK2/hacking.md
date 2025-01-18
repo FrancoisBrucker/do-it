@@ -120,13 +120,13 @@ Il existe plusieurs outils d'analyse légale de base qui sont couramment utilis�
 
 **file** : Cet outil est utilisé pour identifier le type de fichier en fonction de son contenu. Il peut être utilisé pour déterminer si un fichier est une image, un document texte ou un exécutable, par exemple.
 ```bash
-$ file ~/Downloads/flag.png
-~/Downloads/flag.png: PNG image data, 800 x 600, 8-bit/color RGB, non-interlaced
+$ file ~/Downloads/flag.webp
+~/Downloads/flag.webp: PNG image data, 800 x 600, 8-bit/color RGB, non-interlaced
 ```
 
 **strings** : Cet outil est utilisé pour extraire des chaînes de caractères imprimables d'un fichier. Il peut être utile pour identifier des mots-clés ou du texte dans un fichier qui peuvent être pertinents pour une enquête.
 ```bash
-$ strings ~/Downloads/flag.png
+$ strings ~/Downloads/flag.webp
 libc.so.6
 puts
 /=*"H
@@ -151,8 +151,8 @@ example text found on line 10
 
 **md5sum** : Cet outil est utilisé pour vitement calculer le hachage MD5 d'un fichier. Un hachage est une représentation unique du contenu d'un fichier, et peut être utilisé pour vérifier l'intégrité d'un fichier ou pour identifier si deux fichiers sont identiques.
 ```bash
-$ md5sum ~/Downloads/flag.png
-a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4  /home/user/Downloads/flag.png
+$ md5sum ~/Downloads/flag.webp
+a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4  /home/user/Downloads/flag.webp
 ```
 
 ### Wireshark

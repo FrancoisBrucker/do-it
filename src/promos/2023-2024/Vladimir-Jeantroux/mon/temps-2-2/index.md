@@ -43,7 +43,7 @@ Après m'être entraîné avec les exemples du livre de Rust, j'ai voulu créer 
 
 Une fonction normale en Rust dans le fichier `main.rs` s'exécute de haut en bas, attendant une entrée de l'utilisateur (s'il y en a) avant de continuer à s'exécuter. Ce n'est évidemment pas possible dans un jeu vidéo, le jeu doit continuer de tourner même si l'utilisateur ne fait rien. Lorsqu'on joue à Flappy Bird, l'oiseau continue de tomber même si le joueur ne touche pas à son écran. On fait donc appel à une boucle qui s'appelle "Game loop", qui va s'exécuter à chaque fois que l'écran s'actualise. 
 
-![Schéma d'un Game Loop](gameloop.JPG)
+![Schéma d'un Game Loop](gameloop.webp)
 *Image : Schéma d'un game loop et de ses étapes, Hands-on Rust : Effective learning through 2D Game Development and Play, Herbert Wolverson.*
 
 En premier lieu, il faut initialiser l'application afin qu'on soit capable d'afficher quelque chose à l'écran (1). Ensuite, pendant l'exécution de la boucle, on va demander en premier lieu à l'OS s'il y a eu des entrées de la part de l'utilisateur et lesquelles (appuyer sur son clavier, mouvements/clics de souris,...) (2). Le moteur du jeu va alors traduire ces événements, en faisant appel à la fonction *tick*, et va fournir la réponse du jeu à ces événements, comme les mouvements du personnage par exemple (3). Le jeu met ensuite l'écran à jour (4), et vérifie si le programme doit être fermé (5). Si oui, le jeu se ferme, sinon, on retourne à l'étape 2, et continuer le jeu. 

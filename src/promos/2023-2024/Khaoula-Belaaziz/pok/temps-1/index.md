@@ -50,10 +50,10 @@ J'ai appliqué les connaissances que j'ai pris dans les formations que j'ai suiv
 - Portfolio Section
 - Services Section
 
-<img src="ecom5.png"  width=600px>
-<img src="ecom2 (1).png"  width=600px>
-<img src="ecom3.png"  width=600px>
-<img src="ecom5.png"  width=600px>
+<img src="ecom5.webp"  width=600px>
+<img src="ecom2 (1).webp"  width=600px>
+<img src="ecom3.webp"  width=600px>
+<img src="ecom5.webp"  width=600px>
  
  Et par la suite j'ai entrepris le travail sur mon Portfolio.
 
@@ -106,11 +106,11 @@ J’ai développé le stylesheet du site. Vous prouvez le visualiser [ici](https
 
 ## Résultat final
 
-<img src="portfolio1.png"  width=600px>
-<img src="portfolio2.png"  width=600px>
-<img src="portfolio3.png"  width=600px>
-<img src="portfolio4.png"  width=600px>
-<img src="portfolio5.png"  width=600px>
+<img src="portfolio1.webp"  width=600px>
+<img src="portfolio2.webp"  width=600px>
+<img src="portfolio3.webp"  width=600px>
+<img src="portfolio4.webp"  width=600px>
+<img src="portfolio5.webp"  width=600px>
 
 ## Points d'amélioration
 Le site est opérationnel, mais faute de temps, certaines de mes idées n'ont pas été implémentées. Je souhaite améliorer sa conception responsive et ajouter plus d'éléments interactifs pour enrichir l'expérience utilisateur.

@@ -33,7 +33,7 @@ L'utilisation des extensions suivantes permet d'obtenir des informations voulus 
 
 Il faut d'abord commencer par créer un Google sheet avec une liste de personnes et leur date de naissance comme le tableau suivant :
 
-![Optional Text](Image3.png)
+![Optional Text](Image3.webp)
 
 ### Codage de la fonction
 
@@ -74,19 +74,19 @@ function sendBirthdayEmail() {
 
 Il va ensuite falloir mettre en place un déclencheur qui va tout les jours exécuter la fonction et donc vérifier dans le tableau si un anniversaire a lieu aujourd'hui. 
 
-![Optional Text](Image1.png)
+![Optional Text](Image1.webp)
 
 ### Mail de Rappel
 
 Si une date d'anniversaire correspond à la date du jour, un mail est envoyé à l'email indiqué. 
 
-![Optional Text](Image2.png)
+![Optional Text](Image2.webp)
 
 ### Autre fonction utile
 
 Une fonction qui permet de vérifier si le tableau a été rempli par toutes les personnes. Elle va donc vérifier comme par exemple sur le tableau suivant si les personnes ont indiqué leur présence dans la quatrième colonne :  
 
-![Optional Text](Image4.png)
+![Optional Text](Image4.webp)
 
 La fonction à rentrer :
 
@@ -119,7 +119,7 @@ function Verifremplissage() {
 
 Le mail envoyé aux personnes n'ayant pas rempli le tableau :
 
-![Optional Text](Image5.png)
+![Optional Text](Image5.webp)
 
 
 

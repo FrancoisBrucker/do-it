@@ -8,7 +8,7 @@ authors:
 ---
 
 <div style="text-align: center;">
-    <img src="PP.png" width="500"/>
+    <img src="PP.webp" width="500"/>
 </div>
 
 ## POK & MON

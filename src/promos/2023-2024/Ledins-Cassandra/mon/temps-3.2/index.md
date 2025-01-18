@@ -55,7 +55,7 @@ Après consultation d'un des <a href="https://francoisbrucker.github.io/do-it/pr
 3. **Modélisation des Événements :**
    Les événements initiaux (déclencheurs) et finaux (résultats) du processus ont été identifiés et modélisés dans le diagramme. Cela comprenait des événements tels que la réception d'une commande, la génération d'une facture, et la réception du paiement.
 
-![](./BPMN.png)
+![](./BPMN.webp)
 
 Mais aussi :
 

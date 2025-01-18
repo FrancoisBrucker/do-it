@@ -101,7 +101,7 @@ Ce projet repose sur le [tutoriel](https://doc.rust-lang.org/book/ch12-00-an-io-
 
 La courbe d'apprentissage du Rust ressemble plutôt à : 
 
-![Courbe Apprentissage Rust](./learningGraphRust.png)
+![Courbe Apprentissage Rust](./learningGraphRust.webp)
 
 ### Les pointeurs et les cycles de vie :
 

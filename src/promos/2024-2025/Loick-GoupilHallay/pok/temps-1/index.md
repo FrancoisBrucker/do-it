@@ -145,7 +145,7 @@ MinIO est un serveur de stockage d'objets open-source qui permet de stocker des 
 [L'exécutable (binaire) de svcadm](https://github.com/BoxBoxJason/svcadm/releases/) est généré à partir du code source et est utilisé pour déployer l'environnement de développement.
 Pour qu'il puisse fonctionner, la seule condition est que la machine hôte ait installé le moteur d'éxécution de conteneurs qu'elle souhaite utiliser (docker ou podman).
 
-![svcadm help](./images/help.png)
+![svcadm help](./images/help.webp)
 
 ### Comment ça marche ?
 
@@ -193,9 +193,9 @@ architecture-beta
     - Il décide des services à activer, des ports à utiliser, des volumes à monter, des variables d'environnement à définir,...
     - Il choisit le moteur de conteneurisation à utiliser (docker ou podman) et le réseau à utiliser.
     - Il définit le TLS certificat et la clé privée à utiliser pour sécuriser les connexions (s'il utilise nginx)
-![svcadm.yaml](./images/svcadm.png)
+![svcadm.yaml](./images/svcadm.webp)
 2. L'utilisateur remplit un fichier de configuration `access.yaml` pour définir les utilisateurs à créer et leurs rôles.
-![access.yaml](./images/access.png)
+![access.yaml](./images/access.webp)
 3. L'utilisateur lance la commande `svcadm setup` pour déployer les services.
 4. Les services sont déployés dans des conteneurs, sur le même réseau et sont accessibles depuis le reverse proxy Nginx (s'il est activé) sur la machine hôte, sur les ports 80 (HTTP) et 443 (HTTPS).
 5. Les utilisateurs sont créés avec les rôles définis dans le fichier de configuration `access.yaml`.

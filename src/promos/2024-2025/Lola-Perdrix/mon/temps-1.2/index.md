@@ -106,7 +106,7 @@ Le cours que je souhaite réaliser sur Kaggle repose sur l'utilisation de BigQue
 Il faut donc commencer par comprendre comment faire des requêtes avec BigQuery.
 
 ***Schéma de la structure de bigquery***
-![schema](bigquery_schema.jpg)
+![schema](bigquery_schema.webp)
 
 Les premières étapes à suivre sont celles pour aller chercher son dataset choisi au préalable :
 
@@ -192,7 +192,7 @@ client.list_rows(table, max_results=5).to_dataframe()
 
 {% details "Résultat" %}
 
-![rows](list_rows.jpg)
+![rows](list_rows.webp)
 
 {% enddetails %}
 
@@ -242,8 +242,8 @@ Par exemple :
 
 | table : ***pet_records*** | requête |
 |:---:|:---:|
-|![table](pet_records.jpg)| ![query](select_from.jpg)|
-| ^^ |![query](select_from_where.jpg)|
+|![table](pet_records.webp)| ![query](select_from.webp)|
+| ^^ |![query](select_from_where.webp)|
 
 {%note%}
 Après le FROM, on doit indiquer ici la source entre backticks (``) en mentionnant d'abord le projet auquel fait partie le dataset, puis le nom du dataset, puis le nom de la table, séparés par des points (.)
@@ -352,9 +352,9 @@ Par exemple :
 
 | table : ***pet_records*** | requête |
 |:---:|:---:|
-|![table](pet_records.jpg)| ![query](count.jpg)|
-| ^^ |![query](count_groupby.jpg)|
-| ^^ |![query](count_groupby_having.jpg)|
+|![table](pet_records.webp)| ![query](count.webp)|
+| ^^ |![query](count_groupby.webp)|
+| ^^ |![query](count_groupby_having.webp)|
 
 Remarques :
 
@@ -418,8 +418,8 @@ Par exemple :
 
 | table : ***pet_records*** | requête |
 |:---:|:---:|
-|![table](pet_records.jpg)| ![query](orderby.jpg)|
-| ^^ |![query](orderby_desc.jpg)|
+|![table](pet_records.webp)| ![query](orderby.webp)|
+| ^^ |![query](orderby_desc.webp)|
 
 ### EXTRACT
 
@@ -429,7 +429,7 @@ Par exemple :
 
 | table : ***pet_records2*** | requête |
 |:---:|:---:|
-|![table](pet_records2.jpg)| ![query](extract.jpg)|
+|![table](pet_records2.webp)| ![query](extract.webp)|
 
 ### WITH... AS
 
@@ -441,8 +441,8 @@ Par exemple :
 
 | table : ***pet_records3*** | requête |
 |:---:|:---:|
-|![table](pet_records3.jpg)| ![query](CTE.jpg)|
-| ^^ |![query](with_as.jpg)|
+|![table](pet_records3.webp)| ![query](CTE.webp)|
+| ^^ |![query](with_as.webp)|
 
 ### JOIN... ON
 
@@ -450,7 +450,7 @@ Enfin, la dernière fonctionnalité que l'on voit dans la formation, est le INNE
 
 Une jointure est une opération qui a pour but de relier deux tables en faisant correspondre des champs entre eux, comme sur l'illustration ci-dessous.
 
-![jointure](jointure.jpg)
+![jointure](jointure.webp)
 
 Pour récupérer le nom du propriétaire ET le nom de son animal, on fait une requête utilisant une jointure de cette manière :
 
@@ -458,7 +458,7 @@ Pour récupérer le nom du propriétaire ET le nom de son animal, on fait une re
 - On fait un **aliasing** ("AS") pour chaque table pour indiquer plus facilement à quelle table appartiennent les champs que l'on mentionne (bonne pratique qui sert notamment lorsque les deux tables contiennent les mêmes noms de champs)
 - On indique après le **ON** les **champs que l'on fait correspondre**
 
-![join](join.jpg)
+![join](join.webp)
 
 {%details "Exemple plus complexe de JOIN" %}
 
@@ -489,7 +489,7 @@ Qui retourne les utilisateurs ayant répondu à le plus de questions sur bigquer
 Il existe plusieurs types de jointures, ici on utilise le INNER JOIN qui récupère uniquement les lignes où il y a une correspondance des champs dans les deux tables, car c'est peut-être le plus utile / le plus intuitif pour débuter (mais ce n'est pas toujours le cas). Pour mieux comprendre, c'est illustré sur le schéma ci-dessous.
 {% endnote %}
 
-![schema](types_join.jpg)
+![schema](types_join.webp)
 
 ***Source : LearnSQL.fr***
 
@@ -601,7 +601,7 @@ num_trips_query = """
                   """
 ```
 
-![result](cumul.jpg)
+![result](cumul.webp)
 
 {%enddetails%}
 
@@ -613,7 +613,7 @@ Pour requêter sur ce type de colonne, on renseigne en premier l'attribut princi
 
 {%details "Exemple" %}
 
-![nested](nested.jpg)
+![nested](nested.webp)
 
 {%enddetails%}
 
@@ -623,7 +623,7 @@ Pour requêter sur des colonnes de ce type, on utilise la fonction `UNNEST()`.
 
 {%details "Exemple" %}
 
-![repeated](repeated.jpg)
+![repeated](repeated.webp)
 
 {%enddetails%}
 
@@ -631,7 +631,7 @@ On peut alors combiner des données de type `RECORD`avec le mode `REPEATED`
 
 {%details "Exemple" %}
 
-![combined](combined.jpg)
+![combined](combined.webp)
 
 {%enddetails%}
 

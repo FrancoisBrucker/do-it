@@ -96,7 +96,7 @@ Afin de pouvoir trouver mon chemin dans une intersection, il me fallait, dans un
 1) Je dois identifier sur ma grille de route les intersections et les numéroter afin de pouvoir les distinguer. Pour cela, j'ai utilisé une fonction dite de depth-first search (DFS), qui parcourt l'ensemble de ma route, trouve un élément intersection, puis explore toutes les intersections adjacentes pour leur attribuer un numéro [1]. Ainsi, les intersections adjacentes peuvent être regroupées en un même groupe, ce qui sera utile pour la suite.
 
 <div style="text-align: center;">
-    <img src="DFS.PNG" width="200"/>
+    <img src="DFS.webp" width="200"/>
     <u> Image 1 : Fonctionnement algo DFS [Source](https://medium.com/@jwbtmf/dfs-vs-bfs-algorithms-for-graph-database-5948f0fd2057)</u>
 </div>
 <br>
@@ -106,7 +106,7 @@ Afin de pouvoir trouver mon chemin dans une intersection, il me fallait, dans un
 Petit schéma explicatif :
 
 <div style="text-align: center;">
-    <img src="directions_intersections_sens_circu.jpg" width="500"/>
+    <img src="directions_intersections_sens_circu.webp" width="500"/>
     <u> Image 2 : Schéma explicatif initialisation sens de circulation</u>
 </div>
 <br>
@@ -116,7 +116,7 @@ Petit schéma explicatif :
 Petit schéma explicatif :
    
 <div style="text-align: center;">
-    <img src="directions_intersections.jpg" width="500"/>
+    <img src="directions_intersections.webp" width="500"/>
     <u> Image 3 : Schéma explicatif construction des directions possibles</u>
 </div>
 <br>
@@ -128,7 +128,7 @@ En suivant ce processus, on arrive à obtenir pour chaque intersection un matric
 Une fois les directions possibles trouvées, il faut maintenant parvenir à trouver le chemin parcouru par les voitures dans une intersection. Pour cela, j'ai utilisé un algorithme de recherche en largeur ou breadth first search [1].
 
 <div style="text-align: center;">
-    <img src="BFS.PNG" width="200"/>
+    <img src="BFS.webp" width="200"/>
     <u> Image 4 : Fonctionnement algo BFS [Source](https://medium.com/@jwbtmf/dfs-vs-bfs-algorithms-for-graph-database-5948f0fd2057)</u>
 </div>
 <br>
@@ -140,7 +140,7 @@ Cet algorithme a pour objectif de trouver le chemin le plus court et qui fait le
 Enfin, pour un départ donné et une direction souhaitée, il faut trouver le point d'arrivée. Cependant, il faut tenir compte de nombreux critères afin de respecter au mieux les réactions et choix humains. Afin de bien cerner la problématique, voici deux exemples :
 
 <div style="text-align: center;">
-    <img src="choix_sortie.jpg" width="500"/>
+    <img src="choix_sortie.webp" width="500"/>
     <u> Image 5 : Comment choisir la sortie ?</u>
 </div>
 <br>
@@ -148,7 +148,7 @@ Enfin, pour un départ donné et une direction souhaitée, il faut trouver le po
 On remarque dans les deux cas que le chemin privilégié est celui le plus court entre l'entrée et la sortie, mais rien n'empêche qu'un conducteur emprunte une autre sortie. Cela est possible, mais plus rare. Afin de tenir compte de ce phénomène, j'ai pensé qu'il est concevable de modéliser le choix de la sortie comme une distribution normale, dont la moyenne serait la position de la sortie la plus proche et un écart-type de 1. Ainsi, en reprenant les deux exemples et en numérotant les sorties du haut vers le bas, on aurait les distributions suivantes :
 
 <div style="text-align: center;">
-    <img src="distribution_sortie.jpg" width="500"/>
+    <img src="distribution_sortie.webp" width="500"/>
     <u> Image 6 : Distribution pour choix de la sortie</u>
 </div>
 <br>
@@ -171,7 +171,7 @@ Pour mettre en place cette nouvelle fonction, j'ai reformat le code pour une mei
 J'ai également crée la nouvelle route pour le test, repris les règles de priorités et définit le mouvement d'un piéton. 
 
 <div style="text-align: center;">
-    <img src="Cas_etude_pieton.PNG" width="800"/>
+    <img src="Cas_etude_pieton.webp" width="800"/>
     <u> Image 7 : Nouveau cas d'étude</u>
 </div>
 <br>

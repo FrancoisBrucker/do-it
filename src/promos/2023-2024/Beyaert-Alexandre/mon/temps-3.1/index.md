@@ -51,7 +51,7 @@ Il est très utile pour :
 
 Pour commencer à prendre en main VBA, il est nécessaire d'accéder aux outils de développements d'Excel. Pour se faire, cliquer sur Fichier > Options > Personnaliser le Ruban puis sélectionner la case Développeur.
 
-![Ajout des outils de développement](Developpeur.png)
+![Ajout des outils de développement](Developpeur.webp)
 
 Reste alors à ouvrir l'éditeur grâce au bouton "Visual Basic" ou avec le raccourci Alt + F11.
 
@@ -89,7 +89,7 @@ End sub
 
 Pour faciliter l'exécution de notre macro, il est possible d'ajouter un bouton : Insérer > Bouton > Sélectionner la macro > Tracer le bouton.
 
-![Ajout d'un bouton](Bouton.png)
+![Ajout d'un bouton](Bouton.webp)
 
 Il est également possible de :
 - sélectionner une ou plusieurs cellules

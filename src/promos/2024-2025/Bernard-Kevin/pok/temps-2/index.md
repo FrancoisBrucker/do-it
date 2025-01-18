@@ -150,7 +150,7 @@ Après réflexion, j'ai trouvé cela trop compliqué à rendre intéressant et �
 J'ai passé beaucoup de temps sur l'apparence possible de mon site, je ne savais pas quoi décidé entre les 3 options.
 Sachant que je n'aurai pas le visuel tout de suite puisqu'il faut créer les décors sur Blender, je me suis arrêté là sur la partie design pour me concentrer sur la création du site en React.
 Pour l'instant, ma maquette ressemble à cela (option 2):
-![alt text](media/Figma.png)
+![alt text](media/Figma.webp)
 
 {% lien %}
 <b>Sources</b>
@@ -190,7 +190,7 @@ Avec le temps qu'il me restait, j'ai rajouté les liens avec React-rooter-dom.
 
 Pour le moment cela ressemble à cela :
 
-![alt text](media/site_apres_sprint1.png)
+![alt text](media/site_apres_sprint1.webp)
 
 ### Second Sprint
 
@@ -231,7 +231,7 @@ Une fois que j'avais un backend qui fonctionnait il ne me manquait que les donn�
 La première chose que j'ai faite a été de créer un diagramme de classes UML.
 J'ai pris le premier site qui me permettait de faire cela (LucidChart)[https://www.lucidchart.com/pages/fr] parce que je voulais simplement avoir une base simple.
 
-![alt text](media/creature_site.jpg)
+![alt text](media/creature_site.webp)
 
 {% lien %}
 [Vidéo de Youtube de Lucid Software, UML class diagrams](https://www.youtube.com/watch?v=6XrL5jXmTwM)

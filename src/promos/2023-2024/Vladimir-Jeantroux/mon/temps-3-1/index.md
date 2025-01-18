@@ -126,7 +126,7 @@ Boite<int> boiteInt = new Boite<>(56);
 //Correct
 Boite<Integer> boiteInt = new Boite<>(56);
 ```
-![Classes Wrapper](./tableauwrapper.JPG "Tableau comportant les équivalents Wrapper pour les classes primitives de Java")
+![Classes Wrapper](./tableauwrapper.webp "Tableau comportant les équivalents Wrapper pour les classes primitives de Java")
 
 "Wrapper Classes for Primitive Data Types", Codecademy https://www.codecademy.com/courses/learn-intermediate-java/lessons/generics-java/exercises/java-generics-wrapper-classes 
 

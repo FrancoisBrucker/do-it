@@ -12,5 +12,5 @@ Ensemble des MON réalisés par Titouan Corne.
 - [MON 1.2 : Les macros Excel](./temps-1.2)
 - [MON 2.1 : React (dev Front-End) - découverte et prise ne main](./temps-2.1)
 - [MON 2.2 : Figma - UX/UI et prototypage](./temps-2.2)
-- [MON 3.1](./temps-3.1)
-- [MON 3.2](./temps-3.2)
+- [MON 3.1 : Test-Driven Developpment : les tests au coeur du développement](./temps-3.1)
+- [MON 3.2 : Les enjeux du numérique dans le domaine de la santé](./temps-3.2)

@@ -26,7 +26,7 @@ Rappel : Il faut avoir l'accord de la personne cible et de l'administrateur rés
 
 L'ARP spoofing (ARP poisoning, ARP cache poisoning) est une attaque de type *Man In The Middle* (MITM). Sur un réseau local (LAN), le but de ce type d'attaque est de se placer entre la cible et le router. Ainsi, toutes les requêtes envoyées par la cible pour accéder à internet (qui transite normalement par le router), passeront à la machine de l'attaquant. Souvent, l'attaquant redirige ensuite le trafic vers le router qui envoie les requête de l'utilisateur sur internet. L'attaquant agit comme un intermédiaire, et peut alors espionner tout le trafic réseau de la machine cible.
 
-![*man in the middle*](man-in-the-middle-attack.jpg)
+![*man in the middle*](man-in-the-middle-attack.webp)
 
 En particulier, l'ARP cache poisoning consiste à utiliser une faille du protocole ARP afin se faire passer pour le router auprès de la machine cible.
 
@@ -46,7 +46,7 @@ Lorsque vous envoyez un paquet à une machine, il faut d'abord résoudre son adr
 
 Pour résoudre une adresse MAC d'un autre appareil sur le même réseau local, une machine envoie des requêtes ARP en broadcast (à toutes les machines du réseau) et demande : "A qui correspond l'adresse IP 192.168.0.13 ? Dites le à 192.168.0.1", et la machine ayant cette adresse répond : "À moi, 192.168.0.13, voici mon adresse MAC : 5E:FF:56:A2:AF:15".
 
-![Wireshark Capture of ARP request/ reply](wireshark_arp.png)
+![Wireshark Capture of ARP request/ reply](wireshark_arp.webp)
 
 Ensuite, son adresse mac est enregistré dans votre table ARP, contenant toutes les adresses IP et adresses MAC connues. Par exemple :
 
@@ -77,7 +77,7 @@ On considère  192.168.0.1 comme le router, 192.168.0.13 comme la machine cible,
 
 On peut donc envoyer un requête ARP à la machine cible. Requête ARP vers la machine cible : "l'adresse IP : 192.168.0.1 correspond à l'adresse MAC : 6C:A4:36:B7:D6:31". C'est le principe de l'attaque ARP cache poisoning. Dans la table ARP de la machine cible, on vient de modifier l'entrée du router (192.168.0.1) et de remplacer l'adresse MAC du router par l'adresse MAC (6C:A4:36:B7:D6:31) de l'attaquant. On va faire la même chose pour le router, pour que toutes les requêtes du router vers la machine cible transitent par l'attaquant. Requête ARP vers le router : "l'adresse IP : 192.168.0.13 correspond à l'adresse MAC : 6C:A4:36:B7:D6:31".
 
-![*ARP spoofing*](schema_arp_spoofing.png)
+![*ARP spoofing*](schema_arp_spoofing.webp)
 Photo par [Dharmil Chhadva](https://levelup.gitconnected.com/man-in-the-middle-attack-part-1-arp-spoofing-6f5b174dec59).
 
 ### Implémentation
@@ -211,7 +211,7 @@ Si tout se passe bien, les packets sont transmis. En refaisant la commande `arp 
 
 Voilà, maintenant tous les paquets provenant de la machine cible passent par l'attaquant. On peut utiliser des outils de sniffing de paquets pour espionner les paquets de l'utilisateur. On pourra voir toutes les ressources auxquelles il accède, et si les paquets ne sont pas chiffrés, on peut voir les données qui transitent.
 
-En utilisant wireshark, on voit que la victime essaye de se connecter au serveur DNS de google (8.8.8.8)  : ![wireshark_ICMP_no_response](wireshark_spoof.png)
+En utilisant wireshark, on voit que la victime essaye de se connecter au serveur DNS de google (8.8.8.8)  : ![wireshark_ICMP_no_response](wireshark_spoof.webp)
 
 On voit que les paquets ICMP de la victime n'ont pas de réponse. A ce stade, tous les paquets de la cible passent par l'attaquant. Mais l'attaquant ne fait rien de ses paquets : il faut rediriger ces paquets vers internet, et que tous les paquets à destination de la cible lui parviennent en retour. L'attaque sera alors réussi.
 
@@ -293,7 +293,7 @@ Bien sûr, si la cible transfère ses paquets en utilisant TLS (ex: https), les 
 
 Par exemple, pour des paquets transmis avec FTP :
 
-![wireshark_FTP](wireshark_transmited.png)
+![wireshark_FTP](wireshark_transmited.webp)
 
 **Ps** : avec une machine virtuelle, vos paquets auront de toute façon été capté par wireshark, car ils passent par la carte réseau de votre machine hôte. Cette démonstration sur machine virtuelle est un peu artificielle mais permet de bien comprendre le processus. Elle serait tout à fait similaire sur un appareil réel.
 

@@ -108,7 +108,7 @@ Quelques précisions sur ces paramètres :
 
 On obtient alors des cercles transparents et celui selectionné est plus visible que les autres.
 
-![Navigation image](carousel_buttons.png)
+![Navigation image](carousel_buttons.webp)
 
 ### **Étape 3 : Changement de classes avec js**
 
@@ -169,6 +169,6 @@ buttons[0].classList.add("carousel_selected_button");
 
 Et voilà à quoi cela peut ressembler:
 
-![Carrousel image](carousel_1.png)
-![Carrousel image](carousel_2.png)
-![Carrousel image](carousel_3.png)
+![Carrousel image](carousel_1.webp)
+![Carrousel image](carousel_2.webp)
+![Carrousel image](carousel_3.webp)

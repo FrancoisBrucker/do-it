@@ -75,7 +75,7 @@ B. DEMIL et X. LECOCQ définissent un modèle économique au travers d’une vis
 - Structure Organisationnelle (O)
 - Proposition de valeur (V)
 
-![Modele_RCOV](Images/Modele_RCOV.jpg)
+![Modele_RCOV](Images/Modele_RCOV.webp)
 *[europeanbusinessreview.com](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.europeanbusinessreview.com%2Fwhat-if-your-business-model-was-to-blame-for-your-lack-of-innovativeness%2F&psig=AOvVaw2S942NzTp_Sg6qV_WL2yA0&ust=1727872998038000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPDchtaa7YgDFQAAAAAdAAAAABAQ)*
 
 Ainsi, à partir des ressources et compétences qu’une organisation contrôle, l’entreprise définit donc une ou plusieurs propositions de valeur pour ses clients qui vont lui permettre de générer des revenus. Ces ressources et compétences peuvent être internes, développées par l’entreprise, mais également d’origine extérieure (dans ce cas, les ressources et compétences sont acquises sur le marché). 
@@ -161,7 +161,7 @@ Il a donc développé une vision stratégique externe et une vision stratégique
 -	Vision stratégique interne : identifier les leviers qui vont permettre à l’entreprise de transformer cette proposition de valeur en produits concrets. 
 
 On peut donc comparer les deux modèles économiques de l’entreprise grâce au tableau suivant : 
-![Tableau_1](Images/Tableau_1.png)
+![Tableau_1](Images/Tableau_1.webp)
 *[Transformation d’un modèle d’affaires dans un contexte de mondialisation :le cas d’une entreprise de vêtements, Par Naoufel Remili](https://shs.cairn.info/revue-des-sciences-de-gestion-2016-2-page-157?lang=fr#s1n5)*
 
 Ce tableau illustre bien l’évolution du business model de Keystone, d’un modèle économique manufacturier où l’entreprise est au service d’autres entreprises en qualité de fournisseur, et est donc fortement dépendantes de l’évolution du marché et de la demande, à un modèle économique de designer-importateur dans lequel l’entreprise est maîtresse de son destin et peut contrôler ses propres compétences, ressources et activités. 
@@ -176,7 +176,7 @@ Comme nous l’avons évoqué plus haut, dans la description du modèle RCOV, un
 -	Modèle de revenu, soit la manière avec laquelle l’entreprise crée de la richesse, on rapproche ceci de la structure de coût. 
 
 Ainsi, au cours de l’évolution du modèle économique de Keystone, des changements ont été opéré sur chacun des 4 composantes citées ci-dessus, faisant également évoluer les relations entre chacune des composantes. Les quatre composantes du nouveau modèle Keystone sont résumées ci-dessous : 
-![Tableau_2](Images/Tableau_2.png)
+![Tableau_2](Images/Tableau_2.webp)
 *[Transformation d’un modèle d’affaires dans un contexte de mondialisation :le cas d’une entreprise de vêtements, Par Naoufel Remili](https://shs.cairn.info/revue-des-sciences-de-gestion-2016-2-page-157?lang=fr#s1n5)*
 
 Ainsi, de par les modifications de ces composantes, nous pouvons qualifier l’évolution dans les activités de Keystone de transformation de business model. 

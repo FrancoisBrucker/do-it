@@ -77,7 +77,7 @@ Scope 3 : autres émissions indirectes provenant de la chaîne de valeur (fabric
 
 Le bilan carbone de Decathlon est principalement lié aux produits (production, manufacture et utilisation) représentant près de 80% de son impact global. L'entreprise s'est fixée pour objectif que 100 % de ses produits soient éco-conçus d'ici 2026 pour réduire drastiquement son impact environnemental.
 
-![Repartition_GES](./repartition_production_GES.png)
+![Repartition_GES](./repartition_production_GES.webp)
 
 A court terme, elle s’est engagé à réduire de 20% des émissions de gaz à effet de serre, sans compensation, entre 2021 et 2026. Près d’un tiers de ces réductions doivent provenir de l’écoconception.
 
@@ -167,7 +167,7 @@ Decathlon accélère le développement de l'économie circulaire en intégrant l
 
 *Upcycling* : Des produits comme les [vestes softshell 909](https://www.decathlon.fr/p/mp/909/veste-upcyclee-impermeable-et-coupe-vent-softshell-graphite-homme/_/R-p-5acf8dc7-b2d3-4106-a847-c42e2f4b2894) sont créés à partir de matériaux upcyclés, tels que des toiles de tente(marque [909-upcycling](https://www.909-upcycling.com/blogs/communique-de-presse/les-tentes-devenues-vestes)).
 
-![909_softshell](./veste-upcyclee-impermeable-et-coupe-vent-softshell-foret-homme.png)
+![909_softshell](./veste-upcyclee-impermeable-et-coupe-vent-softshell-foret-homme.webp)
 
 *Système de reprise (buy back)* : Le système de reprise permet aux clients de revendre leurs articles, disponible dans 11 pays, dont la Belgique, la France, et plus récemment, l'Allemagne et le Royaume-Uni.
 
@@ -274,7 +274,7 @@ Les 2 principaux impacts de Decathlon sur la biodiversité sont :
 
 - Magasins : Avec une surface de vente totale de 14 millions de m², les magasins de Decathlon contribuent à l'artificialisation des terres, ce qui a des conséquences néfastes sur les écosystèmes locaux.
 
-![Impact_ecosystemes](./Impact_ecosystemes_Decathlon.png)
+![Impact_ecosystemes](./Impact_ecosystemes_Decathlon.webp)
 
 Le calcul de l'empreinte sur la biodiversité avec l'outil [GBS®](https://www.cdc-biodiversite.fr/le-global-biodiversity-score/) permet de distinguer l'impact cumulé, qui tient compte des activités passées de l'entreprise, de l'impact annuel, qui se rapporte aux actions de DECATHLON sur l'année précédente. Cet outil se concentre sur les écosystèmes terrestres et d'eau douce (car les écosystèmes marins ne sont pas encore inclus). Il couvre toutes les activités de DECATHLON sur les scopes 1, 2 et 3, ainsi que sur la Marketplace depuis 2023.
 
@@ -300,7 +300,7 @@ Enfin, 2 ruches ont été installées. 🐝 Elles sont un bon indicateur de la n
 Des aménagements similaires ont été menés sur le site de Lorient et 14 dossiers sont en cours de déploiement selon cette même démarche L’objectif est d’obtenir le label ["Signature Biodiversité"](https://signature-biodiversite.com/dpe/), certification environnementale, pour 100 % des futurs aménagements fonciers neufs en France. Les efforts de l’entreprise se poursuivent pour atteindre l’ambition de 10 % du parc immobilier français intégrant la démarche de renaturation ["Signature Biodiversité"](https://signature-biodiversite.com/dpe/).
 
 
-![Signature_Biodiversite](./Signature-biodivesite-infographie-DPE.png)
+![Signature_Biodiversite](./Signature-biodivesite-infographie-DPE.webp)
 
 
 #### Réduire l'impact des matières premières

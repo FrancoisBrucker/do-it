@@ -114,7 +114,7 @@ Il faut suivre le lien ngrok.io affiché sur la page d'accueil pour pouvoir util
 
 Par ce qu'une image vaut mille mots :
 
-![homePage](../temps2/homePage.png)
+![homePage](../temps2/homePage.webp)
 
 #### Tuto
 

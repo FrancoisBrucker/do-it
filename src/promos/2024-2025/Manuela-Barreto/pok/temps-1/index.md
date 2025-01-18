@@ -99,19 +99,19 @@ J'ai ensuite réfléchi à une phrase d'accroche qui capterait l'essence du proj
 
 Le choix des couleurs a également été crucial. En m'appuyant sur la théorie des couleurs, j’ai opté pour une combinaison de **bleu et de jaune**.
 
-![Théorie des couleurs](./assets/Theorie_des_couleurs.jpg)
+![Théorie des couleurs](./assets/Theorie_des_couleurs.webp)
 
 Le bleu évoque le professionnalisme, la confiance et la clarté, tandis que le jaune symbolise l’optimisme et la créativité. Ensemble, ces couleurs créent une identité visuelle à la fois dynamique et sérieuse.
 
 Pour réaliser le logo final, j'ai utilisé l’outil Canva. Voici le résultat final
 
-![Logo FlashFac](./assets/FlashFac.png)
+![Logo FlashFac](./assets/FlashFac.webp)
 
 Une fois le logo finalisé, je me suis concentré sur la création du design global du site web. Pour cela, j'ai utilisé l'application **Figma**, en veillant à maintenir la cohérence des couleurs choisies pour le logo.
 
-![Page d'accueil](./assets/Page_accueil.png)
-![Page choix](./assets/Page_choix.png)
-![Page flashcard](./assets/Page_flashcard.png)
+![Page d'accueil](./assets/Page_accueil.webp)
+![Page choix](./assets/Page_choix.webp)
+![Page flashcard](./assets/Page_flashcard.webp)
 
 La première maquette concerne la page d'accueil du site, où j'ai opté pour un design dynamique. Pour une meilleure compréhension de cette mise en page, un aperçu vidéo du résultat final est disponible à la fin de ce document.
 
@@ -123,7 +123,7 @@ Mon premier pas a été de demander à ChatGPT : "Quels sont les 20% des concept
 
 Bien entendu, 1h30 d’étude sur JavaScript est loin d’être suffisant pour maîtriser réellement cette langue. L’objectif de cette étude préliminaire était simplement d’avoir un premier contact et de comprendre la syntaxe à un niveau débutant. Tout au long du projet, chaque fois que j’avais une question spécifique, je faisais des **recherches sur Google**, en privilégiant des ressources comme **Stack Overflow ou W3Schools** pour trouver des solutions pertinentes et fiables.
 
-![Recherches JS](./assets/Recherches_JS.png)
+![Recherches JS](./assets/Recherches_JS.webp)
 
 ## Développement - Premier Sprint <a id="développement-premier-sprint"></a>
 
@@ -136,7 +136,7 @@ Si la conception du HTML s’est faite sans grande difficulté, je dois admettre
 
 Vous trouverez ci-joint une image de l'une des fonctions JavaScript que j'ai créées pour l'animation d'ouverture du site.
 
-![Fonction JavaScript](./assets/fct_animation_JS.png)
+![Fonction JavaScript](./assets/fct_animation_JS.webp)
 
 ### Les Liste de Vocabulaire
 
@@ -146,7 +146,7 @@ Ma première tentative a consisté à demander à ChatGPT de générer une liste
 
 Le prompt utilisé pour générer ces listes était le suivant :
 
-![Prompt Liste Vocab](./assets/prompt_list_vocab.png)
+![Prompt Liste Vocab](./assets/prompt_list_vocab.webp)
 
 Cette méthode m’a permis d’obtenir les mots-clés nécessaires tout en contournant les limitations techniques que j’ai rencontrées.
 

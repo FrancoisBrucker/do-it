@@ -31,7 +31,7 @@ Ce jeu s'est beaucoup inspiré du mécanisme de 2048 qui a été un gros succès
 Voici une capture d'écran du jeu qui est disponible sur téléphone : 
 
 <div style="display:flex">
-<div><img src="jeu_de_pasteque.png"></div>
+<div><img src="jeu_de_pasteque.webp"></div>
 </div>
 
 ##### Objectif du POK
@@ -73,7 +73,7 @@ J'ajoute un fichier main.js dans lequel je vais coder les différentes fonctions
 J'ai eu beaucoup de difficultés en suivant cette méthode dont une que j'ai pas réussi à corriger : 
 
 <div style="display:flex">
-<div><img src="erreur_matter.png"></div>
+<div><img src="erreur_matter.webp"></div>
 </div>
 
 J'ai donc utilisé [Vite](https://vitejs.dev/) pour créer mon projet (ce qu'un des tutos Matter.js utilisé comme environnement) et cela à très bien marché en suivant la documentation.
@@ -84,7 +84,7 @@ Maintenant que j'ai mon environnement je peux commencer à coder le jeu.
 La première chose à créer est donc une boite, pour ça j'ai juste suivi la [documentation](https://brm.io/matter-js/) qui explique comment ajouter des corps aux mondes ce qui m'a donné cela : 
 
 <div style="display:flex">
-<div><img src="boite.png"></div>
+<div><img src="boite.webp"></div>
 </div>
 
 
@@ -139,7 +139,7 @@ Runner.run(engine);
 ## 4. Créer un rond qui tombe
 De la même façon j'ai juste suivi la [documentation](https://brm.io/matter-js/). Et j'ai obtenu cela : 
 <div style="display:flex">
-<div><img src="boitefruit.png"></div>
+<div><img src="boitefruit.webp"></div>
 </div>
 
 {% details "Code associé" %}
@@ -395,8 +395,8 @@ window.onkeyup = (event) => {
 
 Alors notre fruit est bloqué sur les deux côté du mur : 
 <div style="display:flex">
-<div><img src="déplacementetmur.png"></div>
-<div><img src="déplacementetmur2.png"></div>
+<div><img src="déplacementetmur.webp"></div>
+<div><img src="déplacementetmur2.webp"></div>
 </div>
 
 ## 7. Faire tomber le fruit avec la barre espace
@@ -515,7 +515,7 @@ function ajouterFruit(){
 ```
 
 <div style="display:flex">
-<div><img src="plusieursTailleetAléatoire.png"></div>
+<div><img src="plusieursTailleetAléatoire.webp"></div>
 </div>
 
 
@@ -552,8 +552,8 @@ Events.on(engine, "collisionStart", (event) => {
 ```
 
 <div style="display:flex">
-<div><img src="disparition.png"></div>
-<div><img src="disparition2.png"></div>
+<div><img src="disparition.webp"></div>
+<div><img src="disparition2.webp"></div>
 </div>
 
 Lorsque deux fruits identiques se touchent ils disparaisent. 
@@ -585,8 +585,8 @@ Events.on(engine, "collisionStart", (event) => {
 ```
 
 <div style="display:flex">
-<div><img src="colission1.png"></div>
-<div><img src="colission2.png"></div>
+<div><img src="colission1.webp"></div>
+<div><img src="colission2.webp"></div>
 </div>
 
 Désormais quand deux fruits se rencontrent, le fruit suivant apparait ! 
@@ -668,23 +668,23 @@ Events.on(engine, "collisionStart", (event) => {
 Pour ça je me suis rendue sur Canva et j'ai cherché des images de légumes/fruits qui iront bien dans le jeu, voici ceux que j'ai sélectioné : 
 
 <div style="display:flex">
-<div><img src="radish.png"></div>
-<div><img src="garlic.png"></div>
-<div><img src="onionw.png"></div>
-<div><img src="lemon.png"></div>
-<div><img src="orange.png"></div>
-<div><img src="tomato.png"></div>
-<div><img src="onion.png"></div>
-<div><img src="paprika.png"></div>
+<div><img src="radish.webp"></div>
+<div><img src="garlic.webp"></div>
+<div><img src="onionw.webp"></div>
+<div><img src="lemon.webp"></div>
+<div><img src="orange.webp"></div>
+<div><img src="tomato.webp"></div>
+<div><img src="onion.webp"></div>
+<div><img src="paprika.webp"></div>
 </div>
 <div style="display:flex">
-<div><img src="eggplant.png"></div>
-<div><img src="artichoke.png"></div>
-<div><img src="pumpkin.png"></div>
+<div><img src="eggplant.webp"></div>
+<div><img src="artichoke.webp"></div>
+<div><img src="pumpkin.webp"></div>
 </div>
 
 Le set n'est pas parfait et il y a les filligrames de Canva mais si j'ai le temps j'essaierais de trouver quelque chose de mieux à la fin.
-On va ajouter toutes ces images dans le dossier public et les ajouter dans le code. On fera attention de nommer les images avec le label du fruit correspondant. Par exemple *garlic.png* pour notre ail. Au lieu d'ajouter une couleur à nos fruits on va leur rajouter une image avec <strong>sprite</strong>.
+On va ajouter toutes ces images dans le dossier public et les ajouter dans le code. On fera attention de nommer les images avec le label du fruit correspondant. Par exemple *garlic.webp* pour notre ail. Au lieu d'ajouter une couleur à nos fruits on va leur rajouter une image avec <strong>sprite</strong>.
 
 ```html
 function ajouterFruit(){
@@ -695,7 +695,7 @@ function ajouterFruit(){
         isSleeping: true,
         render : {
             fillStyle: randomFruit.color,
-            sprite: {texture : '/${randomFruit.label}.png'}
+            sprite: {texture : '/${randomFruit.label}.webp'}
         },
     });
     monFruit = body;
@@ -706,8 +706,8 @@ Il faut faire la même modification lorsque deux fruits se rencontrent et que le
 
 
 <div style="display:flex">
-<div><img src="avecfruit.png"></div>
-<div><img src="avecfruit2.png"></div>
+<div><img src="avecfruit.webp"></div>
+<div><img src="avecfruit2.webp"></div>
 </div>
 
 ## 4. Ajout d'un score pour la partie 
@@ -830,7 +830,7 @@ Events.on(engine,"collisionStart",(event)=>{
                 newfruit.radius,
                 {render: {
                     fillStyle: newfruit.color,
-                    sprite: { texture: `/${newfruit.label}.png` },
+                    sprite: { texture: `/${newfruit.label}.webp` },
                 },
             label : newfruit.label,
         });
@@ -846,8 +846,8 @@ Events.on(engine,"collisionStart",(event)=>{
 ```
 J'améliore un peu l'hmtl et j'obtiens ça : 
 <div style="display:flex">
-<div><img src="amelioration.png"></div>
-<div><img src="ameliorationavecscore.png"></div>
+<div><img src="amelioration.webp"></div>
+<div><img src="ameliorationavecscore.webp"></div>
 </div>
 
 Ensuite j'ai changé les couleurs de la boite et du fond et j'ai rajouté un bouton pour lancer une nouvelle partie. Pour cela j'ai supprimé tous les corps autre que les constituants de la boite et mis le score à zero lorsque le joueur clique sur le bouton.
@@ -864,7 +864,7 @@ document.getElementById('newGameButton').addEventListener('click', () => {
 ```
 
 <div style="display:flex">
-<div><img src="nouvellescouleuretnouvellepartie.png"></div>
+<div><img src="nouvellescouleuretnouvellepartie.webp"></div>
 </div>
 
 

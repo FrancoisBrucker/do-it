@@ -35,19 +35,19 @@ Je souhaite pour mon premier POK, coder un site internet à l'aide des connaissa
 
 Lors de ce sprint, je m'étais fixé le premier objectif de dessiner les pages du site grâce à Figma. Je n'ai pas dessiné toutes les pages car cela me semblait être du temps perdu : en effet, certaines pages vont être très similaires comme les pages présentant 2 villes différentes, j'ai donc décidé de faire un template commun pour toutes les villes. Pour cette conception de maquette, il a fallu que je choisisse les couleurs du site et malgrè l'utilisation de générateurs de couleur en ligne, je ne suis pas sure d'en être très satisfaite, je me réserve donc le droit de changer les couleurs plus tard.
 
-![Page d’accueil faite sur Figma](./site1.png)
+![Page d’accueil faite sur Figma](./site1.webp)
 
 Sur la page d’accueil, je souhaite que l’utilisateur puisse cliquer sur chaque pays afin d’accéder directement à la page de ce pays
 
-![Page d’accueil avec menu faite sur Figma](./site2.png)
+![Page d’accueil avec menu faite sur Figma](./site2.webp)
 
 Mais depuis l’accueil, grâce aux onglets villes et pays, on pourra aussi accéder à un pays ou une ville 
 
-![Page de pays faite sur Figma](./site3.png)
+![Page de pays faite sur Figma](./site3.webp)
 
 Sur la page d’un pays, je développerai mon itinéraire au sein de ce pays, de nouveau, l’utilisateur pourra cliquer sur les différentes villes pour avoir plus de détails. 
 
-![Page de pays faite sur Figma](./site4.png)
+![Page de pays faite sur Figma](./site4.webp)
 
 Sur la page de la ville, je mettrai des photos et des bonnes adresses
 
@@ -70,23 +70,23 @@ Lors de ce sprint, je mettais fixé comme objectif de faire toutes les pages des
 
 J'ai donc commencé par créer une page pour une première ville sur laquelle j'ai intégré une carte google map pour que l'utilisateur puisse voir les différents lieux que je recommande dans cette ville. pour cela, j'ai utilisé l'API Google Mpas Platform qui est gratuite pour les 30 000 premières requettes. 
 
-![Capture d'écran de la page de Flensburg](./Ex_ville1.png)
+![Capture d'écran de la page de Flensburg](./Ex_ville1.webp)
 
 J'ai ensuite voulu ajouter les photos en les organisant comme je le voulais, pour cela, j'ai retravaillé l'utilisation de grid que j'avais vu lors de mon MON 1 grâce à [`un jeu`](https://codepip.com/games/grid-garden/#fr).
 
-![Capture d'écran des photos](./photos.png)
+![Capture d'écran des photos](./photos.webp)
 
 J'ai ensuite fait un form pour que les gens puissent me contacter si ils avaient des questions sur une des villes:
 
-![Capture d'écran du form](./form.png)
+![Capture d'écran du form](./form.webp)
 
 En cliquant sur envoyer, l'application de mail s'ouvre avec le message près à être envoyé: 
 
-![Capture d'écran du mail](./mail.png)
+![Capture d'écran du mail](./mail.webp)
 
 J'ai aussi ajouté un menu déroulant pour choisir directement la ville que l'on souhaite voir
 
-![Capture d'écran du menu](./menu_villes.png)
+![Capture d'écran du menu](./menu_villes.webp)
 
 
 

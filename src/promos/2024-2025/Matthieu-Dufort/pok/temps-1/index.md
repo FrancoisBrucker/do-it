@@ -92,7 +92,7 @@ L'entreprise exemple fictive que nous allons utiliser tout au long de l'exercice
 
 Pour cela, BatiBase a fait appel à nous afin de construire leur base de données. Ils ne connaissent pas bien les bases de données et nous laissent donc libre choix sur tout, tant que cela couvre leur activité et que la base est scalable. Nous allons donc devoir choisir un modèle d'architecture et le construire en suivant les recommandations d'experts.
 
-![logo BatiBase](./logoBatiBase.png)*(ChatGPT)*
+![logo BatiBase](./logoBatiBase.webp)*(ChatGPT)*
   
 ## Utilisation d'une base de données
 
@@ -143,7 +143,7 @@ Ce système atteint cependant ses limites pour les très grandes entreprises, ca
 
 Voici un schéma de cette représentation :
 
-![Schéma de la base relationnelle](./RDBMS_structure.png)*(File : RDBMS structure.png - Wikimedia Commons, 2010)*
+![Schéma de la base relationnelle](./RDBMS_structure.webp)*(File : RDBMS structure.webp - Wikimedia Commons, 2010)*
 
 On observe bien le procédé de stockage sous forme de tableau. On peut aussi voir le fonctionnement plus classique d'une base de données avec les processus qui se déroulent dans une instance et qui sont ensuite reportés sur le disque de la base tout en conservant des logs.
 
@@ -155,7 +155,7 @@ On peut citer les systèmes de base de données de Google : BigTable ; Amazon : 
 
 Si l'on se penche sur le fonctionnement de LinkedIn, par exemple, on retrouve un système de clé qui s'associe à un index, lui-même associé à la clé et à la valeur, comme sur le schéma ci-dessous :
 
-![Table de Hachage](./tableHachage.png)*(File : HASHTB08.svg — Wikimedia Commons, s. d.)*
+![Table de Hachage](./tableHachage.webp)*(File : HASHTB08.svg — Wikimedia Commons, s. d.)*
 
 Le tableau n'a alors pas d'ordre et l'on retrouve l'index très rapidement pour ensuite accéder au reste. Ceci permet de gagner en efficacité et en temps tout en permettant la répartition des données sur différents serveurs. Pour constituer ce genre de tableau, on utilise des fonctions de hachage que l'on doit définir de sorte à éviter les duplicats et à garantir que deux clés n'aient pas le même index.
 
@@ -167,7 +167,7 @@ Une base de données orientée document est une base de données semi-structuré
 
 Cette base a une organisation sous la forme de graphique où chaque entité correspond à un nœud, et les entités sont liées entre elles par des branches. Le but de ce type de base de données est de représenter les données de façon interconnectée. L'avantage principal de ce modèle est qu'il permet de fouiller en profondeur dans des bases sans avoir à utiliser une infinité de jointures. Cette base permet aux utilisateurs de se promener dans le graphique facilement pour passer d'un enregistrement à un autre. On peut associer cela aux connexions des réseaux sociaux où les personnes se connectent entre elles.
 
-![Base de donnée orientée graph](./BDDorientegraph.png)*(Vauquier, 2022)*
+![Base de donnée orientée graph](./BDDorientegraph.webp)*(Vauquier, 2022)*
 
 ## Structure transactionnelle
 
@@ -210,7 +210,7 @@ Dans ce type de diagramme, il existe les objets, leurs associations et les attri
 
 On précise dans ce modèle le type de lien entre les objets (1, n), (n, 1), (n, n).
 
-![Diagramme entité relation](./ER_Diagram.png)*(Database-design — Diagrammes de Modèle D’entité-relation Dans Visio, s. d.)*
+![Diagramme entité relation](./ER_Diagram.webp)*(Database-design — Diagrammes de Modèle D’entité-relation Dans Visio, s. d.)*
 
 ### Diagramme de structure de données
 
@@ -218,17 +218,17 @@ Ce diagramme est apparenté au modèle entité-association, mais il est plus foc
 
 Il utilise une convention bien précise pour définir les liens entre les éléments. Il est possible de personaliser ces liens en simplifiant en utilisant la convention précédente de (1, n), (n, 1), (n, n) :
 
-![Lien entre les éléments](./FlecheType.png)*(Qu’est-ce Qu’un Diagramme Entité-association ? , s. d.)*
+![Lien entre les éléments](./FlecheType.webp)*(Qu’est-ce Qu’un Diagramme Entité-association ? , s. d.)*
 
 Ce qui permet d'aboutir à des diagrammes très précis qui permettent de bien comprendre la conception de la base de données. Il peut être intéressant de commencer par un diagramme entité-relation avant de passer à ce type de diagramme pour bien illustrer tous les procédés et liens facilement, puis se pencher ensuite sur le côté plus technique.
 
-![Diagramme de Strucure de donnée](./DiagrammeStructure.png)*(Qu’est-ce Qu’un Diagramme Entité-association ? , s. d.)*
+![Diagramme de Strucure de donnée](./DiagrammeStructure.webp)*(Qu’est-ce Qu’un Diagramme Entité-association ? , s. d.)*
 
 ### Arbre de données
 
 Cette représentation permet de montrer la hiérarchie qu'il existe entre des objets. On peut l'utiliser pour représenter tout ce qui découle d'un certain objet des diagrammes précédents ou plus directement pour une base particulièrement centrée sur un objet.
 
-![Diagramme en arbre](./arbre_1.png)*(Structures de Données Hiérarchiques : Les Arbres, s. d.)*
+![Diagramme en arbre](./arbre_1.webp)*(Structures de Données Hiérarchiques : Les Arbres, s. d.)*
 
 ## Bonnes pratiques pour la réalisation d'un base
 
@@ -299,7 +299,7 @@ Ainsi, nous allons pouvoir créer une première représentation de la base sous 
 
 ## Représentation en diagramme entité relation
 
-![BatiBase entité relation](./ERBati.png)*(Diagramme entité relation de la société BatiBase)*
+![BatiBase entité relation](./ERBati.webp)*(Diagramme entité relation de la société BatiBase)*
 
 Ce diagramme permet d'avoir déjà un premier bon aperçu du fonctionnement de la base de données pour ensuite entrer dans le détail.
 
@@ -313,7 +313,7 @@ Pour réaliser ce diagramme, nous allons commencer à réfléchir a tous les cha
 
 Pour faire cela, j'ai décidé d'utiliser le site [dbdiagram](https://dbdiagram.io/d). Je n'ai jamais utilisé ce site. Cependant grâce à la [documentation](https://dbml.dbdiagram.io/docs) et aux exemples en ligne j'ai pu le prendre en main rapidement. Il permet de faire un rendu propre d'une base de données afin de pouvoir la construire ensuite rapidement.
 
-![BatiBase structure de données](./SDBati.png)*(Diagramme de structure de données de la société BatiBase)*
+![BatiBase structure de données](./SDBati.webp)*(Diagramme de structure de données de la société BatiBase)*
 
 Le code de ce schéma est retrouvable [ici](DataBaseFile.zip).
 

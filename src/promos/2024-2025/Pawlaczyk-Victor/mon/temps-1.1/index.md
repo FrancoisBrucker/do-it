@@ -137,9 +137,9 @@ Par exemple, on n'a pas besoin de retourner une valeur quand on met en forme une
 
 L'exemple suivant met en application les quelques points précédents en créant une procédure qui met sous forme de tableau une plage de données.
 
-![Alternate Text](Tableau.png)
+![Alternate Text](Tableau.webp)
 
-![Alternate](TableauMisEnForme.png)
+![Alternate](TableauMisEnForme.webp)
 
 ```vb
 Sub Exemple_Mise_En_Forme()

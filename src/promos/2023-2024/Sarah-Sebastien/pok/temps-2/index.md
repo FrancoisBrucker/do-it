@@ -257,7 +257,7 @@ Pour mon premier POK, je me suis rendue compte que j'avais perdu beaucoup de tem
 Alors cette fois, j'ai décidé de ne pas faire la même erreur. J'ai donc regardé sur internet à quoi ressemblait les jeux qui avaient déjà pu être faits par d'autres dans le passé, pour avoir une idée de ce qui était réellement faisable. Et j'ai réalisé une maquette sur Figma, en essayant d'appliquer les conseils qu'on avait pu avoir pendant les cours d'UI/UX. 
 
 |---|---|
-|<img width="350" src="Maquette_jeu_1.png">|<img width="350" src="Maquette_jeu_2.png">|
+|<img width="350" src="Maquette_jeu_1.webp">|<img width="350" src="Maquette_jeu_2.webp">|
 
 Vous pouvez retrouver la maquette [ici](https://www.figma.com/file/nxQbQ6gxDwGkSqBTP9AhlS/Maquette-MasterMind-en-Java?type=design&node-id=0%3A1&mode=design&t=v7Qm5wzCocXpxts0-1) et le prototype [là](https://www.figma.com/proto/nxQbQ6gxDwGkSqBTP9AhlS/Maquette-MasterMind-en-Java?type=design&node-id=2-4&t=1MvNUXGn23z5K0zS-0&scaling=scale-down&page-id=0%3A1)
 
@@ -291,25 +291,25 @@ J'ai d'abord commencé mon sprint 2 par son visionnage. Je la conseille vivement
 
 #### Interface initiale 
 
-<img width="350" src="Mastermind_1.png">
+<img width="350" src="Mastermind_1.webp">
 
 #### Partie en cours
 
 Le joueur vient écrire sa proposition:
 
-<img width="350" src="Mastermind_2.png">
+<img width="350" src="Mastermind_2.webp">
 
 Une fois sa tentative validée, les indications de la justesse de sa proposition s'affichent sur la droite :
 - **Blanc** : la couleur est bonne mais mal placée
 - **Rouge** : la couleur est bonne et bien placée
   
-<img width="350" src="Mastermind_4.png">
+<img width="350" src="Mastermind_4.webp">
 
 #### Fin de la partie
 
 |L'utilisateur n'a pas réussi à trouver le code avant la fin des 7 tentatives|L'utilisateur a réussi à trouver le code avant la fin des 7 tentatives|
 |---|---|
-|<img width="350" src="Mastermind_3.png">|<img width="350" src="Mastermind_5.png">|
+|<img width="350" src="Mastermind_3.webp">|<img width="350" src="Mastermind_5.webp">|
 
 <h2 id=code> Construction du code </h2>
 
@@ -327,7 +327,7 @@ Classes importantes du package Java Swing,
 - **Jframe** : utilisée pour créer des fenêtres graphiques dans une application 
 {%endprerequis%}
 
-<img width="200" src="Jframe_Jpanel.png">
+<img width="200" src="Jframe_Jpanel.webp">
 
 [Source image](https://waytolearnx.com/2020/05/jpanel-java-swing.html)
 

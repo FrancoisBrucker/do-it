@@ -100,7 +100,7 @@ const app = http.createServer((request, response) => {
 })
 ```
 La valeur application/json dans l'en-tête Content-Type informe le destinataire que les données sont au format JSON. Le tableau de notes est transformé en JSON à l'aide de la méthode JSON.stringify(notes).
-<img src="js1.png" width="700" height="550">
+<img src="js1.webp" width="700" height="550">
 
 ### **Express** <a id="subsection-2"></a>
 Il est possible de mettre en œuvre notre code serveur directement avec le serveur web http intégré de Node. Cependant, cela devient fastidieux, en particulier lorsque l'application prend de l'ampleur. C'est la raison pour laquelle de nombreuses bibliothèques ont vu le jour pour faciliter le développement côté serveur avec Node. Une de ces bibliothèques est **Express**
@@ -214,7 +214,7 @@ note.save().then(result => {
 ```
 
 Nous pouvons voir l'état actuel de la base de données de l'Atlas MongoDB à partir de Parcourir les collections, dans l'onglet Base de données.
-<img src="mongo.png" width="700" height="550">
+<img src="mongo.webp" width="700" height="550">
 
 ### **Schema** <a id="subsection-4"></a>
 Un schéma est un objet JSON qui définit la structure et le contenu de vos données.

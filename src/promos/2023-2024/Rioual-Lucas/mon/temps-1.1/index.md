@@ -52,7 +52,7 @@ L'objectif de la première partie de ce tutoriel est de modifier la structure HT
 
 Le DOM (Document Object Model) est une façon pour les navigateurs web de représenter une page web. Il organise la page en une structure d'arbre, où chaque élément de la page (comme du texte, des images, des boutons) est un nœud dans cet arbre.
 
-<img src="DOM.png">
+<img src="DOM.webp">
 
 Pour plus d'information sur le DOM, vous pouvez visiter ce [site](https://la-cascade.io/articles/le-dom-cest-quoi-exactement) 
 
@@ -76,7 +76,7 @@ Pour comprendre le fonctionnement de cette bibliothèque, ce [site](https://gaye
 
 Je voulais ensuite importer des modèles 3D. Pour cela, j'ai suivi un [tutoriel Youtube](https://www.youtube.com/watch?v=WBe3xrV4CPM&t=233s). 
 Cela m'a permis d'importer un petit chien sur un site web :
-<img src="three.PNG">
+<img src="three.webp">
 
 ## Aller plus loin avec des animations
 

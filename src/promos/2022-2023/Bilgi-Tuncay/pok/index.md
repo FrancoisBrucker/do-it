@@ -26,4 +26,4 @@ La complexité est croissante, chaque POK repose sur ceux d'avant.
 
 ## Preview :
 
-<img src="./images/artblog-front-cover.png" alt="preview" />
+<img src="./images/artblog-front-cover.webp" alt="preview" />

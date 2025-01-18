@@ -60,7 +60,7 @@ La plupart des documents que j'ai trouvé, s'accordait à dresser un parralèle 
 Les étapes du deuil sont normales et doivent être vécues pour une gestion saine du deuil ou de la perte. Bien que chaque individu ne traverse pas les étapes à la même vitesse ou avec la même intensités, chaque étape reste importante.
 {% endnote %}
 {% details "La courbe du deuil" %}
-![Courbe du deuil](./Courbe%20du%20deuil.jpg)
+![Courbe du deuil](./Courbe%20du%20deuil.webp)
 {% enddetails %}
 Le deuil se divise donc d'après E. Kübler-Ross en 5 étapes :
 1. ***Le déni*** : Ce n'est pas possible, ils ne vont pas nous imposer un nouvel outil.
@@ -88,7 +88,7 @@ Afin d'adopter un nouvel outil, il faut prendre le temps de faire le deuil de l'
 D'après le même ouvrage, une source fréquente de l'échec d'une transition paisible réside dans le déphasage entre les décideurs et le reste des collaborateurs pendant cette transition.
 
 {% details "Schéma de la loi de Z" %}
-![Loi de Z](./Loi%20de%20Z.jpg)
+![Loi de Z](./Loi%20de%20Z.webp)
 {% enddetails %}
 La loi de Z présentée sur le graphe ci-dessus met en avant le fait que l'équipe en charge de penser le changement d'outil est beaucoup plus avancée dans les processus de deuil et de transition par rapport au reste des collaborateurs. Ainsi, cette équipe à tendance à vouloir passer à une phase de déploiement dès la fin de leurs travaux de réflexion (points tillés verticaux à droite de l'image). Or, afin que la transition soit optimale pour tous les collaborateurs, il faut revenir au point de départ pour chacun des employés. Avoir conscience de cette loi permet de penser la transition dans son intégralité : **toutes les phases pour tous les collaborateurs concernés**.
 {% note %}
@@ -127,7 +127,7 @@ On peut analyser ces profiles en croissance et en survie. Les individus peuvent 
 Notons toutefois qu'il faut aussi adapter sa réponse au comportment de l'individu. Cela permet notamment d'évaluer son avancé dans le processus de deuil. Dans son ouvrage [6], A. Tonnelé évoque une échelle des comportements.
 
 {% details "Echelle de comportements face au changement" %}
-![Echelle des comportements](./Echelle%20des%20comportements.jpg)
+![Echelle des comportements](./Echelle%20des%20comportements.webp)
 {% enddetails %}
 
 ## Méthodologie d'action
@@ -149,7 +149,7 @@ Chacune de ces phases doit être réalisée en tenant compte des besoins des col
 Avant d'envisager le changement à effectuer (choix de l'outil, méthode de mise en place...), il faut apprécier la complexité de l'environnement des collaborateurs impactés. Un outil inétessant pour cela est "La marguerite sociologique" [4]. Cette dernière permet de comprendre le système de valeur de l'entreprise ou du service considéré, afin de décider d'une méthode de changement.
 
 {% details "La marguerite du changement" %}
-![La marguerite du changement](./Marguerite%20du%20changement.jpg)
+![La marguerite du changement](./Marguerite%20du%20changement.webp)
 {% enddetails %}
 
 Si le système de valeur de l'entreprise est plus tournée vers les rites, les routines, les mythes et les symbolee, alors le projet derva être mis en place en favorisant la collaboration et l'éducation. Sinon, il pourra être plus interventioniste et directif.
@@ -226,22 +226,22 @@ Le questionnaire a été réalisé en milieu de MON. Ma compréhension du sujet 
 {% endnote %}
 
 {% details "Population questionnée" %}
-![Répartition par niveau d'étude](./Population.png)
+![Répartition par niveau d'étude](./Population.webp)
 Presque la moitier des personnes ayant répondu suit actuellement un cursus de 3ème année et l'autre moitier suit un cursus de 2ème année. Le niveau de maturité d'utilisation de l'outil proposé varie donc beaucoup : les 3ème années ont souvent d'autres ressources pour accéder à leur emploi du temps, mais pas à l'emploi du temps des salles par exemple.
 {% enddetails %}
 
 {% details "Emotions ressenties" %}
-![Emotions ressenties](./Emotions.png)
+![Emotions ressenties](./Emotions.webp)
 On s'aperçoit que les émotions les plus représentées sont des émotions liées à la surprise, à la curiosité et à l'appréhension. Suivent alors les émotions négatives comme la colère ou le dépit. Les émotions positives ne sont quant à elles, que peu représentées.
 {% enddetails %}
 
 {% details "Timing de communication" %}
-![Timing de communication](./Timing.png)
+![Timing de communication](./Timing.webp)
 Près de 35% des personnes interrogées estiment que la communication était trop tardive, 31% pensent qu'elle était un peut trop tardive et 31% qu'elle a été faite au bon moment. En traitant les données, on voit qu'à peu près le même nombre de 2ème années et de 3ème/4ème année pensent que la communication était un peu ou trop tardive. On ne peut donc pas dresser de lien entre l'expérience et le temps nécessaire pour accueillir l'information.
 {% enddetails %}
 
 {% details "Envie" %}
-![Envie](./Envie.png)
+![Envie](./Envie.webp)
 On remarque que 100% des personnes interrogées affirment que l'équipe projet n'a pas essayé de donner "envie" aux utlisateurs. Un indicateur de cela est le manque de fonctionnalités utiles pour les élèves comme la possibilité de voir l'emploi du temps des salles afin de trouver des lieux pour travailler. L'absence de questionnement global, surout au vu du sytème de valeur des élèves de l'école, entraine probablement de plus fortes réticences et blocages.
 {% enddetails %}
 

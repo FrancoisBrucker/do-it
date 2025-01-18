@@ -188,7 +188,7 @@ Ex dans le cas ci-dessus : =ET(MOIS(A$1) = MOIS(AUJOURDHUI());$B$8) car la case 
 **Colorer les doublons d’une plage avec MFC** : ajouter MFC et formule personnalisé =NB.SI(plage figée;A2)>1      A2 = cellule en haut à gauche de la plage
 Ex : =NB.SI($C$2:$C$19;A2)>1
 
-<img src="MFC.png" width="100%" alt="Image description">
+<img src="MFC.webp" width="100%" alt="Image description">
 
 #### Trier des données
 
@@ -243,9 +243,9 @@ Vous pouvez accéder aux modifications effectuées en cliquant sur le tableau [s
 4. **Produit facturés** : je créé rapidement 3 colonnes et une ligne des totaux avec la fonction SOMME.
 5. **Bilan des factures par librairie** : je créé un TCD sur une nouvelle feuille que je nomme "Créé bilan 2024".
 
-<img src="Factures 2024.png" width="90%" alt="Image description">
+<img src="Factures 2024.webp" width="90%" alt="Image description">
 
-<img src="TCD 2024.png" width="50%" alt="Image description">
+<img src="TCD 2024.webp" width="50%" alt="Image description">
 
 #### Amélioration tableau calendrier et compta
 
@@ -255,7 +255,7 @@ Vous pouvez accéder aux modifications effectuées en cliquant sur le tableau [c
 2. **Graphique sparkline** : en regardant plus précisément le tableau de Laura, je réalise que ces graphiques n’auraient pas d’intérêt car elle reçoit les virements à des moments variées et non tous les mois.
 3. **Feuille graphique** : je déplace facilement les graphiques sur une nouvelle feuille que je nomme "Créé graphique 2024".
 
-<img src="Graphique 2024.png" width="70%" alt="Image description">
+<img src="Graphique 2024.webp" width="70%" alt="Image description">
 
 ### 👍Retours de Laura
 
@@ -501,10 +501,10 @@ Voici le [tuto nettoyage](https://developers.google.com/workspace/add-ons/sample
 
 Cette fois tout s'est bien passé, c'était même un peu décevant car en 20 min le tuto était fini et tout fonctionnait.  
 Voici le **tableau non nettoyé** :
-<img src="tableauPasNettoye.png" width="30%" alt="Image description">
+<img src="tableauPasNettoye.webp" width="30%" alt="Image description">
 
 Et ce qu'on obtient **après avoir exécuté le script** avec Google Apps Script :
-<img src="tableauNettoye.png" width="30%" alt="Image description">
+<img src="tableauNettoye.webp" width="30%" alt="Image description">
 
 #### 📅Projet 3 : remplir un agenda de vacances d'équipe
 
@@ -513,7 +513,7 @@ Je vais suivre ce [tuto agenda](https://developers.google.com/apps-script/sample
 
 Cette fois c'était tout le contraire du tuto précédent : j'ai passé 1h à suivre les étapes, constaté qu'il y avait des bugs, trouver des solutions, voir apparaître de nouveaux bugs etc. ChatGPT a fait de son mieux, mais même lui est coincé. C'est avec regret que **j'abandonne là aussi ce projet** car je n'ai clairement pas la patience de résoudre tous ces bugs. De ce que je comprends, il y a un problème avec l'une des adresses mail du groupe que j'ai créé mais je ne dispose pas d'autres adresses mail dispo pour tester cette fonctionnalité, donc tant pis.  
 Ci-dessous un screen d'un des bugs qui me donne encore des cauchemars :
-<img src="bugCode.png" width="70%" alt="Image description">
+<img src="bugCode.webp" width="70%" alt="Image description">
 
 Si on retient le positif, ce projet non fini m'a quand même permis de **mieux comprendre l'intérêt des Google groupes** pour envoyer plus facilement des emails à un groupe ou donner plus facilement accès à des ressources.
 

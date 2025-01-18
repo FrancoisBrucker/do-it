@@ -168,7 +168,7 @@ exports.modifObjet = (req, res, next) => {
 
 La partie back nécessite de nombreuses lignes de code qui doivent être bien organisées pour ne pas se perdre. Il est donc recommandé d'optimiser cette structure et de créer plusieurs dossiers et fichiers afin de ne pas avoir un seul documents beaucoup trop long et illisible. 
 
-![structure](./image/structure.png)
+![structure](./image/structure.webp)
 
 
 ## Sources 

@@ -39,7 +39,7 @@ Supposons que l'on a une liste de diffusion immense et on veut envoyer un messag
 Pour envoyer un mail à une liste de diffusion, il me faut tout d'abord une liste de diffusion que je crée comme ceci sur Google Sheets:
 
 <figure>
-  <img src="../mon2sheets.png">
+  <img src="../mon2sheets.webp">
   <figcaption>La liste de diffusion</figcaption>
 </figure>
 
@@ -48,7 +48,7 @@ Pour envoyer un mail à une liste de diffusion, il me faut tout d'abord une list
 Maintenant que nous avons la liste de diffusion, je crée mon message personnalisé dans une autre cellule:
 
 <figure>
-  <img src="../mon2texte.png">
+  <img src="../mon2texte.webp">
   <figcaption>Le message</figcaption>
 </figure>
 
@@ -237,13 +237,13 @@ Et pour finir on peut afficher un toast de confirmation pour dire que les e-mail
 Et voilà le résultat:
 
 <figure>
-  <img src="../menu.png">
+  <img src="../menu.webp">
   <figcaption>Le message</figcaption>
 </figure>
 
 Je vais éviter de lancer le programme d'envoi de mails pour pas que ```zinedine.zidane@gmail.com``` reçoive un message bizarre, mais en ce qui concerne la boite de dialogue à partir du fichier ```index.html``` on obient cela:
 
 <figure>
-  <img src="../dialog.png">
+  <img src="../dialog.webp">
   <figcaption>Le message</figcaption>
 </figure>

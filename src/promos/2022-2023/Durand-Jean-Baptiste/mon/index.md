@@ -17,11 +17,11 @@ Ensemble des MON réalisés par Jean-Baptiste Durand
 	<h2 class="temps">Temps 1</h2>
 	<div class="card-container">
 		<a class="card" style="background-color:rgba(64, 134, 244,var(--opacity));" href="./gglAppsScript">
-			<div class="img-container"><img src="./Image/Google_Apps_Script.svg.png" alt="Avatar" style="width:100%"/></div>
+			<div class="img-container"><img src="./Image/Google_Apps_Script.svg.webp" alt="Avatar" style="width:100%"/></div>
 			<p class="MON-descriptif">Google apps script ou comment automatiser les choses embêtantes dans un tableur</p>
 		</a>
 		<a class="card" style="background-color:rgba(218, 170, 248,var(--opacity));" href="./SQLinjection">
-			<div class="img-container"><img src="./Image/SQLinjection.jpg" alt="Avatar" style="width:100%;"/></div>
+			<div class="img-container"><img src="./Image/SQLinjection.webp" alt="Avatar" style="width:100%;"/></div>
 			<p class="MON-descriptif"> SQL injection </p>
 		</a>
 	</div>
@@ -31,11 +31,11 @@ Ensemble des MON réalisés par Jean-Baptiste Durand
 	<h2 class="temps">Temps 2</h2>
 	<div class="card-container">
 		<a class="card" style="background-color:rgba(126, 160, 219,var(--opacity));" href="./yaccLex">
-			<div class="img-container"><img src="./Image/compileur-logo.png" alt="Avatar" style="width:100%;border-radius: 8em;"></div>
+			<div class="img-container"><img src="./Image/compileur-logo.webp" alt="Avatar" style="width:100%;border-radius: 8em;"></div>
 			<p class="MON-descriptif">Programmes binaires et Compilateurs</p>
 		</a>
 		<a class="card" style="background-color:rgba(255, 56, 33,var(--opacity));" href="./firewall">
-			<div class="img-container"><img src="./Image/firewallLogo.png" alt="Avatar" style="width:100%"/></div>
+			<div class="img-container"><img src="./Image/firewallLogo.webp" alt="Avatar" style="width:100%"/></div>
 			<p class="MON-descriptif"> Firewall </p>
 		</a>
 	</div>
@@ -45,7 +45,7 @@ Ensemble des MON réalisés par Jean-Baptiste Durand
 	<h2 class="temps">Temps 3</h2>
 	<div class="card-container">
 		<a class="card" style="background-color:rgba(0, 127, 53 ,var(--opacity));" href="./compiler">
-			<div class="img-container"><img src="./Image/compiler.jpg" alt="Avatar" style="width:100%"/></div>
+			<div class="img-container"><img src="./Image/compiler.webp" alt="Avatar" style="width:100%"/></div>
 			<p class="MON-descriptif">Compilateur (partie 2)</p>
 		</a>
 		<a class="card" style="background-color:rgba(152, 115, 93,var(--opacity));" href="./phaser">

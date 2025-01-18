@@ -74,7 +74,7 @@ End Sub
 ```
 La boîte de dialogue de confirmation qui s'affiche est alors la suivante :
 
-![alt text](Images/BoiteDeDialogue.png)
+![alt text](Images/BoiteDeDialogue.webp)
 
 #### InputBox (Texte, Titre, Valeur par défaut)
 Cette fonction permet de demander à l'utilisateur de rentrer une valeur dans la boîte de dialogue. Ainsi, le code suivant demande à l'utilisateur de rentrer son nom, avec comme valeur par défaut "NOM", puis affiche le message "Welcome Nom!" :
@@ -87,7 +87,7 @@ Sub exemple()
     MsgBox "Welcome " & resultat & "!"
 End Sub
 ```
-![alt text](Images/DemandeEntree.png)
+![alt text](Images/DemandeEntree.webp)
 
 ### Utilisation de variables
 
@@ -265,11 +265,11 @@ Les résultats obtenus après avoir exécuté la macro sont les suivants :
 
 *Création des adresses mail*
 
-![alt text](Images/AdressesMails.png)
+![alt text](Images/AdressesMails.webp)
 
 *Extraction des centraliens de Marseille*
 
-![alt text](Images/ElevesECM.png)
+![alt text](Images/ElevesECM.webp)
 
 ### Pistes d'amélioration
 Il est possible d'améliorer le code suivant avec les éléments suivants :

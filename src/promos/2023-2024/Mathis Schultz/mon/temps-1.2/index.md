@@ -41,7 +41,7 @@ Avant de s'intéresser à TailwindCSS, il est important de se former au langage 
 
 Le but de ce paragraphe est de faire la mise en page d'une première page web, établir quelques éléments à placer ainsi que de partitionner la page.
 
-<img src="site_clair.png">
+<img src="site_clair.webp">
 
 Image du site sur fond clair
 
@@ -49,7 +49,7 @@ Il est facile de passer d'un site clair à un site sombre ! il suffit pour de d�
 
 Voici le résultat en ajoutant simplement "dark:text-bleu" ou "dark:bg-slate-100" pour modifier le text ou le fond en mode sombre.
 
-<img src="site_sombre.png">
+<img src="site_sombre.webp">
 
 Image du site sur fond sombre
 
@@ -90,7 +90,7 @@ Il existe plusieurs méthodes pour ajouter des typographies :
 - choisir plusieurs typo sur le site et cliquer sur le petit "+"
 - un bandeau s'affiche, en cliquant sur import un code apparaît entre deux balises < style>, il faut copier le code entre les balises pour venir le coller dans le fichier input.css
 
-<img src="choix_typo.png">
+<img src="choix_typo.webp">
 
 Image du site permettant de télécharger les typographie
 
@@ -119,7 +119,7 @@ Image du site permettant de télécharger les typographie
 
 Voilà le résultat avec la charte de Centrale : une typographie Barlow et les nuances de bleus et de gris :
 
-<img src="site_charte.png">
+<img src="site_charte.webp">
 
 Image du site avec la charte de Centrale
 
@@ -196,7 +196,7 @@ Cette partie ne propose pas de mettre en oeuvre la partie Java, ainsi bien que l
         </div>
 ```
 
-<img src="questionnaire.png">
+<img src="questionnaire.webp">
 
 Image du site avec un questionnaire simple
 

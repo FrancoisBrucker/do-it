@@ -166,7 +166,7 @@ Ainsi le facilitateur doit non seulement accompagner les personnes vers une conv
 
 Le rôle de facilitateur est différent de celui d’un formateur, ou coach ou consultant comme le résume le schéma ci-dessous :
 
-<img src="role facilitateur.png" width="50%" alt="Image description">
+<img src="role facilitateur.webp" width="50%" alt="Image description">
 
 Le facilitateur va notamment endosser ou attribuer à d’autres membres **2 rôles essentiels** lors de temps collectif type réunions :
 
@@ -184,7 +184,7 @@ Voir l’outil : **cadre de confiance** dans la partie “Boîte à outils”
 Ensuite, les **processus** permettent de **passer plus facilement et sereinement de la phase de divergence à la phase de convergence** lors d’une décision de groupe.
 On retrouve ces phases dans le **diamant de la participation**, un modèle de processus participatif élaboré par **Sam Kaner**, un facilitateur aux USA. Ce diamant visible ci-dessous illustre les étapes qu’on traverse quand, devant une question ou un problème, on quitte ce qu’on connaît (divergence) pour explorer de nouvelles possibilités (émergence), puis qu’on sélectionne ensuite l’option la plus pertinente (convergence).
 
-<img src="diamant participation.png" width="90%" alt="Image description">
+<img src="diamant participation.webp" width="90%" alt="Image description">
 
 <h2 id=outils> 📦Boîte à outils d’IC</h2>
 
@@ -237,7 +237,7 @@ Une fois le cadre fini, il faut **l’afficher dans la salle** pour pouvoir s’
 
 Voici le cadre de confiance qui avait été construit lors d’une formation que j’ai suivi au LICA, le Laboratoire d’Intelligence Collective et Artificielle à Marseille.
 
-<img src="cadre confiance.png" width="50%" alt="Image description">
+<img src="cadre confiance.webp" width="50%" alt="Image description">
 
 ### 👂Le pense écoute
 
@@ -286,7 +286,7 @@ Idéalement, le **facilitateur prend en note** les arguments des 2 équipes pour
 
 Voici la restitution visuelles d'un débat mouvant auquel j’avais participé au LICA, le Laboratoire d’Intelligence Collective et Artificielle à Marseille. Le thème était “*On peut coopérer avec tout le monde*”.
 
-<img src="debat mouvant.png" width="40%" alt="Image description">
+<img src="debat mouvant.webp" width="40%" alt="Image description">
 
 ### 💬Le tour de déclusion
 
@@ -365,7 +365,7 @@ Laetitia et François se **présentent**, **félicitent** les élèves d’être
 
 Puis l’un des facilitateurs commence par placer des **feuilles A4 plastifiées colorées** de manière espacée sur le sol avec des **émotions marquées dessus** (joie, sérénité, motivation, fatigue…) comme sur la photo ci-dessous.  
 
-<img src="inclusion sentiment.png" width="40%" alt="Image description">
+<img src="inclusion sentiment.webp" width="40%" alt="Image description">
 
 Il explique alors les consignes : les **élèves ont 2 min pour regarder les feuilles et se positionner à côté de l’émotion qu’ils ressentent ce matin** lors de cette rentrée en Do_It.  
 Un **tour de parole** s’installe où chaque élève doit dire **son prénom et dire le nom de l’émotion choisie en expliquant pourquoi en 1 phrase** (pas plus car il y a beaucoup d’élèves). Quand un élève a fini, il **désigne l’élève qui enchaîne** pour que la parole circule vite sans blanc.

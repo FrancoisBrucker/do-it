@@ -64,7 +64,7 @@ Pour se faire :
 
 ## 3. Analyse préliminaire des données
 
-### 3.1 Conversion automatisée des images du format ..ndpi au format .jpg
+### 3.1 Conversion automatisée des images du format ..ndpi au format .webp
 
 Les images sur lesquelles je travaille proviennent de microscopes numériques. Elles sont extraites au format .ndpi "NanoZoomer Digital Pathology Image" et sont de très hautes résolutions.
 
@@ -76,13 +76,13 @@ Ce logiciel est téléchargeable gratuitement sur [le site d'Hamamatsu](https://
 
 Voici son interface :
 
-![NDP Viewer2](NDP_view2.jpg)
+![NDP Viewer2](NDP_view2.webp)
 
 Afin de pouvoir utiliser ces images dans un algorithme de machine learning, **il faudrait les convertir dans un format plus propice à la programmation et permettant de réduire leur taille.**
 
 Toutefois, depuis NDP Viewer2, cette conversion ne peut se faire qu'image par image et serait trop chronophage pour convertir des 100aines d'images.
 
-La première problématique de ce POK consiste alors à **automatiser une conversion des images au format .ndpi vers .jpg.**
+La première problématique de ce POK consiste alors à **automatiser une conversion des images au format .ndpi vers .webp.**
 
 #### Tentative d'automatisation avec NDPview2
 
@@ -101,8 +101,8 @@ output_folder = 'C:\\Test-TER\\DATA-JPG'
 test_file = 'test.ndpi'
 test_file_path = os.path.join(input_folder, test_file)
 
-# Génération du chemin de sortie avec le même nom de fichier mais en extension .jpg
-output_file_path = os.path.join(output_folder, os.path.splitext(test_file)[0] + '.jpg')
+# Génération du chemin de sortie avec le même nom de fichier mais en extension .webp
+output_file_path = os.path.join(output_folder, os.path.splitext(test_file)[0] + '.webp')
 
 # Commande pour appeler le viewer NDPI et effectuer la conversion
 command = [viewer_path, '-i', test_file_path, '-o', output_file_path]
@@ -122,7 +122,7 @@ Hélas le programme se contente de lancer le viewer sans effectuer la conversion
 #### Tentative d'automatisation avec OpenSlide
 
 Le programme ci-dessous n'est pas abouti...
-Il semble théoriquement possible de convertir les fichiers .ndpi vers .jpg grâce à la bibliothèque Python or en sortie ce programme renvoie une erreur indiquant que la bibliothèque ne peut lire les fichiers .ndpi.
+Il semble théoriquement possible de convertir les fichiers .ndpi vers .webp grâce à la bibliothèque Python or en sortie ce programme renvoie une erreur indiquant que la bibliothèque ne peut lire les fichiers .ndpi.
 
 cf [Documentation OpenSlyde Python](https://openslide.org/api/python/)
 
@@ -163,7 +163,7 @@ input_ndpi_path = 'C:\\Test-TER\\DATA-NDPI\\test.ndpi'
 output_jpg_folder = 'C:\\Test-TER\\DATA-JPG'
 
 # Construire le chemin de sortie pour le fichier JPG
-output_jpg_path = output_jpg_folder + '\\test.jpg'
+output_jpg_path = output_jpg_folder + '\\test.webp'
 
 # Appeler la fonction pour convertir le fichier NDPI en JPG
 convert_ndpi_to_jpg(input_ndpi_path, output_jpg_path)
@@ -180,7 +180,7 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
 # Liste des chemins d'accès aux images
-image_paths = ['C:\\TER\\visu1.png', 'C:\\TER\\visu3.png', 'C:\\TER\\visu2.png', 'C:\\TER\\visu4.png']
+image_paths = ['C:\\TER\\visu1.webp', 'C:\\TER\\visu3.webp', 'C:\\TER\\visu2.webp', 'C:\\TER\\visu4.webp']
 
 # Créer une figure avec 2x2 sous-graphiques
 plt.figure(figsize=(8, 8))
@@ -198,12 +198,12 @@ plt.tight_layout()
 
 plt.show()
 ```
-![Exemples d'images](Visualisation.jpg)
+![Exemples d'images](Visualisation.webp)
 
 Ces différentes images sont à l'heure actuelle peu exploitables.
 On y remarque beaucoup de bruit, des tâches qui pourraient tromper l'algorithme quant à la détection du carcinome... 
 
-![Annotations](Visualisation_annotee.jpg)
+![Annotations](Visualisation_annotee.webp)
 En noir, la zone où se trouve le carcinome.
 En rouge, du bruit pour l'algorithme
 
@@ -217,7 +217,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Chemin de l'image
-image_path = "D:/Master_SID/projet_TER/data/tumeur/9.jpg"
+image_path = "D:/Master_SID/projet_TER/data/tumeur/9.webp"
 
 # Lecture de l'image et conversion BGR2RGB
 image = cv2.imread(image_path)
@@ -244,7 +244,7 @@ segmented_image = segmented_image.reshape(image.shape)
 
 
 # Chemin de sortie
-cv2.imwrite("D:/Master_SID/projet_TER/data/pretraitement_tumeur/9.jpg", cv2.cvtColor(segmented_image, cv2.COLOR_RGB2BGR))
+cv2.imwrite("D:/Master_SID/projet_TER/data/pretraitement_tumeur/9.webp", cv2.cvtColor(segmented_image, cv2.COLOR_RGB2BGR))
 
 # Affichage
 
@@ -252,7 +252,7 @@ plt.subplot(121), plt.imshow(image), plt.title('Original Image')
 plt.subplot(122), plt.imshow(segmented_image), plt.title('Segmented Image')
 plt.show()
 ```
-![Image d'origine vs Image segmentée](pretraitement.jpg)
+![Image d'origine vs Image segmentée](pretraitement.webp)
 
 ## 4. Pré-traitement des données
 
@@ -265,7 +265,7 @@ Une première chose à faire consiste à **délimiter le contour** des membranes
 
 Voici une membrane :
 
-![Celulle avant extraction du contour](celulle.png){width=50%}
+![Celulle avant extraction du contour](celulle.webp){width=50%}
 
 Et le 1er code testé pour extraire le contour :
 
@@ -298,7 +298,7 @@ def extraire_contour(image_entree, image_sortie, seuil_canny, taille_dilatation,
 ```
 Ce 1er code hélas n'est pas suffisament robuste. Le bruit perturbe le découpage et toutes les formes et contour à l'intérieur de la membrane sont découpés.
 
-![Celulle après extraction du contour](celulle_contour_v1.png){width=50%}
+![Celulle après extraction du contour](celulle_contour_v1.webp){width=50%}
 
 Pour y remédier, j'ai donc décidé d'apporter de la **dilatation :** concrètement, la dilatation consiste à élargir les régions d'une image qui contiennent des pixels blancs. Elle va permettre ainsi de connecter les régions blanches qui sont proches les unes des autres et ainsi combler les lacunes.
 
@@ -321,7 +321,7 @@ def decouper_image(image_entree, contours, dossier_sortie,fichier):
 
         petite_image = image_originale[y:y+h, x:x+w]
 
-        cv2.imwrite(os.path.join(dossier_sortie, f"{fichier}image_{i}.jpg"), petite_image)
+        cv2.imwrite(os.path.join(dossier_sortie, f"{fichier}image_{i}.webp"), petite_image)
 ```
 
 ```python
@@ -335,7 +335,7 @@ def pre_traitement_1_contour_dilatation(dossier_E,dossier_S,dossier_C):
     fichiers = os.listdir(dossier_E)
     
     for fichier in fichiers:
-        if fichier.lower().endswith(('.png', '.jpg', '.jpeg', '.bmp', '.gif')):
+        if fichier.lower().endswith(('.webp', '.webp', '.webp', '.bmp', '.gif')):
             
             chemin_entree = os.path.join(dossier_E, fichier)
             chemin_contour = os.path.join(dossier_C, fichier)
@@ -349,13 +349,13 @@ pre_traitement_1_contour_dilatation('D:/Master_SID/projet_TER/data/tumeur','D:/M
 ```
 Le résultat est tout de suite plus satisfaisant, la forme globale de la membrane est respectée et plus aucun contour n'apparaît à l'intérieur.
 
-![Extraction du contour après dilatation](celulle_contour_v2.png){width=50%}
+![Extraction du contour après dilatation](celulle_contour_v2.webp){width=50%}
 
 Seul un problème persiste, lorsque plusieurs membranes sont présents sur une même lame, le programme risque de fusionner certaines membranes. Dans un premier temps, je décide de ne pas m'attarder sur ce problème et débuterai la classification avec des lames ne présentant qu'une seule membrane.
 
-![Plusieurs membranes sur une même lame](plusieurs_celulles.png){width=50%}
+![Plusieurs membranes sur une même lame](plusieurs_celulles.webp){width=50%}
 
-![Plusieurs membranes sur une même lame](plusieurs_celulles_contour.png){width=50%}
+![Plusieurs membranes sur une même lame](plusieurs_celulles_contour.webp){width=50%}
 
 ### 4.2 Amélioration de la segmentation
 
@@ -368,7 +368,7 @@ def pre_traitement_2_segmentation(dossier_E,dossier_S):
     fichiers = os.listdir(dossier_E)
     
     for fichier in fichiers:
-        if fichier.lower().endswith(('.png', '.jpg', '.jpeg', '.bmp', '.gif')):
+        if fichier.lower().endswith(('.webp', '.webp', '.webp', '.bmp', '.gif')):
             
             chemin_entree = os.path.join(dossier_E, fichier)
             chemin_sortie = os.path.join(dossier_S, fichier)
@@ -398,18 +398,18 @@ def pre_traitement_2_segmentation(dossier_E,dossier_S):
 pre_traitement_2_segmentation('D:/Master_SID/projet_TER/data/pretraitement_1','D:/Master_SID/projet_TER/data/pretraitement_2')
 ```
 Avant segmentation
-![Avant pré-traitement](avant_pre-trait.png){width=50%}
+![Avant pré-traitement](avant_pre-trait.webp){width=50%}
 
 Après segmentation
-![Après pré-traitement](apres_pre-trait.png){width=50%}
+![Après pré-traitement](apres_pre-trait.webp){width=50%}
 
 Le résultat semble tout à fait satisfaisant, je décide donc dans un dernier temps d'effectuer de l'annotation avec le logiciel QuPath pour aider le futur algorithme de classification à détecter la zone de la tumeur.
 
 ### 4.3 Annotation
 
-![Annotation](annotation.png){width=50%}
+![Annotation](annotation.webp){width=50%}
 
-![Logiciel QuPath](logiciel.png){width=50%}
+![Logiciel QuPath](logiciel.webp){width=50%}
 
 
 ## 5. Conclusion

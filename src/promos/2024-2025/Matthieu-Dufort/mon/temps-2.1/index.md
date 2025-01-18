@@ -25,25 +25,25 @@ résumé: "Un MON ayant pour but de monter en compétence sur Google Script."
 
 {% endlien %}
 
-Pour ce mon, je veux me former sur google script afin de pouvoir optimiser tous mes documents en créant des documents récurant automatiquement, en enoyant des emails ou en faisant des macros.
+Pour ce MON, je veux me former sur Google Script afin de pouvoir optimiser tous mes documents en créant des documents récurrents automatiquement, en envoyant des emails ou en faisant des macros.
 
 # Contenu
 
 ## Introduction
 
-L'objectif premier de ce MON est de monter en compétences sur Google script afin d'optimiser mon utilisation des outils googles. J'utilise énormément les outils google dans le cadre d'un projet de voile auquel je participe en naviguant mais aussi en gérant la logistique de toutes les régates. Ceci me pousse à par exemple créer des documents de présence qu'il faut ensuite faire remplir en envoyant des mails, créer toujours les mêmes documents après chaque régate pour récupérer des retours et préparer le bateau pour la suite etc.
+L'objectif premier de ce MON est de monter en compétences sur Google Script afin d'optimiser mon utilisation des outils Google. J'utilise énormément les outils Google dans le cadre d'un projet de voile auquel je participe en naviguant, mais aussi en gérant la logistique de toutes les régates. Cela me pousse, par exemple, à créer des documents de présence qu'il faut ensuite faire remplir en envoyant des mails, à créer toujours les mêmes documents après chaque régate pour récupérer des retours et préparer le bateau pour la suite, etc.
 
-En bref, beaucoup de taches répétitives qui me prennent énormément de temps. Mais, la bonne nouvelle et que tout est automatisable ! Je vais donc apprendre à utiliser google script en partant de la documentation que je vais adapter a mon utilisation. Ceci va me permettre de bien prendre en main l'outils.
+En bref, beaucoup de tâches répétitives qui me prennent énormément de temps. Mais la bonne nouvelle est que tout est automatisable ! Je vais donc apprendre à utiliser Google Script en partant de la documentation que je vais adapter à mon utilisation. Cela va me permettre de bien prendre en main l'outil.
 
 ## Fondamentaux
 
-J'ai commencé par voir les principes fondamentaux de app script et des macros avec google sheet.
+J'ai commencé par voir les principes fondamentaux de App Script et des macros avec Google Sheets.
 
 ### Macro
 
-Il est possible d'en créer directement par l'app script en écrivant le code puis en l'important dans un sheet. Mais, il est possible aussi d'en faire directement (pour les macros) en enregistrant une série de manipulation que l'on fait souvent. On peut ensuite modifier ces enregistrements dans l'app script si besoin.
+Il est possible d'en créer directement avec App Script en écrivant le code, puis en l'important dans un sheet. Mais il est aussi possible d'en créer directement (pour les macros) en enregistrant une série de manipulations que l'on effectue souvent. On peut ensuite modifier ces enregistrements dans App Script si besoin.
 
-Voici quelques exemples de fonctions/Instructions basiques afin de comprendre la logique :
+Voici quelques exemples de fonctions/instructions basiques afin de comprendre la logique :
 
 ``` JavaScript
 function Header(){ // Permet de définir une fonction
@@ -54,11 +54,11 @@ function Header(){ // Permet de définir une fonction
 }
 ```
 
-Ainsi, pour une macro, on détermine le document et l'endroit sur lequel on veut travailler puis on utilise les fonctions de la documentation
+Ainsi, pour une macro, on détermine le document et l'endroit sur lequel on veut travailler, puis on utilise les fonctions de la documentation.
 
 ### Fonction Sheet
 
-Script permet aussi de créer des nouvelles fonctions. Pour faire cela il est recommandé d'utiliser les commentaires de la façon suivante afin d'aider les futurs utilisateurs à utiliser la fonction :
+Google Script permet aussi de créer de nouvelles fonctions. Pour cela, il est recommandé d'utiliser les commentaires de la façon suivante afin d'aider les futurs utilisateurs à utiliser la fonction :
 
 ``` JavaScript
 /**
@@ -79,7 +79,7 @@ FONCTION(nombre)
 
 ### Interface utilisateur
 
-Il est aussi possible avec app script de modifier l'interface des utilisateurs de notre feuille. On peut par exemple ajouter de nouveaux menus :
+Il est aussi possible, avec App Script, de modifier l'interface des utilisateurs de notre feuille. On peut, par exemple, ajouter de nouveaux menus :
 
 ``` JavaScript
 function onOpen() { // fonction qui run dès que le sheet s'ouvre ou est rechargé
@@ -90,13 +90,13 @@ function onOpen() { // fonction qui run dès que le sheet s'ouvre ou est recharg
 }
 ```
 
-On peut ainsi se faire par exemple des automatismes de formating de la feuille Excel pour formater toutes les feuilles de la même façon :
+On peut ainsi se créer, par exemple, des automatismes de formatage de la feuille Excel pour formater toutes les feuilles de la même façon :
 
-![Ajustement du format d'une feuille de calcul](FormatingSheet.png) *Screen d'une feuille de calcul formaté avec google app script*
+![Ajustement du format d'une feuille de calcul](FormatingSheet.webp) *Screen d'une feuille de calcul formaté avec google app script*
 
 ### Interaction entre plusieurs document
 
-Il est possible de récupérer des données d'un document pour faire des actions dans un autre :
+Il est possible de récupérer des données d'un document pour effectuer des actions dans un autre :
 
 ``` Javascript
 var bookSS = SpreadsheetApp.openById(1651); // récupère le sheet grace à l'id
@@ -107,20 +107,20 @@ var bookListValues = bookRange.getValues(); // récupère les valeurs
 
 ## Envoie d'emails de rappel pour remplir un document
 
-Dans cette partie, je vais m'attaquer à un automatisme qui a pour but d'être utiliser dans mon équipe de voile.
+Dans cette partie, je vais m'attaquer à un automatisme qui a pour but d'être utilisé dans mon équipe de voile.
 
-Le but de cet automatisme est de créer un programme qui ajoutera un onglet sur google sheet afin de déclencher un rappel automatique pour envoyer des mails à tous les équipiers qui n'ont pas rempli leur présence quand on le souhaite.
+Le but de cet automatisme est de créer un programme qui ajoutera un onglet sur Google Sheets afin de déclencher un rappel automatique pour envoyer des mails à tous les équipiers qui n'ont pas rempli leur présence, lorsque nous le souhaitons.
 
-Pour cela, il faut récupérer les informations sur le nom des équipier et sur ce qu'ils ont rempli dans le premier sheet qui ressemble à ceci :
+Pour cela, il faut récupérer les informations sur le nom des équipiers et sur ce qu'ils ont rempli dans le premier sheet, qui ressemble à ceci :
 
-![Forme du sheet de présence](SheetPresence.png) *Exemple d'un google sheet pour confirmer la présence des équipiers sur une régate*
+![Forme du sheet de présence](SheetPresence.webp) *Exemple d'un google sheet pour confirmer la présence des équipiers sur une régate*
 
-Ainsi, la fonction va devoir regarder pour chaque ligne du tableau :
+Ainsi, la fonction va devoir vérifier, pour chaque ligne du tableau :
 
 - Le nom de l'équipier
-- Si il a rempli les 4 cases oui/non ainsi que les dates d'arrivées et de départ sur place
+- Si l'équipier a rempli les 4 cases oui/non, ainsi que les dates d'arrivée et de départ sur place
 
-Ensuite, il faut matcher le nom de l'équipier avec un autre sheet contenant toutes les informations personnels de chaque équipier afin de récupérer les adresses emails.
+Ensuite, il faudra associer le nom de l'équipier avec un autre sheet contenant toutes les informations personnelles de chaque équipier, afin de récupérer les adresses email.
 
 Pour cela, je vais utiliser les fonctions précédentes.
 
@@ -199,12 +199,12 @@ function sendEmailAlertForCalendar() {
 
 On retrouver maintenant l'onglet :
 
-![Sheet de présence avec Automatisme](SheetReminderOnglet.png) *Google sheet avec l'alerte disponible*
+![Sheet de présence avec Automatisme](SheetReminderOnglet.webp) *Google sheet avec l'alerte disponible*
 
 Et en déclanchant l'automatisme (dès qu'on clique sur le *Reminder* de l'onglet *Alert*) on obtient le mail suivant :
 
-![Email de Rappel](EmailRappel.png) *Email d'alert que l'on reçoit si l'on ne rempli pas toutes les cases*
+![Email de Rappel](EmailRappel.webp) *Email d'alert que l'on reçoit si l'on ne rempli pas toutes les cases*
 
-Ceci va permetre de gagner énormément de temps en évitant d'avoir à faire un rappel en privé à chaque personne une par une.
+Cela va permettre de gagner énormément de temps en évitant d'avoir à faire un rappel privé à chaque personne une par une.
 
-Je n'ai malheureusement pas eu le temps de faire le 2ème automatisme consistant à créer à la fin de chaque régate un sheet afin de rassembler les retours et l'envoyer par mail a tous les participants mais c'est bien sur quelque chose que je ferais plus tard personnellement 🙂.
+Je n'ai malheureusement pas eu le temps de réaliser le deuxième automatisme, qui consiste à créer, à la fin de chaque régate, un sheet afin de rassembler les retours et l'envoyer par mail à tous les participants, mais c'est bien sûr quelque chose que je ferai plus tard personnellement 🙂.

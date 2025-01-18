@@ -70,12 +70,12 @@ La durée fixée à l'avance : 2h
 Résultat attendu de cette première prise en main du logiciel: 
 1. Construire le première étage de la Villa
 <div style="display: flex; justify-content: space-around;">
-  <img src="Résultat 1.png" alt="android emulaor" style="width: 70%; margin-right: 2%;">
+  <img src="Résultat 1.webp" alt="android emulaor" style="width: 70%; margin-right: 2%;">
 </div>
 
 2. Ajouter des luminaires au projet et faire une simulation du calcul :
 <div style="display: flex; justify-content: space-around;">
-  <img src="Résultat 2.png" alt="android emulaor" style="width: 70%; margin-right: 2%;">
+  <img src="Résultat 2.webp" alt="android emulaor" style="width: 70%; margin-right: 2%;">
 </div>
 
 Tous les collaborateurs ont bien réussi la première étape de construction. Un des collaborateurs a laché au bout de la deuxième étape d'ajout de luminaires car, selon lui, il y avait trop d'informations à retenir.
@@ -137,13 +137,13 @@ Je vous ai mis les réponses des mes cinqs collaborateurs qui ont assisté à la
 <a href="Formation Feedbacks.pdf" target="_blank">Feedbacks de la formation</a>
 
 <div style="display: flex; justify-content: space-around;">
-  <img src="contenue.png" alt="Contenue" style="width: 70%; margin-right: 2%;">
+  <img src="contenue.webp" alt="Contenue" style="width: 70%; margin-right: 2%;">
 </div>
 
 ### Next steps
 
 <div style="display: flex; justify-content: space-around;">
-  <img src="attentes Formation 2.png" alt="android emulaor" style="width: 70%; margin-right: 2%;">
+  <img src="attentes Formation 2.webp" alt="android emulaor" style="width: 70%; margin-right: 2%;">
 </div>
 
 {% attention "**A ne pas oublier**" %}
@@ -154,10 +154,10 @@ Je vous ai mis les réponses des mes cinqs collaborateurs qui ont assisté à la
 1. Choisir une zone d'études
 
 <div style="display: flex; justify-content: space-around;">
-  <img src="Station 1.png" alt="android emulaor" style="width: 70%; margin-right: 2%;">
+  <img src="Station 1.webp" alt="android emulaor" style="width: 70%; margin-right: 2%;">
 </div>
 <div style="display: flex; justify-content: space-around;">
-  <img src="Station 2.png" alt="android emulaor" style="width: 70%; margin-right: 2%;">
+  <img src="Station 2.webp" alt="android emulaor" style="width: 70%; margin-right: 2%;">
 </div>
 
 

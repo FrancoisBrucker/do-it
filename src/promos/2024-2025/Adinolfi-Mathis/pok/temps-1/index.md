@@ -100,7 +100,7 @@ J'ai sous-estimé le temps de débogage, j'ai donc privilégié le fonctionnemen
 ## Objectif : Modéliser et visualiser le traffic sur un cas donné
 
 <div style="text-align: center;">
-    <img src="Cas_etude_feux.png" width="800"/>
+    <img src="Cas_etude_feux.webp" width="800"/>
     <br>
     <u> Image 1 : Cas d'étude</u>
 </div>
@@ -128,7 +128,7 @@ Afin d'assurer le bon fonctionnement de notre simulation, nous avons besoin d'un
 Ma première approche (naïve) a été de prendre une route quelconque et de la reproduire dans une matrice où chaque élément serait un rectangle de largeur la route et de longueur arbitraire que l'on aurait pu choisir pour affiner le modèle. Les éléments possibles seraient : les 2 pour une voiture, les 1 pour une route, et les 0 pour les cases vides.
 
 <div style="text-align: center;">
-    <img src="Version_1.jpg" width="800"/>
+    <img src="Version_1.webp" width="800"/>
     <br>
     <u> Image 2 : Première version de la modélisation de la route</u>
 </div>
@@ -142,7 +142,7 @@ Ma première approche (naïve) a été de prendre une route quelconque et de la 
 Ainsi, pour que cette solution fonctionne, il faudrait que toutes les routes soient droites ! Même si cela paraît surprenant, ce n'est pas en soi une mauvaise idée. En effet, notre objectif principal est de faire une simulation du trafic routier, mais a-t-on besoin pour cela de reproduire la route à l'identique ? La réponse à cette question est non, et une approche plus simple serait de transformer toutes les routes courbées et virages en lignes droites de même dimension. Cela n'influencerait pas les résultats mais simplifierait nettement la modélisation. En suivant ce raisonnement, j'ai imaginé un modèle où tous les virages seraient dépliés pour devenir des lignes droites :
 
 <div style="text-align: center;">
-    <img src="Version_2.jpg" width="800"/>
+    <img src="Version_2.webp" width="800"/>
     <br>
     <u> Image 3 : Seconde version de la modélisation de la route</u>
 </div>
@@ -157,7 +157,7 @@ Ainsi, pour que cette solution fonctionne, il faudrait que toutes les routes soi
 ❌ Cependant, mettre en place cette modélisation revient à s'assurer que toutes les routes peuvent être "dépliées" pour devenir une ligne droite, ce qui n'est pas le cas en général.
 
 <div style="text-align: center;">
-    <img src="Contreex_route_droite.jpg" width="500"/>
+    <img src="Contreex_route_droite.webp" width="500"/>
     <br>
     <u> Image 4 : Contre exemple</u>
 </div>
@@ -166,7 +166,7 @@ Ainsi, pour que cette solution fonctionne, il faudrait que toutes les routes soi
 Pour contourner ce problème, j'ai eu l'idée de découper la route par blocs. Chaque bloc correspondrait à un élément de la route : une intersection, une route, un feu rouge, une priorité, un passage piéton, etc...
 
 <div style="text-align: center;">
-    <img src="Version_3.jpg" width="800"/>
+    <img src="Version_3.webp" width="800"/>
     <br>
     <u> Image 5 : Troisième version de la modélisation de la route</u>
 </div>
@@ -179,7 +179,7 @@ L'avantage de ce modèle est qu'il reprend tous les avantages de la méthode pr�
 Ce modéle à ces limites car un bloc n'a que 4 cotés ce qui sous-entend dans notre cas qu'il n'existe pas d'intersection à plus de 4 voies ce qui n'est pas le cas.
 
 <div style="text-align: center;">
-    <img src="Intersection_5voies.jpg" width="500"/>
+    <img src="Intersection_5voies.webp" width="500"/>
     <br>
     <u> Image 6 : Intersection à 5 voies [2] </u>
 </div>
@@ -212,7 +212,7 @@ Fin = ['Fin']
 {% note "**Sens de circulation : si un usager veut aller vers le 0 alors le sens de ciculation sera 0**" %}
 
 <div style="text-align: center;">
-    <img src="Sens_circulation.jpg" width="300"/>
+    <img src="Sens_circulation.webp" width="300"/>
     <br>
     <u> Image 7 : Explication sens de circulation </u>
 </div>
@@ -253,7 +253,7 @@ Direction_élément = [Proba = [0,0,0,0], Direction = 0]
 En appliquant ces régles on obtient le découpage suivant :
 
 <div style="text-align: center;">
-    <img src="Schema_cas_etude.jpg" width="800"/>
+    <img src="Schema_cas_etude.webp" width="800"/>
     <br>
     <u> Image 8 : Découpage de notre cas d'étude </u>
 </div>
@@ -454,7 +454,7 @@ def update_départ(route, traffic):
 Maintenant que notre route est vivante, nous pouvons commencer à manipuler les véhicules. Pour cela, nous devons comprendre comment les voitures interagissent entre elles. Or, notre comportement sur la route est défini par des règles simples : le code de la route et les distances de sécurité. En tenant compte de ces règles, il a été possible d'imaginer un algorithme simple pour la gestion du trafic routier :
 
 <div style="text-align: center;">
-    <img src="Schema_cas_etude.jpg" width="800"/>
+    <img src="Schema_cas_etude.webp" width="800"/>
     <br>
     <u> Image 9 : Diagramme en blocs traffic routier </u>
 </div>

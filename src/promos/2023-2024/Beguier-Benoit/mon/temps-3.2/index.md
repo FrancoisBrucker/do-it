@@ -53,9 +53,9 @@ De la même manière qu'Eugénie, j'établis ma To-do pour ce MON.
 
 J'ai eu de très bons retours sur le barbecue 2023 donc je ne changerai pas l'organisation.
 
-![retourGaby](retour1.png)
+![retourGaby](retour1.webp)
 
-![retourTimtoum](retour2.png)
+![retourTimtoum](retour2.webp)
 
 ### Estimation du nombre de participants
 
@@ -63,7 +63,7 @@ Au lieu de faire un Google Form, j'ai préféré faire voter sur la conversation
 
 Nous avons 22 participants (moi compris) au sein des étudiants de Do-It, auxquels je rajoute les trois professeurs, soit **25 repas** à préparer au total.
 
-![partici](participants.png)
+![partici](participants.webp)
 
 Au vu de l'appétit de mes camarades en pleine croissance intellectuelle, je décide de monter les portions à **30 repas**. Dans le cas où il resterait de la nourriture (peu de chances mais probabilité non nulle), celle-ci sera distribuée parmi les étudiants et les professeurs.
 
@@ -71,15 +71,15 @@ Au vu de l'appétit de mes camarades en pleine croissance intellectuelle, je dé
 
 Je prends ensuite en compte les régimes alimentaires de mes petits camarades ainsi que celui des professeurs. D'après les votes, je prévois au moins 6 portions végétariennes pour les étudiants, et aucune pour les professeurs.
 
-![regimes](regimes.png)
+![regimes](regimes.webp)
 
-![detail](detail_regimes.png)
+![detail](detail_regimes.webp)
 
 Je table donc pour 10 portions végétariennes, et 20 portions de viandes.
 
 ### Liste de course
 
-![courses](courses.png)
+![courses](courses.webp)
 
 ### Budget
 
@@ -92,7 +92,7 @@ Cela revient à 150/25=**6€** par personne.
 ### Prêt de matériel
 
 Demande au respo patrimoine de l'UA du matériel suivant :
-![pret](pret.png)
+![pret](pret.webp)
 
 Le matériel est ensuite autorisé à travers le dossier COMA. L'UA fait payer 20€ de frais de prêt, et 1000€ de caution.
 
@@ -102,7 +102,7 @@ Le matériel est ensuite autorisé à travers le dossier COMA. L'UA fait payer 2
 
 Demande au PLP mais finalement ce n'est pas l'interlocuteur. Il faut remplir un dossier COMA de l'UA qui sera étudié en commission événement.
 
-![mail](mail_sauval.png)
+![mail](mail_sauval.webp)
 
 ## Remboursement de l'avance
 

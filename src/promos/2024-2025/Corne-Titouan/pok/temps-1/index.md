@@ -146,7 +146,7 @@ Il faut télécharger l'IDE [Android Studio]() qui permet d'écrire du code mais
 
 Une fois téléchargé, j'ai créé un nouveau projet avec les propriétés suivantes :
 
-![Initialisation Projet](./img/initialisationProjet.png) *Capture d'écran personnelle*
+![Initialisation Projet](./img/initialisationProjet.webp) *Capture d'écran personnelle*
 
 {% attention "Important" %}
 Il faut veiller à choisir une "Minimum SDK" pas trop récent afin que l'application puisse fonctionner sur une grande majorité d'appareils Android (99,7% des appareils pourront faire fonctionner mon application si on se réfère à la version choisie sur la capture d'écran précédente)
@@ -154,7 +154,7 @@ Il faut veiller à choisir une "Minimum SDK" pas trop récent afin que l'applica
 
 Un projet est alors créé, voici sa structure :
 
-![Structure Projet](./img/structureProjetAndroid.png) *Capture d'écran commentée*
+![Structure Projet](./img/structureProjetAndroid.webp) *Capture d'écran commentée*
 
 {% note %}
 Pour avoir exactement la même fenêtre avec la même structure de projet, il faut veiller à sélectionner "Android" en haut à gauche!
@@ -162,14 +162,14 @@ Pour avoir exactement la même fenêtre avec la même structure de projet, il fa
 
 Cette structure d'application permet de centraliser certains éléments (dans *res*) qui seront présents à plusieurs endroits dans l'application. Prenons l'exemple d'un style texte qui peut être défini par sa police, sa taille et sa couleur. Bien que ce qui est écrit diffère d'une page à l'autre de l'application, le style du texte lui reste inchangé. Ainsi, la pratique à adopter est de créer un style pour ces textes dans le dossier ressources (*res*) dans le fichier *themes.xml*
 
-![Texte par défaut](./img/defaultText.png) *Capture d'écran commentée*
+![Texte par défaut](./img/defaultText.webp) *Capture d'écran commentée*
 
 ### 3. Créer un émulateur (machine virtuelle) <a id="section3"></a>
 
 Pour tester son application, il est possible de connecter via USB un appareil Android. Mais il est également possible de créer une machine virtuelle dont on choisit les caractéristiques (type de machine, taille d'écran, résolution, version d'Android, ...).
 C'est cette dernière option que j'ai choisie d'utiliser :
 
-![Machine Virtuelle](./img/machineVirtuelle.png) *Capture d'écran depuis Android Studio*
+![Machine Virtuelle](./img/machineVirtuelle.webp) *Capture d'écran depuis Android Studio*
 
 ### 4. Apprendre à coder sur Android Studio <a id="section4"></a>
 
@@ -195,7 +195,7 @@ Le premier tutoriel m'a été utile pour comprendre comment ajouter des élémen
 
 Voici l'aperçu l'application (très) basique sur laquelle j'ai abouti :
 
-![Apllication Android Basique](./img/appliBasique.png)
+![Apllication Android Basique](./img/appliBasique.webp)
 *Captures d'écran depuis Android Studio*
 
 Cette petite application est un jeu d'estimation. Il faut trouver un nombre entre 1 et 100 en un nombre d'essais limité (10 max). Une barre de progression représente le nombre de tentatives. Une zone de texte (*TextView*) permet de donner des indications sur le nombre à trouver : plus petit ou plus grand !
@@ -225,8 +225,8 @@ Pour ce POK, la situation est un peu particulière, je suis à la fois le client
 
 Voici le cahier des charges consacré à l'application *EVASION* que j'ai décidée de développer dans le cadre de ce POK :
 
-![Cahier des charges - client (partie 1)](./img/CahierDesCharges-client-1.jpg)
-![Cahier des charges - client (partie 1)](./img/CahierDesCharges-client-2.jpg)
+![Cahier des charges - client (partie 1)](./img/CahierDesCharges-client-1.webp)
+![Cahier des charges - client (partie 1)](./img/CahierDesCharges-client-2.webp)
 
 ### 6. Réaliser des wireframes <a id="section6"></a>
 
@@ -234,9 +234,9 @@ Pour réaliser des wireframes, j'ai décidé d'utiliser le logiciel d'UI design 
 
 Après avoir découvert l'outil Figma, voici les wireframes créées :
 
-![Figma - global](./img/figma-global.png)
+![Figma - global](./img/figma-global.webp)
 
-![Figma - détails](./img/figma-details.png)
+![Figma - détails](./img/figma-details.webp)
 
 Ces wireframes peuvent encore grandement être améliorés mais, par manque de temps, je ne pouvais pas m'attarder dessus... Dans une situation professionnelle, il aurait été intéressant de montrer ces wireframes au client pour qu'il donne un feedback avant le lancement de la phase de développement.
 
@@ -244,7 +244,7 @@ Ces wireframes peuvent encore grandement être améliorés mais, par manque de t
 
 Une fois la vision du futur rendu de notre application établie (grâce aux wireframes), j'ai commencé à coder le visuel de l'application. J'ai ainsi commencé par définir toutes les couleurs utilisées dans mes wireframes :
 
-![Définition couleurs](./img/definitionCouleurs.png)
+![Définition couleurs](./img/definitionCouleurs.webp)
 
 De même, j'ai saisi le contenu textuel (dans le fichier ./res/values/string.xml)   :
 
@@ -323,11 +323,11 @@ C'est à ce moment qu'on relève l'importance du temps passé à réaliser des w
 
 Ensuite, j'ai importé tous les icons présents dans mes wireframes (dans le dossier ./res/drawable). J'ai également ajouté une photo pour l'afficher à l'emplacement prévu pour un retour d'expérience.
 
-![Drawable](./img/drawable.png)
+![Drawable](./img/drawable.webp)
 
 Enfin, après avoir créé un *Android Ressource Directory* pour stocker les différentes polices que je veux utiliser, j'ai défini les différents styles de textes souhaités dans le fichier ./res/values/themes/themes.xml :
 
-![Styles de textes](./img//textStyle.png)
+![Styles de textes](./img//textStyle.webp)
 
 {% attention "**Faites attention à vos noms de fichiers**" %}
 

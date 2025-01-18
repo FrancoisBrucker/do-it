@@ -61,7 +61,7 @@ Selon Hauschildt, elle implique des produits ou processus qualitativement nouvea
 
 *"Innovation management is the creation of processes that aim at creating and exploiting new things."*
 
-![Intro_innovation](./Intro_innovation.png "L'Innovation")
+![Intro_innovation](./Intro_innovation.webp "L'Innovation")
 
 **Raison d’être** :
 * Principal moteur de la croissance économique dans les économies avancées.
@@ -94,10 +94,10 @@ Le schéma de Utterback et Abernathy décrit trois phases dans le cycle de vie d
 * **Phase transitoire** : Apparition de designs dominants.
 * **Phase spécifique** : Améliorations progressives.
 
-![PLC](./PLC.png "Product Life Cycle(PLC)")
+![PLC](./PLC.webp "Product Life Cycle(PLC)")
 
 *Exemple* :
-![Exemple_PLC](./Exemple_PLC.png "Exemples de PLC pour différentes industries")
+![Exemple_PLC](./Exemple_PLC.webp "Exemples de PLC pour différentes industries")
 
 
 **La courbe en S**
@@ -108,11 +108,11 @@ La performance technologique suit généralement une courbe en S caractérisée 
 * **Amélioration décroissante** : Diminution des rendements marginaux.
 * **Maturité** : Saturation technologique ou marché.
 
-![Courbe_S](./Courbe_S.png "La courbe en S")
+![Courbe_S](./Courbe_S.webp "La courbe en S")
 
 Illustration pratique : The sailing ship phenomenon
 
-![S_Ship](./S_Ship.png "Exemple sailing ship phenomenon")
+![S_Ship](./S_Ship.webp "Exemple sailing ship phenomenon")
 
 
 ### L'innovation disruptive et l'Innovator Dilemma
@@ -140,7 +140,7 @@ L’entonnoir de l’innovation visualise la gestion systématique des idées :
 * **Filtrage** : Évaluation stratégique, faisabilité technique, alignement avec les ressources.
 * **Sorties** : Développement de produits finalisés ou de processus prêts pour l’implémentation.
 
-![Entonnoir](./Entonnoir.png "L'entonnoir d'innovation")
+![Entonnoir](./Entonnoir.webp "L'entonnoir d'innovation")
 
 
 ### L'Open Innovation
@@ -165,7 +165,7 @@ Le modèle de Cooper divise l'innovation en étapes séquentielles. Chaque étap
 **Avantages** : Structuration et priorisation des ressources.
 **Limites** : Rigidité dans la gestion des innovations radicales.
 
-![Stage_Gate](./Stage_Gate.png "Le Stage-Gate Process")
+![Stage_Gate](./Stage_Gate.webp "Le Stage-Gate Process")
 
 Un bon processus ne suffit pas : il faut aussi comprendre les acteurs impliqués et leurs stratégies.
 
@@ -178,7 +178,7 @@ Basé sur le modèle de diffusion de Rogers :
 * **Majorité précoce et tardive** : Pragmatistes plus nombreux, Suiveurs prudents, influencés par les normes dominantes.
 * **Retardataires** : Résistants, adoptent à contrecœur, Conservateurs, sceptiques vis-à-vis des nouvelles technologies.
 
-![Adopters](./Adopters.png "Les catégories d'adopteurs")
+![Adopters](./Adopters.webp "Les catégories d'adopteurs")
 
 
 ### Les stratégies d'innovation
@@ -191,7 +191,7 @@ Une stratégie d’innovation vise à aligner les objectifs organisationnels, le
 **Ressources** : Allouer budgets, compétences et infrastructures aux projets stratégiques.
 **Risques acceptés** : Déterminer le degré d’incertitude que l’organisation est prête à tolérer.
 
-![Innovation_Strategy](./Innovation_Strategy.png "La stratégie d'innovation")
+![Innovation_Strategy](./Innovation_Strategy.webp "La stratégie d'innovation")
 
 Les entreprises adoptent des stratégies selon leur tolérance au risque :
 * **Proactives** : L’entreprise agit comme leader d’innovation, prenant des risques significatifs pour introduire des technologies de rupture.
@@ -202,7 +202,7 @@ Exemple : Ryanair, adoptant une stratégie de coût minimal après le succès d�
 Exemple : Microsoft, qui s’adapte rapidement aux évolutions du cloud.
 * **Passives** : L’entreprise se limite à des améliorations mineures demandées par les clients existants.
 
-![Stratégies](./Stratégies.png "Tableau des positionnements stratégiques des entreprises")
+![Stratégies](./Stratégies.webp "Tableau des positionnements stratégiques des entreprises")
 
 Les entreprises adoptent des postures différentes face à l’incertitude :
 

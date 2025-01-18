@@ -138,8 +138,8 @@ Avec tout cela, on est en guise de créer une page internet. Elle est **reponsiv
 
  - Sur grand écran et sur Mobile :
 <div style='display:flex'>
-    <img src='./../images/monangular.png' >
-    <img src='./../images/monangulartel.png' >
+    <img src='./../images/monangular.webp' >
+    <img src='./../images/monangulartel.webp' >
 </div>
 
 ## 3 - Build et déploiement du projet sur un serveur distant

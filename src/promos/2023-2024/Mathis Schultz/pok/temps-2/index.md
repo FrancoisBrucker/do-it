@@ -102,12 +102,12 @@ Chaque étape me paraissait simple, effectivement les missions de mise en page, 
 
 **Rendu Intermédiaire**
 
-<img src="accueille.png">
-<img src="competence.png">
-<img src="experience.png">  
-<img src="contact.png">
-<img src="formation.png">
-<img src="loisir.png">
+<img src="accueille.webp">
+<img src="competence.webp">
+<img src="experience.webp">  
+<img src="contact.webp">
+<img src="formation.webp">
+<img src="loisir.webp">
 
 <h2 id="h3"> Second sprint </h2>
 
@@ -171,13 +171,13 @@ En conclusion, avoir réalisé cet audit m'a permis de renforcer des points du s
 
 Mes objectifs ont légèrement était bouleversé par l'audit, mais cela montre l'importance du rôle qu'il a joué. En effet, il m'a permis de prendre du recul sur les objectifs du site et d'arriver à une version presque aboutit du site qui soit plus pertinente. Voici les images de mon site en fin de sprint 2.
 
-![Alt text](language.png)
+![Alt text](language.webp)
 
 Cette nouvelle page d'accueil permet de choisir la langue du site web.
 
 J'ai un problème de chemin sur cette page que je ne comprend pas, pour l'instant cette page est masqué (accessible à cette adresse : [Lien vers la page d'accueil](https://schultzmathis.github.io/mon-cv/fr/))
 
-![Alt text](activite.png)
+![Alt text](activite.webp)
 
 Remaniement des loisirs, avec plus de texte pour être plus vivant. Apparition d'un bouton langue en bas de chaque page qui renvoie vers la page similaire dans l'autre langue.
 

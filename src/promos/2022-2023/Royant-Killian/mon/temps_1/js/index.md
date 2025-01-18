@@ -59,7 +59,7 @@ Ce MON a pour objectif d'**apprendre à utiliser le DOM et les données (API, JS
 
 Ce MON repose en grande partie sur une formation proposée par **Openclassrooms** accessible ci-dessous. Des compléments à cette formation peuvent également être trouvés sur YouTube. J'ai fournis quelques liens ci-dessous.
 
-![Exemple](./exemple.png)
+![Exemple](./exemple.webp)
 
 La formation est **très claire et très simple à suivre**, comme la plupart des formations proposées par Openclassrooms. Le formateur propose différents **exemples concrets** repris tout au long de la formation. La formation est composée de *vidéos, de cours écrits, d'exemples et d'exercices à chaque étape*. À la fin de chaque chapitre, un **quiz** est proposé afin d'évaluer notre compréhension des différents acquis du chapitre.
 

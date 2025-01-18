@@ -112,13 +112,13 @@ J'ai aussi regardé de mon côté des ressourcespour mieux comprendre la **Datav
 
 J'ai suivi la [vidéo youtube](https://www.youtube.com/watch?v=BVBvo9eKK40) recommandée par Sarah, ce qui m'a permis de travailler sur le tableau de données assez indigeste ci-dessous.
 
-<img src="Tuto tableau avant LS.png" width="60%" alt="Image description">
+<img src="Tuto tableau avant LS.webp" width="60%" alt="Image description">
 
 Et d'utiliser Looker Studio pour **transformer ces données en le tableau de bord** ci-dessous. On voit que **tout est dynamique** et donc on peut passer du tableau original à gauche à un tableau où on étudie les chiffres plus en détail à droite (ici j'ai sélectionné le pays Italy et décoché la case tapis).
 
 <div style="display: flex; justify-content: space-between;">
-    <img src="Tuto tableau apres LS.png" alt="Image 2" style="width: 48%; height: auto;">
-    <img src="Tuto tableau apres LS Italy.png" alt="Image 3" style="width: 48%; height: auto;">
+    <img src="Tuto tableau apres LS.webp" alt="Image 2" style="width: 48%; height: auto;">
+    <img src="Tuto tableau apres LS Italy.webp" alt="Image 3" style="width: 48%; height: auto;">
 </div>
 
 ### 👩‍🎨 Projet 1 : tableau de bord des ventes de ma soeur artiste
@@ -138,13 +138,13 @@ Maintenant, il y a plus qu'à !
 J'ai d'abord récupéré le **tableau de suivi de ses factures** disponible en version lecteur [ici](https://docs.google.com/spreadsheets/d/17s4f0-hIdjs3qSpmg4praJ_pb0rtDBW0TaRWw9w2mg4/edit?gid=2019233211#gid=2019233211). Puis, j'ai commencé à créer le tableau de bord. Pour répondre aux contraintes de Looker Studio, j'ai **modifié un peu les tableaux de ma soeur**. Notamment, j'ai changé les titres des colonnes pour faciliter l'accès aux données. 
 J'ai obtenu le **résultat** ci-dessous :
 
-<img src="LS_Laura.jpg" width="60%" alt="Image description">
+<img src="LS_Laura.webp" width="60%" alt="Image description">
 
 Comme vous pouvez le voir, **le résultat n'est pas celui que j'avais en tête** car j'ai constaté les **limites de Looker Studio** et les **problèmes du tableau de ma soeur**. 
 
 1. Tout d'abord, je n'avais pas de moyen simple de récupérer les informations sur la quantité de cartes postales, affiches fable et affiches maison vendues. En effet, contrairement à l'exemple du tutoriel où 1 ligne correspond à 1 vente et donc à **1 produit**, ma soeur utilise un système où **1 ligne correspond à une facture d'1 librairie mais avec plusieurs produits** (voir le screen ci-dessous). Ainsi, le CA indiqué pour cette vente correspond à la somme des CA pour les différents produits et je ne peux donc **pas accéder au CA précis pour chaque produit**. De plus, vu que les types de **produits sont dans des colonnes différentes** et non dans une même colonne, je ne peux pas faire facilement de somme sur les types de produit et obtenir des graphiques par quantité de produits.
 
-<img src="Tableau_Laura_LS.png" width="60%" alt="Image description">
+<img src="Tableau_Laura_LS.webp" width="60%" alt="Image description">
 
 2. Ensuite, la carte de France avec des ronds proportionnels au CA de chaque ville est assez décevante. Elle bug, impossible de faire un zoom intermédiaire sinon les ronds disparaissent et je ne peux pas afficher le CA dans le rond. D'ailleurs, le graphique nommé "graphique géographique" ne fonctionne même pas car ma liste de ville ne correspond pas à une liste de pays et l'option villes n'existe que pour les Etats-Unis. Bref, les **graphiques géographiques sont décevants**.
 3. Enfin, le **niveau de personnalisation esthétique est faible**. Je ne peux pas modifier les titres tels que "record count" ou "null" au lieu de "0" dans certains tableaux ce qui les rend peu intuitifs.
@@ -159,15 +159,15 @@ Après quelques recherches, je conclus d'essayer la **version gratuite de Power 
 
 J'ai d'abord **importé les données** sur Power BI Desktop en ouvrant l'Excel de ma soeur. Je remarque directement que la suite **Power BI propose automatiquement des tableaux pertinents** ("tables sugérés") pour le traitement des données donc il n'y a pas besoin de soi-même refaire autant de mise en forme qu'avec Looker Studio. Dans mon cas, j'ai par exemple choisi le table "MOIS" qui correspondait bien à mon usage.
 
-<img src="Transfo_donnees.png" width="40%" alt="Image description">
+<img src="Transfo_donnees.webp" width="40%" alt="Image description">
 
 Ensuite, j'ai **nettoyé mes données avec Power Query** (rien besoin de télécharger, Power Query est sugéré automatiquement). Là encore, le logiciel est bien conçu et il est simple de remplacer la valeur "null" par 0 par exemple.
 
-<img src="Remplacement_donnees.png" width="60%" alt="Image description">
+<img src="Remplacement_donnees.webp" width="60%" alt="Image description">
 
 Puis, j'ai travaillé sur le tableau de bord jusqu'à obtenir ce résultat dont je suis plutôt satisfaite : 
 
-<img src="Bilan_PowerBI.png" width="90%" alt="Image description">
+<img src="Bilan_PowerBI.webp" width="90%" alt="Image description">
 
 Il s'agit d'un **tableau de bord interactif** donc on peut cliquer directement sur les graphiques pour voir les données qui nous intéressent. Par exemple, voici 3 tableaux de bords selon si on sélectionne : 
 
@@ -176,11 +176,11 @@ Il s'agit d'un **tableau de bord interactif** donc on peut cliquer directement s
 - client = Terra Nova
 
 <div style="display: flex; justify-content: space-between;">
-    <img src="Bilan_Paris.png" alt="Image 1" style="width: 49%; height: auto;">
-    <img src="Bilan_Juin.png" alt="Image 2" style="width: 49%; height: auto;">
+    <img src="Bilan_Paris.webp" alt="Image 1" style="width: 49%; height: auto;">
+    <img src="Bilan_Juin.webp" alt="Image 2" style="width: 49%; height: auto;">
 </div>
 
-  <img src="Bilan_Client.png" alt="Image 3" style="width: 50%; height: auto;">
+  <img src="Bilan_Client.webp" alt="Image 3" style="width: 50%; height: auto;">
 
 Ainsi, je suis largement convaincue par la **supériorité de PowerBI version gratuite sur Looker Studio quand on veut juste créer des projets pour soi** sans l'intention de les partager à d'autres utilisateur. De plus, **Power Bi est aussi plus souvent utilisé que Looker Studio par les entreprises**, donc je trouve ça plus pertinent de me former à ce logiciel. Ainsi, je ne vais utiliser que Power BI pour le deuxième sprint.
 
@@ -214,17 +214,17 @@ Et je veux que les interaction entre les éléments pour voir facilement les voy
 
 J'ai commencé par créer un **tableau sur Excel** avec les données sur mes voyages :
 
-<img src="Excel_voyages.png" width="100%" alt="Image description">
+<img src="Excel_voyages.webp" width="100%" alt="Image description">
 
 Puis j'ai créé le **tableau de bord** sur Power BI. Le voici sans filtre :
 
-<img src="PowerBI_voyages.png" width="90%" alt="Image description">
+<img src="PowerBI_voyages.webp" width="90%" alt="Image description">
 
 Et voici ce tableau de bord en sélectionnant l'**Allemagne** ou les **voyages avec mes amis** : 
 
 <div style="display: flex; justify-content: space-between;">
-    <img src="PowerBI_Allemagne.png" alt="Image 1" style="width: 49%; height: auto;">
-    <img src="PowerBI_Amis.png" alt="Image 2" style="width: 49%; height: auto;">
+    <img src="PowerBI_Allemagne.webp" alt="Image 1" style="width: 49%; height: auto;">
+    <img src="PowerBI_Amis.webp" alt="Image 2" style="width: 49%; height: auto;">
 </div>
 
 Et voici une **vidéo montrant les interactions directement sur le logiciel Power BI** : 
@@ -240,23 +240,23 @@ Et voici une **vidéo montrant les interactions directement sur le logiciel Powe
 
 J'avais envie de voir visuellement **combien de préfectures en France métropolitaine il me reste à visiter** donc j'ai créé un **tableau Excel** avec la liste des préfectures, la taille de la population et si j'avais déjà visitée la ville ou non.
 
-<img src="Excel_prefecture.png" width="60%" alt="Image description">
+<img src="Excel_prefecture.webp" width="60%" alt="Image description">
 
 Puis j'ai créé ce **tableau de bord** : 
 
-<img src="PowerBI_Prefectures.png" width="90%" alt="Image description">
+<img src="PowerBI_Prefectures.webp" width="90%" alt="Image description">
 
 Et là encore, je peux facilement trier selon le critère de mon choix (ici, les **préfectures visitées**) : 
 
-<img src="PowerBI_prefectures_visitees.png" width="60%" alt="Image description">
+<img src="PowerBI_prefectures_visitees.webp" width="60%" alt="Image description">
 
 On pourrait penser que ce projet a été très rapide, mais en vrai j'ai galéré. Je n'arrivais pas à récupérer le nombre de ville que j'ai visité ou non. J'ai donc utilisé une astuce en **transformant les données du tableau avec PowerQuery** en créant 2 nouvelles colonnes "Pas encore visitées" et "Déjà visités" obtenues en transformant les "oui" et "non" de la colonne "Visitée".
 
-<img src="PowerBI_prefectures_nombres.png" width="90%" alt="Image description">
+<img src="PowerBI_prefectures_nombres.webp" width="90%" alt="Image description">
 
 Puis j'ai **créer 2 nouvelles mesures** à l'aide de l'onglet Modéalisation, **Mesure Rapide** pour calculer les totaux de préfectures visitées et pas encore visitées. Ci-dessous, l'exemple du calcul pour les villes déjà visitées. Il faut bien penser à **convertir les données des colonnes en "nombre entier"** à l'étape précédente pour que le calcul fonctionne.
 
-<img src="PowerBI_Prefectures_MesureRapide.png" width="90%" alt="Image description">
+<img src="PowerBI_Prefectures_MesureRapide.webp" width="90%" alt="Image description">
 
 
 ### 👩‍💻 Progression sur Excel et PowerPoint
@@ -266,7 +266,7 @@ Il me restait encore 2h pour ce sprint 2 après avoir fini ces 2 projets. Ayant 
 <h2 id=comp> Comparaisons des logiciels </h2>
 
 J'ai comparé les logiciels sur différents critères résumé dans ce tableau ci-dessous :
-![alt text](image.png)
+![alt text](image.webp)
 
 Ainsi, si on veut des **visualisations simples** et gratuites, **Looker Studio** est un excellent choix. Mais pour des besoins professionnels plus poussés avec des **données complexes**, **Power BI** est quand même préférable (avec des licences payantes pour le partage).
 

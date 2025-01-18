@@ -33,7 +33,7 @@ J'ai tout d'abords appris à générer une VBA grâce au bouton d'enregistrement
 
 Dans l'éditeur, la VBA se présente ainsi : 
 
-![Capture d'écran d'un exemple de macro](./Exemple_macro.png)
+![Capture d'écran d'un exemple de macro](./Exemple_macro.webp)
 
 On y retrouve la structure d'une macro qui commence par `Sub nomDeLaMacro()` et qui fini par `End Sub()`. \
 Les commentaires sont écrit entre appostrophes et sont repérables par leur couleur verte. \
@@ -76,7 +76,7 @@ Dim maVariable As Type
 Cette variable est utilisable uniquement dans la procédure où elle est déclarée. 
 Il existe de nombreux types de variables : 
 
-![Types de variables](./type.png)
+![Types de variables](./type.webp)
 
 Et si l'utilisateur veut créer son propre type, il peut : 
 ```vba
@@ -200,7 +200,7 @@ Next
 **"expression" Like "..."** vérifie si l'ensemble de caratère est présent dans l'expression \
 Voici un exemple de test que l'on peut effectuer avec la fonction Like :
 
-![Correspondance avec Like](./Like.png)
+![Correspondance avec Like](./Like.webp)
 
 ## Boites de dialogue
 
@@ -209,9 +209,9 @@ Avec le VBA, on peut afficher des boites de dialogue pour interragir avec l'util
 MsgBox([Texte], [Boutons], [Titre])
 ```
 Les choix de boutons sont les suivants : 
-![Option de boutons](./option.png)
+![Option de boutons](./option.webp)
 Lorsque l'utilisateur clique sur un bouton, une valeur et renvoyée et nous pouvons filtrer celle-ci:
-![Réponse de boutons](./response.png)
+![Réponse de boutons](./response.webp)
 
 Il est aussi possible d'afficher des boites de dialogue dans lesquelles l'utilisateur peut écrire : 
 ```vba

@@ -40,7 +40,7 @@ Lorsqu'on crée un projet par défaut d'application Web, on a un peu de code gé
 Le dossier wwwroot contient les fichiers js, css  et autres. 
 
 Le dossier Pages contient toutes les pages et définis aussi les différents url accessibles depuis notre site; par exemple si vous avez un fichiers Pages/About.cshtml, alors cette page s'affiche lorsque le client va sur l'url /about. Il est rempli de fichiers .cshtml qui permettent de faire de templates html avec C# et d'utiliser Razor. C'est fichiers sont en fait comme des dossiers comme le montre l'image ci-dessous.
-<img src="./penduExempleRazorPage.png" alt="Exemple Razor Page"/>
+<img src="./penduExempleRazorPage.webp" alt="Exemple Razor Page"/>
 
 Le fichier cshtml contient du code qui ressemble à ça:
 ```c#
@@ -113,10 +113,10 @@ Pour ce petit projet, je voulais qu'un utilisateur puisse jouer à une partie du
 J'y étais réticent mais j'ai dû utiliser une base de données pour rendre le tout possible. Pour créer une base de données avec les Razor Pages, on utilise EF Framework. Il s'agit d'un ORM. Je vous renvoie vers les pages en sources pour voir plus en détail les étapes à suivre.
 
 ### Le résultat
-<img src="./penduPage.png" alt="Page du jeu" style="height: 400px"/>
-<img src="./penduError.png" alt="Le pendu se dessine petit à petit à chaque erreur" style="height: 400px"/>
-<img src="./PenduPerdu.png" alt="On peut perdre" style="height: 400px"/>
-<img src="./PenduWon.png" alt="On peut gagner" style="height: 400px"/>
+<img src="./penduPage.webp" alt="Page du jeu" style="height: 400px"/>
+<img src="./penduError.webp" alt="Le pendu se dessine petit à petit à chaque erreur" style="height: 400px"/>
+<img src="./PenduPerdu.webp" alt="On peut perdre" style="height: 400px"/>
+<img src="./PenduWon.webp" alt="On peut gagner" style="height: 400px"/>
 
 *Retrouvez mon code sur [github](https://github.com/assanediouf18/PenduWeb)*
 

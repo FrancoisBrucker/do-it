@@ -59,7 +59,7 @@ npm start
 Quand on fait ça, un qr code apparaît dans le terminal comme ci-dessous : 
 
 <div style="display:flex">
-<div><img src="start_expo.png"></div>
+<div><img src="start_expo.webp"></div>
 </div>
 
 En téléchargeant l'application Expo sur son téléphone et en étant connecté sur le même réseau wifi que son ordinateur, on peut scanner le qrcode et visualiser l'application directement sur son téléphone. 
@@ -88,7 +88,7 @@ export default function App() {
         <Text>Bienvenue sur l'application de William</Text>
         <StatusBar style="auto" />
         <Image 
-          source={require('./logo.png')}
+          source={require('./logo.webp')}
           style={styles.logo}
         />
         <TextInput style={styles.textInput} placeholder="Entrez votre texte ici"></TextInput>
@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
 ```
 
 <div style="display:flex">
-<div><img src="demo_app.jpg" width="300" height="600"></div>
+<div><img src="demo_app.webp" width="300" height="600"></div>
 </div>
 
 On va améliorer un peu cette page pour qu'elle ressemble à une page de connexion sur un site web. Il faut donc des input pour que l'utilisateur puisse entrer son prenom, so nom et un bouton pour se connecter. 
@@ -128,7 +128,7 @@ export default function App() {
       <View style={styles.container}>
         <Text>Bienvenue sur l'application de William</Text>
         <Image 
-          source={require('./logo.png')}
+          source={require('./logo.webp')}
           style={styles.logo}
         />
         <View style={styles.userInput}>
@@ -146,7 +146,7 @@ export default function App() {
 ```
 
 <div style="display:flex">
-<div><img src="amelioration_app.jpg" width="300" height="600"></div>
+<div><img src="amelioration_app.webp" width="300" height="600"></div>
 </div>
 
 Pour faire cela j'ai du créer un component **CustomButton** car le component **<Button>** de base n'est pas modifiable. Voici le fichier CustomButton.js : 

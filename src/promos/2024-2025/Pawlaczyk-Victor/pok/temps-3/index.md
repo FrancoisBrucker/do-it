@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "Titre du POK du temps 3"
+title: "Performance écologique des bâtiments"
 authors:
   - Victor Pawlaczyk
 
@@ -10,7 +10,7 @@ date: 2025-03-01
 tags: 
   - "temps 3"
 
-résumé: Un POK traitant d'un sujet.
+résumé: "Ce Pok vise à faire un état des lieux des différentes normes thermiques et écologiques qui s'appliquent aux bâtiments ainsi que d'explorer les solutions qui permettent d'atteindre ces normes, voire mieux !" 
 ---
 
 {% prerequis %}
@@ -23,11 +23,6 @@ Liste des prérequis du POK ET/OU MON
 Les lien utiles pour la compréhension de celui-ci.
 
 {% endlien %}
-
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce POK. On oubliera pas de donner :
-
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
 
 ## Tâches
 

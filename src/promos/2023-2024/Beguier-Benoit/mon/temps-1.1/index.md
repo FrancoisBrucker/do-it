@@ -123,7 +123,7 @@ Ici il n'y a aucun problème d'import.
 {% endinfo %}
  
 Ce MOOC s'est ensuite terminé sur un petit test que j'ai validé.
-![MOOC](Mooc.png)
+![MOOC](Mooc.webp)
 Source : Open Classrooms
 
 ## 4. Application sur des données de Formule 1
@@ -133,7 +133,7 @@ Je vais dans cette partie appliquer ce que j'ai appris dans le MOOC pour visuali
 #### Générer un graphique des positions des pilotes à chaque tour
 J'ai trouvé sur Internet plusieurs bases de données mettant à disposition des données de chaque Grand Prix, telles que les positions d'arrivées, les écarts avec les autres pilotes, les positions à chaque tour... C'est cette dernière donnée qui va m'intéresser, et je vais d'abord essayer de générer un graphique des positions de chaque pilote à chaque tour, comme montré ci-dessous :
 
-![Graphique](graphique.png)
+![Graphique](graphique.webp)
 Source : Pitwall
 
 Cela me paraît assez accessible mais relève d'un bon entraînement d'utilisation de la fonction `plot()` .
@@ -164,7 +164,7 @@ legend("topright", legend=c("Lando Norris", "Max Verstappen"), col=c("blue", "re
 ```
 On obtient alors ce graphique :
 
-![Graphique1](graphique1.png)
+![Graphique1](graphique1.webp)
 
 Afin d'améliorer l'esthétisme de ce graphique, j'y apporte quelques modifications pour obtenir le résultat suivant :
 
@@ -200,6 +200,6 @@ legend("bottomright", legend=c("Lando Norris", "Max Verstappen"), col=c("blue", 
 title(main="Position des pilotes par rapport \n au tour dans lequel ils se situent", col.main="black") # Titre en noir avec retour à la ligne au milieu
 ```
 
-![Graphique2](graphique2.png)
+![Graphique2](graphique2.webp)
 
 J'ai donc réussi mon cas pratique. J'aimerais poursuivre plus loin l'utilisation de R, peut-être dans un prochain MON ou de mon côté.

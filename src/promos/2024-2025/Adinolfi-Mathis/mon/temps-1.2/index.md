@@ -49,7 +49,7 @@ Ceci est une véritable inquiétude au vu de notre situation mondiale actuelle :
 Pour répondre à cette question, il faut revenir aux sources et comprendre quels sont les besoins d'une IA pour fonctionner.
 
 <div style="text-align: center;">
-    <img src="Fresque_IA.png" width="1000"/>
+    <img src="Fresque_IA.webp" width="1000"/>
     <br>
     <u> Image 1 : Fresque IA </u>
 </div>
@@ -80,7 +80,7 @@ Un des principaux risques liés à cette technologie est qu'elle peut nous rendr
 Inquiète, l'entreprise Schneider a publié une estimation des dépenses en énergie de l'IA dans son rapport "The AI Disruption: Challenges and Guidance for Data Center Design".
 
 <div style="text-align: center;">
-    <img src="Estimation.png" width="800"/>
+    <img src="Estimation.webp" width="800"/>
     <br>
     <u> Image 2 : Estimation des consommations électriques des datacenters en 2028 [8] </u>
 </div>
@@ -89,7 +89,7 @@ Inquiète, l'entreprise Schneider a publié une estimation des dépenses en éne
 Soit une augmentation de 400 % pour l'IA d'ici 2028 !
 
 <div style="text-align: center;">
-    <img src="Conso_datacenter_2030.PNG" width="800"/>
+    <img src="Conso_datacenter_2030.webp" width="800"/>
     <br>
     <u> Image 3 : Estimation des consommations électriques des datacenters en 2030 [10] </u>
 </div>
@@ -102,7 +102,7 @@ En supposant que nous observons la même augmentation dans les rejets de carbone
 Tout n'est pas mauvais dans cette technologie. Bien que son entraînement et son utilisation requièrent une grande puissance de calcul, elle permet de simplifier et d'automatiser des tâches qui demandaient plus de temps et de ressources, permettant ainsi de réduire les émissions de carbone de ces tâches. En effet, une étude semble suggérer que l'IA pourrait produire moins d'émissions de carbone que les humains, ce qui la rendrait plus durable.
 
 <div style="text-align: center;">
-    <img src="Comparaison.png" width="500"/>
+    <img src="Comparaison.webp" width="500"/>
     <br>
     <u> Image 4 : Comparaison des empreintes carbone pour une même tâche réalisée par un humain et des IA [9] </u>
 </div>

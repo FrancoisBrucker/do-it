@@ -31,7 +31,7 @@ Aucun prérequis ici, je suis parti de zéro. L'idée est de prendre en main Bub
 Ce POK présente le développement d'une application web avec Bubble.io pour aider les coureurs à suivre leurs performances et à personnaliser leurs plans d'entraînement selon leurs objectifs. Ce projet vise à terme à inclure la mise en place de fonctionnalités de base que l'on peut retrouver dans les applications déjà existantes et la personnalisation des plans d'entrainement en fonction des données fournies par l'utilisateur lors de son inscription.
 
 <div style="margin: auto; width: fit-content;">
-  <img src="./logo_RunMate.png" alt="RunMate" style="width: 200px">
+  <img src="./logo_RunMate.webp" alt="RunMate" style="width: 200px">
 
 </div>
 
@@ -109,7 +109,7 @@ Une réflexion sur l'interface utilisateur (UI) et l'expérience utilisateur (UX
 La base de données **User** est l'un des éléments centraux de l'application, car elle permet de stocker toutes les informations nécessaires pour personnaliser l'expérience utilisateur et proposer des plans d'entraînement adaptés à chaque coureur. Voici un aperçu détaillé des étapes et des choix effectués pour la création de cette base de données :
 
 <div style="margin: auto; width: fit-content;">
-  <img src="./Screenshot from 2024-09-18 12-00-33.png" alt="RunMate">
+  <img src="./Screenshot from 2024-09-18 12-00-33.webp" alt="RunMate">
 
 </div>
 
@@ -164,7 +164,7 @@ J'ai créé les pages permettant aux utilisateurs de s'inscrire et de renseigner
 - Des pages supplémentaires pour définir le volume d'entraînement hebdomadaire, l'objectif de course, et le nombre de sessions par semaine.
 
 <div style="margin: auto; width: fit-content;">
-  <img src="./Screenshot from 2024-09-18 12-12-55.png" alt="Page infos">
+  <img src="./Screenshot from 2024-09-18 12-12-55.webp" alt="Page infos">
 
 </div>
 
@@ -181,7 +181,7 @@ J'ai mis en place un **tableau de bord** affichant les performances de l'utilisa
 Des graphiques dynamiques permettent de visualiser les progrès mois par mois.
 
 <div style="margin: auto; width: fit-content;">
-  <img src="./Screenshot from 2024-09-18 12-18-01.png" alt="Dashboard">
+  <img src="./Screenshot from 2024-09-18 12-18-01.webp" alt="Dashboard">
 
 </div>
 
@@ -209,7 +209,7 @@ Le **Sprint 2** du développement de l'application de suivi de course à pied su
     -   La base de données des **sessions** a été mise en place pour stocker les détails des séances d'entraînement hebdomadaires. Cette base prend en compte deux paramètres importants : le nombre de séances hebdomadaires choisi par l'utilisateur lors de son inscription (3, 4 ou 5 séances par semaine) et l'objectif de course sélectionné (10 km, semi-marathon ou marathon).
     -   Chaque session inclut des détails comme la distance à parcourir, le type de séance (endurance, fractionné, etc.), et la durée estimée, en fonction de l'objectif et du niveau de l'utilisateur.
 
-![reference_race](image-1.png)
+![reference_race](image-1.webp)
 
 
 2.  **Visualisation des séances avec un repeating group** :

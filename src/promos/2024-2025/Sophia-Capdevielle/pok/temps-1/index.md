@@ -176,8 +176,8 @@ export default defineComponent({
 
 Et voilà ca que ça donne:
 
-![Calendrier vue 1](./calendriervue1.png)
-![Calendrier vue 2](./calendriervue2.png)
+![Calendrier vue 1](./calendriervue1.webp)
+![Calendrier vue 2](./calendriervue2.webp)
 
 On peut notamment naviguer entre les différents mois.
 On peut aussi intégrer des bibliothèques de style comme Bootstrap ou Tailwind CSS.
@@ -327,7 +327,7 @@ Maintenant qu'on a compris le principe, on peut faire de même avec les autres c
 On change un peu les couleurs pour mettre du rose (rien de mieux). 
 Et hop voilà le résultat final:
 
-![Calendrier final](./calendrier-final.png)
+![Calendrier final](./calendrier-final.webp)
 
 #### Gestion d'événements
 
@@ -409,7 +409,7 @@ export default {
 Et voilà, on a notre formulaire qui s'affiche en dessous du calendrier !!!
 J'ai essayé le formulaire avec ma date d'anniversaire et on voit bien que ça s'affiche au niveau de la bonne case !
 
-![Calendrier avec event](./calendrier-event.png)
+![Calendrier avec event](./calendrier-event.webp)
 
 Bon par contre, à chaque fois qu'on refresh la page les événements ajoutés disparaissent car il n'y a pas de persistance, de base de données derrière; il faudrait lier un fichier json.
 Mais bon j'ai pas eu le temps désolé !

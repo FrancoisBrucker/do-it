@@ -164,20 +164,20 @@ Pour avoir une meilleure présentation des résultats, j'ai téléchargé l'exte
 </div>
 
 {% details "Page d'accueil"%}
-<img src="images/1.PNG" alt="image" />
+<img src="images/1.webp" alt="image" />
 
-<img src="images/1a.PNG" alt="image" />
+<img src="images/1a.webp" alt="image" />
 
-<img src="images/1b.PNG" alt="image" />
+<img src="images/1b.webp" alt="image" />
 
-<img src="images/1c.PNG" alt="image" />
+<img src="images/1c.webp" alt="image" />
 
 
-<img src="images/1d.PNG" alt="image" />
+<img src="images/1d.webp" alt="image" />
 
-<img src="images/1dd.PNG" alt="image" />
+<img src="images/1dd.webp" alt="image" />
 
-<img src="images/1f.PNG" alt="image" />
+<img src="images/1f.webp" alt="image" />
 {%enddetails%}
 
 
@@ -187,7 +187,7 @@ Pour avoir une meilleure présentation des résultats, j'ai téléchargé l'exte
 </div>
 
 {% details "Les cours disponibles"%}
-<img src="images/1g.PNG" alt="image" />
+<img src="images/1g.webp" alt="image" />
 {%enddetails%}
 
 <div class="hint">
@@ -195,7 +195,7 @@ Pour avoir une meilleure présentation des résultats, j'ai téléchargé l'exte
 </div>
 
 {% details "Connexion"%}
-<img src="images/2.PNG" alt="image" />
+<img src="images/2.webp" alt="image" />
 {%enddetails%}
 
 
@@ -205,7 +205,7 @@ Pour avoir une meilleure présentation des résultats, j'ai téléchargé l'exte
 </div>
 
 {% details "Ajouter le cours dans son panier"%}
-<img src="images/entre1.PNG" alt="image" />
+<img src="images/entre1.webp" alt="image" />
 {%enddetails%}
 
 <div class="hint">
@@ -214,30 +214,30 @@ Pour avoir une meilleure présentation des résultats, j'ai téléchargé l'exte
 Là, je n'ai pas réussi à lier correctement le paiement en ligne, même si j'ai essayé de l'implémenter avec Sandbox Payment System, qui n'est pas un système français. Mais cela n'a pas abouti, donc j'aimerais essayer d'implémenter les méthodes françaises comme Paylib ou PayPal.
 </div>
 {% details "Finalisatioon commande"%}
-<img src="images/entre2.PNG" alt="image" />
+<img src="images/entre2.webp" alt="image" />
 {%enddetails%}
 
 <div class="hint">
   <strong>💡</strong> En supposant que l'étudiant a payé, il verra sur son tableau de bord qu'il s'est inscrit à un cours.
 </div>
 {% details "Tableau de bord de l'étudiant"%}
-<img src="images/3.PNG" alt="image" />
+<img src="images/3.webp" alt="image" />
 
-<img src="images/4.PNG" alt="image" />
+<img src="images/4.webp" alt="image" />
 {%enddetails%}
 
 <div class="hint">
   <strong>💡</strong> S'il clique sur le cours, il verra la vidéo avec les leçons qu'il devra cocher chaque fois qu'il en termine une. Je n'ai pas fini le développement, mais je dois faire en sorte qu'à chaque fois qu'il coche un cours, je mette à jour sa progression dans la base de données.
 </div>
 {% details "Contenu du cours"%}
-<img src="images/6.PNG" alt="image" />
+<img src="images/6.webp" alt="image" />
 {%enddetails%}
 
 <div class="hint">
   <strong>💡</strong> Maintenant, du côté admin, je vais essayer de me connecter en premier lieu comme admin simple (instructeur). 
 </div>
 {% details "Comme instructeur"%}
-<img src="images/7.PNG" alt="image" />
+<img src="images/7.webp" alt="image" />
 {%enddetails%}
 
 
@@ -245,7 +245,7 @@ Là, je n'ai pas réussi à lier correctement le paiement en ligne, même si j'a
   <strong>💡</strong> Sur la page d'accueil, il verra toutes les données concernant les cours (nombre d'élèves, nombre de cours) et leur évolution. Mais pour le moment, les données qui y sont sont statiques ; je n'ai pas pu les implémenter. Il s'agit juste d'une récupération de données, mais il y a beaucoup d'autres choses plus intéressantes et utiles à mettre en place sur les 20h à venir. Mais ce que je veux montrer ici, c'est qu'en tant qu'instructeur, il n'est pas permis de visiter la liste des instructeurs, d'ajouter, supprimer, etc. Quand il essaie, il voit un message en haut lui montrant cela. Ce qu'il peut faire, c'est uniquement ce qui le concerne (les cours, quizz, etc.).
 </div>
 {% details "Page d'accueil admin"%}
-<img src="images/8.PNG" alt="image" />
+<img src="images/8.webp" alt="image" />
 {%enddetails%}
 
 
@@ -253,21 +253,21 @@ Là, je n'ai pas réussi à lier correctement le paiement en ligne, même si j'a
   <strong>💡</strong> Si on se connecte maintenant avec le compte du super admin, on peut tout faire. Ici, c'est un enchaînement d'écrans où j'ai visité les pages une par une. Mais il y a d'autres pages que j'ai déjà développées, comme l'attribution des permissions (les rôles), l'ajout des quizz et leurs réponses, etc., que je n'ai pas encore mises sur le tableau de bord. Elles sont accessibles juste en tapant la route (le lien) pour le moment.
 </div>
 {% details "Dashbord super admin"%}
-<img src="images/9.PNG" alt="image" />
+<img src="images/9.webp" alt="image" />
 
-<img src="images/10.PNG" alt="image" />
+<img src="images/10.webp" alt="image" />
 
-<img src="images/11.PNG" alt="image" />
+<img src="images/11.webp" alt="image" />
 
-<img src="images/12.PNG" alt="image" />
+<img src="images/12.webp" alt="image" />
 
-<img src="images/13.PNG" alt="image" />
+<img src="images/13.webp" alt="image" />
 
-<img src="images/14.PNG" alt="image" />
+<img src="images/14.webp" alt="image" />
 
-<img src="images/dernier.PNG" alt="image" />
+<img src="images/dernier.webp" alt="image" />
 
-<img src="images/nondernier.PNG" alt="image" />
+<img src="images/nondernier.webp" alt="image" />
 {%enddetails%}
 
 

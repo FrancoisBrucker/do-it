@@ -27,7 +27,7 @@ Ce MON nécessite quelques prérequis :
 {%endprerequis%}
 
 
-![Api key](flutter.png)
+![Api key](flutter.webp)
 
 
 ## Objectifs et backlog produit <a id="section-1"></a>
@@ -45,11 +45,11 @@ La particularité de Flutter réside dans son approche de création d'interfaces
 
 L'un des principaux avantages de Flutter réside dans son architecture de **widget**. Chaque élément de l'interface utilisateur, qu'il s'agisse de boutons, de mises en page, ou d'animations, est un widget.
 
-![Openclassroom_accueil](./widgetlist.jpg)
+![Openclassroom_accueil](./widgetlist.webp)
 
 Cette approche modulaire simplifie la création et la personnalisation des interfaces tout en facilitant la maintenance du code. De plus, Flutter propose une vaste bibliothèque de widgets prêts à l'emploi, facilitant ainsi la création d'applications esthétiquement attrayantes et fonctionnelles.
 
-![Openclassroom_accueil](./widgetphone.png)
+![Openclassroom_accueil](./widgetphone.webp)
 
 Un autre atout majeur de Flutter est sa rapidité de développement. Grâce à la fonctionnalité de rechargement "hot reload", les développeurs peuvent voir les modifications apportées à leur code en temps réel, accélérant ainsi le processus de test et d'itération. Cette caractéristique, combinée à la facilité de partage de code entre les plateformes, fait de Flutter un choix idéal pour les projets nécessitant une mise sur le marché rapide et une maintenance efficace.
 
@@ -80,11 +80,11 @@ J'ai justement trop espacé ces sessions et j'avais donc du mal à replonger dan
 
 Le petit projet sympas que je souhaite réaliser doit ressembler à cela :
 
-![Openclassroom_accueil](./goal.png)
+![Openclassroom_accueil](./goal.webp)
 
 Et voici ce que j'ai obtenu pour l'instant :
 
-![Openclassroom_accueil](./atm.png)
+![Openclassroom_accueil](./atm.webp)
 
 Et voici la vidéo youtube que j'ai suivi : [petit projet sympas](https://www.youtube.com/watch?v=D4nhaszNW4o&list=LL&index=2)
 
@@ -104,7 +104,7 @@ Je souhaiterais ensuite rejoindre Monsieur Assane Diouf sur son fameux projet Cu
 
 Durant le deuxième Sprint, j'ai tout d'abord terminé mon petit projet solo :
 
-![Openclassroom_accueil](./work.png)
+![Openclassroom_accueil](./work.webp)
 
 Assane a accepté de me laisser travailler avec lui sur son projet d'application [CupCare](https://francoisbrucker.github.io/do-it/promos/2023-2024/Diouf-Asssane/pok/temps-2/). Je vous invite à aller voir sa superbe application !
 

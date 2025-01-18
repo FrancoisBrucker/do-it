@@ -101,7 +101,7 @@ Je ne suis pas extrêmement rentrée dans les détails des options qu'offraient 
 
 Alors finalement, après 1h30 de dur labeur, je vous présente mon tableau de bord, avec lequel vous pouvez jouer [ici](https://lookerstudio.google.com/reporting/3a53aba0-98ac-4a1d-aa94-3af36f8d6195)
 
-<img src=looker_studio.png>
+<img src=looker_studio.webp>
 
 <h2 id=googleAppscript> Focus sur Google Apps Scripts</h2>
 
@@ -133,12 +133,12 @@ Je savais qu'il y avait la possibilité d'utiliser **Power Query** pour importer
 
 |**étendre sur plusieurs lignes**|**extraire les valeurs**|
 |---|---|
-|<img src=json_excel1.png>|<img src=json_excel2.png>|
+|<img src=json_excel1.webp>|<img src=json_excel2.webp>|
 |Permet d'avoir un ingrédient par ligne|Permet d'avoir tous les ingrédients dans une même cellule|
 
 ##### BEMOL n°2 :
 
-<img align="right" width=150 src=API_chatGPT.png>
+<img align="right" width=150 src=API_chatGPT.webp>
 
 L'outil idéal pour trouver le nom d'une recette facilement à partir de l'origine de la recette et de ses ingrédients était évident : **ChatGPT**. Mais lui poser la question pour chaque ligne était trop fastidieux. Après quelques recherches, j'ai vu qu'il était possible de connecter facilement **l'API de ChatGPT** à **Sheet**. *Processus très bien expliqué dans [cette vidéo](https://www.youtube.com/watch?v=2OukmKPCW1I)*
 
@@ -161,7 +161,7 @@ Ni une ni deux, je m'y atèle.
 ```
 
 On obtient alors en résultat : 
-<img src=nom_recette.png>
+<img src=nom_recette.webp>
 
 {%info "REMARQUES"%}
 - chaque requête à l'API est **payante**. Le prix dépend du type de la requête. Ce genre de requête n'est pas très cher. Mais comme mes crédits gratuits n'étaient pas illimités, j'ai choisi de restreindre à **62 recettes**.
@@ -256,7 +256,7 @@ function getRecipe() {
 Aujourd'hui, j'avais envie de manger **italien**. Mais je n'avais chez moi que des **cacahuètes grillées** et de la **canneberge séchée**. 
 *Qu'est ce que j'allais bien pouvoir cuisiner?*
 
-<img width=350 src=resultat_recette.png>
+<img width=350 src=resultat_recette.webp>
 
 
 
@@ -351,7 +351,7 @@ On y retrouve **plus de 85 000** compléments alimentaires répertoriés avec ce
 
 On obtient alors une BDD exploitable :
 
-<img src=BDD.png>
+<img src=BDD.webp>
 
 ### Etape 2 : Obtenir une liste exhaustive des possibilités/choix parmi lesquelles l'utilisateur devra choisir
 
@@ -363,7 +363,7 @@ Il y avait en tout **3 grosses variables** à prendre en compte :
 
 Pour ce faire, il me fallait **récupérer le contenu de chaque cellule** des colonnes concernées, et de réussir à **extraire chaque item** des cellules, de sorte à ce qu'une **cellule corresponde à une item**. Mon idée était d'ensuite pouvoir **supprimer les doublons**, mais il me fallait réussir, pour cela, à placer toutes ces cellules les unes à la suite des autres sur une **même colonne**.
 
-<img width=350 src=extraction_données.png>
+<img width=350 src=extraction_données.webp>
 
 **Petit problème :** vu comment s'était déroulé la première partie de ce POK sur le traitement de données avec Sheet, réaliser toutes ces actions sur ce logiciel allait être compliqué.
 Je me suis alors tournée vers mon ancien ami Excel, et plus particulièrement **Power Query**.
@@ -372,11 +372,11 @@ J'ai alors réalisé les actions suivantes pour parvenir au résultat :
 
 - **Split column** by **Delimiters** : qui permet de séparer le contenu des cellules de la colonne en fonction des *virgules*
 
-<img width=450 src=extraction_données_2.png>
+<img width=450 src=extraction_données_2.webp>
 
 - **Unpivot columns**: qui permet de transformer des colonnes de valeurs en lignes
 
-<img width=250 src=extraction_données_3.png>
+<img width=250 src=extraction_données_3.webp>
 
 Ensuite, il suffit de **Supprimer les doublons** sur Excel, et puis le tour est joué. 
 
@@ -403,7 +403,7 @@ Par ailleurs certaines allergies étaient **plus délicates à traiter**:
 
 ### Problème de formatage des choix de réponses
 
-<img align="right" width=138 src=pop_a_risques_ex.png>
+<img align="right" width=138 src=pop_a_risques_ex.webp>
 
 Si on reprend les données bruts de **toutes les populations à risques**, on distingue 2 catégories: 
 - les **catégories de population**
@@ -584,11 +584,11 @@ Je m'appelle Raphaël. Je suis en 3/2 et je passe mes concours le mois prochain.
 Il faut faire attention parce que je suis **végétarien**, et allergique à **l'arachide** et aux **crustacés**. Et également, sinon c'est pas drôle, j'ai quelques **problèmes de foie** et **problèmes cardiaques**... 
 Je fais le test pour savoir quel complément alimentaire je peux prendre :
 
-<img src=mail1.png>
+<img src=mail1.webp>
 
 Ah zut, c'est vrai que j'oubliais que je suis sous anti-coagulants. Je refais le test : 
 
-<img src=mail2.png>
+<img src=mail2.webp>
 
 *En espérant que Raphaël puisse réussir ses concours avec ça !*
 

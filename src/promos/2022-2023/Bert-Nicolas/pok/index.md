@@ -20,7 +20,7 @@ Jeu de mots croisés (Svelte, NestJS, PostgreSQL)
 {% endinfo %}
 
 <a href="http://balsamite.ovh1.ec-m.fr" class="imageContainer">
-  <img src="./images/gamePage.png" alt="Page de jeu" class="viewPage">
+  <img src="./images/gamePage.webp" alt="Page de jeu" class="viewPage">
   <div class="infoTitles">
     <p class="title">Mots croisés</p>
     <p class="link">http://balsamite.ovh1.ec-m.fr</p>
@@ -51,7 +51,7 @@ L'idée de ce POK est de créer une site contenant une partie frontend, une part
 
 Dans ce POK nous allons recrée un jeu de ticket à gratter : le jeu de mots croisés. Voici une photo du ticket en question :
 
-<img src="./images/mots-croises.jpg" alt="Image jeu de mots croisés" style="width: 350px; margin: 0 auto;" />
+<img src="./images/mots-croises.webp" alt="Image jeu de mots croisés" style="width: 350px; margin: 0 auto;" />
 <br>
 
 {% info "**Règles du jeu**" %}
@@ -61,7 +61,7 @@ Nous disposons de 14 cases **?** et d’une grille de mots. Derrière chaque cas
 
 ## Technologies utilisées
 
-<img src="./images/choix_techno.jpg" alt="Technologies utilisées" style="width: 700px; margin: 0 auto; border: 0" />
+<img src="./images/choix_techno.webp" alt="Technologies utilisées" style="width: 700px; margin: 0 auto; border: 0" />
 
 * **Front-end** : Svelte + TailwindCSS
 * **Back-end** : NestJS
@@ -72,7 +72,7 @@ Nous disposons de 14 cases **?** et d’une grille de mots. Derrière chaque cas
 ## Schéma d'entités
 
 <div style="display: grid; place-items: center;">
-  <img src="./images/UML-POK-1.png" alt="Schéma d'entités" style="border: 0;" />
+  <img src="./images/UML-POK-1.webp" alt="Schéma d'entités" style="border: 0;" />
 </div>
 
 On a une relation OneToMany entre User et Game ==> un user peut avoir plusieurs parties alors qu'une partie ne peu avoir qu'un seul player.

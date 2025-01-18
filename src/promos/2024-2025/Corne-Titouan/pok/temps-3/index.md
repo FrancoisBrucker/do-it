@@ -1,66 +1,109 @@
 ---
 layout: layout/pok.njk
 
-title: "Titre du POK du temps 3"
+title: "Angular - Front-End Framework (2/2)"
 authors:
   - Titouan Corne
 
-date: 1971-03-01
+date: 2025-01-06
 
 tags: 
   - "temps 3"
+  - "vert"
+  - "Dev"
+  - "Web"
+  - "Angular"
 
-résumé: Un POK traitant d'un sujet.
+résumé: Ce dernier POK est consacré à l'approfondissement des connaissances du language de programmation Angular. C'est la suite de mon POK2. Je vais ainsi continuer de développer le site de cuisine Miam'Miam, j'aimerais implémenter les fonctionnalités manquantes (ajout de recette, ...), mais aussi j'aimerais écrire des tests unitaires et déployer le site sur le serveur aioli (serveur de Do-It).
 ---
 
 {% prerequis %}
 
-Liste des prérequis du POK ET/OU MON
+- Prerequis
 
 {% endprerequis %}
+
 {% lien %}
 
-Les lien utiles pour la compréhension de celui-ci.
-
+- Liens
+  
 {% endlien %}
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce POK. On oubliera pas de donner :
+## Cadrage
 
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
+### Objectifs principaux
 
-## Tâches
+1. Continuer de développer le site *Miam'Miam* pour respecter le cahier des charges [POK 2](https://francoisbrucker.github.io/do-it/promos/2024-2025/Corne-Titouan/pok/temps-2/).
+2. Ecrire des tests pour vérifier le bon fonctionnement du site.
+3. Déployer le site sur le server aioli.
 
-### Sprints
+### Monitoring du projet
 
-But final.
+#### Back-log et horodateur
 
-#### Sprint 1
+{% details "Sprint 1" %}
 
-Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
+- [] Tâche 1
 
-- [ ] Une tâche non réalisée
-- [x] Une tâche réalisée
+| Date | Temps passé | Commentaire |
+| -------- | -------- | -------- |
+| . | . | . |
 
-#### Sprint 2
+***Temps total passé sur ce sprint :*** *temps total*
 
-- [ ] Une tâche non réalisée
-- [x] Une tâche réalisée
+{% attention %}
 
-Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
+Possibles points d'attention
 
-### Horodatage
+{% endattention %}
 
-Toutes les séances et le nombre d'heure que l'on y a passé.
+{% enddetails %}
 
-| Date | Heures passées | Indications |
-| -------- | -------- |-------- |
-| Mardi 27/08  | 1H  | Travail sur la trame du site |
+{% details "Sprint 2" %}
 
-## Contenu
+- [] Tâche 1
 
-Le contenu du POK.
+| Date | Temps passé | Commentaire |
+| -------- | -------- | -------- |
+| . | . | . |
 
-### Premier Sprint
+***Temps total passé sur ce sprint :*** *temps total*
 
-### Second Sprint
+{% attention %}
+
+Possibles points d'attention
+
+{% endattention %}
+
+{% enddetails %}
+
+{% faire %}
+
+**QUOTA HORAIRE TOTAL POK 3 :** temps total cumulé avec ces deux sprints
+{% endfaire %}
+
+#### Analyse post-morterm
+
+{% details "Sprint 1" %}
+
+{% enddetails %}
+
+{% details "Sprint 2" %}
+
+{% enddetails %}
+
+{% details "POK complet" %}
+
+{% enddetails %}
+
+## Table des matières
+
+1. [Partie 1](#section1)
+2. [Partie 2](#section2)
+3. [Conclusion](#section3)
+
+## Partie 1 <a id="section1"></a>
+
+## Partie 2 <a id="section2"></a>
+
+## Conclusion <a id="section3"></a>

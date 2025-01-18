@@ -101,7 +101,7 @@ monBouton.addEventListener("click", () => {
 
 Afin de mettre en pratique ces différents aspects principaux du code, j'ai suivi l'exercice d'un cours OpenClassRoom pour mettre en place une application en ligne pour apprendre à taper des mots plus vite. 
 
-![Appli](./images/appli1.png)
+![Appli](./images/appli1.webp)
 
 Le cours proposait cette mise en page avec les codes HTML/CSS correspondant. J'ai décidé de le recréer moi-même afin de pratiquer ces langages et de m'améliorer.
 
@@ -158,7 +158,7 @@ Les données en format texte sous JSON sont dites **sérialisées**. La fonction
 
 Les éléments HTML qui peuvent être récupérés par les méthodes vues précédemment représentent le **DOM** *(Document Object Model)*. L'arbre DOM est composé de **noeuds** reliés entre eux par des **branches**. Ce schéma provenant du cours sur OpenClassRoom résumer relativement bien la structure DOM : 
 
-![DOM](./images/ArbreDOM.png)
+![DOM](./images/ArbreDOM.webp)
 
 *image venant de : https://openclassrooms.com/fr/courses/7696886-apprenez-a-programmer-avec-javascript/8205925-recuperez-un-element-d-une-page-web*
 

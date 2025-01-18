@@ -49,29 +49,29 @@ Je me suis appuyé sur une base de données que j'ai moi-même faite à l'époqu
 ## 2. Mes deux bases de données sur lesquelles je me suis amusé <a id="section-2"></a>
 
 **Base de données 1 sur les Miss**
-<img src="graphiques.png">
+<img src="graphiques.webp">
 
 **Base de données 2 sur des acteurs/célébrités**
-<img src="repetition_incrementee.png">
+<img src="repetition_incrementee.webp">
 
 ## 3. Quelques images <a id="section-3"></a>
 
 **Utilisation de filtres**
 :-------------------------:|:-------------------------:
-<img src="filtre.png" width="350" height="350"> | <img src="filtre2.png" width="350" height="350">
-<img src="vuefiltre.png">
+<img src="filtre.webp" width="350" height="350"> | <img src="filtre2.webp" width="350" height="350">
+<img src="vuefiltre.webp">
 
 **Mise en forme conditionnelle avec dégradé de couleurs**
 :-------------------------:|:-------------------------:
-<img src="mise_en_forme_conditionnelle_2.png" width="350" height="350"> | <img src="mise_en_forme_conditionnelle_3.png" width="350" height="350">
+<img src="mise_en_forme_conditionnelle_2.webp" width="350" height="350"> | <img src="mise_en_forme_conditionnelle_3.webp" width="350" height="350">
 
 **Graphes**
 :-------------------------:|:-------------------------:
-<img src="graphe1.png" width="350" height="350"> | <img src="graphe2.png" width="350" height="350">
+<img src="graphe1.webp" width="350" height="350"> | <img src="graphe2.webp" width="350" height="350">
 
 **Tableau croisé dynamique à partir du classement des Miss- FAIL**
 :-------------------------:|:-------------------------:
-<img src="tableaudyn_fail.png" width="600" height="600"> | <img src="editeurtableaudyn.png" width="350" height="350">
+<img src="tableaudyn_fail.webp" width="600" height="600"> | <img src="editeurtableaudyn.webp" width="350" height="350">
 
 Première chose, je suis déçu. Je pensais que la création d'un tableau croisé dynamique était un truc de malade, mais il s'agit simplement de cliquer sur deux boutons...
 Deuxième chose, je me suis rendu compte que la façon avec laquelle j'ai rempli ma base de données ne convenait pas à une analyse par tableaux croisés dynamiques. Doublement déçu.
@@ -198,12 +198,12 @@ function main(){
 
 Voilà le résultat magnifique :
 **Avant**
-<img src="graphiques.png">
+<img src="graphiques.webp">
 
 **Après**
 :-------------------------:|:-------------------------:
-<img src="training.png" width="350" height="350"> | <img src="menu_yes.png" width="350" height="350">
-<img src="tableaudyn_yes.png">
+<img src="training.webp" width="350" height="350"> | <img src="menu_yes.webp" width="350" height="350">
+<img src="tableaudyn_yes.webp">
 
 ## 5. Une étude de cas pour la recherche de données avec INDEX et MATCH <a id="section-5"></a>
 
@@ -211,9 +211,9 @@ Le but est de créer une facture qui est complétée automatiquement avec seulem
 
 Voici le document qui est séparée en quatre feuilles.
 :-------------------------:|:-------------------------:
-<img src="cas_feuille1.png" width="350" height="350"> | <img src="cas_feuille2.png" width="350" height="350">
+<img src="cas_feuille1.webp" width="350" height="350"> | <img src="cas_feuille2.webp" width="350" height="350">
 
-<img src="cas_feuille3.png" width="350" height="350"> | <img src="cas_feuille4.png" width="350" height="350">
+<img src="cas_feuille3.webp" width="350" height="350"> | <img src="cas_feuille4.webp" width="350" height="350">
 
 Pour ça, j'ai utilisé les fonctions INDEX et MATCH qui sont finalement analogues à VLOOKUP et plusieurs fonctions IF.
 

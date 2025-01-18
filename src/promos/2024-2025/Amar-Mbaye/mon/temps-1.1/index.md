@@ -102,7 +102,7 @@ mon_amar/
 │
 ├── /public
 │   ├── index.html        // Fichier de base HTML
-│   ├── amar.jpg       // Photo de profil
+│   ├── amar.webp       // Photo de profil
 │   └── cv.pdf            // Fichier CV téléchargeable
 │
 ├── /src
@@ -241,7 +241,7 @@ import './HomePage.css';
 function HomePage() {
   return (
     <div className="home">
-      <img src="amar.jpg" alt="Profile" className="profile-photo" />
+      <img src="amar.webp" alt="Profile" className="profile-photo" />
       <h1>SERIGNE MBAYE SY AMAR</h1>
       <p>
         Dernière année cycle ingénieur (Master 2) - Développement et Organisation en IT.
@@ -322,13 +322,13 @@ Cette page affiche le formulaire de contact à l'aide du composant Contact, perm
 
 
 ## Resultats 📊
-<img src="./image.png" alt="Page du jeu" />
-<img src="./image1.png" alt="hhh" />
-<img src="./image2.png" alt="On peut perdre"/>
-<img src="./image3.png" alt="On peut gagner"/>
-<img src="./image4.png" alt="On peut perdre"/>
-<img src="./image5.png" alt="On peut gagner"/>
-<img src="./Capture6.png" alt="On peut gagner"/>
+<img src="./image.webp" alt="Page du jeu" />
+<img src="./image1.webp" alt="hhh" />
+<img src="./image2.webp" alt="On peut perdre"/>
+<img src="./image3.webp" alt="On peut gagner"/>
+<img src="./image4.webp" alt="On peut perdre"/>
+<img src="./image5.webp" alt="On peut gagner"/>
+<img src="./Capture6.webp" alt="On peut gagner"/>
 
 <div class="danger">
   <strong>Attention :</strong> Bien que React améliore la performance de l'interface utilisateur mais il n'est pas idéal pour le SEO sans l'utilisation d'outils comme Next.js ou le rendu côté serveur, car il fonctionne principalement côté client.

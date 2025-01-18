@@ -28,7 +28,7 @@ C# est un langage de programmation orienté objet créé par Microsoft en 2000. 
 
 <div style="width:100%;">
   <figure style="text-align:center">
-    <img style="height:200px; margin-left: auto; margin-right: auto" src="../csharp.png">
+    <img style="height:200px; margin-left: auto; margin-right: auto" src="../csharp.webp">
     <figcaption>C#</figcaption>
   </figure>
 </div>
@@ -42,7 +42,7 @@ C# est un langage de programmation orienté objet créé par Microsoft en 2000. 
 
 <div style="width:100%;">
   <figure style="text-align:center">
-    <img style="height:200px; margin-left: auto; margin-right: auto" src="../dotnet.png">
+    <img style="height:200px; margin-left: auto; margin-right: auto" src="../dotnet.webp">
     <figcaption>C#</figcaption>
   </figure>
 </div>

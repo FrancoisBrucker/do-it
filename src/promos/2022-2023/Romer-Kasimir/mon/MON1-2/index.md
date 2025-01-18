@@ -73,7 +73,7 @@ L'objectif stratégique à atteindre par le biais de la consultation est que CFP
 
 ### Question 3 - Réalisez une cartographie des acteurs.
 J'ai dessiné l'esquisse suivante des acteurs et des relations entre eux :
-![Cartographie des acteurs](./images/cartographie-acteurs.jpg)
+![Cartographie des acteurs](./images/cartographie-acteurs.webp)
 
 ### Question 4 - Réalisez une cartographie des processus.
 Une cartographie des processus est une est une représentation des processus d'entreprise dans les domaines suivants qui sont aussi appelés macro-processus : ([source](https://www.advaloris.ch/nos-services/intelligence-organisationnelle/amelioration-de-performance-operationnelle-organisationnelle-dune-entreprise/modelisation-des-processus/cartographie-processus-de-lentreprise-prerequis-management-processus))
@@ -124,7 +124,7 @@ Je crée tous mes modèles de processus avec [yEd](https://www.yworks.com/produc
 - Pas toujours un prestataire pour une formation
 
 #### Reporting et pilotage de gestion
-![Reporting et pilotage de gestion](./images/bpmn/reporting-creation-bilan.png)
+![Reporting et pilotage de gestion](./images/bpmn/reporting-creation-bilan.webp)
 C'est un example d'un diagramme BPMN très simple.
 
 **Dysfonctionnements:**
@@ -136,7 +136,7 @@ C'est un example d'un diagramme BPMN très simple.
 - Le directeur signe les factures
 
 #### Paie des prestataires
-![Paie des prestataires](./images/bpmn/remuneration-enseignant.png)
+![Paie des prestataires](./images/bpmn/remuneration-enseignant.webp)
 C'est un example d'un diagramme BPMN plus complexe avec des swimlanes.
 
 **Dysfonctionnements:**
@@ -191,7 +191,7 @@ Ici la liste avec tous les dysfonctionnements qui ont été identifié:
 #### C'est quoi, une analyse SWOT?
 Une analyse SWOT est une analyse stratégique qui permet de déterminer les forces, les faiblesses, les opportunités et les menaces d'une entreprise. Elle est utilisée pour évaluer la situation d'une entreprise et pour définir une stratégie. Les forces et les faiblesses sont des **facteurs internes** à l'entreprise. Les opportunités et les menaces sont des **facteurs externes** à l'entreprise. L'analyse SWOT est donc un outil de **management stratégique**. 
 
-![Matrice SWOT](./images/swot-matrix-description.png)
+![Matrice SWOT](./images/swot-matrix-description.webp)
 
 #### La matrice SWOT du CFP
 **Strengths**

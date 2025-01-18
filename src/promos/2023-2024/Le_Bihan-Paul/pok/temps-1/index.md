@@ -40,7 +40,7 @@ Vient maintenant la rédaction du contenu en tant que tel. Afin d'utiliser au mi
 
 D'ailleurs, ne sachant pas bien comment serait agencé mon texte, j'ai également commencé par y mettre du faux-texte. Voilà ce à quoi ressemblait alors ma page web :
 
-<div><img src="site-en-html.png"></div>
+<div><img src="site-en-html.webp"></div>
 
 Vous pouvez retrouver le code source [ici](https://github.com/FrancoisBrucker/do-it/blob/main/src/promos/2023-2024/Le_Bihan-Paul/pok/temps-1/mon-site/).
 
@@ -53,7 +53,7 @@ Le gros du travail en ce qui me concerne s'est trouvé là. En effet, après mon
 
 Et voici un apperçu du rendu final, qui se trouve avec le [code HTML](https://github.com/FrancoisBrucker/do-it/blob/main/src/promos/2023-2024/Le_Bihan-Paul/pok/temps-1/mon-site/): 
 
-<div><img src="site-avec-html-et-css-p1.png"></div>
-<div><img src="site-avec-html-et-css-p2.png"></div>
-<div><img src="site-avec-html-et-css-p3.png"></div>
-<div><img src="site-avec-html-et-css-p4.png"></div>
+<div><img src="site-avec-html-et-css-p1.webp"></div>
+<div><img src="site-avec-html-et-css-p2.webp"></div>
+<div><img src="site-avec-html-et-css-p3.webp"></div>
+<div><img src="site-avec-html-et-css-p4.webp"></div>

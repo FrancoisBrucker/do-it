@@ -108,7 +108,7 @@ Une fois mes références en tête, j'ai fait mon **Mockup** sur **Figma** grâc
 
 {% endchemin %}
 
-![alt text](media/Sprint1_1_mockup.png)
+![alt text](media/Sprint1_1_mockup.webp)
 
 J'ai créé 3 pages :
 - PORTFOLIO
@@ -152,22 +152,22 @@ PS C:\Users\kevin\3A\Site_Portfolio> npm install
 
 Ensuite j'ai organisé mon dossier de la manière suivante en prenant les png de mes digitals painting :
 
-![alt text](media/Sprint1_2_organisation_dossiers.png)
+![alt text](media/Sprint1_2_organisation_dossiers.webp)
 
 Après j'ai codé mes pages simplement et on avait ce premier aperçu :
 
 1. Page PORTFOLIO :
-![alt text](media/Sprint1_3_avant_css_portfolio.png)
+![alt text](media/Sprint1_3_avant_css_portfolio.webp)
 
 1. Page CONTACT :
-![alt text](media/Sprint1_4_avant_css_contact.png)
+![alt text](media/Sprint1_4_avant_css_contact.webp)
 
 {% lien %}
 [Exemple de formulaire](https://www.youtube.com/watch?v=lR4-DJey_3A)
 {% endlien %}
 
 3. Page MON PROFIL :
-![alt text](media/Sprint1_5_avant_css_mon_profil.png)
+![alt text](media/Sprint1_5_avant_css_mon_profil.webp)
 
 #### CSS
 
@@ -276,7 +276,7 @@ img {
 }
 ```
 
-![alt text](media/Sprint1_6_apres_css_portfolio.png)
+![alt text](media/Sprint1_6_apres_css_portfolio.webp)
 
 2. **Page CONTACT :**
 
@@ -333,7 +333,7 @@ button {
 }
 ```
 
-![alt text](media/Sprint1_7_apres_css_contact.png)
+![alt text](media/Sprint1_7_apres_css_contact.webp)
 
 3. **Page MON PROFIL :**
 
@@ -359,7 +359,7 @@ div.mon_profil p b {
 }
 ```
 
-![alt text](media/Sprint1_8_apres_css_mon_profil.png)
+![alt text](media/Sprint1_8_apres_css_mon_profil.webp)
 
 #### Retour sur expérience
 
@@ -457,9 +457,9 @@ Je ne voulais pas avoir de backend à gérer donc j’ai fait marche arrière po
 
 J'ai perdu beaucoup de temps à faire des allers-retours parce que je ne comprenais pas trop ce que je faisais.
 
-![alt text](media/Sprint2_1_contact_form.png)
-![alt text](media/Sprint2_2_alert_contact.png)
-![alt text](media/Sprint2_3_mail_form.png)
+![alt text](media/Sprint2_1_contact_form.webp)
+![alt text](media/Sprint2_2_alert_contact.webp)
+![alt text](media/Sprint2_3_mail_form.webp)
 
 {% details "HTML Contact Form" %}
 ```
@@ -572,14 +572,14 @@ Suite à cela je me suis occupé de la partie animation des images :
     </nav>
     <div class="portfolio">
       <div>
-        <img class="media" src="/media/Exercice_3_photo_1loliloetlolilo.png" />
-        <img class="media" src="/media/Exercice_3_photo_2.png" />
-        <img class="media" src="/media/Exercice_4_photo_1.png" />
+        <img class="media" src="/media/Exercice_3_photo_1loliloetlolilo.webp" />
+        <img class="media" src="/media/Exercice_3_photo_2.webp" />
+        <img class="media" src="/media/Exercice_4_photo_1.webp" />
       </div>
       <div>
-        <img class="media" src="/media/Exercice_4_photo_2.png" />
-        <img class="media" src="/media/Exercice_6_Oisillons.png" />
-        <img class="media" src="/media/Exercice_7_Dragon.png" />
+        <img class="media" src="/media/Exercice_4_photo_2.webp" />
+        <img class="media" src="/media/Exercice_6_Oisillons.webp" />
+        <img class="media" src="/media/Exercice_7_Dragon.webp" />
       </div>
     </div>
     <div class="media_hover">
@@ -704,14 +704,14 @@ Ensuite, ce qui a été le plus long était la mise en forme et comment gérer l
 
 Pour la transition d'une image à l'autre avec les flèches, j'avais un problème avec la taille de images qui était de 7 alors que je n'affichais que 6 images sur ma page. Je me suis rendu compte que l'image zoomée après le click était aussi pris en compte dans ma liste "images".
 
-![alt text](media/Sprint2_4_onclick.png)
+![alt text](media/Sprint2_4_onclick.webp)
 
 Pour le **hover** :
 
 J'ai eu un peu de mal à faire en sorte d'avoir les coordonnées de l'image qui était survolée par la souris et surtout gérer le fait que si je clique sur le bandeau du hover cela sélectionne la bonne image.
 J'avais au début un problème parce que l'accès à la référence de l'image n'étais disponible qu'après l'avoir cliquée alors que si je mettais la référence dès le hover, je l'avais à la fois pour l'événement hover et onclick.
 
-![alt text](media/Sprint2_5_hover.png)
+![alt text](media/Sprint2_5_hover.webp)
 
 {% lien %}
 

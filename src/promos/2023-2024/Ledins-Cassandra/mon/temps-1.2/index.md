@@ -219,7 +219,7 @@ int main()
 {% enddetails %}
 
 
-<img src=braquage.png>
+<img src=braquage.webp>
 
 ## Fonctions
 

@@ -44,7 +44,7 @@ Nous nous concentrerons sur l'apport que peut faire Google Apps Script à Google
 
 **Comment accéder Google Apps Script sur Google Sheet ?**
 
-<img src="../Image/google_apps_script_acces.png" alt="Technologies utilisées" style="height: 200px; margin: 0 auto; border: 0" />
+<img src="../Image/google_apps_script_acces.webp" alt="Technologies utilisées" style="height: 200px; margin: 0 auto; border: 0" />
 
 <h2 id="h2"> Quelles sont les principales fonctionnalités ? </h2>
 
@@ -115,7 +115,7 @@ Pour executer de manière manuelle la fonction, il faut d'abord l'importer,
 
 Ensuite, on peut l'executer à tous moment :
 
-<img src="../Image/google_apps_script_function_execution.png" alt="Executer la fonction" style="height: 200px; width:1000px; margin: 0 auto; border: 0" />
+<img src="../Image/google_apps_script_function_execution.webp" alt="Executer la fonction" style="height: 200px; width:1000px; margin: 0 auto; border: 0" />
 
 {% faire %}
 Il vous sera demandé d'autoriser l'execution d'un script

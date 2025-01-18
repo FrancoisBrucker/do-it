@@ -222,7 +222,7 @@ Cependant, dans mon contexte, ce n'est pas la structure de données la plus adap
 J'ai donc décidé d'utiliser une structure de liste chaînée, qui a une complexité en **stockage** en *O(1)*, mais qui a une complexité en **lecture**, **modification** et **suppression** en *O(n)*, avec *n* le nombre d'éléments stockés.
 
 <strong style="text-align:center;width:100%;display:block;font-size:1.5rem;">Illustration d'une liste chaînée</strong>
-<img src="../Image/listeChainee.jpg" alt="Liste Chaînée" style="height: 400px; margin: 0 auto; border: 0" />
+<img src="../Image/listeChainee.webp" alt="Liste Chaînée" style="height: 400px; margin: 0 auto; border: 0" />
 
 <h3 id="h4-2">Stockage des calculs</h3>
 
@@ -232,7 +232,7 @@ Il faut donc créer une structure de donnée qui permet de garder les 2 élémen
 Sur les **nœuds de l'arbre**, il y aura les **opérateurs**, et sur les **feuilles**, soit un **entier**, soit une **variable**, soit un **appel à une fonction**.
 
 <strong style="text-align:center;width:100%;display:block;font-size:1.5rem;">Illustration de l'arbre de calcul</strong>
-<img src="../Image/calcTree.jpg" alt="Arbre Calcul" style="height: 400px; margin: 0 auto; border: 0"/>
+<img src="../Image/calcTree.webp" alt="Arbre Calcul" style="height: 400px; margin: 0 auto; border: 0"/>
 
 Cette structure est parfaite si il n'y a pas de fonction, mais n'est pas suffisante si on intègre les fonctions.
 

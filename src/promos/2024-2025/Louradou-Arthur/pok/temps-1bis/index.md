@@ -216,7 +216,7 @@ Dernière étape pour réduire le temps de compilation : supprimer le **système
 
 ...mais on tombe à **7 secondes** de compilation du site en ne recalculant pas tous les chemins récursivement pour chaque fichier. 🎉
 
-<img src="./assets/eleventy-compilation.png" alt="eleventy-compilation">
+<img src="./assets/eleventy-compilation.webp" alt="eleventy-compilation">
 
 {% info %}
 
@@ -291,7 +291,7 @@ Je propose une résolution de cette manière :
 
 |                                              Avant                                               |                                             Après                                             |
 |:------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------:|
-| ![](./assets/style-before-1.png)![](./assets/style-before-2.png)![](./assets/style-before-3.png) | ![](./assets/style-after-1.png)![](./assets/style-after-2.png)![](./assets/style-after-3.png) |
+| ![](./assets/style-before-1.webp)![](./assets/style-before-2.webp)![](./assets/style-before-3.webp) | ![](./assets/style-after-1.webp)![](./assets/style-after-2.webp)![](./assets/style-after-3.webp) |
 
 De nombreuses modifications mineures ont été adopées itérativement, notamment dans la structure du projet Eleventy, en profitant des connaissances acquises durant sa migration.
 

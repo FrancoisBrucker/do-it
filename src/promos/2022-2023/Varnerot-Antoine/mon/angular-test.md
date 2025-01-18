@@ -73,7 +73,7 @@ TOTAL: 18 FAILED, 11 SUCCESS
 Et ca nous ouvre une fenêtre Chrome à l'adresse localhost:9876 où les erreurs sont affichées d'une facon plus lisible :
 
 <figure>
-  <img src="../assets/tests-init.png">
+  <img src="../assets/tests-init.webp">
   <figcaption>Résultat des tests du projet 3a</figcaption>
 </figure>
 

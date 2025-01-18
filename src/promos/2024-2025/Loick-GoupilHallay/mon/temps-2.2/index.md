@@ -34,7 +34,7 @@ Vous ouvrez alors directement VSCode dans le répertoire spécifié, ce qui peut
 
 ## Raccourcis clavier
 
-![Raccourcis clavier](./images/shortcuts_linux.png)
+![Raccourcis clavier](./images/shortcuts_linux.webp)
 
 ### Débuter
 Je recommande de commencer par apprendre les raccourcis d'édition de texte de base de VSCode (ceux qui restent sur la même page et n'impliquent pas de déplacement dans l'interface):
@@ -69,7 +69,7 @@ Je recommande de commencer par apprendre les raccourcis d'édition de texte de b
 
 ### Extensions de raccourcis
 Si vous êtes déjà habitué à vos raccourcis d'autres éditeurs de texte (Vim, Sublime Text, Atom, Brackets,...), il existe des extensions VSCode qui réécrivent les configurations de raccourcis pour les rendre compatibles avec celles de ces éditeurs. Vous pouvez les trouver en cherchant "keymap" dans les extensions de VSCode.
-![Extensions Keymaps](./images/shortcuts_extensions.png)
+![Extensions Keymaps](./images/shortcuts_extensions.webp)
 
 ## Palette de commandes
 La palette de commandes est un outil très pratique de VSCode qui permet d'accéder rapidement à de nombreuses fonctionnalités de l'éditeur. Pour ouvrir la palette de commandes, il suffit d'appuyer sur `Ctrl+Shift+P` (ou `Cmd+Shift+P` sur Mac). Vous pouvez ensuite taper le nom de la commande que vous souhaitez exécuter et appuyer sur `Entrée` pour la sélectionner.\
@@ -83,13 +83,13 @@ Une commande est une **fonction** ou une **action** que vous pouvez **exécuter 
 La première commande qu'il est important de connaître si l'on veut optimiser sa productivité est **Format Document**. Cette commande s'appuie sur le formatteur de code configuré dans VSCode pour formater le code du document actif. Cela permet de rendre le code plus lisible et de respecter les conventions de style définies dans le projet.
 
 C'est extrêmement utile pour uniformiser le code, notamment au niveau de l'identation et le rendre plus lisible. Pour exécuter cette commande, il suffit d'ouvrir la palette de commandes (`Ctrl+Shift+P`) et de taper ">Format Document", puis d'appuyer sur `Entrée`.
-![Format Document](./images/format_document.png)
+![Format Document](./images/format_document.webp)
 
 #### Ouvrir un fichier
 Par défaut, la palette de commandes s'ouvre avec le focus sur la barre de recherche. Vous pouvez donc commencer à taper le nom du fichier que vous souhaitez ouvrir et la palette de commandes vous proposera des suggestions en temps réel. Cela permet d'ouvrir rapidement un fichier sans avoir à naviguer dans l'arborescence des fichiers.
 
 Il suffit de taper `Ctrl+P` pour ouvrir la palette de commandes et commencer à taper le nom du fichier.
-![Ouvrir un fichier](./images/open_file.png)
+![Ouvrir un fichier](./images/open_file.webp)
 
 #### Rechercher dans le fichier
 Vous pouvez utiliser la palette de commande avec le symbole `@` pour rechercher des symboles dans le fichier actif. Cela permet de naviguer rapidement dans le fichier en recherchant des fonctions, des classes, des variables, et autres éléments marquans du code.
@@ -97,8 +97,8 @@ Vous pouvez utiliser la palette de commande avec le symbole `@` pour rechercher 
 De la même façon, vous pouvez utiliser le symbole `#` pour rechercher des symboles dans l'intégralité du projet (y compris les dépendances comme les node_modules).
 
 Il suffit de taper `Ctrl+P` pour ouvrir la palette de commandes et commencer à taper `@` ou `#` suivi du nom du symbole que vous recherchez.
-![Rechercher dans le fichier](./images/research_file.png)
-![Rechercher dans le projet](./images/research_project.png)
+![Rechercher dans le fichier](./images/research_file.webp)
+![Rechercher dans le projet](./images/research_project.webp)
 
 ## Tâches
 Les tâches sont des scripts qui peuvent être exécutés dans VSCode pour automatiser des actions récurrentes. Par exemple, vous pouvez créer une tâche pour lancer un serveur de développement, compiler un projet, ou exécuter des tests. Les tâches sont configurées dans un fichier `tasks.json` dans le répertoire `.vscode` de votre projet.
@@ -158,13 +158,13 @@ Cela sert énormément si vous utilisez par exemple un entête de fichier standa
 
 ## Debugger
 Le debugger de VSCode est un outil tout aussi puissant que craint pour les développeurs. Il permet de **debug** son code en exécutant son code **pas à pas**, avec des **points d'arrêt**. Il permet d'observer l'état et la valeur des variables PENDANT l'exécution du code. Cela permet de **comprendre** le comportement du code et surtout de voir où se trouvent les erreurs.
-![Debugger](./images/debugger.png)
+![Debugger](./images/debugger.webp)
 
 ## Interface Git
 VSCode s'intègre parfaitement avec Git et permet d'afficher de manière distincte les modifications apportées à un fichier par rapport à la version précédente. Cela permet de voir rapidement les changements effectués et de les valider ou de les annuler.
 
 Vous pouvez aussi gérer vos branches, effectuer des commits, des pulls et des pushes directement depuis l'interface de VSCode. Cela permet de ne pas avoir à passer par un terminal pour effectuer ces opérations. Cette interface graphique est généralement plus intuitive, plus facile et même plus rapide que la ligne de commande.
-![Interface Git](./images/git.png)
+![Interface Git](./images/git.webp)
 
 ## Extensions
 
@@ -188,7 +188,7 @@ Les extensions les plus populaires sont :
 - [Local AI Pilot (Ollama)](https://marketplace.visualstudio.com/items?itemName=nr-codetools.localaipilot) (gratuit, open-source)
 
 Il suffit d'installer l'extension correspondant à votre modèle de suggestion de code par IA et de l'activer dans les paramètres de VSCode.
-![Code Suggestions AI](./images/ai_suggestions.png)
+![Code Suggestions AI](./images/ai_suggestions.webp)
 
 ### Live Share
 Live Share est une extension de VSCode qui permet de **collaborer en temps réel** avec d'autres développeurs.\

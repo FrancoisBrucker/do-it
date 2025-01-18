@@ -69,7 +69,7 @@ L'utilisation et la réalisation de documents complexes ou documents de suivi su
 
 {% details "Définitions" %}
 Des listes déroulantes dépendantes sont des listes déroulantes dont les choix possibles dépendent d'une autre cellule comme le montre l'image suivante. On le considère ici basée sur un tableau de donnée source.
-![Exemple listes](./Exemple%20listes.png)
+![Exemple listes](./Exemple%20listes.webp)
 {% enddetails %}
 
 ### Les possibilités

@@ -36,7 +36,7 @@ Afin de lutter contre le risque d'addiction aux jeux d'argent, la france a mis e
 Ce chiffre peut paraitre faible mais avec 1 477 M€ misé sur les paris sportif en 2023 en France soit entre 44,3M€ et 59,08M€ de cummulés pour les 16 bookmakers français. \
 Néeanmoins ces 16 bookmakers ne se partage pas le marché equitablement, les principaux sont : Parions Sport, qui appartient à la française des jeux et qui avait le monopole jusqu'en 2010, Winamax, qui dit être le numéro 1 et Betclic
 
-![Répartition des mises](./repartition_mises.png)
+![Répartition des mises](./repartition_mises.webp)
 
 ## Le Marketing
 
@@ -52,14 +52,14 @@ En addition, des points de fidélité sont aussi créés par certains site pour 
 Enfin, certaines côtes sont volontairement hautes, elles sont appellées "cotes boostées" afin d'encourager les joueurs à parier. Ceux ci sont souvent prévenu par notification car les sites de paris existent aussi sous forme d'applications.
 Nous pourrions penser que toutes ces méthodes font perdre de l'argent aux bookmakers mais le nombre de clients qu'elles y gagnent est bien plus important : Winamax qui pratique toutes ces techniques est le premier bookmaker français. Et il existe des site comparant les avantages de bookmakers : 
 
-![Critiques de Genybet](./GenyBet.png)
-![Critiques de Betclic](./Betclic.png)
+![Critiques de Genybet](./GenyBet.webp)
+![Critiques de Betclic](./Betclic.webp)
 
 
 Enfin, le système de cotation a un impact sur l'affluence sur le site : en effet, l'idée des joueurs est de gagner le plus d'argent possible donc d'avoir les meilleurs côtes : 
 
-![Côtes sur Genybet](./Cotes_GenyBEt.png)
-![Côtes sur Betclic](./cotes_betclic.png)
+![Côtes sur Genybet](./Cotes_GenyBEt.webp)
+![Côtes sur Betclic](./cotes_betclic.webp)
 
 ## Que font les bookmakers de l'argent des parieurs
 

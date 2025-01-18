@@ -49,7 +49,7 @@ J'ai utilisé MySQL, car c'était ce que j'utilisais en classes préparatoires.
 
 Voici à quoi ressemble la base de données qu'on extrait à l'aide de la commande SELECT.
 **Base de données sur les villes françaises**
-<img src="Capture1.PNG">
+<img src="Capture1.webp">
 
 Ci-dessous, la syntaxe classique :
 
@@ -78,7 +78,7 @@ ORDER BY surfacetotale DESC
 {% enddetails %}
 
 **Résultat sur la table**
-<img src="ex1_Q6.PNG">
+<img src="ex1_Q6.webp">
 
 {% details "Q7, Compter le nombre de villes dont le nom commence par “Saint” - Utilise COUNT, WHERE, LEFT" %}
 
@@ -90,7 +90,7 @@ LEFT(valeur, nombre de lettres en partant de la gauche) = "Ce qu'on cherche" - S
 {% enddetails %}
 
 **Résultat sur la table**
-<img src="ex1_Q7.PNG">
+<img src="ex1_Q7.webp">
 
 {% details "Q8, Obtenir la liste des villes qui ont un nom existants plusieurs fois, et trier afin d’obtenir en premier celles dont le nom est le plus souvent utilisé par plusieurs communes” - Utilise HAVING" %}
 
@@ -104,7 +104,7 @@ ORDER BY COUNT(ville_nom) DESC
 {% enddetails %}
 
 **Résultat sur la table**
-<img src="ex1_Q8.PNG">
+<img src="ex1_Q8.webp">
 
 {% details "Q11, Remplacez les tirets par un espace vide, pour toutes les villes commençant par “SAINT-” (dans la colonne qui contient les noms en majuscule)” - Utilise HAVING" %}
 
@@ -116,7 +116,7 @@ REPLACE(valeur, 'ce qu'on veut remplacer', 'par quoi on veut le remplacer') - Ap
 {% enddetails %}
 
 **Résultat sur la table**
-<img src="ex1_Q11.PNG">
+<img src="ex1_Q11.webp">
 
 ## 3. SQL intermédiaire <a id="section-3"></a>
 
@@ -125,9 +125,9 @@ J'ai fait ce que je pensais qu'il fallait faire.
 
 Voici les trois tables à ma disposition qui ont été modifiées au fur et à mesure :
 :-------------------------:|:-------------------------:
-<img src="Capture2_1.PNG" width="350" height="350"> | <img src="Capture2_2.PNG" width="350" height="350">
+<img src="Capture2_1.webp" width="350" height="350"> | <img src="Capture2_2.webp" width="350" height="350">
 
-<img src="Capture2_3.PNG" width="350" height="350">
+<img src="Capture2_3.webp" width="350" height="350">
 
 Une remarque, il m'a fallu désactiver le "Safe mode" pour pouvoir changer les lignes de mon tableau à la question 4 par exemple, il est conseillé de le réactiver après pour éviter des bêtises.
 
@@ -162,7 +162,7 @@ GROUP BY client.nom, client.prenom, commande.date_achat (Pour résoudre les prob
 {% enddetails %}
 
 **Résultat**
-<img src="ex2_Q5.PNG">
+<img src="ex2_Q5.webp">
 
 La question 10 nous apprend à ajouter et modifier une colonne.
 
@@ -212,7 +212,7 @@ INSERT INTO commande_category (descriptif)
 ```
 {% enddetails %}
 
-<img src="Capture2_4.PNG" width="350" height="350">
+<img src="Capture2_4.webp" width="350" height="350">
 
 ## 4. Un cas pour reprendre l'analyse de données avec Python <a id="section-4"></a>
 
@@ -227,47 +227,47 @@ Je vous laisse les images, le code étant organisé et détaillé dans le jupyte
 ### Qui a participé à l'événement ? 
 
 **Genre des participants**
-<img src="gender_distrib.PNG" width="350" height="350">
+<img src="gender_distrib.webp" width="350" height="350">
 
 **Origine des participants, car aux Etats-Unis, ça a de l'importance...**
-<img src="race_distribution.PNG" width="500" height="500">
+<img src="race_distribution.webp" width="500" height="500">
 
 **Domaine d'étude/de travail des participants**
-<img src="job_distrib.PNG" width="500" height="500">
+<img src="job_distrib.webp" width="500" height="500">
 
 ### Avant l'événement
 
 On a posé des questions aux participants avant l'événement. 
 
 **1ère question : Que cherchent les hommes et les femmes chez leurs partenaires ?**
-<img src="m_w_look_for.PNG" width="500" height="500">
+<img src="m_w_look_for.webp" width="500" height="500">
 
 **Superposition de 3 questions, que cherchent les hommes chez leurs partenaires ? Que cherchent les autres hommes chez leurs partenaires d'après eux ? Que cherchent les femmes chez leurs partenaires d'après eux ? Dans l'ordre.**
-<img src="men_3_attr.PNG" width="500" height="500">
+<img src="men_3_attr.webp" width="500" height="500">
 
 **Superposition de 3 questions, que cherchent les femmes chez leurs partenaires ? Que cherchent les autres femmes chez leurs partenaires d'après eux ? Que cherchent les hommes chez leurs partenaires d'après eux ? Dans l'ordre.**
-<img src="women_3_attr.PNG" width="500" height="500">
+<img src="women_3_attr.webp" width="500" height="500">
 
 ### Au milieu de, et après l'événement
 
 D'autres questions ont été posées au milieu et après l'événement.
 
 **Superposition de 3 questions, que cherchent les hommes chez leurs partenaires (posée avant l'événement) ? Quel est l'importance des différents critères en réalité dans leurs décisions (posée au milieu de l'événement) ? De même, importance des critères en réalité (posée à la fin de l'événement) ? Dans l'ordre.**
-<img src="men_reality.PNG" width="500" height="500">
+<img src="men_reality.webp" width="500" height="500">
 
 **Superposition de 3 questions, que cherchent les femmes chez leurs partenaires (posée avant l'événement) ? Quel est l'importance des différents critères en réalité dans leurs décisions (posée au milieu de l'événement) ? De même, importance des critères en réalité (posée à la fin de l'événement) ? Dans l'ordre.**
-<img src="women_reality.PNG" width="500" height="500">
+<img src="women_reality.webp" width="500" height="500">
 
 **Superposition de 2 questions, importance des différents critères en réalité dans leurs décisions (posée à la fin de l'événement) chez les hommes et chez les femmes ?**
-<img src="m_w_after.PNG" width="500" height="500">
+<img src="m_w_after.webp" width="500" height="500">
 
 **Comparaison attentes/réalité - Ce que cherchent les femmes chez leurs partenaires d'après les hommes (posée au début de l'événement) et l'importance des critères dans les décisions des femmes (posée à la fin de l'événement)**
 
-<img src="compar_w.PNG" width="500" height="500">
+<img src="compar_w.webp" width="500" height="500">
 
 **Comparaison attentes/réalité - Ce que cherchent les hommes chez leurs partenaires d'après les femmes (posée au début de l'événement) et l'importance des critères dans les décisions des hommes (posée à la fin de l'événement)**
 
-<img src="compar_m.PNG" width="500" height="500">
+<img src="compar_m.webp" width="500" height="500">
 
 ## 5. Conclusion <a id="section-5"></a>
 

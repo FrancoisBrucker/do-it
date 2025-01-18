@@ -29,6 +29,6 @@ J'ai passé les quelques dernières heures du MON à commencer le développement
 
 J'ai notamment pris un peu de temps pour reproduire la `RecyclerView` qui permet de créer un scroll horizontal contenant plusieurs éléments. Cela m'a paru être l'élément le plus complexe à mettre en place dans la vidéo.
 
-![Capture d'écran de l'application Menu](applimenu.png)
+![Capture d'écran de l'application Menu](applimenu.webp)
 
 Je pense continuer ce développement en Java lors de mon POK, car nous n'aurons probablement pas le temps de développer l'application autrement qu'en no-code dans le cadre du projet (sur Bubble en l'occurence). Cela me permettra de voir les deux outils en parallèle.

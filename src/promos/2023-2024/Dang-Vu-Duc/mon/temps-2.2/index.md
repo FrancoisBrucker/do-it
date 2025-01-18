@@ -98,7 +98,7 @@ Dans la même veine, il faut utiliser des couleurs, mais sans en abuser. Elles d
 
 Il existe plusieurs niveau d'importance dans une slide. Le schéma suivant montre au sommet de la pyramide les éléments les plus importants, et ceux les moins important se trouvent à la base de la pyramide:
 
-![Schéma pyramide](Image1.png)
+![Schéma pyramide](Image1.webp)
 KRUGER, Douglas. *How to make your point without PowerPoint*, 2016, P.125
 
 D'après cette modélisation, la meilleure slide contient **seulement des visuels forts et impactants**. La pire slide contient plusieurs longs paragraphes. Autrement dit, il est préférable de mettre dans des slides des images fortes et impactantes et de s'y appuyer pour développer l'explication à l'oral. Un mauvais orateur va mettre ses notes sur les slides et les lire devant l'auditoire. Il est possible de combiner plusieurs éléments de la pyramide, par exemple en faisant une slide avec un visuel impactant accompagné d'un titre en gras et d'une phrase courte qui explique les grandes lignes de l'idée.

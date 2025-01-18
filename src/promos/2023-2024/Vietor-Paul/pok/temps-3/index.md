@@ -65,9 +65,9 @@ Pas réalisé par manque de temps :
 
 Finalement, j'ai eu de nombreux soucis avec l'affichage de la carte, qui a fini par me prendre bien plus longtemps que prévu, et le débogage de la génération au niveau local était particulièrement long car mon implémentation n'est pas bien optimisée, donc je n'ai pas eu le temps de m'intéresser à la génération de cours d'eau. Voici quelques exemples de ce que j'ai pu obtenir comme résultats :
 
-![](bonjourdoit.png)
-![](bonjourcentrale.png)
-![](bonjourcentrale_zoom.png)
+![](bonjourdoit.webp)
+![](bonjourcentrale.webp)
+![](bonjourcentrale_zoom.webp)
 
 ## Ressources
 

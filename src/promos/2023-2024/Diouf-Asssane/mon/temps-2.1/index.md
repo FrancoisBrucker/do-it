@@ -235,7 +235,7 @@ Pour me rapprocher des tutoriels que j'ai vu sur ASP.NET, je vais utilise Visual
 
 Pour lancer un projet d'application Web sur Visual Studio, il faut cliquer sur Nouveau Projet > Applications Web ASP.NET Core. Une fois que la solution est ouverte dans Visual Studio, on peut lancer le site généré en appuyant sur le bouton "play" vert. On a alors une page de ce type :
 
-<img src="./webAppBase.png" alt="Page par défaut en C#" style="height: 400px"/>
+<img src="./webAppBase.webp" alt="Page par défaut en C#" style="height: 400px"/>
 
 **A suivre dans mon deuxième MON du temps 2**
 

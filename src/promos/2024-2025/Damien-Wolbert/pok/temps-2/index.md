@@ -137,9 +137,9 @@ Afin de comprendre la suite de ce POK, il est nécessaire de s'intier au monde d
 
 {% details "Constitution générale d'un parc photovoltaïque" %}
 Le schema ci-dessous présente la configuration de parc utilisée tout au long du projet (c.f. hypothèses)
-![Parc photovoltaïque simple](./POK%202%20%20Brainstorming%20générale%20P3.png)
+![Parc photovoltaïque simple](./POK%202%20%20Brainstorming%20générale%20P3.webp)
 
-![Illustration d'un parc photovoltaïque](./Schemas.png)
+![Illustration d'un parc photovoltaïque](./Schemas.webp)
 <p style="text-align: center;">**Figure :** « «Folie» ou projet «d’intérêt général»? Un parc solaire XXL à l’étude en France ». parismatch.com, 8 février 2022, https://www.parismatch.com/Actu/Environnement/Folie-ou-projet-d-interet-general-Dans-le-sud-ouest-de-la-France-un-parc-solaire-XXL-a-l-etude-1786628.</p>
 
 - ***String*** : Ensemble de panneaux connectés en série.
@@ -244,7 +244,7 @@ Le parcours des grilles étant très couteux en temps, il est apparu primordiale
 **Méthode :** Dédier une cellule précise au compte des colonnes utilisées : en première ligne du tableau ou sur une ligne de rang suffisamment grand. *ATTENTION : DANS CE CAS, IL FAUT S'ASSURER QUE LE NOMBRE DE LIGNES UTIILISEES PAR UN TABLEAU EST FINI !!!*
 
 **Exemple :**
-![Variable d'état BR](./Variable%20d'état%20BR.png)
+![Variable d'état BR](./Variable%20d'état%20BR.webp)
 On peut ici voir que la cellule en jaune prend comme valeur le nombre de BR déjà renseignée dans le tableau. Ainsi, la fonction chargée de remplir ces données se réfère et met à jour la valeur de cette cellule afin de pouvoir se repérer facilemment dans le tableau. Cela évite de déterminer à chaque nouvelle BR, la première colonne vide.
 
 {% enddetails %}
@@ -257,10 +257,10 @@ On peut ici voir que la cellule en jaune prend comme valeur le nombre de BR déj
 
 **Exemple :** Ici, cela a consisté à utiliser les feuilles de la phase 4 comme bases de données.
 - La dernière grille (TEM 4.1) comme base de donnée complète du design. Ainsi, à chaque passage d'une phase à une autre (étapes du parcours utilisateur), la grille de la Phase 4.1 reçoit les informations des autres grilles.
-![Phase 4.1](./Phase%204.1%20ex.png)
+![Phase 4.1](./Phase%204.1%20ex.webp)
 
 - Cela a également consisté en une modification du tableau 4.2 : pour chaque BR et chaque string, j'ai décidé d'ajouter les coordonnées de la string correspondante. Ainsi, lors du calcul de la longueur du câble reliant la string à sa BR, aucun parcours de grille n'était nécessaire (en bleu sur la figure). J'ai réalisé la même opération pour les BR (en jaune sur la figure)
-![Position des éléments](./Position%20éléments.png)
+![Position des éléments](./Position%20éléments.webp)
 
 {% enddetails %}
 
@@ -320,23 +320,23 @@ Pour se rapprocher le plus possible d'un système "Drag and drop", il pourrait �
 Les images ci-dessous montrent un cas d'utilisation de l'outil :
 
 {% details "Phase 0 : Entrée des données de design" %}
-![Phase 0](./Phase%200.png)
+![Phase 0](./Phase%200.webp)
 {% enddetails %}
 {% details "Phase 1 : Positionnement des strings et du PTR" %}
-![Phase 1](./Phase%201.png)
+![Phase 1](./Phase%201.webp)
 {% enddetails %}
 {% details "Phase 2 : Positionnement des BR" %}
-![Phase 1](./Phase%202.png)
+![Phase 1](./Phase%202.webp)
 {% enddetails %}
 {% details "Phase 3 : Affectation des strings aux BR" %}
-![Phase 1](./Phase%203.png)
+![Phase 1](./Phase%203.webp)
 {% enddetails %}
 {% details "Phase 4.1 : Affichage récapitulatif" %}
-![Phase 1](./Phase%204.1.png)
+![Phase 1](./Phase%204.1.webp)
 {% enddetails %}
 {% details "Phase 4.2 : Affectation d'une section de câble à chaque string" %}
-![Phase 1](./Phase%204.2.png)
+![Phase 1](./Phase%204.2.webp)
 {% enddetails %}
 {% details "Livrable" %}
-![Phase 1](./Livrable.png)
+![Phase 1](./Livrable.webp)
 {% enddetails %}

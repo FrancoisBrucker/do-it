@@ -885,17 +885,17 @@ def solve_assist(self, IsWhiteToPlay, alpha, beta, depth):
 
 Pour vérifier si ce code fonctionne correctement, j'ai cherché des problèmes de mat en 2 et de mat en 3 sur Internet, et j'ai fait tourner l'algorithme sur ces positions. Voici un exemple sur cette position:
 
-![Image1](Image1.png)
+![Image1](Image1.webp)
 
 L'exécution de l'algorithme sur cette position donne la ligne suivante: `['Qd5+', 'nxd5', 'Rxc6#']` en 55.5 secondes. D'après l'ordinateur le plus puissant du monde "Stockfish", c'est bien la solution! (Notons le brillant sacrifice de Dame). Plusieurs lignes sont possibles, celle qui est donnée n'en est qu'un exemple.
 Voici un autre exemple d'un mat en 3 sur la position suivante:
 
-![Image2](Image2.png)
+![Image2](Image2.webp)
 
 L'algorithme fournit la ligne suivante: `['Ke2', 'nc1+', 'Ke3', 'na2', 'd4#']` en 24 minutes. Encore une fois, c'est la bonne réponse. On remarque cependant que la résolution a été bien plus longue. Ceci est dû au fait qu'il y a beaucoup plus de pièces sur l'échiquier, et le nombre de mouvements explorés est également beaucoup plus élevé que le cas précédent.
 Pour finir, voici l'exemple de résolution d'un mat en 4 sur la position suivante:
 
-![Image3](Image3.png)
+![Image3](Image3.webp)
 
 L'algorithme résout ce problème en 12 minutes et 57 secondes: `['Bh5', 'kxh5', 'Kg7', 'h6', 'Kf6', 'kh4', 'Kg6#']`. Notons que l'exécution est gérable grâce au fait qu'il y ait peu de pièces sur l'échiquier, et que les coups des Noirs soient forcés après le mouvement Fou H5. En réalité, j'ai essayé de faire tourner l'algorithme sur d'autres problèmes de Mat en 4 pendant plusieurs heures, sans avoir de résultat. Le mat en 4 est donc la limite, ce qui traduit le manque d'optimisation de l'algorithme.
 
@@ -905,7 +905,7 @@ De nombreux problèmes repose sur une règle des échecs, nommée la "promotion"
 
 Pour tester cette implémentation, on fait tourner l'algorithme sur le problème suivant, qui est un mat en 2 qui nécessite deux promotions (Trait aux noirs):
 
-![Image4](Image4.png)
+![Image4](Image4.webp)
 
 La ligne donnée est: `['e1=n+', 'Kh2', 'f1=n#']`, qui est bien la solution. L'algorithme a bien compris qu'il fallait faire deux promotions en cavalier.
 
@@ -947,7 +947,7 @@ def __init__(self):
     super().__init__()
     self.set_starting_board()
     self.screen = pygame.display.set_mode((900, 550))
-    self.chessboard_surface = pygame.image.load('chessboard.png')
+    self.chessboard_surface = pygame.image.load('chessboard.webp')
     self.size = 480
     self.cell_size = self.size // 8
     self.chessboard_surface = pygame.transform.scale(self.chessboard_surface, (self.size, self.size))
@@ -958,30 +958,30 @@ def __init__(self):
     self.font = pygame.font.Font(None, 30)
     pygame.display.set_caption("Jeu d'échecs")
     self.clock = pygame.time.Clock()
-    self.black_rook_surface = pygame.image.load('Chess_pieces_png/black_rook.png')
+    self.black_rook_surface = pygame.image.load('Chess_pieces_png/black_rook.webp')
     self.black_rook_surface = pygame.transform.scale(self.black_rook_surface, (self.cell_size, self.cell_size))
-    self.black_knight_surface = pygame.image.load('Chess_pieces_png/black_knight.png')
+    self.black_knight_surface = pygame.image.load('Chess_pieces_png/black_knight.webp')
     self.black_knight_surface = pygame.transform.scale(self.black_knight_surface, (self.cell_size, self.cell_size))
-    self.black_bishop_surface = pygame.image.load('Chess_pieces_png/black_bishop.png')
+    self.black_bishop_surface = pygame.image.load('Chess_pieces_png/black_bishop.webp')
     self.black_bishop_surface = pygame.transform.scale(self.black_bishop_surface, (self.cell_size, self.cell_size))
-    self.black_king_surface = pygame.image.load('Chess_pieces_png/black_king.png')
+    self.black_king_surface = pygame.image.load('Chess_pieces_png/black_king.webp')
     self.black_king_surface = pygame.transform.scale(self.black_king_surface, (self.cell_size, self.cell_size))
-    self.black_queen_surface = pygame.image.load('Chess_pieces_png/black_queen.png')
+    self.black_queen_surface = pygame.image.load('Chess_pieces_png/black_queen.webp')
     self.black_queen_surface = pygame.transform.scale(self.black_queen_surface, (self.cell_size, self.cell_size))
-    self.black_pawn_surface = pygame.image.load('Chess_pieces_png/black_pawn.png')
+    self.black_pawn_surface = pygame.image.load('Chess_pieces_png/black_pawn.webp')
     self.black_pawn_surface = pygame.transform.scale(self.black_pawn_surface, (self.cell_size, self.cell_size))
 
-    self.white_rook_surface = pygame.image.load('Chess_pieces_png/white_rook.png')
+    self.white_rook_surface = pygame.image.load('Chess_pieces_png/white_rook.webp')
     self.white_rook_surface = pygame.transform.scale(self.white_rook_surface, (self.cell_size, self.cell_size))
-    self.white_knight_surface = pygame.image.load('Chess_pieces_png/white_knight.png')
+    self.white_knight_surface = pygame.image.load('Chess_pieces_png/white_knight.webp')
     self.white_knight_surface = pygame.transform.scale(self.white_knight_surface, (self.cell_size, self.cell_size))
-    self.white_bishop_surface = pygame.image.load('Chess_pieces_png/white_bishop.png')
+    self.white_bishop_surface = pygame.image.load('Chess_pieces_png/white_bishop.webp')
     self.white_bishop_surface = pygame.transform.scale(self.white_bishop_surface, (self.cell_size, self.cell_size))
-    self.white_king_surface = pygame.image.load('Chess_pieces_png/white_king.png')
+    self.white_king_surface = pygame.image.load('Chess_pieces_png/white_king.webp')
     self.white_king_surface = pygame.transform.scale(self.white_king_surface, (self.cell_size, self.cell_size))
-    self.white_queen_surface = pygame.image.load('Chess_pieces_png/white_queen.png')
+    self.white_queen_surface = pygame.image.load('Chess_pieces_png/white_queen.webp')
     self.white_queen_surface = pygame.transform.scale(self.white_queen_surface, (self.cell_size, self.cell_size))
-    self.white_pawn_surface = pygame.image.load('Chess_pieces_png/white_pawn.png')
+    self.white_pawn_surface = pygame.image.load('Chess_pieces_png/white_pawn.webp')
     self.white_pawn_surface = pygame.transform.scale(self.white_pawn_surface, (self.cell_size, self.cell_size))
     
     self.state = "piece_not_selected"
@@ -1002,30 +1002,30 @@ def __init__(self):
     self.pieces_taken_by_white = []
     self.pieces_taken_by_black = []
     self.pieces_taken_size = 25
-    self.black_rook_surface2 = pygame.image.load('Chess_pieces_png/black_rook.png')
+    self.black_rook_surface2 = pygame.image.load('Chess_pieces_png/black_rook.webp')
     self.black_rook_surface2 = pygame.transform.scale(self.black_rook_surface2, (self.pieces_taken_size, self.pieces_taken_size))
-    self.black_knight_surface2 = pygame.image.load('Chess_pieces_png/black_knight.png')
+    self.black_knight_surface2 = pygame.image.load('Chess_pieces_png/black_knight.webp')
     self.black_knight_surface2 = pygame.transform.scale(self.black_knight_surface2, (self.pieces_taken_size, self.pieces_taken_size))
-    self.black_bishop_surface2 = pygame.image.load('Chess_pieces_png/black_bishop.png')
+    self.black_bishop_surface2 = pygame.image.load('Chess_pieces_png/black_bishop.webp')
     self.black_bishop_surface2  = pygame.transform.scale(self.black_bishop_surface2, (self.pieces_taken_size, self.pieces_taken_size))
-    self.black_king_surface2 = pygame.image.load('Chess_pieces_png/black_king.png')
+    self.black_king_surface2 = pygame.image.load('Chess_pieces_png/black_king.webp')
     self.black_king_surface2 = pygame.transform.scale(self.black_king_surface2, (self.pieces_taken_size, self.pieces_taken_size))
-    self.black_queen_surface2 = pygame.image.load('Chess_pieces_png/black_queen.png')
+    self.black_queen_surface2 = pygame.image.load('Chess_pieces_png/black_queen.webp')
     self.black_queen_surface2 = pygame.transform.scale(self.black_queen_surface2, (self.pieces_taken_size, self.pieces_taken_size))
-    self.black_pawn_surface2 = pygame.image.load('Chess_pieces_png/black_pawn.png')
+    self.black_pawn_surface2 = pygame.image.load('Chess_pieces_png/black_pawn.webp')
     self.black_pawn_surface2 = pygame.transform.scale(self.black_pawn_surface2, (self.pieces_taken_size, self.pieces_taken_size))
 
-    self.white_rook_surface2 = pygame.image.load('Chess_pieces_png/white_rook.png')
+    self.white_rook_surface2 = pygame.image.load('Chess_pieces_png/white_rook.webp')
     self.white_rook_surface2 = pygame.transform.scale(self.white_rook_surface2, (self.pieces_taken_size, self.pieces_taken_size))
-    self.white_knight_surface2 = pygame.image.load('Chess_pieces_png/white_knight.png')
+    self.white_knight_surface2 = pygame.image.load('Chess_pieces_png/white_knight.webp')
     self.white_knight_surface2 = pygame.transform.scale(self.white_knight_surface2, (self.pieces_taken_size, self.pieces_taken_size))
-    self.white_bishop_surface2 = pygame.image.load('Chess_pieces_png/white_bishop.png')
+    self.white_bishop_surface2 = pygame.image.load('Chess_pieces_png/white_bishop.webp')
     self.white_bishop_surface2 = pygame.transform.scale(self.white_bishop_surface2, (self.pieces_taken_size, self.pieces_taken_size))
-    self.white_king_surface2 = pygame.image.load('Chess_pieces_png/white_king.png')
+    self.white_king_surface2 = pygame.image.load('Chess_pieces_png/white_king.webp')
     self.white_king_surface2 = pygame.transform.scale(self.white_king_surface2, (self.pieces_taken_size, self.pieces_taken_size))
-    self.white_queen_surface2 = pygame.image.load('Chess_pieces_png/white_queen.png')
+    self.white_queen_surface2 = pygame.image.load('Chess_pieces_png/white_queen.webp')
     self.white_queen_surface2 = pygame.transform.scale(self.white_queen_surface2, (self.pieces_taken_size, self.pieces_taken_size))
-    self.white_pawn_surface2 = pygame.image.load('Chess_pieces_png/white_pawn.png')
+    self.white_pawn_surface2 = pygame.image.load('Chess_pieces_png/white_pawn.webp')
     self.white_pawn_surface2 = pygame.transform.scale(self.white_pawn_surface2, (self.pieces_taken_size, self.pieces_taken_size))
     self.font_pieces_taken = pygame.font.Font(None, 25)
 
@@ -1374,13 +1374,13 @@ def update_cells_selected(self, piece):
 
 Voici quelques captures d'écran de ce que le programme produit:
 
-![Image partie normale](Image5.png)
+![Image partie normale](Image5.webp)
 *Image d'une partie en cours, avec une pièce sélectionnée*
 
-![Image échec](Image6.png)
+![Image échec](Image6.webp)
 *Image d'une situation d'échec par les Blancs*
 
-![Image échec et mat](Image7.png)
+![Image échec et mat](Image7.webp)
 *Image d'une situation de fin de partie (échec et mat)*
 
 ## Bilan du deuxième sprint

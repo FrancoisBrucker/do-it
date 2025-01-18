@@ -47,7 +47,7 @@ Je fais le cours Analyse de données avec python réalisé par M.Brucker. Je sui
 
 En parallèle je réalise une carte mentale des outils que je voudrais pouvoir retrouver rapidement. En voici un extrait ci-dessous.
 
-![POK2_Analyse_de_donnees](./POK2_Analyse_de_donnees.png)
+![POK2_Analyse_de_donnees](./POK2_Analyse_de_donnees.webp)
 
 
 #### Sprint 2
@@ -73,12 +73,12 @@ Mon choix s’est porté sur un document du CNIEL, contenant des informations su
 PDF - Les Chiffres clés de la filière laitière - 2024. https://presse.filiere-laitiere.fr/assets/les-chiffres-cles-de-la-filiere-laitiere-2024-pdf-3072-ef05e.html
 {% endlien %}
 
-![Cniel](./Cniel_filiere_laitiere.pdf)
+![Cniel](./Cniel_filiere_laitiere_p1.webp)
 
 
 Pour réaliser mon infographie, j'ai fait une sélection des données spécifiques sur la filière laitière que voici :
 
-![Donnees_brutes](./A4-1.pdf)
+![Donnees_brutes](./A4-1.webp)
 
 Je me suis ensuite appliquée à les représenter de manière visuelle afin que le message principal soit compris d’un coup d’œil, avec un minimum de texte explicatif. Mon objectif était que les éléments graphiques portent la majeure partie de la signification.
 
@@ -87,15 +87,15 @@ Je me suis ensuite appliquée à les représenter de manière visuelle afin que 
 1. Première étape : J'ai réalisé une version intermédiaire avec les principaux visuels disposés en vrac, comme une esquisse. Cette version, non finalisée, présente des emplacements vides pour intégrer d’autres données ultérieurement.
 
 <div style="display:flex">
-<div><img src="A4-1.pdf"></div>
-<div><img src="A2-1.pdf"></div>
+<div><img src="A4-1.webp"></div>
+<div><img src="A2-1.webp"></div>
 </div>
 
 2. Ajout des données brutes : J’ai ensuite enrichi cette version avec les chiffres et statistiques nécessaires pour données les informations clés portées par l’infographie.
 
 <div style="display:flex">
-<div><img src="A4-1.pdf"></div>
-<div><img src="A2-2.pdf"></div>
+<div><img src="A4-1.webp"></div>
+<div><img src="A2-2.webp"></div>
 </div>
 
 #### Difficultés majeures rencontrées
@@ -111,10 +111,10 @@ Cette expérience m’a permis de comprendre à la fois les exigences techniques
 J’ai appliqué les principes d’UI Design vus en cours,  j'ai rassemblé une banque d’illustrations et de visuels dont je souhaite m'inspirer pour le design.
 J'ai également prévu de faire un brief graphique pour déterminer mes polices, mes titres et ma palette de couleurs finales.
 
-![Lait_inspiration](Lait_inspiration-1.png)
+![Lait_inspiration](Lait_inspiration-1.webp)
 
 #### Infographie en grand
-![Lait](./A2-2.pdf)
+![Lait](./A2-2.webp)
 
 
 

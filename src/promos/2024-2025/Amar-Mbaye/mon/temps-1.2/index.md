@@ -189,7 +189,7 @@ class _MyAppState extends State<MyApp> {
 
 ```
 
-<img src="./1.PNG" alt="image" />
+<img src="./1.webp" alt="image" />
   
 ### Exemple de StatelessWidget 
 
@@ -237,7 +237,7 @@ class MyApp extends StatelessWidget {
 
 ```
 
-<img src="./2.PNG" alt="image" />
+<img src="./2.webp" alt="image" />
   
 --- 
 
@@ -261,7 +261,7 @@ Les **layouts** dans Flutter permettent d'organiser les widgets à l'écran. Il 
 {% endlien %}
   
 
-<img src="./3.PNG" alt="image" />
+<img src="./3.webp" alt="image" />
   
 --- 
 
@@ -301,7 +301,7 @@ Voici comment utiliser **Provider** pour gérer un compteur :
 
 {% endlien %}
 
-<img src="./4.PNG" alt="image" />
+<img src="./4.webp" alt="image" />
 
 --- 
 
@@ -320,9 +320,9 @@ Flutter permet de gérer facilement la navigation entre différentes pages avec 
 
 {% endlien %}
 
-<img src="./5.PNG" alt="image" />
+<img src="./5.webp" alt="image" />
 
-<img src="./6.PNG" alt="image" />
+<img src="./6.webp" alt="image" />
   
 
 --- 
@@ -344,7 +344,7 @@ Flutter peut facilement faire des appels réseau avec le package **http**. Cela 
 
 {% endlien %}
 
-<img src="./7.PNG" alt="image" />
+<img src="./7.webp" alt="image" />
 
 
 --- 

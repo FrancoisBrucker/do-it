@@ -34,7 +34,7 @@ En 1883, Auguste Kerckhoffs publie l'article "La cryptographie militaire" dans l
 
 ### Cryptographie symétrique/à clé privée
 
-![symétrique](image.png)
+![symétrique](image.webp)
 Un système de chiffrement à clé privée est composé de trois algorithmes : le générateur de clé, l'algorithme qui chiffre le message à l'aide de la clé générée et l'algorithme qui le déchiffe à l'aide de cette même clé. Il y a deux grandes familles de procédés de chiffrement symétrique :
 
 #### Le chiffrement à flot
@@ -54,7 +54,7 @@ L'algorithme de chiffrement DES (Data Encryption Standard) est un algorithme bas
 
 ### Cryptographie assymétrique/à clé publique
 
-![assymétrique](image-1.png)
+![assymétrique](image-1.webp)
 L'émetteur peut calculer le cryptogramme d'un message donné mais pour inverser le calcul il faut disposer de la clé privée. La cryptographie à clé publique est utilisée pour résoudre les problèmes d'[authentification](https://francoisbrucker.github.io/cours_informatique/cours/syst%C3%A8me-et-r%C3%A9seau/cryptographie/authentification/).
 
 #### Factorisation grand entier
@@ -69,7 +69,7 @@ Une courbe elliptique est une courbe $$`y^2=x^3+ax+b`$$. a et b sont ici des ent
 ### Hachage
 La fonction de hachage transforme un fichier en un nombre de taille fixe. Elle permet de signer un document. Le hachage peut aussi servir à fabriquer des clés cryptographiques à partir d'une _semence_, c'est-à-dire une clé de base. Le hash produit une "empreinte digitale" du document, qui se veut unique : pas de collisions ! Les fonctions de hashage MD5 et SHA-1 sont standardisées, pourtant en 2004 une chercheuse nommée Xiaoyun Wang a mis en lumière une collision sur MD5, ce qui a rendu la fonction de hachage obsolète. 
 
-![cryptographie](image-2.png)
+![cryptographie](image-2.webp)
 Infographie de la [CNIL](https://www.cnil.fr/fr/cybersecurite/comprendre-les-grands-principes-de-la-cryptologie-et-du-chiffrement) sur la cryptographie
 
 
@@ -105,7 +105,7 @@ Comment s'assurer de la véracité de la clé publique reçu par mon corresponda
 
 ### Carte bancaire
 La carte bancaire envoie ses données signées par la banque émettrice de la carte au terminal bancaire. La signature de la carte est chiffrée à l'aide de l'algo RSA. Le terminal bancaire contient la clé publique de l'autorité de certification (la banque) et va vérifier la validité du certificat de la clé publique de la carte et vérifie la signature des données à l'aide de la clé publique se trouvant dans le certificat de la carte.
-![carte bancaire](image-3.png)
+![carte bancaire](image-3.webp)
  ©P. Guillot
 
 ## Ressources
