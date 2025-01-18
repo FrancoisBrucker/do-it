@@ -8,10 +8,9 @@ authors:
 date: 1971-03-01
 tags: 
   - "temps 3"
-  - "ACV"
-  - "Bilan carbone"
-  - "Environnement"
-  - "Economie circulaire"
+  - "mindmap"
+  - "lean"
+  - "gestion de projet"
 
 résumé: "MON pour apprendre à faire des mindmap en en réalisant une sur le lean et une autre sur la gestion de projet"
 ---

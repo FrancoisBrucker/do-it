@@ -10,11 +10,9 @@ date: 1971-03-01
 tags: 
   - "temps 3"
   - "saumon"
-  - "Bilan Carbone"
-  - "ACV"
-  - "Economie circulaire"
+  - "environnement"
 
-résumé: Ce POK me servira à faire un récap des notions clés sur l'environnement dont j'aurai besoin lors de mon TFE en conseil dans l'nvironnement
+résumé: Ce POK me servira à faire un récap des notions clés sur l'environnement dont j'aurai besoin lors de mon TFE en conseil dans l'environnement
 ---
 
 {% prerequis %}
@@ -66,7 +64,7 @@ Date  | xh  | Truc |
 
 - [POK : sprint 1](#POK1)
 - [POK : sprint 2](#POK2)
-- [Conclusion de ce POK 2](#conclusion)
+- [Conclusion de ce POK 3](#conclusion)
 
 <h2 id=POK1> 1️⃣POK : sprint 1</h2>
 
