@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "GdP : outils, plannings, reportings... Que chosisir en fonction de la typologie de projet pour un ingénieur généraliste ?"
+title: "Ma méthode de gestion de projet, ma définition d'ingénieur. Comment je prégère travailler ?"
 authors:
   - Damien WOLBERT
 
