@@ -182,23 +182,21 @@
 <div class="pl-8 mr-8">
 <p><b> POK &amp; MON </b></p>
 <ul>
-<li><a href="https://francoisbrucker.github.io/do-it/promos/2023-2024/Omar-Salame/mon/temps-2.1/">MON 2.1 : Introduction à React.js, Omar SALAME</a></li>
-<li><a href="https://francoisbrucker.github.io/do-it/promos/2022-2023/Duroy-Thomas/mon/MON_3.1/">MON 3.1 : Débuter avec React.js, Thomas DUROY</a></li>
-<li><a href="https://francoisbrucker.github.io/do-it/promos/2024-2025/Bernard-Kevin/mon/temps-2.1/">MON 2.1 : Animation 3D en React, Kévin BERNARD</a></li>
-<li><a href="https://francoisbrucker.github.io/do-it/promos/2024-2025/Bernard-Kevin/mon/temps-2.2/">MON 2.2 : Spring Boot, Kévin BERNARD</a></li>
+<li><a href="../temps-2/index.md/">POK 2 : Site Web en React pour gérer mes tâches, Kévin BERNARD</a></li>
 </ul>
 </div></div>
-<p>Le but de ce POK est de réaliser un site en React pour gérer mes tâches avec un horodateur, un agenda avec une importation de créatures 3D à partir de Blender. Ce qui peut se résumer à :</p>
-<center><b>Comment me créer un site de gestion de tâches attirant en React avec une expérience 3D ?</b></center>
+<p>Le but de ce POK est de réaliser un site en React pour gérer mes tâches avec un horodateur, un agenda avec une importation de créatures 3D à partir de Blender.</p>
 <h2>Tâches</h2>
 <h3>Sprints</h3>
 <h4>Sprint 1</h4>
 <ul>
-<li>[] Changer l'image de fond</li>
+<li>[x] Changer l'image de fond</li>
 <li>[] Faire la page de To do (liste des tâches, ajout de tâches, suppression de tâches, chronomètre, marquer comme fait, catégoriser par domaine et par réalisation)</li>
-<li>[] Rajouter les requêtes API pour les tâches ()</li>
+<li>[x] Rajouter les requêtes API pour les tâches</li>
 </ul>
 <h4>Sprint 2</h4>
+<!-- - [] Changer les get pour les tâches par réalisation et par domaine ou un seul get et filtrer dans le front
+- [] Faire le front la partie front de To do -->
 <h3>Horodatage</h3>
 <table>
 <thead>
@@ -215,28 +213,97 @@
 <tr>
 <td>Mardi 07/01</td>
 <td>2H</td>
-<td>Ce que je fais en Front + mis en place d'une image en background</td>
+<td>Ce que je fais en Front + mise en place d'une image en background</td>
 </tr>
 <tr>
 <td>Vendredi 10/01</td>
 <td>4H30</td>
-<td>Faire les hooks/appel à l'API + étude fonction fetch + await/async VS fonction arrow vs function + sync vs async</td>
+<td>Faire les hooks/appel à l'API + étude fonction fetch + await/async VS then + fonction arrow vs function + sync vs async</td>
 </tr>
 <tr>
 <td>Samedi 18/01</td>
-<td>18H</td>
-<td></td>
+<td>2H</td>
+<td>Connection back-front et création méthode post</td>
+</tr>
+<tr>
+<td>Lundi 20/01</td>
+<td>2H</td>
+<td>Création de Domain.java + Implementation des méthodes HTTP de TO DO (suppression de tâches, chronomètre, marquer comme fait, catégoriser par domaine et par réalisation)</td>
 </tr>
 <tr>
 <td>Total</td>
-<td>6H30</td>
+<td>10H30</td>
 </tr>
 </tbody>
 </table>
-<!-- Lundi 13/01  1H  Django base -->
 <h2>Contenu</h2>
 <h3>Premier Sprint</h3>
-<p>Image en background issu de Pinterest, <a href="https://fr.pinterest.com/pin/10977592835947395/">Image ajouté par Agatha de Lima</a></p>
+<h4>Changement de l'image de fond</h4>
+<p>Dans un premier temps, je voulais avoir un aperçu de ce que donnerais la page finale avec un décor en background donc j'ai importé une image en background issue de Pinsterest, <a href="https://fr.pinterest.com/pin/10977592835947395/">Image ajouté par Agatha de Lima</a>.</p>
+<p>J'avais un souci quand je mettais l'image en fond d'écran parce que le RouterProvider faisait en sorte de s'adapter à la taille de mes composants ce qui empêchait l'image d'être en fond d'écran.</p>
+<p>Pour corriger cela j'ai défini mes bodys, html, #root comme étant en 100% de la hauteur et de la largeur.</p>
+<h4>Faire la page de To do</h4>
+<h5>Connection back-front et création méthode get</h5>
+<p>Pour connecter mon front à mon back, j'ai utilisé la fonction fetch qui permet de faire des requêtes HTTP. J'aurais pu utiliser Axios mais je ne souhaitais pas apprendre une librairie pour le moment.</p>
+<p>Pour intégrer la fonction fetch, j'ai dû apprendre à utiliser les fonctions async et await que j'ai comparé avec then. J'ai regardé une vidéo de <a href="https://www.youtube.com/watch?v=li7FzDHYZpc">Roberts Dev Talk</a> qui explique la différence entre les promesses et les fonctions async et await.</p>
+<p>Ensuite j'ai dû apprendre les différences entre les fonctions fléchées et les fonctions normales parce que j'avais des problèmes avec les fonctions fléchées notamment avec les variables const et let.
+J'ai regardé une vidéo de <a href="https://www.youtube.com/watch?v=5iGGvJn8K1U">Web Dev Simplified</a> qui explique pourquoi il ne faut pas utiliser les fonctions fléchées avec const et let.</p>
+<p>J'ai enfin pu créer une méthode post pour créer une tâche dans ma base de données et j'ai pu appelé la méthode get dans mon front, c'est là que j'ai créé le composant Task.js.</p>
+<h5>Création de Domain.java + Implementation des méthodes HTTP de TO DO</h5>
+<p>J'avais déjà créé la méthode post pour créer une tâche et get pour avoir la liste des tâches.
+J'ai donc créé les méthodes delete et patch pour marquer une tâche comme faite, supprimer une tâche, ajouter le temps passé sur cette tâche et catégoriser par domaine et par réalisation.</p>
+<p>Pour cela, j'ai d'abord ajouté les attributs (à partir du diagramme de classe de mon <a href=".">POK 2</a>) :</p>
+<pre class="language-java"><code class="language-java">    <span class="token keyword">private</span> <span class="token class-name">LocalTime</span> timePassedOnIt<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">LocalTime</span> totalTime<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">Date</span> creationDate<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">Date</span> doneDate<span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@ManyToOne</span>
+    <span class="token annotation punctuation">@JoinColumn</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">"domainId"</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token class-name">Domain</span> projectDomain<span class="token punctuation">;</span></code></pre>
+<p>Pour les domaines, j'ai créé une classe Domain.java qui contient un domainId, name, domainDone, creationDate, doneDate et color. Ensuite j'ai ajouté un attribut projectDomain dans Task.java qui est une clé étrangère vers Domain avec un ManyToOne et un JoinColumn pour spécifier le nom de la colonne.</p>
+<p>J'ai rajouté mes méthodes patch et delete dans mon TaskController.java et j'ai pu les appeler dans mon front. Sachant que PatchTaskTime_passed_on_it ajoute la durée envoyée en paramètre à la durée déjà passée sur la tâche et PatchTaskTotal_time remplace la durée totale par la durée envoyée en paramètre.</p>
+<div class="relative drop-shadow rounded rounded-tl-none rounded-bl-none border-solid border-l-8 border-indigo-500 bg-indigo-100 cursor-pointer select-none">
+<details class="group">
+<summary class="list-none py-0.5">
+<svg class="group-open:hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+</svg>
+<svg class="group-open:block hidden absolute w-7 h-7 pl-1 pt-0.5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>
+<div class="pl-8 font-bold inline-block group-open:select-text">
+<p>Code</p>
+</div>
+<svg class="group-open:hidden inline-block pl-3 w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+</svg>
+</summary>
+<div class="mx-8 pb-2 cursor-auto select-text">
+<pre class="language-java"><code class="language-java"><span class="token comment">// DeleteMapping</span>
+    <span class="token annotation punctuation">@DeleteMapping</span><span class="token punctuation">(</span><span class="token string">"/tasks/{taskId}"</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">deleteTaskByID</span><span class="token punctuation">(</span><span class="token annotation punctuation">@PathVariable</span> <span class="token keyword">int</span> taskId<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        taskService<span class="token punctuation">.</span><span class="token function">deleteById</span><span class="token punctuation">(</span>taskId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// PatchMapping</span>
+    <span class="token annotation punctuation">@PatchMapping</span><span class="token punctuation">(</span><span class="token string">"/tasks/taskDone/{taskId}"</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token class-name">PatchTaskTaskDone</span><span class="token punctuation">(</span><span class="token annotation punctuation">@PathVariable</span> <span class="token keyword">int</span> taskId<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        taskService<span class="token punctuation">.</span><span class="token function">patchTaskTaskDone</span><span class="token punctuation">(</span>taskId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@PatchMapping</span><span class="token punctuation">(</span><span class="token string">"tasks/timePassedOnIt/{taskId}"</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token class-name">PatchTaskTime_passed_on_it</span><span class="token punctuation">(</span><span class="token annotation punctuation">@PathVariable</span> <span class="token keyword">int</span> taskId<span class="token punctuation">,</span> <span class="token annotation punctuation">@RequestParam</span> <span class="token class-name">LocalTime</span> timePassedOnIt<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name"><span class="token namespace">taskService<span class="token punctuation">.</span></span>PatchTaskTime_passed_on_it</span><span class="token punctuation">(</span>taskId<span class="token punctuation">,</span> timePassedOnIt<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@PatchMapping</span><span class="token punctuation">(</span><span class="token string">"tasks/totalTime/{taskId}"</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token class-name">PatchTaskTotal_time</span><span class="token punctuation">(</span><span class="token annotation punctuation">@PathVariable</span> <span class="token keyword">int</span> taskId<span class="token punctuation">,</span> <span class="token annotation punctuation">@RequestParam</span> <span class="token class-name">LocalTime</span> totalTime<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        taskService<span class="token punctuation">.</span><span class="token function">patchTaskTotal_time</span><span class="token punctuation">(</span>taskId<span class="token punctuation">,</span> totalTime<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span></code></pre>
+</div>
+</details>     
+</div>
+<p>J'ai également mis plusieurs routes get pour récupérer les tâches par réalisation et par domaine. Je n'ai pas encore réfléchi s'il vaut mieux par exemple: faire une route pour chaque domaine ou une route pour tous les domaines et filtrer dans le front.</p>
 <h3>Second Sprint</h3>
 <h3>Retour sur expérience</h3>
 
