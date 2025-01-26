@@ -9,6 +9,7 @@ date: 2025-01-07
 
 tags:
   - "temps 3"
+  - "vert"
   - "React"
   - "3D"
   - "Gestion de tâches"
@@ -53,8 +54,9 @@ Le but de ce POK est de réaliser un site en React pour gérer mes tâches avec 
 
 #### Sprint 2
 
-<!-- - [] Changer les get pour les tâches par réalisation et par domaine ou un seul get et filtrer dans le front
-- [] Faire le front la partie front de To do -->
+- [] Migrer le back sur le serveur aioli
+<!-- Changer les get pour les tâches par réalisation et par domaine ou un seul get et filtrer dans le front-->
+- [] Faire le front la partie front de To do
 
 ### Horodatage
 
