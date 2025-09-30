@@ -129,26 +129,107 @@
 
 
 
-<p>Autres POK ou MON en lien :
-<em><strong>à compléter</strong></em></p>
+<p>Autres POK ou MON en lien :</p>
+<ul>
+<li>POK de Jeanne Ménager ;</li>
+<li>POK d'Alix Duréault.</li>
+</ul>
 <h2>Objectifs</h2>
-<p>L'objectif de ce POK est de constituer une base de donnée comprenant un nombre important de références, issues de différentes sources (nettoyage de la donnée, des doublons, mise en cohérence...). Pour cela, j'aimerais découvrir les outils de scrapping web.</p>
-<p>Ce POK s'inscrirait dans le cadre de mon projet aux Entrep' qui consiste à développer un comparateur d'appareils numériques, avec une dimension numérique responsable : l'objectif est de calculer et attribuer à chaque appareil un impact environnemental et social. La première version du projet, à présenter en mars 2025, se concentre sur la comparaison d'ordinateurs.</p>
+<p>L'objectif de ce POK est de constituer une base de donnée comprenant un nombre important de références, issues de différentes sources (nettoyage de la donnée, des doublons, mise en cohérence...). Pour cela, j'aimerais découvrir les outils de scraping web.</p>
+<p><em>Contexte initial : Ce POK s'inscrirait dans le cadre de mon projet aux Entrep' qui consiste à développer un comparateur d'appareils numériques, avec une dimension numérique responsable : l'objectif est de calculer et attribuer à chaque appareil un impact environnemental et social. La première version du projet, à présenter en mars 2025, se concentre sur la comparaison d'ordinateurs.</em></p>
+<p>Finalement, j'ai préféré constituer une base de données de films cultes à voir, avec pour objectif de pouvoir les utiliser pour une application personnelle que je crééerais ultérieurement. Ces données ont également pu me servir pour tester</p>
 <h2>Tâches</h2>
 <h4>Sprint 1 - Base de données de références d'ordinateurs</h4>
 <ol>
-<li>[ ] Apprentissage des bases en scrapping web</li>
-<li>[ ] Recherche de bases existantes et ressources</li>
-<li>[ ] Nettoyage des données</li>
+<li>[X] Apprentissage des bases en scrapping web</li>
+<li>[X] Recherche de bases existantes et ressources</li>
+<li>[X] Nettoyage des données</li>
 <li>[ ] Import dans une solution de base de données adaptée (dynamique ou statique ?)</li>
 </ol>
 <h4>Sprint 2 - Base de données d'indicateurs environnementaux et sociaux</h4>
 <ol>
-<li>[ ] Recherche de bases existantes et ressources</li>
-<li>[ ] Nettoyage des données</li>
-<li>[ ] Analyse critique de la base finale (maintenance, veille, automatisation...)</li>
+<li>[X] Apprentissage avancé</li>
+<li>[X] Nettoyage des données</li>
+<li>[X] Analyse critique de la base finale (maintenance, veille, automatisation...)</li>
 <li>[ ] Intégration au site (à confirmer)</li>
 </ol>
+<h2>Contenu</h2>
+<h3>Premier Sprint</h3>
+<p>J'ai commencé par lire les POK&amp;MON en lien sur le Scraping (il traite notamment de la légalité du scraping). J'ai ensuite suivi la formation qu'avait conseillé Jeanne <a href="https://www.youtube.com/watch?v=sOAZpHDEdkg&amp;t=276s&amp;ab_channel=Docstring">(lien)</a>, qui est très complète et propose des exercices pas à pas pour prendre en main les outils de scraping web.</p>
+<h3>Les outils</h3>
+<ul>
+<li><strong>Requests:</strong>
+<ul>
+<li>Effectuer une requête HTTP, récupérer le HTML</li>
+<li>Peut être remplacé par HTTPX qui permet de gérer les requêtes asynchrones et autres protocole HTTP.</li>
+</ul>
+</li>
+<li><strong>BeautifulSoup</strong>
+<ul>
+<li>Analyser le HTML, naviguer dans le DOM (ou parseur)</li>
+<li>On peut l’utiliser sans l’autre si on a déjà les fichiers HTML en local.</li>
+</ul>
+</li>
+<li><strong>Selectolax</strong>
+<ul>
+<li>Il permet de parser le code HTML comme BS4 et obtenir de la même façon un arbre et aux éléments de la page. La différence peut être pertinent lors du scraping d'un large nombre de pages.</li>
+</ul>
+</li>
+<li><strong>Loguru</strong>
+<ul>
+<li>Créer des loggers plus facilement, pour ne pas avoir à retenir le module loggin par défaut (pour la gestion des erreurs notamment).</li>
+</ul>
+</li>
+<li><strong>Playwright</strong>
+<ul>
+<li>Cette librairie est plus jeune mais permet de gagner en perfomance en gérant notamment automatiquement le débogage (et les blocages éventuels). Elle propose également une interface</li>
+</ul>
+</li>
+<li><strong>C'est quoi le DOM ?</strong>
+<ul>
+<li>Le DOM (Document Object Model) est une interface de programmation qui représente un document HTML, XML ou SVG sous forme d'une structure arborescente, permettant aux langages de script comme JavaScript d'interagir avec son contenu, sa structure et son style de manière dynamique.</li>
+</ul>
+</li>
+<li>CSS Selector</li>
+</ul>
+<h3>Légalité</h3>
+<p>La formation traite de la partie légale du scraping. Dans mon cas, mon projet s'appuie sur des bases de données &quot;à faible valeur&quot;, publiques et n'étant pas à caractère personnel.</p>
+<p>En effet, les bases de données de films ne sont pas uniques et les différents sites se font concurrence : la valeur qualitative de la donnée est donc plus faible que si je récupère des analyses de film ou des statistiques plus difficile. La loi française prend largement en compte la qualité de la donnée récoltée plutôt que la quantité pour définir si la copie d'une partie d'une base de données est légitime ou non.</p>
+<p>De plus, les données sont accessibles sans connexion et ne sont pas cachées derrière un paywall. Par rapport à la taille des sites que je souhaite scraper, le nombre de requêtes ne devrait pas nuire au bon fonctionnement du site.</p>
+<p>Certaines solutions existent sur le marché pour garantir que le projet de scraping est compliant avec la loi et éthique.</p>
+<h3>Second Sprint</h3>
+<p>J'ai pu terminé la formation, notamment avec les tutos pour apprendre à utiliser Playwright.</p>
+<p>Je me suis ensuite concentrée sur l'extraction de différentes listes Sens Critique ainsi qu'une liste IMDB.</p>
+<p>Selon les pages, les structures étaient différentes et il fallait revoir le script pour qu'il soit plus robuste.</p>
+<p>Pour chaque page, j'ai rempli un tableau Pandas/DataFrames avant d'exporter mes données en csv et excel.</p>
+<h4>Analyse des données extraites</h4>
+<p>Il reste encore à consolider les différentes données, avec de nombreux doublons avant de pouvoir l'implémenter dans une base de données unique.</p>
+<p>De plus, s'il ne me semble pour ce projet pas utile d'automatiser la veille ou la maintenance de la base avec de nouveaux films (même s'il serait possible de faire une veille sur les sorties cinéma), il reste néanmoins possible de mettre en place ce genre de démarche.</p>
+<p>Pour lancer automatiquement un script Python à fréquence régulière avec le Planificateur de tâches sous Windows (ou cron sous Linux et MacOS) :</p>
+<ol>
+<li>Ouvrir le Planificateur de tâches → Créer une tâche.</li>
+<li>Onglet Déclencheurs : choisir « Tous les jours » à l’heure voulue.</li>
+<li>Onglet Actions : choisir « Démarrer un programme » et mettre :
+<ul>
+<li>Programme/script : chemin vers python.exe</li>
+<li>Arguments : chemin complet vers le script .py</li>
+</ul>
+</li>
+</ol>
+<p>Il est important dans ce cas là de consolider la partie de tests et de gestions des erreurs / exceptions, pour qu'il ne crash pas.</p>
+<h3>Conclusion et suites possibles</h3>
+<p>Pour faire évoluer le projet et exploiter pleinement la technologie, voici quelques idées :</p>
+<ul>
+<li>Automatiser le scraping régulier d'un site, pour veiller sur les dernières sorties à ne pas laisser passer, avec une gestion plus fine des exceptions ;</li>
+<li>Utiliser la donnée collectée.</li>
+</ul>
+<p>Je pense continer à utiliser le scraping web, notamment pour mon POK1 où je m'inspirais d'un site déjà existant pour créer une checklist d'objectifs dans un jeu : je souhaiterais y récupérer les différentes images disponibles sur le site, ainsi qu'éventuellement les différents titres des items pour ne pas les lister par moi-même.</p>
+<p>C'est un réel gain de temps, une fois la technologie maîtrisée.</p>
+<p>Comme précédemment mentionné, je souhaite exploiter ses données à des fins personnelles pour créer une liste et un suivi des films cultes à voir dans sa vie. Je souhaiterais donc faire évoluer ces listes vers une vraie base de données (SQL ou autre).</p>
+<h4>Ce que j'ai appris :</h4>
+<p>Bases du scraping web et des technologies à connaître.</p>
+<h4>Les erreurs à éviter :</h4>
+<p>Faire attention aux choix des sites pour débuter, car de nombreux sites sont protégées car de nombreux sites sont protégés contre les bots ou requêtes nécessaires au scraping web.</p>
 <h3>Horodatage</h3>
 <p>Toutes les séances et le nombre d'heure que l'on y a passé.</p>
 <table>
@@ -161,16 +242,37 @@
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td>13/09/25</td>
+<td>4H</td>
+<td>Lecture des précédents POK + Début Formation et réalisation des premiers exercices</td>
+</tr>
+<tr>
+<td>14/09/25</td>
+<td>3H</td>
+<td>Scraping Sites Sens Critique</td>
+</tr>
+<tr>
+<td>20/09/25</td>
+<td>5H</td>
+<td>Suite Formation et exercices</td>
+</tr>
+<tr>
+<td>21/09/25</td>
+<td>2H30</td>
+<td>Scraping IMDB + nettoyage des données</td>
+</tr>
+<tr>
+<td>27/09/25</td>
+<td>2H</td>
+<td>Fin Formation et exercices</td>
+</tr>
+<tr>
+<td>28/09/25</td>
+<td>1H</td>
+<td>Rédaction POK</td>
 </tr>
 </tbody>
 </table>
-<h2>Contenu</h2>
-<h3>Premier Sprint</h3>
-<h3>Second Sprint</h3>
-<h3>Conclusion et suites possibles</h3>
-<h4>Ce que j'ai appris :</h4>
-<h4>Les erreurs à éviter :</h4>
 
 
 </article>
