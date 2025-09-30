@@ -309,6 +309,7 @@ Après cela, j'ai commencé à faire la liste de mes requêtes HTTP, j'ai attein
 **PATCH**
 
 - patchDomain(String name, String color) : Domain
+
 - Client
   - updateClientEmail(@PathVariable int clientId, @RequestParam boolean newEmail): Client
  
@@ -327,14 +328,14 @@ Après cela, j'ai commencé à faire la liste de mes requêtes HTTP, j'ai attein
 
 **Difficultés :**
 
-- Je me suis perdu et fais un effet tunnel sur le design de mon site.
+- Je me suis perdu et j'ai fait un effet tunnel sur le design de mon site.
 - Je n'ai pas bien identifié la priorité de ce que je voulais apprendre.
 
 **Bilan**
 
-Pour le sprint 1, je trouve dommmage d'avoir passé autant de temps sur le design. J'aurai aimer toucher plus à React.
+Pour le sprint 1, je trouve dommage d'avoir passé autant de temps sur le design. J'aurais aimé toucher plus à React.
 Pour le sprint 2, je suis très content car j'ai appris de mon erreur et je trouve que j'ai bien pris en main Spring Boot.
-Le fait d'avoir le cours sur Java Gradle m'a beaucoup aidé pour comprendre comment fonctionne Spring Boot notamment pour les interfaces et je trouvais cela très complémentaire.
+Le fait d'avoir le cours sur Java Gradle m'a beaucoup aidé pour comprendre comment fonctionne Spring Boot notamment pour les interfaces et je trouvais le cours très complémentaire.
 
 De manière globale, c'est la première fois que je fais à la fois le front et le back et cela m'a débloqué.
 

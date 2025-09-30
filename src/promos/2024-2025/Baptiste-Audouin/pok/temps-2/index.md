@@ -60,7 +60,7 @@ Pour le reste du temps de ce premier sprint j'ai regardé les anciens projets si
 
 Le prochain sprint sera consacré au code du jeu en JavaScript puis, en fonction du temps passé, j'aimerais ajouter des fonctionnalités supplémentaires comme des niveaux différents en jouant sur la vitesse de déplacement mais aussi des calculs de record.
 
-### Horodatage sprint 2
+### Horodatage sprint 1
 | Tâches | Heures prévues | Heures passées |
 | --------|-------- |-------- |
 | Recherche docu sur les jeux déjà réalisés en do_it | 1h | 30min |
@@ -129,7 +129,7 @@ J'ai également ajouté un visuel au début pour que l'utilisateur puisse choisi
 {% enddetails %}
 
 
-### Horodatage sprint 1
+### Horodatage sprint 2
 | Tâches | Heures prévues | Heures passées |
 | --------|-------- |-------- |
 | Implémentation du jeu | 6h | 4h |

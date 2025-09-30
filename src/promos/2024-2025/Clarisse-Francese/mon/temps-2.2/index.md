@@ -39,12 +39,12 @@ MON débutant, aucun prérequis
 - [Mon stage de césure dans une entreprise opale](#tlt)
 - [Conclusion](#ccl)
 
-<h2 id=def> Introduction</h2>
+<h2 id=def> 🔎Introduction</h2>
 
 Une **entreprise Opale** représente le **dernier stade de l'évolution organisationnelle et humaine** décrit par **Frédéric Laloux** dans son ouvrage **Reinventing Organizations : Vers des communautés de travail inspirées** (2015).  
 Ce livre m'avait été offert par mes collègues suite à mon **stage de césure au Tiers-Lab des Transitions** à Marseille car les cofondateurs du lieu s'était inspiré de ce modèle d'organisation pour créer leur structure. Je peux témoigner personnellement que travailler au sein d'une entreprisse opale était une expérience géniale et c'est pourquoi je voulais reprendre dans ce MON la théorie des entreprises opales qui se caractérisent par 3 piliers fondamentaux : la **raison d'être évolutive, la plénitude et l'auto-gouvernance**. Dans son livre, Frédéric décrit d'abord la liste des **différents modèles d’organisation** à tavers l'histoire, puis il **définit les caractéristiques du stade évolutif opale** dont il a personnellement observé le fonctionnement dans diverses entreprises.
 
-<h2 id=ev> 📅 Évolution des modèles d’organisation à travers l’histoire</h2>
+<h2 id=ev> 📅Évolution des modèles d’organisation à travers l’histoire</h2>
 
 Frédéric Laloux s'est inspiré du modèle de la **spirale dynamique** fondé sur l'**évolution par stades de la conscience humaine et des systèmes de valeurs** pour créer sa propre liste des différents stades d'organisation créés par les Hommes :
 
@@ -93,7 +93,7 @@ Cette frise révèle une réalité fascinante : **jamais auparavant autant de pe
 | **Evolutif opale**  | **?**   | **?** | **?**  |
 {% enddetails %}
 
-<h2 id=op> 📖 Les pilliers du stade évolutif opale</h2>
+<h2 id=op> 📖Les pilliers du stade évolutif opale</h2>
 
 Maintenant que nous avons exploré les modèles organisationnels précédents, tournons-nous vers le prochain stade de l’évolution humaine, que **Frédéric Laloux** désigne sous le nom de **stade Évolutif Opale**. Ce stade correspond à ce que **Maslow** décrit comme "**l’accomplissement de soi**" dans sa célèbre pyramide des besoins.
 
@@ -189,7 +189,7 @@ Plutôt que de se focaliser sur des objectifs rigides comme le profit, ces organ
 | **Projet individuel**           | Recrutement, formation et évaluation servent à vérifier que le projet de l’individu et la mission de l’entreprise sont en phase. | Ce n’est pas à l’entreprise d’aider les salariés à définir ce à quoi ils sont appelés. |
 {% enddetails %}
 
-<h2 id=exemple> 🔎 Méthodologie de recherche et exemples d'entreprises opale</h2>
+<h2 id=exemple> 🔎Méthodologie de recherche et exemples d'entreprises opale</h2>
 
 Pour trouver toutes les caractéristiques du modèle opale, Frédéric Laloux a d’abord sélectionné des organisations correspondant à ses critères (**autogouvernance, plénitude, raison d’être évolutive**), avec une taille minimale de **100 employés** et une expérience Opale d’**au moins 5 ans**. Laloux a également cherché une **diversité sectorielle** (industrie, santé, éducation, etc.) et **géographique**, pour montrer que le modèle Opale transcende les contextes culturels. Enfin, ces entreprises devaient afficher des **performances mesurables**, telles que des résultats financiers solides ou une forte satisfaction des employés et des clients, prouvant que ce modèle peut allier éthique et succès. Il a alors collecté des données variées : **documents internes**, **données publiques** et **entretiens approfondis** avec dirigeants et employés puis a également **visité certaines entreprises** pour observer leur fonctionnement. En analysant **45 pratiques clés** (**prise de décision**, **gestion RH**, **interactions quotidiennes**), il a identifié des **points communs** et **principes récurrents**, synthétisant ainsi le paradigme Opale comme un modèle **applicable** et **performant** dans divers contextes. Voici 2 entreprises qu'il utilise souvent comme exemples :
 
@@ -211,7 +211,7 @@ L'entreprise Morning Star, un leader mondial dans la **transformation de tomates
 
 On voit bien à travers ces 2 entreprises qu'elles ont des pratiques similaires caractéristique du modèle opale pour renforcer l’autonomie, l’engagement et la performance collective.
 
-<h2 id=emer> 📈 Emergence des entreprises opale</h2>
+<h2 id=emer> 📈Emergence des entreprises opale</h2>
 
 C'est bien beau de parler des caractéristiques des entreprises opales mais ... **Quelles sont les conditions nécessaires ? Comment créer une entreprise Opale ? Comment transformer une entreprise d'un autre paradigme en une entreprise Opale ?**
 
@@ -262,7 +262,7 @@ En parallèle, il a aligné l’entreprise sur une **raison d’être** claire e
 
 Face aux **résistances au changement**, notamment de la part des cadres habitués au modèle hiérarchique, Zobrist a fait preuve de **patience** et d’**adaptation**. Il s’appuyait sur les **résultats concrets** obtenus par les équipes pour convaincre les sceptiques, montrant ainsi que son modèle n’était pas qu’une théorie, mais une pratique **viable** et **performante**.
 
-<h2 id=cri> Critiques du modèle</h2>
+<h2 id=cri> ⚔️Critiques du modèle</h2>
 
 Ce modèle Opale décrit par Frédéric Laloux semble être une solution parfaite mais son application soulève plusieurs défis.  
 Parmi les principales critiques figurent la **complexité de sa mise en œuvre**, nécessitant une transformation profonde et un **accompagnement constant**. La transition peut se heurter à une résistance des cadres et employés attachés aux modèles hiérarchiques, freinant le changement.  
@@ -272,7 +272,7 @@ Le succès du modèle repose souvent sur des **leaders visionnaires** capables d
 
 Ainsi, bien qu’inspirant, le **modèle Opale doit être adapté à chaque organisation**, en tenant compte de son contexte, de sa maturité et de ses besoins spécifiques.
 
-<h2 id=tlt> Mon stage de césure dans une entreprise opale </h2>
+<h2 id=tlt> 💼Mon stage de césure dans une entreprise opale </h2>
 
 Comme expliqué en intro, j'ai réalisé un stage de 6 mois au **Tiers-Lab des Transitions**, une entreprise opale où les cofondateurs se sont inspîrés directement du livre de Frédéric Laloux pour créer la structure. Ainsi, voici quelques exemples qui illustrent selon moi en quoi le Tiers-Lab fonctionnait dans le paradigme opal :
 

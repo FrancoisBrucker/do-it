@@ -1,65 +1,73 @@
 ---
 layout: layout/pok.njk
 
-title: "Titre du POK du temps 3"
+title: "Système de Recommandation de Films avec PySpark"
 authors:
   - Baptiste Audouin
 
-date: 1971-03-01
+date: 2025-01-20
 
 tags: 
   - "temps 3"
 
-résumé: Un POK traitant d'un sujet.
+résumé: Ce projet a pour objectif de développer un système de recommandation de films en utilisant PySpark, librairie d'analyse de données et de machine learning.
 ---
 
 {% prerequis %}
 
-Liste des prérequis du POK ET/OU MON
+Bases en python
 
 {% endprerequis %}
 {% lien %}
 
-Les lien utiles pour la compréhension de celui-ci.
+[Documentation PySpark](https://spark.apache.org/docs/latest/api/python/index.html)
 
 {% endlien %}
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce POK. On oubliera pas de donner :
-
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
-
 ## Tâches
+
+| Tâches | Heures prévues |
+| --------|-------- |
+| S1 : Définition du projet | 1h |
+| S1 : Collecte des données | 3h |
+| S1 : Documentation initiale | 1h |
+| S1 : Exploration des données | 2h |
+| S1 : Configuration PySpark | 2h |
+| S1 : Documentation et révision | 1h |
+| S2 : Implémentation de l’algorithme | 2h |
+| S2: Entraînement et test du modèle | 4h |
+| S2 : Documentation des résultats | 1h |
+| S2 : Évaluation des résultats | 1h |
+| S2 : Optimisation | 2h |
+| S2 : Rédaction et livraison | 1h |
 
 ### Sprints
 
-But final.
+Ce projet a pour objectif de développer un système de recommandation de films en utilisant PySpark, librairie d'analyse de données et de machine learning.
+
 
 #### Sprint 1
 
-Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
+Le premier sprint se concentre sur la préparation des données, leur exploration et la configuration de l’environnement PySpark.
 
-- [ ] Une tâche non réalisée
-- [x] Une tâche réalisée
+- [ ] Définition du projet
+- [ ] Collecte des données
+- [ ] Documentation initiale
+- [ ] Exploration des données
+- [ ] Configuration PySpark
+- [ ] Documentation et révision
 
 #### Sprint 2
 
-- [ ] Une tâche non réalisée
-- [x] Une tâche réalisée
 
-Liste des taches que l'on pense faire. On coche si la tache est réalisée. A la fin du sprint on fait une petite étude post-mortem pour voir ce qui s'est passé et les ajustement à faire pour le prochain sprint, pok.
 
 ### Horodatage
 
-Toutes les séances et le nombre d'heure que l'on y a passé.
 
-| Date | Heures passées | Indications |
-| -------- | -------- |-------- |
-| Mardi 27/08  | 1H  | Travail sur la trame du site |
 
 ## Contenu
 
-Le contenu du POK.
+
 
 ### Premier Sprint
 

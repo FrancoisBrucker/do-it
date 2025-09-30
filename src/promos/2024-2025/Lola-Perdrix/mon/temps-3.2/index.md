@@ -1,15 +1,17 @@
 ---
 layout: layout/mon.njk
 
-title: "Titre du second MON du temps 3"
+title: "Découverte du back-end"
 authors:
   - Lola Perdrix
 
 date: 1971-03-01
 tags: 
   - "temps 3"
+  - "vert"
+  - "back"
 
-résumé: "Un MON traitant d'un sujet."
+résumé: "Ce MON vise à découvrir les notions de back-end et la création de serveurs web avec des méthodes simples"
 ---
 
 {% prerequis %}
@@ -23,10 +25,7 @@ Les lien utiles pour la compréhension de celui-ci.
 
 {% endlien %}
 
-Quelques phrases permettant de connaître, sans jargon ni blabla, le contenu de ce MON. On oubliera pas de donner :
-
-- le niveau et les prérequis nécessaires en utilisant la balise [`prerequis`](/cs/contribuer-au-site/#prerequis)
-- les autres POK & MON en rapport en utilisant la balise [`lien`](/cs/contribuer-au-site/#lien)
+A travers ce MON je souhaite apprendre / réapprendre les bases du web et le fonctionnement d'un site dynamique, en réalisant un petit projet du même style que le projet numérologie pour apprendre à utiliser node js / express. C'est aussi motivé par mon stage de fin d'étude qui me fera utiliser directement un framework pour le back alors je souhaite faire cette première étape pour y aller plus en douceur...
 
 ## Contenu
 

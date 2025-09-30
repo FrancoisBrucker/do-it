@@ -1,7 +1,7 @@
 ---
 layout: layout/pok.njk
 
-title: "Questionnaire de receuil de besoin"
+title: "Scraping"
 authors:
   - Alix Duréault
 
@@ -24,22 +24,17 @@ Les lien utiles pour la compréhension de celui-ci.
 
 {% endlien %}
 
-Ce POK s'encadre dans un projet entrepreunarial que je monte avec quelques amis. Le but est de créer un outil sous la forme d'une application web qui vient en appui des démarches éco-responsables des écoles dans la même veine que ce qui peut être disponible pour une entreprise.
+Pour mon projet de filière métier, nous réalisons un bilan carbone. Pour cette structure, beaucoup d'informations sont disponibles sur leur site web. Ainsi, pour pouvoir faciliter la récupération de données, j'aimerais apprendre le scraping et comment l'utiliser pour récupérer des données qui sont utilisables et complétables par la suite.
 
 ## Tâches
 
 ### Sprints
 
-Ce projet en est encore à son début, ainsi, il s'agirait dans ce POK de principalement réaliser l'étude du besoin pour une telle solution et de déterminer quelle serait la forme la plus pertinente pour celle-ci.
-
 #### Sprint 1
 
-Dans un premier temps, je vais concentrer mes efforts dans la réalisation et la diffusion d'un questionnaire. Ce sera aussi l'occasion d'en apprendre plus sur comment réaliser un questionnaire efficace pour comprendre un besoin et évaluer la solution apportée.
-
-- [ ] Etudier les POK et MON qui ont déjà été fait sur le sujet
-- [ ] Faire une recherche sur les méthodes de réalisation d'étude
-- [ ] Ecrire le questionnaire
-- [ ] Diffuser le questionnaire
+- [ ] Apprendre les bases du scraping
+- [ ] Quelles en sont les limites
+- [ ] Coder la récupération des données
 
 #### Sprint 2
 
